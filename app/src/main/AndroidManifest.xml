@@ -13,6 +13,27 @@
         android:theme="@style/Theme.Dictionary_of_pali_term"
         tools:targetApi="31">
         <activity
+            android:name=".Termins"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Suttas"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Deklomation"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".LiveBuddhaActivity"
             android:exported="false">
             <meta-data
