@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_main_color"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Жизнеописание Будды"
+        android:textColor="#FFE57F"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Строфы для декламаций"
+        android:textColor="#FFE57F"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_stupa" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Короткие сутты"
+        android:textColor="#FFE57F"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_chakra" />
+
+    <ImageButton
+        android:id="@+id/button_face"
+        android:layout_width="88dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/my_main_color"
+        android:contentDescription="Описание жизни Будды"
+        android:onClick="toLiveBu"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_face"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageButton
+        android:id="@+id/button_stupa"
+        android:layout_width="88dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/my_main_color"
+        android:contentDescription="Строфы для декломации"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_stupa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageButton
+        android:id="@+id/button_chakra"
+        android:layout_width="88dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/my_main_color"
+        android:contentDescription="Короткие сутты"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_chakra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageButton
+        android:id="@+id/button_book"
+        android:layout_width="88dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/my_main_color"
+        android:contentDescription="Словарь терминов"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Словарь палийских терминов"
+        android:textColor="#FFE57F"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_book" />
+</androidx.constraintlayout.widget.ConstraintLayout>
