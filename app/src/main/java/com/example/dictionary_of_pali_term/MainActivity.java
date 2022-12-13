@@ -17,21 +17,25 @@ public class MainActivity extends AppCompatActivity {
     public void toLiveBu(View view){
         Intent intent = new Intent(this, LiveBuddhaActivity.class);
         startActivity(intent);
+        finish();
     }
 
     public void toDeclomation(View view){
         Intent intent = new Intent(this, Deklomation.class);
         startActivity(intent);
+        finish();
     }
 
     public void toSuttas(View view){
         Intent intent = new Intent(this, Suttas.class);
         startActivity(intent);
+        finish();
     }
 
     public void toTermins(View view){
         Intent intent = new Intent(this, Termins.class);
         startActivity(intent);
+        finish();
     }
 
 

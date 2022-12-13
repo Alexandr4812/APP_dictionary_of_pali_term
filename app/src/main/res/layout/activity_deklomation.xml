@@ -7,4 +7,72 @@
     android:background="@color/my_main_color"
     tools:context=".Deklomation">
 
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="107dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/my_main_color"
+        android:contentDescription="возврат в главное меню"
+        android:onClick="toMainAct"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/viewScrollDeclomation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollDeclomation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/ScrollbuttonPuja"
+                style="@style/MainButtons"
+                android:layout_gravity="center"
+                android:layout_marginTop="64dp"
+                android:contentDescription="Строфы для декломации"
+                android:src="@drawable/button_stupa" />
+
+            <TextView
+                android:id="@+id/textViewDecPuja"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Пуджа"
+                android:textAlignment="center" />
+
+            <ImageButton
+                android:id="@+id/ScrollbuttonSuttas"
+                style="@style/MainButtons"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:contentDescription="Строфы для декломации"
+                android:src="@drawable/button_stupa" />
+
+            <TextView
+                android:id="@+id/textViewDecSuttas"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Сутты"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,4 +7,19 @@
     android:background="@color/my_main_color"
     tools:context=".Suttas">
 
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="107dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/my_main_color"
+        android:contentDescription="возврат в главное меню"
+        android:src="@drawable/button_back"
+        android:onClick="toMainAct"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
