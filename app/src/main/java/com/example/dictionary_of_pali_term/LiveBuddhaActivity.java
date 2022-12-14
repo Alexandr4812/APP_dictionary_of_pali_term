@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ScrollView;
 
 public class LiveBuddhaActivity extends AppCompatActivity {
 
@@ -20,5 +22,15 @@ public class LiveBuddhaActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    public void toSumedha(View view) {
+        ScrollView scrollText = findViewById(R.id.liveScrollText);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
+    public void tobackIzTextVLive(View view) {
+        ScrollView scrollText = findViewById(R.id.liveScrollText);
+        scrollText.setVisibility(view.INVISIBLE);
     }
 }
