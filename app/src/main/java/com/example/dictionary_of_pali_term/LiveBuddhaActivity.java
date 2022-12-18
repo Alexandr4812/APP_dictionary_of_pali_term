@@ -1,14 +1,19 @@
 package com.example.dictionary_of_pali_term;
 
+import androidx.annotation.DrawableRes;
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 public class LiveBuddhaActivity extends AppCompatActivity {
 
@@ -29,8 +34,17 @@ public class LiveBuddhaActivity extends AppCompatActivity {
         scrollText.setVisibility(view.VISIBLE);
     }
 
+
+    public void toMaya(View view) {
+        ScrollView scrollText = findViewById(R.id.liveScrollTextMaya);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
     public void tobackIzTextVLive(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollText);
         scrollText.setVisibility(view.INVISIBLE);
+        ScrollView scrollText2 = findViewById(R.id.liveScrollTextMaya);
+        scrollText2.setVisibility(view.INVISIBLE);
     }
+
 }
