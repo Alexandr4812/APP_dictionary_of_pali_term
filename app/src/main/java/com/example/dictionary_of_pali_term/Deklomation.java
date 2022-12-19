@@ -5,15 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 public class Deklomation extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_deklomation);
+        setContentView(R.layout.activity_deklomation_main);
     }
 
     public void toMainAct(View view){
@@ -21,5 +19,13 @@ public class Deklomation extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void toMorningPuja(View view){
+        Intent intent = new Intent(this, Declomation_second.class);
+        startActivity(intent);
+        finish();
+    }
+
+
 
 }

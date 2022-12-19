@@ -36,39 +36,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <ImageButton
-                android:id="@+id/ScrollbuttonPuja"
-                style="@style/MainButtons"
-                android:layout_gravity="center"
-                android:layout_marginTop="64dp"
-                android:contentDescription="Строфы для декломации"
-                android:src="@drawable/button_stupa" />
+            <Button
+                android:id="@+id/button_puja"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toMorningPuja"
+                android:text="Пуджа" />
 
-            <TextView
-                android:id="@+id/textViewDecPuja"
-                style="@style/TextViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Пуджа"
-                android:textAlignment="center" />
+            <Button
+                android:id="@+id/button_sutta"
+                style="@style/button_activity_declomation_main"
+                android:text="Сутта" />
 
-            <ImageButton
-                android:id="@+id/ScrollbuttonSuttas"
-                style="@style/MainButtons"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:contentDescription="Строфы для декломации"
-                android:src="@drawable/button_stupa" />
-
-            <TextView
-                android:id="@+id/textViewDecSuttas"
-                style="@style/TextViewStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Сутты"
-                android:textAlignment="center" />
+            <Button
+                android:id="@+id/button_over_declamation"
+                style="@style/button_activity_declomation_main"
+                android:text="Другие декламации" />
 
         </LinearLayout>
 

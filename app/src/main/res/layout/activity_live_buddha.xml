@@ -182,7 +182,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="invisible">
+        tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -192,9 +192,7 @@
 
             <ImageView
                 android:id="@+id/imageView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#FFE082"
+                style="@style/picsLiveBuddha"
                 app:srcCompat="@drawable/asita" />
 
             <ImageButton
@@ -245,7 +243,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="invisible">
+        tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -255,9 +253,8 @@
 
             <ImageView
                 android:id="@+id/imageView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#FFE082"
+                style="@style/picsLiveBuddha"
+
                 app:srcCompat="@drawable/mahamaya_drim" />
 
             <ImageButton
