@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Declomation_second extends AppCompatActivity {
+public class Declomation_morning_puja extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

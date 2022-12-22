@@ -13,7 +13,21 @@
         android:theme="@style/Theme.Dictionary_of_pali_term"
         tools:targetApi="31">
         <activity
-            android:name=".Declomation_second"
+            android:name=".Declomation_over"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Declomation_sutta"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Declomation_morning_puja"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

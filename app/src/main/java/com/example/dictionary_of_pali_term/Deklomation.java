@@ -21,7 +21,19 @@ public class Deklomation extends AppCompatActivity {
     }
 
     public void toMorningPuja(View view){
-        Intent intent = new Intent(this, Declomation_second.class);
+        Intent intent = new Intent(this, Declomation_morning_puja.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void toDeclomationSutta(View view){
+        Intent intent = new Intent(this, Declomation_sutta.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void toDeclomationOver(View view){
+        Intent intent = new Intent(this, Declomation_over.class);
         startActivity(intent);
         finish();
     }

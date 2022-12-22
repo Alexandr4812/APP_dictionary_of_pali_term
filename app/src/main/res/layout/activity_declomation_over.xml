@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".Declomation_morning_puja">
+    tools:context=".Declomation_over">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
-        android:id="@+id/viewScrollPuja"
+        android:id="@+id/viewScrollOver"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/backButton"
@@ -31,15 +31,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollPuja"
+            android:id="@+id/linearLayoutScrollOver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button_morning_puja"
+                android:id="@+id/button_before_eating"
                 style="@style/button_activity_declomation_main"
-                android:text="Утренняя пуджа" />
+                android:text="декломация перед принятием пищи" />
 
         </LinearLayout>
 
