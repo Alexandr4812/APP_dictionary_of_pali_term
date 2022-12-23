@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".Declomation_over">
+    tools:context=".DeclomationOverActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -39,8 +39,64 @@
             <Button
                 android:id="@+id/button_before_eating"
                 style="@style/button_activity_declomation_main"
-                android:text="декломация перед принятием пищи" />
+                android:text="декломация перед приёмом пищи"
+                android:onClick="toDeclomaciyaPeredObedom"/>
 
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/overScrollTextObed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/backButtonOver"
+                android:layout_width="107dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackOver"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewOver"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="661dp"
+                android:text="@string/DeklomaciyaPeredPrinyatiemPichi" />
+
+            <ImageButton
+                android:id="@+id/backButtonOver2"
+                android:layout_width="107dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackOver"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
 
 

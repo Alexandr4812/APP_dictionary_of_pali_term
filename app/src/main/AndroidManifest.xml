@@ -13,42 +13,42 @@
         android:theme="@style/Theme.Dictionary_of_pali_term"
         tools:targetApi="31">
         <activity
-            android:name=".Declomation_over"
+            android:name=".DeclomationOverActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Declomation_sutta"
+            android:name=".DeclomationSuttaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Declomation_morning_puja"
+            android:name=".DeclomationPujaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Termins"
+            android:name=".TerminsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Suttas"
+            android:name=".SuttasActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Deklomation"
+            android:name=".DeklomationMainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

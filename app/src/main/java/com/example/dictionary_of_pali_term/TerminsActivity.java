@@ -6,16 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Declomation_morning_puja extends AppCompatActivity {
+public class TerminsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_declomation_puja);
+        setContentView(R.layout.activity_termins);
     }
 
-    public void toDeclomation(View view){
-        Intent intent = new Intent(this, Deklomation.class);
+    public void toMainAct(View view){
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }

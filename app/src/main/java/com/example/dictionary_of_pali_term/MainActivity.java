@@ -1,14 +1,10 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,19 +21,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toDeclomation(View view){
-        Intent intent = new Intent(this, Deklomation.class);
+        Intent intent = new Intent(this, DeklomationMainActivity.class);
         startActivity(intent);
         finish();
     }
 
     public void toSuttas(View view){
-        Intent intent = new Intent(this, Suttas.class);
+        Intent intent = new Intent(this, SuttasActivity.class);
         startActivity(intent);
         finish();
     }
 
     public void toTermins(View view){
-        Intent intent = new Intent(this, Termins.class);
+        Intent intent = new Intent(this, TerminsActivity.class);
         startActivity(intent);
         finish();
     }

@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Deklomation extends AppCompatActivity {
+public class DeklomationMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,19 +21,19 @@ public class Deklomation extends AppCompatActivity {
     }
 
     public void toMorningPuja(View view){
-        Intent intent = new Intent(this, Declomation_morning_puja.class);
+        Intent intent = new Intent(this, DeclomationPujaActivity.class);
         startActivity(intent);
         finish();
     }
 
     public void toDeclomationSutta(View view){
-        Intent intent = new Intent(this, Declomation_sutta.class);
+        Intent intent = new Intent(this, DeclomationSuttaActivity.class);
         startActivity(intent);
         finish();
     }
 
     public void toDeclomationOver(View view){
-        Intent intent = new Intent(this, Declomation_over.class);
+        Intent intent = new Intent(this, DeclomationOverActivity.class);
         startActivity(intent);
         finish();
     }
