@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="DeklomaciyaPeredPrinyatiemPichi">
-        ДЕКЛОМАЦИЯ ПЕРЕД ОБЕДОМ \n \n
+        <b>ДЕКЛОМАЦИЯ ПЕРЕД ОБЕДОМ</b> \n \n
 
 <b><u>Patisankha` yoniso pindapa`tam patiseva`mi</u></b> \n \n
 <b><u>Neva dava`ya,na  mada`ya,na  mandana`ya,na  vibhu`sana`ya</u></b> \n \n

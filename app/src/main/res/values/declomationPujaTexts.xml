@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="DeklomaciyaMorningPuja">
-        УТРЕННЯЯ ПУДЖА \n \n \n
+        <b>УТРЕННЯЯ ПУДЖА</b> \n \n \n
         <u>ВЫРАЖЕНИЕ ПОЧТЕНИЯ</u> \n
 <b><u>Namo tassa bhagavato arahato sammāsambuddhassa [3x]</u></b> \n
 <i>Почтение Благословенному, достойному, постигшему в совершенстве.</i> \n \n
@@ -38,5 +38,38 @@
 <i>Почтенный, окажите милость всё поднесённое на основе доверия вам</i> \n
 <b><u>anukampaṃ upādāya - patigaṇhātumuttamaṃ</u></b> \n
 <i>принять, о величайший, из сострадания к нам.</i>    \n \n
+        <u>КАЧЕСТВА БУДДЫ</u> \n
+<b><u>Itipi so bhagavā arahaṃ sammāsambuddho</u></b> \n
+<i>Благословенный действительно является таким: он достойный, постигший в совершенстве,</i> \n
+<b><u>Vijjācaraṇasampanno sugato lokavidū</u></b> \n
+<i>обладающий знанием и [благим] поведением, достигший блага, знаток мира,</i> \n
+<b><u>Anuttaro purisadammasārathi</u></b> \n
+<i>несравненный проводник существ, подходящих для обуздания</i> \n
+<b><u>Satthā devamanussānaṃ buddho bhagavāti</u></b> \n
+<i>учитель богов и людей, постигший, благословенный.</i>   \n \n
+        <u>КАЧЕСТВА ДХАММЫ</u> \n
+<b><u>Svākkhāto bhagavatā dhammo</u></b> \n
+<i>Хорошо разъяснена Благословенным Дхамма,</i> \n
+<b><u>Sandiṭṭhiko akāliko ehipassiko</u></b> \n
+<i>	видимая непосредственно, не требующая времени, приглашающая прийти и увидеть,</i> \n
+<b><u>Opanayiko paccattaṃ veditabbo viññūhīti</u></b> \n
+<i>ведущая к цели, может быть самостоятельно испытана мудрыми.</i>     \n \n
+        <u>КАЧЕСТВА САНГКХИ</u>
+<b><u>Supaṭipanno bhagavato sāvakasaṅgho</u></b> \n
+<i>Сообщество (Сангха) учеников Благословенного вступило на хороший путь,</i> \n
+<b><u>Ujupaṭipanno bhagavato sāvakasaṅgho</u></b> \n
+<i>сообщество учеников Благословенного вступило на прямой путь,</i> \n
+<b><u>Ñāyapaṭipanno bhagavato sāvakasaṅgho</u></b> \n
+<i>сообщество учеников Благословенного вступило на верный путь,</i> \n
+<b><u>Sāmīcipaṭipanno bhagavato sāvakasaṅgho</u></b> \n
+<i>сообщество учеников Благословенного вступило на должный путь,</i> \n
+<b><u>Yadidaṃ cattāri purisayugāni aṭṭha purisapuggalā</u></b> \n
+<i>а именно четыре пары, восемь типов личностей.</i> \n
+<b><u>Esa bhagavato sāvakasaṅgho</u></b> \n
+<i>Это сообщество учеников Благословенного</i> \n
+<b><u>Āhuṇeyyo pāhuṇeyyo dakkhiṇeyyo añjalikaraṇīyo</u></b> \n
+<i>	заслуживает даров, заслуживает гостеприимства, заслуживает подношений, заслуживает почтительного приветствия,</i> \n
+<b><u>Anuttaraṃ puññakkhettaṃ lokassati</u></b> \n
+<i>несравненное поле заслуг для мира.</i> \n \n
     </string>
 </resources>

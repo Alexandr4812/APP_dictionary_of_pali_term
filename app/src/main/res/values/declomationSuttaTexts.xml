@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="DeklomaciyaKaraniyaMettaSutta">
-        КАРАНИЯ МЕТТА СУТТА \n \n
+        <b>КАРАНИЯ МЕТТА СУТТА</b> \n \n
 <b><u></u>Karaṇīyamatthakusalena, yanta santaṃ padaṃ abhisamecca;</b> \n \n
 <i>Вот что следует делать тому, кто умел в благом и желает достичь умиротворённого состояния:</i> \n \n
 <b><u>Sakko ujū ca suhujū [sūjū (sī.)] ca, sūvaco cassa mudu anatimānī.</u></b> \n \n

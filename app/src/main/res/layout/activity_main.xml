@@ -9,13 +9,16 @@
 
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="@+id/button_menu">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/button_face"
@@ -77,6 +80,7 @@
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
                 android:text="Словарь палийских терминов" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -84,14 +88,12 @@
         android:id="@+id/button_menu"
         android:layout_width="51dp"
         android:layout_height="39dp"
-        android:layout_marginTop="8dp"
         android:background="@color/my_main_color"
         android:scaleType="centerInside"
         android:src="@drawable/button_menu"
+        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.529" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
