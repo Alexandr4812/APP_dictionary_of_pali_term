@@ -42,6 +42,12 @@
                 android:text="декломация перед приёмом пищи"
                 android:onClick="toDeclomaciyaPeredObedom"/>
 
+            <Button
+                android:id="@+id/button_forgivennes"
+                style="@style/button_activity_declomation_main"
+                android:text="Просьба о прощении недостатков перед старшими монахами"
+                android:onClick="toDeclomaciyaForgivennes"/>
+
         </LinearLayout>
 
 
@@ -52,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
 
         <LinearLayout
@@ -85,6 +91,61 @@
 
             <ImageButton
                 android:id="@+id/backButtonOver2"
+                android:layout_width="107dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackOver"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/overScrollTextForgivennes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/backButtonOverF"
+                android:layout_width="107dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackOver"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewForgivennes"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="661dp"
+                android:text="@string/DeklomaciyaForgivennes" />
+
+            <ImageButton
+                android:id="@+id/backButtonF2"
                 android:layout_width="107dp"
                 android:layout_height="66dp"
                 android:layout_gravity="center"

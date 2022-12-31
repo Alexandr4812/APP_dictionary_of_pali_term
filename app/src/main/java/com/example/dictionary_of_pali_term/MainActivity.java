@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
+import androidx.appcompat.widget.PopupMenu;
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,5 +41,8 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-
+    private void showPopupMenu(View v){
+        PopupMenu popupMenu = new PopupMenu(this, v);
+        popupMenu.inflate(R.menu.popupmenu);
+    }
 }

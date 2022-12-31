@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="DeklomaciyaPeredPrinyatiemPichi">
-        <b>ДЕКЛОМАЦИЯ ПЕРЕД ОБЕДОМ</b> \n \n
-
-<b><u>Patisankha` yoniso pindapa`tam patiseva`mi</u></b> \n \n
-<b><u>Neva dava`ya,na  mada`ya,na  mandana`ya,na  vibhu`sana`ya</u></b> \n \n
-<b><u>ya`vadeva imassa ka`yassa thitiya` ya`pana`ya</u></b> \n \n
-<b><u>vihimsu`paratiya` brahmachariya`nuggaha`ya</u></b> \n \n
-<b><u>iti pura`nanca vedanam patihankha`mi</u></b> \n \n
-<b><u>navan ca vedanam na uppa`dessa`mi</u></b> \n \n
-<b><u>ya`tra` ca me bhavissati, anavajjata` ca pha`suviha`ro ca` ti.</u></b> \n \n
+        <u>ДЕКЛОМАЦИЯ ПЕРЕД ОБЕДОМ</u> \n \n
+<b><u>PatisankhA yoniso pindapAtam patisevAmi</u></b> \n
+<i></i> \n
+<b><u>Neva davAyAna  madAyAna  mandanAyAna  vibhUsanAya</u></b> \n
+<i></i> \n
+<b><u>yAvadeva imassa kAyassa thitiyA yApanAya</u></b> \n
+<i></i> \n
+<b><u>vihimsUparatiyA brahmachariyAnuggahAya</u></b> \n
+<i></i> \n
+<b><u>iti purAnanca vedanam patihankhAmi</u></b> \n
+        <i></i> \n
+<b><u>navan ca vedanam na uppAdessAmi</u></b> \n
+<i></i> \n
+<b><u>yAtrA ca me bhavissati, anavajjatA ca phAsuvihAro cA ti.</u></b> \n
+<i></i> \n \n
+    </string>
+    <string name="DeklomaciyaForgivennes">
+        <u>ПРОСЬБА О ПРОЩЕНИИ НЕДОСТАТКОВ ПЕРЕД СТАРШИМИ МОНАХАМИ</u> \n \n
+<b><u>Okāsa vandāmi Bhante. Mayākataṁ puññaṁ, sāminā anumodi tabbaṁ.</u></b> \n \n
+<i>Please, Bhante, kindly allow me to share with you the merit I have collected.</i> \n \n
+<i>(Bhantes: Sādhu, Sādhu, anumodāmi! Good, good, I rejoice!)</i> \n \n
+<b><u>Saminā kataṁ puññaṁ, mayhaṁ dātabbaṁ</u></b> \n \n
+<i>Please Bhante, kindly share with me the merit you have collected.</i> \n \n
+<i>(Bhantes: Sādhu, Sādhu, anumodetha! Good, good, I share!)</i> \n \n
+<b><u>Sādhu, Sādhu anumodāmi!</u></b> \n \n
+<i>Good, good, I appreciate!</i> \n \n
+<b><u>Okāsa! Dvārattena kataṁ sabbaṁ accayaṁ khamatha me Bhante.</u></b> \n \n
+<i>Forgive me, oh Bhante, of any offences I may have committed by body, speech, or mind.</i> \n \n
+<i>(Bhantes: Kamāmi kamitabbaṁ. I forgive)</i> \n \n
+<b><u>Sadhu Okāsa khamāmi Bhante!</u></b> \n \n
+<i>I ask for forgiveness, oh Bhante!</i> \n \n
     </string>
 </resources>
