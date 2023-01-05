@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Dictionary_of_pali_term</string>
+    <string name="app_name">Pali_Deklamations</string>
+    <string name="title_activity_bottom">bottomActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

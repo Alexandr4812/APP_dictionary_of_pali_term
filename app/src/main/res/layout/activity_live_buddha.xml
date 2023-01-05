@@ -43,18 +43,18 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:foregroundGravity="center"
-                app:srcCompat="@drawable/asita"
-                android:onClick="toSumedha"/>
+                android:onClick="toSumedha"
+                app:srcCompat="@drawable/asita" />
 
             <TextView
                 android:id="@+id/textViewToSumedha"
                 style="@style/TextViewStyle"
-                android:onClick="toSumedha"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="1. Намерение Сумедхи"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:onClick="toSumedha"
+                android:text="1. Намерение Сумедхи"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -64,18 +64,18 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/mahamaya_drim"
-                android:onClick="toMaya"/>
+                android:onClick="toMaya"
+                app:srcCompat="@drawable/mahamaya_drim" />
 
             <TextView
                 android:id="@+id/textViewToMaya"
-                android:onClick="toMaya"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="2. Сон Махамайи"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:onClick="toMaya"
+                android:text="2. Сон Махамайи"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -91,10 +91,10 @@
                 android:id="@+id/textViewToBirth"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="3. Рождение Сидхартхи"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="3. Рождение Сидхартхи"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -110,10 +110,10 @@
                 android:id="@+id/textViewToAsita"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="4. Мудрец Асита"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="4. Мудрец Асита"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -129,10 +129,10 @@
                 android:id="@+id/textViewToJhana"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="5. Первое достижение джханы"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="5. Первое достижение джханы"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -148,10 +148,10 @@
                 android:id="@+id/textViewToSwalve"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="6. Спасение лебедя"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="6. Спасение лебедя"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -167,10 +167,10 @@
                 android:id="@+id/textViewToUmeniya"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:gravity="center"
-                android:text="7. Демонстрация умений"
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="7. Демонстрация умений"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -212,10 +212,10 @@
 
             <TextView
                 android:id="@+id/textViewSumedha"
+                style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sumedha"
-                style="@style/TextMessageStyle" />
+                android:text="@string/sumedha" />
 
 
             <ImageButton
@@ -271,11 +271,10 @@
 
             <TextView
                 android:id="@+id/textViewMaya"
+                style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/mahamaya"
-                style="@style/TextMessageStyle"
-                 />
+                android:text="@string/mahamaya" />
 
             <ImageButton
                 android:id="@+id/backButtonMaya"

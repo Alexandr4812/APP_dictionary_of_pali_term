@@ -25,7 +25,7 @@
     <style name="picsLiveBuddha">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">263dp</item>
-        <item name="android:background">#FFE082</item>
+        <item name="android:background">@color/black</item>
     </style>
 
     <style name="button_activity_declomation_main">
