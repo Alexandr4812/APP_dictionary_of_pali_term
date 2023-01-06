@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="DeklomaciyaPeredPrinyatiemPichi">
-        <u>ДЕКЛОМАЦИЯ ПЕРЕД ОБЕДОМ</u> \n \n
-<b><u>PatisankhA yoniso pindapAtam patisevAmi</u></b> \n
-<i></i> \n
-<b><u>Neva davAyAna  madAyAna  mandanAyAna  vibhUsanAya</u></b> \n
-<i></i> \n
-<b><u>yAvadeva imassa kAyassa thitiyA yApanAya</u></b> \n
-<i></i> \n
-<b><u>vihimsUparatiyA brahmachariyAnuggahAya</u></b> \n
-<i></i> \n
-<b><u>iti purAnanca vedanam patihankhAmi</u></b> \n
-        <i></i> \n
-<b><u>navan ca vedanam na uppAdessAmi</u></b> \n
-<i></i> \n
-<b><u>yAtrA ca me bhavissati, anavajjatA ca phAsuvihAro cA ti.</u></b> \n
-<i></i> \n \n
+        <u>ДЕКЛАМАЦИЯ ПЕРЕД ОБЕДОМ</u> \n \n
+<b><u>Paṭisaṅkhā yoniso piṇḍapātaṁ paṭisevāmi,</u></b> \n \n
+<i>Вдумчиво обдумав это, я употребляю пищу c подаяний </i> \n \n
+<b><u>N’eva davāya na madāya na maṇḍanāya na vibhūsanāya,</u></b> \n \n
+<i>Не для развлечения, ни для опьянения, ни для увеличения массы, ни для того чтобы быть красивым,</i> \n \n
+<b><u>Yāvadeva imassa kāyassa ṭhitiyā yāpanāya vihiṁsuparatiyā brahma-cariyānuggahāya,</u></b> \n \n
+<i>Но просто для выживания, для поддержки этого тела, для прекращения его страданий, для поддержки святой жизни,</i> \n \n
+<b><u>Iti purāṇañ-ca vedanaṁ paṭihaṅkhāmi navañ-ca vedanaṁ na uppādessāmi,</u></b> \n \n
+<i>Думая: “Таким образом я уничтожу прежнее чувство голода и не создам новых чувств от переедания”.</i> \n \n
+<b><u>Yātrā ca me bhavissati anavajjatā ca phāsu-vihāro cāti.</u></b> \n \n
+<i>Я буду стараться быть безупречным</i> \n \n
     </string>
 
     <string name="DeklomaciyaForgivennes">
