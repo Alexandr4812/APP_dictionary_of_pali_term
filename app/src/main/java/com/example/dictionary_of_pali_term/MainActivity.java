@@ -4,10 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
-import androidx.appcompat.widget.PopupMenu;
-import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toTermins(View view){
-        Intent intent = new Intent(this, TerminsActivity.class);
+        Intent intent = new Intent(this, RulesActivity.class);
         startActivity(intent);
         finish();
     }
