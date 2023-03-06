@@ -19,7 +19,8 @@
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 
     <ScrollView
         android:id="@+id/viewScrollPuja"
@@ -40,7 +41,8 @@
                 android:id="@+id/button_morning_puja"
                 style="@style/button_activity_declomation_main"
                 android:text="Утренняя пуджа"
-                android:onClick="toDeclomaciyaMorningPuja"/>
+                android:onClick="toDeclomaciyaMorningPuja"
+                tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>
 
@@ -56,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
+        tools:visibility="visible">
 
 
         <LinearLayout

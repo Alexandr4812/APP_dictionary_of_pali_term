@@ -19,7 +19,8 @@
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 
     <ScrollView
         android:id="@+id/viewScrollDeclomationSutta"
@@ -40,7 +41,8 @@
                 android:id="@+id/button_puja_karaniya"
                 style="@style/button_activity_declomation_main"
                 android:text="Карания метта сутта"
-                android:onClick="toDeclomaciyaSuttaMetta"/>
+                android:onClick="toDeclomaciyaSuttaMetta"
+                tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>
 
@@ -74,7 +76,8 @@
                 android:src="@drawable/button_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textViewSuttaMetta"
@@ -97,7 +100,8 @@
                 android:src="@drawable/button_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
 
 

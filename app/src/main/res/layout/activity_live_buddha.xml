@@ -21,7 +21,8 @@
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 
     <ScrollView
         android:id="@+id/viewScrollDeclomation"
@@ -44,7 +45,9 @@
                 android:layout_gravity="center"
                 android:foregroundGravity="center"
                 android:onClick="toSumedha"
-                app:srcCompat="@drawable/asita" />
+                app:srcCompat="@drawable/asita"
+                android:contentDescription="TODO"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textViewToSumedha"
@@ -57,7 +60,8 @@
                 android:text="1. Намерение Сумедхи"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+                app:layout_constraintTop_toBottomOf="@+id/button_face"
+                tools:ignore="UsingOnClickInXml" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -65,7 +69,9 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:onClick="toMaya"
-                app:srcCompat="@drawable/mahamaya_drim" />
+                app:srcCompat="@drawable/mahamaya_drim"
+                android:contentDescription="TODO"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textViewToMaya"
@@ -78,14 +84,16 @@
                 android:text="2. Сон Махамайи"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+                app:layout_constraintTop_toBottomOf="@+id/button_face"
+                tools:ignore="UsingOnClickInXml" />
 
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/birth_sidhartha" />
+                app:srcCompat="@drawable/birth_sidhartha"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/textViewToBirth"
@@ -104,7 +112,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/mudrec" />
+                app:srcCompat="@drawable/mudrec"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/textViewToAsita"
@@ -123,7 +132,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/first_jhana" />
+                app:srcCompat="@drawable/first_jhana"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/textViewToJhana"
@@ -142,7 +152,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/saving_swan" />
+                app:srcCompat="@drawable/saving_swan"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/textViewToSwalve"
@@ -161,7 +172,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                app:srcCompat="@drawable/skills" />
+                app:srcCompat="@drawable/skills"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/textViewToUmeniya"
@@ -193,7 +205,8 @@
             <ImageView
                 android:id="@+id/imageView9"
                 style="@style/picsLiveBuddha"
-                app:srcCompat="@drawable/asita" />
+                app:srcCompat="@drawable/asita"
+                android:contentDescription="TODO" />
 
             <ImageButton
                 android:id="@+id/backButtonLive0"
@@ -208,7 +221,8 @@
                 android:src="@drawable/button_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textViewSumedha"
@@ -231,7 +245,8 @@
                 android:src="@drawable/button_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
     </ScrollView>
 
@@ -252,7 +267,8 @@
                 android:id="@+id/imageView10"
                 style="@style/picsLiveBuddha"
 
-                app:srcCompat="@drawable/mahamaya_drim" />
+                app:srcCompat="@drawable/mahamaya_drim"
+                android:contentDescription="TODO" />
 
             <ImageButton
                 android:id="@+id/backButtonMaya0"
@@ -267,7 +283,8 @@
                 android:src="@drawable/button_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textViewMaya"
@@ -289,7 +306,8 @@
                 android:src="@drawable/button_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
     </ScrollView>
 

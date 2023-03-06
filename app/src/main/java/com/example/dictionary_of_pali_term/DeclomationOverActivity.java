@@ -31,10 +31,17 @@ public class DeclomationOverActivity extends AppCompatActivity {
         scrollText.setVisibility(view.VISIBLE);
     }
 
+    public void toDeclomaciyaAlmsWish(View view) {
+        ScrollView scrollText = findViewById(R.id.overScrollTextAlmsWish);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
     public void tobackOver(View view) {
         ScrollView scrollText = findViewById(R.id.overScrollTextObed);
         scrollText.setVisibility(view.INVISIBLE);
         ScrollView scrollText2 = findViewById(R.id.overScrollTextForgivennes);
         scrollText2.setVisibility(view.INVISIBLE);
+        ScrollView scrollText3 = findViewById(R.id.overScrollTextAlmsWish);
+        scrollText3.setVisibility(view.INVISIBLE);
     }
 }

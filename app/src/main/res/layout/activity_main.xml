@@ -27,7 +27,8 @@
                 android:layout_marginTop="20dp"
                 android:contentDescription="Описание жизни Будды"
                 android:onClick="toLiveBu"
-                android:src="@drawable/button_face" />
+                android:src="@drawable/button_face"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -43,7 +44,8 @@
                 android:layout_marginTop="20dp"
                 android:contentDescription="Строфы для декломации"
                 android:onClick="toDeclomation"
-                android:src="@drawable/button_stupa" />
+                android:src="@drawable/button_stupa"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -58,7 +60,8 @@
                 android:layout_marginTop="20dp"
                 android:contentDescription="Короткие сутты"
                 android:onClick="toSuttas"
-                android:src="@drawable/button_chakra" />
+                android:src="@drawable/button_chakra"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textView2"
@@ -73,13 +76,14 @@
                 android:layout_marginTop="20dp"
                 android:contentDescription="Словарь терминов"
                 android:onClick="toTermins"
-                android:src="@drawable/button_book" />
+                android:src="@drawable/button_book"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textView"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:text="Словарь палийских терминов" />
+                android:text="Монашеские правила" />
 
         </LinearLayout>
     </ScrollView>
@@ -95,6 +99,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        android:contentDescription="TODO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,8 @@
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 
     <ScrollView
         android:id="@+id/viewScrollOver"
@@ -40,13 +41,22 @@
                 android:id="@+id/button_before_eating"
                 style="@style/button_activity_declomation_main"
                 android:text="декламация перед приёмом пищи"
-                android:onClick="toDeclomaciyaPeredObedom"/>
+                android:onClick="toDeclomaciyaPeredObedom"
+                tools:ignore="UsingOnClickInXml" />
 
             <Button
                 android:id="@+id/button_forgivennes"
                 style="@style/button_activity_declomation_main"
                 android:text="Просьба о прощении недостатков перед старшими монахами"
-                android:onClick="toDeclomaciyaForgivennes"/>
+                android:onClick="toDeclomaciyaForgivennes"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_alms_wish"
+                style="@style/button_activity_declomation_main"
+                android:text="Благопожелания мирянам при взятии даны"
+                android:onClick="toDeclomaciyaAlmsWish"
+                tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>
 
@@ -58,7 +68,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
 
         <LinearLayout
@@ -80,7 +90,8 @@
                 android:src="@drawable/button_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textViewOver"
@@ -102,7 +113,8 @@
                 android:src="@drawable/button_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
 
 
@@ -135,7 +147,8 @@
                 android:src="@drawable/button_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
 
             <TextView
                 android:id="@+id/textViewForgivennes"
@@ -157,7 +170,65 @@
                 android:src="@drawable/button_back"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/overScrollTextAlmsWish"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/backButtonOverAlmsWish"
+                android:layout_width="107dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackOver"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/textViewAlmsWish"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:text="@string/DeklomaciyaAlmsWish" />
+
+            <ImageButton
+                android:id="@+id/backButtonAlmsWish2"
+                android:layout_width="107dp"
+                android:layout_height="66dp"
+                android:layout_gravity="center"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackOver"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
 
 
