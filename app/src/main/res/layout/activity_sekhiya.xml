@@ -4,6 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/my_main_color"
     tools:context=".SekhiyaActivity">
+
+    <ImageButton
+        android:id="@+id/backButtonRules"
+        android:layout_width="107dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/my_main_color"
+        android:contentDescription="возврат в главное меню"
+        android:src="@drawable/button_back"
+        android:onClick="toRulesAct"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UsingOnClickInXml" />
+
+    <ScrollView
+        android:id="@+id/viewScrollSekhiya"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/backButtonRules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSekhiya"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button_sekhiya_1"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/clothing_wrapped_around_body" />
+            <Button
+                android:id="@+id/button_sekhiya_2"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/sit_in_wheel_clothing" />
+            <Button
+                android:id="@+id/button_sekhiya_3"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/sit_strong" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
