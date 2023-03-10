@@ -102,6 +102,7 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
+                android:onClick="toBirthSidhartha"
                 android:text="3. Рождение Сидхартхи"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -194,7 +195,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -205,8 +206,8 @@
             <ImageView
                 android:id="@+id/imageView9"
                 style="@style/picsLiveBuddha"
-                app:srcCompat="@drawable/asita"
-                android:contentDescription="TODO" />
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/asita" />
 
             <ImageButton
                 android:id="@+id/backButtonLive0"
@@ -255,7 +256,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -267,8 +268,8 @@
                 android:id="@+id/imageView10"
                 style="@style/picsLiveBuddha"
 
-                app:srcCompat="@drawable/mahamaya_drim"
-                android:contentDescription="TODO" />
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/mahamaya_drim" />
 
             <ImageButton
                 android:id="@+id/backButtonMaya0"
@@ -295,6 +296,67 @@
 
             <ImageButton
                 android:id="@+id/backButtonMaya"
+                android:layout_width="107dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackIzTextVLive"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/liveScrollTextBirthSidhartha"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                style="@style/picsLiveBuddha"
+
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/birth_sidhartha" />
+
+            <ImageButton
+                android:id="@+id/backButtonBirthSidhartha0"
+                android:layout_width="107dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackIzTextVLive"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/textViewBirthSidhartha"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/birdth" />
+
+            <ImageButton
+                android:id="@+id/backButtonBirthSidhartha"
                 android:layout_width="107dp"
                 android:layout_height="63dp"
                 android:layout_gravity="center"

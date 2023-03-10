@@ -6,6 +6,7 @@
         <item name="android:textColor">#FFE57F</item>
         <item name="android:textSize">20sp</item>
         <item name="android:layout_marginTop">20dp</item>
+        <item name="android:minHeight">48dp</item>
     </style>
 
     <style name="TextMessageStyle">
