@@ -44,7 +44,7 @@
                 android:layout_marginTop="20dp"
                 android:contentDescription="Строфы для декломации"
                 android:onClick="toDeclomation"
-                android:src="@drawable/button_stupa"
+                android:src="@drawable/button_book"
                 tools:ignore="UsingOnClickInXml" />
 
             <TextView
@@ -75,8 +75,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:contentDescription="Словарь терминов"
-                android:onClick="toTermins"
-                android:src="@drawable/button_book"
+                android:onClick="toRulesAct"
+                android:src="@drawable/button_stupa"
                 tools:ignore="UsingOnClickInXml" />
 
             <TextView

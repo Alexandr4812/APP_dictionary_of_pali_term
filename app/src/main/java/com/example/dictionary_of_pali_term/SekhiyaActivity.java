@@ -14,8 +14,8 @@ public class SekhiyaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sekhiya);
     }
 
-    public void toRulesAct(View view){
-        Intent intent = new Intent(this, RulesActivity.class);
+    public void toRulesSamaneraAct(View view){
+        Intent intent = new Intent(this, RulesSamanera.class);
         startActivity(intent);
         finish();
     }

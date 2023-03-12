@@ -6,22 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class RulesActivity extends AppCompatActivity {
+public class RulesSamanera extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rules);
+        setContentView(R.layout.activity_rules_samanera);
     }
 
-    public void toRulesSamaneraAct(View view){
-        Intent intent = new Intent(this, RulesSamanera.class);
+    public void toRulesSekhiyaAct(View view){
+        Intent intent = new Intent(this, SekhiyaActivity.class);
         startActivity(intent);
         finish();
     }
 
-    public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
+    public void toRulesAct(View view){
+        Intent intent = new Intent(this, RulesActivity.class);
         startActivity(intent);
         finish();
     }

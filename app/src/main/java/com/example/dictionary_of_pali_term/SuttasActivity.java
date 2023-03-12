@@ -13,7 +13,6 @@ public class SuttasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas);
     }
-
     public void toMainAct(View view){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

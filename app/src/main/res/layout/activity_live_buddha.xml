@@ -93,6 +93,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/birth_sidhartha"
+                android:onClick="toBirthSidhartha"
                 android:contentDescription="TODO" />
 
             <TextView
@@ -114,6 +115,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/mudrec"
+                android:onClick="toAsita"
                 android:contentDescription="TODO" />
 
             <TextView
@@ -124,6 +126,7 @@
                 android:layout_marginBottom="20dp"
                 android:gravity="center"
                 android:text="4. Мудрец Асита"
+                android:onClick="toAsita"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -357,6 +360,67 @@
 
             <ImageButton
                 android:id="@+id/backButtonBirthSidhartha"
+                android:layout_width="107dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackIzTextVLive"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/liveScrollTextAsita"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView12"
+                style="@style/picsLiveBuddha"
+
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/mudrec" />
+
+            <ImageButton
+                android:id="@+id/backButtonAsita0"
+                android:layout_width="107dp"
+                android:layout_height="63dp"
+                android:layout_gravity="center"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackIzTextVLive"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/textViewAsita"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/asita" />
+
+            <ImageButton
+                android:id="@+id/backButtonAsita"
                 android:layout_width="107dp"
                 android:layout_height="63dp"
                 android:layout_gravity="center"

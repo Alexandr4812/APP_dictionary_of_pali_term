@@ -32,8 +32,14 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    public void toTermins(View view){
+    public void toRulesAct(View view){
         Intent intent = new Intent(this, RulesActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void toMainAct(View view){
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }

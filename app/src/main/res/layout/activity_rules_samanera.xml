@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".RulesActivity">
+    tools:context=".RulesSamanera">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -15,7 +15,7 @@
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
         android:src="@drawable/button_back"
-        android:onClick="toMainAct"
+        android:onClick="toRulesAct"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
         tools:ignore="UsingOnClickInXml" />
 
     <ScrollView
-        android:id="@+id/viewScrollRules"
+        android:id="@+id/viewScrollRulesSamanera"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/backButton"
@@ -32,16 +32,16 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollRules"
+            android:id="@+id/linearLayoutScrollRulesSamanera"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <Button
-                android:id="@+id/button_rules"
+                android:id="@+id/button_rules_samanera"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toRulesSamaneraAct"
-                android:text="руководство для саманер" />
+                android:onClick="toRulesSekhiyaAct"
+                android:text="sekhiya \n правила для тренировки" />
 
         </LinearLayout>
 

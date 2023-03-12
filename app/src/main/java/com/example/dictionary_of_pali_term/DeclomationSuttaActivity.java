@@ -15,6 +15,12 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_declomation_sutta);
     }
 
+    public void toMainAct(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void toDeclomation(View view){
         Intent intent = new Intent(this, DeklomationMainActivity.class);
         startActivity(intent);

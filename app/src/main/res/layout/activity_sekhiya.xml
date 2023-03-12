@@ -15,7 +15,7 @@
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
         android:src="@drawable/button_back"
-        android:onClick="toRulesAct"
+        android:onClick="toRulesSamaneraAct"
         android:scaleType="centerInside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,6 +36,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewFirstCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="@string/first_category"
+                android:textAlignment="center"
+                android:textColor="#FFE082"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button_sekhiya_1"
@@ -65,6 +77,34 @@
                 android:id="@+id/button_sekhiya_7"
                 style="@style/button_activity_declomation_main"
                 android:text="@string/speak_noisily" />
+            <Button
+                android:id="@+id/button_sekhiya_15_16"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/uncoiling_the_body" />
+            <Button
+                android:id="@+id/button_sekhiya_16_17"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/uncoiling_the_urms" />
+            <Button
+                android:id="@+id/button_sekhiya_17_18"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/uncoiling_the_head" />
+            <Button
+                android:id="@+id/button_sekhiya_18_19"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/hands_on_sides" />
+            <Button
+                android:id="@+id/button_sekhiya_23_24"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/covered_head" />
+            <Button
+                android:id="@+id/button_sekhiya_25_26"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/walc_on_heels" />
+            <Button
+                android:id="@+id/button_sekhiya_27_28"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/hugging_knees" />
 
         </LinearLayout>
 
