@@ -25,65 +25,65 @@
                 style="@style/MainButtons"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:contentDescription="Описание жизни Будды"
+                android:contentDescription="@string/mainButtonLiveBuddha"
                 android:onClick="toLiveBu"
                 android:src="@drawable/button_face"
-                tools:ignore="UsingOnClickInXml" />
+                tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/textView4"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:text="Жизнеописание Будды" />
+                android:text="@string/mainButtonLiveBuddha" />
 
             <ImageButton
                 android:id="@+id/button_stupa"
                 style="@style/MainButtons"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:contentDescription="Строфы для декломации"
+                android:contentDescription="@string/mainButtonStofiDlyaDeclomacii"
                 android:onClick="toDeclomation"
                 android:src="@drawable/button_book"
-                tools:ignore="UsingOnClickInXml" />
+                tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/textView3"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:text="Строфы для декламаций" />
+                android:text="@string/mainButtonStofiDlyaDeclomacii" />
 
             <ImageButton
                 android:id="@+id/button_chakra"
                 style="@style/MainButtons"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:contentDescription="Короткие сутты"
+                android:contentDescription="@string/mainButtonShortSuttas"
                 android:onClick="toSuttas"
                 android:src="@drawable/button_chakra"
-                tools:ignore="UsingOnClickInXml" />
+                tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/textView2"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:text="Короткие сутты" />
+                android:text="@string/mainButtonShortSuttas" />
 
             <ImageButton
                 android:id="@+id/button_book"
                 style="@style/MainButtons"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:contentDescription="Словарь терминов"
+                android:contentDescription="@string/mainButtonMonksRules"
                 android:onClick="toRulesAct"
                 android:src="@drawable/button_stupa"
-                tools:ignore="UsingOnClickInXml" />
+                tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/textView"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:text="Монашеские правила" />
+                android:text="@string/mainButtonMonksRules" />
 
         </LinearLayout>
     </ScrollView>
@@ -100,6 +100,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-        android:contentDescription="TODO" />
+        android:contentDescription="@string/todo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
