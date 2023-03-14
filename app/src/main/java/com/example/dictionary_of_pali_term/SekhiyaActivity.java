@@ -19,4 +19,10 @@ public class SekhiyaActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void toMainAct(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

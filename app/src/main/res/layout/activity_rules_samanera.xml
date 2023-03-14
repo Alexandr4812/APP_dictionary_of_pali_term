@@ -11,6 +11,7 @@
         android:id="@+id/backButton"
         android:layout_width="51dp"
         android:layout_height="39dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
         android:onClick="toRulesAct"
@@ -23,10 +24,27 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="UsingOnClickInXml" />
 
+    <ImageButton
+        android:id="@+id/imageButtonliveHome"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@color/my_main_color"
+        android:foregroundGravity="center"
+        android:onClick="toMainAct"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ScrollView
         android:id="@+id/viewScrollRulesSamanera"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,13 +54,13 @@
             android:id="@+id/linearLayoutScrollRulesSamanera"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/button_rules_samanera"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toRulesSekhiyaAct"
-                android:text="sekhiya \n правила для тренировки" />
+                android:text="@string/sekhiya_n" />
 
         </LinearLayout>
 

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string name="first_category">
-        Категория первая \n 26 секкхий о надлежащем поведении: \n 
-    </string>
+    <string name="first_category">"Категория первая   26 секкхий о надлежащем поведении:        "</string>
 
     <string name="clothing_wrapped_around_body">
         1-2.\n Я буду носить нижнее одеяние [верхнее одеяние] обёрнутым вокруг тела \n — тренировка к соблюдению.

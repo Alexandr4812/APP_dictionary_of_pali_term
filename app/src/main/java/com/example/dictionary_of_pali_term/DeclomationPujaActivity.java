@@ -30,4 +30,10 @@ public class DeclomationPujaActivity extends AppCompatActivity {
         ScrollView scrollText = findViewById(R.id.overScrollTextMorningPuja);
         scrollText.setVisibility(view.INVISIBLE);
     }
+
+    public void toMainAct(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

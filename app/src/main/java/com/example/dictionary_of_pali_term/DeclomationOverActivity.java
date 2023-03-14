@@ -43,5 +43,12 @@ public class DeclomationOverActivity extends AppCompatActivity {
         scrollText2.setVisibility(view.INVISIBLE);
         ScrollView scrollText3 = findViewById(R.id.overScrollTextAlmsWish);
         scrollText3.setVisibility(view.INVISIBLE);
+
+    }
+
+    public void toMainAct(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

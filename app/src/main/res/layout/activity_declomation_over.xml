@@ -11,6 +11,7 @@
         android:id="@+id/backButton"
         android:layout_width="51dp"
         android:layout_height="39dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
         android:onClick="toDeclomation"
@@ -23,10 +24,27 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="UsingOnClickInXml" />
 
+    <ImageButton
+        android:id="@+id/imageButtonliveHome"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@color/my_main_color"
+        android:foregroundGravity="center"
+        android:onClick="toMainAct"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ScrollView
         android:id="@+id/viewScrollOver"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,27 +54,27 @@
             android:id="@+id/linearLayoutScrollOver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/button_before_eating"
                 style="@style/button_activity_declomation_main"
-                android:text="декламация перед приёмом пищи"
                 android:onClick="toDeclomaciyaPeredObedom"
+                android:text="@string/decl_pered_priemom_pichi"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
                 android:id="@+id/button_forgivennes"
                 style="@style/button_activity_declomation_main"
-                android:text="Просьба о прощении недостатков перед старшими монахами"
                 android:onClick="toDeclomaciyaForgivennes"
+                android:text="@string/prosba_o_prochenii_nedostatkov"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
                 android:id="@+id/button_alms_wish"
                 style="@style/button_activity_declomation_main"
-                android:text="Благопожелания мирянам при взятии даны"
                 android:onClick="toDeclomaciyaAlmsWish"
+                android:text="@string/blagopogelaniya_pri_vzyatii_pichi"
                 tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>
@@ -69,8 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="invisible">
-
+        tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -79,10 +96,28 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/imageButtonliveHome5"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageButton
                 android:id="@+id/backButtonOver"
                 android:layout_width="51dp"
                 android:layout_height="39dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="#FFE082"
                 android:contentDescription="возврат в главное меню"
                 android:foregroundGravity="center"
@@ -106,6 +141,8 @@
                 android:layout_width="51dp"
                 android:layout_height="39dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="#FFE082"
                 android:contentDescription="возврат в главное меню"
                 android:foregroundGravity="center"
@@ -116,6 +153,23 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
+            <ImageButton
+                android:id="@+id/imageButtonliveHome6"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
         </LinearLayout>
 
 
@@ -126,7 +180,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="invisible">
+        tools:visibility="visible">
 
 
         <LinearLayout
@@ -136,10 +190,28 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/imageButtonliveHome7"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
                 android:id="@+id/backButtonOverF"
                 android:layout_width="51dp"
                 android:layout_height="39dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="#FFE082"
                 android:contentDescription="возврат в главное меню"
                 android:foregroundGravity="center"
@@ -159,10 +231,28 @@
                 android:text="@string/DeklomaciyaForgivennes" />
 
             <ImageButton
+                android:id="@+id/imageButtonliveHome8"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
                 android:id="@+id/backButtonF2"
                 android:layout_width="51dp"
                 android:layout_height="39dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="#FFE082"
                 android:contentDescription="возврат в главное меню"
                 android:foregroundGravity="center"
@@ -183,7 +273,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="invisible">
+        tools:visibility="visible">
 
 
         <LinearLayout
@@ -193,10 +283,28 @@
             android:orientation="vertical">
 
             <ImageButton
+                android:id="@+id/imageButtonliveHome9"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
                 android:id="@+id/backButtonOverAlmsWish"
                 android:layout_width="51dp"
                 android:layout_height="39dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="#FFE082"
                 android:contentDescription="возврат в главное меню"
                 android:foregroundGravity="center"
@@ -216,10 +324,28 @@
                 android:text="@string/DeklomaciyaAlmsWish" />
 
             <ImageButton
+                android:id="@+id/imageButtonliveHome10"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageButton
                 android:id="@+id/backButtonAlmsWish2"
                 android:layout_width="51dp"
                 android:layout_height="39dp"
                 android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="#FFE082"
                 android:contentDescription="возврат в главное меню"
                 android:foregroundGravity="center"

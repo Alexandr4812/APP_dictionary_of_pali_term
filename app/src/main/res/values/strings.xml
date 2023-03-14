@@ -16,4 +16,14 @@
     <string name="pervoe_dostigenie_dgani">5. Первое достижение джханы</string>
     <string name="spasenie_lebedya">6. Спасение лебедя</string>
     <string name="demonstraciya_umenii">7. Демонстрация умений</string>
+    <string name="pudja">Пуджа</string>
+    <string name="sutta">Сутта</string>
+    <string name="drugie_declomacii">Другие декламации</string>
+    <string name="karaniya_metta">Карания метта сутта</string>
+    <string name="utrennaia_pudga">Утренняя пуджа</string>
+    <string name="decl_pered_priemom_pichi">декламация перед приёмом пищи</string>
+    <string name="prosba_o_prochenii_nedostatkov">Просьба о прощении недостатков перед старшими монахами</string>
+    <string name="blagopogelaniya_pri_vzyatii_pichi">Благопожелания мирянам при взятии даны</string>
+    <string name="rukovodstvo_dlya_samaner">руководство для саманер</string>
+    <string name="sekhiya_n">sekhiya   правила для тренировки</string>
 </resources>

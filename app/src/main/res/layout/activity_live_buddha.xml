@@ -201,7 +201,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="invisible">
+        tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -233,6 +233,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageButton
+                android:id="@+id/imageButtonliveHome0"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
             <TextView
                 android:id="@+id/textViewSumedha"
                 style="@style/TextMessageStyle"
@@ -258,6 +274,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
+            <ImageButton
+                android:id="@+id/imageButtonliveHome"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
         </LinearLayout>
     </ScrollView>
 
@@ -299,6 +331,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageButton
+                android:id="@+id/imageButtonliveHome1"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
             <TextView
                 android:id="@+id/textViewMaya"
                 style="@style/TextMessageStyle"
@@ -323,6 +371,23 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
+            <ImageButton
+                android:id="@+id/imageButtonliveHome2"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
         </LinearLayout>
     </ScrollView>
 
@@ -364,6 +429,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageButton
+                android:id="@+id/imageButtonliveHome3"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
             <TextView
                 android:id="@+id/textViewBirthSidhartha"
                 style="@style/TextMessageStyle"
@@ -388,6 +469,23 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
+            <ImageButton
+                android:id="@+id/imageButtonliveHome4"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
         </LinearLayout>
     </ScrollView>
 
@@ -429,6 +527,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageButton
+                android:id="@+id/imageButtonliveHome5"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
             <TextView
                 android:id="@+id/textViewAsita"
                 style="@style/TextMessageStyle"
@@ -453,6 +567,23 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
+            <ImageButton
+                android:id="@+id/imageButtonliveHome6"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
         </LinearLayout>
     </ScrollView>
 
