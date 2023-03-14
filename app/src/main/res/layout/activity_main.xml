@@ -18,7 +18,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:visibility="visible">
 
             <ImageButton
                 android:id="@+id/button_face"
@@ -80,7 +81,7 @@
                 tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textView1"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
                 android:text="@string/mainButtonMonksRules" />
@@ -89,17 +90,85 @@
     </ScrollView>
 
     <ImageButton
+        android:id="@+id/button_menu_exit"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:background="@color/my_main_color"
+        android:contentDescription="@string/todo"
+        android:onClick="toPopupMenuExit"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+
+    <ImageButton
         android:id="@+id/button_menu"
         android:layout_width="51dp"
         android:layout_height="39dp"
-        android:layout_marginBottom="20dp"
         android:background="@color/my_main_color"
+        android:contentDescription="@string/todo"
+        android:onClick="toPopupMenu"
         android:scaleType="centerInside"
         android:src="@drawable/button_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-        android:contentDescription="@string/todo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.98"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <ScrollView
+        android:id="@+id/popupMenuSV"
+        android:layout_width="50dp"
+        android:layout_height="289dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imageButtonRu"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@color/my_main_color"
+                android:onClick="changeLangRu"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_ru" />
+
+            <ImageButton
+                android:id="@+id/imageButtonUk"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@color/my_main_color"
+                android:onClick="changeLangEn"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_en" />
+
+            <ImageButton
+                android:id="@+id/imageButtonExit"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@color/my_main_color"
+                android:onClick="toPopupMenuExit"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back" />
+        </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
