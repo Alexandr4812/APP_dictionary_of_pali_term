@@ -134,9 +134,7 @@
 44. \n Я не буду есть с поднятых комков пищи \n — тренировка к соблюдению.
     </string>
 
-    <string name="pokusivat_kuski">
-45. \n I will not eat by biting pieces of food \n — training for compliance.
-    </string>
+    <string name="pokusivat_kuski">"45. \n Я не буду есть, откусывая кусочки пищи\n— тренировка на соответствие.   "</string>
 
     <string name="nabivat_shoki">
 46. \n Я не буду есть, набивая щёки \n — тренировка к соблюдению.
