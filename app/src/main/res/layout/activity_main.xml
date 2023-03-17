@@ -107,8 +107,8 @@
 
     <ImageButton
         android:id="@+id/button_menu"
-        android:layout_width="51dp"
-        android:layout_height="39dp"
+        android:layout_width="61dp"
+        android:layout_height="49dp"
         android:background="@color/my_main_color"
         android:contentDescription="@string/todo"
         android:onClick="toPopupMenu"

@@ -20,6 +20,12 @@ public class RulesActivity extends AppCompatActivity {
         finish();
     }
 
+    public void toBecomingSamaneraPabajaAct(View view){
+        Intent intent = new Intent(this, ActivityBecomingSamsneraPpabaja.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void toMainAct(View view){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

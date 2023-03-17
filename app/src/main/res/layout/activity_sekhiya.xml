@@ -140,6 +140,288 @@
                 style="@style/button_activity_declomation_main"
                 android:text="@string/hugging_knees" />
 
+            <TextView
+                android:id="@+id/textViewSecondCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="@string/secondCategory"
+                android:textAlignment="center"
+                android:textColor="#FFE082"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_sekhiya_27"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/priem_pichi_priznatelno" />
+
+            <Button
+                android:id="@+id/button_sekhiya_28"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/priem_pishi_vnimanie_na_chashe" />
+
+            <Button
+                android:id="@+id/button_sekhiya_29"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/priem_pichi_vnadlegaishey_proporcii" />
+
+            <Button
+                android:id="@+id/button_sekhiya_30"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/priem_pichi_vroven_skraem_chashi" />
+
+            <Button
+                android:id="@+id/button_sekhiya_31"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/priem_pichi_est_priznatelno" />
+
+            <Button
+                android:id="@+id/button_sekhiya_32"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/priem_pichi_svnimaniem_nachashu" />
+
+            <Button
+                android:id="@+id/button_sekhiya_33"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/priem_pichi_metodichno" />
+
+            <Button
+                android:id="@+id/button_sekhiya_34"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/priem_pichi_karri_vnadleg_proporcii" />
+
+            <Button
+                android:id="@+id/button_sekhiya_35"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/priem_pichi_kuski_skuchi" />
+
+            <Button
+                android:id="@+id/button_sekhiya_36"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/priem_pichi_pryatat_karry" />
+
+            <Button
+                android:id="@+id/button_sekhiya_37"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_est_ris_kotor_prosil_za_sebya" />
+
+            <Button
+                android:id="@+id/button_sekhiya_38"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/smotret_vchashu_drugogo" />
+
+            <Button
+                android:id="@+id/button_sekhiya_39"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_brat_bolsh_kuski_pishi" />
+
+            <Button
+                android:id="@+id/button_sekhiya_40"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/rovnie_kuski_pishi" />
+
+            <Button
+                android:id="@+id/button_sekhiya_41"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/otkrivat_rot" />
+
+            <Button
+                android:id="@+id/button_sekhiya_42"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/zasovivat_ruku" />
+
+            <Button
+                android:id="@+id/button_sekhiya_43"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/govorit_snabitim_rtom" />
+
+            <Button
+                android:id="@+id/button_sekhiya_44"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/podnyatie_komki" />
+
+            <Button
+                android:id="@+id/button_sekhiya_45"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/pokusivat_kuski" />
+
+            <Button
+                android:id="@+id/button_sekhiya_46"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/nabivat_shoki" />
+
+            <Button
+                android:id="@+id/button_sekhiya_47"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/stryahivat_edu_sruk" />
+
+            <Button
+                android:id="@+id/button_sekhiya_48"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/rasbrasivat_ris" />
+
+            <Button
+                android:id="@+id/button_sekhiya_49"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/visovivat_yazik" />
+
+            <Button
+                android:id="@+id/button_sekhiya_50"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/chmokat_gubami" />
+
+            <Button
+                android:id="@+id/button_sekhiya_51"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/prihlebivayshii_zvuk" />
+
+            <Button
+                android:id="@+id/button_sekhiya_52"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/oblizivat_ruki" />
+
+            <Button
+                android:id="@+id/button_sekhiya_53"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/oblizivat_chashu" />
+
+            <Button
+                android:id="@+id/button_sekhiya_54"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/oblizivat_gubi" />
+
+            <Button
+                android:id="@+id/button_sekhiya_55"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/brat_sosud_gryaznoi_rukoi" />
+
+            <Button
+                android:id="@+id/button_sekhiya_56"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/vilivat_vodu_v_naselennoi_mestnosti" />
+
+            <TextView
+                android:id="@+id/textViewThirdCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="@string/tretiya_kategoriya_sekhiya"
+                android:textAlignment="center"
+                android:textColor="#FFE082"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_sekhiya_57"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_szontom" />
+
+            <Button
+                android:id="@+id/button_sekhiya_58"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_sposohom" />
+
+            <Button
+                android:id="@+id/button_sekhiya_59"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_snogom" />
+
+            <Button
+                android:id="@+id/button_sekhiya_60"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_sorugiem" />
+
+            <Button
+                android:id="@+id/button_sekhiya_61_62"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_skogobuvi" />
+
+            <Button
+                android:id="@+id/button_sekhiya_63"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_vtransporte" />
+
+            <Button
+                android:id="@+id/button_sekhiya_64"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_legachego" />
+
+            <Button
+                android:id="@+id/button_sekhiya_65"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_obhvativkoleni" />
+
+            <Button
+                android:id="@+id/button_sekhiya_66"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_sgolovnimuborom" />
+
+            <Button
+                android:id="@+id/button_sekhiya_67"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_ssharfom" />
+
+            <Button
+                android:id="@+id/button_sekhiya_68"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_nasidenii" />
+
+            <Button
+                android:id="@+id/button_sekhiya_69"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_boleevisokomsidenii" />
+
+            <Button
+                android:id="@+id/button_sekhiya_70"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_vsidyachemesliyastou" />
+
+            <Button
+                android:id="@+id/button_sekhiya_71"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_iduchegovperedi" />
+
+            <Button
+                android:id="@+id/button_sekhiya_72"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/ne_obuchat_idushegopodoroge" />
+
+            <TextView
+                android:id="@+id/textViewOraznom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="@string/o_raznom"
+                android:textAlignment="center"
+                android:textColor="#FFE082"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_sekhiya_73"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/spravliat_nugdu_stoya" />
+
+            <Button
+                android:id="@+id/button_sekhiya_74"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/spravlyat_nugdu_naposevi" />
+
+            <Button
+                android:id="@+id/button_sekhiya_75"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/spravliat_nugdu_vvodu" />
+
         </LinearLayout>
 
 

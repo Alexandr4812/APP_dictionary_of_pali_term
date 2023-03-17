@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Pali_Deklamations</string>
+    <string name="app_name" translatable="false">Pali_Deсlamations</string>
     <string name="title_activity_bottom" translatable="false">bottomActivity</string>
     <string name="title_home" translatable="false">Home</string>
     <string name="title_dashboard" translatable="false">Dashboard</string>
@@ -7,7 +7,7 @@
     <string name="mainButtonLiveBuddha">Жизнеописание Будды</string>
     <string name="mainButtonStofiDlyaDeclomacii">Строфы для декламаций</string>
     <string name="mainButtonShortSuttas">Короткие сутты</string>
-    <string name="mainButtonMonksRules">Монашеские правила</string>
+    <string name="mainButtonMonksRules">Монашеские правила и церемонии</string>
     <string name="todo" translatable="false">TODO</string>
     <string name="namerenie_sumedhi">1. Намерение Сумедхи</string>
     <string name="son_mahamayi">2. Сон Махамайи</string>
@@ -26,4 +26,5 @@
     <string name="blagopogelaniya_pri_vzyatii_pichi">Благопожелания мирянам при взятии даны</string>
     <string name="rukovodstvo_dlya_samaner">руководство для саманер</string>
     <string name="sekhiya_n">sekhiya   правила для тренировки</string>
+    <string name="pabaja_text">строфы для церемонии становления саманерой \n pabbajja</string>
 </resources>
