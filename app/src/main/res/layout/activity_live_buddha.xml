@@ -140,7 +140,8 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                app:srcCompat="@drawable/first_jhana" />
+                app:srcCompat="@drawable/first_jhana"
+                android:onClick="toJhana"/>
 
             <TextView
                 android:id="@+id/textViewToJhana"
@@ -152,7 +153,8 @@
                 android:text="@string/pervoe_dostigenie_dgani"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+                app:layout_constraintTop_toBottomOf="@+id/button_face"
+                android:onClick="toJhana"/>
 
             <ImageView
                 android:id="@+id/imageView7"
@@ -505,7 +507,6 @@
             <ImageView
                 android:id="@+id/imageView12"
                 style="@style/picsLiveBuddha"
-
                 android:contentDescription="TODO"
                 app:srcCompat="@drawable/mudrec" />
 
@@ -570,6 +571,103 @@
 
             <ImageButton
                 android:id="@+id/imageButtonliveHome6"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/liveScrollTextJhana"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView13"
+                style="@style/picsLiveBuddha"
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/first_jhana" />
+
+            <ImageButton
+                android:id="@+id/backButtonJhana0"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackIzTextVLive"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+
+            <ImageButton
+                android:id="@+id/imageButtonliveHomeJhana"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/textViewJhana"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/djhana" />
+
+            <ImageButton
+                android:id="@+id/backButtonJhana1"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackIzTextVLive"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+
+            <ImageButton
+                android:id="@+id/imageButtonliveHomeJhana1"
                 android:layout_width="51dp"
                 android:layout_height="39dp"
                 android:layout_gravity="center"

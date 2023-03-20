@@ -50,6 +50,11 @@ public class LiveBuddhaActivity extends AppCompatActivity {
         scrollText.setVisibility(view.VISIBLE);
     }
 
+    public void toJhana(View view) {
+        ScrollView scrollText = findViewById(R.id.liveScrollTextJhana);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
     public void tobackIzTextVLive(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollText);
         scrollText.setVisibility(view.INVISIBLE);
@@ -59,6 +64,8 @@ public class LiveBuddhaActivity extends AppCompatActivity {
         scrollText3.setVisibility(view.INVISIBLE);
         ScrollView scrollText4 = findViewById(R.id.liveScrollTextAsita);
         scrollText4.setVisibility(view.INVISIBLE);
+        ScrollView scrollText5 = findViewById(R.id.liveScrollTextJhana);
+        scrollText5.setVisibility(view.INVISIBLE);
     }
 
 }
