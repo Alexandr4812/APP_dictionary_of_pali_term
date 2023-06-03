@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         changeLocale(locale);
 
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
-        ImageButton imageButtonEx = findViewById(R.id.imageButtonExit);
+        ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
         scrollText.setVisibility(view.INVISIBLE);
         imageButtonEx.setVisibility(View.INVISIBLE);
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         changeLocale(locale);
 
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
-        ImageButton imageButtonEx = findViewById(R.id.imageButtonExit);
+        ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
         scrollText.setVisibility(view.INVISIBLE);
         imageButtonEx.setVisibility(View.INVISIBLE);
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void toPopupMenu(View view) {
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
-        ImageButton imageButtonEx = findViewById(R.id.imageButtonExit);
+        ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
         scrollText.setVisibility(view.VISIBLE);
         imageButtonEx.setVisibility(View.VISIBLE);
@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void toPopupMenuExit(View view) {
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
-        ImageButton imageButtonEx = findViewById(R.id.imageButtonExit);
+        ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
         scrollText.setVisibility(view.INVISIBLE);
         imageButtonEx.setVisibility(View.INVISIBLE);

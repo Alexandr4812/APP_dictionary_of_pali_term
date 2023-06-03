@@ -77,6 +77,11 @@ public class SekhiyaActivity extends AppCompatActivity {
         scrollText.setVisibility(view.VISIBLE);
     }
 
+    public void toComm21_22(View view) {
+        ScrollView scrollText = findViewById(R.id.viewScrollSekhiyaComm21_22);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
     public void tobackIzTextSekhiya(View view) {
         ScrollView scrollText = findViewById(R.id.viewScrollSekhiyaComm1);
         scrollText.setVisibility(view.INVISIBLE);
@@ -98,5 +103,7 @@ public class SekhiyaActivity extends AppCompatActivity {
         scrollText9.setVisibility(view.INVISIBLE);
         ScrollView scrollText10 = findViewById(R.id.viewScrollSekhiyaComm19_20);
         scrollText10.setVisibility(view.INVISIBLE);
+        ScrollView scrollText11 = findViewById(R.id.viewScrollSekhiyaComm21_22);
+        scrollText11.setVisibility(view.INVISIBLE);
     }
 }

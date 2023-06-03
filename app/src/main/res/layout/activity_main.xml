@@ -159,15 +159,6 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/button_en" />
 
-            <ImageButton
-                android:id="@+id/imageButtonExit"
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:background="@color/my_main_color"
-                android:onClick="toPopupMenuExit"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back" />
         </LinearLayout>
     </ScrollView>
 
