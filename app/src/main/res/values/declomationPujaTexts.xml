@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="DeklomaciyaMorningPuja">
-        <b>УТРЕННЯЯ ПУДЖА</b> \n \n \n
-        <u>ВЫРАЖЕНИЕ ПОЧТЕНИЯ</u> \n
+        <b>УТРЕННЯЯ ВАНДАНА</b> \n \n \n
+        <u>ВЫРАЖЕНИЕ ПОЧТЕНИЯ</u> \n \n
 <b><u>Namo tassa bhagavato arahato sammāsambuddhassa [3x]</u></b> \n
 <i>Почтение Благословенному, достойному, постигшему в совершенстве.</i> \n \n
-        <u>ОБРАЩЕНИЕ К БУДДЕ</u> \n
+        <u>ОБРАЩЕНИЕ К БУДДЕ</u> \n \n
 <b><u>Ni`vedaya`mi sambuddham</u></b> \n
 <i>Обращаюсь к Самасамбудде</i> \n
 <b><u>Vi`tara`gam maha`munim</u></b> \n
@@ -14,17 +14,17 @@
 <i>Обращаюсь к Сугатте</i> \n
 <b><u>Lokajettham nara`sabam</u></b> \n
 <i>Победителю Мира наивысшему из людей</i> \n \n
-        <u>ПОДНОШЕНИЕ СВЕТА</u> \n
+        <u>ПОДНОШЕНИЕ СВЕТА</u> \n \n
 <b><u>Ghanasārappadittena - dīpena tamadhaṃsinā</u></b> \n
 <i>Светом пылающей камфоры, устраняющей тьму</i> \n
 <b><u>Tilokadīpaṃ sambuddhaṃ - pūjayāmi tamonudaṃ</u></b> \n
 <i>я выражаю почтение просветителю трёх миров, постигшему, рассеивающему тьму (невежества).</i> \n \n
-        <u>ПОДНОШЕНИЕ БЛАГОВОНИЙ</u> \n
+        <u>ПОДНОШЕНИЕ БЛАГОВОНИЙ</u> \n \n
 <b><u>sugandhikāya vadanaṃ - ananta guṇa gandhinaṃ</u></b> \n
 <i>Тому, чьё тело и лицо благоухает, от которого исходит запах бессчётных благих качеств,</i> \n
 <b><u>sugandhināhaṃ gandhena - pūjayāmi tathāgataṃ</u></b> \n
 <i>я подношу эти благовония - Татхагате.</i> \n \n
-        <u>ПОДНОШЕНИ ЦВЕТОВ</u> \n
+        <u>ПОДНОШЕНИ ЦВЕТОВ</u> \n \n
 <b><u>Vaṇṇagandhaguṇopetaṃ - etaṃ kusumasantatiṃ</u></b> \n
 <i>Обладающую красотой и приятным запахом эту россыпь цветов,</i> \n
 <b><u>Pūjayāmi munindassa - sirīpādasaroruhe</u></b> \n
@@ -33,12 +33,12 @@
 <i>Я почитаю Будду этими цветами (kusumena+anena), пусть благодаря этому благодеянию я обрету освобождение.</i> \n
 <b><u>Pupphaṃ milāyāti yathā idamme - kāyo tathā yāti vināsabhāvaṃ</u></b> \n
 <i>Как вянут эти цветы, так и это моё тело подвержено разрушению.</i> \n \n
-        <u>ПОДНОШЕНИЕ ПРОЧИХ БЛЮД</u> \n
+        <u>ПОДНОШЕНИЕ ПРОЧИХ БЛЮД</u> \n \n
 <b><u>adhivāsetu no bhante - sabbaṃ saddhāya pūjitaṃ</u></b> \n
 <i>Почтенный, окажите милость всё поднесённое на основе доверия вам</i> \n
 <b><u>anukampaṃ upādāya - patigaṇhātumuttamaṃ</u></b> \n
 <i>принять, о величайший, из сострадания к нам.</i>    \n \n
-        <u>КАЧЕСТВА БУДДЫ</u> \n
+        <u>КАЧЕСТВА БУДДЫ</u> \n \n
 <b><u>Itipi so bhagavā arahaṃ sammāsambuddho</u></b> \n
 <i>Благословенный действительно является таким: он достойный, постигший в совершенстве,</i> \n
 <b><u>Vijjācaraṇasampanno sugato lokavidū</u></b> \n
@@ -47,14 +47,14 @@
 <i>несравненный проводник существ, подходящих для обуздания</i> \n
 <b><u>Satthā devamanussānaṃ buddho bhagavāti</u></b> \n
 <i>учитель богов и людей, постигший, благословенный.</i>   \n \n
-        <u>КАЧЕСТВА ДХАММЫ</u> \n
+        <u>КАЧЕСТВА ДХАММЫ</u> \n \n
 <b><u>Svākkhāto bhagavatā dhammo</u></b> \n
 <i>Хорошо разъяснена Благословенным Дхамма,</i> \n
 <b><u>Sandiṭṭhiko akāliko ehipassiko</u></b> \n
 <i>	видимая непосредственно, не требующая времени, приглашающая прийти и увидеть,</i> \n
 <b><u>Opanayiko paccattaṃ veditabbo viññūhīti</u></b> \n
 <i>ведущая к цели, может быть самостоятельно испытана мудрыми.</i>     \n \n
-        <u>КАЧЕСТВА САНГКХИ</u> \n
+        <u>КАЧЕСТВА САНГКХИ</u> \n \n
 <b><u>Supaṭipanno bhagavato sāvakasaṅgho</u></b> \n
 <i>Сообщество (Сангха) учеников Благословенного вступило на хороший путь,</i> \n
 <b><u>Ujupaṭipanno bhagavato sāvakasaṅgho</u></b> \n
@@ -71,12 +71,12 @@
 <i>	заслуживает даров, заслуживает гостеприимства, заслуживает подношений, заслуживает почтительного приветствия,</i> \n
 <b><u>Anuttaraṃ puññakkhettaṃ lokassati</u></b> \n
 <i>несравненное поле заслуг для мира.</i> \n \n
-        <u>ПОЧТЕНИЕ ПАМЯТНИКАМ</u> \n
+        <u>ПОЧТЕНИЕ ПАМЯТНИКАМ</u> \n \n
 <b><u>Vandāmi cetiyaṃ sabbaṃ - sabbaṭṭhānesu patiṭṭhitaṃ</u></b> \n
 <i>Я почитаю все памятники во всех местах, где они установлены,</i> \n
 <b><u>Sārīrikadhātu mahābodhiṃ - buddharūpaṃ sakalaṃ sadā</u></b> \n
 <i>останки-реликвии, дерево Бодхи, всегда почитаю все изображения Будды.</i> \n \n
-        <u>ВЫРАЖЕНИЕ ПОЧТЕНИЯ ДЕРЕВУ БОДХИ</u> \n
+        <u>ВЫРАЖЕНИЕ ПОЧТЕНИЯ ДЕРЕВУ БОДХИ</u> \n \n
 <b><u>Yassamūle nisinnova - sabbārivijayaṃ akā</u></b> \n
 <i>Сидя у подножия которого победил всех врагов</i> \n
 <b><u>Patto sabbaññutaṃ satthā - vande taṃ bodhipādapaṃ</u></b> \n
@@ -85,7 +85,7 @@
 <i>Эти величайшие деревья Бодхи, почитаемые защитником мира (Буддой),</i> \n
 <b><u>Ahampi te namassāmi - bodhirājā namatthu te</u></b> \n
 <i>я тоже поприветствую вас. Моё почтение великому дереву Бодхи!</i> \n \n
-        <u>ПРОЩЕНИЕ НЕДОСТАТКОВ</u> \n
+        <u>ПРОЩЕНИЕ НЕДОСТАТКОВ</u> \n \n
 <b><u>Kāyena vācā cittena pamādena mayā kataṃ</u></b> \n
 <i>[Если] телом, речью или мыслями мною из-за беспечности был совершён</i> \n
 <b><u>Accayaṃ khama me bhante - bhūripañña tathāgata</u></b> \n
@@ -98,7 +98,7 @@
 <i>[Если] телом, речью или мыслями мною из-за беспечности был совершён</i> \n
 <b><u>Accayaṃ khama me saṅgha supaṭipanna anuttara</u></b> \n
 <i>проступок - прости мне Сангха, вступившая на хороший путь, несравненная.</i> \n \n
-        <u>ПРИГЛАШЕНИЕ ДЭВОВ К СОРАДОВАНИЮ</u> \n
+        <u>ПРИГЛАШЕНИЕ ДЭВОВ К СОРАДОВАНИЮ</u> \n \n
 <b><u>Ākāsatthā ca bhummaṭṭhā devā nāgā mahiddhikā</u></b> \n
 <i>Пусть могучие божества и наги, живущие на земле и в небе</i> \n
 <b><u>Puññaṃ taṃ anumoditvā ciraṃ rakkhantu lokasāsanaṃ</u></b> \n
@@ -111,7 +111,7 @@
 <i>Пусть могучие божества и наги, живущие на земле и в небе</i> \n
 <b><u>Puññaṃ taṃ anumoditvā ciraṃ rakkhantu maṃ paraṃ</u></b> \n
 <i>возрадовавшись этому благодеянию долго защищают меня и других.</i> \n \n
-        <u>РАЗДЕЛЕНИЕ ЗАСЛУГ</u> \n
+        <u>РАЗДЕЛЕНИЕ ЗАСЛУГ</u> \n \n
 <b><u>idaṃ no (me) ñātīnaṃ hotu - sukhitā hontu ñātayo [3x]</u></b> \n
 <i>Пусть это пойдёт на благо нашим (моим) родственникам, пусть родственники будут счастливы.</i> \n \n
     </string>
