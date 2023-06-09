@@ -36,6 +36,11 @@ public class DeclomationOverActivity extends AppCompatActivity {
         scrollText.setVisibility(view.VISIBLE);
     }
 
+    public void toDeclomaciyaOftereveningMeditstion(View view) {
+        ScrollView scrollText = findViewById(R.id.overScrollTextDeclomaciyaOftereveningMeditstion);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
     public void tobackOver(View view) {
         ScrollView scrollText = findViewById(R.id.overScrollTextObed);
         scrollText.setVisibility(view.INVISIBLE);
@@ -43,7 +48,8 @@ public class DeclomationOverActivity extends AppCompatActivity {
         scrollText2.setVisibility(view.INVISIBLE);
         ScrollView scrollText3 = findViewById(R.id.overScrollTextAlmsWish);
         scrollText3.setVisibility(view.INVISIBLE);
-
+        ScrollView scrollText4 = findViewById(R.id.overScrollTextDeclomaciyaOftereveningMeditstion);
+        scrollText4.setVisibility(view.INVISIBLE);
     }
 
     public void toMainAct(View view){
