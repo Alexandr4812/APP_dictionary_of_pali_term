@@ -26,9 +26,16 @@ public class DeclomationPujaActivity extends AppCompatActivity {
         scrollText.setVisibility(view.VISIBLE);
     }
 
+    public void toDeclomaciyaVandanaWithLayman(View view) {
+        ScrollView scrollText = findViewById(R.id.overScrollTextVandanaWithLayman);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
     public void tobackOver(View view) {
         ScrollView scrollText = findViewById(R.id.overScrollTextMorningPuja);
+        ScrollView scrollTextVandanaWithLayman = findViewById(R.id.overScrollTextVandanaWithLayman);
         scrollText.setVisibility(view.INVISIBLE);
+        scrollTextVandanaWithLayman.setVisibility(view.INVISIBLE);
     }
 
     public void toMainAct(View view){
