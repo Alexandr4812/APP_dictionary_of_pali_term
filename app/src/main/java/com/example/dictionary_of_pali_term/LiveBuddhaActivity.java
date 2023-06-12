@@ -31,41 +31,48 @@ public class LiveBuddhaActivity extends AppCompatActivity {
 
     public void toSumedha(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollText);
-        scrollText.setVisibility(view.VISIBLE);
+        scrollText.setVisibility(View.VISIBLE);
     }
 
 
     public void toMaya(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollTextMaya);
-        scrollText.setVisibility(view.VISIBLE);
+        scrollText.setVisibility(View.VISIBLE);
     }
 
     public void toBirthSidhartha(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollTextBirthSidhartha);
-        scrollText.setVisibility(view.VISIBLE);
+        scrollText.setVisibility(View.VISIBLE);
     }
 
     public void toAsita(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollTextAsita);
-        scrollText.setVisibility(view.VISIBLE);
+        scrollText.setVisibility(View.VISIBLE);
     }
 
     public void toJhana(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollTextJhana);
-        scrollText.setVisibility(view.VISIBLE);
+        scrollText.setVisibility(View.VISIBLE);
     }
 
     public void tobackIzTextVLive(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollText);
-        scrollText.setVisibility(view.INVISIBLE);
+        scrollText.setVisibility(View.INVISIBLE);
         ScrollView scrollText2 = findViewById(R.id.liveScrollTextMaya);
-        scrollText2.setVisibility(view.INVISIBLE);
+        scrollText2.setVisibility(View.INVISIBLE);
         ScrollView scrollText3 = findViewById(R.id.liveScrollTextBirthSidhartha);
-        scrollText3.setVisibility(view.INVISIBLE);
+        scrollText3.setVisibility(View.INVISIBLE);
         ScrollView scrollText4 = findViewById(R.id.liveScrollTextAsita);
-        scrollText4.setVisibility(view.INVISIBLE);
+        scrollText4.setVisibility(View.INVISIBLE);
         ScrollView scrollText5 = findViewById(R.id.liveScrollTextJhana);
-        scrollText5.setVisibility(view.INVISIBLE);
+        scrollText5.setVisibility(View.INVISIBLE);
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 }

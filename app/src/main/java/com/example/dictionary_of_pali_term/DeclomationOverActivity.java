@@ -57,4 +57,11 @@ public class DeclomationOverActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(this, DeklomationMainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

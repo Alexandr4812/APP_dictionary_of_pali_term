@@ -27,6 +27,13 @@ public class SekhiyaActivity extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(this, RulesSamanera.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void toComm1(View view) {
         ScrollView scrollText = findViewById(R.id.viewScrollSekhiyaComm1);
         scrollText.setVisibility(view.VISIBLE);

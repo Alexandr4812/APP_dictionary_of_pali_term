@@ -36,4 +36,10 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
         ScrollView scrollText = findViewById(R.id.suttaScrollTextMetta);
         scrollText.setVisibility(view.INVISIBLE);
     }
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(this, DeklomationMainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

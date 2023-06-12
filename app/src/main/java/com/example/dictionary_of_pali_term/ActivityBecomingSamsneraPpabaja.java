@@ -20,6 +20,13 @@ public class ActivityBecomingSamsneraPpabaja extends AppCompatActivity {
         finish();
     }
 
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(this, RulesActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void toRulesAct(View view){
         Intent intent = new Intent(this, RulesActivity.class);
         startActivity(intent);
