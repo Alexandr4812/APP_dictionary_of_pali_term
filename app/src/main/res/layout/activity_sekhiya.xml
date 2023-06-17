@@ -74,7 +74,7 @@
                 android:textAlignment="textStart"
                 android:textColor="#FFE082"
                 android:textSize="20sp"
-                android:textStyle="bold"
+                android:textStyle="italic"
                 tools:ignore="RtlCompat" />
 
             <Button
@@ -166,11 +166,13 @@
             <Button
                 android:id="@+id/button_sekhiya_23_24"
                 style="@style/button_activity_declomation_main"
+                android:onClick="toComm23_24"
                 android:text="@string/covered_head" />
 
             <Button
-                android:id="@+id/button_sekhiya_25_26"
+                android:id="@+id/button_sekhiya_25"
                 style="@style/button_activity_declomation_main"
+                android:onClick="toComm25"
                 android:text="@string/walc_on_heels" />
 
             <Button
@@ -1437,6 +1439,186 @@
                 tools:ignore="UsingOnClickInXml" />
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome21"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollSekhiyaComm23_24"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/backButtonRules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSekhiyaComm12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/imageButtonSekhiyaCommBack22"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackIzTextSekhiya"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:id="@+id/imageButtonSekhiyaCommHome22"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/textViewSekhiyaComm23_24"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:text="@string/about_23_24" />
+            <ImageButton
+                android:id="@+id/imageButtonSekhiyaCommBack23"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackIzTextSekhiya"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:id="@+id/imageButtonSekhiyaCommHome23"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollSekhiyaComm25"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/backButtonRules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSekhiyaComm13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/imageButtonSekhiyaCommBack24"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackIzTextSekhiya"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:id="@+id/imageButtonSekhiyaCommHome24"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:foregroundGravity="center"
+                android:onClick="toMainAct"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/textViewSekhiyaComm25"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="800dp"
+                android:text="@string/about_25" />
+            <ImageButton
+                android:id="@+id/imageButtonSekhiyaCommBack25"
+                android:layout_width="51dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFE082"
+                android:contentDescription="возврат в главное меню"
+                android:foregroundGravity="center"
+                android:onClick="tobackIzTextSekhiya"
+                android:scaleType="centerInside"
+                android:src="@drawable/button_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageButton
+                android:id="@+id/imageButtonSekhiyaCommHome25"
                 android:layout_width="51dp"
                 android:layout_height="39dp"
                 android:layout_gravity="center"
