@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 
 public class DeclomationSuttaActivity extends AppCompatActivity {
@@ -29,11 +31,23 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
 
     public void toDeclomaciyaSuttaMetta(View view) {
         ScrollView scrollText = findViewById(R.id.suttaScrollTextMetta);
+        Button buttonBackToHome = findViewById(R.id.buttonliveHomeFromMettaSutta);
+        Button buttonBackToDeclomationSutta = findViewById(R.id.buttonliveToDeclomationSutta);
+        Button play = findViewById(R.id.buttonPlayMettaSutta);
+        buttonBackToHome.setVisibility(view.VISIBLE);
+        buttonBackToDeclomationSutta.setVisibility(view.VISIBLE);
+        play.setVisibility(view.VISIBLE);
         scrollText.setVisibility(view.VISIBLE);
     }
 
     public void tobackDeclomationSutta(View view) {
         ScrollView scrollText = findViewById(R.id.suttaScrollTextMetta);
+        Button buttonBackToHome = findViewById(R.id.buttonliveHomeFromMettaSutta);
+        Button buttonBackToDeclomationSutta = findViewById(R.id.buttonliveToDeclomationSutta);
+        Button play = findViewById(R.id.buttonPlayMettaSutta);
+        buttonBackToHome.setVisibility(view.INVISIBLE);
+        buttonBackToDeclomationSutta.setVisibility(view.INVISIBLE);
+        play.setVisibility(view.INVISIBLE);
         scrollText.setVisibility(view.INVISIBLE);
     }
     @Override

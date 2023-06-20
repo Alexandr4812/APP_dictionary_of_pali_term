@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="DeklomaciyaKaraniyaMettaSutta">
-        <b>КАРАНИЯ МЕТТА СУТТА</b> \n \n
+      \n  <b>КАРАНИЯ МЕТТА СУТТА</b> \n \n
 <b><u></u>Karaṇīyamatthakusalena, yanta santaṃ padaṃ abhisamecca;</b> \n \n
 <i>Вот что следует делать тому, кто умел в благом и желает достичь умиротворённого состояния:</i> \n \n
 <b><u>Sakko ujū ca suhujū [sūjū (sī.)] ca, sūvaco cassa mudu anatimānī.</u></b> \n \n
@@ -42,6 +42,6 @@
 <i>Не путаясь со взглядами, нравственный, он обладает прозрением,</i> \n \n
 <b><u>Kāmesu vinaya gedhaṃ, na hi jātuggabbhaseyya punaretīti.</u></b> \n \n
 <i>с устранением алчности к чувственным удовольствиям он никогда больше не окажется в утробе.</i> \n \n
-<b><u>Mettasuttaṃ aṭṭhamaṃ niṭṭhitaṃ.</u></b> \n \n
+<b><u>Mettasuttaṃ aṭṭhamaṃ niṭṭhitaṃ.</u></b> \n \n \n \n
     </string>
 </resources>

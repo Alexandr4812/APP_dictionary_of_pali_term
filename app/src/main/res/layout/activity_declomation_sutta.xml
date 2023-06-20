@@ -24,6 +24,40 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="UsingOnClickInXml" />
 
+    <Button
+        android:id="@+id/buttonliveToDeclomationSutta"
+        style="@style/buttonBackNotImageButton"
+        android:onClick="tobackDeclomationSutta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/buttonliveHomeFromMettaSutta"
+        style="@style/buttonBackHomeNotImageButton"
+        android:onClick="toMainAct"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/buttonPlayMettaSutta"
+        style="@style/buttonPlay"
+        app:icon="@mipmap/sound3_foreground"
+        app:iconGravity="textEnd"
+        app:iconPadding="0dp"
+        app:iconSize="30dp"
+        app:iconTint="#FFF59D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible"
+        tools:ignore="RtlCompat" />
+
     <ImageButton
         android:id="@+id/imageButtonliveHome"
         android:layout_width="51dp"
@@ -73,8 +107,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="visible">
-
+        tools:visibility="invisible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,80 +115,12 @@
             android:background="#FFE082"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/imageButtonliveHome5"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-            <ImageButton
-                android:id="@+id/backButtonOver"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackDeclomationSutta"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
             <TextView
                 android:id="@+id/textViewSuttaMetta"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/DeklomaciyaKaraniyaMettaSutta" />
-
-            <ImageButton
-                android:id="@+id/backButtonOver2"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackDeclomationSutta"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome6"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
 
         </LinearLayout>
 
