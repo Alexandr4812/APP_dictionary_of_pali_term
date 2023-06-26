@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="DeklomaciyaKaraniyaMettaSutta">
+    <string name="DeklomaciyaSuttaKaraniyaMettaSutta">
       \n  <b>КАРАНИЯ МЕТТА СУТТА</b> \n \n
-<b><u></u>Karaṇīyamatthakusalena, yanta santaṃ padaṃ abhisamecca;</b> \n \n
+        <b><u>Karaṇīyamatthakusalena, yanta santaṃ padaṃ abhisamecca;</u></b> \n \n
 <i>Вот что следует делать тому, кто умел в благом и желает достичь умиротворённого состояния:</i> \n \n
 <b><u>Sakko ujū ca suhujū [sūjū (sī.)] ca, sūvaco cassa mudu anatimānī.</u></b> \n \n
 <i>пусть он будет способным, прямым и честным, кротким, мягким и не гордым,</i> \n \n
@@ -42,6 +42,264 @@
 <i>Не путаясь со взглядами, нравственный, он обладает прозрением,</i> \n \n
 <b><u>Kāmesu vinaya gedhaṃ, na hi jātuggabbhaseyya punaretīti.</u></b> \n \n
 <i>с устранением алчности к чувственным удовольствиям он никогда больше не окажется в утробе.</i> \n \n
-<b><u>Mettasuttaṃ aṭṭhamaṃ niṭṭhitaṃ.</u></b> \n \n \n \n
+<b><u>Mettasuttaṃ aṭṭhamaṃ niṭṭhitaṃ.</u></b> \n \n \n \n \n \n
+    </string>
+
+    <string name="DeklomaciyaSuttaMangala">
+      \n  <b>МАХА МАНГАЛА СУТТА</b> \n \n
+        <i>Проповедь о том, что лучше всего способствует благополучию</i> \n \n
+        <b>Ēvaṃ mē sutaṃ ēkaṃ samayaṃ bhagavā sāva′tthiyaṃ viha′rati jēta′vanē anāthapiṇḍikassa ārāmē</b> \n \n
+        <i>Так я слышал: однажды Совершенный находился недалеко от Саваттхи, в роще Джета, в монастыре Анатхапиндики.</i> \n \n
+        <b>Athakhō añña′tarā dēva′tā abhi′kkantāya rattiyā</b> \n \n
+        <i>Когда ночь была почти на исходе одно божество,</i> \n \n
+        <b>Abhi′kkanta′vaṇṇā kēva′lakappaṃ jēta′vanaṃ ōbhā′setvā yena bhagavā</b> \n \n
+        <i>явилось в рощу Джеты, и, озарив её своим сиянием, к Совершенному</i> \n \n
+        <b>Tenu′pasaṃ′kami upa′saṅka′mitvā bhaga′vantaṃ abhi′vādetvā ēka′mantaṃ aṭṭhāsi</b> \n \n
+        <i>подошло. Подойдя, оно почтительно поприветствовало его и стало в стороне</i> \n \n
+        <b>Ēka′mantaṃ ṭhitā kho sā dēvatā bhaga′vantaṃ gāthāya ajjha′bhāsī</b> \n \n
+        <i>И, стоя в стороне, божество то обратилось к Совершенному стихами:</i> \n \n
+        <b>Bahū dēvā manussā ca maṅga′lāni acin′tayuṃ</b> \n \n
+        <i>«Много и боги и люди размышляли о том, что способствует благополучию,</i> \n \n
+        <b>Ākaṅ′khamānā sotthānaṃ brūhi maṅgala′muttamaṃ</b> \n \n
+        <i>желая преуспеть. Так скажите: что же лучше всего способствует ему?»</i> \n \n
+        <b>Asē′vanā ca bālānaṃ paṇḍi′tānañca sēvanā</b> \n \n
+        <i>«Не иметь дела с глупцами, иметь дело с мудрыми,</i> \n \n
+        <b>Pūjā ca pūjanī′yānaṃ ētaṃ maṅgala′muttamaṃ</b> \n \n
+        <i>и почитать достойных почитания — вот что лучше всего способствует благополучию.</i> \n \n
+        <b>Pati′rūpa′dēsavāsōca pubbē ca katapuññatā</b> \n \n
+        <i>Жить в подходящей местности, в прошлом накопив заслуги,</i> \n \n
+        <b>Atta′sammā′paṇidhi ca ētaṃ maṅgala′muttamaṃ</b> \n \n
+        <i>руководствуясь правильными устремлениями — вот что лучше всего способствует благополучию.</i> \n \n
+        <b>Bāhu′saccañca sippañca vinayo ca susi′kkhito</b> \n \n
+        <i>Глубокие знания, умения, хорошая дисциплина,</i> \n \n
+        <b>Subhā′sitā ca yā vācā ētaṃ maṅgala′muttamaṃ</b> \n \n
+        <i>приятная речь — вот что лучше всего способствует благополучию.</i> \n \n
+        <b>Mātā′pitū upa′ṭṭhānaṃ putta′dārassa saṅghahō</b> \n \n
+        <i>Помощь матери и отцу, забота о жене и детях,</i> \n \n
+        <b>Anā′kulā ca kammantā ētaṃ maṅgala′muttamaṃ</b> \n \n
+        <i>безконфликтная работа — вот что лучше всего способствует благополучию.</i> \n \n
+        <b>Dānañca dhamma′cari′yā ca ñāta′kānañca saṅgahō</b> \n \n
+        <i>Щедрость, праведная жизнь, забота о родственниках,</i> \n \n
+        <b>Ana′vajjāni kammāni ētaṃ maṅgala′muttamaṃ</b> \n \n
+        <i>безупречность в деяниях — вот что лучше всего способствует благополучию.</i> \n \n
+        <b>Āratī viratī pāpā majja′pānā ca saṃyamō</b> \n \n
+        <i>Воздержание от порочного, отказ от опьяняющих веществ,</i> \n \n
+        <b>Appa′mādo ca dhammēsu ētaṃ maṅgala′muttamaṃ</b> \n \n
+        <i>внимательность к умственным качествам — вот что лучше всего способствует благополучию.</i> \n \n
+        <b>Gāravō ca nivātō ca santuṭṭhi ca kata′ññutā</b> \n \n
+        <i>Почтительность, смирение, удовлетворенность и благодарность,</i> \n \n
+        <b>Kālēna dhamma′ssavanaṃ ētaṃ maṅgala′muttamaṃ</b> \n \n
+        <i>слушание Дхаммы в подходящее время — вот что лучше всего способствует благополучию.</i> \n \n
+        <b>Khantī ca sovaca′ssatā sama′ṇānañca dassanaṃ</b> \n \n
+        <i>Терпение, покладистость, лицезрение аскетов,</i> \n \n
+        <b>Kālēna dhamma′sākacchā ētaṃ maṅgala′muttamaṃ</b> \n \n
+        <i>обсуждение Дхаммы в подходящее время — вот что лучше всего способствует благополучию.</i> \n \n
+        <b>Tapo ca brahma′cariyañca ariya′saccāna dassanaṃ</b> \n \n
+        <i>Самоограничение, целомудрие, постижение Благородных Истин</i> \n \n
+        <b>Nibbāna sacchikiriyā ca ētaṃ maṅgala′muttamaṃ</b> \n \n
+        <i>и реализация Ниббаны — вот что лучше всего способствует благополучию.</i> \n \n
+        <b>Phuṭṭhassa lōka′dhammēhi cittaṃ yassa na kampati</b> \n \n
+        <i>Ум, который соприкасаясь с мирским остаётся устойчив,</i> \n \n
+        <b>Asōkaṃ virajaṃ khēmaṃ ētaṃ maṅgala′muttamaṃ</b> \n \n
+        <i>беспечален, чист, спокоен — вот что лучше всего способствует благополучию.</i> \n \n
+        <b>Ētā′disāni katvāna sabba′tthama′parā′jitā</b> \n \n
+        <i>Поступающие таким образом всегда непобедимы,</i> \n \n
+        <b>Sabbattha sotthiṃ gacchanti taṃ tēsaṃ maṅgala′muttaman′ti</b> \n \n
+        <i>всегда преуспевают — вот что лучше всего способствует их благополучию.»</i> \n \n
+        <b>Ētēna sacca′vajjēna sotthi te hōtu sabbadā</b> \n \n
+        <i>Пусть благодаря силе этой истины вам всемерно сопутствует благополучие</i> \n \n
+        <b>Ētēna sacca′vajjēna hōtu te jayamaṅgalaṃ</b> \n \n
+        <i>Пусть благодаря силе этой истины вы обретёте благо победы</i> \n \n
+        <b>Ētēna sacca′vajjēna sabbarōgō vinassatu</b> \n \n
+        <i>Пусть благодаря силе этой истины пройдут все болезни</i> \n \n \n \n \n \n
+    </string>
+
+    <string name="DeklomaciyaSuttaRatana">
+      \n  <b>РАТАНА СУТТА</b> \n \n
+        <i>СУТТА О СОКРОВИЩЕ</i> \n \n
+        <b>Yānīdha bhūtāni samāgatānī</b> \n \n
+        <i>Все духи, пришедшие сюда,</i> \n \n
+        <b>Bhummāni vā yāni va antalikkhe</b> \n \n
+        <i>земные и небесные, –</i> \n \n
+        <b>Sabbēva bhūtā sumanā bhavantu</b> \n \n
+        <i>будьте все вы счастливы</i> \n \n
+        <b>Athopi sakkacca suṇantu bhāsitaṃ</b> \n \n
+        <i>и внемлите сказанным словам.</i> \n \n
+        <b>Tasmā hi bhūtā nisāmētha sabbē</b> \n \n
+        <i>Внемлите, духи!</i> \n \n
+        <b>Mettaṃ karōtha mānusiyā pajāya</b> \n \n
+        <i>будьте дружелюбны к людскому роду,</i> \n \n
+        <b>Divā ca ratto ca haranti ye baliṃ</b> \n \n
+        <i>днем и ночью приносящему свои подношения,</i> \n \n
+        <b>Tasmā hi ne rakkhata appamattā</b> \n \n
+        <i>ревностно охраняйте людей!</i> \n \n
+        <b>Yaṃ kiñci vittaṃ idha vā huraṃ vā</b> \n \n
+        <i>Никакое сокровище ни здесь, ни в ином мире,</i> \n \n
+        <b>Saggēsu vā yaṃ ratanaṃ paṇītaṃ</b> \n \n
+        <i>никакие драгоценности небес</i> \n \n
+        <b>Na nō samaṃ atthi tathāgatēna</b> \n \n
+        <i>не сравняются с Совершенным.</i> \n \n
+        <b>Idampi buddhē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Будде.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Khayaṃ virāgaṃ amataṃ paṇītaṃ</b> \n \n
+        <i>Разрушение страстей, свобода от них и то высшее бессмертие</i> \n \n
+        <b>Yadajjhagā sakyamunī samāhitō</b> \n \n
+        <i>которого в сосредоточении достиг Cакьямуни,</i> \n \n
+        <b>Na tena dhammēna samatthi kiñci</b> \n \n
+        <i>нет ничего равного этому состоянию!</i> \n \n
+        <b>Idampi dhammē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Дхамме.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Yambuddhaseṭṭhō parivaṇṇayī suciṃ</b> \n \n
+        <i>Этот путь чистоты, восхваляемый Высшим Буддой,</i> \n \n
+        <b>Samādhimānata rikaññamāhu</b> \n \n
+        <i>непременно приводит к сосредоточению.</i> \n \n
+        <b>Samādhinā tēna samō na vijjati</b> \n \n
+        <i>С этим сосредоточением ничто не сравнится.</i> \n \n
+        <b>Idampi dhammē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Дхамме.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Ye puggalā aṭṭha sataṃ pasatthā</b> \n \n
+        <i>Восемь их, прославленных Праведным,</i> \n \n
+        <b>Cattāri ētāni yugāni honti</b> \n \n
+        <i>четыре пары их,</i> \n \n
+        <b>Te dakkhiṇeyyā sugatassa sāvakā</b> \n \n
+        <i>учеников Достигшего блага, достойных пожертвования:</i> \n \n
+        <b>Ētēsu dinnāni mahapphalānī</b> \n \n
+        <i>что даровано им, то принесет благие плоды.</i> \n \n
+        <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Сангхе.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Ye suppayuttā manasā daḷhēna</b> \n \n
+        <i>Те, кто непоколебимо и тщательно</i> \n \n
+        <b>Nikkāminō gōtamasāsanamhi</b> \n \n
+        <i>следуют учению Готамы, свободные [от умственных загрязнений],</i> \n \n
+        <b>Te pattipattā amataṃ vigayha</b> \n \n
+        <i>достигли того, что следовало, обретя Бессмертное.</i> \n \n
+        <b>Laddhā mudhā nibbutiṃ bhuñjamānā</b> \n \n
+        <i>Они свободно наслаждаются достигнутым Освобождением.</i> \n \n
+        <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Сангхе.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Yathindakhīlō pathaviṃsito siyā</b> \n \n
+        <i>Крепко врытые в землю, стоят столбы Индры,</i> \n \n
+        <b>Catubhi vātēhi asampakampiyo</b> \n \n
+        <i>не потрясаемые четырьмя ветрами,</i> \n \n
+        <b>Tathūpamaṃ sappurisaṃ vadāmi</b> \n \n
+        <i>ничто не поколеблет праведного,</i> \n \n
+        <b>Yo ariyasaccāni avecca passati</b> \n \n
+        <i>постигшего благородные истины, ясно постигшего их.</i> \n \n
+        <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Сангхе.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Ye ariyasaccāni vibhāvayanti</b> \n \n
+        <i>Кто постиг благородные истины,</i> \n \n
+        <b>Gambhīrapaññēna sudēsitāni</b> \n \n
+        <i>возвещенные в совершенстве Мудрым,</i> \n \n
+        <b>Kiñcāpi te honti bhusaṃ pamattā</b> \n \n
+        <i>вне зависимости от того, сколь беспечным бы он ни был в будущем,</i> \n \n
+        <b>Na te bhavaṃ aṭṭhamamādiyanti</b> \n \n
+        <i>не испытает восьмого перерождения.</i> \n \n
+        <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Сангхе.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Sahāvassa dassanasampadāya</b> \n \n
+        <i>Тот, кто обрёл прозрение,</i> \n \n
+        <b>Tayassu dhammā jahitā bhavanti</b> \n \n
+        <i>избавился от трёх черт:</i> \n \n
+        <b>Sakkāyadiṭṭhi vicikicchitañca</b> \n \n
+        <i>убеждение в индивидуальности, неуверенность и </i> \n \n
+        <b>Sīlabbataṃ vāpi yadatthi kiñci</b> \n \n
+        <i>какую-либо привязанность к ритуалам и церемониям.</i> \n \n
+        <b>Catūhapāyehi ca vippamuttō</b> \n \n
+        <i>Он свободен от перерождения в четырёх скверных мирах,</i> \n \n
+        <b>Chacābhiṭhānāni abhabbō kātuṃ</b> \n \n
+        <i>и неспособен совершить шесть тяжелейших проступков.  </i> \n \n
+        <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Сангхе.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Kiñcāpi so kammaṃ karōti pāpakaṃ</b> \n \n
+        <i>Какой бы дурной поступок</i> \n \n
+        <b>Kāyena vācā udacetasā vā</b> \n \n
+        <i>телом, речью или мыслями не совершил человек вошедший в поток,</i> \n \n
+        <b>Abhabbō so tassa paṭicchādāya</b> \n \n
+        <i>он неспособен сокрыть его,</i> \n \n
+        <b>Abhabbatā diṭṭhapadassa vuttā</b> \n \n
+        <i>потому что это невозможно для увидевшего путь.</i> \n \n
+        <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Сангхе.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Vanappagumbē yathā phussitaggē</b> \n \n
+        <i>Как верхушки деревьев</i> \n \n
+        <b>Gimhānamāsē paṭhamasmiṃ gimhē</b> \n \n
+        <i>в начале лета все в цвету,</i> \n \n
+        <b>Tathūpamaṃ dhammavaraṃ adesayī</b> \n \n
+        <i>так и Его возвышенная Дхамма,</i> \n \n
+        <b>Nibbānagāmiṃ paramaṃ hitāya</b> \n \n
+        <i>ведущая к спокойствию Ниббаны, устремлена к высшему благу.</i> \n \n
+        <b>Idampi buddhē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Будде.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Varō varaññū varadō varāharō</b> \n \n
+        <i>Несравненный, он – узревший Ниббану, дающий Ниббану, приносящий Благородный Восьмеричный Путь,</i> \n \n
+        <b>Anuttarō dhammavaraṃ adēsayi</b> \n \n
+        <i>возвестил нам эту высшую Истину.</i> \n \n
+        <b>Idampi buddhē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Будде.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Khīṇaṃ purāṇaṃ nava natthi sambhavaṃ</b> \n \n
+        <i>Их прошлое исчерпано, новое не возникает,</i> \n \n
+        <b>Virattacittāāyatikē bhavasmiṃ</b> \n \n
+        <i>их ум не привязан к будущему становлению.</i> \n \n
+        <b>Te khīṇabījā avirūḷhicchandā</b> \n \n
+        <i>Их семя уничтожено и нет у них больше желаний новой жизни.</i> \n \n
+        <b>Nibbanti dhīrā yathāyaṃ padīpō</b> \n \n
+        <i>Такие мудрецы угасают как пламя этой лампы.</i> \n \n
+        <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+        <i>Вот сколь драгоценное сокровище пребывает в Сангхе.</i> \n \n
+        <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+        <i>Пусть благодаря этой истине будет благополучие!</i> \n \n
+        <b>Yānīdha bhūtāni samāgatāni</b> \n \n
+        <i>Все духи, пришедшие сюда,</i> \n \n
+        <b>Bhummāni vā yāni va antalikkhe</b> \n \n
+        <i>земные и небесные,</i> \n \n
+        <b>Tathāgataṃ dēvamanussapūjitaṃ</b> \n \n
+        <i>Татхагату, чтимого богами и людьми</i> \n \n
+        <b>Buddhaṃ namassāma suvatthi hōtu</b> \n \n
+        <i>и Будду давайте прославим. Пусть будет благополучие!</i> \n \n
+        <b>Yānīdha bhūtāni samāgatāni</b> \n \n
+        <i>Все духи, пришедшие сюда,</i> \n \n
+        <b>Bhummāni vā yāni va antalikkhe</b> \n \n
+        <i>земные и небесные,</i> \n \n
+        <b>Tathāgataṃ dēvamanussapūjitaṃ</b> \n \n
+        <i>Татхагату, чтимого богами и людьми.</i> \n \n
+        <b>Dhammaṃ namassāma suvatthi hōtu</b> \n \n
+        <i>и Дхамму давайте прославим. Пусть будет благополучие!</i> \n \n
+        <b>Yānīdha bhūtāni samāgatāni</b> \n \n
+        <i>Все духи, пришедшие сюда,</i> \n \n
+        <b>Bhummāni vā yāni va antalikkhe</b> \n \n
+        <i>земные и небесные,</i> \n \n
+        <b>Tathāgataṃ dēvamanussapūjitaṃ</b> \n \n
+        <i>Татхагату, чтимого богами и людьми.</i> \n \n
+        <b>Saṅghaṃ namassāma suvatthi hōtuti</b> \n \n
+        <i>и Сангху давайте прославим. Пусть будет благополучие!</i> \n \n
+        <b>Ētēna saccavajjēna sabba dukkhaṃ vinassatu</b> \n \n
+        <i>Пусть благодаря силе этой истины исчезнут все ваши страдания</i> \n \n
+        <b>Ētēna saccavajjēna sabba bhayō vinassatu</b> \n \n
+        <i>Пусть благодаря силе этой истины исчезнут все ваши страхи</i> \n \n
+        <b>Ētēna saccavajjēna sabba rōgō vinassatu</b> \n \n
+        <i>Пусть благодаря силе этой истины исчезнут все ваши болезни</i> \n \n \n \n \n \n
     </string>
 </resources>

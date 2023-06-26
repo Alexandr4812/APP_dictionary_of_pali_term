@@ -19,7 +19,7 @@
     <string name="pudja">Вандана</string>
     <string name="sutta">Сутта</string>
     <string name="drugie_declomacii">Другие декламации</string>
-    <string name="karaniya_metta">Карания метта сутта</string>
+    <string name="button_karaniya_metta">Карания метта сутта</string>
     <string name="utrennaia_pudga">Утренняя вандана в Читтавивеке</string>
     <string name="decl_pered_priemom_pichi">декламация перед приёмом пищи</string>
     <string name="prosba_o_prochenii_nedostatkov">Просьба о прощении недостатков перед старшими монахами</string>
@@ -29,7 +29,10 @@
     <string name="pabaja_text">строфы для церемонии становления саманерой \n pabbajja</string>
     <string name="button_morning_vandana_with_laymans">Вандана с мирянами в монастыре Читтавивека</string>
     <string name="deklomation_after_evening_meditation">Декламация после вечерней медитации в монастыре Читтавивека</string>
-    <string name="buttonPeremotkaNazadMettaSutta"><![CDATA[<<]]></string>
-    <string name="buttonPeremotkaVperedMettaSutta"><![CDATA[>>]]></string>
     <string name="buttonPlayMettaSutta">play</string>
+    <string name="buttonStopMettaSutta">stop</string>
+    <string name="buttonRewind"><![CDATA[<<]]></string>
+    <string name="buttonFastForward"><![CDATA[>>]]></string>
+    <string name="button_sutta_mangala">маха мангала сутта</string>
+    <string name="button_sutta_ratana">ратана сутта</string>
 </resources>

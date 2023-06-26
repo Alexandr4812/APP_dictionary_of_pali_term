@@ -63,17 +63,65 @@
         <item name="android:visibility">invisible</item>
     </style>
 
+    <style name="buttonRewind">
+        <item name="android:layout_width">51dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:backgroundTint">@color/my_main_color</item>
+        <item name="android:text">@string/buttonRewind</item>
+        <item name="android:textColor">@color/my_text_bacground_color</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:foregroundGravity">fill</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
     <style name="buttonPlay">
-        <item name="android:layout_width">102dp</item>
+        <item name="android:layout_width">62dp</item>
         <item name="android:layout_height">45dp</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_marginBottom">10dp</item>
         <item name="android:backgroundTint">@color/my_main_color</item>
         <item name="android:scaleType">centerInside</item>
-        <item name="android:text">@string/buttonPlayMettaSutta</item>
-        <item name="android:textAlignment">textStart</item>
-        <item name="android:textColor">#FFE082</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="buttonStop">
+        <item name="android:layout_width">62dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:backgroundTint">@color/my_main_color</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="buttonPause">
+        <item name="android:layout_width">62dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:backgroundTint">@color/my_main_color</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="buttonFastForward">
+        <item name="android:layout_width">51dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:backgroundTint">@color/my_main_color</item>
+        <item name="android:text">@string/buttonFastForward</item>
+        <item name="android:textColor">@color/my_text_bacground_color</item>
+        <item name="android:textAlignment">center</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:foregroundGravity">fill</item>
+        <item name="android:scaleType">centerInside</item>
         <item name="android:visibility">invisible</item>
     </style>
 </resources>

@@ -18,7 +18,7 @@
     <string name="pudja">Vandana</string>
     <string name="sutta">Sutta</string>
     <string name="drugie_declomacii">Other recitations</string>
-    <string name="karaniya_metta">Karania metta sutta</string>
+    <string name="button_karaniya_metta">Karania metta sutta</string>
     <string name="utrennaia_pudga">Morning Vandana in Chittaviveka</string>
     <string name="decl_pered_priemom_pichi">recitation before meals</string>
     <string name="prosba_o_prochenii_nedostatkov">A request for forgiveness of shortcomings in front of senior monks</string>
@@ -27,7 +27,7 @@
     <string name="DeklomaciyaForgivennes">\n        <b>A REQUEST FOR FORGIVENESS OF SHORTCOMINGS IN FRONT OF SENIOR MONKS</b> \n \n \n\n<b><u>Okāsa vandāmi Bhante. Sabbam accayam kamatha me bhante.</u></b> \n \n\n<i>Allow me to honor you, venerable one. Forgive me all the mistakes, my dear.</i> \n \n\n <b><u>Mayākataṁ puññaṁ, sāminā anumodi tabbaṁ.</u></b> \n \n\n<i>Please, Bhante, let me share with you the merits that I have acquired.</i> \n \n\n<i>(Bhantes: Sādhu, Sādhu, anumodāmi! Okay, okay, I\'m happy!)</i> \n \n\n<b><u>Saminā kataṁ puññaṁ, mayhaṁ dātabbaṁ</u></b> \n \n\n<i>Please, Bhante, share with me the merits that you have acquired.</i> \n \n\n<i>(Bhantes: Sādhu, Sādhu, anumodetha! Okay, okay, I\'m happy!)</i> \n \n\n<b><u>Sādhu, Sādhu anumodāmi!</u></b> \n \n\n<i>Okay, okay, I appreciate it!</i> \n \n\n<b><u>Okāsa! Dvārattena kataṁ sabbaṁ accayaṁ khamatha me Bhante.</u></b> \n \n\n<i>Forgive me, O Bhante, for any mistakes I may have made in body, speech or mind.</i> \n \n\n<i>(Bhantes: Kamāmi kamitabbaṁ. I forgive.)</i> \n \n\n<b><u>Sadhu Okāsa khamāmi Bhante!</u></b> \n \n\n<i>I beg your pardon, O Bhanta.</i></string>
     <string name="DeklomaciyaAlmsWish">"\n        <b>WELL -WISHES TO THE LAITY AT THE TAKING ARE GIVEN</b> \n \n \n\n        <u>OPTION 1</u> \n\n<b><u>Abhivadana silasa, niccam vuddhapacayino</u></b> \n \n\n<i>Constantly expressing respect for morality and those who should be honored</i> \n \n\n<b><u>Cattaro dhamma vaddhanti, ayu vanno sukham balam</u></b> \n \n\n<i>Let the four dhammas increase: longevity, success, well-being, health</i> "</string>
     <string name="DeklomaciyaMorningPuja"><b>MORNING VANDANA</b> \n \n \n\n        <u>EXPRESSION OF RESPECT</u> \n\n<b><u>Namo tassa bhagavato arahato sammāsambuddhassa [3x]</u></b> \n\n<i>Reverence to the Blessed, worthy, comprehended in perfection.</i> \n \n\n        <u>APPEAL TO THE BUDDHA</u> \n\n<b><u>Ni`vedaya`mi sambuddham</u></b> \n\n<i>I appeal to Samasambudda</i> \n\n<b><u>Vi`tara`gam maha`munim</u></b> \n\n<i>To the great sage who destroyed passion</i> \n\n<b><u>Ni`mantaya`mi sugatam</u></b> \n\n<i>I appeal to Sugatta</i> \n\n<b><u>Lokajettham nara`sabam</u></b> \n\n<i>To the winner of the World, the highest of men</i> \n \n\n        <u>OFFERING OF LIGHT</u> \n\n<b><u>Ghanasārappadittena - dīpena tamadhaṃsinā</u></b> \n\n<i>By the light of flaming camphor, eliminating darkness</i> \n\n<b><u>Tilokadīpaṃ sambuddhaṃ - pūjayāmi tamonudaṃ</u></b> \n\n<i>I pay my respects to the enlightener of the three worlds, who has comprehended and dispels darkness (ignorance).</i> \n \n\n        <u>OFFERING INCENSE</u> \n\n<b><u>sugandhikāya vadanaṃ - ananta guṇa gandhinaṃ</u></b> \n\n<i>The one whose body and face are fragrant, from whom comes the smell of countless good qualities, </i> \n\n<b><u>sugandhināhaṃ gandhena - pūjayāmi tathāgataṃ</u></b> \n\n<i> I offer these incense - Tathagata.</i> \n \n\n        <u>FLOWER OFFERINGS</u> \n\n<b><u>Vaṇṇagandhaguṇopetaṃ - etaṃ kusumasantatiṃ</u></b> \n\n<i>Having beauty and a pleasant smell of this scattering of flowers,</i> \n\n<b><u>Pūjayāmi munindassa - sirīpādasaroruhe</u></b> \n\n<i>I bring the Supreme Sage to the lotus feet.</i> \n\n<b><u>Pūjemi buddhaṃ kusumenanena – puññena metena labhami mokkhaṃ</u></b> \n\n<i>I honor the Buddha with these flowers (kusumena+anena), may I gain liberation through this boon.</i> \n\n<b><u>Pupphaṃ milāyāti yathā idamme - kāyo tathā yāti vināsabhāvaṃ</u></b> \n\n<i>As these flowers wither, so this body of mine is subject to destruction.</i> \n \n\n        <u>OFFERING OF OTHER DISHES</u> \n\n<b><u>adhivāsetu no bhante - sabbaṃ saddhāya pūjitaṃ</u></b> \n\n<i>Venerable one, show mercy to everything presented on the basis of trust to you</i> \n\n<b><u>anukampaṃ upādāya - patigaṇhātumuttamaṃ</u></b> \n\n<i>accept, O greatest one, out of compassion for us.</i>    \n \n\n        <u>QUALITIES OF A BUDDHA</u> \n\n<b><u>Itipi so bhagavā arahaṃ sammāsambuddho</u></b> \n\n<i>The Blessed One really is like this: he is worthy, who has comprehended in perfection,</i> \n\n<b><u>Vijjācaraṇasampanno sugato lokavidū</u></b> \n\n<i>having knowledge and [good] behavior, having achieved the good, a connoisseur of the world,</i> \n\n<b><u>Anuttaro purisadammasārathi</u></b> \n\n<i>an incomparable guide of beings suitable for harnessing</i> \n\n<b><u>Satthā devamanussānaṃ buddho bhagavāti</u></b> \n\n<i>teacher of gods and people, comprehended, blessed.</i>   \n \n\n        <u>QUALITIES OF DHAMMA</u> \n\n<b><u>Svākkhāto bhagavatā dhammo</u></b> \n\n<i>The Blessed Dhamma is well explained, </i> \n\n<b><u>Sandiṭṭhiko akāliko ehipassiko</u></b> \n\n<i> visible directly, not requiring time, inviting you to come and see,</i> \n\n<b><u>Opanayiko paccattaṃ veditabbo viññūhīti</u></b> \n\n<i>leading to the goal, can be independently tested by the wise.</i>     \n \n\n        <u>SANGKHA QUALITIES</u> \n\n<b><u>Supaṭipanno bhagavato sāvakasaṅgho</u></b> \n\n<i>The community (Sangha) of the Blessed One\'s disciples has embarked on a good path,</i> \n\n<b><u>Ujupaṭipanno bhagavato sāvakasaṅgho</u></b> \n\n<i>the community of the Blessed One\'s disciples has entered the straight path,</i> \n\n<b><u>Ñāyapaṭipanno bhagavato sāvakasaṅgho</u></b> \n\n<i>the community of the Blessed One\'s disciples has embarked on the right path,</i> \n\n<b><u>Sāmīcipaṭipanno bhagavato sāvakasaṅgho</u></b> \n\n<i>the community of the Blessed One\'s disciples has entered the proper path,</i> \n\n<b><u>Yadidaṃ cattāri purisayugāni aṭṭha purisapuggalā</u></b> \n\n<i>namely, four pairs, eight types of personalities.</i> \n\n<b><u>Esa bhagavato sāvakasaṅgho</u></b> \n\n<i>This is a community of disciples of the Blessed One</i> \n\n<b><u>Āhuṇeyyo pāhuṇeyyo dakkhiṇeyyo añjalikaraṇīyo</u></b> \n\n<i> deserves gifts, deserves hospitality, deserves offerings, deserves a respectful greeting,</i> \n\n<b><u>Anuttaraṃ puññakkhettaṃ lokassati</u></b> \n\n<i>an incomparable field of merit for the world.</i> \n \n\n        <u>HOMAGE TO MONUMENTS</u> \n\n<b><u>Vandāmi cetiyaṃ sabbaṃ - sabbaṭṭhānesu patiṭṭhitaṃ</u></b> \n\n<i>I honor all monuments in all places where they are installed, </i> \n\n<b><u>Sārīrikadhātu mahābodhiṃ - buddharūpaṃ sakalaṃ sadā</u></b> \n\n<i>relics, the Bodhi tree, I always revere all the images of the Buddha.</i> \n \n\n        <u>PAYING HOMAGE TO THE BODHI TREE</u> \n\n<b><u>Yassamūle nisinnova - sabbārivijayaṃ akā</u></b> \n\n<i>Sitting at the foot of which defeated all the enemies</i> \n\n<b><u>Patto sabbaññutaṃ satthā - vande taṃ bodhipādapaṃ</u></b> \n\n<i>and our teacher gained omniscience - it is the very Bodhi tree that I revere.</i> \n\n<b><u>Ime ete mahābodhī - lokanāthena pūjitā</u></b> \n\n<i>These are the greatest Bodhi trees, revered by the protector of the world (Buddha), </i> \n\n<b><u>Ahampi te namassāmi - bodhirājā namatthu te</u></b> \n\n<i>I will also welcome you. My respects to the great Bodhi tree!</i> \n \n\n        <u>FORGIVENESS OF SHORTCOMINGS</u> \n\n<b><u>Kāyena vācā cittena pamādena mayā kataṃ</u></b> \n\n<i>[If] my body, speech or thoughts were committed by me due to carelessness</i> \n\n<b><u>Accayaṃ khama me bhante - bhūripañña tathāgata</u></b> \n\n<i>offense - forgive me, venerable, deep-wise Tathagata.</i> \n\n<b><u>Kāyena vācā cittena pamādena mayā kataṃ</u></b> \n\n<i>[If] my body, speech or thoughts were committed by me due to carelessness</i> \n\n<b><u>Accayaṃ khama me dhamma - sandiṭṭhika akālika</u></b> \n\n<i>offense - forgive me Dhamma, visible directly, does not require time.</i> \n\n<b><u>Kāyena vācā cittena pamādena mayā kataṃ</u></b> \n\n<i>[If] my body, speech or thoughts were committed by me due to carelessness</i> \n\n<b><u>Accayaṃ khama me saṅgha supaṭipanna anuttara</u></b> \n\n<i>offense - forgive me the Sangha, who has entered on a good path, incomparable.</i> \n \n\n        <u>INVITATION OF THE DEVAS TO REJOICE</u> \n\n<b><u>Ākāsatthā ca bhummaṭṭhā devā nāgā mahiddhikā</u></b> \n\n<i>May the mighty deities and nagas who live on earth and in the sky</i> \n\n<b><u>Puññaṃ taṃ anumoditvā ciraṃ rakkhantu lokasāsanaṃ</u></b> \n\n<i>rejoicing in this boon, they defend the system [of the Buddha] in this world for a long time.</i> \n\n<b><u>Ākāsatthā ca bhummaṭṭhā devā nāgā mahiddhikā</u></b> \n\n<i>May the mighty deities and nagas who live on earth and in the sky</i> \n\n<b><u>Puññaṃ taṃ anumoditvā ciraṃ rakkhantu desanaṃ</u></b> \n\n<i>rejoicing in this boon, they defend the instruction of [the Buddha] for a long time.</i> \n\n<b><u>Ākāsatthā ca bhummaṭṭhā devā nāgā mahiddhikā</u></b> \n\n<i>May the mighty deities and nagas who live on earth and in the sky</i> \n\n<b><u>Puññaṃ taṃ anumoditvā ciraṃ rakkhantu maṃ paraṃ</u></b> \n\n<i>rejoicing in this boon, they protect me and others for a long time.</i> \n \n\n        <u>DIVISION OF MERIT</u> \n\n<b><u>idaṃ no (me) ñātīnaṃ hotu - sukhitā hontu ñātayo [3x]</u></b> \n\n<i>Let it go to the benefit of our (my) relatives, let the relatives be happy.</i></string>
-    <string name="DeklomaciyaKaraniyaMettaSutta"> \n <b>KARANIA METTA SUTTA</b>\n \n\n<b><u />Karaṇīyamatthakusalena, yanta santaṃ padaṃ abhisamecca;</b>\n \n\n<i>This is what one should do who is skilled in good things and wants to achieve a peaceful state:</i>\n \n\n<b><u>Sakko ujū ca suhujū [sūjū (sī.)] ca, sūvaco cassa mudu anatimānī.</u></b>\n \n\n<i>Let him be able, direct and honest, meek, gentle and not proud,</i>\n \n\n<b><u>Santussako ca subharo ca, appakicco ca sallahukavutti;</u></b>\n \n\n<i>satisfied and unburdensome, with few responsibilities, content with little,</i>\n \n\n<b><u>Santindriyo ca nipako ca, appagabbho kulesvananugiddho.</u></b>\n \n\n<i>with calm perception abilities, reasonable, humble, and not fawning over families.</i>\n \n\n<b><u>Na ca khuddamācare kiñci, yena viññū pare upavadeyyuṃ;</u></b>\n \n\n<i>And let him not do the slightest thing that the wise would condemn.</i>\n \n\n<b><u>Sukhino va khemino hontu, sabbasattā [sabbe sattā (sī. syā.)] bhavantu sukhitattā.</u></b>\n \n\n<i>[And let him think:] Joyful and safe, may all beings be joyful in heart.</i>\n \n\n<b><u>Ye keci pāṇabhūtatthi, tasā vā thāvarā vanavasesā;</u></b>\n \n\n<i>Whatever the creatures, fragile or strong, without exception,</i>\n \n\n<b><u>Dīghā vā ye va mahantā [mahanta (?)], majjhimā rassakā aṇukathūlā.</u></b>\n \n\n<i>long, large, medium, small, small, thick,</i>\n \n\n<b><u>Diṭṭhā vā ye va adiṭṭhā [adiṭṭha (?)], ye va [ye ca (sī. syā. kaṃ. pī.)] dūre vasanti avidūre;</u></b>\n \n\n<i>visible and invisible, living near and far,</i>\n \n\n<b><u>Bhūtā va sambhavesī va [bhūtā vā sambhavesī vā (syā. kaṃ. pī. ka.)], sabbasattā bhavantu sukhitattā.</u></b>\n \n\n<i>those who have come into the world and strive for manifestation: may all beings be joyful in heart.</i>\n \n\n<b><u>Na paro paraṃ nikubbetha, nātimaññetha katthaci na kañci [naṃ kañci (sī. pī.), naṃ kiñci (syā.), na kiñci (ka.)] ;</u></b>\n \n\n<i>Let no one upset another or despise anyone anywhere,</i>\n \n\n<b><u>Byārosanā paṭighasaññā, nāññamaññassa dukkhamiccheyya.</u></b>\n \n\n<i>and let no one wish another to suffer because of anger or an unpleasant impression.</i>\n \n\n<b><u>Mātā yathā niyaṃ puttamāyusā ekaputtamanurakkhe;</u></b>\n \n\n<i>As a mother, at the cost of her life, is ready to protect her child, her only child,</i>\n \n\n<b><u>Evampi sabbabhūtesu, mānasaṃ bhāvaye aparimāṇaṃ.</u></b>\n \n\n<i>so without restrictions to all beings he should develop this thought.</i>\n \n\n<b><u>Mettañca sabbalokasmi, mānasaṃ bhāvaye aparimāṇaṃ;</u></b>\n \n\n<i>For the whole world, let it develop the boundless thought of friendliness:</i>\n \n\n<b><u>Uddhaṃ adho ca tiriyañca, asambādhaṃ averamasapattaṃ.</u></b>\n \n\n<i>Up, down, and in between, without obstruction, malevolence, or foe.</i>\n \n\n<b><u>Tiṭṭhaṃ caraṃ nisinno va, sayāno yāvatāssa vitamiddho [vigatamiddo (bahūsu)] ;</u></b>\n \n\n<i>Standing, walking, sitting or lying down while not drowsy</i>\n \n\n<b><u>Etaṃ satiṃ adhiṭṭheyya, brahmametaṃ vihāramidhamāhu.</u></b>\n \n\n<i>Let him strive for this remembrance. It is spoken of as being in the state of brahma [straight] here</i>\n \n\n<b><u>Diṭṭhiñca anupagamma, sīlavā dassanena sampanno;</u></b>\n \n\n<i>Not confused with views, moral, he has insight,</i>\n \n\n<b><u>Kāmesu vinaya gedhaṃ, na hi jātuggabbhaseyya punaretīti.</u></b>\n \n\n<i>With the elimination of greed for sensual pleasures, he will never again be in the womb.</i>\n \n\n<b><u>Mettasuttaṃ aṭṭhamaṃ niṭṭhitaṃ. \n \n \n \n</u></b></string>
+    <string name="DeklomaciyaSuttaKaraniyaMettaSutta"> \n <b>KARANIA METTA SUTTA</b>\n \n\n<b><u />Karaṇīyamatthakusalena, yanta santaṃ padaṃ abhisamecca;</b>\n \n\n<i>This is what one should do who is skilled in good things and wants to achieve a peaceful state:</i>\n \n\n<b><u>Sakko ujū ca suhujū [sūjū (sī.)] ca, sūvaco cassa mudu anatimānī.</u></b>\n \n\n<i>Let him be able, direct and honest, meek, gentle and not proud,</i>\n \n\n<b><u>Santussako ca subharo ca, appakicco ca sallahukavutti;</u></b>\n \n\n<i>satisfied and unburdensome, with few responsibilities, content with little,</i>\n \n\n<b><u>Santindriyo ca nipako ca, appagabbho kulesvananugiddho.</u></b>\n \n\n<i>with calm perception abilities, reasonable, humble, and not fawning over families.</i>\n \n\n<b><u>Na ca khuddamācare kiñci, yena viññū pare upavadeyyuṃ;</u></b>\n \n\n<i>And let him not do the slightest thing that the wise would condemn.</i>\n \n\n<b><u>Sukhino va khemino hontu, sabbasattā [sabbe sattā (sī. syā.)] bhavantu sukhitattā.</u></b>\n \n\n<i>[And let him think:] Joyful and safe, may all beings be joyful in heart.</i>\n \n\n<b><u>Ye keci pāṇabhūtatthi, tasā vā thāvarā vanavasesā;</u></b>\n \n\n<i>Whatever the creatures, fragile or strong, without exception,</i>\n \n\n<b><u>Dīghā vā ye va mahantā [mahanta (?)], majjhimā rassakā aṇukathūlā.</u></b>\n \n\n<i>long, large, medium, small, small, thick,</i>\n \n\n<b><u>Diṭṭhā vā ye va adiṭṭhā [adiṭṭha (?)], ye va [ye ca (sī. syā. kaṃ. pī.)] dūre vasanti avidūre;</u></b>\n \n\n<i>visible and invisible, living near and far,</i>\n \n\n<b><u>Bhūtā va sambhavesī va [bhūtā vā sambhavesī vā (syā. kaṃ. pī. ka.)], sabbasattā bhavantu sukhitattā.</u></b>\n \n\n<i>those who have come into the world and strive for manifestation: may all beings be joyful in heart.</i>\n \n\n<b><u>Na paro paraṃ nikubbetha, nātimaññetha katthaci na kañci [naṃ kañci (sī. pī.), naṃ kiñci (syā.), na kiñci (ka.)] ;</u></b>\n \n\n<i>Let no one upset another or despise anyone anywhere,</i>\n \n\n<b><u>Byārosanā paṭighasaññā, nāññamaññassa dukkhamiccheyya.</u></b>\n \n\n<i>and let no one wish another to suffer because of anger or an unpleasant impression.</i>\n \n\n<b><u>Mātā yathā niyaṃ puttamāyusā ekaputtamanurakkhe;</u></b>\n \n\n<i>As a mother, at the cost of her life, is ready to protect her child, her only child,</i>\n \n\n<b><u>Evampi sabbabhūtesu, mānasaṃ bhāvaye aparimāṇaṃ.</u></b>\n \n\n<i>so without restrictions to all beings he should develop this thought.</i>\n \n\n<b><u>Mettañca sabbalokasmi, mānasaṃ bhāvaye aparimāṇaṃ;</u></b>\n \n\n<i>For the whole world, let it develop the boundless thought of friendliness:</i>\n \n\n<b><u>Uddhaṃ adho ca tiriyañca, asambādhaṃ averamasapattaṃ.</u></b>\n \n\n<i>Up, down, and in between, without obstruction, malevolence, or foe.</i>\n \n\n<b><u>Tiṭṭhaṃ caraṃ nisinno va, sayāno yāvatāssa vitamiddho [vigatamiddo (bahūsu)] ;</u></b>\n \n\n<i>Standing, walking, sitting or lying down while not drowsy</i>\n \n\n<b><u>Etaṃ satiṃ adhiṭṭheyya, brahmametaṃ vihāramidhamāhu.</u></b>\n \n\n<i>Let him strive for this remembrance. It is spoken of as being in the state of brahma [straight] here</i>\n \n\n<b><u>Diṭṭhiñca anupagamma, sīlavā dassanena sampanno;</u></b>\n \n\n<i>Not confused with views, moral, he has insight,</i>\n \n\n<b><u>Kāmesu vinaya gedhaṃ, na hi jātuggabbhaseyya punaretīti.</u></b>\n \n\n<i>With the elimination of greed for sensual pleasures, he will never again be in the womb.</i>\n \n\n<b><u>Mettasuttaṃ aṭṭhamaṃ niṭṭhitaṃ. \n \n \n \n \n \n</u></b></string>
     <string name="rukovodstvo_dlya_samaner">guide for samaneras</string>
     <string name="sekhiya_n">75 sekhiya rules for training</string>
     <string name="first_category">Category one \n26 sekhiya on proper behavior:</string>
@@ -395,6 +395,265 @@
          <u>SHARING OF MERIT</u> \n \n
 <b><u>idaṃ no (me) ñātīnaṃ hotu - sukhitā hontu ñātayo [3x]</u></b> \n
 <i>Let this be for the benefit of our (my) relatives, may the relatives be happy.</i> \n \n
+    </string>
+    <string name="button_sutta_mangala">Maha mangala sutta</string>
+    <string name="button_sutta_ratana">ratana stta</string>
+    <string name="DeklomaciyaSuttaMangala">
+        \n <b>MAHA MANGALA SUTTHA</b> \n \n
+         <i>A sermon on what best contributes to well-being</i> \n \n
+         <b>Ēvaṃ mē sutaṃ ēkaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jētavanē anāthapiṇḍikassa ārāmē</b> \n \n
+         <i>So I heard: once the Perfect One was not far from Savatthi, in the Jeta grove, in the monastery of Anathapindika.</i> \n \n
+         <b>Athakhō aññatarā dēvatā abhikkantāya rattiyā</b> \n \n
+         <i>When the night was almost over, one deity,</i> \n \n
+         <b>Abhikkantavaṇṇā kēvalakappaṃ jētavanaṃ ōbhāsetvā yena bhagavā</b> \n \n
+         <i>appeared in the grove of Jeta, and, illuminating it with its radiance, to the Perfect</i> \n \n
+         <b>Tenupasaṃkami upasaṅkamitvā bhagavantaṃ abhivādetvā ēkamantaṃ aṭṭhāsi</b> \n \n
+         <i>approached. Approaching, it respectfully greeted him and stood aside</i> \n \n
+         <b>Ēkamantaṃ ṭhitā kho sā dēvatā bhagavantaṃ gāthāya ajjhabhāsī</b> \n \n
+         <i>And, standing aside, the deity then turned to the Perfect in verses:</i> \n \n
+         <b>Bahū dēvā manussā ca maṅgalāni acintayuṃ</b> \n \n
+         <i>"Many gods and people thought about what contributes to well-being,</i> \n \n
+         <b>Ākaṅkhamānā sotthānaṃ brūhi maṅgalamuttamaṃ</b> \n \n
+         <i>wanting to succeed. So tell me: what best contributes to it?"</i> \n \n
+         <b>Asēvanā ca bālānaṃ paṇḍitānañca sēvanā</b> \n \n
+         <i>"Dont deal with fools, deal with wise ones,</i> \n \n
+         <b>Pūjā ca pūjanīyānaṃ ētaṃ maṅgalamuttamaṃ</b> \n \n
+         <i>and to honor those worthy of veneration is what best contributes to well-being.</i> \n \n
+         <b>Patirūpadēsavāsōca pubbē ca katapuññatā</b> \n \n
+         <i>To live in a suitable area, having accumulated merit in the past,</i> \n \n
+         <b>Attasammāpaṇidhi ca ētaṃ maṅgalamuttamaṃ</b> \n \n
+         <i>being guided by right intentions is what best contributes to well-being.</i> \n \n
+         <b>Bāhusaccañca sippañca vinayo ca susikkhito</b> \n \n
+         <i>Deep knowledge, skills, good discipline,</i> \n \n
+         <b>Subhāsitā ca yā vācā ētaṃ maṅgalamuttamaṃ</b> \n \n
+         <i>Pleasant speech is what best contributes to well-being.</i> \n \n
+         <b>Mātāpitū upaṭṭhānaṃ puttadārassa saṅghahō</b> \n \n
+         <i>Helping mother and father, taking care of wife and children,</i> \n \n
+         <b>Anākulā ca kammantā ētaṃ maṅgalamuttamaṃ</b> \n \n
+         <i>Conflict-free work is what contributes best to well-being.</i> \n \n
+         <b>Dānañca dhammacariyā ca ñātakānañca saṅgahō</b> \n \n
+         <i>Generosity, righteous living, caring for relatives,</i> \n \n
+         <b>Anavajjāni kammāni ētaṃ maṅgalamuttamaṃ</b> \n \n
+         <i>impeccability in deeds is what best contributes to well-being.</i> \n \n
+         <b>Āratī viratī pāpā majjapānā ca saṃyamō</b> \n \n
+         <i>Abstaining from the vicious, avoiding intoxicating substances,</i> \n \n
+         <b>Appamādo ca dhammēsu ētaṃ maṅgalamuttamaṃ</b> \n \n
+         <i>mindfulness of mental qualities is what best promotes well-being.</i> \n \n
+         <b>Gāravō ca nivātō ca santuṭṭhi ca kataññutā</b> \n \n
+         <i>Respect, humility, contentment and gratitude,</i> \n \n
+         <b>Kālēna dhammassavanaṃ ētaṃ maṅgalamuttamaṃ</b> \n \n
+         <i>listening to the Dhamma at the right time is what is most conducive to well-being.</i> \n \n
+         <b>Khantī ca sovacassatā samaṇānañca dassanaṃ</b> \n \n
+         <i>Patience, complaisance, seeing ascetics,</i> \n \n
+         <b>Kālēna dhammasākacchā ētaṃ maṅgalamuttamaṃ</b> \n \n
+         <i>Discussing the Dhamma at the right time is what is most conducive to well-being.</i> \n \n
+         <b>Tapo ca brahmacariyañca ariyasaccana dassanaṃ</b> \n \n
+         <i>Self-restraint, chastity, realization of Noble Truths</i> \n \n
+         <b>Nibbāna sacchikiriyā ca ētaṃ maṅgalamuttamaṃ</b> \n \n
+         <i>and the realization of Nibbana is what best promotes well-being.</i> \n \n
+         <b>Phuṭṭhassa lōkadhammēhi cittaṃ yassa na kampati</b> \n \n
+         <i>The mind that remains steady in contact with the mundane</i> \n \n
+         <b>Asōkaṃ virajaṃ khēmaṃ ētaṃ maṅgalamuttamaṃ</b> \n \n
+         <i>carefree, pure, calm - thats what best contributes to well-being.</i> \n \n
+         <b>Ētādisāni katvāna sabbatthama′parā′jitā</b> \n \n
+         <i>Those who do this are always invincible,</i> \n \n
+         <b>Sabbattha sotthiṃ gacchanti taṃ tēsaṃ maṅgalamuttaman′ti</b> \n \n
+         <i>always succeeding is what best contributes to their well-being."</i> \n \n
+         <b>Ētēna saccavajjēna sotthi te hōtu sabbadā</b> \n \n
+         <i>May all prosperity follow you through the power of this truth</i> \n \n
+         <b>Ētēna saccavajjēna hōtu te jayamaṅgalaṃ</b> \n \n
+         <i>May you gain the benefit of victory through the power of this truth</i> \n \n
+         <b>Ētēna saccavajjēna sabbarōgō vinassatu</b> \n \n
+         <i>May all illnesses be healed through the power of this truth</i> \n \n \n \n \n \n
+    </string>
+
+    <string name="DeklomaciyaSuttaRatana">
+        \n <b>RATANA SUTTA</b> \n \n
+         <i>THE TREASURE SUTTA</i> \n \n
+         <b>Yānīdha bhūtāni samāgatānī</b> \n \n
+         <i>All the spirits that came here</i> \n \n
+         <b>Bhummāni vā yāni va antalikkhe</b> \n \n
+         <i>terrestrial and celestial, -</i> \n \n
+         <b>Sabbēva bhūtā sumana bhavantu</b> \n \n
+         <i>may you all be happy</i> \n \n
+         <b>Athopi sakkacca suṇantu bhāsitaṃ</b> \n \n
+         <i>and listen to the words.</i> \n \n
+         <b>Tasmā hi bhūtā nisāmētha sabbē</b> \n \n
+         <i>Listen, spirits!</i> \n \n
+         <b>Mettaṃ karōtha mānusiyā pajāya</b> \n \n
+         <i>be friendly to the human race,</i> \n \n
+         <b>Divā ca ratto ca haranti ye baliṃ</b> \n \n
+         <i>who brings his offerings day and night</i> \n \n
+         <b>Tasmā hi ne rakkhata appamattā</b> \n \n
+         <i>Zealously guard the people!</i> \n \n
+         <b>Yaṃ kiñci vittaṃ idha vā huraṃ vā</b> \n \n
+         <i>No treasure here or in the next world</i> \n \n
+         <b>Saggēsu vā yaṃ ratanaṃ paṇītaṃ</b> \n \n
+         <i>no jewels of heaven</i> \n \n
+         <b>Na nō samaṃ atthi tathāgatēna</b> \n \n
+         <i>will not equal the Ultimate.</i> \n \n
+         <b>Idampi buddhē ratanaṃ paṇītaṃ</b> \n \n
+         <i>This is what a precious treasure resides in the Buddha.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Khayaṃ virāgaṃ amataṃ paṇītaṃ</b> \n \n
+         <i>The destruction of passions, freedom from them, and then the highest immortality</i> \n \n
+         <b>Yadajjhagā sakyamunī samāhitō</b> \n \n
+         <i>which Sakyamuni attained in concentration</i> \n \n
+         <b>Na tena dhammēna samatthi kiñci</b> \n \n
+         <i>There is nothing equal to this state!</i> \n \n
+         <b>Idampi dhammē ratanaṃ paṇītaṃ</b> \n \n
+         <i>This is what a precious treasure dwells in the Dhamma.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Yambuddhaseṭṭhō parivaṇṇayī suciṃ</b> \n \n
+         <i>This path of purity, praised by the Supreme Buddha</i> \n \n
+         <b>Samādhimānata rikaññamāhu</b> \n \n
+         <i>invariably leads to concentration.</i> \n \n
+         <b>Samādhinā tēna samō na vijjati</b> \n \n
+         <i>Nothing compares to this concentration.</i> \n \n
+         <b>Idampi dhammē ratanaṃ paṇītaṃ</b> \n \n
+         <i>This is what a precious treasure dwells in the Dhamma.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Ye puggalā aṭṭha sataṃ pasatthā</b> \n \n
+         <i>Eight of them, glorified by the Righteous One,</i> \n \n
+         <b>Cattari ētāni yugāni honti</b> \n \n
+         <i>four pairs of them,</i> \n \n
+         <b>Te dakkhiṇeyyā sugatassa sāvakā</b> \n \n
+         <i>disciples of the Achieved Good, worthy of donation:</i> \n \n
+         <b>Ētēsu dinnāni mahapphalānī</b> \n \n
+         <i>what is bestowed upon them will bear good fruit.</i> \n \n
+         <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+         <i>Such a precious treasure resides in the Sangha.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Ye suppayuttā manasā daḷhēna</b> \n \n
+         <i>Those who are steadfast and thorough</i> \n \n
+         <b>Nikkāminō gōtamasāsanamhi</b> \n \n
+         <i>Follow the teachings of Gotama, free from [mental defilements],</i> \n \n
+         <b>Te pattipattā amataṃ vigayha</b> \n \n
+         <i>achieved what they should have achieved by gaining the Immortal.</i> \n \n
+         <b>Laddhā mudhā nibbutiṃ bhuñjamānā</b> \n \n
+         <i>They are freely enjoying their attained Liberation.</i> \n \n
+         <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+         <i>Such a precious treasure resides in the Sangha.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Yathindakhīlō pathaviṃsito siyā</b> \n \n
+         <i>The pillars of Indra stand firmly in the ground,</i> \n \n
+         <b>Catubhi vātēhi asampakampiyo</b> \n \n
+         <i>not shaken by the four winds</i> \n \n
+         <b>Tathūpamaṃ sappurisaṃ vadāmi</b> \n \n
+         <i>Nothing can shake the righteous</i> \n \n
+         <b>Yo ariyasaccāni avecca passati</b> \n \n
+         <i>who has comprehended noble truths, who has clearly comprehended them.</i> \n \n
+         <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+         <i>Such a precious treasure resides in the Sangha.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Ye ariyasaccāni vibhāvayanti</b> \n \n
+         <i>Who has comprehended noble truths</i> \n \n
+         <b>Gambhīrapaññēna sudēsitāni</b> \n \n
+         <i>proclaimed in perfection by the Wise,</i> \n \n
+         <b>Kiñcāpi te honti bhusaṃ pamattā</b> \n \n
+         <i>no matter how careless he may be in the future,</i> \n \n
+         <b>Na te bhavaṃ aṭṭhamamādiyanti</b> \n \n
+         <i>will not experience the eighth rebirth.</i> \n \n
+         <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+         <i>Such a precious treasure resides in the Sangha.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Sahāvassa dassanasampadāya</b> \n \n
+         <i>He who has gained insight</i> \n \n
+         <b>Tayassu dhammā jahitā bhavanti</b> \n \n
+         <i>got rid of three traits:</i> \n \n
+         <b>Sakkāyadiṭṭhi vicikicchitañca</b> \n \n
+         <i>belief in individuality, insecurity and </i> \n \n
+         <b>Sīlabbataṃ vāpi yadatthi kiñci</b> \n \n
+         <i>any attachment to rituals and ceremonies.</i> \n \n
+         <b>Catūhapāyehi ca vippamuttō</b> \n \n
+         <i>He is free from being reborn in the four bad realms,</i> \n \n
+         <b>Chacābhiṭhānāni abhabbō kātuṃ</b> \n \n
+         <i>and unable to commit the six heaviest offenses. </i>\n\n
+         <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+         <i>Such a precious treasure resides in the Sangha.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Kiñcāpi so kammaṃ karōti pāpakaṃ</b> \n \n
+         <i>What a bad thing to do</i> \n \n
+         <b>Kāyena vācā udacetasā vā</b> \n \n
+         <i>the person who entered the stream did not commit the body, speech or thoughts,</i> \n \n
+         <b>Abhabbō so tassa paṭicchādāya</b> \n \n
+         <i>he is unable to hide it</i> \n \n
+         <b>Abhabbatā diṭṭhapadassa vuttā</b> \n \n
+         <i>because it s impossible for someone who sees the path.</i> \n \n
+         <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+         <i>Such a precious treasure resides in the Sangha.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Vanappagumbē yathā phussitaggē</b> \n \n
+         <i>Like the tops of trees</i> \n \n
+         <b>Gimhānamāsē paṭhamasmiṃ gimhē</b> \n \n
+         <i>everything is in bloom at the beginning of summer</i> \n \n
+         <b>Tathūpamaṃ dhammavaraṃ adesayī</b> \n \n
+         <i>so is His exalted Dhamma,</i> \n \n
+         <b>Nibbānagāmiṃ paramaṃ hitāya</b> \n \n
+         <i>leading to the tranquility of Nibbana, striving for the highest good.</i> \n \n
+         <b>Idampi buddhē ratanaṃ paṇītaṃ</b> \n \n
+         <i>This is what a precious treasure resides in the Buddha.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Varō varaññū varadō varāharō</b> \n \n
+         <i>Incomparable, he is the one who sees Nibbana, gives Nibbana, brings the Noble Eightfold Path,</i> \n \n
+         <b>Anuttarō dhammavaraṃ adēsayi</b> \n \n
+         <i>told us this supreme Truth.</i> \n \n
+         <b>Idampi buddhē ratanaṃ paṇītaṃ</b> \n \n
+         <i>This is what a precious treasure resides in the Buddha.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Khīṇaṃ purāṇaṃ nava natthi sambhavaṃ</b> \n \n
+         <i>Their past is exhausted, the new does not arise,</i> \n \n
+         <b>Virattacittāāyatikē bhavasmiṃ</b> \n \n
+         <i>Their mind is not attached to future becoming.</i> \n \n
+         <b>Te khīṇabījā avirūḷhicchandā</b> \n \n
+         <i>Their seed has been destroyed and they have no more desire for a new life.</i> \n \n
+         <b>Nibbanti dhīrā yathāyaṃ padīpō</b> \n \n
+         <i>Such sages are extinguished like the flame of this lamp.</i> \n \n
+         <b>Idampi saṅghē ratanaṃ paṇītaṃ</b> \n \n
+         <i>Such a precious treasure resides in the Sangha.</i> \n \n
+         <b>Ētēna saccēna suvatthi hōtu</b> \n \n
+         <i>Let this truth bring prosperity!</i> \n \n
+         <b>Yānīdha bhūtāni samāgatāni</b> \n \n
+         <i>All the spirits that came here</i> \n \n
+         <b>Bhummāni vā yāni va antalikkhe</b> \n \n
+         <i>terrestrial and celestial,</i> \n \n
+         <b>Tathāgataṃ dēvamanussapūjitaṃ</b> \n \n
+         <i>A Tathagata honored by gods and men</i> \n \n
+         <b>Buddhaṃ namassāma suvatthi hōtu</b> \n \n
+         <i>Lets glorify the Buddha too. Let there be prosperity!</i> \n \n
+         <b>Yānīdha bhūtāni samāgatāni</b> \n \n
+         <i>All the spirits that came here</i> \n \n
+         <b>Bhummāni vā yāni va antalikkhe</b> \n \n
+         <i>terrestrial and celestial,</i> \n \n
+         <b>Tathāgataṃ dēvamanussapūjitaṃ</b> \n \n
+         <i>A Tathagata honored by gods and men.</i> \n \n
+         <b>Dhammaṃ namassāma suvatthi hōtu</b> \n \n
+         <i>Lets glorify the Dhamma too. Let there be prosperity!</i> \n \n
+         <b>Yānīdha bhūtāni samāgatāni</b> \n \n
+         <i>All the spirits that came here</i> \n \n
+         <b>Bhummāni vā yāni va antalikkhe</b> \n \n
+         <i>terrestrial and celestial,</i> \n \n
+         <b>Tathāgataṃ dēvamanussapūjitaṃ</b> \n \n
+         <i>A Tathagata honored by gods and men.</i> \n \n
+         <b>Saṅghaṃ namassāma suvatthi hōtuti</b> \n \n
+         <i>Lets glorify the Sangha too. Let there be prosperity!</i> \n \n
+         <b>Ētēna saccavajjēna sabba dukkhaṃ vinassatu</b> \n \n
+         <i>May all your suffering disappear through the power of this truth</i> \n \n
+         <b>Ētēna saccavajjēna sabba bhayō vinassatu</b> \n \n
+         <i>May all your fears disappear through the power of this truth</i> \n \n
+         <b>Ētēna saccavajjēna sabba rōgō vinassatu</b> \n \n
+         <i>May all your diseases disappear through the power of this truth</i> \n \n \n \n \n \n
     </string>
 
 </resources>
