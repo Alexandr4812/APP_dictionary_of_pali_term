@@ -99,6 +99,26 @@ public class SekhiyaActivity extends AppCompatActivity {
         scrollText.setVisibility(view.VISIBLE);
     }
 
+    public void toComm26(View view) {
+        ScrollView scrollText = findViewById(R.id.viewScrollSekhiyaComm26);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
+    public void toComm27(View view) {
+        ScrollView scrollText = findViewById(R.id.viewScrollSekhiyaComm27);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
+    public void toComm28(View view) {
+        ScrollView scrollText = findViewById(R.id.viewScrollSekhiyaComm28);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
+    public void toComm29(View view) {
+        ScrollView scrollText = findViewById(R.id.viewScrollSekhiyaComm29);
+        scrollText.setVisibility(view.VISIBLE);
+    }
+
     public void tobackIzTextSekhiya(View view) {
         ScrollView scrollText = findViewById(R.id.viewScrollSekhiyaComm1);
         scrollText.setVisibility(view.INVISIBLE);
@@ -126,5 +146,13 @@ public class SekhiyaActivity extends AppCompatActivity {
         scrollText12.setVisibility(view.INVISIBLE);
         ScrollView scrollText13 = findViewById(R.id.viewScrollSekhiyaComm25);
         scrollText13.setVisibility(view.INVISIBLE);
+        ScrollView scrollText14 = findViewById(R.id.viewScrollSekhiyaComm26);
+        scrollText14.setVisibility(view.INVISIBLE);
+        ScrollView scrollText15 = findViewById(R.id.viewScrollSekhiyaComm27);
+        scrollText15.setVisibility(view.INVISIBLE);
+        ScrollView scrollText16 = findViewById(R.id.viewScrollSekhiyaComm28);
+        scrollText16.setVisibility(view.INVISIBLE);
+        ScrollView scrollText17 = findViewById(R.id.viewScrollSekhiyaComm29);
+        scrollText17.setVisibility(view.INVISIBLE);
     }
 }
