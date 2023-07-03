@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".RulesSamaneraActivity">
+    tools:context=".RulesBhikkhuActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -57,16 +57,16 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button_rules_pabaga2"
+                android:id="@+id/button_rules_upasampada"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toBecomingSamaneraPabajaAct"
-                android:text="@string/pabaja_text" />
+                android:onClick="toRulesUpasampadaAct"
+                android:text="@string/button_upasampada" />
 
             <Button
-                android:id="@+id/button_rules_samanera"
+                android:id="@+id/button_rules_patimokha"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toRulesSekhiyaAct"
-                android:text="@string/sekhiya_n" />
+                android:onClick="toRulesPatimokhaAct"
+                android:text="@string/button_patimokha" />
 
         </LinearLayout>
 

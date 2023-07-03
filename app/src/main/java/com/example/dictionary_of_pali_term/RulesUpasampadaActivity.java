@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class ActivityBecomingSamsneraPpabaja extends AppCompatActivity {
+public class RulesUpasampadaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_becoming_samsnera_pabaja);
+        setContentView(R.layout.activity_rules_upasampada);
     }
 
     public void toMainAct(View view){
@@ -22,13 +22,14 @@ public class ActivityBecomingSamsneraPpabaja extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesActivity.class);
+        Intent intent = new Intent(this, RulesBhikkhuActivity.class);
         startActivity(intent);
         finish();
     }
 
-    public void toRulesAct(View view){
-        Intent intent = new Intent(this, RulesActivity.class);
+
+    public void toRulesBhikkhuAct(View view){
+        Intent intent = new Intent(this, RulesBhikkhuActivity.class);
         startActivity(intent);
         finish();
     }

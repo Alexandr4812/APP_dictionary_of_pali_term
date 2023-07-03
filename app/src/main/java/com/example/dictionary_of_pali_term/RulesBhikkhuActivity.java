@@ -6,18 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class RulesSamanera extends AppCompatActivity {
+public class RulesBhikkhuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rules_samanera);
-    }
-
-    public void toRulesSekhiyaAct(View view){
-        Intent intent = new Intent(this, SekhiyaActivity.class);
-        startActivity(intent);
-        finish();
+        setContentView(R.layout.activity_rules_bhikkhu);
     }
 
     public void toRulesAct(View view){
@@ -28,6 +22,18 @@ public class RulesSamanera extends AppCompatActivity {
 
     public void toMainAct(View view){
         Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void toRulesUpasampadaAct(View view){
+        Intent intent = new Intent(this, RulesUpasampadaActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void toRulesPatimokhaAct(View view){
+        Intent intent = new Intent(this, RulesPatimokhaActivity.class);
         startActivity(intent);
         finish();
     }

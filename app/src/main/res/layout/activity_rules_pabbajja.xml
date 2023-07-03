@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityBecomingSamsneraPpabaja">
+    tools:context=".RulesPabbajjaActivity">
 
   <ScrollView
       android:id="@+id/pabajaScrollText"
@@ -28,7 +28,7 @@
           android:background="#FFE082"
           android:contentDescription="возврат в главное меню"
           android:foregroundGravity="center"
-          android:onClick="toRulesAct"
+          android:onClick="toRulesSamaneraAct"
           android:scaleType="centerInside"
           android:src="@drawable/button_back"
           app:layout_constraintBottom_toBottomOf="parent"
@@ -70,7 +70,7 @@
           android:background="#FFE082"
           android:contentDescription="возврат в главное меню"
           android:foregroundGravity="center"
-          android:onClick="toRulesAct"
+          android:onClick="toRulesSamaneraAct"
           android:scaleType="centerInside"
           android:src="@drawable/button_back"
           app:layout_constraintBottom_toBottomOf="parent"

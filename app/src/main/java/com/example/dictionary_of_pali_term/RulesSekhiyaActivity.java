@@ -7,16 +7,16 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ScrollView;
 
-public class SekhiyaActivity extends AppCompatActivity {
+public class RulesSekhiyaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sekhiya);
+        setContentView(R.layout.activity_rules_sekhiya);
     }
 
     public void toRulesSamaneraAct(View view){
-        Intent intent = new Intent(this, RulesSamanera.class);
+        Intent intent = new Intent(this, RulesSamaneraActivity.class);
         startActivity(intent);
         finish();
     }
@@ -29,7 +29,7 @@ public class SekhiyaActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesSamanera.class);
+        Intent intent = new Intent(this, RulesSamaneraActivity.class);
         startActivity(intent);
         finish();
     }
