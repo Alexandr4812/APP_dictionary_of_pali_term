@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_main_color"
+    tools:context=".RulesPatimokhaParajikaActivity">
+
+    <ImageButton
+        android:id="@+id/backButtonRules"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/my_main_color"
+        android:contentDescription="возврат в главное меню"
+        android:onClick="toRulesPatimokhaAct"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="UsingOnClickInXml" />
+
+    <ImageButton
+        android:id="@+id/imageButtonliveHome"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@color/my_main_color"
+        android:foregroundGravity="center"
+        android:onClick="toMainAct"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/viewScrollPatimokha"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/backButtonRules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollPatimokha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewHintParajika"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textViewHintParajika"
+                android:textColor="#9FA8DA" />
+
+            <Button
+                android:id="@+id/button_parajika_1"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toBhikhuPatimokhaParajika1"
+                android:text="@string/buttonParajika1"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_parajika_2"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toBhikhuPatimokhaParajika2"
+                android:text="@string/buttonRiulesPatimokhaParajika2"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_parajika_3"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toBhikhuPatimokhaParajika3"
+                android:text="@string/buttonRiulesPatimokhaParajika3"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_parajika_4"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toBhikhuPatimokhaParajika4"
+                android:text="@string/buttonRiulesPatimokhaParajika4"
+                tools:ignore="UsingOnClickInXml" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollPatimokhaParajika1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/backButtonRules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollPatimokhaParajika1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewPatimokhaParajika1"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="@string/textPatimokhaParajika1" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollPatimokhaParajika2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/backButtonRules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollPatimokhaParajika2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewPatimokhaParajika2"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="@string/textPatimokhaParajika2" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollPatimokhaParajika3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/backButtonRules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollPatimokhaParajika3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewPatimokhaParajika3"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="@string/textPatimokhaParajika3" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollPatimokhaParajika4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/backButtonRules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollPatimokhaParajika4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewPatimokhaParajika4"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="@string/textPatimokhaParajika4" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textMaxTimeParajika"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/my_main_color"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="0:0"
+        android:textAlignment="center"
+        android:textColor="@color/my_text_bacground_color"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/buttonliveToPatimokhaParajika"
+        app:layout_constraintEnd_toStartOf="@id/seekBarParajika"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textCurrentPositionParajika"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/my_main_color"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="0:0"
+        android:textAlignment="center"
+        android:textColor="@color/my_text_bacground_color"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/buttonliveHomeFromParajika"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/seekBarParajika" />
+
+    <Button
+        android:id="@+id/buttonliveToPatimokhaParajika"
+        style="@style/buttonBackNotImageButton"
+        android:onClick="tobackParajikaAct"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonRewindParajika"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonliveHomeFromParajika"
+        style="@style/buttonBackHomeNotImageButton"
+        android:onClick="toMainAct"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toEndOf="@id/buttonFastForwardParajika"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonRewindParajika"
+        style="@style/buttonRewind"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlayParajika"
+        app:layout_constraintStart_toEndOf="@+id/buttonliveToPatimokhaParajika"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonPlayParajika"
+        style="@style/buttonPlay"
+        app:icon="@mipmap/sound3_foreground"
+        app:iconPadding="0dp"
+        app:iconSize="30dp"
+        app:iconTint="#FFF59D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonPauseParajika"
+        app:layout_constraintStart_toEndOf="@id/buttonRewindParajika"
+        tools:ignore="RtlCompat"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonStopParajika"
+        style="@style/buttonStop"
+        app:icon="@mipmap/sound3off_foreground"
+        app:iconPadding="0dp"
+        app:iconSize="30dp"
+        app:iconTint="#FFF59D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonPauseParajika"
+        app:layout_constraintStart_toEndOf="@id/buttonRewindParajika"
+        tools:ignore="RtlCompat"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonPauseParajika"
+        style="@style/buttonPause"
+        app:icon="@mipmap/pause_foreground"
+        app:iconGravity="start"
+        app:iconPadding="0dp"
+        app:iconSize="30dp"
+        app:iconTint="#FFF59D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonFastForwardParajika"
+        app:layout_constraintStart_toEndOf="@id/buttonPlayParajika"
+        tools:ignore="RtlCompat"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonFastForwardParajika"
+        style="@style/buttonFastForward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonliveHomeFromParajika"
+        app:layout_constraintStart_toEndOf="@+id/buttonPauseParajika"
+        tools:visibility="visible" />
+
+    <SeekBar
+        android:id="@+id/seekBarParajika"
+        android:layout_width="210dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/my_main_color"
+        android:indeterminateOnly="false"
+        android:progressTint="@color/my_text_bacground_color"
+        android:saveEnabled="false"
+        android:thumbTint="@color/my_text_bacground_color"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStopParajika"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

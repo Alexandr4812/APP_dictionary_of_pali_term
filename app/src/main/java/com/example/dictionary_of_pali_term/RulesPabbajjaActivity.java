@@ -11,7 +11,7 @@ public class RulesPabbajjaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rules_pabbajja);
+        setContentView(R.layout.activity_rules_samanera_pabbajja);
     }
 
     public void toMainAct(View view){

@@ -16,7 +16,7 @@ public class RulesPatimokhaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rules_patimokha);
+        setContentView(R.layout.activity_rules_bhikkhu_patimokha);
 
         this.buttonBack = (Button) findViewById(R.id.buttonliveToPatimokha);
         this.buttonHome = (Button) findViewById(R.id.buttonliveHomeFromPatimokha);
@@ -38,6 +38,12 @@ public class RulesPatimokhaActivity extends AppCompatActivity {
 
     public void toRulesBhikkhuAct(View view){
         Intent intent = new Intent(this, RulesBhikkhuActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void toRulesPatimokhaParajikaAct(View view){
+        Intent intent = new Intent(this, RulesPatimokhaParajikaActivity.class);
         startActivity(intent);
         finish();
     }

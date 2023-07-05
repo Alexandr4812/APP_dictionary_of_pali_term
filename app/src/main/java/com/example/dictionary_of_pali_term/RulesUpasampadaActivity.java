@@ -11,7 +11,7 @@ public class RulesUpasampadaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rules_upasampada);
+        setContentView(R.layout.activity_rules_bhikkhu_upasampada);
     }
 
     public void toMainAct(View view){

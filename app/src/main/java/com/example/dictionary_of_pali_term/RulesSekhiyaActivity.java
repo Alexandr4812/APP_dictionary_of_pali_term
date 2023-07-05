@@ -12,7 +12,7 @@ public class RulesSekhiyaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rules_sekhiya);
+        setContentView(R.layout.activity_rules_samanera_sekhiya);
     }
 
     public void toRulesSamaneraAct(View view){

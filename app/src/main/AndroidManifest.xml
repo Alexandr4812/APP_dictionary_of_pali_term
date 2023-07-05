@@ -13,6 +13,13 @@
         android:theme="@style/Theme.Dictionary_of_pali_term"
         tools:targetApi="31">
         <activity
+            android:name=".RulesPatimokhaParajikaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RulesPatimokhaActivity"
             android:exported="false">
             <meta-data
@@ -83,7 +90,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".SuttasActivity"
+            android:name=".ModelActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -4,11 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.res.Configuration;
 
 import android.content.Intent;
-import android.content.res.Resources;
-import android.widget.Button;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -83,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toSuttas(View view){
-        Intent intent = new Intent(this, SuttasActivity.class);
+        Intent intent = new Intent(this, ModelActivity.class);
         startActivity(intent);
         finish();
     }

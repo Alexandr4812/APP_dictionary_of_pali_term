@@ -84,25 +84,15 @@
                 android:maxHeight="2dp"
                 android:minHeight="2dp" />
 
-            <TextView
-                android:id="@+id/textViewParajikaCategory"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:foregroundGravity="center"
-                android:gravity="center"
-                android:text="@string/textVievParajikaCategory"
-                android:textAlignment="center"
-                android:textColor="#FFE082"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
             <Button
-                android:id="@+id/button_parajika_1"
+                android:id="@+id/button_patimokha_razdel_parajika"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toComm1"
-                android:text="@string/buttonParajika1" />
+                android:onClick="toRulesPatimokhaParajikaAct"
+                android:text="@string/buttonPatimokhaRazdelParajika"
+                tools:ignore="UsingOnClickInXml" />
+
+
+
         </LinearLayout>
     </ScrollView>
 

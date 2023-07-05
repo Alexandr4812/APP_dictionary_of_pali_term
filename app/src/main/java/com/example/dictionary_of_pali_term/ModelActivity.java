@@ -6,12 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class SuttasActivity extends AppCompatActivity {
+public class ModelActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_suttas);
+        setContentView(R.layout.activity_model);
     }
     public void toMainAct(View view){
         Intent intent = new Intent(this, MainActivity.class);
