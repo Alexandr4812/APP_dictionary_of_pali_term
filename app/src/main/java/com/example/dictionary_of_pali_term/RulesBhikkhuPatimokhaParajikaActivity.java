@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class RulesPatimokhaParajikaActivity extends AppCompatActivity {
+public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
     private TextView textMaxTimeParajika;
     private TextView textCurrentPositionParajika;
@@ -269,14 +269,14 @@ public class RulesPatimokhaParajikaActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesPatimokhaActivity.class);
+        Intent intent = new Intent(this, RulesBhikkhuPatimokhaActivity.class);
         startActivity(intent);
         finish();
         this.mediaPlayer.pause();
     }
 
     public void toRulesPatimokhaAct(View view){
-        Intent intent = new Intent(this, RulesPatimokhaActivity.class);
+        Intent intent = new Intent(this, RulesBhikkhuPatimokhaActivity.class);
         startActivity(intent);
         finish();
     }

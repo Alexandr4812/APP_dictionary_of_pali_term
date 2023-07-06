@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ScrollView;
 
-public class RulesPatimokhaActivity extends AppCompatActivity {
+public class RulesBhikkhuPatimokhaActivity extends AppCompatActivity {
 
     private Button buttonHome;
     private Button buttonBack;
@@ -43,7 +43,7 @@ public class RulesPatimokhaActivity extends AppCompatActivity {
     }
 
     public void toRulesPatimokhaParajikaAct(View view){
-        Intent intent = new Intent(this, RulesPatimokhaParajikaActivity.class);
+        Intent intent = new Intent(this, RulesBhikkhuPatimokhaParajikaActivity.class);
         startActivity(intent);
         finish();
     }

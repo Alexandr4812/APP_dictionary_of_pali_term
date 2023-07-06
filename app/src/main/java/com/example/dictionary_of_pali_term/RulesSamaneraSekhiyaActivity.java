@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.ScrollView;
 
-public class RulesSekhiyaActivity extends AppCompatActivity {
+public class RulesSamaneraSekhiyaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

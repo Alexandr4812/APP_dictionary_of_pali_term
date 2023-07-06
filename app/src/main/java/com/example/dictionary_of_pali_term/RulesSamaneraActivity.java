@@ -15,7 +15,7 @@ public class RulesSamaneraActivity extends AppCompatActivity {
     }
 
     public void toRulesSekhiyaAct(View view){
-        Intent intent = new Intent(this, RulesSekhiyaActivity.class);
+        Intent intent = new Intent(this, RulesSamaneraSekhiyaActivity.class);
         startActivity(intent);
         finish();
     }
@@ -40,7 +40,7 @@ public class RulesSamaneraActivity extends AppCompatActivity {
     }
 
     public void toBecomingSamaneraPabajaAct(View view){
-        Intent intent = new Intent(this, RulesPabbajjaActivity.class);
+        Intent intent = new Intent(this, RulesSamaneraPabbajjaActivity.class);
         startActivity(intent);
         finish();
     }

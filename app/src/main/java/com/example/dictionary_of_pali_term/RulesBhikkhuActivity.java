@@ -27,13 +27,13 @@ public class RulesBhikkhuActivity extends AppCompatActivity {
     }
 
     public void toRulesUpasampadaAct(View view){
-        Intent intent = new Intent(this, RulesUpasampadaActivity.class);
+        Intent intent = new Intent(this, RulesBhikkhuUpasampadaActivity.class);
         startActivity(intent);
         finish();
     }
 
     public void toRulesPatimokhaAct(View view){
-        Intent intent = new Intent(this, RulesPatimokhaActivity.class);
+        Intent intent = new Intent(this, RulesBhikkhuPatimokhaActivity.class);
         startActivity(intent);
         finish();
     }

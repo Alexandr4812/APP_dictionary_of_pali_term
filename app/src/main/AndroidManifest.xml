@@ -13,21 +13,21 @@
         android:theme="@style/Theme.Dictionary_of_pali_term"
         tools:targetApi="31">
         <activity
-            android:name=".RulesPatimokhaParajikaActivity"
+            android:name=".RulesBhikkhuPatimokhaParajikaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".RulesPatimokhaActivity"
+            android:name=".RulesBhikkhuPatimokhaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".RulesUpasampadaActivity"
+            android:name=".RulesBhikkhuUpasampadaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -41,7 +41,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".RulesPabbajjaActivity"
+            android:name=".RulesSamaneraPabbajjaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -55,7 +55,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".RulesSekhiyaActivity"
+            android:name=".RulesSamaneraSekhiyaActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
