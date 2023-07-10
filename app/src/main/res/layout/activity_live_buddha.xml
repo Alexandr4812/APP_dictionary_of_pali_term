@@ -203,7 +203,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="invisible"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -249,7 +249,7 @@
                 android:src="@drawable/button_home"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textViewSumedha"
@@ -291,7 +291,7 @@
                 android:src="@drawable/button_home"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </ScrollView>
 

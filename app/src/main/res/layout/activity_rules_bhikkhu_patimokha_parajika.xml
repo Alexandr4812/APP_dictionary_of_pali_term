@@ -75,7 +75,8 @@
                 style="@style/button_activity_declomation_main"
                 android:onClick="toBhikhuPatimokhaParajika2"
                 android:text="@string/buttonRiulesPatimokhaParajika2"
-                tools:ignore="UsingOnClickInXml" />
+                tools:ignore="UsingOnClickInXml"
+                tools:visibility="invisible" />
 
             <Button
                 android:id="@+id/button_parajika_3"
@@ -104,7 +105,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
+        tools:visibility="visible">
 
         <LinearLayout
             android:id="@+id/linearLayoutScrollPatimokhaParajika1"
