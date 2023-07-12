@@ -3,21 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/my_main_color"
     tools:context=".ModelActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="РАЗДЕЛ РАЗРАБАТЫВАЕТСЯ"
-        android:textColor="#FFF59D"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/backButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-260dp"
+        tools:layout_editor_absoluteY="189dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/my_main_color">
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="match_parent"
+                android:layout_height="798dp"
+                app:srcCompat="@drawable/test3" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|fill_vertical"
+                android:layout_marginLeft="4.8dp"
+                android:layout_marginTop="18dp"
+                android:backgroundTint="@color/my_text_bacground_color"
+                android:foregroundTint="#EF9A9A"
+                android:text="Button"
+                android:textColor="@color/black"
+                app:iconTint="#EF9A9A" />
+
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
 
     <ImageButton
         android:id="@+id/backButton"
@@ -34,24 +55,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="UsingOnClickInXml" />
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="242dp"
-        android:layout_height="161dp"
-        android:background="#FFF59D"
-        android:backgroundTint="#FFF59D"
-        android:textAlignment="gravity"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.474">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/asita" />
-    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
