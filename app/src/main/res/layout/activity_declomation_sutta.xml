@@ -51,6 +51,15 @@
                 android:text="@string/button_sutta_ratana"
                 tools:ignore="UsingOnClickInXml" />
 
+            <Button
+                android:id="@+id/button_puja_sutta_girimananda"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="toDeclomaciyaSuttaGirimananda"
+                android:text="@string/button_sutta_girimananda"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
 
 
@@ -154,6 +163,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/DeklomaciyaSuttaRatana" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/suttaScrollTextGirimananda"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSuttaGirimananda"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/DeklomaciyaSuttaGirimananda" />
         </LinearLayout>
     </ScrollView>
 

@@ -153,24 +153,24 @@
     </ScrollView>
 
     <Button
-        android:id="@+id/buttonliveToPatimokha"
+        android:id="@+id/buttonliveToBhikkhu"
         style="@style/buttonBackNotImageButton"
         android:onClick="tobackIzTextPatimokha"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/buttonliveHomeFromPatimokha"
+        app:layout_constraintEnd_toStartOf="@id/buttonliveHomeFromUpasampada"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         tools:visibility="visible"
         tools:ignore="UsingOnClickInXml" />
 
     <Button
-        android:id="@+id/buttonliveHomeFromPatimokha"
+        android:id="@+id/buttonliveHomeFromUpasampada"
         style="@style/buttonBackHomeNotImageButton"
         android:onClick="toMainAct"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintStart_toEndOf="@id/buttonliveToPatimokha"
+        app:layout_constraintStart_toEndOf="@id/buttonliveToBhikkhu"
         tools:visibility="visible"
         tools:ignore="UsingOnClickInXml" />
 

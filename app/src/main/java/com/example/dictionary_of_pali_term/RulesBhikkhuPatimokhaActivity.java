@@ -18,8 +18,8 @@ public class RulesBhikkhuPatimokhaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_patimokha);
 
-        this.buttonBack = (Button) findViewById(R.id.buttonliveToPatimokha);
-        this.buttonHome = (Button) findViewById(R.id.buttonliveHomeFromPatimokha);
+        this.buttonBack = (Button) findViewById(R.id.buttonliveToBhikkhu);
+        this.buttonHome = (Button) findViewById(R.id.buttonliveHomeFromUpasampada);
     }
 
     public void toMainAct(View view){

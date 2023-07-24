@@ -33,10 +33,12 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
     private ScrollView scrollText;
     private ScrollView scrollTextMangala;
     private ScrollView scrollTextRatana;
+    private ScrollView scrollTextGirimananda;
 
     private int flagMettaSutta;
     private int flagMangalaSutta;
     private int flagRatanaSutta;
+    private int flagGirimanandaSutta;
 
 
     @Override
@@ -56,6 +58,7 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
         this.scrollText = findViewById(R.id.suttaScrollTextMetta);
         this.scrollTextMangala = findViewById(R.id.suttaScrollTextSuttaMangala);
         this.scrollTextRatana = findViewById(R.id.suttaScrollTextRatana);
+        this.scrollTextGirimananda = findViewById(R.id.suttaScrollTextGirimananda);
 
         this.seekBar = findViewById(R.id.seekBar);
 
@@ -191,14 +194,32 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
         this.buttonStart.setVisibility(View.VISIBLE);
     }
 
+    public void toDeclomaciyaSuttaGirimananda(View view) {
+        this.flagGirimanandaSutta = 1;
+        mediaPlayer = changeSong();
+
+        this.scrollTextGirimananda.setVisibility(View.VISIBLE);
+
+        this.buttonBack = (Button) findViewById(R.id.buttonliveToDeclomationSutta);
+        this.buttonHome = (Button) findViewById(R.id.buttonliveHomeFromMettaSutta);
+        this.buttonStart = (Button) findViewById(R.id.buttonPlayMettaSutta);
+
+        this.buttonBack.setVisibility(View.VISIBLE);
+        this.buttonHome.setVisibility(View.VISIBLE);
+        this.buttonStart.setVisibility(View.VISIBLE);
+    }
+
     public void tobackDeclomationSutta(View view) {
         this.flagMettaSutta = 0;
         this.flagMangalaSutta = 0;
         this.flagRatanaSutta = 0;
+        this.flagGirimanandaSutta = 0;
+
 
         this.scrollText.setVisibility(View.INVISIBLE);
         this.scrollTextMangala.setVisibility(View.INVISIBLE);
         this.scrollTextRatana.setVisibility(View.INVISIBLE);
+        this.scrollTextGirimananda.setVisibility(View.INVISIBLE);
 
         this.buttonBack.setVisibility(View.INVISIBLE);
         this.buttonHome.setVisibility(View.INVISIBLE);
@@ -224,6 +245,9 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
         }
         else if (this.flagRatanaSutta == 1) {
             result = MediaPlayer.create(this, R.raw.ratana);
+        }
+        else if (this.flagGirimanandaSutta == 1) {
+            result = MediaPlayer.create(this, R.raw.girimanandasutta);
         }
         return result;
     }

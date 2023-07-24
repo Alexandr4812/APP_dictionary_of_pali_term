@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@color/my_main_color"
     tools:context=".ModelActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="-260dp"
-        tools:layout_editor_absoluteY="189dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="-260dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -19,41 +19,22 @@
             android:backgroundTint="@color/my_main_color">
 
             <ImageView
-                android:id="@+id/imageView15"
+                android:id="@+id/imageViewModelShema"
                 android:layout_width="match_parent"
-                android:layout_height="798dp"
-                app:srcCompat="@drawable/test3" />
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="124dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center|fill_vertical"
-                android:layout_marginLeft="4.8dp"
-                android:layout_marginTop="18dp"
-                android:backgroundTint="@color/my_text_bacground_color"
-                android:foregroundTint="#EF9A9A"
-                android:text="Button"
-                android:textColor="@color/black"
-                app:iconTint="#EF9A9A" />
+                app:srcCompat="@drawable/test10" />
 
         </androidx.cardview.widget.CardView>
     </ScrollView>
 
-    <ImageButton
-        android:id="@+id/backButton"
-        android:layout_width="51dp"
-        android:layout_height="39dp"
-        android:background="@color/my_main_color"
-        android:contentDescription="возврат в главное меню"
+    <Button
+        android:id="@+id/buttonModelBack"
+        style="@style/buttonBackNotImageButton"
         android:onClick="toMainAct"
-        android:scaleType="centerInside"
-        android:src="@drawable/button_back"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="UsingOnClickInXml" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

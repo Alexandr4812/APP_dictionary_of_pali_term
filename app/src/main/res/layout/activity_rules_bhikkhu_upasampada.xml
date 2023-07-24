@@ -18,40 +18,6 @@
             android:background="#FFE082"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/backButtonLive0"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="toRulesBhikkhuAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome0"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
             <TextView
                 android:id="@+id/textViewPabaja"
                 style="@style/TextMessageStyle"
@@ -60,40 +26,31 @@
                 android:text="В разработке" />
 
 
-            <ImageButton
-                android:id="@+id/backButtonPabaja"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="toRulesBhikkhuAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/buttonliveToBhikkhu"
+        style="@style/buttonBackNotImageButton"
+        android:onClick="toRulesBhikkhuAct"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonliveHomeFromUpasampada"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UsingOnClickInXml"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonliveHomeFromUpasampada"
+        style="@style/buttonBackHomeNotImageButton"
+        android:onClick="toMainAct"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toEndOf="@id/buttonliveToBhikkhu"
+        tools:ignore="UsingOnClickInXml"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
