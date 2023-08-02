@@ -38,4 +38,9 @@
     <string name="rukovodstvo_dllya_bhikkhu">руководство для бхиккху</string>
     <string name="button_upasampada">упасампада \n Строфы для церемонии становления Бхикху</string>
     <string name="button_sutta_girimananda">гиримананда сутта</string>
+    <string name="button_paritta">паритта</string>
+    <string name="button_mora_paritta">Мора паритта</string>
+    <string name="button_dhammapada">дхаммапада</string>
+    <string name="textViewParnieStrofy">ПАРНЫЕ СТРОФЫ</string>
+    <string name="button1Dhammapada">Ведомы разумом дхаммы, разум управляет ими, разум порождает их. Если человек со злым умыслом говорит или действует, за ним Дуккха следует, как колесо за следом везущего.</string>
 </resources>

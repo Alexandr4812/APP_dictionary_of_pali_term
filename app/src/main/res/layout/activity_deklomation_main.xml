@@ -40,16 +40,28 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/button_puja"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toMorningPuja"
-                android:text="@string/pudja" />
-
-            <Button
                 android:id="@+id/button_sutta"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomationSutta"
                 android:text="@string/sutta" />
+
+            <Button
+                android:id="@+id/button_paritta"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomationParitta"
+                android:text="@string/button_paritta" />
+
+            <Button
+                android:id="@+id/button_dhammapada"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomationDhammapada"
+                android:text="@string/button_dhammapada" />
+
+            <Button
+                android:id="@+id/button_puja"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toMorningPuja"
+                android:text="@string/pudja" />
 
             <Button
                 android:id="@+id/button_over_declamation"

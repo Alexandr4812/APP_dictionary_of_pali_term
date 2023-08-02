@@ -38,6 +38,18 @@ public class DeklomationMainActivity extends AppCompatActivity {
         finish();
     }
 
+    public void toDeclomationParitta(View view){
+        Intent intent = new Intent(this, DeclomationParittaActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void toDeclomationDhammapada(View view){
+        Intent intent = new Intent(this, DeklomationDhammapadaActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     @Override
     public void onBackPressed(){
         Intent intent = new Intent(this, MainActivity.class);

@@ -95,11 +95,18 @@
 – Тогда совершенствуй себя в соответствии с этими тремя правилами. Когда ты будешь совершенствоваться в соответствии с этими правилами, страсть покинет тебя, ненависть покинет тебя, заблуждения покинут тебя. Когда тебя оставят страсть, ненависть и заблуждения, ты не будешь делать ничего плохого, не будешь совершать никакого зла." \n \n \n
 
 </string>
-    <string name="textPatimokhaParajika1" translatable="false"> \n
-        Pàr 1: (Methunadhammasikkhàpadam): \n \n \n
-        <b>Yo pana bhikkhu bhikkhūnaṃ sikkhāsājīvasamāpanno sikkhaṃ</b> \n \n
-        <b>appaccakkhāya dubbalyaṃ anāvikatvā methunaṃ dhammaṃ</b> \n \n
-        <b>paṭiseveyya, antamaso tiracchānagatāya pi; pārājiko hoti, asaṃvāso.</b> \n \n \n</string>
+    <string name="textPatimokhaParajika1"> \n
+        Pàr 1: (Methunadhammasikkhàpadam): \n
+        <i>       Правило о половом акте.</i> \n \n
+        <b>Yo pana bhikkhu bhikkhūnaṃ sikkhāsājīvasamāpanno</b> \n \n
+        <b>sikkhaṃ appaccakkhāya dubbalyaṃ anāvikatvā methunaṃ dhammaṃ paṭiseveyya,</b> \n \n
+        <b>antamaso tiracchānagatāya pi; pārājiko hoti, asaṃvāso.</b>
+        \n \n Это правило возникло в результате трёх разных событий: \n \n
+        Первое событие связанно с историей молодого Судинны Каландаки.
+        Который совершил половой акт со своей бывшей женой. \n \n
+        Второе событие связанно с историей одного монаха, который совершал половой акт с самкой обезьяны. \n \n
+        Третье правило связанно с Ваджийскими монахами, которые совершали половые акты не отказавшись от монашества и не признаваясь в своём проступке. \n \n \n
+</string>
     <string name="buttonRiulesPatimokhaParajika2">2 \n Если какой-либо монах, на манер вора, возьмет то, что ему не было дано, безразлично, в заселенной области или нет, так что правитель, схватив преступника, может подвергнуть его телесному наказанию, заключить в тюрьму или изгнать его – такой монах потерпел поражение и более не состоит в сангхе.</string>
     <string name="textPatimokhaParajika2" translatable="false"> \n
         Pàr 2: (Adinnàdànasikkhàpadam): \n \n \n
@@ -131,5 +138,5 @@
     <string name="buttonaboutParajikaNakazanie">СИСТЕМА НАКАЗАНИЙ, ПРЕДУСМАТРИВАЕМАЯ ПРАВИЛАМИ ПАТИМОККХИ </string>
     <string name="buttonPatimokhaRazdelParajika">РАЗДЕЛ ПАРАДЖИКА</string>
     <string name="buttonParajika1">1 \n Если какой-либо монах, участвующий в обучении и образе жизни монахов, без отказа от обучения, без открытого объявления о своей слабости, совершит половой акт с женщиной или с самкой животного, такой монах потерпел поражение и более не состоит в сангхе.</string>
-    <string name="textViewHintParajika">Нажмите на правило, для варианта на языке пали.</string>
+    <string name="textViewHintParajika">Нажмите на правило, для того, чтобы увидеть правило на языке пали и причины возникновения правила.</string>
 </resources>

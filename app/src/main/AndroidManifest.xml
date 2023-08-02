@@ -13,6 +13,20 @@
         android:theme="@style/Theme.Dictionary_of_pali_term"
         tools:targetApi="31">
         <activity
+            android:name=".DeklomationDhammapadaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".DeclomationParittaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RulesBhikkhuPatimokhaParajikaActivity"
             android:exported="false"
             android:screenOrientation="portrait">

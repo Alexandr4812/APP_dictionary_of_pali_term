@@ -760,14 +760,14 @@ not been given is of the kind [that] on account of it kings, having
 caught the robber, would physically punish or imprison or banish
 [him, saying]: “You are a robber! You are a fool! You are insane! You
 are a thief!,” a bhikkhu taking what has not been given of such a kind,
-is also disqualified, not in communion.</string>
+such a monk has been defeated and is no longer a member of the sangha.</string>
     <string name="buttonRiulesPatimokhaParajika3">3 \n If any bhikkhu should deliberately deprive a human being of life, or
 should seek an assassin for him, or should praise the attractiveness of
 death, or should incite [him] to death [saying]: “Dear man, what [use]
 is this bad, wretched life for you? Death is better than life for you!”
 should he, [having] such-thought-and-mind, [having such-] thoughtand-
 intention, praise in manifold ways the beauty of death or incite
-[him] to death, he also is disqualified, not in communion.</string>
+[him] to death, such a monk has been defeated and is no longer a member of the sangha.</string>
     <string name="buttonRiulesPatimokhaParajika4">4 \n If any bhikkhu, [though] not directly knowing [it], should claim a
 superhuman state pertaining to himself, [a state of] knowing and
 seeing [that is] suitable for the noble [ones], [saying]: “Thus I know!
@@ -776,8 +776,8 @@ interrogated or not being interrogated, having committed [the
 offence], desiring purification, should say so: “Friends, [although] not
 knowing [it,] I spoke thus [saying]: ‘I know,’ not seeing [it, I spoke,
 saying:] ‘I see.’ I bluffed vainly [and] falsely,” except [when said] in
-overestimation, he also is disqualified, not in communion.</string>
-    <string name="textViewHintParajika">Click on the rule to see the rule in Pali.</string>
+overestimation, such a monk has been defeated and is no longer a member of the sangha.</string>
+    <string name="textViewHintParajika">Click on the rule to see the rule in the Pali language and the reasons for the rule.</string>
     <string name="button_sutta_girimananda">girimananda sutta</string>
     <string name="DeklomaciyaSuttaGirimananda">
         \n  <b>GIRIMANANDA SUTTA</b> \n \n
@@ -821,5 +821,87 @@ overestimation, he also is disqualified, not in communion.</string>
         <b>Atha kho āyasmā ānando bhagavato santike imā dasa saññā uggahetvā yenāyasmā girimānando tenupasaṅkami; upasaṅkamitvā āyasmato girimānandassa imā dasa saññā abhāsi. Atha kho āyasmato girimānandassa dasa saññā sutvā so ābādho ṭhānaso paṭippassambhi. Vuṭṭhahi cāyasmā girimānando tamhā ābādhā. Tathā pahīno ca panāyasmato girimānandassa so ābādho ahosī ti.</b> \n \n
         <i>Then Ven. Ananda, having learned these ten perceptions in the Blessed Ones presence, went to Ven. Girimananda and told them to him. As Ven. Girimananda heard these ten perceptions, his disease was allayed. And Ven. Girimananda recovered from his disease. That was how Ven. Girimanandas disease was abandoned.</i> \n \n
     </string>
+    <string name="textPatimokhaParajika1"> \n
+        Pàr 1: (Methunadhammasikkhàpadam): \n
+        <i>    The rule of sexual intercourse.</i> \n \n
+        <b>Yo pana bhikkhu bhikkhūnaṃ sikkhāsājīvasamāpanno</b> \n \n
+        <b>sikkhaṃ appaccakkhāya dubbalyaṃ anāvikatvā methunaṃ dhammaṃ paṭiseveyya,</b> \n \n
+        <b>antamaso tiracchānagatāya pi; pārājiko hoti, asaṃvāso.</b>
+        \n\n This rule arose as a result of three different events: \n \n
+        The first event is connected with the story of the young Sudinna Kalandaki.
+        Who had sexual intercourse with his ex-wife. \n \n
+        The second event is connected with the story of a monk who performed sexual intercourse with a female monkey. \n \n
+        The third rule is related to Buddhist monks who performed sexual acts without renouncing monasticism and without confessing their offense. \n \n \n</string>
+    <string name="button_paritta">paritta</string>
+    <string name="button_mora_paritta">mora paritta</string>
+    <string name="button_dhammapada">dhammapada</string>
+    <string name="mora_paritta">
+        \n  <b>MORA PARITTA</b> \n \n
+        <b>Udet`ayañ-cakkhumā eka-rājā</b> \n \n
+        <i>The One King, rising, with Vision,</i> \n \n
+        <b>Harissa-vaṇṇo paṭhavippabhāso</b> \n \n
+        <i>golden-hued, illuminating the Earth: I pay homage to you,</i> \n \n
+        <b>Taṃ taṃ namassāmi harissa-vaṇṇaṃ paṭhavippabhāsaṃ</b> \n \n
+        <i>golden-hued, illuminating the Earth.</i> \n \n
+        <b>Tay`ajja guttā viharemu divasaṃ</b> \n \n
+        <i>Guarded today by you, may I live through the day.</i> \n \n
+        <b>Ye brāhmaṇā vedagu sabba-dhamme</b> \n \n
+        <i>Those Brahmans who are knowers of all truths,</i> \n \n
+        <b>Te me namo te ca maṃ pālayantu</b> \n \n
+        <i>I pay homage to them; may they keep watch over me.</i> \n \n
+        <b>Nam`atthu Buddhānaṃ nam`atthu bodhiyā</b> \n \n
+        <i>Homage to the Awakened Ones. Homage to Awakening.</i> \n \n
+        <b>Namo vimuttānaṃ namo vimuttiyā</b> \n \n
+        <i>Homage to the Released Ones. Homage to Release.</i> \n \n
+        <b>Imaṃ so parittaṃ katvā</b> \n \n
+        <i>Having made this protection,</i> \n \n
+        <b>Moro carati esanā`ti</b> \n \n
+        <i>the peacock sets out in search for food.</i> \n \n \n
+        <b>Apet’ayañ-cakkhumā eka-rājā</b> \n \n
+        <i>The One King, setting, with Vision,</i> \n \n
+        <b>Harissa-vaṇṇo paṭhavippabhāso</b> \n \n
+        <i>golden-hued, illuminating the Earth: I pay homage to you,</i> \n \n
+        <b>Taṃ taṃ namassāmi harissa-vaṇṇaṃ paṭhavippabhāsaṃ</b> \n \n
+        <i>golden-hued, illuminating the Earth.</i> \n \n
+        <b>Tay`ajja guttā viharemu rattiṃ</b> \n \n
+        <i>Guarded today by you, may I live through the night.</i> \n \n
+        <b>Ye brāhmaṇā vedagu sabba-dhamme</b> \n \n
+        <i>Those Brahmans who are knowers of all truths,</i> \n \n
+        <b>Te me namo te ca maṃ pālayantu</b> \n \n
+        <i>I pay homage to them; may they keep watch over me.</i> \n \n
+        <b>Nam’atthu Buddhānaṃ nam`atthu bodhiyā</b> \n \n
+        <i>Homage to the Awakened Ones. Homage to Awakening.</i> \n \n
+        <b>Namo vimuttānaṃ namo vimuttiyā</b> \n \n
+        <i>Homage to the Released Ones. Homage to Release.</i> \n \n
+        <b>Imaṃ so parittaṃ katvā</b> \n \n
+        <i>Having made this protection,</i> \n \n
+        <b>Moro vāsam-akappayī’ti</b> \n \n
+        <i>the peacock arranges his nest.</i> \n \n \n \n
+    </string>
+    <string name="textViewParnieStrofy">PAIRED STANZAS</string>
+    <string name="button1Dhammapada">Led by the mind of the dhamma, the mind governs them, the mind generates them. If a person with malice speaks or acts, Dukkha follows him, like a wheel following the trail of a driver.</string>
+    <string name="textViev1Dhammapada">
+       \n CHAKKUPALATTHERA VATTHU
+        <b>\n \n Manopubbaṅgamā dhammā \n \n</b>
+        <i>Led by the mind of the dhamma, \n \n</i>
+        <b>Manoseṭṭhā manomayā \n \n</b>
+        <i>the mind governs them, the mind generates them. \n \n</i>
+        <b>Manasā ce paduṭṭhena \n \n</b>
+        <i>If a person with malice \n \n</i>
+        <b>Bhāsati vā karoti vā \n \n</b>
+        <i>speaks or acts, \n \n</i>
+        <b>Tato naṃ dukkham anveti \n \n</b>
+        <i>Dukkha follows him, \n \n</i>
+        <b>Cakkaṃ va vahato padaṃ \n \n</b>
+        <i>like a wheel following the trail of a driver. \n \n \n</i>
+        Related story: The Elder Cakkhupāla \n \n
+
+Once there was a monk called Cakkhupāla who was determined not to lie down for the entire Rains Retreat. He developed an eye infection for which he need to lie down to take the medicine. But he refused to lie down, so the disease got worse and he became blind although he attained Arahantship, from his training. \n \n
+
+As he was pacing up and down, he unintentionally killed many insects. The visiting monks noticed the quite a number of  insects were killed on the elder’s walking meditation path and told they told Buddha. about it.  The Buddha explained that the monk had killed them unintentionally and that he was an Arahant. (Intentional volition constitutes kamma whereas unintentional/involuntary/unconscious volition does not constitute kamma) \n \n
+
+The monks then asked Buddha why he became blind? Buddha narrated how in a previous life as a doctor, Cakkhupala treated a poor woman’s eyes. She promised to become his servant if her eyesight came back but did not kept her promise when she regained her eyesight. So the doctor retaliated by giving her another medicine, which blinded her. Due to that evil action Cakkhupāla became blind. \n \n \n \n
+    </string>
+
 
 </resources>
