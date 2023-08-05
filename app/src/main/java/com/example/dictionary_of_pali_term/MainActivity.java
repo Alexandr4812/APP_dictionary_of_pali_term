@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toSuttas(View view){
-        Intent intent = new Intent(this, ModelActivity.class);
+        Intent intent = new Intent(this, SuttasActivity.class);
         startActivity(intent);
         finish();
     }

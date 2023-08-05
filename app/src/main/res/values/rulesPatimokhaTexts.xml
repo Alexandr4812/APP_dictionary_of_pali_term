@@ -108,8 +108,9 @@
         Третье правило связанно с Ваджийскими монахами, которые совершали половые акты не отказавшись от монашества и не признаваясь в своём проступке. \n \n \n
 </string>
     <string name="buttonRiulesPatimokhaParajika2">2 \n Если какой-либо монах, на манер вора, возьмет то, что ему не было дано, безразлично, в заселенной области или нет, так что правитель, схватив преступника, может подвергнуть его телесному наказанию, заключить в тюрьму или изгнать его – такой монах потерпел поражение и более не состоит в сангхе.</string>
-    <string name="textPatimokhaParajika2" translatable="false"> \n
-        Pàr 2: (Adinnàdànasikkhàpadam): \n \n \n
+    <string name="textPatimokhaParajika2"> \n
+        Pàr 2: (Adinnàdànasikkhàpadam): \n
+        <i>       Правило о воровстве.</i> \n \n
         <b>Yo pana bhikkhu gāmā vā araññā vā \n \n adinnaṃ theyyasaṅkhātaṃ
         ādiyeyya, yathārūpe adinnādāne \n \n rājāno coraṃ gahetvā haneyyuṃ vā
         bandheyyuṃ vā pabbājeyyuṃ vā: \n \n Coro’si, bālo’si, mūlho’si, theno’sī ti,
