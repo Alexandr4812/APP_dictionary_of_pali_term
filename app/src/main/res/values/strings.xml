@@ -6,7 +6,7 @@
     <string name="title_notifications" translatable="false">Notifications</string>
     <string name="mainButtonLiveBuddha">Жизнеописание Будды</string>
     <string name="mainButtonStofiDlyaDeclomacii">Строфы для декламаций</string>
-    <string name="mainButtonShortSuttas">Модель практики буддийского \n пути</string>
+    <string name="mainButtonShortSuttas">Палийский Канон</string>
     <string name="mainButtonMonksRules">Монашеские правила и \n церемонии</string>
     <string name="todo" translatable="false">TODO</string>
     <string name="namerenie_sumedhi">1. Намерение Сумедхи</string>
@@ -43,4 +43,5 @@
     <string name="button_dhammapada">дхаммапада</string>
     <string name="textViewParnieStrofy">ПАРНЫЕ СТРОФЫ</string>
     <string name="button1Dhammapada">Ведомы разумом дхаммы, разум управляет ими, разум порождает их. Если человек со злым умыслом говорит или действует, за ним Дуккха следует, как колесо за следом везущего.</string>
+    <string name="buttonDigha">Дигха Никая</string>
 </resources>

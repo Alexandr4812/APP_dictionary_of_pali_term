@@ -1,0 +1,63 @@
+package com.example.dictionary_of_pali_term;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.Button;
+
+import java.io.File;
+
+public class SuttasDighaActivity extends AppCompatActivity {
+    //"file:///android_asset/canon/Teaching/Canon/Suttanta/digha.html"
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_suttas_digha);
+
+        WebView webView = findViewById(R.id.webView);
+        webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
+
+// Загрузка первой страницы
+        webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/digha.html");
+
+// Обработка переходов между страницами через ссылки
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                // Позволяет открывать локальные ссылки внутри WebView
+                if (url.startsWith("file:///android_asset/")) {
+                    view.loadUrl(url);
+                    return true;
+                }
+                // Для других ссылок открывается стандартный браузер
+                return false;
+            }
+        });
+    }
+
+    public void toMainAct(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void toSuttasAct(View view){
+        Intent intent = new Intent(this, SuttasActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(this, SuttasActivity.class);
+        startActivity(intent);
+        finish();
+    }
+}
