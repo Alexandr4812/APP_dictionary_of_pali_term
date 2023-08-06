@@ -143,6 +143,12 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
         finish();
     }
 
+    public void toMainActextra(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void toDeclomation(View view){
         Intent intent = new Intent(this, DeklomationMainActivity.class);
         startActivity(intent);
