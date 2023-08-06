@@ -886,7 +886,8 @@ overestimation, such a monk has been defeated and is no longer a member of the s
         <i>the peacock arranges his nest.</i> \n \n \n \n
     </string>
     <string name="textViewParnieStrofy">PAIRED STANZAS</string>
-    <string name="button1Dhammapada">Led by the mind of the dhamma, the mind governs them, the mind generates them. If a person with malice speaks or acts, Dukkha follows him, like a wheel following the trail of a driver.</string>
+    <string name="button1Dhammapada">1 \n Led by the mind of the dhamma, the mind governs them, the mind generates them. If a person with malice speaks or acts, Dukkha follows him, like a wheel following the trail of a driver.</string>
+    <string name="button2Dhammapada">2 \n Guided by the mind of the dhamma, the mind controls them, the mind generates them. If a person with a purified mind speaks or acts, Happiness follows him like a persistent shadow.</string>
     <string name="textViev1Dhammapada">
        \n CHAKKUPALATTHERA VATTHU
         <b>\n \n Manopubbaṅgamā dhammā \n \n</b>

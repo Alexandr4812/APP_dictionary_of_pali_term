@@ -79,6 +79,13 @@
                 android:text="@string/button1Dhammapada"
                 tools:ignore="UsingOnClickInXml" />
 
+            <Button
+                android:id="@+id/buttonDhammapada2"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toTextabout1Dhammapada"
+                android:text="@string/button2Dhammapada"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
     </ScrollView>
 
