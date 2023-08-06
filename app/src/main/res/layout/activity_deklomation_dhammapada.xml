@@ -82,7 +82,7 @@
             <Button
                 android:id="@+id/buttonDhammapada2"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toTextabout1Dhammapada"
+                android:onClick="toTextabout2Dhammapada"
                 android:text="@string/button2Dhammapada"
                 tools:ignore="UsingOnClickInXml" />
 
@@ -108,11 +108,38 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewAbout1Dhammapada1"
+                android:id="@+id/textViewAbout1Dhammapada"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/textViev1Dhammapada" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/dhammapadaScrollTextAbout2Dhammapada"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewAbout2Dhammapada"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/textViev2Dhammapada" />
         </LinearLayout>
     </ScrollView>
 

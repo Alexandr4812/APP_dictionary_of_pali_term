@@ -48,9 +48,18 @@ public class DeklomationDhammapadaActivity extends AppCompatActivity {
         buttonLiveToDhammapada.setVisibility(View.VISIBLE);
     }
 
+    public void toTextabout2Dhammapada(View view) {
+        ScrollView scrollText = findViewById(R.id.dhammapadaScrollTextAbout2Dhammapada);
+        scrollText.setVisibility(view.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+        buttonLiveToDhammapada.setVisibility(View.VISIBLE);
+    }
+
     public void tobackDhammapada(View view) {
-        ScrollView scrollTextDhammapada = findViewById(R.id.dhammapadaScrollTextAbout1Dhammapada);
-        scrollTextDhammapada.setVisibility(view.INVISIBLE);
+        ScrollView scrollText1Dhammapada = findViewById(R.id.dhammapadaScrollTextAbout1Dhammapada);
+        scrollText1Dhammapada.setVisibility(view.INVISIBLE);
+        ScrollView scrollText2Dhammapada = findViewById(R.id.dhammapadaScrollTextAbout2Dhammapada);
+        scrollText2Dhammapada.setVisibility(view.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
         buttonLiveToDhammapada.setVisibility(View.INVISIBLE);
     }
