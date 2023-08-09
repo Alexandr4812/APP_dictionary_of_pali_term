@@ -23,23 +23,22 @@ public class SuttasDighaActivity extends AppCompatActivity {
 
         WebView webView = findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
+        webView.clearCache(true);
 
 // Загрузка первой страницы
         webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/digha.html");
-
 // Обработка переходов между страницами через ссылки
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                // Позволяет открывать локальные ссылки внутри WebView
                 if (url.startsWith("file:///android_asset/")) {
                     view.loadUrl(url);
                     return true;
                 }
-                // Для других ссылок открывается стандартный браузер
                 return false;
             }
         });
+
     }
 
     public void toMainAct(View view){
