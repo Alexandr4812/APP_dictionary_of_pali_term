@@ -41,6 +41,20 @@
             tools:ignore="UsingOnClickInXml"
             tools:visibility="visible" />
 
+        <Button
+            android:id="@+id/buttonliveToBeforePage"
+            style="@style/buttonBackNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="0dp"
+            android:backgroundTint="#FFCC80"
+            android:foreground="?attr/actionModeCloseDrawable"
+            android:onClick="toSuttasAct"
+            android:visibility="visible"
+            tools:ignore="UsingOnClickInXml"
+            tools:visibility="visible" />
+
 
 
     </LinearLayout>

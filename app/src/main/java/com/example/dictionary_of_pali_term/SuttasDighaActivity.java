@@ -16,6 +16,10 @@ import java.io.File;
 
 public class SuttasDighaActivity extends AppCompatActivity {
     //"file:///android_asset/canon/Teaching/Canon/Suttanta/digha.html"
+
+    private Button buttonBack;
+    private WebView webView;
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -27,7 +31,8 @@ public class SuttasDighaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_digha);
 
-        WebView webView = findViewById(R.id.webView);
+        buttonBack = findViewById(R.id.buttonliveToBeforePage);
+        webView = findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
         webView.clearCache(true);
 
@@ -45,13 +50,19 @@ public class SuttasDighaActivity extends AppCompatActivity {
             }
         });
 
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goBack();
+            }
+        });
+
     }
 
-    @Override
-    protected void onResume() {
-        WebView webView = findViewById(R.id.webView);
-        super.onResume();
-        webView.reload();
+    private void goBack() {
+        if (webView.canGoBack()) {
+            webView.goBack();
+        }
     }
 
     @Override
