@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.WebView;
 
 public class SuttasActivity extends AppCompatActivity {
@@ -15,9 +16,11 @@ public class SuttasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas);
 
-       // WebView webView = findViewById(R.id.suttasVebViev);
-      //  webView.getSettings().setJavaScriptEnabled(true); // Включаем поддержку JavaScript
-       // webView.loadUrl("file:///android_asset/dighaNikaya/theravada.ru/Teaching/Canon/Suttanta/digha.html");
+        // Убрать строку состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // Убрать панель навигации (если нужно)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
     }
     public void toMainAct(View view){
         Intent intent = new Intent(this, MainActivity.class);

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ScrollView;
 
 public class RulesSamaneraSekhiyaActivity extends AppCompatActivity {
@@ -13,6 +14,11 @@ public class RulesSamaneraSekhiyaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_samanera_sekhiya);
+
+        // Убрать строку состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        // Убрать панель навигации (если нужно)
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
     }
 
     public void toRulesSamaneraAct(View view){
