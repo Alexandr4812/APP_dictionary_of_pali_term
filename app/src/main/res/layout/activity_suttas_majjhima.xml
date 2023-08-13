@@ -2,14 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/vebView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".SuttasDighaActivity">
+    tools:context=".SuttasMajjhimaActivity">
 
     <WebView
-        android:id="@+id/webView"
+        android:id="@+id/webViewMajjhima"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +23,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/buttonDighaHome"
+            android:id="@+id/buttonMajjhimaHome"
             style="@style/buttonBackHomeNotImageButton"
             android:layout_gravity="bottom|center"
             android:layout_marginRight="3dp"
@@ -35,7 +34,7 @@
             tools:visibility="visible" />
 
         <Button
-            android:id="@+id/buttonliveToDigha"
+            android:id="@+id/buttonliveToMajjhima"
             style="@style/buttonBackNotImageButton"
             android:layout_gravity="bottom|center"
             android:layout_marginLeft="3dp"
@@ -46,7 +45,7 @@
             tools:visibility="visible" />
 
         <Button
-            android:id="@+id/buttonliveToBeforePage"
+            android:id="@+id/buttonliveToBeforePageMajjhima"
             style="@style/buttonBackNotImageButton"
             android:layout_gravity="bottom|center"
             android:layout_marginLeft="50dp"
@@ -62,4 +61,5 @@
 
 
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

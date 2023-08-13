@@ -43,4 +43,5 @@
     <string name="button_dhammapada">дхаммапада</string>
     <string name="textViewParnieStrofy">ПАРНЫЕ СТРОФЫ</string>
     <string name="buttonDigha">Дигха Никая</string>
+    <string name="buttonSuttasForMajhima">мадджхима никая</string>
 </resources>

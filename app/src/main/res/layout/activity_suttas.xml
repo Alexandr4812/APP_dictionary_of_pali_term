@@ -49,6 +49,15 @@
                 android:onClick="toSuttasDighaAct"
                 tools:ignore="UsingOnClickInXml" />
 
+            <Button
+                android:id="@+id/button_suttas_for_majhimaNikaya"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonSuttasForMajhima"
+                android:onClick="toSuttasMajjhimaAct"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
 
 
