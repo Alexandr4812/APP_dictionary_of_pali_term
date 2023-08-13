@@ -122,14 +122,20 @@
 Они украли ценные вещи у красильщиков в дикой местности. \n \n
 </string>
     <string name="buttonRiulesPatimokhaParajika3">3 \n Если какой-либо монах намеренно лишит жизни человеческое существо, или наймет убийцу для него, или будет восхвалять преимущества смерти, или будет уговаривать его умереть (примерно таким образом): "Уважаемый, какая польза вам от этой жалкой, несчастной жизни? Смерть была бы лучше для вас, чем жизнь", - тогда такой монах потерпел поражение и более не состоит в сангхе.</string>
-    <string name="textPatimokhaParajika3" translatable="false"> \n
-        Pàr 3: (Manussaviggahasikkhàpadam): \n \n \n
+    <string name="textPatimokhaParajika3"> \n
+        Pàr 3: (Manussaviggahasikkhàpadam): \n
+        <i>       Правило об умышленном убийстве человека.</i> \n \n
         <b>Yo pana bhikkhu sañcicca manussaviggahaṃ jīvitā voropeyya, \n \n
             satthahārakaṃ vāssa pariyeseyya, maraṇavaṇṇaṃ vā saṃvaṇṇeyya, \n \n
             maraṇāya vā samādapeyya: Ambho purisa, kiṃ tuyh’iminā pāpakena \n \n
             dujjīvitena? Matan-te jīvitā seyyo ti, iti cittamano cittasaṅkappo \n \n
             anekapariyāyena maraṇavaṇṇaṃ vā saṃvaṇṇeyya, maraṇāya vā \n \n
-            samādapeyya; ayam-pi pārājiko hoti, asaṃvāso.</b></string>
+            samādapeyya; ayam-pi pārājiko hoti, asaṃvāso.</b>
+    \n \n Это правило возникло в результате двух  разных событий: \n \n
+Первое событие связанно с историей когда монахи после практики медитации на непривлекательность тела, покончили жизнь самоубийством заплатив человеку Мегаландике чтобы он убил их. \n \n
+Второе событие связанно с монахами из группы шести.
+Они уговорили больного мужа одной мирянки покончить жизнь самоубийством, чтобы он перестал мучиться от болезни. \n \n
+</string>
     <string name="buttonRiulesPatimokhaParajika4">4. \n Если какой-либо монах, не обладающий истинным знанием, хвастается достижением сверхнормальных человеческих состояний, говоря: "Так я знаю, так я вижу", так что, несмотря на то, будет или нет он проверен позднее, – такой монах потерпел поражение и более не состоит в сангхе.</string>
     <string name="textPatimokhaParajika4" translatable="false"> \n
         Pàr 4: (Uttarimanussadhammasikkhàpadam): \n \n \n
