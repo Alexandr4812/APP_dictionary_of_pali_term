@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="hintText">Click on the verse to see a detailed description.</string>
+    <string name="button3Dhammapada">3 \n He abused me, he beat me, he defeated me, he robbed me, in those who harbour such thoughts hatred will never cease.</string>
+    <string name="button4Dhammapada">4 \n He abused me, he beat me, he defeated me, he robbed me, in those who do not harbour such thoughts hatred will cease.</string>
+    <string name="textViev3Dhammapada">
+        \n TISSATHERA VATTHU \n \n
+        <b> Akkocchi maṃ avadhi maṃ, \n \n</b>
+        <i> He abused me, he beat me, \n \n</i>
+        <b> ajini maṃ ahāsi me; \n \n</b>
+        <i> he defeated me, he robbed me,\n \n</i>
+        <b> Ye ca taṃ upanayhanti, \n \n</b>
+        <i> those who harbour such thoughts \n \n</i>
+        <b> veraṃ tesaṃ na sammati. \n \n</b>
+        <i> hatred will never cease. \n \n \n</i>
+            <b>The Parable of thera Tissa</b>\n\n
+During his stay at the Jetavana Monastery in Savatti, the Buddha recited these verses (3 and 4) in connection with the story of thera Tissa. \n \n
+Tissa, the son of Buddha`s maternal aunt, lived with Buddha at one time. He became a monk only in his old age, but he pretended to be a senior monk and was very pleased when visiting monks asked his permission to do him a favor. On the other hand, he did not fulfill the duties assigned to junior monks. In addition, he often quarreled with the younger monks. If someone reproached him for such behavior, he complained to the Buddha, crying, dissatisfied and upset. Others began to behave in a similar way in the presence of the Buddha. The Buddha instructed them not to harbor hostile thoughts, since hatred can be defeated only if one does not harbor hatred. \n
+Then the Buddha recited these verses. \n \n \n \n \n \n \n \n \n</string>
+    <string name="textViev4Dhammapada">
+        \n TISSATHERA VATTHU \n \n
+        <b> Akkocchi maṃ avadhi maṃ, \n \n</b>
+        <i> He abused me, he beat me, \n \n</i>
+        <b> ajini maṃ ahāsi me; \n \n</b>
+        <i> he defeated me, he robbed me, \n \n</i>
+        <b> Ye ca taṃ upanayhanti, \n \n</b>
+        <i> those who harbour such thoughts \n \n</i>
+        <b> veraṃ tesūpasammati. \n \n</b>
+        <i> hatred will cease. \n \n \n </i>
+            <b>The Parable of thera Tissa</b>\n\n
+During his stay at the Jetavana Monastery in Savatti, the Buddha recited these verses (3 and 4) in connection with the story of thera Tissa. \n \n
+Tissa, the son of Buddha`s maternal aunt, lived with Buddha at one time. He became a monk only in his old age, but he pretended to be a senior monk and was very pleased when visiting monks asked his permission to do him a favor. On the other hand, he did not fulfill the duties assigned to junior monks. In addition, he often quarreled with the younger monks. If someone reproached him for such behavior, he complained to the Buddha, crying, dissatisfied and upset. Others began to behave in a similar way in the presence of the Buddha. The Buddha instructed them not to harbor hostile thoughts, since hatred can be defeated only if one does not harbor hatred. \n
+Then the Buddha recited these verses. \n \n \n \n \n \n \n \n \n</string>
+
 </resources>
