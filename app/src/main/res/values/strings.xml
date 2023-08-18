@@ -44,4 +44,7 @@
     <string name="textViewParnieStrofy">ПАРНЫЕ СТРОФЫ</string>
     <string name="buttonDigha">Дигха Никая</string>
     <string name="buttonSuttasForMajhima">мадджхима никая</string>
+    <string name="buttonSuttasForSanyutta">саньютта никая</string>
+    <string name="buttonSuttasForAnguttara">ангуттара никая</string>
+    <string name="buttonSuttasForKuddaka">куддака никая</string>
 </resources>

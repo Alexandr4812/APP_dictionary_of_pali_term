@@ -40,6 +40,24 @@ public class SuttasActivity extends AppCompatActivity {
         finish();
     }
 
+    public void toSuttasSanyuttaAct(View view){
+        Intent intent = new Intent(this, SuttasSanyuttaActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void toSuttasAnguttaraAct(View view){
+        Intent intent = new Intent(this, SuttasAnguttaraActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void toSuttasKuddakaAct(View view){
+        Intent intent = new Intent(this, SuttasKuddakaActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     @Override
     public void onBackPressed(){
         Intent intent = new Intent(this, MainActivity.class);

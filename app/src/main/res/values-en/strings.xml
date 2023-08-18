@@ -947,6 +947,9 @@ The first event is connected with the story when monks, after practicing meditat
 The second event is related to the monks from the group of six. \n
 They persuaded the sick husband of a laywoman to commit suicide so that he would stop suffering from the disease. \n \n
 </string>
+    <string name="buttonSuttasForSanyutta">samyutta nikaya</string>
+    <string name="buttonSuttasForAnguttara">anguttara nikaya</string>
+    <string name="buttonSuttasForKuddaka">khuddaka nikaya</string>
 
 
 </resources>

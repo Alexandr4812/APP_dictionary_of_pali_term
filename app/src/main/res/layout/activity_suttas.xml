@@ -58,6 +58,33 @@
                 android:onClick="toSuttasMajjhimaAct"
                 tools:ignore="UsingOnClickInXml" />
 
+            <Button
+                android:id="@+id/button_suttas_for_sanyuttaNikaya"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonSuttasForSanyutta"
+                android:onClick="toSuttasSanyuttaAct"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_suttas_for_anguttaraNikaya"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonSuttasForAnguttara"
+                android:onClick="toSuttasAnguttaraAct"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_suttas_for_kuddakaNikaya"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonSuttasForKuddaka"
+                android:onClick="toSuttasKuddakaAct"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
 
 
