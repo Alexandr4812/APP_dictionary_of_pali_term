@@ -207,8 +207,8 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
     }
 
     public void toDeclomaciyaSuttaGirimananda(View view) {
-        this.flagGirimanandaSutta = 1;
-        mediaPlayer = changeSong();
+        //this.flagGirimanandaSutta = 1;
+        //mediaPlayer = changeSong();
 
         this.scrollTextGirimananda.setVisibility(View.VISIBLE);
 
@@ -218,14 +218,14 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
 
         this.buttonBack.setVisibility(View.VISIBLE);
         this.buttonHome.setVisibility(View.VISIBLE);
-        this.buttonStart.setVisibility(View.VISIBLE);
+        //this.buttonStart.setVisibility(View.VISIBLE);
     }
 
     public void tobackDeclomationSutta(View view) {
         this.flagMettaSutta = 0;
         this.flagMangalaSutta = 0;
         this.flagRatanaSutta = 0;
-        this.flagGirimanandaSutta = 0;
+        //this.flagGirimanandaSutta = 0;
 
 
         this.scrollText.setVisibility(View.INVISIBLE);
@@ -258,9 +258,9 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
         else if (this.flagRatanaSutta == 1) {
             result = MediaPlayer.create(this, R.raw.ratana);
         }
-        else if (this.flagGirimanandaSutta == 1) {
-            result = MediaPlayer.create(this, R.raw.girimanandasutta);
-        }
+//        else if (this.flagGirimanandaSutta == 1) {
+//            result = MediaPlayer.create(this, R.raw.girimanandasutta);
+//        }
         return result;
     }
 

@@ -51,14 +51,14 @@
                 android:text="@string/button_sutta_ratana"
                 tools:ignore="UsingOnClickInXml" />
 
-            <Button
-                android:id="@+id/button_puja_sutta_girimananda"
-                style="@style/button_activity_declomation_main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="toDeclomaciyaSuttaGirimananda"
-                android:text="@string/button_sutta_girimananda"
-                tools:ignore="UsingOnClickInXml" />
+<!--            <Button-->
+<!--                android:id="@+id/button_puja_sutta_girimananda"-->
+<!--                style="@style/button_activity_declomation_main"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:onClick="toDeclomaciyaSuttaGirimananda"-->
+<!--                android:text="@string/button_sutta_girimananda"-->
+<!--                tools:ignore="UsingOnClickInXml" />-->
 
         </LinearLayout>
 
