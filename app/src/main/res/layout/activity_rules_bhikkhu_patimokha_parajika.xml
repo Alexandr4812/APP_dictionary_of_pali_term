@@ -191,7 +191,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
+        tools:visibility="visible">
 
         <LinearLayout
             android:id="@+id/linearLayoutScrollPatimokhaParajika4"
@@ -204,7 +204,7 @@
                 android:id="@+id/textViewPatimokhaParajika4"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
-                android:layout_height="1000dp"
+                android:layout_height="wrap_content"
                 android:text="@string/textPatimokhaParajika4" />
         </LinearLayout>
     </ScrollView>

@@ -947,6 +947,53 @@ The first event is connected with the story when monks, after practicing meditat
 The second event is related to the monks from the group of six. \n
 They persuaded the sick husband of a laywoman to commit suicide so that he would stop suffering from the disease. \n \n
 </string>
+    <string name="textPatimokhaParajika4"> \n
+        Pàr 4: (Uttarimanussadhammasikkhàpadam): \n
+        <i>Правило о сверхчеловеческих способностях</i> \n
+        <i>the rule about superhuman abilities.</i> \n \n
+        <b>Yo pana bhikkhu anabhijānaṃ</b> \n
+        <i>если какой-либо монах не знающий напрямую \n
+            if any monk does not know directly</i> \n \n
+        <b>uttarimanussadhammaṃ</b> \n
+        <i>сверхспособности \n
+            superhuman abilities</i> \n \n
+        <b>attūpanāyikaṃ alamariyañāṇadassanaṃ</b> \n
+        <i>свои со знанием подобно благородному \n
+            their own, with knowledge like a noble</i> \n \n
+        <b>samudācareyya:</b> \n
+        <i>утверждает \n
+            declares</i> \n \n
+        <b>Iti jānāmi, iti passāmī ti!</b> \n
+        <i>так я знаю, так я вижу \n
+            So I know, so I see</i> \n \n
+        <b>Tato aparena samayena</b> \n
+        <i>тогда в другое время \n
+            then at another time</i> \n \n
+        <b>samanuggāhiyamāno vā</b> \n
+        <i>допросят его \n
+            they`ll interrogate him</i> \n \n
+        <b>asamanuggāhiyamāno vā</b> \n
+        <i>не допросят его \n
+            they won`t interrogate him</i> \n \n
+        <b>āpanno visuddhāpekkho evaṃ vadeyya:</b> \n
+        <i>(а он ) ищущий очищения таким образом мог бы говорить: \n
+            and he, seeking purification, could say:</i> \n \n
+        <b>Ajānam-evāhaṃ āvuso avacaṃ: jānāmi.</b> \n
+        <i>я сказал что знаю друзья, на самом деле не знаю \ n
+            I said I know friends, I don`t really know</i> \n \n
+        <b>Apassaṃ: passāmi.</b> \n
+        <i>Вижу, но не вижу. \n
+            I see it, but I don`t see it.</i> \n \n
+        <b>Tucchaṃ musā vilapin-ti. Aññatra adhimānā,</b>
+        <i>напрасно я сказал глупости. Переоценил себя, \n
+        I vainly have said stupid things. Overestimated himself,</i> \n \n
+        <b>ayam-pi pārājiko hoti, asaṃvāso.</b> \n
+        <i>Такой монах потерпел поражение и более не состоит а Сангкхе. \n
+            Such a monk has been defeated and is no longer a member of the Sangkha.</i> \n \n
+        \n \n This rule arose as a result of two different events: \n \n
+The first event is connected with monks who decided to praise each other as if they have superhuman abilities. They did this so that during a bad harvest, the laymans would give them more food. \n \n
+The second event is connected with monks who overestimated their abilities and said that they had achieved what they had not actually achieved. When these monks realized that they were mistaken, they declared it. \n \n \n
+</string>
     <string name="buttonSuttasForSanyutta">samyutta nikaya</string>
     <string name="buttonSuttasForAnguttara">anguttara nikaya</string>
     <string name="buttonSuttasForKuddaka">khuddaka nikaya</string>
