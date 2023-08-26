@@ -47,4 +47,5 @@
     <string name="buttonSuttasForSanyutta">саньютта никая</string>
     <string name="buttonSuttasForAnguttara">ангуттара никая</string>
     <string name="buttonSuttasForKuddaka">куддака никая</string>
+    <string name="buttonTextSuttasToByCategory">сутты по темам</string>
 </resources>

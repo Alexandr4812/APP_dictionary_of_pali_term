@@ -3,6 +3,7 @@
     <string name="hintText">Click on the verse to see a detailed description.</string>
     <string name="button3Dhammapada">3 \n He abused me, he beat me, he defeated me, he robbed me, in those who harbour such thoughts hatred will never cease.</string>
     <string name="button4Dhammapada">4 \n He abused me, he beat me, he defeated me, he robbed me, in those who do not harbour such thoughts hatred will cease.</string>
+    <string name="button5Dhammapada">5 \n Hatred is never appeased by hatred in this world. Only the absence of hatred (non-hatred) calms hatred. This is an eternal law.</string>
     <string name="textViev3Dhammapada">
         \n TISSATHERA VATTHU \n \n
         <b> Akkocchi maṃ avadhi maṃ, \n \n</b>
@@ -31,5 +32,21 @@ Then the Buddha recited these verses. \n \n \n \n \n \n \n \n \n</string>
 During his stay at the Jetavana Monastery in Savatti, the Buddha recited these verses (3 and 4) in connection with the story of thera Tissa. \n \n
 Tissa, the son of Buddha`s maternal aunt, lived with Buddha at one time. He became a monk only in his old age, but he pretended to be a senior monk and was very pleased when visiting monks asked his permission to do him a favor. On the other hand, he did not fulfill the duties assigned to junior monks. In addition, he often quarreled with the younger monks. If someone reproached him for such behavior, he complained to the Buddha, crying, dissatisfied and upset. Others began to behave in a similar way in the presence of the Buddha. The Buddha instructed them not to harbor hostile thoughts, since hatred can be defeated only if one does not harbor hatred. \n
 Then the Buddha recited these verses. \n \n \n \n \n \n \n \n \n</string>
+    <string name="textViev5Dhammapada">
+        \n KALYAKKHINI VATTHU \n \n
+        <b>Na hi verena verāni, \n</b>
+        <i>Не ненавистью, ненависть \n Not by hatred, hatred \n \n</i>
+        <b>sammantīdha kudācanaṃ; \n</b>
+        <i>успокаивается здесь когда-либо \n calms down here ever \n \n</i>
+        <b>Averena ca sammanti, \n</b>
+        <i>Отсутствием ненависти успокаивается \n By absence of hatred calm down \n \n</i>
+        <b>esa dhammo sanantano. \n</b>
+        <i>Эта дхамма извечна \n This dhamma is eternal \n \n</i>
+        \n \n The Parable of Kalayakkhini \n \n
+During his stay at the Jetavana Monastery in Savatti, the Buddha recited this verse in connection with the story of a barren woman and her rival. There was once a landlord whose wife was infertile, and later he took another wife. The feud began when the eldest wife provoked the miscarriage of another wife, who died during childbirth.  \n
+In the following lives they became: a chicken and a cat, a cow and a female leopard, and, finally, the daughter of a noble husband from Savatti and a cannibal named Kali. The ogress (Kalayakkhili) set off in pursuit of the woman with the child when the latter found out that the Buddha was reading a religious sermon at the Jetavana monastery nearby. The woman turned to him for help and put her son at his feet for protection. The ogre was stopped at the entrance by the guardian spirit of the monastery and forbade her to enter. She was called later, and the Buddha reprimanded both her and the woman.   \n
+The Buddha told them about the enmity that began between them when they were wives of an ordinary husband, and continued when they became a chicken and a cat, and then a cow and a female leopard. This made them realize that hatred can only generate even greater hatred, which can only stop through friendship, understanding and goodwill.  \n  \n  \n  \n
+ \n
+    </string>
 
 </resources>

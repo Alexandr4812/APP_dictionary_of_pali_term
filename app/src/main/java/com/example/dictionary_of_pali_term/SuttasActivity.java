@@ -74,6 +74,12 @@ public class SuttasActivity extends AppCompatActivity {
         finish();
     }
 
+    public void toSuttasByCategory(View view){
+        Intent intent = new Intent(this, SuttasByCategoryActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     @Override
     public void onBackPressed(){
         Intent intent = new Intent(this, MainActivity.class);
