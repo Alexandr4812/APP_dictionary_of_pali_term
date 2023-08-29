@@ -63,14 +63,79 @@
                 android:text="@string/pabaja_text" />
 
             <Button
+                android:id="@+id/button_rules_samanera_nissaya"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toTextNissaya"
+                android:text="@string/buttonNissayaText" />
+
+            <Button
                 android:id="@+id/button_rules_samanera"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toRulesSekhiyaAct"
                 android:text="@string/sekhiya_n" />
 
         </LinearLayout>
-
-
     </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollRulesSamaneraNissaya"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewNissaya"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1500dp"
+                android:text="@string/nisayaText" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonRulesSamaneraHome"
+            style="@style/buttonBackHomeNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="toMainAct"
+            android:visibility="invisible"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/buttonliveToRulesSamanera"
+            style="@style/buttonBackNotImageButton"
+            android:onClick="tobackDhammapada"
+            android:visibility="invisible"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="0dp"
+            tools:ignore="UsingOnClickInXml"
+            />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
