@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".RulesBhikkhuPatimokhaActivity">
+    tools:context=".RulesBhikkhuPatimokhaSanghadisesaActivity">
 
     <ImageButton
         android:id="@+id/backButtonRules"
@@ -14,7 +14,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
-        android:onClick="toRulesBhikkhuAct"
+        android:onClick="toRulesPatimokhaAct"
         android:scaleType="centerInside"
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
-        android:id="@+id/viewScrollPatimokha"
+        android:id="@+id/viewScrollSangkhadisesa"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
@@ -51,105 +51,59 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollPatimokha"
+            android:id="@+id/linearLayoutScrollSangkhadisesa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewHintSangkhadisesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:text="@string/textViewHintParajika"
+                android:textColor="#9FA8DA" />
 
             <Button
                 android:id="@+id/button_about_parajika"
                 style="@style/button_activity_declomation_main"
                 android:backgroundTint="#FFAB91"
-                android:onClick="toPatimokhaAbout"
-                android:text="@string/buttonAboutParajika" />
+                android:onClick="toSanghadisesaAbout"
+                android:text="@string/buttonAboutSanghadisesaText" />
 
             <Button
-                android:id="@+id/button_about_parajika_nakazanie"
+                android:id="@+id/button_sangkhadisesa_1"
                 style="@style/button_activity_declomation_main"
-                android:backgroundTint="#FFAB91"
-                android:onClick="toPatimokhaAboutPunish"
-                android:text="@string/buttonaboutParajikaNakazanie" />
-
-            <Button
-                android:id="@+id/button_patimokha_razdelitel2"
-                style="@style/button_activity_declomation_main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxHeight="2dp"
-                android:minHeight="2dp" />
-
-            <Button
-                android:id="@+id/button_patimokha_razdel_parajika"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toRulesPatimokhaParajikaAct"
-                android:text="@string/buttonPatimokhaRazdelParajika"
+                android:text=""
                 tools:ignore="UsingOnClickInXml" />
-
-            <Button
-                android:id="@+id/button_patimokha_razdel_sangkhadisesa"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toRulesPatimokhaSanghadisesaAct"
-                android:text="@string/buttonSangkhadisesaText"
-                tools:ignore="UsingOnClickInXml" />
-
-
 
         </LinearLayout>
     </ScrollView>
-
     <ScrollView
-        android:id="@+id/viewScrollPatimokhaAbout"
+        android:id="@+id/viewScrollSanghadisesaAbout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/backButtonRules"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="invisible">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollPatimokhaAbout"
+            android:id="@+id/linearLayoutScrollSanghadisesaAbout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewPatimokhaAbout"
+                android:id="@+id/textViewSanghadisesaAbout"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/textAboutPatimokha" />
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/viewScrollPatimokhaAboutPunish"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/backButtonRules"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:id="@+id/linearLayoutScrollPatimokhaAboutPunish"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewPatimokhaAboutPunish"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/textAboutPunish" />
+                android:layout_height="1500dp"
+                android:text="@string/textAboutSanghadisesa" />
         </LinearLayout>
     </ScrollView>
 
@@ -157,26 +111,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <Button
-            android:id="@+id/buttonliveHomeFromUpasampada"
+            android:id="@+id/buttonSanghadisesaHome"
             style="@style/buttonBackHomeNotImageButton"
             android:layout_gravity="bottom|center"
             android:layout_marginRight="3dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginBottom="0dp"
             android:onClick="toMainAct"
             android:visibility="invisible"
             tools:ignore="UsingOnClickInXml" />
 
         <Button
-            android:id="@+id/buttonliveToBhikkhu"
+            android:id="@+id/buttonliveToSanghadisesa"
             style="@style/buttonBackNotImageButton"
-            android:onClick="tobackIzTextPatimokha"
+            android:onClick="toBackButtonSanghadisesa"
             android:visibility="invisible"
             android:layout_gravity="bottom|center"
             android:layout_marginLeft="3dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginBottom="0dp"
             tools:ignore="UsingOnClickInXml"
             />
 

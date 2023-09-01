@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
-public class RulesBhikkhuPatimokhaActivity extends AppCompatActivity {
+public class RulesBhikkhuPatimokhaSanghadisesaActivity extends AppCompatActivity {
 
     private Button buttonHome;
     private Button buttonBack;
@@ -17,15 +17,15 @@ public class RulesBhikkhuPatimokhaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rules_bhikkhu_patimokha);
+        setContentView(R.layout.activity_rules_bhikkhu_patimokha_sanghadisesa);
 
         // Убрать строку состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // Убрать панель навигации (если нужно)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
-        this.buttonBack = (Button) findViewById(R.id.buttonliveToBhikkhu);
-        this.buttonHome = (Button) findViewById(R.id.buttonliveHomeFromUpasampada);
+        this.buttonBack = (Button) findViewById(R.id.buttonliveToSanghadisesa);
+        this.buttonHome = (Button) findViewById(R.id.buttonSanghadisesaHome);
     }
 
     public void toMainAct(View view){
@@ -41,44 +41,22 @@ public class RulesBhikkhuPatimokhaActivity extends AppCompatActivity {
         finish();
     }
 
-
-    public void toRulesBhikkhuAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuActivity.class);
+    public void toRulesPatimokhaAct(View view){
+        Intent intent = new Intent(this, RulesBhikkhuPatimokhaActivity.class);
         startActivity(intent);
         finish();
     }
 
-    public void toRulesPatimokhaParajikaAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuPatimokhaParajikaActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void toRulesPatimokhaSanghadisesaAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuPatimokhaSanghadisesaActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void toPatimokhaAbout(View view) {
-        ScrollView scrollText = findViewById(R.id.viewScrollPatimokhaAbout);
+    public void toSanghadisesaAbout(View view) {
+        ScrollView scrollText = findViewById(R.id.viewScrollSanghadisesaAbout);
         scrollText.setVisibility(view.VISIBLE);
         buttonBack.setVisibility(View.VISIBLE);
         buttonHome.setVisibility(View.VISIBLE);
     }
 
-    public void toPatimokhaAboutPunish(View view) {
-        ScrollView scrollText = findViewById(R.id.viewScrollPatimokhaAboutPunish);
-        scrollText.setVisibility(view.VISIBLE);
-        buttonBack.setVisibility(View.VISIBLE);
-        buttonHome.setVisibility(View.VISIBLE);
-    }
-
-    public void tobackIzTextPatimokha(View view) {
-        ScrollView scrollText = findViewById(R.id.viewScrollPatimokhaAbout);
+    public void toBackButtonSanghadisesa(View view) {
+        ScrollView scrollText = findViewById(R.id.viewScrollSanghadisesaAbout);
         scrollText.setVisibility(view.INVISIBLE);
-        ScrollView scrollText2 = findViewById(R.id.viewScrollPatimokhaAboutPunish);
-        scrollText2.setVisibility(view.INVISIBLE);
         buttonBack.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
     }

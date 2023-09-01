@@ -66,6 +66,14 @@
                 android:textColor="#9FA8DA" />
 
             <Button
+                android:id="@+id/button_about_parajika"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toParajikkaAbout"
+                android:text="@string/buttonTextAboutParajika"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
                 android:id="@+id/button_parajika_1"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toBhikhuPatimokhaParajika1"
@@ -78,7 +86,7 @@
                 android:onClick="toBhikhuPatimokhaParajika2"
                 android:text="@string/buttonRiulesPatimokhaParajika2"
                 tools:ignore="UsingOnClickInXml"
-                tools:visibility="invisible" />
+                tools:visibility="visible" />
 
             <Button
                 android:id="@+id/button_parajika_3"
@@ -98,6 +106,33 @@
     </ScrollView>
 
     <ScrollView
+        android:id="@+id/viewScrollParajikaAbout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollParajikaAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewParajikaAbout"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1500dp"
+                android:text="@string/textAboutParajika" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
         android:id="@+id/viewScrollPatimokhaParajika1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -107,7 +142,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <LinearLayout
             android:id="@+id/linearLayoutScrollPatimokhaParajika1"
@@ -135,7 +170,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <LinearLayout
             android:id="@+id/linearLayoutScrollPatimokhaParajika2"
@@ -191,7 +226,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
         <LinearLayout
             android:id="@+id/linearLayoutScrollPatimokhaParajika4"

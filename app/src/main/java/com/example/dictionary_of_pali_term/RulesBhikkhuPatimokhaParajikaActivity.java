@@ -140,6 +140,16 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
         });
     }
 
+    public void toParajikkaAbout(View view){
+        mediaPlayer = changeSong();
+        this.buttonBackParajika = (Button) findViewById(R.id.buttonliveToPatimokhaParajika);
+        this.buttonHomeParajika = (Button) findViewById(R.id.buttonliveHomeFromParajika);
+        ScrollView scrollTextAboutParajika = findViewById(R.id.viewScrollParajikaAbout);
+        scrollTextAboutParajika.setVisibility(View.VISIBLE);
+        this.buttonBackParajika.setVisibility(View.VISIBLE);
+        this.buttonHomeParajika.setVisibility(View.VISIBLE);
+    }
+
     public void toBhikhuPatimokhaParajika1(View view) {
         this.flagParajika1 = 1;
         mediaPlayer = changeSong();
@@ -201,6 +211,7 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
     }
 
     public void tobackParajikaAct(View view) {
+        ScrollView scrollTextAboutParajika = findViewById(R.id.viewScrollParajikaAbout);
         this.flagParajika1 = 0;
         this.flagParajika2 = 0;
         this.flagParajika3 = 0;
@@ -210,6 +221,7 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
         this.scrollTextParajika2.setVisibility(View.INVISIBLE);
         this.scrollTextParajika3.setVisibility(View.INVISIBLE);
         this.scrollTextParajika4.setVisibility(View.INVISIBLE);
+        scrollTextAboutParajika.setVisibility(View.INVISIBLE);
 
         this.buttonBackParajika.setVisibility(View.INVISIBLE);
         this.buttonHomeParajika.setVisibility(View.INVISIBLE);
