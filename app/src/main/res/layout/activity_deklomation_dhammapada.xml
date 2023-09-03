@@ -67,10 +67,15 @@
                 android:text="@string/hintText"
                 android:textColor="#9FA8DA" />
 
+
             <TextView
                 android:id="@+id/textView"
                 style="@style/textBetweenButtons"
                 android:text="@string/textViewParnieStrofy" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
 
             <Button
                 android:id="@+id/buttonDhammapada1"
@@ -86,10 +91,13 @@
                 android:text="@string/button2Dhammapada"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/buttonDhammapada3"
                 style="@style/button_activity_declomation_main"
-                android:insetTop="18dp"
                 android:onClick="toTextabout3Dhammapada"
                 android:text="@string/button3Dhammapada"
                 tools:ignore="UsingOnClickInXml" />
@@ -100,10 +108,13 @@
                 android:text="@string/button4Dhammapada"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/buttonDhammapada5"
                 style="@style/button_activity_declomation_main"
-                android:insetTop="18dp"
                 android:onClick="toTextabout5Dhammapada"
                 android:text="@string/button5Dhammapada"
                 tools:ignore="UsingOnClickInXml" />

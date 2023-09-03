@@ -56,6 +56,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/button_rules_upasampada"
                 style="@style/button_activity_declomation_main"

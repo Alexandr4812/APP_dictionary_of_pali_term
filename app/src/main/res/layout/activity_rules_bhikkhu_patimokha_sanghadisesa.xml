@@ -65,6 +65,10 @@
                 android:text="@string/textViewHintParajika"
                 android:textColor="#9FA8DA" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/button_about_parajika"
                 style="@style/button_activity_declomation_main"
@@ -75,7 +79,7 @@
             <Button
                 android:id="@+id/button_sangkhadisesa_1"
                 style="@style/button_activity_declomation_main"
-                android:text=""
+                android:text="@string/textSanghadisesa1"
                 tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>

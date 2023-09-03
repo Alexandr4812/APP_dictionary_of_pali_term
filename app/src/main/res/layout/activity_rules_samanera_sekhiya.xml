@@ -56,18 +56,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button_sekhiya_razdelitel0"
-                style="@style/button_activity_declomation_main"
-                android:maxHeight="2dp"
-                android:minHeight="2dp" />
-
             <TextView
                 android:id="@+id/textViewSekhiyaAbout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:foregroundGravity="center"
                 android:gravity="center"
                 android:paddingStart="6dp"
@@ -80,11 +72,9 @@
                 tools:ignore="RtlCompat"
                 tools:visibility="visible" />
 
-            <Button
-                android:id="@+id/button_sekhiya_razdelitel"
-                style="@style/button_activity_declomation_main"
-                android:maxHeight="2dp"
-                android:minHeight="2dp" />
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textViewFirstCategory"
@@ -175,10 +165,15 @@
                 android:onClick="toComm26"
                 android:text="@string/hugging_knees" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <TextView
                 android:id="@+id/textViewSecondCategory"
                 style="@style/textBetweenButtons"
-                android:text="@string/secondCategory" />
+                android:text="@string/secondCategory"
+                tools:visibility="visible" />
 
             <Button
                 android:id="@+id/button_sekhiya_27"
@@ -336,6 +331,10 @@
                 style="@style/button_activity_declomation_main"
                 android:text="@string/vilivat_vodu_v_naselennoi_mestnosti" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <TextView
                 android:id="@+id/textViewThirdCategory"
                 style="@style/textBetweenButtons"
@@ -415,6 +414,10 @@
                 android:id="@+id/button_sekhiya_72"
                 style="@style/button_activity_declomation_main"
                 android:text="@string/ne_obuchat_idushegopodoroge" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textViewOraznom"
@@ -546,13 +549,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack2"
                 android:layout_width="51dp"
@@ -570,6 +575,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome2"
                 android:layout_width="51dp"
@@ -585,12 +591,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm2"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sit_in_wheel_clothing_about" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack3"
                 android:layout_width="51dp"
@@ -608,6 +616,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome3"
                 android:layout_width="51dp"
@@ -636,13 +645,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack4"
                 android:layout_width="51dp"
@@ -660,6 +671,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome4"
                 android:layout_width="51dp"
@@ -675,12 +687,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm5_6"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/sit_strong_about" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack5"
                 android:layout_width="51dp"
@@ -698,6 +712,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome5"
                 android:layout_width="51dp"
@@ -726,13 +741,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack6"
                 android:layout_width="51dp"
@@ -750,6 +767,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome6"
                 android:layout_width="51dp"
@@ -765,12 +783,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm7_8"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/eyes_looking_doun_aboet" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack7"
                 android:layout_width="51dp"
@@ -788,6 +808,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome7"
                 android:layout_width="51dp"
@@ -816,13 +837,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack8"
                 android:layout_width="51dp"
@@ -840,6 +863,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome8"
                 android:layout_width="51dp"
@@ -855,12 +879,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm9_10"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/dont_up_clothes_about" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack9"
                 android:layout_width="51dp"
@@ -878,6 +904,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome9"
                 android:layout_width="51dp"
@@ -906,13 +933,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack10"
                 android:layout_width="51dp"
@@ -930,6 +959,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome10"
                 android:layout_width="51dp"
@@ -945,12 +975,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm11_12"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/laughing_noisily_about" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack11"
                 android:layout_width="51dp"
@@ -968,6 +1000,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome11"
                 android:layout_width="51dp"
@@ -996,13 +1029,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack12"
                 android:layout_width="51dp"
@@ -1020,6 +1055,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome12"
                 android:layout_width="51dp"
@@ -1035,12 +1071,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm13_14"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/speak_noisily_about" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack13"
                 android:layout_width="51dp"
@@ -1058,6 +1096,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome13"
                 android:layout_width="51dp"
@@ -1086,13 +1125,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack14"
                 android:layout_width="51dp"
@@ -1110,6 +1151,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome14"
                 android:layout_width="51dp"
@@ -1125,12 +1167,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm15_16"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/uncoiling_the_body_about" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack15"
                 android:layout_width="51dp"
@@ -1148,6 +1192,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome15"
                 android:layout_width="51dp"
@@ -1176,13 +1221,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack16"
                 android:layout_width="51dp"
@@ -1200,6 +1247,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome16"
                 android:layout_width="51dp"
@@ -1215,12 +1263,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm17_18"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/uncoiling_the_urms_about" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack17"
                 android:layout_width="51dp"
@@ -1238,6 +1288,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome17"
                 android:layout_width="51dp"
@@ -1266,13 +1317,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack18"
                 android:layout_width="51dp"
@@ -1290,6 +1343,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome18"
                 android:layout_width="51dp"
@@ -1305,12 +1359,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm19_20"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/uncoiling_the_head_about" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack19"
                 android:layout_width="51dp"
@@ -1328,6 +1384,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome19"
                 android:layout_width="51dp"
@@ -1356,13 +1413,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack20"
                 android:layout_width="51dp"
@@ -1380,6 +1439,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome20"
                 android:layout_width="51dp"
@@ -1395,12 +1455,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm21_22"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/hands_on_sides_about" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack21"
                 android:layout_width="51dp"
@@ -1418,6 +1480,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome21"
                 android:layout_width="51dp"
@@ -1446,13 +1509,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack22"
                 android:layout_width="51dp"
@@ -1470,6 +1535,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome22"
                 android:layout_width="51dp"
@@ -1485,12 +1551,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm23_24"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/about_23_24" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack23"
                 android:layout_width="51dp"
@@ -1508,6 +1576,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome23"
                 android:layout_width="51dp"
@@ -1536,13 +1605,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack24"
                 android:layout_width="51dp"
@@ -1560,6 +1631,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome24"
                 android:layout_width="51dp"
@@ -1575,12 +1647,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm25"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/about_25" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack25"
                 android:layout_width="51dp"
@@ -1598,6 +1672,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome25"
                 android:layout_width="51dp"
@@ -1626,13 +1701,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack26"
                 android:layout_width="51dp"
@@ -1650,6 +1727,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome26"
                 android:layout_width="51dp"
@@ -1665,12 +1743,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm27"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/about_26" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack27"
                 android:layout_width="51dp"
@@ -1688,6 +1768,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome27"
                 android:layout_width="51dp"
@@ -1716,13 +1797,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm15"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack28"
                 android:layout_width="51dp"
@@ -1740,6 +1823,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome28"
                 android:layout_width="51dp"
@@ -1755,12 +1839,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm29"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/about_27" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack29"
                 android:layout_width="51dp"
@@ -1778,6 +1864,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome29"
                 android:layout_width="51dp"
@@ -1806,13 +1893,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
+
         <LinearLayout
             android:id="@+id/linearLayoutScrollSekhiyaComm16"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFE082"
             android:orientation="vertical">
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack30"
                 android:layout_width="51dp"
@@ -1830,6 +1919,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome30"
                 android:layout_width="51dp"
@@ -1845,12 +1935,14 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/textViewSekhiyaComm31"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/about_28" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommBack31"
                 android:layout_width="51dp"
@@ -1868,6 +1960,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="UsingOnClickInXml" />
+
             <ImageButton
                 android:id="@+id/imageButtonSekhiyaCommHome31"
                 android:layout_width="51dp"

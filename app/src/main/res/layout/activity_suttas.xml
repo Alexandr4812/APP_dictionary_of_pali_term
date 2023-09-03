@@ -78,6 +78,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/button_suttas_for_dighanikaya"
                 style="@style/button_activity_declomation_main"
@@ -123,12 +127,15 @@
                 android:onClick="toSuttasKuddakaAct"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/button_suttas_for_by_category"
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
                 android:backgroundTint="#FFAB91"
                 android:onClick="toSuttasByCategory"
                 android:text="@string/buttonTextSuttasToByCategory"

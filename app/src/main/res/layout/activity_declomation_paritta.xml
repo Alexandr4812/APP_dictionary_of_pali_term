@@ -56,6 +56,10 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/button_paritta"
                 style="@style/button_activity_declomation_main"
@@ -75,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="visible">
+        tools:visibility="invisible">
 
 
         <LinearLayout

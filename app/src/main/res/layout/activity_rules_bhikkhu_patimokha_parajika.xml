@@ -65,6 +65,10 @@
                 android:text="@string/textViewHintParajika"
                 android:textColor="#9FA8DA" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/button_about_parajika"
                 style="@style/button_activity_declomation_main"
