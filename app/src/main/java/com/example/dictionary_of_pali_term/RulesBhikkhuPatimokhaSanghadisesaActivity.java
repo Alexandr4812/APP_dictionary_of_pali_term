@@ -54,9 +54,18 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends AppCompatActivity
         buttonHome.setVisibility(View.VISIBLE);
     }
 
+    public void toSanghadisesaText1(View view) {
+        ScrollView scrollText = findViewById(R.id.viewScrollSanghadisesaText1);
+        scrollText.setVisibility(view.VISIBLE);
+        buttonBack.setVisibility(View.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+    }
+
     public void toBackButtonSanghadisesa(View view) {
         ScrollView scrollText = findViewById(R.id.viewScrollSanghadisesaAbout);
+        ScrollView scrollText1 = findViewById(R.id.viewScrollSanghadisesaText1);
         scrollText.setVisibility(view.INVISIBLE);
+        scrollText1.setVisibility(view.INVISIBLE);
         buttonBack.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
     }

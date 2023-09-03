@@ -80,6 +80,7 @@
                 android:id="@+id/button_sangkhadisesa_1"
                 style="@style/button_activity_declomation_main"
                 android:text="@string/textSanghadisesa1"
+                android:onClick="toSanghadisesaText1"
                 tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>
@@ -108,6 +109,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="1500dp"
                 android:text="@string/textAboutSanghadisesa" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollSanghadisesaText1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSanghadisesaText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSanghadisesaText1"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1500dp"
+                android:text="@string/sanghadisesaText1" />
         </LinearLayout>
     </ScrollView>
 
