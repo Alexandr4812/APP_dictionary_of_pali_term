@@ -35,6 +35,14 @@ public class SuttasSanyuttaActivity extends AppCompatActivity {
         buttonBack = findViewById(R.id.buttonliveToBeforePageSanyutta);
         webView = findViewById(R.id.webViewSanyutta);
 
+        webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование
+        webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
+        webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
+        webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
+
+        webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
+        webView.clearCache(true);
+
         // Загрузка первой страницы
         webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/samyutta.html");
         // Обработка переходов между страницами через ссылки

@@ -74,10 +74,6 @@
                 android:onClick="toPatimokhaAboutPunish"
                 android:text="@string/buttonaboutParajikaNakazanie" />
 
-            <ImageView
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
-
             <Button
                 android:id="@+id/button_patimokha_razdelitel2"
                 style="@style/button_activity_declomation_main"

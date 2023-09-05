@@ -39,6 +39,12 @@ public class SuttasDighaActivity extends AppCompatActivity {
 
         buttonBack = findViewById(R.id.buttonliveToBeforePage);
         webView = findViewById(R.id.webView);
+
+        webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование
+        webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
+        webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
+        webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
+
         webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
         webView.clearCache(true);
 

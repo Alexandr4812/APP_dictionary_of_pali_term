@@ -35,6 +35,11 @@ public class SuttasKuddakaActivity extends AppCompatActivity {
         buttonBack = findViewById(R.id.buttonliveToBeforePageKuddaka);
         webView = findViewById(R.id.webViewKuddaka);
 
+        webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование
+        webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
+        webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
+        webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
+
         webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
         webView.clearCache(true);
 
