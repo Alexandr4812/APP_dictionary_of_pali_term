@@ -13,7 +13,7 @@
         android:layout_height="39dp"
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
-        android:contentDescription="возврат в главное меню"
+        android:contentDescription="@string/descriptionBackMainMenu"
         android:onClick="toDeclomation"
         android:scaleType="centerInside"
         android:src="@drawable/button_back"
@@ -38,7 +38,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="UsingOnClickInXml" />
 
     <ScrollView
         android:id="@+id/viewScrollPuja"
@@ -68,6 +69,13 @@
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
+                android:id="@+id/button_puja_inambokote"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomaciyaVandanaAmbokote"
+                android:text="@string/buttonTextVandanaAmbokote"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
                 android:id="@+id/button_vandana_with_laymans"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomaciyaVandanaWithLayman"
@@ -88,45 +96,11 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="invisible">
 
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome5"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageButton
-                android:id="@+id/backButtonOver"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textViewOverMorningPuja"
@@ -134,40 +108,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/DeklomaciyaMorningPuja" />
+        </LinearLayout>
+    </ScrollView>
 
-            <ImageButton
-                android:id="@+id/backButtonOver2"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+    <ScrollView
+        android:id="@+id/overScrollTextVandanaAmbokote"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
 
-            <ImageButton
-                android:id="@+id/imageButtonliveHome6"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textViewVandanaAmbokote"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/textAmbokoteVandana" />
         </LinearLayout>
     </ScrollView>
 
@@ -182,45 +148,11 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:visibility="invisible">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFE082"
             android:orientation="vertical">
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome7"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageButton
-                android:id="@+id/backButtonOver3"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/textViewOverVandanaWithLayman"
@@ -228,42 +160,39 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/DeklomaciyaVandanaWithLaiman" />
-
-            <ImageButton
-                android:id="@+id/backButtonOver4"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome8"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
         </LinearLayout>
+
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonPujaHome"
+            style="@style/buttonBackHomeNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="toMainAct"
+            android:visibility="invisible"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/buttonliveToPuja"
+            style="@style/buttonBackNotImageButton"
+            android:onClick="tobackOver"
+            android:visibility="invisible"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="0dp"
+            tools:ignore="UsingOnClickInXml"
+            />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
