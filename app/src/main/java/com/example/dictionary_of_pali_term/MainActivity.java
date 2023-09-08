@@ -7,12 +7,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
+
+    ImageButton imageButtonRu;
+    ImageButton imageButtonEn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
         // Убрать панель навигации (если нужно)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
+        imageButtonRu = findViewById(R.id.imageButtonRu);
+        imageButtonEn = findViewById(R.id.imageButtonUk);
+
+        Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
+        Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
             }
 
     public void changeLangEn(View view) {
@@ -105,8 +115,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void toPopupMenu(View view) {
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
+
+        Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
+        imageButtonRu.startAnimation(slideDown);
+        imageButtonEn.startAnimation(slideDown);
+
         ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
+
         scrollText.setVisibility(view.VISIBLE);
         imageButtonEx.setVisibility(View.VISIBLE);
         imageButtonM.setVisibility(View.INVISIBLE);

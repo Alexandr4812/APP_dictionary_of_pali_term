@@ -1,5 +1,8 @@
 package com.example.dictionary_of_pali_term;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -15,6 +18,10 @@ import java.util.concurrent.TimeUnit;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
+
+    private TextView textView;
+    private String textToAnimate;
+    private int currentIndex = 0;
 
     private TextView textMaxTimeParajika;
     private TextView textCurrentPositionParajika;
@@ -50,6 +57,11 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // Убрать панель навигации (если нужно)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+        textView = findViewById(R.id.textViewHintParajika);
+        textToAnimate = getString(R.string.textViewHintParajika);
+
+        animateText();
 
         this.textMaxTimeParajika = (TextView) findViewById(R.id.textMaxTimeParajika);
         this.textCurrentPositionParajika = (TextView) findViewById(R.id.textCurrentPositionParajika);
@@ -138,6 +150,27 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
                 doFastForward( );
             }
         });
+    }
+
+    private void animateText() {
+        ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
+        animator.setDuration(2000); // Продолжительность анимации в миллисекундах
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                int animatedValue = (int) animation.getAnimatedValue();
+                String partialText = textToAnimate.substring(0, animatedValue);
+                textView.setText(partialText);
+            }
+        });
+        animator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                // Анимация завершена
+            }
+        });
+        animator.start();
     }
 
     public void toParajikkaAbout(View view){
