@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="buttonAbhidhammaChetasika">mental factors \n (chetasika)</string>
+    <string name="button_kontakt">1 \ncontact \n(phassa)</string>
+    <string name="universal">Universal 7</string>
+    <string name="button_kontakt_harakteristika">Characteristic</string>
+    <string name="button_kontakt_function">Function</string>
+    <string name="button_kontakt_proyavlenie">Manifestation</string>
+    <string name="button_kontakt_prichina">The immediate cause</string>
+
+    <string name="text_for_kontakt"><b>CONTACT (phassa):</b> The word phassa comes from the verb
+phusati, meaning "to touch", but contact should not
+be understood as a simple physical effect of an object on
+the physical ability [touch]. Rather, it
+is a mental factor through which consciousness mentally "touches"
+an object that has just appeared, thereby initiating
+a whole cognitive event.</string>
+
+    <string name="text_for_kontakt_harakteristika"><b>CHARACTERISTIC:</b> touch</string>
+    <string name="text_for_kontakt_function"><b>FUNCTION:</b> the collision of consciousness and object.</string>
+    <string name="text_for_kontakt_proyavlenie"><b>MANIFESTATION:</b> the coincidence of consciousness with sensory ability.</string>
+    <string name="text_for_kontakt_prichina"><b>THE IMMEDIATE CAUSE:</b> the object field that has come into focus.</string>
+
+    <string name="button_chuvstvo">2 \nfeeling \n(vedana)</string>
+
+    <string name="text_for_chuvstvo">FEELING (vedana): Feeling is the mental factor
+that the object feels, it is the emotional tone
+in which the object is experienced. The Pali word Vedana
+does not mean emotion (which is a complex phenomenon
+involving a set of accompanying mental factors),
+it is the most elementary emotional quality of experience, which
+can be pleasant, painful or neutral. \n While other mental factors
+outlive the object only indirectly, the feeling experiences it
+directly and completely. In this regard, other mental factors
+they are compared to the cook who prepares a dish for the king
+and only tastes it during cooking, while the
+feeling is compared to the king himself, who enjoys
+this food as much as he wants.</string>
+
+    <string name="text_for_chuvstvo_harakteristika">CHARACTERISTIC: Sensitivity</string>
+    <string name="text_for_chuvstvo_function">FUNCTION: experiencing, or enjoying the desired object directly.</string>
+    <string name="text_for_chuvstvo_proyavlenie">MANIFESTATION:  savoring associated mental factors.</string>
+    <string name="text_for_chuvstvo_prichina">IMMEDIATE CAUSE: contact.</string>
+
+    <string name="button_vospriyatie">3 \nPerception \n(saňňā)</string>
+
+    <string name="text_for_vospriyatie">PERCEPTION (saññā): His mode of action is comparable
+to the carpenterёs recognition of certain types of wood by means of marks placed [earlier] on each of them.</string>
+
+    <string name="text_for_vospriyatie_harakteristika">CHARACTERISTIC: distinguishing the qualities of an object.</string>
+    <string name="text_for_vospriyatie_function">FUNCTION: recognition of what was perceived earlier.</string>
+    <string name="text_for_vospriyatie_proyavlenie">MANIFESTATION: interpretation of an object through previously perceived features.</string>
+    <string name="text_for_vospriyatie_prichina">IMMEDIATE CAUSE: the object as it appears to perception.</string>
+
+    <string name="button_volenie">4 \nVolition \n(chetanā)</string>
+
+    <string name="text_for_volenie">WOLITION (chetanā): Chetanā - from the same root as
+and citta, is a mental factor that deals with the actualization of the goal, that is, with the voluntary or
+volitional aspect of cognition. Therefore it is translated as “will.” The comments explain
+that chetana organizes the associated mental factors in the process of their influence on the object.
+         As the main student repeats
+your own lesson and also forces other students
+repeat their lessons, and the will, starting to work in relation to its object, also forces the associated
+mental states to perform their own tasks.
+Volition is the most important mental factor in the generation of kamma, since it is volition that determines
+ethical quality of action.</string>
+
+    <string name="text_for_volenie_harakteristika">CHARACTERISTICS: state of volition.</string>
+    <string name="text_for_volenie_function">FUNCTION: accumulate (kamma).</string>
+    <string name="text_for_volenie_proyavlenie">MANIFESTATION: coordination.</string>
+    <string name="text_for_volenie_prichina">IMMEDIATE CAUSE: associated conditions.</string>
+
+</resources>

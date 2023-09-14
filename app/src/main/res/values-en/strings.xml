@@ -998,6 +998,8 @@ The second event is connected with monks who overestimated their abilities and s
     <string name="buttonSuttasForAnguttara">anguttara nikaya</string>
     <string name="buttonSuttasForKuddaka">khuddaka nikaya</string>
     <string name="buttonTextSuttasToByCategory">suttas by category</string>
+    <string name="theravada_ru">The material was copied from the site: \n theravada.ru</string>
+    <string name="mainButtonMonksAbhidhamma">Abhidhamma</string> />
 
 
 </resources>

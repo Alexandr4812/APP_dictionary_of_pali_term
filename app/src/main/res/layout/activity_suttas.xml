@@ -56,7 +56,7 @@
             android:focusable="true"
             android:onClick="openWebsite"
             android:linksClickable="true"
-            android:text="Материал скопирован с сайта: \n theravada.ru"
+            android:text="@string/theravada_ru"
             android:textColor="@color/my_text_bacground_color"
             android:textSize="14sp" />
 
@@ -79,6 +79,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/im1"
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
@@ -128,6 +129,7 @@
                 tools:ignore="UsingOnClickInXml" />
 
             <ImageView
+                android:id="@+id/im2"
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 

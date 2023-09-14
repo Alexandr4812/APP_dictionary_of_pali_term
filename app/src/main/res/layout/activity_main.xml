@@ -22,6 +22,22 @@
             tools:visibility="visible">
 
             <ImageButton
+                android:id="@+id/button_tabl"
+                style="@style/MainButtons"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/mainButtonMonksRules"
+                android:onClick="toAbhidhammaAct"
+                android:src="@drawable/button_abhidhamma"
+                tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/textView0"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:text="@string/mainButtonMonksAbhidhamma" />
+
+            <ImageButton
                 android:id="@+id/button_face"
                 style="@style/MainButtons"
                 android:layout_gravity="center"

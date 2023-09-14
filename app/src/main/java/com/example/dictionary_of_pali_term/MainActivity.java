@@ -1,6 +1,10 @@
 package com.example.dictionary_of_pali_term;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
 import android.content.res.Configuration;
 
 import android.content.Intent;
@@ -19,6 +23,13 @@ public class MainActivity extends AppCompatActivity {
     ImageButton imageButtonRu;
     ImageButton imageButtonEn;
 
+    private TextView textView0;
+    private TextView textView1;
+    private TextView textView2;
+    private TextView textView3;
+    private TextView textView4;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,9 +43,8 @@ public class MainActivity extends AppCompatActivity {
         imageButtonRu = findViewById(R.id.imageButtonRu);
         imageButtonEn = findViewById(R.id.imageButtonUk);
 
-        Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
-        Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
-            }
+    }
+
 
     public void changeLangEn(View view) {
         Locale locale = new Locale("en");
@@ -81,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
         tv.setText(R.string.mainButtonShortSuttas);
         tv = (TextView) findViewById(R.id.textView1);
         tv.setText(R.string.mainButtonMonksRules);
+        tv = (TextView) findViewById(R.id.textView0);
+        tv.setText(R.string.mainButtonMonksAbhidhamma);
     }
 
     public void toLiveBu(View view){
@@ -107,6 +119,12 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
+    public void toAbhidhammaAct(View view){
+        Intent intent = new Intent(this, AbhidhammaActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void toMainAct(View view){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -122,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
+
 
         scrollText.setVisibility(view.VISIBLE);
         imageButtonEx.setVisibility(View.VISIBLE);

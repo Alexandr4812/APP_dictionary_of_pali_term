@@ -18,9 +18,25 @@
         tools:targetApi="33">
 
         <activity
+            android:name=".AbhidhammaChetasikasActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AbhidhammaActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RulesBhikkhuPatimokhaSanghadisesaActivity"
-            android:screenOrientation="portrait"
-            android:exported="false">
+            android:exported="false"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

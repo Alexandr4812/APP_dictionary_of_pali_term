@@ -49,4 +49,7 @@
     <string name="buttonSuttasForKuddaka">куддака никая</string>
     <string name="buttonTextSuttasToByCategory">сутты по темам</string>
     <string name="descriptionBackMainMenu" translatable="false">возврат в главное меню</string>
+    <string name="theravada_ru">Материал скопирован с сайта: \n theravada.ru</string>
+    <string name="mainButtonMonksAbhidhamma">Абхидхамма</string>
+    />
 </resources>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".DeklomationMainActivity">
+    tools:context=".AbhidhammaActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -21,10 +21,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="UsingOnClickInXml" />
 
     <ScrollView
-        android:id="@+id/viewScrollDeclomation"
+        android:id="@+id/viewScrollAbhidhamma"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
@@ -34,45 +35,25 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollDeclomation"
+            android:id="@+id/linearLayoutScrollAbhidhamma"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageViewRazdelitelDeklomationMain"
+                android:id="@+id/imageVievAbhidhamma1"
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
             <Button
-                android:id="@+id/button_sutta"
+                android:id="@+id/button_chetasika_kontakt"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomationSutta"
-                android:text="@string/sutta" />
+                android:onClick="toChetasikasAct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/buttonAbhidhammaChetasika"
+                tools:ignore="UsingOnClickInXml" />
 
-            <Button
-                android:id="@+id/button_paritta"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomationParitta"
-                android:text="@string/button_paritta" />
-
-            <Button
-                android:id="@+id/button_dhammapada"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomationDhammapada"
-                android:text="@string/button_dhammapada" />
-
-            <Button
-                android:id="@+id/button_puja"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toMorningPuja"
-                android:text="@string/pudja" />
-
-            <Button
-                android:id="@+id/button_over_declamation"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomationOver"
-                android:text="@string/drugie_declomacii" />
 
         </LinearLayout>
 
