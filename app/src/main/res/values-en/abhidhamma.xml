@@ -70,4 +70,29 @@ ethical quality of action.</string>
     <string name="text_for_volenie_proyavlenie">MANIFESTATION: coordination.</string>
     <string name="text_for_volenie_prichina">IMMEDIATE CAUSE: associated conditions.</string>
 
+    <string name="button_odnonapravlennost">5 \nUnidirectionality \n(ekaggatā)</string>
+
+    <string name="text_for_odnonapravlennost">ONE-DIRECTIONALITY (ekaggatā): This is unification
+mind on the object. Although this factor reaches its expressiveness only in the jhanas, where it functions as a factor
+jhānas, the Abhidhamma teaches that the germ of this ability
+to mental unification is present in all types of consciousness, even the most rudimentary.
+In them it functions as the factor which fixes the mind on the object. </string>
+
+    <string name="text_for_odnonapravlennost_harakteristika">CHARACTERISTIC: non-wandering or non-distraction.</string>
+    <string name="text_for_odnonapravlennost_function">FUNCTION: collect, or combine, associated states.</string>
+    <string name="text_for_odnonapravlennost_proyavlenie">MANIFESTATION: like peace.</string>
+    <string name="text_for_odnonapravlennost_prichina">IMMEDIATE CAUSE: happiness</string>
+
+    <string name="button_jivitindriya">6 \nMental life-controlling ability \n(jivitindriya)</string>
+
+    <string name="text_for_jivitindriya">JIVITINRIYA: There are two types of control
+life-faculties: mental, which animates associated mental states, and physical, which
+animates material phenomena. But as cetasika
+This means only the mental life-controlling ability.</string>
+
+    <string name="text_for_jivitindriya_harakteristika">CHARACTERISTICS: maintaining associated mental states.</string>
+    <string name="text_for_jivitindriya_function">FUNCTION: to cause associated mental states to occur.</string>
+    <string name="text_for_jivitindriya_proyavlenie">MANIFESTATION: establishing the presence of associated mental states.</string>
+    <string name="text_for_jivitindriya_prichina">IMMEDIATE CAUSE: mental states that need to be maintained.</string>
+
 </resources>

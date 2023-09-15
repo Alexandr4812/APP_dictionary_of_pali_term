@@ -12,7 +12,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="@+id/button_menu">
 
         <LinearLayout
@@ -38,22 +38,20 @@
                 android:text="@string/mainButtonMonksAbhidhamma" />
 
             <ImageButton
-                android:id="@+id/button_face"
+                android:id="@+id/button_chakra"
                 style="@style/MainButtons"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:contentDescription="@string/mainButtonLiveBuddha"
-                android:onClick="toLiveBu"
-                android:src="@drawable/button_face"
+                android:contentDescription="@string/mainButtonShortSuttas"
+                android:onClick="toSuttas"
+                android:src="@drawable/button_chakra"
                 tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textView2"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:text="@string/mainButtonLiveBuddha"
-                />
+                android:text="@string/mainButtonShortSuttas" />
 
             <ImageButton
                 android:id="@+id/button_stupa"
@@ -72,22 +70,6 @@
                 android:text="@string/mainButtonStofiDlyaDeclomacii" />
 
             <ImageButton
-                android:id="@+id/button_chakra"
-                style="@style/MainButtons"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:contentDescription="@string/mainButtonShortSuttas"
-                android:onClick="toSuttas"
-                android:src="@drawable/button_chakra"
-                tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
-
-            <TextView
-                android:id="@+id/textView2"
-                style="@style/TextViewStyle"
-                android:layout_gravity="center"
-                android:text="@string/mainButtonShortSuttas" />
-
-            <ImageButton
                 android:id="@+id/button_book"
                 style="@style/MainButtons"
                 android:layout_gravity="center"
@@ -102,6 +84,23 @@
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
                 android:text="@string/mainButtonMonksRules" />
+
+            <ImageButton
+                android:id="@+id/button_face"
+                style="@style/MainButtons"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/mainButtonLiveBuddha"
+                android:onClick="toLiveBu"
+                android:src="@drawable/button_face"
+                tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:text="@string/mainButtonLiveBuddha" />
 
         </LinearLayout>
     </ScrollView>
@@ -119,8 +118,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,DuplicateClickableBoundsCheck"
+        tools:visibility="visible" />
 
     <ImageButton
         android:id="@+id/button_menu"
@@ -135,8 +135,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+        tools:visibility="invisible" />
 
     <ScrollView
         android:id="@+id/popupMenuSV"

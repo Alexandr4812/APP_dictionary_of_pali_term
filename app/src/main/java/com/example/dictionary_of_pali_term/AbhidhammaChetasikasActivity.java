@@ -26,6 +26,12 @@ public class AbhidhammaChetasikasActivity extends AppCompatActivity {
     private TextView textViewAbhidhammaVolenie4;
     private Button buttonVolenie4, buttonHarakteristika4, buttonFunkciya4, buttonProyavlenie4, buttonPrichina4;
 
+    private TextView textViewAbhidhammaOdnonapravlennost5;
+    private Button buttonOdnonapravlennost5, buttonHarakteristika5, buttonFunkciya5, buttonProyavlenie5, buttonPrichina5;
+
+    private TextView textViewAbhidhammaJivitindriya6;
+    private Button buttonJivitindriya6, buttonHarakteristika6, buttonFunkciya6, buttonProyavlenie6, buttonPrichina6;
+
     // Переменная для хранения последней нажатой кнопки
     private Button lastClickedButton = null;
 
@@ -38,6 +44,8 @@ public class AbhidhammaChetasikasActivity extends AppCompatActivity {
         textViewAbhidhammaChuvstvo2 = findViewById(R.id.textViewAbhidhammaChetasikaChuvstvo2);
         textViewAbhidhammaVospriyatie3 = findViewById(R.id.textViewAbhidhammaChetasikaVospriyatie3);
         textViewAbhidhammaVolenie4 = findViewById(R.id.textViewAbhidhammaChetasikaVolenie4);
+        textViewAbhidhammaOdnonapravlennost5 = findViewById(R.id.textViewAbhidhammaChetasikaodnonapravlennost5);
+        textViewAbhidhammaJivitindriya6 = findViewById(R.id.textViewAbhidhammaChetasikaJivitindriya6);
 
         buttonKontakt = findViewById(R.id.button_chetasika_kontakt);
         buttonHarakteristika1 = findViewById(R.id.button_chetasika_harakteristika);
@@ -63,6 +71,18 @@ public class AbhidhammaChetasikasActivity extends AppCompatActivity {
         buttonProyavlenie4 = findViewById(R.id.button_chetasika_proyavlenie4);
         buttonPrichina4 = findViewById(R.id.button_chetasika_prichina4);
 
+        buttonOdnonapravlennost5 = findViewById(R.id.button_chetasika_odnonapravlennost5);
+        buttonHarakteristika5 = findViewById(R.id.button_chetasika_harakteristika5);
+        buttonFunkciya5 = findViewById(R.id.button_chetasika_function5);
+        buttonProyavlenie5 = findViewById(R.id.button_chetasika_proyavlenie5);
+        buttonPrichina5 = findViewById(R.id.button_chetasika_prichina5);
+
+        buttonJivitindriya6 = findViewById(R.id.button_chetasika_jivitindriya6);
+        buttonHarakteristika6 = findViewById(R.id.button_chetasika_harakteristika6);
+        buttonFunkciya6 = findViewById(R.id.button_chetasika_function6);
+        buttonProyavlenie6 = findViewById(R.id.button_chetasika_proyavlenie6);
+        buttonPrichina6 = findViewById(R.id.button_chetasika_prichina6);
+
 
         // Убрать строку состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -76,6 +96,8 @@ public class AbhidhammaChetasikasActivity extends AppCompatActivity {
         textViewAbhidhammaChuvstvo2.setText("");
         textViewAbhidhammaVospriyatie3.setText("");
         textViewAbhidhammaVolenie4.setText("");
+        textViewAbhidhammaOdnonapravlennost5.setText("");
+        textViewAbhidhammaJivitindriya6.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -109,6 +131,8 @@ public class AbhidhammaChetasikasActivity extends AppCompatActivity {
         textViewAbhidhammaChetasika1.setText("");
         textViewAbhidhammaVospriyatie3.setText("");
         textViewAbhidhammaVolenie4.setText("");
+        textViewAbhidhammaOdnonapravlennost5.setText("");
+        textViewAbhidhammaJivitindriya6.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -143,6 +167,8 @@ public class AbhidhammaChetasikasActivity extends AppCompatActivity {
         textViewAbhidhammaChetasika1.setText("");
         textViewAbhidhammaChuvstvo2.setText("");
         textViewAbhidhammaVolenie4.setText("");
+        textViewAbhidhammaOdnonapravlennost5.setText("");
+        textViewAbhidhammaJivitindriya6.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -177,6 +203,8 @@ public class AbhidhammaChetasikasActivity extends AppCompatActivity {
         textViewAbhidhammaChetasika1.setText("");
         textViewAbhidhammaChuvstvo2.setText("");
         textViewAbhidhammaVospriyatie3.setText("");
+        textViewAbhidhammaOdnonapravlennost5.setText("");
+        textViewAbhidhammaJivitindriya6.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -201,6 +229,78 @@ public class AbhidhammaChetasikasActivity extends AppCompatActivity {
             }
 
             textViewAbhidhammaVolenie4.setVisibility(View.VISIBLE);
+            lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
+        }
+    }
+
+    public void onButtonClickGroup5(View view) {
+        Button clickedButton = (Button) view;
+        int visibility = textViewAbhidhammaOdnonapravlennost5.getVisibility();
+        textViewAbhidhammaChetasika1.setText("");
+        textViewAbhidhammaChuvstvo2.setText("");
+        textViewAbhidhammaVospriyatie3.setText("");
+        textViewAbhidhammaVolenie4.setText("");
+        textViewAbhidhammaJivitindriya6.setText("");
+
+        // Если нажата та же кнопка, что и ранее
+        if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
+            textViewAbhidhammaOdnonapravlennost5.setText("");
+            // Установите текст в пустую строку
+        } else {
+            if (clickedButton == buttonHarakteristika5) {
+                textViewAbhidhammaOdnonapravlennost5.setText(R.string.text_for_odnonapravlennost_harakteristika);
+                animateText(textViewAbhidhammaOdnonapravlennost5, getString(R.string.text_for_odnonapravlennost_harakteristika));
+            } else if (clickedButton == buttonFunkciya5) {
+                textViewAbhidhammaOdnonapravlennost5.setText(R.string.text_for_odnonapravlennost_function);
+                animateText(textViewAbhidhammaOdnonapravlennost5, getString(R.string.text_for_odnonapravlennost_function));
+            } else if (clickedButton == buttonProyavlenie5) {
+                textViewAbhidhammaOdnonapravlennost5.setText(R.string.text_for_odnonapravlennost_proyavlenie);
+                animateText(textViewAbhidhammaOdnonapravlennost5, getString(R.string.text_for_odnonapravlennost_proyavlenie));
+            } else if (clickedButton == buttonPrichina5) {
+                textViewAbhidhammaOdnonapravlennost5.setText(R.string.text_for_odnonapravlennost_prichina);
+                animateText(textViewAbhidhammaOdnonapravlennost5, getString(R.string.text_for_odnonapravlennost_prichina));
+            } else if (clickedButton == buttonOdnonapravlennost5) {
+                textViewAbhidhammaOdnonapravlennost5.setText(R.string.text_for_odnonapravlennost);
+                animateText(textViewAbhidhammaOdnonapravlennost5, getString(R.string.text_for_odnonapravlennost));
+            }
+
+            textViewAbhidhammaOdnonapravlennost5.setVisibility(View.VISIBLE);
+            lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
+        }
+    }
+
+    public void onButtonClickGroup6(View view) {
+        Button clickedButton = (Button) view;
+        int visibility = textViewAbhidhammaJivitindriya6.getVisibility();
+        textViewAbhidhammaChetasika1.setText("");
+        textViewAbhidhammaChuvstvo2.setText("");
+        textViewAbhidhammaVospriyatie3.setText("");
+        textViewAbhidhammaVolenie4.setText("");
+        textViewAbhidhammaOdnonapravlennost5.setText("");
+
+        // Если нажата та же кнопка, что и ранее
+        if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
+            textViewAbhidhammaJivitindriya6.setText("");
+            // Установите текст в пустую строку
+        } else {
+            if (clickedButton == buttonHarakteristika6) {
+                textViewAbhidhammaJivitindriya6.setText(R.string.text_for_jivitindriya_harakteristika);
+                animateText(textViewAbhidhammaJivitindriya6, getString(R.string.text_for_jivitindriya_harakteristika));
+            } else if (clickedButton == buttonFunkciya6) {
+                textViewAbhidhammaJivitindriya6.setText(R.string.text_for_jivitindriya_function);
+                animateText(textViewAbhidhammaJivitindriya6, getString(R.string.text_for_jivitindriya_function));
+            } else if (clickedButton == buttonProyavlenie6) {
+                textViewAbhidhammaJivitindriya6.setText(R.string.text_for_jivitindriya_proyavlenie);
+                animateText(textViewAbhidhammaJivitindriya6, getString(R.string.text_for_jivitindriya_proyavlenie));
+            } else if (clickedButton == buttonPrichina6) {
+                textViewAbhidhammaJivitindriya6.setText(R.string.text_for_jivitindriya_prichina);
+                animateText(textViewAbhidhammaJivitindriya6, getString(R.string.text_for_jivitindriya_prichina));
+            } else if (clickedButton == buttonJivitindriya6) {
+                textViewAbhidhammaJivitindriya6.setText(R.string.text_for_jivitindriya);
+                animateText(textViewAbhidhammaJivitindriya6, getString(R.string.text_for_jivitindriya));
+            }
+
+            textViewAbhidhammaJivitindriya6.setVisibility(View.VISIBLE);
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
     }
