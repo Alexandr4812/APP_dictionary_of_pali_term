@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".AbhidhammaChetasikasActivity">
+    tools:context=".AbhidhammaChetasikasEtichVerActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -14,7 +14,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
-        android:onClick="toAbhidhammaAct"
+        android:onClick="toChetasikasAct"
         android:scaleType="centerInside"
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,7 +66,7 @@
                 android:text="@string/universal" />
 
             <Button
-                android:id="@+id/button_chetasika_kontakt"
+                android:id="@+id/button_mentalnie_enich_ver_faktori"
                 style="@style/button_activity_declomation_main"
                 android:text="@string/button_kontakt"
                 android:onClick="onButtonClickGroup1"
@@ -383,6 +383,60 @@
 
             <TextView
                 android:id="@+id/textViewAbhidhammaChetasikaJivitindriya6"
+                style="@style/TextMessageStyleAbhidyamma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/button_chetasika_vnimanie7"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/button_vnimanie"
+                android:onClick="onButtonClickGroup7"
+                tools:ignore="UsingOnClickInXml" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf" >
+
+                <Button
+                    android:id="@+id/button_chetasika_harakteristika7"
+                    style="@style/button_activity_chetasika"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickGroup7"
+                    android:text="@string/button_kontakt_harakteristika"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_chetasika_function7"
+                    style="@style/button_activity_chetasika"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickGroup7"
+                    android:text="@string/button_kontakt_function"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_chetasika_proyavlenie7"
+                    style="@style/button_activity_chetasika"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickGroup7"
+                    android:text="@string/button_kontakt_proyavlenie"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_chetasika_prichina7"
+                    style="@style/button_activity_chetasika"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickGroup7"
+                    android:text="@string/button_kontakt_prichina"
+                    tools:ignore="UsingOnClickInXml" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewAbhidhammaChetasikaVnimanie7"
                 style="@style/TextMessageStyleAbhidyamma"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

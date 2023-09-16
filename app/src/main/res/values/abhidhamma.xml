@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonAbhidhammaChetasika">ментальные факторы \n (chetasika)</string>
+    <string name="buttonAbhidhammaChetasika">54 ментальных фактора \n (chetasika)</string>
     <string name="button_kontakt">1 \nКонтакт \n(phassa)</string>
-    <string name="universal">Универсальные 7</string>
+    <string name="universal">Этически вериабельные \nУниверсальные 7</string>
     <string name="button_kontakt_harakteristika">Характеристика</string>
     <string name="button_kontakt_function">Функция</string>
     <string name="button_kontakt_proyavlenie">Проявление</string>
@@ -79,7 +79,7 @@
 
     <string name="button_jivitindriya">6 \nМентальная управляющая жизнь-способность \n(дживитиндрийа)</string>
 
-    <string name="text_for_jivitindriya">ДЖИВИТИНРИЙА: Существует два вида управляющей
+    <string name="text_for_jivitindriya">ДЖИВИТИНРИЙА (дживитиндрийа): Существует два вида управляющей
 жизнь-способности: ментальная, которая оживляет ассоциированные ментальные состояния, и физическая, которая
 оживляет материальные явления. Но в качестве четасики
 имеется в виду только ментальная управляющая жизнь-способность.</string>
@@ -88,4 +88,27 @@
     <string name="text_for_jivitindriya_function">ФУНКЦИЯ: делать так, чтобы ассоциированные ментальные состояния происходили.</string>
     <string name="text_for_jivitindriya_proyavlenie">ПРОЯВЛЕНИЕ: установление присутствия ассоциированных ментальных состояний.</string>
     <string name="text_for_jivitindriya_prichina">НЕПОСРЕДСТВЕННАЯ ПРИЧИНА: ментальные состояния, которые необходимо поддерживать.</string>
+
+    <string name="buttonAbhidhammaChetasikaEtichVerFakt">13 \n этически вериабельных ментальных факторов \n(Аннасамāначетасика)</string>
+
+
+    <string name="button_vnimanie">7 \nВнимание \n(манасикāра)</string>
+
+    <string name="text_for_vnimanie">ВНИМАНИЕ (манасикāра): это ментальный
+фактор, ответственный за направление ума к объекту, посредством чего объект становится представленным сознанию.
+    Внимание — как
+руль корабля, который направляет его к месту назначения,
+или как возничий, который посылает хорошо обученных
+лошадей (то есть ассоциированные состояния) по направлению к их месту назначения (объекту). Ментальный фактор
+манасикāра необходимо отличать от витакки: в то время
+как манасикāра направляет сопутствующие ему ментальные
+факторы к объекту, виттака применяет их к объекту. Манасикāра — обязательный познавательный фактор,
+        присутствующий во всех состояниях сознания; витакка — специ-
+ализированный фактор, не являющийся обязательным для
+процесса познания.</string>
+
+    <string name="text_for_vnimanie_harakteristika">ХАРАКТЕРИСТИКА: ведение (сāрана) ассоциированных ментальных состояний по направлению к объекту.</string>
+    <string name="text_for_vnimanie_function">ФУНКЦИЯ: привязывать ассоциированные состояния к объекту.</string>
+    <string name="text_for_vnimanie_proyavlenie">ПРОЯВЛЕНИЕ: проявляется как конфронтация с объектом.</string>
+    <string name="text_for_vnimanie_prichina">НЕПОСРЕДСТВЕННАЯ ПРИЧИНА: объект.</string>
 </resources>

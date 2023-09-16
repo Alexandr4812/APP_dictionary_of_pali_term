@@ -25,7 +25,7 @@
         tools:ignore="UsingOnClickInXml" />
 
     <ScrollView
-        android:id="@+id/viewScrollAbhidhamma"
+        android:id="@+id/viewScrollAbhidhammaMentalfakt"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
@@ -35,7 +35,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollAbhidhamma"
+            android:id="@+id/linearLayoutScrollAbhidhammaMentalFakt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -46,7 +46,7 @@
                 tools:ignore="ContentDescription" />
 
             <Button
-                android:id="@+id/button_chetasika_kontakt"
+                android:id="@+id/button_mentalnie_enich_ver_faktori"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toChetasikasAct"
                 android:layout_width="match_parent"

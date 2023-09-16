@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonAbhidhammaChetasika">mental factors \n (chetasika)</string>
+    <string name="buttonAbhidhammaChetasika">54 mental factors\n(chetasika)</string>
     <string name="button_kontakt">1 \ncontact \n(phassa)</string>
     <string name="universal">Universal 7</string>
     <string name="button_kontakt_harakteristika">Characteristic</string>
@@ -94,5 +94,27 @@ This means only the mental life-controlling ability.</string>
     <string name="text_for_jivitindriya_function">FUNCTION: to cause associated mental states to occur.</string>
     <string name="text_for_jivitindriya_proyavlenie">MANIFESTATION: establishing the presence of associated mental states.</string>
     <string name="text_for_jivitindriya_prichina">IMMEDIATE CAUSE: mental states that need to be maintained.</string>
+
+    <string name="buttonAbhidhammaChetasikaEtichVerFakt">13 \n Ethically Verifiable Mental Factors \n(Annasamānachetasika)</string>
+
+    <string name="button_vnimanie">7 \nAttention \n(manasikara)</string>
+
+    <string name="text_for_vnimanie">ATTENTION (manasikāra): this is mental
+the factor responsible for directing the mind towards an object, whereby the object becomes presented to the consciousness.
+     Attention - how
+the ship`s rudder, which guides it to its destination,
+or like a charioteer who sends well-trained
+horses (i.e. associated states) towards their destination (object). Mental factor
+manasikāra must be distinguished from vitakka: at that time
+how manasikāra directs the accompanying mental
+factors to an object, Vittaka applies them to the object. Manasikāra is an obligatory cognitive factor,
+         present in all states of consciousness; vitakka - special
+alised factor that is not mandatory for
+process of cognition.</string>
+
+    <string name="text_for_vnimanie_harakteristika">CHARACTERISTICS: leading (sārana) of associated mental states towards an object.</string>
+    <string name="text_for_vnimanie_function">FUNCTION: bind associated states to an object.</string>
+    <string name="text_for_vnimanie_proyavlenie">MANIFESTATION: manifests itself as a confrontation with the object.</string>
+    <string name="text_for_vnimanie_prichina">IMMEDIATE CAUSE: object.</string>
 
 </resources>
