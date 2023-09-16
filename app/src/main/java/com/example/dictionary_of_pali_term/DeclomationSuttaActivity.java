@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class DeclomationSuttaActivity extends AppCompatActivity {
+public class DeclomationSuttaActivity extends BaseActivityClass {
 
     private TextView textMaxTime;
     private TextView textCurrentPosition;
@@ -29,7 +29,7 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
 
     private SeekBar seekBar;
     private MediaPlayer mediaPlayer;
-    private Handler threadHandler = new Handler();
+    private final Handler threadHandler = new Handler();
 
     private ScrollView scrollText;
     private ScrollView scrollTextMangala;
@@ -39,7 +39,6 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
     private int flagMettaSutta;
     private int flagMangalaSutta;
     private int flagRatanaSutta;
-    private int flagGirimanandaSutta;
 
 
     @Override
@@ -47,10 +46,7 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_declomation_sutta);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
         this.textMaxTime = (TextView) findViewById(R.id.textMaxTime);
         this.textCurrentPosition = (TextView) findViewById(R.id.textCurrentPosition);
@@ -102,43 +98,27 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
             }
         });
 
-        this.buttonStop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mediaPlayer.pause();
-                mediaPlayer.seekTo(0);
-                seekBar.setVisibility(View.INVISIBLE);
-                textMaxTime.setVisibility(View.INVISIBLE);
-                textCurrentPosition.setVisibility(View.INVISIBLE);
-                buttonStop.setVisibility(View.INVISIBLE);
-                buttonRewind.setVisibility(View.INVISIBLE);
-                buttonFastForward.setVisibility(View.INVISIBLE);
-                buttonPause.setVisibility(View.INVISIBLE);
-                buttonStart.setVisibility(View.VISIBLE);
-            }
+        this.buttonStop.setOnClickListener(view -> {
+            mediaPlayer.pause();
+            mediaPlayer.seekTo(0);
+            seekBar.setVisibility(View.INVISIBLE);
+            textMaxTime.setVisibility(View.INVISIBLE);
+            textCurrentPosition.setVisibility(View.INVISIBLE);
+            buttonStop.setVisibility(View.INVISIBLE);
+            buttonRewind.setVisibility(View.INVISIBLE);
+            buttonFastForward.setVisibility(View.INVISIBLE);
+            buttonPause.setVisibility(View.INVISIBLE);
+            buttonStart.setVisibility(View.VISIBLE);
         });
 
-        this.buttonPause.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mediaPlayer.pause();
-                buttonStop.setVisibility(View.INVISIBLE);
-                buttonStart.setVisibility(View.VISIBLE);
-            }
+        this.buttonPause.setOnClickListener(view -> {
+            mediaPlayer.pause();
+            buttonStop.setVisibility(View.INVISIBLE);
+            buttonStart.setVisibility(View.VISIBLE);
         });
 
-        this.buttonRewind.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doRewind( );
-            }
-        });
-        this.buttonFastForward .setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doFastForward( );
-            }
-        });
+        this.buttonRewind.setOnClickListener(v -> doRewind( ));
+        this.buttonFastForward .setOnClickListener(v -> doFastForward( ));
     }
 
 
@@ -271,7 +251,6 @@ public class DeclomationSuttaActivity extends AppCompatActivity {
 
     private void doRewind( )  {
         int currentPosition = this.mediaPlayer.getCurrentPosition();
-        int duration = this.mediaPlayer.getDuration();
         int SUBTRACT_TIME = 5000;
 
         if(currentPosition - SUBTRACT_TIME > 0 )  {

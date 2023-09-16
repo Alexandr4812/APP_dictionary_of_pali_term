@@ -1,21 +1,14 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
-import java.io.File;
-
-public class SuttasDighaActivity extends AppCompatActivity {
+public class SuttasDighaActivity extends BaseActivityClass {
     //"file:///android_asset/canon/Teaching/Canon/Suttanta/digha.html"
 
     private Button buttonBack;
@@ -32,10 +25,7 @@ public class SuttasDighaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_digha);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
         buttonBack = findViewById(R.id.buttonliveToBeforePage);
         webView = findViewById(R.id.webView);
@@ -48,9 +38,9 @@ public class SuttasDighaActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
         webView.clearCache(true);
 
-// Загрузка первой страницы
+        // Загрузка первой страницы
         webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/digha.html");
-// Обработка переходов между страницами через ссылки
+        // Обработка переходов между страницами через ссылки
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {

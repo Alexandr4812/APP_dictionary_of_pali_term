@@ -1,17 +1,14 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
-public class SuttasByCategoryActivity extends AppCompatActivity {
+public class SuttasByCategoryActivity extends BaseActivityClass {
 
     private Button buttonBack;
     private WebView webView;
@@ -27,10 +24,7 @@ public class SuttasByCategoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_by_category);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
         buttonBack = findViewById(R.id.buttonliveToBeforePage);
         webView = findViewById(R.id.webViewByCategory);
@@ -57,12 +51,7 @@ public class SuttasByCategoryActivity extends AppCompatActivity {
             }
         });
 
-        buttonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goBack();
-            }
-        });
+        buttonBack.setOnClickListener(v -> goBack());
     }
 
     private void goBack() {

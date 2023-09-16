@@ -1,23 +1,19 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-public class RulesBhikkhuPatimokhaSanghadisesaActivity extends AppCompatActivity {
+public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass {
 
     private TextView textView;
     private String textToAnimate;
-    private int currentIndex = 0;
 
     private Button buttonHome;
     private Button buttonBack;
@@ -27,10 +23,7 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_sanghadisesa);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
         this.buttonBack = (Button) findViewById(R.id.buttonliveToSanghadisesa);
         this.buttonHome = (Button) findViewById(R.id.buttonSanghadisesaHome);

@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
@@ -15,13 +14,10 @@ import android.os.Handler;
 import android.widget.TextView;
 import java.util.concurrent.TimeUnit;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
+public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
 
     private TextView textView;
     private String textToAnimate;
-    private int currentIndex = 0;
 
     private TextView textMaxTimeParajika;
     private TextView textCurrentPositionParajika;
@@ -36,7 +32,7 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
     private SeekBar seekBarParajika;
     private MediaPlayer mediaPlayer;
-    private Handler threadHandler = new Handler();
+    private final Handler threadHandler = new Handler();
 
     private ScrollView scrollTextParajika1;
     private ScrollView scrollTextParajika2;
@@ -53,10 +49,7 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_parajika);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
         textView = findViewById(R.id.textViewHintParajika);
         textToAnimate = getString(R.string.textViewHintParajika);
@@ -79,77 +72,58 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
         this.seekBarParajika = findViewById(R.id.seekBarParajika);
 
-        this.buttonStartParajika.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        this.buttonStartParajika.setOnClickListener(v -> {
 
-                if(mediaPlayer.isPlaying()) {
-                    return;
-                }
-
-                int duration = mediaPlayer.getDuration();
-                int currentPosition = mediaPlayer.getCurrentPosition();
-
-                if(currentPosition== 0)  {
-                    seekBarParajika.setMax(duration);
-                    String maxTimeString = millisecondsToString(duration);
-                    textMaxTimeParajika.setText(maxTimeString);
-                } else if(currentPosition== duration)  {
-                    mediaPlayer.reset();
-                }
-
-                UpdateSeekBarThread updateSeekBarThread= new UpdateSeekBarThread();
-                threadHandler.postDelayed(updateSeekBarThread,100);
-
-                mediaPlayer.start();
-                seekBarParajika.setVisibility(View.VISIBLE);
-                textMaxTimeParajika.setVisibility(View.VISIBLE);
-                textCurrentPositionParajika.setVisibility(View.VISIBLE);
-                buttonStopParajika.setVisibility(View.VISIBLE);
-                buttonRewindParajika.setVisibility(View.VISIBLE);
-                buttonFastForwardParajika.setVisibility(View.VISIBLE);
-                buttonPauseParajika.setVisibility(View.VISIBLE);
-                buttonStartParajika.setVisibility(View.INVISIBLE);
+            if(mediaPlayer.isPlaying()) {
+                return;
             }
+
+            int duration = mediaPlayer.getDuration();
+            int currentPosition = mediaPlayer.getCurrentPosition();
+
+            if(currentPosition== 0)  {
+                seekBarParajika.setMax(duration);
+                String maxTimeString = millisecondsToString(duration);
+                textMaxTimeParajika.setText(maxTimeString);
+            } else if(currentPosition== duration)  {
+                mediaPlayer.reset();
+            }
+
+            UpdateSeekBarThread updateSeekBarThread= new UpdateSeekBarThread();
+            threadHandler.postDelayed(updateSeekBarThread,100);
+
+            mediaPlayer.start();
+            seekBarParajika.setVisibility(View.VISIBLE);
+            textMaxTimeParajika.setVisibility(View.VISIBLE);
+            textCurrentPositionParajika.setVisibility(View.VISIBLE);
+            buttonStopParajika.setVisibility(View.VISIBLE);
+            buttonRewindParajika.setVisibility(View.VISIBLE);
+            buttonFastForwardParajika.setVisibility(View.VISIBLE);
+            buttonPauseParajika.setVisibility(View.VISIBLE);
+            buttonStartParajika.setVisibility(View.INVISIBLE);
         });
 
-        this.buttonStopParajika.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mediaPlayer.pause();
-                mediaPlayer.seekTo(0);
-                seekBarParajika.setVisibility(View.INVISIBLE);
-                textMaxTimeParajika.setVisibility(View.INVISIBLE);
-                textCurrentPositionParajika.setVisibility(View.INVISIBLE);
-                buttonStopParajika.setVisibility(View.INVISIBLE);
-                buttonRewindParajika.setVisibility(View.INVISIBLE);
-                buttonFastForwardParajika.setVisibility(View.INVISIBLE);
-                buttonPauseParajika.setVisibility(View.INVISIBLE);
-                buttonStartParajika.setVisibility(View.VISIBLE);
-            }
+        this.buttonStopParajika.setOnClickListener(view -> {
+            mediaPlayer.pause();
+            mediaPlayer.seekTo(0);
+            seekBarParajika.setVisibility(View.INVISIBLE);
+            textMaxTimeParajika.setVisibility(View.INVISIBLE);
+            textCurrentPositionParajika.setVisibility(View.INVISIBLE);
+            buttonStopParajika.setVisibility(View.INVISIBLE);
+            buttonRewindParajika.setVisibility(View.INVISIBLE);
+            buttonFastForwardParajika.setVisibility(View.INVISIBLE);
+            buttonPauseParajika.setVisibility(View.INVISIBLE);
+            buttonStartParajika.setVisibility(View.VISIBLE);
         });
 
-        this.buttonPauseParajika.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mediaPlayer.pause();
-                buttonStopParajika.setVisibility(View.INVISIBLE);
-                buttonStartParajika.setVisibility(View.VISIBLE);
-            }
+        this.buttonPauseParajika.setOnClickListener(view -> {
+            mediaPlayer.pause();
+            buttonStopParajika.setVisibility(View.INVISIBLE);
+            buttonStartParajika.setVisibility(View.VISIBLE);
         });
 
-        this.buttonRewindParajika.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doRewind( );
-            }
-        });
-        this.buttonFastForwardParajika.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doFastForward( );
-            }
-        });
+        this.buttonRewindParajika.setOnClickListener(v -> doRewind( ));
+        this.buttonFastForwardParajika.setOnClickListener(v -> doFastForward( ));
     }
 
     private void animateText() {

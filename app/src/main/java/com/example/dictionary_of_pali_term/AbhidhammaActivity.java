@@ -1,29 +1,23 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class AbhidhammaActivity extends AppCompatActivity {
+public class AbhidhammaActivity extends BaseActivityClass {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
-        Button button1 = findViewById(R.id.button_mentalnie_enich_ver_faktori);
+        Button button1 = findViewById(R.id.button_chetasika_kontakt);
         ImageView im1 = findViewById(R.id.imageVievAbhidhamma1);
 
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);

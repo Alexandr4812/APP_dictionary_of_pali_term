@@ -1,15 +1,12 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
-public class DeclomationParittaActivity extends AppCompatActivity {
+public class DeclomationParittaActivity extends BaseActivityClass {
     private Button buttonHome;
     private Button buttonLiveToParitta;
 
@@ -18,10 +15,7 @@ public class DeclomationParittaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_declomation_paritta);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
         this.buttonHome = findViewById(R.id.buttonParittaHome);
         this.buttonLiveToParitta = findViewById(R.id.buttonliveToParitta);
@@ -48,7 +42,7 @@ public class DeclomationParittaActivity extends AppCompatActivity {
 
     public void tobackParitta(View view) {
         ScrollView scrollTextMora = findViewById(R.id.overScrollTextMoraParitta);
-        scrollTextMora.setVisibility(view.INVISIBLE);
+        scrollTextMora.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
         buttonLiveToParitta.setVisibility(View.INVISIBLE);
     }
@@ -57,6 +51,6 @@ public class DeclomationParittaActivity extends AppCompatActivity {
         buttonHome.setVisibility(View.VISIBLE);
         buttonLiveToParitta.setVisibility(View.VISIBLE);
         ScrollView scrollText = findViewById(R.id.overScrollTextMoraParitta);
-        scrollText.setVisibility(view.VISIBLE);
+        scrollText.setVisibility(View.VISIBLE);
     }
 }

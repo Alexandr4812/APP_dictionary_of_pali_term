@@ -1,15 +1,12 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
-public class RulesSamaneraActivity extends AppCompatActivity {
+public class RulesSamaneraActivity extends BaseActivityClass {
 
     private Button buttonHome;
     private Button buttonLiveToRulesSamanera;
@@ -19,10 +16,7 @@ public class RulesSamaneraActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_samanera);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
         this.buttonHome = findViewById(R.id.buttonRulesSamaneraHome);
         this.buttonLiveToRulesSamanera = findViewById(R.id.buttonliveToRulesSamanera);
@@ -61,14 +55,14 @@ public class RulesSamaneraActivity extends AppCompatActivity {
 
     public void toTextNissaya(View view) {
         ScrollView scrollText = findViewById(R.id.viewScrollRulesSamaneraNissaya);
-        scrollText.setVisibility(view.VISIBLE);
+        scrollText.setVisibility(View.VISIBLE);
         buttonHome.setVisibility(View.VISIBLE);
         buttonLiveToRulesSamanera.setVisibility(View.VISIBLE);
     }
 
     public void tobackDhammapada(View view) {
         ScrollView scrollTextNissaya = findViewById(R.id.viewScrollRulesSamaneraNissaya);
-        scrollTextNissaya.setVisibility(view.INVISIBLE);
+        scrollTextNissaya.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
         buttonLiveToRulesSamanera.setVisibility(View.INVISIBLE);
     }

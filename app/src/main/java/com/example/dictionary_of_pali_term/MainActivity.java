@@ -1,44 +1,28 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.ValueAnimator;
-import android.content.res.Configuration;
-
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivityClass {
 
     ImageButton imageButtonRu;
     ImageButton imageButtonEn;
-
-    private TextView textView0;
-    private TextView textView1;
-    private TextView textView2;
-    private TextView textView3;
-    private TextView textView4;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
         imageButtonRu = findViewById(R.id.imageButtonRu);
         imageButtonEn = findViewById(R.id.imageButtonUk);
@@ -53,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
         ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
-        scrollText.setVisibility(view.INVISIBLE);
+        scrollText.setVisibility(View.INVISIBLE);
         imageButtonEx.setVisibility(View.INVISIBLE);
         imageButtonM.setVisibility(View.VISIBLE);
     }
@@ -65,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
         ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
-        scrollText.setVisibility(view.INVISIBLE);
+        scrollText.setVisibility(View.INVISIBLE);
         imageButtonEx.setVisibility(View.INVISIBLE);
         imageButtonM.setVisibility(View.VISIBLE);
     }
@@ -142,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton imageButtonM = findViewById(R.id.button_menu);
 
 
-        scrollText.setVisibility(view.VISIBLE);
+        scrollText.setVisibility(View.VISIBLE);
         imageButtonEx.setVisibility(View.VISIBLE);
         imageButtonM.setVisibility(View.INVISIBLE);
     }
@@ -151,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
         ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
-        scrollText.setVisibility(view.INVISIBLE);
+        scrollText.setVisibility(View.INVISIBLE);
         imageButtonEx.setVisibility(View.INVISIBLE);
         imageButtonM.setVisibility(View.VISIBLE);
     }
