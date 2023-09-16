@@ -17,7 +17,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
 
         setWindowFlagsFullscreenAndNoLimits();
 
-        Button button1 = findViewById(R.id.button_chetasika_kontakt);
+        Button button1 = findViewById(R.id.button_mentalnie_enich_ver_faktori);
         ImageView im1 = findViewById(R.id.imageVievAbhidhamma1);
 
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
