@@ -1,18 +1,14 @@
 package com.example.dictionary_of_pali_term;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.os.Handler;
 import android.widget.TextView;
 import java.util.concurrent.TimeUnit;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class DeclomationSuttaActivity extends BaseActivityClass {
 
@@ -48,14 +44,14 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
 
         setWindowFlagsFullscreenAndNoLimits();
 
-        this.textMaxTime = (TextView) findViewById(R.id.textMaxTime);
-        this.textCurrentPosition = (TextView) findViewById(R.id.textCurrentPosition);
+        this.textMaxTime = findViewById(R.id.textMaxTime);
+        this.textCurrentPosition = findViewById(R.id.textCurrentPosition);
 
-        this.buttonStart = (Button) findViewById(R.id.buttonPlayMettaSutta);
-        this.buttonStop = (Button) findViewById(R.id.buttonStopMettaSutta);
-        this.buttonPause = (Button) findViewById(R.id.buttonPauseMettaSutta);
-        this.buttonRewind = (Button) findViewById(R.id.buttonRewindMettaSutta);
-        this.buttonFastForward = (Button) findViewById(R.id.buttonFastForward);
+        this.buttonStart = findViewById(R.id.buttonPlayMettaSutta);
+        this.buttonStop = findViewById(R.id.buttonStopMettaSutta);
+        this.buttonPause = findViewById(R.id.buttonPauseMettaSutta);
+        this.buttonRewind = findViewById(R.id.buttonRewindMettaSutta);
+        this.buttonFastForward = findViewById(R.id.buttonFastForward);
 
         this.scrollText = findViewById(R.id.suttaScrollTextMetta);
         this.scrollTextMangala = findViewById(R.id.suttaScrollTextSuttaMangala);
@@ -64,38 +60,35 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
 
         this.seekBar = findViewById(R.id.seekBar);
 
-        this.buttonStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        this.buttonStart.setOnClickListener(v -> {
 
-                if(mediaPlayer.isPlaying()) {
-                    return;
-                }
-
-                int duration = mediaPlayer.getDuration();
-                int currentPosition = mediaPlayer.getCurrentPosition();
-
-                if(currentPosition== 0)  {
-                    seekBar.setMax(duration);
-                    String maxTimeString = millisecondsToString(duration);
-                    textMaxTime.setText(maxTimeString);
-                } else if(currentPosition== duration)  {
-                    mediaPlayer.reset();
-                }
-
-                UpdateSeekBarThread updateSeekBarThread= new UpdateSeekBarThread();
-                threadHandler.postDelayed(updateSeekBarThread,100);
-
-                mediaPlayer.start();
-                seekBar.setVisibility(View.VISIBLE);
-                textMaxTime.setVisibility(View.VISIBLE);
-                textCurrentPosition.setVisibility(View.VISIBLE);
-                buttonStop.setVisibility(View.VISIBLE);
-                buttonRewind.setVisibility(View.VISIBLE);
-                buttonFastForward.setVisibility(View.VISIBLE);
-                buttonPause.setVisibility(View.VISIBLE);
-                buttonStart.setVisibility(View.INVISIBLE);
+            if(mediaPlayer.isPlaying()) {
+                return;
             }
+
+            int duration = mediaPlayer.getDuration();
+            int currentPosition = mediaPlayer.getCurrentPosition();
+
+            if(currentPosition== 0)  {
+                seekBar.setMax(duration);
+                String maxTimeString = millisecondsToString(duration);
+                textMaxTime.setText(maxTimeString);
+            } else if(currentPosition== duration)  {
+                mediaPlayer.reset();
+            }
+
+            UpdateSeekBarThread updateSeekBarThread= new UpdateSeekBarThread();
+            threadHandler.postDelayed(updateSeekBarThread,100);
+
+            mediaPlayer.start();
+            seekBar.setVisibility(View.VISIBLE);
+            textMaxTime.setVisibility(View.VISIBLE);
+            textCurrentPosition.setVisibility(View.VISIBLE);
+            buttonStop.setVisibility(View.VISIBLE);
+            buttonRewind.setVisibility(View.VISIBLE);
+            buttonFastForward.setVisibility(View.VISIBLE);
+            buttonPause.setVisibility(View.VISIBLE);
+            buttonStart.setVisibility(View.INVISIBLE);
         });
 
         this.buttonStop.setOnClickListener(view -> {
@@ -124,21 +117,15 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
 
     public void toMainAct(View view){
         this.mediaPlayer.pause();
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toMainActextra(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toDeclomation(View view){
-        Intent intent = new Intent(this, DeklomationMainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(DeklomationMainActivity.class);
     }
 
     public void toDeclomaciyaSuttaMetta(View view) {
@@ -147,9 +134,9 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
 
         this.scrollText.setVisibility(View.VISIBLE);
 
-        this.buttonBack = (Button) findViewById(R.id.buttonliveToDeclomationSutta);
-        this.buttonHome = (Button) findViewById(R.id.buttonliveHomeFromMettaSutta);
-        this.buttonStart = (Button) findViewById(R.id.buttonPlayMettaSutta);
+        this.buttonBack = findViewById(R.id.buttonliveToDeclomationSutta);
+        this.buttonHome = findViewById(R.id.buttonliveHomeFromMettaSutta);
+        this.buttonStart = findViewById(R.id.buttonPlayMettaSutta);
 
         this.buttonBack.setVisibility(View.VISIBLE);
         this.buttonHome.setVisibility(View.VISIBLE);
@@ -162,9 +149,9 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
 
         this.scrollTextMangala.setVisibility(View.VISIBLE);
 
-        this.buttonBack = (Button) findViewById(R.id.buttonliveToDeclomationSutta);
-        this.buttonHome = (Button) findViewById(R.id.buttonliveHomeFromMettaSutta);
-        this.buttonStart = (Button) findViewById(R.id.buttonPlayMettaSutta);
+        this.buttonBack = findViewById(R.id.buttonliveToDeclomationSutta);
+        this.buttonHome = findViewById(R.id.buttonliveHomeFromMettaSutta);
+        this.buttonStart = findViewById(R.id.buttonPlayMettaSutta);
 
         this.buttonBack.setVisibility(View.VISIBLE);
         this.buttonHome.setVisibility(View.VISIBLE);
@@ -177,9 +164,9 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
 
         this.scrollTextRatana.setVisibility(View.VISIBLE);
 
-        this.buttonBack = (Button) findViewById(R.id.buttonliveToDeclomationSutta);
-        this.buttonHome = (Button) findViewById(R.id.buttonliveHomeFromMettaSutta);
-        this.buttonStart = (Button) findViewById(R.id.buttonPlayMettaSutta);
+        this.buttonBack = findViewById(R.id.buttonliveToDeclomationSutta);
+        this.buttonHome = findViewById(R.id.buttonliveHomeFromMettaSutta);
+        this.buttonStart = findViewById(R.id.buttonPlayMettaSutta);
 
         this.buttonBack.setVisibility(View.VISIBLE);
         this.buttonHome.setVisibility(View.VISIBLE);
@@ -192,9 +179,9 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
 
         this.scrollTextGirimananda.setVisibility(View.VISIBLE);
 
-        this.buttonBack = (Button) findViewById(R.id.buttonliveToDeclomationSutta);
-        this.buttonHome = (Button) findViewById(R.id.buttonliveHomeFromMettaSutta);
-        this.buttonStart = (Button) findViewById(R.id.buttonPlayMettaSutta);
+        this.buttonBack = findViewById(R.id.buttonliveToDeclomationSutta);
+        this.buttonHome = findViewById(R.id.buttonliveHomeFromMettaSutta);
+        this.buttonStart = findViewById(R.id.buttonPlayMettaSutta);
 
         this.buttonBack.setVisibility(View.VISIBLE);
         this.buttonHome.setVisibility(View.VISIBLE);
@@ -245,7 +232,7 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
     }
 
     private String millisecondsToString(int milliseconds)  {
-        long seconds =  TimeUnit.MILLISECONDS.toSeconds((long) milliseconds) ;
+        long seconds =  TimeUnit.MILLISECONDS.toSeconds((milliseconds) ;
         return seconds + " sec";
     }
 
@@ -283,9 +270,7 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, DeklomationMainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(DeklomationMainActivity.class);
         this.mediaPlayer.pause();
     }
 

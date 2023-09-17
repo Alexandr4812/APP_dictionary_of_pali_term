@@ -3,7 +3,6 @@ package com.example.dictionary_of_pali_term;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -25,8 +24,8 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
 
         setWindowFlagsFullscreenAndNoLimits();
 
-        this.buttonBack = (Button) findViewById(R.id.buttonliveToSanghadisesa);
-        this.buttonHome = (Button) findViewById(R.id.buttonSanghadisesaHome);
+        this.buttonBack = findViewById(R.id.buttonliveToSanghadisesa);
+        this.buttonHome = findViewById(R.id.buttonSanghadisesaHome);
 
         textView = findViewById(R.id.textViewHintSangkhadisesa);
         textToAnimate = getString(R.string.textViewHintParajika);
@@ -37,13 +36,10 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     private void animateText() {
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(2000); // Продолжительность анимации в миллисекундах
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                int animatedValue = (int) animation.getAnimatedValue();
-                String partialText = textToAnimate.substring(0, animatedValue);
-                textView.setText(partialText);
-            }
+        animator.addUpdateListener(animation -> {
+            int animatedValue = (int) animation.getAnimatedValue();
+            String partialText = textToAnimate.substring(0, animatedValue);
+            textView.setText(partialText);
         });
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
@@ -56,22 +52,16 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesBhikkhuActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
     }
 
     public void toRulesPatimokhaAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuPatimokhaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaActivity.class);
     }
 
     public void toSanghadisesaAbout(View view) {

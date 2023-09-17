@@ -1,6 +1,5 @@
 package com.example.dictionary_of_pali_term;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -15,22 +14,16 @@ public class RulesSamaneraPabbajjaActivity extends BaseActivityClass {
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesSamaneraActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesSamaneraActivity.class);
     }
 
     public void toRulesSamaneraAct(View view){
-        Intent intent = new Intent(this, RulesSamaneraActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesSamaneraActivity.class);
     }
 
 

@@ -1,6 +1,5 @@
 package com.example.dictionary_of_pali_term;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ScrollView;
@@ -16,9 +15,7 @@ public class LiveBuddhaActivity extends BaseActivityClass {
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toSumedha(View view) {
@@ -62,9 +59,7 @@ public class LiveBuddhaActivity extends BaseActivityClass {
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
 }

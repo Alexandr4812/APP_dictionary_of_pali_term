@@ -1,6 +1,5 @@
 package com.example.dictionary_of_pali_term;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ScrollView;
@@ -16,22 +15,16 @@ public class RulesSamaneraSekhiyaActivity extends BaseActivityClass {
     }
 
     public void toRulesSamaneraAct(View view){
-        Intent intent = new Intent(this, RulesSamaneraActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesSamaneraActivity.class);
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesSamaneraActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesSamaneraActivity.class);
     }
 
     public void toComm1(View view) {

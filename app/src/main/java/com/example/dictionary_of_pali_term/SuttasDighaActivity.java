@@ -1,6 +1,5 @@
 package com.example.dictionary_of_pali_term;
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,6 @@ import android.widget.Button;
 public class SuttasDighaActivity extends BaseActivityClass {
     //"file:///android_asset/canon/Teaching/Canon/Suttanta/digha.html"
 
-    private Button buttonBack;
     private WebView webView;
 
     @Override
@@ -27,7 +25,7 @@ public class SuttasDighaActivity extends BaseActivityClass {
 
         setWindowFlagsFullscreenAndNoLimits();
 
-        buttonBack = findViewById(R.id.buttonliveToBeforePage);
+        Button buttonBack = findViewById(R.id.buttonliveToBeforePage);
         webView = findViewById(R.id.webView);
 
         webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование
@@ -52,12 +50,7 @@ public class SuttasDighaActivity extends BaseActivityClass {
             }
         });
 
-        buttonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goBack();
-            }
-        });
+        buttonBack.setOnClickListener(v -> goBack());
 
     }
 
@@ -75,21 +68,15 @@ public class SuttasDighaActivity extends BaseActivityClass {
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toSuttasAct(View view){
-        Intent intent = new Intent(this, SuttasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, SuttasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasActivity.class);
     }
 }

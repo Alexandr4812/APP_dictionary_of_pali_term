@@ -1,6 +1,5 @@
 package com.example.dictionary_of_pali_term;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ScrollView;
@@ -16,9 +15,7 @@ public class DeclomationOverActivity extends BaseActivityClass {
     }
 
     public void toDeclomation(View view){
-        Intent intent = new Intent(this, DeklomationMainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(DeklomationMainActivity.class);
     }
 
     public void toDeclomaciyaPeredObedom(View view) {
@@ -53,15 +50,11 @@ public class DeclomationOverActivity extends BaseActivityClass {
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, DeklomationMainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(DeklomationMainActivity.class);
     }
 }

@@ -53,13 +53,10 @@ public class SuttasActivity extends BaseActivityClass {
     private void animateText(TextView targetTextView, String textToAnimate) {
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(2000); // Продолжительность анимации в миллисекундах
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                int animatedValue = (int) animation.getAnimatedValue();
-                String partialText = textToAnimate.substring(0, animatedValue);
-                targetTextView.setText(partialText);
-            }
+        animator.addUpdateListener(animation -> {
+            int animatedValue = (int) animation.getAnimatedValue();
+            String partialText = textToAnimate.substring(0, animatedValue);
+            targetTextView.setText(partialText);
         });
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
@@ -80,51 +77,35 @@ public class SuttasActivity extends BaseActivityClass {
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toSuttasDighaAct(View view){
-        Intent intent = new Intent(this, SuttasDighaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasDighaActivity.class);
     }
 
     public void toSuttasMajjhimaAct(View view){
-        Intent intent = new Intent(this, SuttasMajjhimaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasMajjhimaActivity.class);
     }
 
     public void toSuttasSanyuttaAct(View view){
-        Intent intent = new Intent(this, SuttasSanyuttaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasSanyuttaActivity.class);
     }
 
     public void toSuttasAnguttaraAct(View view){
-        Intent intent = new Intent(this, SuttasAnguttaraActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasAnguttaraActivity.class);
     }
 
     public void toSuttasKuddakaAct(View view){
-        Intent intent = new Intent(this, SuttasKuddakaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasKuddakaActivity.class);
     }
 
     public void toSuttasByCategory(View view){
-        Intent intent = new Intent(this, SuttasByCategoryActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasByCategoryActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 }

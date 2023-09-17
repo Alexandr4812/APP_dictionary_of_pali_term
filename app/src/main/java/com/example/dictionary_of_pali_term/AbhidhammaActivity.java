@@ -1,6 +1,5 @@
 package com.example.dictionary_of_pali_term;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -22,28 +21,21 @@ public class AbhidhammaActivity extends BaseActivityClass {
 
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
         Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
-        Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
 
         button1.startAnimation(slideFromLeftAnimation);
         im1.startAnimation(slideDown);
     }
 
     public void toChetasikasAct(View view){
-        Intent intent = new Intent(this, AbhidhammaChetasikasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(AbhidhammaChetasikasActivity.class);
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 }

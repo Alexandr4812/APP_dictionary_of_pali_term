@@ -1,6 +1,5 @@
 package com.example.dictionary_of_pali_term;
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 import java.util.Locale;
 
 public class MainActivity extends BaseActivityClass {
-
     ImageButton imageButtonRu;
     ImageButton imageButtonEn;
 
@@ -26,7 +24,6 @@ public class MainActivity extends BaseActivityClass {
 
         imageButtonRu = findViewById(R.id.imageButtonRu);
         imageButtonEn = findViewById(R.id.imageButtonUk);
-
     }
 
 
@@ -67,52 +64,40 @@ public class MainActivity extends BaseActivityClass {
                                 .getDisplayMetrics());
         setTitle(R.string.app_name);
 
-        TextView tv = (TextView) findViewById(R.id.textView4);
+        TextView tv = findViewById(R.id.textView4);
         tv.setText(R.string.mainButtonLiveBuddha);
-        tv = (TextView) findViewById(R.id.textView3);
+        tv = findViewById(R.id.textView3);
         tv.setText(R.string.mainButtonStofiDlyaDeclomacii);
-        tv = (TextView) findViewById(R.id.textView2);
+        tv = findViewById(R.id.textView2);
         tv.setText(R.string.mainButtonShortSuttas);
-        tv = (TextView) findViewById(R.id.textView1);
+        tv = findViewById(R.id.textView1);
         tv.setText(R.string.mainButtonMonksRules);
-        tv = (TextView) findViewById(R.id.textView0);
+        tv = findViewById(R.id.textView0);
         tv.setText(R.string.mainButtonMonksAbhidhamma);
     }
 
     public void toLiveBu(View view){
-        Intent intent = new Intent(this, LiveBuddhaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(LiveBuddhaActivity.class);
     }
 
     public void toDeclomation(View view){
-        Intent intent = new Intent(this, DeklomationMainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(DeklomationMainActivity.class);
     }
 
     public void toSuttas(View view){
-        Intent intent = new Intent(this, SuttasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasActivity.class);
     }
 
     public void toRulesAct(View view){
-        Intent intent = new Intent(this, RulesActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesActivity.class);
     }
 
     public void toAbhidhammaAct(View view){
-        Intent intent = new Intent(this, AbhidhammaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(AbhidhammaActivity.class);
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toPopupMenu(View view) {

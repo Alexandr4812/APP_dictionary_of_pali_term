@@ -1,6 +1,5 @@
 package com.example.dictionary_of_pali_term;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -23,34 +22,24 @@ public class RulesSamaneraActivity extends BaseActivityClass {
     }
 
     public void toRulesSekhiyaAct(View view){
-        Intent intent = new Intent(this, RulesSamaneraSekhiyaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesSamaneraSekhiyaActivity.class);
     }
 
     public void toRulesAct(View view){
-        Intent intent = new Intent(this, RulesActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesActivity.class);
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesActivity.class);
     }
 
     public void toBecomingSamaneraPabajaAct(View view){
-        Intent intent = new Intent(this, RulesSamaneraPabbajjaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesSamaneraPabbajjaActivity.class);
     }
 
     public void toTextNissaya(View view) {

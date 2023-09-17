@@ -1,6 +1,5 @@
 package com.example.dictionary_of_pali_term;
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +9,6 @@ import android.widget.Button;
 
 public class SuttasByCategoryActivity extends BaseActivityClass {
 
-    private Button buttonBack;
     private WebView webView;
 
     @Override
@@ -26,7 +24,7 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
 
         setWindowFlagsFullscreenAndNoLimits();
 
-        buttonBack = findViewById(R.id.buttonliveToBeforePage);
+        Button buttonBack = findViewById(R.id.buttonliveToBeforePage);
         webView = findViewById(R.id.webViewByCategory);
 
         webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование
@@ -39,7 +37,7 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
 
         // Загрузка первой страницы
         webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/suttas-themes.html");
-// Обработка переходов между страницами через ссылки
+        // Обработка переходов между страницами через ссылки
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -68,21 +66,15 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toSuttasAct(View view){
-        Intent intent = new Intent(this, SuttasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, SuttasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasActivity.class);
     }
 }

@@ -1,7 +1,5 @@
 package com.example.dictionary_of_pali_term;
 
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -16,33 +14,23 @@ public class RulesBhikkhuActivity extends BaseActivityClass {
     }
 
     public void toRulesAct(View view){
-        Intent intent = new Intent(this, RulesActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesActivity.class);
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toRulesUpasampadaAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuUpasampadaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuUpasampadaActivity.class);
     }
 
     public void toRulesPatimokhaAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuPatimokhaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesActivity.class);
     }
 }
