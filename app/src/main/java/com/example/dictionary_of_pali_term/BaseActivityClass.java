@@ -1,6 +1,7 @@
 package com.example.dictionary_of_pali_term;
 
 import android.content.Intent;
+import android.view.View;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,5 +18,13 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         Intent intent = new Intent(this, cls);
         startActivity(intent);
         finish();
+    }
+
+    protected void toMainAct(View view){
+        startIntentActivityAndFinish(MainActivity.class);
+    }
+
+    protected void toAbhidhammaChetasikasActivity(View view) {
+        startIntentActivityAndFinish(AbhidhammaChetasikasActivity.class);
     }
 }

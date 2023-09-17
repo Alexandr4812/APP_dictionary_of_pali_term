@@ -114,7 +114,7 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
         this.buttonFastForward .setOnClickListener(v -> doFastForward( ));
     }
 
-
+    @Override
     public void toMainAct(View view){
         this.mediaPlayer.pause();
         startIntentActivityAndFinish(MainActivity.class);

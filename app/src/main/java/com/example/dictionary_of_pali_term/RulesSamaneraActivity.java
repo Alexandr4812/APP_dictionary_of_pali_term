@@ -29,10 +29,6 @@ public class RulesSamaneraActivity extends BaseActivityClass {
         startIntentActivityAndFinish(RulesActivity.class);
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     @Override
     public void onBackPressed(){
         startIntentActivityAndFinish(RulesActivity.class);

@@ -76,10 +76,6 @@ public class SuttasActivity extends BaseActivityClass {
         startActivity(intent);
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     public void toSuttasDighaAct(View view){
         startIntentActivityAndFinish(SuttasDighaActivity.class);
     }

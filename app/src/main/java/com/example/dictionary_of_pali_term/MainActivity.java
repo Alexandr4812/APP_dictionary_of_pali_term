@@ -51,7 +51,6 @@ public class MainActivity extends BaseActivityClass {
         imageButtonM.setVisibility(View.VISIBLE);
     }
 
-    @SuppressWarnings("deprecation")
     private void changeLocale(Locale locale)
     {
         Locale.setDefault(locale);
@@ -94,10 +93,6 @@ public class MainActivity extends BaseActivityClass {
 
     public void toAbhidhammaAct(View view){
         startIntentActivityAndFinish(AbhidhammaActivity.class);
-    }
-
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toPopupMenu(View view) {

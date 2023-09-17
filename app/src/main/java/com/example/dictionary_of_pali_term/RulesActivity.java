@@ -32,10 +32,6 @@ public class RulesActivity extends BaseActivityClass {
         startIntentActivityAndFinish(RulesSamaneraActivity.class);
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     public void toRulesBhikhuAct(View view){
         startIntentActivityAndFinish(RulesBhikkhuActivity.class);
     }

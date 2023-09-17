@@ -17,10 +17,6 @@ public class AbhidhammaChetasikasActivity extends BaseActivityClass {
         startIntentActivityAndFinish(AbhidhammaActivity.class);
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     public void toChetasikasEtichVerAct(View view){
         startIntentActivityAndFinish(AbhidhammaChetasikasEtichVerActivity.class);
     }

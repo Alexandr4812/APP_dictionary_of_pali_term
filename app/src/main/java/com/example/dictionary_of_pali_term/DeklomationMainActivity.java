@@ -35,10 +35,6 @@ public class DeklomationMainActivity extends BaseActivityClass {
         im1.startAnimation(slideDown);
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     public void toMorningPuja(View view){
         startIntentActivityAndFinish(DeclomationPujaActivity.class);
     }

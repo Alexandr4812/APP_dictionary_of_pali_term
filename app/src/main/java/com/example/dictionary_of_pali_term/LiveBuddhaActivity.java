@@ -14,10 +14,6 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         setWindowFlagsFullscreenAndNoLimits();
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     public void toSumedha(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollText);
         scrollText.setVisibility(View.VISIBLE);

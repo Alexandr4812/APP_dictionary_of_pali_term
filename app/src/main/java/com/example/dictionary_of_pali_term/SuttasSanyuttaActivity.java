@@ -62,12 +62,11 @@ public class SuttasSanyuttaActivity extends BaseActivityClass {
         super.onDestroy();
         webView.destroy();
     }
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
+
     public void toSuttasAct(View view){
         startIntentActivityAndFinish(SuttasActivity.class);
     }
+
     @Override
     public void onBackPressed(){
         startIntentActivityAndFinish(SuttasActivity.class);

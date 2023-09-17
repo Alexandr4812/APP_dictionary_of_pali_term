@@ -20,10 +20,6 @@ public class RulesBhikkhuPatimokhaActivity extends BaseActivityClass {
         this.buttonHome = findViewById(R.id.buttonliveHomeFromUpasampada);
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     @Override
     public void onBackPressed(){
         startIntentActivityAndFinish(RulesBhikkhuActivity.class);

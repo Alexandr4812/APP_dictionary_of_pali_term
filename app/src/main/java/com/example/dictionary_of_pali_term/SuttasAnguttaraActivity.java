@@ -65,10 +65,6 @@ public class SuttasAnguttaraActivity extends BaseActivityClass {
         webView.destroy();
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     public void toSuttasAct(View view){
         startIntentActivityAndFinish(SuttasActivity.class);
     }

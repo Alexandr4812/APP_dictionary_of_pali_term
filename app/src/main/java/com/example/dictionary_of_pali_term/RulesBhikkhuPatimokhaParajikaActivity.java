@@ -257,7 +257,7 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
     }
 
     private String millisecondsToString(int milliseconds)  {
-        long seconds =  TimeUnit.MILLISECONDS.toSeconds((long) milliseconds) ;
+        long seconds =  TimeUnit.MILLISECONDS.toSeconds(milliseconds);
         return seconds + " sec";
     }
 
@@ -278,10 +278,6 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
         if(currentPosition + ADD_TIME < duration)  {
             this.mediaPlayer.seekTo(currentPosition + ADD_TIME);
         }
-    }
-
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override

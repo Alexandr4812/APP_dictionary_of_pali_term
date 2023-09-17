@@ -18,10 +18,6 @@ public class RulesSamaneraSekhiyaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(RulesSamaneraActivity.class);
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     @Override
     public void onBackPressed(){
         startIntentActivityAndFinish(RulesSamaneraActivity.class);

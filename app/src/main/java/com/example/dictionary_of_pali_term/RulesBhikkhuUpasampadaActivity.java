@@ -13,10 +13,6 @@ public class RulesBhikkhuUpasampadaActivity extends BaseActivityClass {
         setWindowFlagsFullscreenAndNoLimits();
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     @Override
     public void onBackPressed(){
         startIntentActivityAndFinish(RulesBhikkhuActivity.class);

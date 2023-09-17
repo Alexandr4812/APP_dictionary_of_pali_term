@@ -17,10 +17,6 @@ public class RulesBhikkhuActivity extends BaseActivityClass {
         startIntentActivityAndFinish(RulesActivity.class);
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     public void toRulesUpasampadaAct(View view){
         startIntentActivityAndFinish(RulesBhikkhuUpasampadaActivity.class);
     }

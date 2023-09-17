@@ -24,10 +24,6 @@ public class DeclomationParittaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(DeklomationMainActivity.class);
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     @Override
     public void onBackPressed(){
         startIntentActivityAndFinish(DeklomationMainActivity.class);

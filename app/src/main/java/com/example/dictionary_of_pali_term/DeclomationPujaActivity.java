@@ -59,10 +59,6 @@ public class DeclomationPujaActivity extends BaseActivityClass {
         buttonLiveToPuja.setVisibility(View.INVISIBLE);
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     @Override
     public void onBackPressed(){
         startIntentActivityAndFinish(DeklomationMainActivity.class);

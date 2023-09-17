@@ -13,10 +13,6 @@ public class RulesSamaneraPabbajjaActivity extends BaseActivityClass {
         setWindowFlagsFullscreenAndNoLimits();
     }
 
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     @Override
     public void onBackPressed(){
         startIntentActivityAndFinish(RulesSamaneraActivity.class);

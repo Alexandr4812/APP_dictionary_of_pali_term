@@ -5,7 +5,6 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -90,11 +89,7 @@ public class AbhidhammaChetasikasEtichVerActivity extends BaseActivityClass {
         buttonProyavlenie7 = findViewById(R.id.button_chetasika_proyavlenie7);
         buttonPrichina7 = findViewById(R.id.button_chetasika_prichina7);
 
-
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
     }
 
     public void onButtonClickGroup1(View view) {
@@ -380,16 +375,8 @@ public class AbhidhammaChetasikasEtichVerActivity extends BaseActivityClass {
         startIntentActivityAndFinish(AbhidhammaActivity.class);
     }
 
-    public void toChetasikasAct(View view){
-        startIntentActivityAndFinish(AbhidhammaChetasikasActivity.class);
-    }
-
-    public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
-
     @Override
     public void onBackPressed(){
-        startIntentActivityAndFinish(AbhidhammaChetasikasActivity.class);
+        toAbhidhammaChetasikasActivity(null);
     }
 }
