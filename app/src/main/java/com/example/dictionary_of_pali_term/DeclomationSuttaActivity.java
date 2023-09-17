@@ -232,7 +232,7 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
     }
 
     private String millisecondsToString(int milliseconds)  {
-        long seconds =  TimeUnit.MILLISECONDS.toSeconds((milliseconds) ;
+        long seconds =  TimeUnit.MILLISECONDS.toSeconds(milliseconds);
         return seconds + " sec";
     }
 
