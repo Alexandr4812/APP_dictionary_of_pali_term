@@ -3,11 +3,9 @@ package com.example.dictionary_of_pali_term;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
@@ -15,13 +13,9 @@ import android.os.Handler;
 import android.widget.TextView;
 import java.util.concurrent.TimeUnit;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
-
+public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
     private TextView textView;
     private String textToAnimate;
-    private int currentIndex = 0;
 
     private TextView textMaxTimeParajika;
     private TextView textCurrentPositionParajika;
@@ -36,7 +30,7 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
     private SeekBar seekBarParajika;
     private MediaPlayer mediaPlayer;
-    private Handler threadHandler = new Handler();
+    private final Handler threadHandler = new Handler();
 
     private ScrollView scrollTextParajika1;
     private ScrollView scrollTextParajika2;
@@ -53,24 +47,21 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_parajika);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
         textView = findViewById(R.id.textViewHintParajika);
         textToAnimate = getString(R.string.textViewHintParajika);
 
         animateText();
 
-        this.textMaxTimeParajika = (TextView) findViewById(R.id.textMaxTimeParajika);
-        this.textCurrentPositionParajika = (TextView) findViewById(R.id.textCurrentPositionParajika);
+        this.textMaxTimeParajika = findViewById(R.id.textMaxTimeParajika);
+        this.textCurrentPositionParajika = findViewById(R.id.textCurrentPositionParajika);
 
-        this.buttonStartParajika = (Button) findViewById(R.id.buttonPlayParajika);
-        this.buttonStopParajika = (Button) findViewById(R.id.buttonStopParajika);
-        this.buttonPauseParajika = (Button) findViewById(R.id.buttonPauseParajika);
-        this.buttonRewindParajika = (Button) findViewById(R.id.buttonRewindParajika);
-        this.buttonFastForwardParajika = (Button) findViewById(R.id.buttonFastForwardParajika);
+        this.buttonStartParajika = findViewById(R.id.buttonPlayParajika);
+        this.buttonStopParajika = findViewById(R.id.buttonStopParajika);
+        this.buttonPauseParajika = findViewById(R.id.buttonPauseParajika);
+        this.buttonRewindParajika = findViewById(R.id.buttonRewindParajika);
+        this.buttonFastForwardParajika = findViewById(R.id.buttonFastForwardParajika);
 
         this.scrollTextParajika1 = findViewById(R.id.viewScrollPatimokhaParajika1);
         this.scrollTextParajika2 = findViewById(R.id.viewScrollPatimokhaParajika2);
@@ -79,89 +70,67 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
         this.seekBarParajika = findViewById(R.id.seekBarParajika);
 
-        this.buttonStartParajika.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        this.buttonStartParajika.setOnClickListener(v -> {
 
-                if(mediaPlayer.isPlaying()) {
-                    return;
-                }
-
-                int duration = mediaPlayer.getDuration();
-                int currentPosition = mediaPlayer.getCurrentPosition();
-
-                if(currentPosition== 0)  {
-                    seekBarParajika.setMax(duration);
-                    String maxTimeString = millisecondsToString(duration);
-                    textMaxTimeParajika.setText(maxTimeString);
-                } else if(currentPosition== duration)  {
-                    mediaPlayer.reset();
-                }
-
-                UpdateSeekBarThread updateSeekBarThread= new UpdateSeekBarThread();
-                threadHandler.postDelayed(updateSeekBarThread,100);
-
-                mediaPlayer.start();
-                seekBarParajika.setVisibility(View.VISIBLE);
-                textMaxTimeParajika.setVisibility(View.VISIBLE);
-                textCurrentPositionParajika.setVisibility(View.VISIBLE);
-                buttonStopParajika.setVisibility(View.VISIBLE);
-                buttonRewindParajika.setVisibility(View.VISIBLE);
-                buttonFastForwardParajika.setVisibility(View.VISIBLE);
-                buttonPauseParajika.setVisibility(View.VISIBLE);
-                buttonStartParajika.setVisibility(View.INVISIBLE);
+            if(mediaPlayer.isPlaying()) {
+                return;
             }
+
+            int duration = mediaPlayer.getDuration();
+            int currentPosition = mediaPlayer.getCurrentPosition();
+
+            if(currentPosition== 0)  {
+                seekBarParajika.setMax(duration);
+                String maxTimeString = millisecondsToString(duration);
+                textMaxTimeParajika.setText(maxTimeString);
+            } else if(currentPosition== duration)  {
+                mediaPlayer.reset();
+            }
+
+            UpdateSeekBarThread updateSeekBarThread= new UpdateSeekBarThread();
+            threadHandler.postDelayed(updateSeekBarThread,100);
+
+            mediaPlayer.start();
+            seekBarParajika.setVisibility(View.VISIBLE);
+            textMaxTimeParajika.setVisibility(View.VISIBLE);
+            textCurrentPositionParajika.setVisibility(View.VISIBLE);
+            buttonStopParajika.setVisibility(View.VISIBLE);
+            buttonRewindParajika.setVisibility(View.VISIBLE);
+            buttonFastForwardParajika.setVisibility(View.VISIBLE);
+            buttonPauseParajika.setVisibility(View.VISIBLE);
+            buttonStartParajika.setVisibility(View.INVISIBLE);
         });
 
-        this.buttonStopParajika.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mediaPlayer.pause();
-                mediaPlayer.seekTo(0);
-                seekBarParajika.setVisibility(View.INVISIBLE);
-                textMaxTimeParajika.setVisibility(View.INVISIBLE);
-                textCurrentPositionParajika.setVisibility(View.INVISIBLE);
-                buttonStopParajika.setVisibility(View.INVISIBLE);
-                buttonRewindParajika.setVisibility(View.INVISIBLE);
-                buttonFastForwardParajika.setVisibility(View.INVISIBLE);
-                buttonPauseParajika.setVisibility(View.INVISIBLE);
-                buttonStartParajika.setVisibility(View.VISIBLE);
-            }
+        this.buttonStopParajika.setOnClickListener(view -> {
+            mediaPlayer.pause();
+            mediaPlayer.seekTo(0);
+            seekBarParajika.setVisibility(View.INVISIBLE);
+            textMaxTimeParajika.setVisibility(View.INVISIBLE);
+            textCurrentPositionParajika.setVisibility(View.INVISIBLE);
+            buttonStopParajika.setVisibility(View.INVISIBLE);
+            buttonRewindParajika.setVisibility(View.INVISIBLE);
+            buttonFastForwardParajika.setVisibility(View.INVISIBLE);
+            buttonPauseParajika.setVisibility(View.INVISIBLE);
+            buttonStartParajika.setVisibility(View.VISIBLE);
         });
 
-        this.buttonPauseParajika.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mediaPlayer.pause();
-                buttonStopParajika.setVisibility(View.INVISIBLE);
-                buttonStartParajika.setVisibility(View.VISIBLE);
-            }
+        this.buttonPauseParajika.setOnClickListener(view -> {
+            mediaPlayer.pause();
+            buttonStopParajika.setVisibility(View.INVISIBLE);
+            buttonStartParajika.setVisibility(View.VISIBLE);
         });
 
-        this.buttonRewindParajika.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doRewind( );
-            }
-        });
-        this.buttonFastForwardParajika.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                doFastForward( );
-            }
-        });
+        this.buttonRewindParajika.setOnClickListener(v -> doRewind( ));
+        this.buttonFastForwardParajika.setOnClickListener(v -> doFastForward( ));
     }
 
     private void animateText() {
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(2000); // Продолжительность анимации в миллисекундах
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                int animatedValue = (int) animation.getAnimatedValue();
-                String partialText = textToAnimate.substring(0, animatedValue);
-                textView.setText(partialText);
-            }
+        animator.addUpdateListener(animation -> {
+            int animatedValue = (int) animation.getAnimatedValue();
+            String partialText = textToAnimate.substring(0, animatedValue);
+            textView.setText(partialText);
         });
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
@@ -175,8 +144,8 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
     public void toParajikkaAbout(View view){
         mediaPlayer = changeSong();
-        this.buttonBackParajika = (Button) findViewById(R.id.buttonliveToPatimokhaParajika);
-        this.buttonHomeParajika = (Button) findViewById(R.id.buttonliveHomeFromParajika);
+        this.buttonBackParajika = findViewById(R.id.buttonliveToPatimokhaParajika);
+        this.buttonHomeParajika = findViewById(R.id.buttonliveHomeFromParajika);
         ScrollView scrollTextAboutParajika = findViewById(R.id.viewScrollParajikaAbout);
         scrollTextAboutParajika.setVisibility(View.VISIBLE);
         this.buttonBackParajika.setVisibility(View.VISIBLE);
@@ -189,9 +158,9 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
         this.scrollTextParajika1.setVisibility(View.VISIBLE);
 
-        this.buttonBackParajika = (Button) findViewById(R.id.buttonliveToPatimokhaParajika);
-        this.buttonHomeParajika = (Button) findViewById(R.id.buttonliveHomeFromParajika);
-        this.buttonStartParajika = (Button) findViewById(R.id.buttonPlayParajika);
+        this.buttonBackParajika = findViewById(R.id.buttonliveToPatimokhaParajika);
+        this.buttonHomeParajika = findViewById(R.id.buttonliveHomeFromParajika);
+        this.buttonStartParajika = findViewById(R.id.buttonPlayParajika);
 
         this.buttonBackParajika.setVisibility(View.VISIBLE);
         this.buttonHomeParajika.setVisibility(View.VISIBLE);
@@ -204,9 +173,9 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
         this.scrollTextParajika2.setVisibility(View.VISIBLE);
 
-        this.buttonBackParajika = (Button) findViewById(R.id.buttonliveToPatimokhaParajika);
-        this.buttonHomeParajika = (Button) findViewById(R.id.buttonliveHomeFromParajika);
-        this.buttonStartParajika = (Button) findViewById(R.id.buttonPlayParajika);
+        this.buttonBackParajika = findViewById(R.id.buttonliveToPatimokhaParajika);
+        this.buttonHomeParajika = findViewById(R.id.buttonliveHomeFromParajika);
+        this.buttonStartParajika = findViewById(R.id.buttonPlayParajika);
 
         this.buttonBackParajika.setVisibility(View.VISIBLE);
         this.buttonHomeParajika.setVisibility(View.VISIBLE);
@@ -219,9 +188,9 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
         this.scrollTextParajika3.setVisibility(View.VISIBLE);
 
-        this.buttonBackParajika = (Button) findViewById(R.id.buttonliveToPatimokhaParajika);
-        this.buttonHomeParajika = (Button) findViewById(R.id.buttonliveHomeFromParajika);
-        this.buttonStartParajika = (Button) findViewById(R.id.buttonPlayParajika);
+        this.buttonBackParajika = findViewById(R.id.buttonliveToPatimokhaParajika);
+        this.buttonHomeParajika = findViewById(R.id.buttonliveHomeFromParajika);
+        this.buttonStartParajika = findViewById(R.id.buttonPlayParajika);
 
         this.buttonBackParajika.setVisibility(View.VISIBLE);
         this.buttonHomeParajika.setVisibility(View.VISIBLE);
@@ -234,9 +203,9 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
         this.scrollTextParajika4.setVisibility(View.VISIBLE);
 
-        this.buttonBackParajika = (Button) findViewById(R.id.buttonliveToPatimokhaParajika);
-        this.buttonHomeParajika = (Button) findViewById(R.id.buttonliveHomeFromParajika);
-        this.buttonStartParajika = (Button) findViewById(R.id.buttonPlayParajika);
+        this.buttonBackParajika = findViewById(R.id.buttonliveToPatimokhaParajika);
+        this.buttonHomeParajika = findViewById(R.id.buttonliveHomeFromParajika);
+        this.buttonStartParajika = findViewById(R.id.buttonPlayParajika);
 
         this.buttonBackParajika.setVisibility(View.VISIBLE);
         this.buttonHomeParajika.setVisibility(View.VISIBLE);
@@ -294,7 +263,6 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
 
     private void doRewind( )  {
         int currentPosition = this.mediaPlayer.getCurrentPosition();
-        int duration = this.mediaPlayer.getDuration();
         int SUBTRACT_TIME = 5000;
 
         if(currentPosition - SUBTRACT_TIME > 0 )  {
@@ -313,23 +281,17 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends AppCompatActivity {
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesBhikkhuPatimokhaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaActivity.class);
         this.mediaPlayer.pause();
     }
 
     public void toRulesPatimokhaAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuPatimokhaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaActivity.class);
     }
 
     class UpdateSeekBarThread implements Runnable {

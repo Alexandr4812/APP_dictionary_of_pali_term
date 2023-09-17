@@ -1,19 +1,14 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
-public class SuttasKuddakaActivity extends AppCompatActivity {
+public class SuttasKuddakaActivity extends BaseActivityClass {
 
-    private Button buttonBack;
     private WebView webView;
 
     @Override
@@ -27,12 +22,9 @@ public class SuttasKuddakaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_kuddaka);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
-        buttonBack = findViewById(R.id.buttonliveToBeforePageKuddaka);
+        Button buttonBack = findViewById(R.id.buttonliveToBeforePageKuddaka);
         webView = findViewById(R.id.webViewKuddaka);
 
         webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование
@@ -45,7 +37,7 @@ public class SuttasKuddakaActivity extends AppCompatActivity {
 
         // Загрузка первой страницы
         webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/khuddaka.html");
-// Обработка переходов между страницами через ссылки
+        // Обработка переходов между страницами через ссылки
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -57,12 +49,7 @@ public class SuttasKuddakaActivity extends AppCompatActivity {
             }
         });
 
-        buttonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goBack();
-            }
-        });
+        buttonBack.setOnClickListener(v -> goBack());
     }
     private void goBack() {
         if (webView.canGoBack()) {
@@ -78,21 +65,15 @@ public class SuttasKuddakaActivity extends AppCompatActivity {
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toSuttasAct(View view){
-        Intent intent = new Intent(this, SuttasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, SuttasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasActivity.class);
     }
 }

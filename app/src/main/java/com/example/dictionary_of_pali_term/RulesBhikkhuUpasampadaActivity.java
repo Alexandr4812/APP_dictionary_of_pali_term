@@ -1,42 +1,29 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 
-public class RulesBhikkhuUpasampadaActivity extends AppCompatActivity {
+public class RulesBhikkhuUpasampadaActivity extends BaseActivityClass {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_upasampada);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesBhikkhuActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
     }
 
 
     public void toRulesBhikkhuAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
     }
 }

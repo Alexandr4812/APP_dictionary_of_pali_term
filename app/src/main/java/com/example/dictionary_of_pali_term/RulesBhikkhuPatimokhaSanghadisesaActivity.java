@@ -1,23 +1,18 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-public class RulesBhikkhuPatimokhaSanghadisesaActivity extends AppCompatActivity {
+public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass {
 
     private TextView textView;
     private String textToAnimate;
-    private int currentIndex = 0;
 
     private Button buttonHome;
     private Button buttonBack;
@@ -27,13 +22,10 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_sanghadisesa);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
-        this.buttonBack = (Button) findViewById(R.id.buttonliveToSanghadisesa);
-        this.buttonHome = (Button) findViewById(R.id.buttonSanghadisesaHome);
+        this.buttonBack = findViewById(R.id.buttonliveToSanghadisesa);
+        this.buttonHome = findViewById(R.id.buttonSanghadisesaHome);
 
         textView = findViewById(R.id.textViewHintSangkhadisesa);
         textToAnimate = getString(R.string.textViewHintParajika);
@@ -44,13 +36,10 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends AppCompatActivity
     private void animateText() {
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(2000); // Продолжительность анимации в миллисекундах
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                int animatedValue = (int) animation.getAnimatedValue();
-                String partialText = textToAnimate.substring(0, animatedValue);
-                textView.setText(partialText);
-            }
+        animator.addUpdateListener(animation -> {
+            int animatedValue = (int) animation.getAnimatedValue();
+            String partialText = textToAnimate.substring(0, animatedValue);
+            textView.setText(partialText);
         });
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
@@ -63,22 +52,16 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends AppCompatActivity
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesBhikkhuActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
     }
 
     public void toRulesPatimokhaAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuPatimokhaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaActivity.class);
     }
 
     public void toSanghadisesaAbout(View view) {

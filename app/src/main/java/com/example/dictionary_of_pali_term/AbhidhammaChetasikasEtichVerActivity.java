@@ -1,18 +1,15 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class AbhidhammaChetasikasEtichVerActivity extends AppCompatActivity {
+public class AbhidhammaChetasikasEtichVerActivity extends BaseActivityClass {
 
     private TextView textViewAbhidhammaChetasika1;
     private Button buttonKontakt, buttonHarakteristika1, buttonFunkciya1, buttonProyavlenie1, buttonPrichina1;
@@ -364,13 +361,10 @@ public class AbhidhammaChetasikasEtichVerActivity extends AppCompatActivity {
     private void animateText(TextView targetTextView, String textToAnimate) {
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(1000); // Продолжительность анимации в миллисекундах
-        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                int animatedValue = (int) animation.getAnimatedValue();
-                String partialText = textToAnimate.substring(0, animatedValue);
-                targetTextView.setText(partialText);
-            }
+        animator.addUpdateListener(animation -> {
+            int animatedValue = (int) animation.getAnimatedValue();
+            String partialText = textToAnimate.substring(0, animatedValue);
+            targetTextView.setText(partialText);
         });
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
@@ -383,27 +377,19 @@ public class AbhidhammaChetasikasEtichVerActivity extends AppCompatActivity {
     }
 
     public void toAbhidhammaAct(View view){
-        Intent intent = new Intent(this, AbhidhammaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(AbhidhammaActivity.class);
     }
 
     public void toChetasikasAct(View view){
-        Intent intent = new Intent(this, AbhidhammaChetasikasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(AbhidhammaChetasikasActivity.class);
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, AbhidhammaChetasikasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(AbhidhammaChetasikasActivity.class);
     }
 }

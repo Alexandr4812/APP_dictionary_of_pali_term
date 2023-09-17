@@ -1,16 +1,11 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
-public class RulesBhikkhuPatimokhaActivity extends AppCompatActivity {
-
+public class RulesBhikkhuPatimokhaActivity extends BaseActivityClass {
     private Button buttonHome;
     private Button buttonBack;
 
@@ -19,66 +14,53 @@ public class RulesBhikkhuPatimokhaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_patimokha);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
-        this.buttonBack = (Button) findViewById(R.id.buttonliveToBhikkhu);
-        this.buttonHome = (Button) findViewById(R.id.buttonliveHomeFromUpasampada);
+        this.buttonBack = findViewById(R.id.buttonliveToBhikkhu);
+        this.buttonHome = findViewById(R.id.buttonliveHomeFromUpasampada);
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, RulesBhikkhuActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
     }
 
 
     public void toRulesBhikkhuAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
     }
 
     public void toRulesPatimokhaParajikaAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuPatimokhaParajikaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaParajikaActivity.class);
     }
 
     public void toRulesPatimokhaSanghadisesaAct(View view){
-        Intent intent = new Intent(this, RulesBhikkhuPatimokhaSanghadisesaActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaSanghadisesaActivity.class);
     }
 
     public void toPatimokhaAbout(View view) {
         ScrollView scrollText = findViewById(R.id.viewScrollPatimokhaAbout);
-        scrollText.setVisibility(view.VISIBLE);
+        scrollText.setVisibility(View.VISIBLE);
         buttonBack.setVisibility(View.VISIBLE);
         buttonHome.setVisibility(View.VISIBLE);
     }
 
     public void toPatimokhaAboutPunish(View view) {
         ScrollView scrollText = findViewById(R.id.viewScrollPatimokhaAboutPunish);
-        scrollText.setVisibility(view.VISIBLE);
+        scrollText.setVisibility(View.VISIBLE);
         buttonBack.setVisibility(View.VISIBLE);
         buttonHome.setVisibility(View.VISIBLE);
     }
 
     public void tobackIzTextPatimokha(View view) {
         ScrollView scrollText = findViewById(R.id.viewScrollPatimokhaAbout);
-        scrollText.setVisibility(view.INVISIBLE);
+        scrollText.setVisibility(View.INVISIBLE);
         ScrollView scrollText2 = findViewById(R.id.viewScrollPatimokhaAboutPunish);
-        scrollText2.setVisibility(view.INVISIBLE);
+        scrollText2.setVisibility(View.INVISIBLE);
         buttonBack.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
     }

@@ -1,19 +1,14 @@
 package com.example.dictionary_of_pali_term;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
-public class SuttasMajjhimaActivity extends AppCompatActivity {
+public class SuttasMajjhimaActivity extends BaseActivityClass {
 
-    private Button buttonBack;
     private WebView webView;
 
     @Override
@@ -27,12 +22,9 @@ public class SuttasMajjhimaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_majjhima);
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
 
-        buttonBack = findViewById(R.id.buttonliveToBeforePageMajjhima);
+        Button buttonBack = findViewById(R.id.buttonliveToBeforePageMajjhima);
         webView = findViewById(R.id.webViewMajjhima);
 
         webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование
@@ -43,9 +35,9 @@ public class SuttasMajjhimaActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
         webView.clearCache(true);
 
-// Загрузка первой страницы
+        // Загрузка первой страницы
         webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/majjhima.html");
-// Обработка переходов между страницами через ссылки
+        // Обработка переходов между страницами через ссылки
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -57,12 +49,7 @@ public class SuttasMajjhimaActivity extends AppCompatActivity {
             }
         });
 
-        buttonBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goBack();
-            }
-        });
+        buttonBack.setOnClickListener(v -> goBack());
     }
 
     private void goBack() {
@@ -79,21 +66,15 @@ public class SuttasMajjhimaActivity extends AppCompatActivity {
     }
 
     public void toMainAct(View view){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toSuttasAct(View view){
-        Intent intent = new Intent(this, SuttasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasActivity.class);
     }
 
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(this, SuttasActivity.class);
-        startActivity(intent);
-        finish();
+        startIntentActivityAndFinish(SuttasActivity.class);
     }
 }
