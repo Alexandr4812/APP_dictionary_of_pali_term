@@ -111,5 +111,5 @@
     <string name="text_for_vnimanie_function">ФУНКЦИЯ: привязывать ассоциированные состояния к объекту.</string>
     <string name="text_for_vnimanie_proyavlenie">ПРОЯВЛЕНИЕ: проявляется как конфронтация с объектом.</string>
     <string name="text_for_vnimanie_prichina">НЕПОСРЕДСТВЕННАЯ ПРИЧИНА: объект.</string>
-    <string name="buttonChetasikaKontaktKombinaciya">Комбинация с сознанием</string>
+    <string name="buttonChetasikaKontaktKombinaciya">Ассоциация с сознанием</string>
 </resources>
