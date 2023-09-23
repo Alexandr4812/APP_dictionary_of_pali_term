@@ -111,6 +111,11 @@
                     tools:ignore="UsingOnClickInXml" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button_chetasika_kontakt_kombinaciya"
+                style="@style/button_activity_chetasika_kombinaciya"
+                android:text="@string/buttonChetasikaKontaktKombinaciya" />
+
             <TextView
                 android:id="@+id/textViewAbhidhammaChetasika1"
                 style="@style/TextMessageStyleAbhidyamma"
@@ -164,6 +169,11 @@
                     android:text="@string/button_kontakt_prichina"
                     tools:ignore="UsingOnClickInXml" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/button_chetasika_kontakt_kombinaciya2"
+                style="@style/button_activity_chetasika_kombinaciya"
+                android:text="@string/buttonChetasikaKontaktKombinaciya" />
 
             <TextView
                 android:id="@+id/textViewAbhidhammaChetasikaChuvstvo2"
@@ -219,6 +229,11 @@
                     tools:ignore="UsingOnClickInXml" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button_chetasika_kontakt_kombinaciya3"
+                style="@style/button_activity_chetasika_kombinaciya"
+                android:text="@string/buttonChetasikaKontaktKombinaciya" />
+
             <TextView
                 android:id="@+id/textViewAbhidhammaChetasikaVospriyatie3"
                 style="@style/TextMessageStyleAbhidyamma"
@@ -272,6 +287,11 @@
                     android:text="@string/button_kontakt_prichina"
                     tools:ignore="UsingOnClickInXml" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/button_chetasika_kontakt_kombinaciya4"
+                style="@style/button_activity_chetasika_kombinaciya"
+                android:text="@string/buttonChetasikaKontaktKombinaciya" />
 
             <TextView
                 android:id="@+id/textViewAbhidhammaChetasikaVolenie4"
@@ -327,6 +347,11 @@
                     tools:ignore="UsingOnClickInXml" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button_chetasika_kontakt_kombinaciya5"
+                style="@style/button_activity_chetasika_kombinaciya"
+                android:text="@string/buttonChetasikaKontaktKombinaciya" />
+
             <TextView
                 android:id="@+id/textViewAbhidhammaChetasikaodnonapravlennost5"
                 style="@style/TextMessageStyleAbhidyamma"
@@ -381,6 +406,11 @@
                     tools:ignore="UsingOnClickInXml" />
             </LinearLayout>
 
+            <Button
+                android:id="@+id/button_chetasika_kontakt_kombinaciya6"
+                style="@style/button_activity_chetasika_kombinaciya"
+                android:text="@string/buttonChetasikaKontaktKombinaciya" />
+
             <TextView
                 android:id="@+id/textViewAbhidhammaChetasikaJivitindriya6"
                 style="@style/TextMessageStyleAbhidyamma"
@@ -434,6 +464,11 @@
                     android:text="@string/button_kontakt_prichina"
                     tools:ignore="UsingOnClickInXml" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/button_chetasika_kontakt_kombinaciya7"
+                style="@style/button_activity_chetasika_kombinaciya"
+                android:text="@string/buttonChetasikaKontaktKombinaciya" />
 
             <TextView
                 android:id="@+id/textViewAbhidhammaChetasikaVnimanie7"

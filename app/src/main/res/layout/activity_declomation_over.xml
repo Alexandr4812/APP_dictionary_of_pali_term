@@ -89,6 +89,17 @@
                 android:text="@string/deklomation_after_evening_meditation"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/button_Refleksiya_O_Proshlih_Neobhodimostyah"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomaciyaRefleksiyaOProshlihNeobhodimostyah"
+                android:text="@string/deklomationRefleksiyaOProshlihNeobhodimostyah"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
 
 
@@ -107,80 +118,12 @@
             android:background="#FFE082"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/imageButtonliveHome5"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageButton
-                android:id="@+id/backButtonOver"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
             <TextView
                 android:id="@+id/textViewOver"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/DeklomaciyaPeredPrinyatiemPichi" />
-
-            <ImageButton
-                android:id="@+id/backButtonOver2"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome6"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
 
@@ -201,80 +144,12 @@
             android:background="#FFE082"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/imageButtonliveHome7"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageButton
-                android:id="@+id/backButtonOverF"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
             <TextView
                 android:id="@+id/textViewForgivennes"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/DeklomaciyaForgivennes" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome8"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageButton
-                android:id="@+id/backButtonF2"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
     </ScrollView>
 
@@ -291,80 +166,12 @@
             android:background="#FFE082"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/imageButtonliveHome9"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageButton
-                android:id="@+id/backButtonOverAlmsWish"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
             <TextView
                 android:id="@+id/textViewAlmsWish"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="800dp"
                 android:text="@string/DeklomaciyaAlmsWish" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome10"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <ImageButton
-                android:id="@+id/backButtonAlmsWish2"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
     </ScrollView>
 
@@ -381,85 +188,64 @@
             android:background="#FFE082"
             android:orientation="vertical">
 
-            <ImageButton
-                android:id="@+id/imageButtonliveHome11"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/backButtonOverDeclomaciyaOftereveningMeditstion"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
             <TextView
                 android:id="@+id/textViewDeclomaciyaOftereveningMeditstion"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/DeklomaciyaOfterEveningMeditationO" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome12"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/backButtonDeclomaciyaOftereveningMeditstion2"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackOver"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
-
-
     </ScrollView>
+
+    <ScrollView
+        android:id="@+id/overScrollTextDeclomaciyaRefleksiyaOProshlihNeobhodimostyah"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewDeclomaciyaRefleksiyaOProshlihNeobhodimostyah"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/DeklomaciyaRefleksiyaOProshlihNeobhodimostyah" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonDeclomationHome"
+            style="@style/buttonBackHomeNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="toMainAct"
+            android:visibility="invisible"
+            tools:ignore="UsingOnClickInXml"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/buttonliveToOver"
+            style="@style/buttonBackNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="tobackOver"
+            android:visibility="invisible"
+            tools:ignore="UsingOnClickInXml"
+            tools:visibility="visible" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

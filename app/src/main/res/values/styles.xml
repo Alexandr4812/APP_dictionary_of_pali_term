@@ -89,6 +89,18 @@
         <item name="android:textSize">8sp</item>
     </style>
 
+    <style name="button_activity_chetasika_kombinaciya">
+        <item name="android:backgroundTint">#81C784</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:insetTop">6dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
     <style name="buttonBackNotImageButton">
         <item name="android:layout_width">51dp</item>
         <item name="android:layout_height">45dp</item>
