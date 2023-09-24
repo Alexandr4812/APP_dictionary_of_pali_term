@@ -159,7 +159,7 @@
                 android:id="@+id/textViewPatimokhaParajika1"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
-                android:layout_height="1000dp"
+                android:layout_height="wrap_content"
                 android:text="@string/textPatimokhaParajika1" />
         </LinearLayout>
     </ScrollView>
@@ -187,7 +187,7 @@
                 android:id="@+id/textViewPatimokhaParajika2"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
-                android:layout_height="1000dp"
+                android:layout_height="wrap_content"
                 android:text="@string/textPatimokhaParajika2" />
         </LinearLayout>
     </ScrollView>
@@ -215,7 +215,7 @@
                 android:id="@+id/textViewPatimokhaParajika3"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
-                android:layout_height="1000dp"
+                android:layout_height="wrap_content"
                 android:text="@string/textPatimokhaParajika3" />
         </LinearLayout>
     </ScrollView>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".AbhidhammaActivity">
+    tools:context=".AbhidhammaChittasActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -14,7 +14,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
-        android:onClick="toMainAct"
+        android:onClick="toAbhidhammaAct"
         android:scaleType="centerInside"
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,8 +24,24 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="UsingOnClickInXml" />
 
+    <ImageButton
+        android:id="@+id/imageButtonliveHome"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@color/my_main_color"
+        android:foregroundGravity="center"
+        android:onClick="toMainAct"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ScrollView
-        android:id="@+id/viewScrollAbhidhammaMentalfakt"
+        android:id="@+id/viewScrollAbhidhammaChittas"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
@@ -35,37 +51,26 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollAbhidhammaMentalFakt"
+            android:id="@+id/linearLayoutScrollAbhidhammaChittas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageVievAbhidhamma1"
+                android:id="@+id/imageVievAbhidhammaChittas1"
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
             <Button
-                android:id="@+id/button_chittas"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toChittasAct"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/textButtonChittas"
-                tools:ignore="UsingOnClickInXml" />
-
-            <Button
                 android:id="@+id/button_mentalnie_faktori"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toChetasikasAct"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/buttonAbhidhammaChetasika"
+                android:text=""
                 tools:ignore="UsingOnClickInXml" />
 
+
         </LinearLayout>
-
-
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

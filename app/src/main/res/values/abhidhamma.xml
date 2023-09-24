@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonAbhidhammaChetasika">54 ментальных фактора \n (chetasika)</string>
+    <string name="buttonAbhidhammaChetasika">54 \n ментальных фактора \n (chetasika)</string>
     <string name="button_kontakt">1 \nКонтакт \n(phassa)</string>
     <string name="universal">Этически вериабельные \nУниверсальные 7</string>
     <string name="button_kontakt_harakteristika">Характеристика</string>
@@ -112,4 +112,5 @@
     <string name="text_for_vnimanie_proyavlenie">ПРОЯВЛЕНИЕ: проявляется как конфронтация с объектом.</string>
     <string name="text_for_vnimanie_prichina">НЕПОСРЕДСТВЕННАЯ ПРИЧИНА: объект.</string>
     <string name="buttonChetasikaKontaktKombinaciya">Ассоциация с сознанием</string>
+    <string name="textButtonChittas">89 или 121 \n видов сознания \n (chitta)</string>
 </resources>

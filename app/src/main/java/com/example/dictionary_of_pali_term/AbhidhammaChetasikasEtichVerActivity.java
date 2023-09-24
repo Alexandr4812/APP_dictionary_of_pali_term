@@ -48,7 +48,7 @@ public class AbhidhammaChetasikasEtichVerActivity extends BaseActivityClass {
         textViewAbhidhammaJivitindriya6 = findViewById(R.id.textViewAbhidhammaChetasikaJivitindriya6);
         textViewAbhidhammaVnimanie7 = findViewById(R.id.textViewAbhidhammaChetasikaVnimanie7);
 
-        buttonKontakt = findViewById(R.id.button_mentalnie_enich_ver_faktori);
+        buttonKontakt = findViewById(R.id.button_mentalnie_faktori);
         buttonHarakteristika1 = findViewById(R.id.button_chetasika_harakteristika);
         buttonFunkciya1 = findViewById(R.id.button_chetasika_function);
         buttonProyavlenie1 = findViewById(R.id.button_chetasika_proyavlenie);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonAbhidhammaChetasika">54 mental factors\n(chetasika)</string>
+    <string name="buttonAbhidhammaChetasika">54 \n mental factors\n(chetasika)</string>
     <string name="button_kontakt">1 \ncontact \n(phassa)</string>
     <string name="universal">Universal 7</string>
     <string name="button_kontakt_harakteristika">Characteristic</string>
@@ -117,5 +117,6 @@ process of cognition.</string>
     <string name="text_for_vnimanie_proyavlenie">MANIFESTATION: manifests itself as a confrontation with the object.</string>
     <string name="text_for_vnimanie_prichina">IMMEDIATE CAUSE: object.</string>
     <string name="buttonChetasikaKontaktKombinaciya">Association with consciousness</string>
+    <string name="textButtonChittas">89 or 121 \n types of consciousness \n (chitta)</string>
 
 </resources>

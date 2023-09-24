@@ -66,7 +66,7 @@
                 android:text="@string/universal" />
 
             <Button
-                android:id="@+id/button_mentalnie_enich_ver_faktori"
+                android:id="@+id/button_mentalnie_faktori"
                 style="@style/button_activity_declomation_main"
                 android:text="@string/button_kontakt"
                 android:onClick="onButtonClickGroup1"
