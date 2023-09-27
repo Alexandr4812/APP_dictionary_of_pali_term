@@ -5,22 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class AbhidhammaChittasActivity extends BaseActivityClass {
+public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivityClass {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_abhidhamma_chittas);
+        setContentView(R.layout.activity_abhidhamma_chittas_kamavacharam_unwholsome);
 
         setWindowFlagsFullscreenAndNoLimits();
     }
 
-    public void toAbhidhammaAct(View view){
-        startIntentActivityAndFinish(AbhidhammaActivity.class);
-    }
-
     public void toAbhidhammaChittasKamavacharam(View view){
         startIntentActivityAndFinish(AbhidhammaChittasKamavacharamActivity.class);
+    }
+
+    public void toAbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniAct(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniActivity.class);
     }
 
     public void toMainAct(View view){
@@ -29,7 +29,6 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
 
     @Override
     public void onBackPressed(){
-        startIntentActivityAndFinish(AbhidhammaActivity.class);
+        startIntentActivityAndFinish(AbhidhammaChittasKamavacharamActivity.class);
     }
-
 }

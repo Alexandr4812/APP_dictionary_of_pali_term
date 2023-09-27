@@ -356,8 +356,6 @@ public class AbhidhammaChetasikasEtichVerActivity extends BaseActivityClass {
     }
 
 
-
-
     private void animateText(TextView targetTextView, String textToAnimate) {
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(1000); // Продолжительность анимации в миллисекундах

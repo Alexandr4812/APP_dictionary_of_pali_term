@@ -45,6 +45,14 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
+
+            <Button
+                android:id="@+id/infoButton1"
+                style="@style/infoButton"
+                android:foreground="@drawable/info7"
+                android:onClick="onButtonClickAbhidhamma1"
+                tools:ignore="UsingOnClickInXml" />
+
             <Button
                 android:id="@+id/button_chittas"
                 style="@style/button_activity_declomation_main"
@@ -52,6 +60,60 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/textButtonChittas"
+                tools:ignore="UsingOnClickInXml" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf" >
+
+                <Button
+                    android:id="@+id/button_chitta_harakteristika"
+                    style="@style/button_activity_chetasika"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma1"
+                    android:text="@string/button_kontakt_harakteristika"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_chitta_function"
+                    style="@style/button_activity_chetasika"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma1"
+                    android:text="@string/button_kontakt_function"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_chitta_proyavlenie"
+                    style="@style/button_activity_chetasika"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma1"
+                    android:text="@string/button_kontakt_proyavlenie"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_chitta_prichina"
+                    style="@style/button_activity_chetasika"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma1"
+                    android:text="@string/button_kontakt_prichina"
+                    tools:ignore="UsingOnClickInXml" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewAbhidhammaChitta"
+                style="@style/TextMessageStyleAbhidyamma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/infoButton2"
+                style="@style/infoButton"
+                android:onClick="onButtonClickAbhidhamma2"
+                android:foreground="@drawable/info7"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
@@ -62,6 +124,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/buttonAbhidhammaChetasika"
                 tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/textViewAbhidhammaChetasika"
+                style="@style/TextMessageStyleAbhidyamma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
 
         </LinearLayout>
 

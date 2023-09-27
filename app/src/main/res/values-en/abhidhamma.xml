@@ -119,4 +119,47 @@ process of cognition.</string>
     <string name="buttonChetasikaKontaktKombinaciya">Association with consciousness</string>
     <string name="textButtonChittas">89 or 121 \n types of consciousness \n (chitta)</string>
 
+    <string name="text_for_chittas">
+        The Pali word "chitta" comes from the verb
+root chiti - “to know, to know.” \n Commentators define citta in three ways: as an agent, as an instrument
+and as an activity. As an agent, citta is that which cognizes the object (āramman am cinteti ti cittam). \n As an instrument, citta is that by which the accompanying mental factors cognize the object (etena chintenti ti
+chittam). \n As the activity of citta itself is nothing other than
+as a process of cognition of an object (chintanamattam chittam). \n
+The third definition, given in terms of activity, is considered the most appropriate of them; that is, citta is fundamentally the activity, or process, of cognition, or knowledge, of an object. It is not an agent or a tool,
+having actual existence in itself, separate from activity or cognition. Definitions in terms of agent and instrument are proposed to refute the misconception of those who believe that the permanent personality, or ego, is the agent and instrument of knowledge. Buddhist thinkers through
+These definitions indicate that it is not the personality that carries out the act of cognition, but citta, or consciousness. This citta
+is nothing more than an act of cognition, and this act is necessarily temporary, marked by emergence and disappearance. \n
+While citta has the sole characteristic of knowing the object, a characteristic which remains the same in all its various manifestations, the Abhidhamma distinguishes different types of citta. These
+the types, also called cittas, number eighty-nine, or, if classified more closely, one hundred and twenty-one. What we usually think about
+as consciousness, is in fact a series of cittas - instantaneous acts of consciousness,
+        occurring in such rapid succession that we are unable to notice the individual moments of their occurrence,
+        belonging to different types. The Abhidhamma not only distinguishes these types of consciousness,
+        but, more importantly, it also shows them in a certain ordered system, a single and closely intertwined whole.
+</string>
+
+    <string name="text_for_chitta_harakteristika">CHARACTERISTIC: knowledge of the object
+(vijānana).</string>
+    <string name="text_for_chitta_function">FUNCTION: to be a “forerunner” (pubbangama)
+mental factors, in the sense that citta predominates
+above them and always accompanied by them.</string>
+    <string name="text_for_chitta_proyavlenie">MANIFESTATION: the way in which it appears to the experience of the meditator is
+         it is a continuous connectedness of processes (sandhana).</string>
+    <string name="text_for_chitta_prichina">IMMEDIATE CAUSE: mental-material (nāmarupa),
+         because consciousness cannot arise
+one, in the complete absence of mental factors and material phenomena.</string>
+
+    <string name="text_for_chittasiki">
+        CHETASIKAS are mental phenomena that occur in direct connection with chitta,
+         or consciousness, and will perform more specific tasks in the general act of cognition, thereby helping the chitta.
+         Mental factors cannot arise without citta,
+         just as citta cannot be completely separated from mental factors.
+         But, despite the fact that functionally these two types of realities are independent,
+         Chitta is considered as the main one because mental factors help in the knowledge of the object
+         depending on citta, which is the main cognitive element. \n
+The relationship between the Citta and the Cetasikas is comparable to the relationship between a king and his retinue.
+         Although they say: “The king is coming,” the king does not come alone, he always comes accompanied by his assistants.
+         Likewise, whenever citta arises, it never arises alone,
+         and always accompanied by his retinue - a cetasik.
+</string>
+
 </resources>

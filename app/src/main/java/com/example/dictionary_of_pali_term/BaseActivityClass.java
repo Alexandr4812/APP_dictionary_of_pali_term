@@ -18,4 +18,6 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
 }

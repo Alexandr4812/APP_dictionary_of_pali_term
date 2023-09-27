@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="textButtonKamavacharachitani">Сознание сенсорной среды \n (Кāмāвачарачиттāни) — 54</string>
+    <string name="textButtonKamavacharamUnwholsome">Неблаготворное сознание \n (Акусалачиттāни) — 12</string>
+    <string name="textButtonLobhamulachitani">Сознание, коренящееся в жадности \n (Лобхамулачиттāни) — 8</string>
+    <string name="textButton1Lobhamulachitani">1 \n Одно сознание, сопровождающееся радостью, ассоциированное с ошибочным взглядом, возникающее без побуждения. \n \n Соманассасахагатам диттхигатасампайуттам асанкхāрикам екам.</string>
 </resources>

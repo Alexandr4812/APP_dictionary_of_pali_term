@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="textButtonKamavacharachitani">Consciousness of the sensory environment \n (Kamavacaracittani) - 54</string>
+    <string name="textButtonKamavacharamUnwholsome">Unwholesome consciousness \n (Akusalacittāni) – 12</string>
+    <string name="textButtonLobhamulachitani">Consciousness rooted in greed \n (Lobhamulachittāni) – 8</string>
+    <string name="textButton1Lobhamulachitani">1\n
+One consciousness accompanied by joy, associated with an erroneous view, arising without prompting. \n \n
+Somanassasahagatam dithigatasampayuttam asankharikam ekam.
+</string>
 </resources>
