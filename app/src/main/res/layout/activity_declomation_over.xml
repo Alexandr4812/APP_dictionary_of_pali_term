@@ -170,7 +170,7 @@
                 android:id="@+id/textViewAlmsWish"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
-                android:layout_height="800dp"
+                android:layout_height="wrap_content"
                 android:text="@string/DeklomaciyaAlmsWish" />
         </LinearLayout>
     </ScrollView>
