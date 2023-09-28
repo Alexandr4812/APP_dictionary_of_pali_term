@@ -62,13 +62,28 @@
                 tools:ignore="ContentDescription" />
 
             <Button
-                android:id="@+id/button_mentalnie_faktori"
+                android:id="@+id/infoButtonKamamavachara"
+                style="@style/infoButton"
+                android:foreground="@drawable/info7"
+                android:onClick="onButtonClickAbhidhammaKammavacharam"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_abhidhamma_kammavacharam"
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="toAbhidhammaChittasKamavacharam"
                 android:text="@string/textButtonKamavacharachitani"
                 tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/textViewAbhidhammaKammavacharam"
+                style="@style/TextMessageStyleAbhidyamma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
 
 
         </LinearLayout>
