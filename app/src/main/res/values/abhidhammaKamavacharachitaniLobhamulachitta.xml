@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textButtonLobhamulachittaKoren">корень</string>
+    <string name="textButtonLobhamulachittaFunkciya">функция</string>
+    <string name="textButtonLobhamulachittaKombinaciya">комбинация с ментальными факторами</string>
+
+    <string name="textLobhamulachitta1">ПРИМЕР: с радостью, придерживаясь взгляда, что в воровстве нет ничего дурного,
+        мальчик спонтанно крадёт яблоко с фруктовой лавки.</string>
+    <string name="textLobhamulachittaKoren1">КОРЕНЬ: \n ЖАДНОСТЬ (лобха) \n ЗАБЛУЖДЕНИЕ (моха) </string>
+    <string name="textLobhamulachittaFunkciya1">ФУНКЦИЯ: функционирует как джаванаа.</string>
+    <string name="textLobhamulachittaKombinaciya1">Входит в комбинацию с 19 четасиками: \n
+    7 - универсальных \n
+    Начальное приложение (Vitakka) \n
+    Устойчивое приложение (Vicāra) \n
+    Решимость (Adhimokkha) \n
+    Энергия (Viriya) \n
+    Восторженность (Pīti) \n
+    Желание действовать (Chanda) \n
+    Заблуждение (Moha) \n
+    Бесстыдство (Ahirika) \n
+    Безбоязненность дурных поступков (Anottappa) \n
+    Беспокойство (Uddhacca) \n
+    Жадность (Lobha) \n
+    Ошибочный взгляд (Diṭṭhi)</string>
+</resources>

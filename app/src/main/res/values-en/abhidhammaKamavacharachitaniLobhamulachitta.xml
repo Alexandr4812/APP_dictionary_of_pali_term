@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textButtonLobhamulachittaKoren">root</string>
+    <string name="textButtonLobhamulachittaFunkciya">funkcion</string>
+    <string name="textButtonLobhamulachittaKombinaciya">combination with mental factors</string>
+
+    <string name="textLobhamulachitta1">EXAMPLE: with joy, adhering to the view that there is nothing wrong with stealing,
+a boy spontaneously steals an apple from a fruit shop.</string>
+    <string name="textLobhamulachittaKoren1">ROOT: \n GREED (lobha) \n DELUSION (moha) </string>
+    <string name="textLobhamulachittaFunkciya1">FUNCTION: Functions as javana.</string>
+    <string name="textLobhamulachittaKombinaciya1">Included in combination with 19 cetasikas: \n
+     7 - universal \n
+     Starter Application (Vitakka) \n
+     Sustainable application (Vicāra) \n
+     Determination (Adhimokkha) \n
+     Energy (Viriya) \n
+     Enthusiasm (Pīti) \n
+     Desire to act (Chanda) \n
+     Misconception (Moha) \n
+     Shamelessness (Ahirika) \n
+     Fearlessness of evil deeds (Anottappa) \n
+     Worry (Uddhacca) \n
+     Greed (Lobha) \n
+     Erroneous View (Diṭṭhi)</string>
+</resources>

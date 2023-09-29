@@ -1,5 +1,8 @@
 package com.example.dictionary_of_pali_term;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +18,9 @@ public class MainActivity extends BaseActivityClass {
     ImageButton imageButtonRu;
     ImageButton imageButtonEn;
 
+    private TextView textView;
+    private String textToAnimate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +30,31 @@ public class MainActivity extends BaseActivityClass {
 
         imageButtonRu = findViewById(R.id.imageButtonRu);
         imageButtonEn = findViewById(R.id.imageButtonUk);
+
+        textView = findViewById(R.id.textViewHintMain);
+        textToAnimate = "Приложение находится в стадии разработки, материал в разделах не полный, он только добавляется." +
+                " В данный момент приложение корректно работает если на телефоне установленна светлая тема. Если у вас темная тема," +
+                " сделайте исключение для этого приложения в настройках телефона.";
+
+        animateText();
+    }
+
+    private void animateText() {
+        ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
+        animator.setDuration(2000); // Продолжительность анимации в миллисекундах
+        animator.addUpdateListener(animation -> {
+            int animatedValue = (int) animation.getAnimatedValue();
+            String partialText = textToAnimate.substring(0, animatedValue);
+            textView.setText(partialText);
+        });
+        animator.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+                // Анимация завершена
+            }
+        });
+        animator.start();
     }
 
 

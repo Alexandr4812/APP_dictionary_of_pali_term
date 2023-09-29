@@ -68,7 +68,45 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="@string/textButton1Lobhamulachitani"
-          tools:ignore="UsingOnClickInXml" />
+          tools:ignore="UsingOnClickInXml"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup1" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          tools:ignore="UselessLeaf" >
+
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_koren1"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup1"
+            android:text="@string/textButtonLobhamulachittaKoren"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_funkciya1"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup1"
+            android:text="@string/textButtonLobhamulachittaFunkciya"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+      </LinearLayout>
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_kombinaciya1"
+          style="@style/button_activity_chetasika_kombinaciya"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup1"
+          android:text="@string/textButtonLobhamulachittaKombinaciya" />
+
+      <TextView
+          android:id="@+id/textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani1"
+          style="@style/TextMessageStyleAbhidyamma"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text=""
+          android:visibility="invisible"/>
     </LinearLayout>
   </ScrollView>
 
