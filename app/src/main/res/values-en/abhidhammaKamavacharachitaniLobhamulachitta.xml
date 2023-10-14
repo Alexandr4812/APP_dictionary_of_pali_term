@@ -8,18 +8,30 @@
 a boy spontaneously steals an apple from a fruit shop.</string>
     <string name="textLobhamulachittaKoren1">ROOT: \n GREED (lobha) \n DELUSION (moha) </string>
     <string name="textLobhamulachittaFunkciya1">FUNCTION: Functions as javana.</string>
-    <string name="textLobhamulachittaKombinaciya1">Included in combination with 19 cetasikas: \n
-     7 - universal \n
-     Starter Application (Vitakka) \n
-     Sustainable application (Vicāra) \n
-     Determination (Adhimokkha) \n
-     Energy (Viriya) \n
-     Enthusiasm (Pīti) \n
-     Desire to act (Chanda) \n
-     Misconception (Moha) \n
-     Shamelessness (Ahirika) \n
-     Fearlessness of evil deeds (Anottappa) \n
-     Worry (Uddhacca) \n
-     Greed (Lobha) \n
-     Erroneous View (Diṭṭhi)</string>
+    <string name="textLobhamulachittaKombinaciya1">
+        INCLUDED IN A COMBINATION WITH 19 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Enthusiasm (Pīti)\n
+     >> 13. Desire to act (Chanda) \n\n
+         UNIVERSAL UNBENEFITABLE: \n
+     >> 14. Misconception (Moha)\n
+     >> 15. Shamelessness (Ahirika)\n
+     >> 16. Fearlessness of evil deeds (Anottappa)\n
+     >> 17. Anxiety (Uddhacca)\n\n
+         ADVERSE THINGS THAT HAPPEN FROM TIME TO TIME: \n
+     >> 18. Greed (Lobha) \n
+     >> 19. Erroneous view (Diṭṭhi)
+    </string>
 </resources>
