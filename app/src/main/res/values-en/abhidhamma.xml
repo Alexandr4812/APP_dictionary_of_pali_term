@@ -162,4 +162,20 @@ The relationship between the Citta and the Cetasikas is comparable to the relati
          and always accompanied by his retinue - a cetasik.
 </string>
 
+    <string name="text_for_eticheski_veriabelnie">
+         ETHICALLY VARIABLE FACTORS (annasamānachetasika): \n\n
+         The first two categories of mental factors are the seven universal mental factors
+         and six that occur from time to time - united under the title annasamāna,
+         conventionally translated here as “ethically variable.”
+         The expression literally means "in common with others."
+         The non-beautiful cittas are called “other” (anna) in relation to the beautiful cittas,
+         and the beautiful cittas are called “other” in relation to the cittas that are not beautiful.
+         The thirteen cetasikas of the first two categories are common (samāna) both for the beautiful,
+         so for non-beautiful cittas, and accept the ethical quality transferred to the citta by other cetasikas,
+         namely, the roots associated with it (hetu).
+         In wholesome cittas they become wholesome, in unwholesome cittas they become unwholesome,
+         and in kammically indefinite cittas they become kammically indefinite.
+         For this reason they are called “common with others,” that is, ethically variable. \n\n
+    </string>
+
 </resources>

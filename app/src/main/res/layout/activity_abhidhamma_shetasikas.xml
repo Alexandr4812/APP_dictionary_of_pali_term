@@ -63,6 +63,13 @@
           tools:ignore="ContentDescription" />
 
       <Button
+          android:id="@+id/infoButtonEticheskiVeriabelnie"
+          style="@style/infoButton"
+          android:foreground="@drawable/info7"
+          android:onClick="onButtonClickAbhidhammaEyicheskiVeriabelnie"
+          tools:ignore="UsingOnClickInXml" />
+
+      <Button
           android:id="@+id/button_mentalnie_faktori"
           style="@style/button_activity_declomation_main"
           android:onClick="toChetasikasEtichVerAct"
@@ -70,6 +77,14 @@
           android:layout_height="wrap_content"
           android:text="@string/buttonAbhidhammaChetasikaEtichVerFakt"
           tools:ignore="UsingOnClickInXml" />
+
+      <TextView
+          android:id="@+id/textViewAbhidhammaEticheskiVeriabelnie"
+          style="@style/TextMessageStyleAbhidyamma"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text=""
+          android:visibility="invisible"/>
 
 
     </LinearLayout>
