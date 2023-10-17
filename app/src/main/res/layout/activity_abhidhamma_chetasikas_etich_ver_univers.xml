@@ -112,8 +112,9 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button_chetasika_kontakt_kombinaciya"
+                android:id="@+id/button_chetasika_kontakt_associaciya"
                 style="@style/button_activity_chetasika_kombinaciya"
+                android:onClick="onButtonClickGroup1"
                 android:text="@string/buttonChetasikaKontaktKombinaciya" />
 
             <TextView
@@ -171,8 +172,9 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button_chetasika_kontakt_kombinaciya2"
+                android:id="@+id/button_chetasika_kontakt_associaciya2"
                 style="@style/button_activity_chetasika_kombinaciya"
+                android:onClick="onButtonClickGroup2"
                 android:text="@string/buttonChetasikaKontaktKombinaciya" />
 
             <TextView
@@ -230,8 +232,9 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button_chetasika_kontakt_kombinaciya3"
+                android:id="@+id/button_chetasika_kontakt_associaciya3"
                 style="@style/button_activity_chetasika_kombinaciya"
+                android:onClick="onButtonClickGroup3"
                 android:text="@string/buttonChetasikaKontaktKombinaciya" />
 
             <TextView
@@ -289,8 +292,9 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button_chetasika_kontakt_kombinaciya4"
+                android:id="@+id/button_chetasika_kontakt_associaciya4"
                 style="@style/button_activity_chetasika_kombinaciya"
+                android:onClick="onButtonClickGroup4"
                 android:text="@string/buttonChetasikaKontaktKombinaciya" />
 
             <TextView
@@ -348,8 +352,9 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button_chetasika_kontakt_kombinaciya5"
+                android:id="@+id/button_chetasika_kontakt_associaciya5"
                 style="@style/button_activity_chetasika_kombinaciya"
+                android:onClick="onButtonClickGroup5"
                 android:text="@string/buttonChetasikaKontaktKombinaciya" />
 
             <TextView
@@ -407,8 +412,9 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button_chetasika_kontakt_kombinaciya6"
+                android:id="@+id/button_chetasika_kontakt_associaciya6"
                 style="@style/button_activity_chetasika_kombinaciya"
+                android:onClick="onButtonClickGroup6"
                 android:text="@string/buttonChetasikaKontaktKombinaciya" />
 
             <TextView
@@ -466,8 +472,9 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button_chetasika_kontakt_kombinaciya7"
+                android:id="@+id/button_chetasika_kontakt_associaciya7"
                 style="@style/button_activity_chetasika_kombinaciya"
+                android:onClick="onButtonClickGroup7"
                 android:text="@string/buttonChetasikaKontaktKombinaciya" />
 
             <TextView

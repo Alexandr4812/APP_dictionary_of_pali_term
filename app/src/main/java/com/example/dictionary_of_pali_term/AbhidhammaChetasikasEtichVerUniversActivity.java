@@ -12,25 +12,32 @@ import android.widget.TextView;
 public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityClass {
 
     private TextView textViewAbhidhammaChetasika1;
-    private Button buttonKontakt, buttonHarakteristika1, buttonFunkciya1, buttonProyavlenie1, buttonPrichina1;
+    private Button buttonKontakt, buttonHarakteristika1, buttonFunkciya1, buttonProyavlenie1, buttonPrichina1,
+            buttonAssociaciya1;
 
     private TextView textViewAbhidhammaChuvstvo2;
-    private Button buttonKontakt2, buttonHarakteristika2, buttonFunkciya2, buttonProyavlenie2, buttonPrichina2;
+    private Button buttonKontakt2, buttonHarakteristika2, buttonFunkciya2, buttonProyavlenie2, buttonPrichina2,
+            buttonAssociaciya2;
 
     private TextView textViewAbhidhammaVospriyatie3;
-    private Button buttonVospriyatie3, buttonHarakteristika3, buttonFunkciya3, buttonProyavlenie3, buttonPrichina3;
+    private Button buttonVospriyatie3, buttonHarakteristika3, buttonFunkciya3, buttonProyavlenie3, buttonPrichina3,
+            buttonAssociaciya3;
 
     private TextView textViewAbhidhammaVolenie4;
-    private Button buttonVolenie4, buttonHarakteristika4, buttonFunkciya4, buttonProyavlenie4, buttonPrichina4;
+    private Button buttonVolenie4, buttonHarakteristika4, buttonFunkciya4, buttonProyavlenie4, buttonPrichina4,
+            buttonAssociaciya4;
 
     private TextView textViewAbhidhammaOdnonapravlennost5;
-    private Button buttonOdnonapravlennost5, buttonHarakteristika5, buttonFunkciya5, buttonProyavlenie5, buttonPrichina5;
+    private Button buttonOdnonapravlennost5, buttonHarakteristika5, buttonFunkciya5, buttonProyavlenie5, buttonPrichina5,
+            buttonAssociaciya5;
 
     private TextView textViewAbhidhammaJivitindriya6;
-    private Button buttonJivitindriya6, buttonHarakteristika6, buttonFunkciya6, buttonProyavlenie6, buttonPrichina6;
+    private Button buttonJivitindriya6, buttonHarakteristika6, buttonFunkciya6, buttonProyavlenie6, buttonPrichina6,
+            buttonAssociaciya6;
 
     private TextView textViewAbhidhammaVnimanie7;
-    private Button buttonVnimanie7, buttonHarakteristika7, buttonFunkciya7, buttonProyavlenie7, buttonPrichina7;
+    private Button buttonVnimanie7, buttonHarakteristika7, buttonFunkciya7, buttonProyavlenie7, buttonPrichina7,
+            buttonAssociaciya7;
 
     // Переменная для хранения последней нажатой кнопки
     private Button lastClickedButton = null;
@@ -53,48 +60,52 @@ public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityCla
         buttonFunkciya1 = findViewById(R.id.button_chetasika_function);
         buttonProyavlenie1 = findViewById(R.id.button_chetasika_proyavlenie);
         buttonPrichina1 = findViewById(R.id.button_chetasika_prichina);
+        buttonAssociaciya1 = findViewById(R.id.button_chetasika_kontakt_associaciya);
 
         buttonKontakt2 = findViewById(R.id.button_chetasika_Chuvstvo2);
         buttonHarakteristika2 = findViewById(R.id.button_chetasika_harakteristika2);
         buttonFunkciya2 = findViewById(R.id.button_chetasika_function2);
         buttonProyavlenie2 = findViewById(R.id.button_chetasika_proyavlenie2);
         buttonPrichina2 = findViewById(R.id.button_chetasika_prichina2);
+        buttonAssociaciya2 = findViewById(R.id.button_chetasika_kontakt_associaciya2);
 
         buttonVospriyatie3 = findViewById(R.id.button_chetasika_vospriyatie3);
         buttonHarakteristika3 = findViewById(R.id.button_chetasika_harakteristika3);
         buttonFunkciya3 = findViewById(R.id.button_chetasika_function3);
         buttonProyavlenie3 = findViewById(R.id.button_chetasika_proyavlenie3);
         buttonPrichina3 = findViewById(R.id.button_chetasika_prichina3);
+        buttonAssociaciya3 = findViewById(R.id.button_chetasika_kontakt_associaciya3);
 
         buttonVolenie4 = findViewById(R.id.button_chetasika_volenie4);
         buttonHarakteristika4 = findViewById(R.id.button_chetasika_harakteristika4);
         buttonFunkciya4 = findViewById(R.id.button_chetasika_function4);
         buttonProyavlenie4 = findViewById(R.id.button_chetasika_proyavlenie4);
         buttonPrichina4 = findViewById(R.id.button_chetasika_prichina4);
+        buttonAssociaciya4 = findViewById(R.id.button_chetasika_kontakt_associaciya4);
 
         buttonOdnonapravlennost5 = findViewById(R.id.button_chetasika_odnonapravlennost5);
         buttonHarakteristika5 = findViewById(R.id.button_chetasika_harakteristika5);
         buttonFunkciya5 = findViewById(R.id.button_chetasika_function5);
         buttonProyavlenie5 = findViewById(R.id.button_chetasika_proyavlenie5);
         buttonPrichina5 = findViewById(R.id.button_chetasika_prichina5);
+        buttonAssociaciya5 = findViewById(R.id.button_chetasika_kontakt_associaciya5);
 
         buttonJivitindriya6 = findViewById(R.id.button_chetasika_jivitindriya6);
         buttonHarakteristika6 = findViewById(R.id.button_chetasika_harakteristika6);
         buttonFunkciya6 = findViewById(R.id.button_chetasika_function6);
         buttonProyavlenie6 = findViewById(R.id.button_chetasika_proyavlenie6);
         buttonPrichina6 = findViewById(R.id.button_chetasika_prichina6);
+        buttonAssociaciya6 = findViewById(R.id.button_chetasika_kontakt_associaciya6);
 
         buttonVnimanie7 = findViewById(R.id.button_chetasika_vnimanie7);
         buttonHarakteristika7 = findViewById(R.id.button_chetasika_harakteristika7);
         buttonFunkciya7 = findViewById(R.id.button_chetasika_function7);
         buttonProyavlenie7 = findViewById(R.id.button_chetasika_proyavlenie7);
         buttonPrichina7 = findViewById(R.id.button_chetasika_prichina7);
+        buttonAssociaciya7 = findViewById(R.id.button_chetasika_kontakt_associaciya7);
 
 
-        // Убрать строку состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        // Убрать панель навигации (если нужно)
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        setWindowFlagsFullscreenAndNoLimits();
     }
 
     public void onButtonClickGroup1(View view) {
@@ -126,6 +137,9 @@ public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityCla
             } else if (clickedButton == buttonKontakt) {
                 textViewAbhidhammaChetasika1.setText(R.string.text_for_kontakt);
                 animateText(textViewAbhidhammaChetasika1, getString(R.string.text_for_kontakt));
+            } else if (clickedButton == buttonAssociaciya1) {
+                textViewAbhidhammaChetasika1.setText(R.string.forButtonAssociaciya);
+                animateText(textViewAbhidhammaChetasika1, getString(R.string.forButtonAssociaciya));
             }
 
             textViewAbhidhammaChetasika1.setVisibility(View.VISIBLE);
@@ -163,6 +177,9 @@ public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityCla
             } else if (clickedButton == buttonKontakt2) {
                 textViewAbhidhammaChuvstvo2.setText(R.string.text_for_chuvstvo);
                 animateText(textViewAbhidhammaChuvstvo2, getString(R.string.text_for_chuvstvo));
+            } else if (clickedButton == buttonAssociaciya2) {
+                textViewAbhidhammaChuvstvo2.setText(R.string.forButtonAssociaciya);
+                animateText(textViewAbhidhammaChuvstvo2, getString(R.string.forButtonAssociaciya));
             }
 
             textViewAbhidhammaChuvstvo2.setVisibility(View.VISIBLE);
@@ -200,6 +217,9 @@ public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityCla
             } else if (clickedButton == buttonVospriyatie3) {
                 textViewAbhidhammaVospriyatie3.setText(R.string.text_for_vospriyatie);
                 animateText(textViewAbhidhammaVospriyatie3, getString(R.string.text_for_vospriyatie));
+            } else if (clickedButton == buttonAssociaciya3) {
+                textViewAbhidhammaVospriyatie3.setText(R.string.forButtonAssociaciya);
+                animateText(textViewAbhidhammaVospriyatie3, getString(R.string.forButtonAssociaciya));
             }
 
             textViewAbhidhammaVospriyatie3.setVisibility(View.VISIBLE);
@@ -237,6 +257,9 @@ public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityCla
             } else if (clickedButton == buttonVolenie4) {
                 textViewAbhidhammaVolenie4.setText(R.string.text_for_volenie);
                 animateText(textViewAbhidhammaVolenie4, getString(R.string.text_for_volenie));
+            } else if (clickedButton == buttonAssociaciya4) {
+                textViewAbhidhammaVolenie4.setText(R.string.forButtonAssociaciya);
+                animateText(textViewAbhidhammaVolenie4, getString(R.string.forButtonAssociaciya));
             }
 
             textViewAbhidhammaVolenie4.setVisibility(View.VISIBLE);
@@ -274,6 +297,9 @@ public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityCla
             } else if (clickedButton == buttonOdnonapravlennost5) {
                 textViewAbhidhammaOdnonapravlennost5.setText(R.string.text_for_odnonapravlennost);
                 animateText(textViewAbhidhammaOdnonapravlennost5, getString(R.string.text_for_odnonapravlennost));
+            } else if (clickedButton == buttonAssociaciya5) {
+                textViewAbhidhammaOdnonapravlennost5.setText(R.string.forButtonAssociaciya);
+                animateText(textViewAbhidhammaOdnonapravlennost5, getString(R.string.forButtonAssociaciya));
             }
 
             textViewAbhidhammaOdnonapravlennost5.setVisibility(View.VISIBLE);
@@ -311,6 +337,9 @@ public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityCla
             } else if (clickedButton == buttonJivitindriya6) {
                 textViewAbhidhammaJivitindriya6.setText(R.string.text_for_jivitindriya);
                 animateText(textViewAbhidhammaJivitindriya6, getString(R.string.text_for_jivitindriya));
+            } else if (clickedButton == buttonAssociaciya6) {
+                textViewAbhidhammaJivitindriya6.setText(R.string.forButtonAssociaciya);
+                animateText(textViewAbhidhammaJivitindriya6, getString(R.string.forButtonAssociaciya));
             }
 
             textViewAbhidhammaJivitindriya6.setVisibility(View.VISIBLE);
@@ -348,6 +377,9 @@ public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityCla
             } else if (clickedButton == buttonVnimanie7) {
                 textViewAbhidhammaVnimanie7.setText(R.string.text_for_volenie);
                 animateText(textViewAbhidhammaVnimanie7, getString(R.string.text_for_vnimanie));
+            } else if (clickedButton == buttonAssociaciya7) {
+                textViewAbhidhammaVnimanie7.setText(R.string.forButtonAssociaciya);
+                animateText(textViewAbhidhammaVnimanie7, getString(R.string.forButtonAssociaciya));
             }
 
             textViewAbhidhammaVnimanie7.setVisibility(View.VISIBLE);
