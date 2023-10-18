@@ -41,20 +41,27 @@ public class AbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniActivity ext
 
         textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta1 =
                 findViewById(R.id.textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani1);
+        textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2 =
+                findViewById(R.id.textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani2);
 
         lobhamulachittani1 = findViewById(R.id.button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani1);
+        lobhamulachittani2 = findViewById(R.id.button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani2);
 
         koren1 = findViewById(R.id.button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_koren1);
+        koren2 = findViewById(R.id.button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_koren2);
 
         funkciya1 = findViewById(R.id.button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_funkciya1);
+        funkciya2 = findViewById(R.id.button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_funkciya2);
 
         kombinaciya1 = findViewById(R.id.button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_kombinaciya1);
+        kombinaciya2 = findViewById(R.id.button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_kombinaciya2);
     }
 
     public void onButtonClickAbhidhammaLobhaGroup1(View view) {
         Button clickedButton = (Button) view;
         int visibility = textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta1.getVisibility();
         textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta1.setText("");
+        textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -78,6 +85,38 @@ public class AbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniActivity ext
                 textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta1.setText(R.string.textLobhamulachittaKombinaciya1);
                 textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta1.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta1, getString(R.string.textLobhamulachittaKombinaciya1));
+            }
+            lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
+        }
+    }
+
+    public void onButtonClickAbhidhammaLobhaGroup2(View view) {
+        Button clickedButton = (Button) view;
+        int visibility = textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.getVisibility();
+        textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta1.setText("");
+
+        // Если нажата та же кнопка, что и ранее
+        if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
+            textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setText(""); // Установите текст в пустую строку
+            textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setVisibility(View.INVISIBLE);
+            resetAnimator();
+        } else {
+            if (clickedButton == lobhamulachittani2) {
+                textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setText(R.string.textLobhamulachitta2);
+                textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2, getString(R.string.textLobhamulachitta2));
+            } else if (clickedButton == koren2) {
+                textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setText(R.string.textLobhamulachittaKoren2);
+                textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2, getString(R.string.textLobhamulachittaKoren2));
+            } else if (clickedButton == funkciya2) {
+                textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setText(R.string.textLobhamulachittaFunkciya2);
+                textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2, getString(R.string.textLobhamulachittaFunkciya2));
+            } else if (clickedButton == kombinaciya2) {
+                textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setText(R.string.textLobhamulachittaKombinaciya2);
+                textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta2, getString(R.string.textLobhamulachittaKombinaciya2));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }

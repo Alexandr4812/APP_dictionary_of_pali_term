@@ -6,8 +6,15 @@
 
     <string name="textLobhamulachitta1">EXAMPLE: with joy, adhering to the view that there is nothing wrong with stealing,
 a boy spontaneously steals an apple from a fruit shop.</string>
+    <string name="textLobhamulachitta2">EXAMPLE: with joy, holding the same view, he kras-
+the apple comes, egged on by a friend.</string>
+
     <string name="textLobhamulachittaKoren1">ROOT: \n GREED (lobha) \n DELUSION (moha) </string>
+    <string name="textLobhamulachittaKoren2">ROOT: \n GREED (lobha) \n DELUSION (moha) </string>
+
     <string name="textLobhamulachittaFunkciya1">FUNCTION: Functions as javana.</string>
+    <string name="textLobhamulachittaFunkciya2">FUNCTION: Functions as javana.</string>
+
     <string name="textLobhamulachittaKombinaciya1">
         INCLUDED IN A COMBINATION WITH 19 CHETASIKAS: \n\n
          UNIVERSAL:\n
@@ -34,4 +41,39 @@ a boy spontaneously steals an apple from a fruit shop.</string>
      >> 18. Greed (Lobha) \n
      >> 19. Erroneous view (Diṭṭhi)
     </string>
+    <string name="textLobhamulachittaKombinaciya2">
+        INCLUDED IN COMBINATION WITH 21 CHETASIKA: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Enthusiasm (Pīti)\n
+     >> 13. Desire to act (Chanda) \n\n
+         UNIVERSAL UNBENEFITABLE: \n
+     >> 14. Misconception (Moha)\n
+     >> 15. Shamelessness (Ahirika)\n
+     >> 16. Fearlessness of evil deeds (Anottappa)\n
+     >> 17. Anxiety (Uddhacca)\n\n
+         ADVERSE THINGS THAT HAPPEN FROM TIME TO TIME: \n
+     >> 18. Greed (Lobha) \n
+     >> 19. Erroneous view (Diṭṭhi) \n
+     >> 20. Lethargy (Thīna) \n
+     >> 21. Apathy (Middha) \n</string>
+
+    <string name="forTextView8withLobha">8 types of consciousness rooted in greed</string>
+    <string name="textButton2Lobhamulachitani">
+        2 \n One consciousness, accompanied by joy, associated
+         cited with an erroneous view, arising
+         with motivation. \n \n
+         Somanassasahagatam dithigatasampayuttam
+         sasankharikam ekam.</string>
 </resources>
