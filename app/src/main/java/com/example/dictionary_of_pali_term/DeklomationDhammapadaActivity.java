@@ -76,6 +76,20 @@ public class DeklomationDhammapadaActivity extends BaseActivityClass {
         buttonLiveToDhammapada.setVisibility(View.VISIBLE);
     }
 
+    public void toTextabout7Dhammapada(View view) {
+        ScrollView scrollText = findViewById(R.id.dhammapadaScrollTextAbout7Dhammapada);
+        scrollText.setVisibility(View.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+        buttonLiveToDhammapada.setVisibility(View.VISIBLE);
+    }
+
+    public void toTextabout8Dhammapada(View view) {
+        ScrollView scrollText = findViewById(R.id.dhammapadaScrollTextAbout8Dhammapada);
+        scrollText.setVisibility(View.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+        buttonLiveToDhammapada.setVisibility(View.VISIBLE);
+    }
+
     public void tobackDhammapada(View view) {
         ScrollView scrollText1Dhammapada = findViewById(R.id.dhammapadaScrollTextAbout1Dhammapada);
         scrollText1Dhammapada.setVisibility(View.INVISIBLE);
@@ -89,6 +103,10 @@ public class DeklomationDhammapadaActivity extends BaseActivityClass {
         scrollText5Dhammapada.setVisibility(View.INVISIBLE);
         ScrollView scrollText6Dhammapada = findViewById(R.id.dhammapadaScrollTextAbout6Dhammapada);
         scrollText6Dhammapada.setVisibility(View.INVISIBLE);
+        ScrollView scrollText7Dhammapada = findViewById(R.id.dhammapadaScrollTextAbout7Dhammapada);
+        scrollText7Dhammapada.setVisibility(View.INVISIBLE);
+        ScrollView scrollText8Dhammapada = findViewById(R.id.dhammapadaScrollTextAbout8Dhammapada);
+        scrollText8Dhammapada.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
         buttonLiveToDhammapada.setVisibility(View.INVISIBLE);
     }

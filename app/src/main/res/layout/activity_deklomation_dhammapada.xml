@@ -126,6 +126,24 @@
                 android:text="@string/button6Dhammapada"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/buttonDhammapada7"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toTextabout7Dhammapada"
+                android:text="@string/button7Dhammapada"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/buttonDhammapada8"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toTextabout8Dhammapada"
+                android:text="@string/button8Dhammapada"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -304,6 +322,66 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/textViewAbout6Dhammapada" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/dhammapadaScrollTextAbout7Dhammapada"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewAbout7Dhammapada"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/textViewAbout7Dhammapada" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/dhammapadaScrollTextAbout8Dhammapada"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textViewAbout8Dhammapada"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/textViewAbout8Dhammapada" />
         </LinearLayout>
     </ScrollView>
 
