@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.dictionary_of_pali_term'
+    namespace 'com.dhammamobile.dictionary_of_pali_term'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.dictionary_of_pali_term"
+        applicationId "com.dhammamobile.dictionary_of_pali_term"
         minSdk 21
         targetSdk 33
         versionCode 1
