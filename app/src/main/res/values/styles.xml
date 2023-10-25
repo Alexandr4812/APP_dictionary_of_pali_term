@@ -52,8 +52,8 @@
     </style>
 
     <style name="MainButtons">
-        <item name="android:layout_width">88dp</item>
-        <item name="android:layout_height">86dp</item>
+        <item name="android:layout_width">68dp</item>
+        <item name="android:layout_height">66dp</item>
         <item name="android:scaleType">centerInside</item>
         <item name="android:background">@color/my_main_color</item>
         <item name="android:textAlignment">center</item>

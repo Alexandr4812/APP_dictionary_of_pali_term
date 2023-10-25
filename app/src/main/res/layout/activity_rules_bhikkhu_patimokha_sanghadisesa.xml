@@ -90,6 +90,13 @@
                 android:onClick="toSanghadisesaText2"
                 tools:ignore="UsingOnClickInXml" />
 
+            <Button
+                android:id="@+id/button_sangkhadisesa_3"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/textButtonSanghadisesa3"
+                android:onClick="toSanghadisesaText3"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
     </ScrollView>
     <ScrollView
@@ -170,6 +177,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sanghadisesaText2" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollSanghadisesaText3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSanghadisesaText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSanghadisesaText3"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sanghadisesaText3" />
         </LinearLayout>
     </ScrollView>
 

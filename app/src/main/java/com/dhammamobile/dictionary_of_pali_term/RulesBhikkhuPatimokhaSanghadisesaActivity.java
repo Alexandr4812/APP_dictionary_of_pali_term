@@ -57,7 +57,8 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
+        super.onBackPressed();
         startIntentActivityAndFinish(RulesBhikkhuActivity.class);
     }
 
@@ -86,13 +87,22 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         buttonHome.setVisibility(View.VISIBLE);
     }
 
+    public void toSanghadisesaText3(View view) {
+        ScrollView scrollText = findViewById(R.id.viewScrollSanghadisesaText3);
+        scrollText.setVisibility(View.VISIBLE);
+        buttonBack.setVisibility(View.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+    }
+
     public void toBackButtonSanghadisesa(View view) {
         ScrollView scrollText = findViewById(R.id.viewScrollSanghadisesaAbout);
         ScrollView scrollText1 = findViewById(R.id.viewScrollSanghadisesaText1);
         ScrollView scrollText2 = findViewById(R.id.viewScrollSanghadisesaText2);
+        ScrollView scrollText3 = findViewById(R.id.viewScrollSanghadisesaText3);
         scrollText.setVisibility(View.INVISIBLE);
         scrollText1.setVisibility(View.INVISIBLE);
         scrollText2.setVisibility(View.INVISIBLE);
+        scrollText3.setVisibility(View.INVISIBLE);
         buttonBack.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
     }
