@@ -11,6 +11,10 @@ public class RulesSamaneraActivity extends BaseActivityClass {
     private Button buttonHome;
     private Button buttonLiveToRulesSamanera;
 
+
+
+    private ScrollView scrollTextNissaya;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +24,7 @@ public class RulesSamaneraActivity extends BaseActivityClass {
 
         this.buttonHome = findViewById(R.id.buttonRulesSamaneraHome);
         this.buttonLiveToRulesSamanera = findViewById(R.id.buttonliveToRulesSamanera);
+        this.scrollTextNissaya = findViewById(R.id.viewScrollRulesSamaneraNissaya);
     }
 
     public void toRulesSekhiyaAct(View view){
@@ -35,7 +40,8 @@ public class RulesSamaneraActivity extends BaseActivityClass {
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
+        super.onBackPressed();
         startIntentActivityAndFinish(RulesActivity.class);
     }
 
@@ -44,14 +50,17 @@ public class RulesSamaneraActivity extends BaseActivityClass {
     }
 
     public void toTextNissaya(View view) {
-        ScrollView scrollText = findViewById(R.id.viewScrollRulesSamaneraNissaya);
-        scrollText.setVisibility(View.VISIBLE);
+        scrollTextNissaya.setVisibility(View.VISIBLE);
         buttonHome.setVisibility(View.VISIBLE);
         buttonLiveToRulesSamanera.setVisibility(View.VISIBLE);
     }
 
-    public void tobackDhammapada(View view) {
-        ScrollView scrollTextNissaya = findViewById(R.id.viewScrollRulesSamaneraNissaya);
+    public void toMajorRules(View view){
+        startIntentActivityAndFinish(RulesSamaneraObInfoActivity.class);
+    }
+
+
+    public void tobackRulsSamanera(View view) {
         scrollTextNissaya.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
         buttonLiveToRulesSamanera.setVisibility(View.INVISIBLE);

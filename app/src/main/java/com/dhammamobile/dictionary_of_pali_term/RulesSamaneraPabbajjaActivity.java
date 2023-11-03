@@ -19,7 +19,8 @@ public class RulesSamaneraPabbajjaActivity extends BaseActivityClass {
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
+        super.onBackPressed();
         startIntentActivityAndFinish(RulesSamaneraActivity.class);
     }
 

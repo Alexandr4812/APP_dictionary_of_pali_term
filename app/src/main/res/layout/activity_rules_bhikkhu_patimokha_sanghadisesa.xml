@@ -76,6 +76,10 @@
                 android:onClick="toSanghadisesaAbout"
                 android:text="@string/buttonAboutSanghadisesaText" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/button_sangkhadisesa_1"
                 style="@style/button_activity_declomation_main"

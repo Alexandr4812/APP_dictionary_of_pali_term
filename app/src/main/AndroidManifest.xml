@@ -18,7 +18,7 @@
         tools:targetApi="33">
 
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.AbhidhammaChetasikasEtichVerActivity"
+            android:name=".RulesSamaneraObInfoProtocolsActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -27,7 +27,7 @@
         </activity>
 
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.AbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniActivity"
+            android:name=".RulesSamaneraObInfoActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -35,7 +35,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.AbhidhammaChittasKamavacharamUnwholsomeActivity"
+            android:name=".AbhidhammaChetasikasEtichVerActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -43,7 +43,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.AbhidhammaChittasKamavacharamActivity"
+            android:name=".AbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -51,7 +51,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.AbhidhammaChittasActivity"
+            android:name=".AbhidhammaChittasKamavacharamUnwholsomeActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -59,7 +59,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.AbhidhammaChetasikasActivity"
+            android:name=".AbhidhammaChittasKamavacharamActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -67,7 +67,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.AbhidhammaChetasikasEtichVerUniversActivity"
+            android:name=".AbhidhammaChittasActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -75,7 +75,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.AbhidhammaActivity"
+            android:name=".AbhidhammaChetasikasActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -83,7 +83,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.RulesBhikkhuPatimokhaSanghadisesaActivity"
+            android:name=".AbhidhammaChetasikasEtichVerUniversActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -91,7 +91,23 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.SuttasByCategoryActivity"
+            android:name=".AbhidhammaActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RulesBhikkhuPatimokhaSanghadisesaActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SuttasByCategoryActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:screenOrientation="fullSensor">
@@ -100,7 +116,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.SuttasKuddakaActivity"
+            android:name=".SuttasKuddakaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:screenOrientation="fullSensor">
@@ -109,7 +125,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.SuttasAnguttaraActivity"
+            android:name=".SuttasAnguttaraActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:screenOrientation="fullSensor">
@@ -118,7 +134,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.SuttasSanyuttaActivity"
+            android:name=".SuttasSanyuttaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:screenOrientation="fullSensor">
@@ -127,7 +143,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.SuttasMajjhimaActivity"
+            android:name=".SuttasMajjhimaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:screenOrientation="fullSensor">
@@ -136,7 +152,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.SuttasDighaActivity"
+            android:name=".SuttasDighaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:screenOrientation="fullSensor">
@@ -145,7 +161,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.DeklomationDhammapadaActivity"
+            android:name=".DeklomationDhammapadaActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -153,7 +169,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.DeclomationParittaActivity"
+            android:name=".DeclomationParittaActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -161,7 +177,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.RulesBhikkhuPatimokhaParajikaActivity"
+            android:name=".RulesBhikkhuPatimokhaParajikaActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -169,7 +185,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.RulesBhikkhuPatimokhaActivity"
+            android:name=".RulesBhikkhuPatimokhaActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -177,7 +193,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.RulesBhikkhuUpasampadaActivity"
+            android:name=".RulesBhikkhuUpasampadaActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -185,7 +201,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.RulesBhikkhuActivity"
+            android:name=".RulesBhikkhuActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -193,7 +209,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.RulesSamaneraPabbajjaActivity"
+            android:name=".RulesSamaneraPabbajjaActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -201,7 +217,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.RulesSamaneraActivity"
+            android:name=".RulesSamaneraActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -209,7 +225,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.RulesSamaneraSekhiyaActivity"
+            android:name=".RulesSamaneraSekhiyaActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -217,7 +233,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.DeclomationOverActivity"
+            android:name=".DeclomationOverActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -225,7 +241,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.DeclomationSuttaActivity"
+            android:name=".DeclomationSuttaActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -233,7 +249,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.DeclomationPujaActivity"
+            android:name=".DeclomationPujaActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -241,7 +257,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.RulesActivity"
+            android:name=".RulesActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -249,7 +265,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.SuttasActivity"
+            android:name=".SuttasActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -257,7 +273,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.DeklomationMainActivity"
+            android:name=".DeklomationMainActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -265,7 +281,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.LiveBuddhaActivity"
+            android:name=".LiveBuddhaActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -273,7 +289,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="com.dhammamobile.dictionary_of_pali_term.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
