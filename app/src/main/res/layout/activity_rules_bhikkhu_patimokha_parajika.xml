@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".RulesBhikkhuPatimokhaParajikaActivity">
+    tools:context="com.dhammamobile.dictionary_of_pali_term.RulesBhikkhuPatimokhaParajikaActivity">
 
     <ImageButton
         android:id="@+id/backButtonRules"
@@ -76,6 +76,10 @@
                 android:onClick="toParajikkaAbout"
                 android:text="@string/buttonTextAboutParajika"
                 tools:ignore="UsingOnClickInXml" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
 
             <Button
                 android:id="@+id/button_parajika_1"

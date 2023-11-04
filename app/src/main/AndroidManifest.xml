@@ -18,7 +18,7 @@
         tools:targetApi="33">
 
         <activity
-            android:name=".AbhidhammaChetasikasEtichVerActivity"
+            android:name=".RulesSamaneraObInfoProtocolsActivity"
             android:exported="false"
             android:screenOrientation="portrait">
             <meta-data
@@ -26,6 +26,22 @@
                 android:value="" />
         </activity>
 
+        <activity
+            android:name=".RulesSamaneraObInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AbhidhammaChetasikasEtichVerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".AbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniActivity"
             android:exported="false"

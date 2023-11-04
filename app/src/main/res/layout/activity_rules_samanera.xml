@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".RulesSamaneraActivity">
+    tools:context="com.dhammamobile.dictionary_of_pali_term.RulesSamaneraActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -56,6 +56,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/button_rules_samanera_protocols"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toMajorRules"
+                android:text="@string/buttonTextAbout1"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_rules_samanera_nissaya_about2"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+
+                android:text="@string/buttonTextAbout2" />
 
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
@@ -124,7 +143,7 @@
             android:id="@+id/buttonRulesSamaneraHome"
             style="@style/buttonBackHomeNotImageButton"
             android:layout_gravity="bottom|center"
-            android:layout_marginRight="3dp"
+            android:layout_marginEnd="3dp"
             android:layout_marginBottom="0dp"
             android:onClick="toMainAct"
             android:visibility="invisible"
@@ -133,10 +152,10 @@
         <Button
             android:id="@+id/buttonliveToRulesSamanera"
             style="@style/buttonBackNotImageButton"
-            android:onClick="tobackDhammapada"
+            android:onClick="tobackRulsSamanera"
             android:visibility="invisible"
             android:layout_gravity="bottom|center"
-            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
             android:layout_marginBottom="0dp"
             tools:ignore="UsingOnClickInXml"
             />
