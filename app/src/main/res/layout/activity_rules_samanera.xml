@@ -69,13 +69,6 @@
                 android:text="@string/buttonTextAbout1"
                 tools:ignore="UsingOnClickInXml" />
 
-            <Button
-                android:id="@+id/button_rules_samanera_nissaya_about2"
-                style="@style/button_activity_declomation_main"
-                android:backgroundTint="#FFAB91"
-
-                android:text="@string/buttonTextAbout2" />
-
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />

@@ -8,7 +8,9 @@ import android.widget.ScrollView;
 public class RulesSamaneraObInfoActivity extends BaseActivityClass {
     private Button buttonHome;
     private Button buttonLiveToRulesSamanera;
-    private ScrollView scrollTextMajorInfo;
+    private ScrollView scrollTextMajorInfo, scrollTextRulesSamaneraObInfoPermissible,
+            scrollTextRulesSamaneraPurMoral, scrollTextRulesSamaneraUseMonksThings,
+            scrollTextRulesSamaneraDirectionMind, scrollTextRulesSamaneraTypesGoods;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,11 @@ public class RulesSamaneraObInfoActivity extends BaseActivityClass {
         this.buttonLiveToRulesSamanera = findViewById(R.id.buttonliveToRulesSamaneraProtocols);
 
         this.scrollTextMajorInfo = findViewById(R.id.viewScrollRulesSamaneraMagorInfo);
+        this.scrollTextRulesSamaneraObInfoPermissible = findViewById(R.id.viewScrollRulesSamaneraObInfoPermissible);
+        this.scrollTextRulesSamaneraPurMoral = findViewById(R.id.viewScrollRulesSamaneraPurMoral);
+        this.scrollTextRulesSamaneraUseMonksThings = findViewById(R.id.viewScrollRulesSamaneraUseMonksThings);
+        this.scrollTextRulesSamaneraDirectionMind = findViewById(R.id.viewScrollRulesSamaneraDirectionMind);
+        this.scrollTextRulesSamaneraTypesGoods =findViewById(R.id.viewScrollRulesSamaneraTypesGoods);
     }
 
     public void toRulesSamaneraAct(View view){
@@ -48,9 +55,44 @@ public class RulesSamaneraObInfoActivity extends BaseActivityClass {
         buttonLiveToRulesSamanera.setVisibility(View.VISIBLE);
     }
 
+    public void toTextRulesSamaneraObInfoPermissible(View view) {
+        scrollTextRulesSamaneraObInfoPermissible.setVisibility(View.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+        buttonLiveToRulesSamanera.setVisibility(View.VISIBLE);
+    }
+
+    public void toTextRulesSamaneraPurMoral(View view) {
+        scrollTextRulesSamaneraPurMoral.setVisibility(View.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+        buttonLiveToRulesSamanera.setVisibility(View.VISIBLE);
+    }
+
+    public void toTextRulesSamaneraUseMonksThings(View view) {
+        scrollTextRulesSamaneraUseMonksThings.setVisibility(View.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+        buttonLiveToRulesSamanera.setVisibility(View.VISIBLE);
+    }
+
+    public void toTextRulesSamaneraDirectionMind(View view) {
+        scrollTextRulesSamaneraDirectionMind.setVisibility(View.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+        buttonLiveToRulesSamanera.setVisibility(View.VISIBLE);
+    }
+
+    public void toTextRulesSamaneraTypesGoods(View view) {
+        scrollTextRulesSamaneraTypesGoods.setVisibility(View.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+        buttonLiveToRulesSamanera.setVisibility(View.VISIBLE);
+    }
+
 
     public void tobackRulesSamaneraProtocolAct(View view) {
         scrollTextMajorInfo.setVisibility(View.INVISIBLE);
+        scrollTextRulesSamaneraObInfoPermissible.setVisibility(View.INVISIBLE);
+        scrollTextRulesSamaneraPurMoral.setVisibility(View.INVISIBLE);
+        scrollTextRulesSamaneraUseMonksThings.setVisibility(View.INVISIBLE);
+        scrollTextRulesSamaneraDirectionMind.setVisibility(View.INVISIBLE);
+        scrollTextRulesSamaneraTypesGoods.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
         buttonLiveToRulesSamanera.setVisibility(View.INVISIBLE);
     }

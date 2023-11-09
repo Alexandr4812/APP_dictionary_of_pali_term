@@ -76,6 +76,51 @@
                 android:onClick="toRulesSamaneraObInfoProtocolsAct"
                 android:text="@string/textButtonProtocolsInfo"
                 tools:ignore="UsingOnClickInXml" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/button_rules_samanera_nissaya_about2"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toTextRulesSamaneraObInfoPermissible"
+                android:text="@string/buttonTextAbout2"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_rules_samanera_Pur_Moral"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toTextRulesSamaneraPurMoral"
+                android:text="@string/buttonPurMoralText"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_rules_samanera_use_monks_things"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toTextRulesSamaneraUseMonksThings"
+                android:text="@string/buttonUseMonksThings"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_rules_samanera_direction_mind"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toTextRulesSamaneraDirectionMind"
+                android:text="@string/buttonDirectionMindText"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_rules_samanera_types_goods"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toTextRulesSamaneraTypesGoods"
+                android:text="@string/buttonTypesGoodsText"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -104,6 +149,146 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/textGeneralInfo" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollRulesSamaneraObInfoPermissible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textViewRulesSamaneraObInfoPermissible"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textlInfoPermissible" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollRulesSamaneraPurMoral"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textViewRulesSamaneraPurMoral"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/purMoralText" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollRulesSamaneraUseMonksThings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textViewRulesSamaneraUseMonksThings"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/useMonksThings" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollRulesSamaneraDirectionMind"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textViewRulesSamaneraDirectionMind"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/directionMindText" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollRulesSamaneraTypesGoods"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textViewRulesSamaneraTypesGoods"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/typesGoodsText" />
         </LinearLayout>
     </ScrollView>
 
