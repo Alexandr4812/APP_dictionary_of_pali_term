@@ -17,6 +17,18 @@
         android:versionName="3.1"
         tools:targetApi="33">
 
+
+        <activity
+            android:name=".SuttasLastSuttaActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="Last Visited Page"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
         <activity
             android:name=".RulesSamaneraObInfoProtocolsActivity"
             android:exported="false"
@@ -25,7 +37,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".RulesSamaneraObInfoActivity"
             android:exported="false"

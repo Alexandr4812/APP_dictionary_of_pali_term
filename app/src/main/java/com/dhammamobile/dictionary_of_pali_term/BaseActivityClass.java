@@ -21,6 +21,13 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         finish();
     }
 
+    protected void saveLastVisitedPage(String url) {
+        getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                .edit()
+                .putString("last_visited_page", url)
+                .apply();
+    }
+
     @Override
     public <T extends View> T findViewById(@IdRes int id) {
         T view = super.findViewById(id);

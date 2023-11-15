@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context="com.dhammamobile.dictionary_of_pali_term.SuttasKuddakaActivity">
+    tools:context=".SuttasLastSuttaActivity">
 
     <WebView
-        android:id="@+id/webViewKuddaka"
+        android:id="@+id/webViewLastSutta"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +23,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/buttonKuddakaHome"
+            android:id="@+id/buttonLastSuttaHome"
             style="@style/buttonBackHomeNotImageButton"
             android:layout_gravity="bottom|center"
             android:layout_marginRight="3dp"
@@ -34,7 +34,7 @@
             tools:visibility="visible" />
 
         <Button
-            android:id="@+id/buttonliveToKuddaka"
+            android:id="@+id/buttonliveToLastsutta"
             style="@style/buttonBackNotImageButton"
             android:layout_gravity="bottom|center"
             android:layout_marginLeft="3dp"
@@ -44,19 +44,19 @@
             tools:ignore="UsingOnClickInXml"
             tools:visibility="visible" />
 
-        <Button
-            android:id="@+id/buttonliveToBeforePageKuddaka"
-            style="@style/buttonBackNotImageButton"
-            android:layout_gravity="bottom|center"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="6dp"
-            android:layout_marginBottom="0dp"
-            android:backgroundTint="@color/my_main_color"
-            android:foreground="@drawable/back_button_color"
-            android:onClick="toSuttasAct"
-            android:visibility="visible"
-            tools:ignore="UsingOnClickInXml"
-            tools:visibility="visible" />
+<!--        <Button-->
+<!--            android:id="@+id/buttonliveToBeforePageKuddaka"-->
+<!--            style="@style/buttonBackNotImageButton"-->
+<!--            android:layout_gravity="bottom|center"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:layout_marginRight="6dp"-->
+<!--            android:layout_marginBottom="0dp"-->
+<!--            android:backgroundTint="@color/my_main_color"-->
+<!--            android:foreground="@drawable/back_button_color"-->
+<!--            android:onClick="toSuttasAct"-->
+<!--            android:visibility="visible"-->
+<!--            tools:ignore="UsingOnClickInXml"-->
+<!--            tools:visibility="visible" />-->
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

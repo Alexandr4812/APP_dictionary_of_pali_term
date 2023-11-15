@@ -4,11 +4,8 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.Button;
 
-
-public class SuttasSanyuttaActivity extends BaseActivityClass {
+public class SuttasLastSuttaActivity extends BaseActivityClass {
 
     private WebView webView;
 
@@ -21,58 +18,40 @@ public class SuttasSanyuttaActivity extends BaseActivityClass {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_suttas_sanyutta);
+        setContentView(R.layout.activity_suttas_last_sutta);
 
         setWindowFlagsFullscreenAndNoLimits();
 
-        Button buttonBack = findViewById(R.id.buttonliveToBeforePageSanyutta);
-        webView = findViewById(R.id.webViewSanyutta);
+        webView = findViewById(R.id.webViewLastSutta);
 
         webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование
         webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
         webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
         webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
 
-        webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
-        webView.clearCache(true);
-
-        // Загрузка первой страницы
-        webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/samyutta.html");
-        // Обработка переходов между страницами через ссылки
-        webView.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                if (url.startsWith("file:///android_asset/")) {
-                    view.loadUrl(url);
-                    return true;
-                }
-                return false;
-            }
-        });
-        buttonBack.setOnClickListener(v -> goBack());
-    }
-
-    private void goBack() {
-        if (webView.canGoBack()) {
-            webView.goBack();
+        String lastVisitedPage = getLastVisitedPage();
+        if (!lastVisitedPage.isEmpty()) {
+            webView.loadUrl(lastVisitedPage);
         }
     }
-    @Override
-    protected void onDestroy() {
-        WebView webView = findViewById(R.id.webViewSanyutta);
-        super.onDestroy();
-        webView.destroy();
+
+    private String getLastVisitedPage() {
+        return getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                .getString("last_visited_page", "");
     }
+
     public void toMainAct(View view){
         String currentUrl = webView.getUrl();
         saveLastVisitedPage(currentUrl);
         startIntentActivityAndFinish(MainActivity.class);
     }
+
     public void toSuttasAct(View view){
         String currentUrl = webView.getUrl();
         saveLastVisitedPage(currentUrl);
         startIntentActivityAndFinish(SuttasActivity.class);
     }
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();

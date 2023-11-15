@@ -32,6 +32,7 @@ public class SuttasActivity extends BaseActivityClass {
         Button button4 = findViewById(R.id.button_suttas_for_anguttaraNikaya);
         Button button5 = findViewById(R.id.button_suttas_for_kuddakaNikaya);
         Button button6 = findViewById(R.id.button_suttas_for_by_category);
+        Button button7 = findViewById(R.id.button_suttas_for_last_sutta);
         ImageView im1 = findViewById(R.id.im1);
         ImageView im2 = findViewById(R.id.im2);
 
@@ -45,6 +46,7 @@ public class SuttasActivity extends BaseActivityClass {
         button4.startAnimation(slideFromRightAnimation);
         button5.startAnimation(slideFromLeftAnimation);
         button6.startAnimation(slideFromRightAnimation);
+        button7.startAnimation(slideFromRightAnimation);
         im1.startAnimation(slideDown);
         im2.startAnimation(slideFromLeftAnimation);
         animateText(textViewLink, getString(R.string.theravada_ru));
@@ -104,8 +106,13 @@ public class SuttasActivity extends BaseActivityClass {
         startIntentActivityAndFinish(SuttasByCategoryActivity.class);
     }
 
+    public void toSuttasLastSutta(View view){
+        startIntentActivityAndFinish(SuttasLastSuttaActivity.class);
+    }
+
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
+        super.onBackPressed();
         startIntentActivityAndFinish(MainActivity.class);
     }
 }

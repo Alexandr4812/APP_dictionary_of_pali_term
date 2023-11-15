@@ -128,6 +128,16 @@
                 android:onClick="toSuttasKuddakaAct"
                 tools:ignore="UsingOnClickInXml" />
 
+            <Button
+                android:id="@+id/button_suttas_for_last_sutta"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toSuttasLastSutta"
+                android:text="@string/buttonLastSuttaText"
+                tools:ignore="UsingOnClickInXml" />
+
             <ImageView
                 android:id="@+id/im2"
                 style="@style/imageViewRazdelitelKnopok"

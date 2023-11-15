@@ -67,15 +67,20 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
     }
 
     public void toMainAct(View view){
+        String currentUrl = webView.getUrl();
+        saveLastVisitedPage(currentUrl);
         startIntentActivityAndFinish(MainActivity.class);
     }
 
     public void toSuttasAct(View view){
+        String currentUrl = webView.getUrl();
+        saveLastVisitedPage(currentUrl);
         startIntentActivityAndFinish(SuttasActivity.class);
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
+        super.onBackPressed();
         startIntentActivityAndFinish(SuttasActivity.class);
     }
 }
