@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonLastSuttaText">Last viewed sutta</string>
+    <string name="buttonLastSuttaText">Return to last sutta</string>
 </resources>

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonLastSuttaText">Последня просмотренная сутта</string>
+    <string name="buttonLastSuttaText">Вернуться к последней сутте</string>
 </resources>
