@@ -21,11 +21,14 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         finish();
     }
 
+
     protected void saveLastVisitedPage(String url) {
-        getSharedPreferences("MyPrefs", MODE_PRIVATE)
-                .edit()
-                .putString("last_visited_page", url)
-                .apply();
+        if (!url.isEmpty()) {
+            getSharedPreferences("MyPrefs", MODE_PRIVATE)
+                    .edit()
+                    .putString("last_visited_page", url)
+                    .apply();
+        }
     }
 
     @Override

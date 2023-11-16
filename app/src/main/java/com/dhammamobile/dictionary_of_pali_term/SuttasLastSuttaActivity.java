@@ -29,9 +29,12 @@ public class SuttasLastSuttaActivity extends BaseActivityClass {
         webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
         webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
 
+        // Загрузка последней просмотренной страницы, если она существует
         String lastVisitedPage = getLastVisitedPage();
         if (!lastVisitedPage.isEmpty()) {
             webView.loadUrl(lastVisitedPage);
+        } else {
+            webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/khuddaka.html");
         }
     }
 

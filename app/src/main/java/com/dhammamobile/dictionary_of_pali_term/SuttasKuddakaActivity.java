@@ -59,11 +59,19 @@ public class SuttasKuddakaActivity extends BaseActivityClass {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        String currentUrl = webView.getUrl();
+        saveLastVisitedPage(currentUrl);
+    }
+
+    @Override
     protected void onDestroy() {
         WebView webView = findViewById(R.id.webViewKuddaka);
         super.onDestroy();
         webView.destroy();
     }
+
 
     public void toMainAct(View view){
         String currentUrl = webView.getUrl();

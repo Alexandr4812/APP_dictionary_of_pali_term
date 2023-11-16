@@ -57,6 +57,14 @@ public class SuttasSanyuttaActivity extends BaseActivityClass {
             webView.goBack();
         }
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        String currentUrl = webView.getUrl();
+        saveLastVisitedPage(currentUrl);
+    }
+
     @Override
     protected void onDestroy() {
         WebView webView = findViewById(R.id.webViewSanyutta);
