@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -8,31 +8,40 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/stupa"
         android:label="Dhamma-Vinaya Theravada"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/stupa"
         android:supportsRtl="true"
         android:theme="@style/Theme.Dictionary_of_pali_term"
         android:versionCode="3"
         android:versionName="3.1"
-        tools:targetApi="33">
-
+        tools:targetApi="33" >
 
         <activity
-            android:name=".SuttasLastSuttaActivity"
-            android:configChanges="orientation|screenSize"
+            android:name=".SuttasRandomActivity"
             android:exported="false"
-            android:label="Last Visited Page"
-            android:screenOrientation="fullSensor">
+            android:configChanges="orientation|screenSize"
+            android:label="Random Sutta"
+            android:screenOrientation="fullSensor" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
 
         <activity
+            android:name=".SuttasLastSuttaActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:label="Last Visited Page"
+            android:screenOrientation="fullSensor" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RulesSamaneraObInfoProtocolsActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -40,7 +49,7 @@
         <activity
             android:name=".RulesSamaneraObInfoActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -48,7 +57,7 @@
         <activity
             android:name=".AbhidhammaChetasikasEtichVerActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -56,7 +65,7 @@
         <activity
             android:name=".AbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -64,7 +73,7 @@
         <activity
             android:name=".AbhidhammaChittasKamavacharamUnwholsomeActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -72,7 +81,7 @@
         <activity
             android:name=".AbhidhammaChittasKamavacharamActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -80,7 +89,7 @@
         <activity
             android:name=".AbhidhammaChittasActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -88,7 +97,7 @@
         <activity
             android:name=".AbhidhammaChetasikasActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -96,7 +105,7 @@
         <activity
             android:name=".AbhidhammaChetasikasEtichVerUniversActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -104,7 +113,7 @@
         <activity
             android:name=".AbhidhammaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -112,7 +121,7 @@
         <activity
             android:name=".RulesBhikkhuPatimokhaSanghadisesaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -121,7 +130,7 @@
             android:name=".SuttasByCategoryActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor">
+            android:screenOrientation="fullSensor" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -130,7 +139,7 @@
             android:name=".SuttasKuddakaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor">
+            android:screenOrientation="fullSensor" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -139,7 +148,7 @@
             android:name=".SuttasAnguttaraActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor">
+            android:screenOrientation="fullSensor" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -148,7 +157,7 @@
             android:name=".SuttasSanyuttaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor">
+            android:screenOrientation="fullSensor" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -157,7 +166,7 @@
             android:name=".SuttasMajjhimaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor">
+            android:screenOrientation="fullSensor" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -166,7 +175,7 @@
             android:name=".SuttasDighaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor">
+            android:screenOrientation="fullSensor" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -174,7 +183,7 @@
         <activity
             android:name=".DeklomationDhammapadaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -182,7 +191,7 @@
         <activity
             android:name=".DeclomationParittaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -190,7 +199,7 @@
         <activity
             android:name=".RulesBhikkhuPatimokhaParajikaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -198,7 +207,7 @@
         <activity
             android:name=".RulesBhikkhuPatimokhaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -206,7 +215,7 @@
         <activity
             android:name=".RulesBhikkhuUpasampadaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -214,7 +223,7 @@
         <activity
             android:name=".RulesBhikkhuActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -222,7 +231,7 @@
         <activity
             android:name=".RulesSamaneraPabbajjaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -230,7 +239,7 @@
         <activity
             android:name=".RulesSamaneraActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -238,7 +247,7 @@
         <activity
             android:name=".RulesSamaneraSekhiyaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -246,7 +255,7 @@
         <activity
             android:name=".DeclomationOverActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -254,7 +263,7 @@
         <activity
             android:name=".DeclomationSuttaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -262,7 +271,7 @@
         <activity
             android:name=".DeclomationPujaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -270,7 +279,7 @@
         <activity
             android:name=".RulesActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -278,7 +287,7 @@
         <activity
             android:name=".SuttasActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -286,7 +295,7 @@
         <activity
             android:name=".DeklomationMainActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -294,7 +303,7 @@
         <activity
             android:name=".LiveBuddhaActivity"
             android:exported="false"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -303,7 +312,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

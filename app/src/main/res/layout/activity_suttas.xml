@@ -129,6 +129,31 @@
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
+                android:id="@+id/button_suttas_for_by_category"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toSuttasByCategory"
+                android:text="@string/buttonTextSuttasToByCategory"
+                tools:ignore="UsingOnClickInXml" />
+
+            <ImageView
+                android:id="@+id/im2"
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/button_suttas_random_sutta"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toSuttasRandomSutta"
+                android:text="@string/buttonRandomSuttaText"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
                 android:id="@+id/button_suttas_for_last_sutta"
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
@@ -138,20 +163,7 @@
                 android:text="@string/buttonLastSuttaText"
                 tools:ignore="UsingOnClickInXml" />
 
-            <ImageView
-                android:id="@+id/im2"
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
 
-            <Button
-                android:id="@+id/button_suttas_for_by_category"
-                style="@style/button_activity_declomation_main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:backgroundTint="#FFAB91"
-                android:onClick="toSuttasByCategory"
-                android:text="@string/buttonTextSuttasToByCategory"
-                tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>
 

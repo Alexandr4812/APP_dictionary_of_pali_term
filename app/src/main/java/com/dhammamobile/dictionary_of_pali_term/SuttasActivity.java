@@ -33,6 +33,7 @@ public class SuttasActivity extends BaseActivityClass {
         Button button5 = findViewById(R.id.button_suttas_for_kuddakaNikaya);
         Button button6 = findViewById(R.id.button_suttas_for_by_category);
         Button button7 = findViewById(R.id.button_suttas_for_last_sutta);
+        Button button8 = findViewById(R.id.button_suttas_random_sutta);
         ImageView im1 = findViewById(R.id.im1);
         ImageView im2 = findViewById(R.id.im2);
 
@@ -46,6 +47,7 @@ public class SuttasActivity extends BaseActivityClass {
         button4.startAnimation(slideFromRightAnimation);
         button5.startAnimation(slideFromLeftAnimation);
         button6.startAnimation(slideFromRightAnimation);
+        button8.startAnimation(slideFromLeftAnimation);
         button7.startAnimation(slideFromRightAnimation);
         im1.startAnimation(slideDown);
         im2.startAnimation(slideFromLeftAnimation);
@@ -108,6 +110,10 @@ public class SuttasActivity extends BaseActivityClass {
 
     public void toSuttasLastSutta(View view){
         startIntentActivityAndFinish(SuttasLastSuttaActivity.class);
+    }
+
+    public void toSuttasRandomSutta(View view){
+        startIntentActivityAndFinish(SuttasRandomActivity.class);
     }
 
     @Override

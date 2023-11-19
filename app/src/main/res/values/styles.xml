@@ -111,6 +111,18 @@
         <item name="android:visibility">invisible</item>
     </style>
 
+    <style name="buttonNextSutta">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:backgroundTint">@color/my_main_color</item>
+        <item name="android:textColor">@color/my_text_bacground_color</item>
+        <item name="android:foregroundGravity">fill</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
     <style name="buttonBackHomeNotImageButton">
         <item name="android:layout_width">51dp</item>
         <item name="android:layout_height">45dp</item>
