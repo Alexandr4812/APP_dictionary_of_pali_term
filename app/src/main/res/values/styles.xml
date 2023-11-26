@@ -85,7 +85,7 @@
         <item name="android:layout_margin">5dp</item>
         <item name="android:insetBottom">0dp</item>
         <item name="cornerRadius">20dp</item>
-        <item name="android:textSize">8sp</item>
+        <item name="android:textSize">10sp</item>
     </style>
 
     <style name="button_activity_chetasika_kombinaciya">
@@ -96,7 +96,7 @@
         <item name="android:layout_margin">5dp</item>
         <item name="android:insetBottom">0dp</item>
         <item name="cornerRadius">20dp</item>
-        <item name="android:textSize">14sp</item>
+        <item name="android:textSize">10sp</item>
     </style>
 
     <style name="buttonBackNotImageButton">

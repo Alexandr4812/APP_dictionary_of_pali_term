@@ -63,6 +63,8 @@
             <TextView
                 android:id="@+id/textViewFirstCategory"
                 style="@style/textBetweenButtons"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="5dp"
                 android:text="@string/universal" />
 
             <Button
@@ -93,6 +95,14 @@
                     android:onClick="onButtonClickGroup1"
                     android:text="@string/button_kontakt_function"
                     tools:ignore="UsingOnClickInXml" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf" >
 
                 <Button
                     android:id="@+id/button_chetasika_proyavlenie"
@@ -154,6 +164,15 @@
                     android:text="@string/button_kontakt_function"
                     tools:ignore="UsingOnClickInXml" />
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                tools:ignore="UselessLeaf" >
+
                 <Button
                     android:id="@+id/button_chetasika_proyavlenie2"
                     style="@style/button_activity_chetasika"
@@ -213,6 +232,14 @@
                     android:onClick="onButtonClickGroup3"
                     android:text="@string/button_kontakt_function"
                     tools:ignore="UsingOnClickInXml" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                tools:ignore="UselessLeaf" >
 
                 <Button
                     android:id="@+id/button_chetasika_proyavlenie3"
@@ -274,6 +301,15 @@
                     android:text="@string/button_kontakt_function"
                     tools:ignore="UsingOnClickInXml" />
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                tools:ignore="UselessLeaf" >
+
                 <Button
                     android:id="@+id/button_chetasika_proyavlenie4"
                     style="@style/button_activity_chetasika"
@@ -333,6 +369,14 @@
                     android:onClick="onButtonClickGroup5"
                     android:text="@string/button_kontakt_function"
                     tools:ignore="UsingOnClickInXml" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                tools:ignore="UselessLeaf" >
 
                 <Button
                     android:id="@+id/button_chetasika_proyavlenie5"
@@ -394,6 +438,15 @@
                     android:text="@string/button_kontakt_function"
                     tools:ignore="UsingOnClickInXml" />
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                tools:ignore="UselessLeaf" >
+
                 <Button
                     android:id="@+id/button_chetasika_proyavlenie6"
                     style="@style/button_activity_chetasika"
@@ -453,6 +506,14 @@
                     android:onClick="onButtonClickGroup7"
                     android:text="@string/button_kontakt_function"
                     tools:ignore="UsingOnClickInXml" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="-5dp"
+                tools:ignore="UselessLeaf" >
 
                 <Button
                     android:id="@+id/button_chetasika_proyavlenie7"

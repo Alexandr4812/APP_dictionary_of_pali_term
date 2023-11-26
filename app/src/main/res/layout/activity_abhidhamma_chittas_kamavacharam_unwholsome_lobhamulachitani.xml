@@ -80,6 +80,7 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:orientation="horizontal"
+          android:layout_marginBottom="-5dp"
           tools:ignore="UselessLeaf" >
 
         <Button
@@ -126,6 +127,7 @@
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:orientation="horizontal"
+          android:layout_marginBottom="-5dp"
           tools:ignore="UselessLeaf" >
 
         <Button
@@ -153,6 +155,294 @@
 
       <TextView
           android:id="@+id/textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani2"
+          style="@style/TextMessageStyleAbhidyamma"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text=""
+          android:visibility="invisible"/>
+
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani3"
+          style="@style/button_activity_declomation_main"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/textButton3Lobhamulachitani"
+          tools:ignore="UsingOnClickInXml"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup3" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          android:layout_marginBottom="-5dp"
+          tools:ignore="UselessLeaf" >
+
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_koren3"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup3"
+            android:text="@string/textButtonLobhamulachittaKoren"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_funkciya3"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup3"
+            android:text="@string/textButtonLobhamulachittaFunkciya"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+      </LinearLayout>
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_kombinaciya3"
+          style="@style/button_activity_chetasika_kombinaciya"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup3"
+          android:text="@string/textButtonLobhamulachittaKombinaciya"
+          tools:ignore="UsingOnClickInXml" />
+
+      <TextView
+          android:id="@+id/textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani3"
+          style="@style/TextMessageStyleAbhidyamma"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text=""
+          android:visibility="invisible"/>
+
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani4"
+          style="@style/button_activity_declomation_main"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/textButton4Lobhamulachitani"
+          tools:ignore="UsingOnClickInXml"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup4" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          android:layout_marginBottom="-5dp"
+          tools:ignore="UselessLeaf" >
+
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_koren4"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup4"
+            android:text="@string/textButtonLobhamulachittaKoren"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_funkciya4"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup4"
+            android:text="@string/textButtonLobhamulachittaFunkciya"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+      </LinearLayout>
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_kombinaciya4"
+          style="@style/button_activity_chetasika_kombinaciya"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup4"
+          android:text="@string/textButtonLobhamulachittaKombinaciya"
+          tools:ignore="UsingOnClickInXml" />
+
+      <TextView
+          android:id="@+id/textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani4"
+          style="@style/TextMessageStyleAbhidyamma"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text=""
+          android:visibility="invisible"/>
+
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani5"
+          style="@style/button_activity_declomation_main"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/textButton5Lobhamulachitani"
+          tools:ignore="UsingOnClickInXml"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup5" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          android:layout_marginBottom="-5dp"
+          tools:ignore="UselessLeaf" >
+
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_koren5"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup5"
+            android:text="@string/textButtonLobhamulachittaKoren"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_funkciya5"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup5"
+            android:text="@string/textButtonLobhamulachittaFunkciya"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+      </LinearLayout>
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_kombinaciya5"
+          style="@style/button_activity_chetasika_kombinaciya"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup5"
+          android:text="@string/textButtonLobhamulachittaKombinaciya"
+          tools:ignore="UsingOnClickInXml" />
+
+      <TextView
+          android:id="@+id/textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani5"
+          style="@style/TextMessageStyleAbhidyamma"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text=""
+          android:visibility="invisible"/>
+
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani6"
+          style="@style/button_activity_declomation_main"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/textButton6Lobhamulachitani"
+          tools:ignore="UsingOnClickInXml"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup6" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          android:layout_marginBottom="-5dp"
+          tools:ignore="UselessLeaf" >
+
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_koren6"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup6"
+            android:text="@string/textButtonLobhamulachittaKoren"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_funkciya6"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup6"
+            android:text="@string/textButtonLobhamulachittaFunkciya"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+      </LinearLayout>
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_kombinaciya6"
+          style="@style/button_activity_chetasika_kombinaciya"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup6"
+          android:text="@string/textButtonLobhamulachittaKombinaciya"
+          tools:ignore="UsingOnClickInXml" />
+
+      <TextView
+          android:id="@+id/textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani6"
+          style="@style/TextMessageStyleAbhidyamma"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text=""
+          android:visibility="invisible"/>
+
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani7"
+          style="@style/button_activity_declomation_main"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/textButton7Lobhamulachitani"
+          tools:ignore="UsingOnClickInXml"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup7" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          android:layout_marginBottom="-5dp"
+          tools:ignore="UselessLeaf" >
+
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_koren7"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup7"
+            android:text="@string/textButtonLobhamulachittaKoren"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_funkciya7"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup7"
+            android:text="@string/textButtonLobhamulachittaFunkciya"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+      </LinearLayout>
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_kombinaciya7"
+          style="@style/button_activity_chetasika_kombinaciya"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup7"
+          android:text="@string/textButtonLobhamulachittaKombinaciya"
+          tools:ignore="UsingOnClickInXml" />
+
+      <TextView
+          android:id="@+id/textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani7"
+          style="@style/TextMessageStyleAbhidyamma"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text=""
+          android:visibility="invisible"/>
+
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani8"
+          style="@style/button_activity_declomation_main"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/textButton8Lobhamulachitani"
+          tools:ignore="UsingOnClickInXml"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup8" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal"
+          android:layout_marginBottom="-5dp"
+          tools:ignore="UselessLeaf" >
+
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_koren8"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup8"
+            android:text="@string/textButtonLobhamulachittaKoren"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+        <Button
+            android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_funkciya8"
+            style="@style/button_activity_chetasika"
+            android:layout_weight="1"
+            android:onClick="onButtonClickAbhidhammaLobhaGroup8"
+            android:text="@string/textButtonLobhamulachittaFunkciya"
+            android:textSize="14sp"
+            tools:ignore="UsingOnClickInXml" />
+      </LinearLayout>
+      <Button
+          android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitan_kombinaciya8"
+          style="@style/button_activity_chetasika_kombinaciya"
+          android:onClick="onButtonClickAbhidhammaLobhaGroup8"
+          android:text="@string/textButtonLobhamulachittaKombinaciya"
+          tools:ignore="UsingOnClickInXml" />
+
+      <TextView
+          android:id="@+id/textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani8"
           style="@style/TextMessageStyleAbhidyamma"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"

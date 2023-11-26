@@ -60,9 +60,9 @@ public class SuttasSanyuttaActivity extends BaseActivityClass {
 
     @Override
     protected void onPause() {
-        super.onPause();
         String currentUrl = webView.getUrl();
         saveLastVisitedPage(currentUrl);
+        super.onPause();
     }
 
     @Override
