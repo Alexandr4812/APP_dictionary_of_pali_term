@@ -3,6 +3,8 @@
     <string name="textButtonKamavacharachitani">Consciousness of the sensory environment \n (Kamavacaracittani) - 54</string>
     <string name="textButtonKamavacharamUnwholsome">Unwholesome consciousness \n (Akusalacittāni) – 12</string>
     <string name="textButtonLobhamulachitani">Consciousness rooted in greed \n (Lobhamulachittāni) – 8</string>
+    <string name="textButtonDosamulachitani">Consciousness rooted in anger \n (Dosamulachitani) - 2</string>
+
     <string name="textButton1Lobhamulachitani">1\n
 One consciousness accompanied by joy, associated with an erroneous view, arising without prompting. \n \n
 Somanassasahagatam dithigatasampayuttam asankharikam ekam.
@@ -18,6 +20,7 @@ Somanassasahagatam dithigatasampayuttam asankharikam ekam.
 or delusion (moha). Greed and anger, according to the Abhidhamma, are mutually exclusive; they cannot arise in the same citta. Therefore, those states of consciousness in which greed is the main root,
 called “cittas rooted in greed”, there are eight of them in total. Those states in which anger predominates are called “cittas rooted in anger”; there are two such states in total. The third unwholesome root, delusion, is present in every unwholesome consciousness. Thus, in the cittas rooted in greed and rooted in anger, there is also
 and error as the underlying root. However, there are types of consciousness in which delusion arises without the accompaniment of greed or anger. These cittas, of which there are only two, are called “consciousness with complete delusion” or “cittas rooted in delusion.”</string>
+
     <string name="textDiscribeKamavacharachitamUnwholsomeLobha">CONSCIOUSNESS ROOT IN GREED (lobhamulachittāni):
 Abhidhamma begins analysis of three classes
 unwholesome consciousness with differentiation of various
@@ -25,4 +28,26 @@ cittas rooted in greed, since greed is always
 mentioned first among the unwholesome roots. The Pali word lobha includes all variations of greed, ranging from intense passion or greed to mild sympathies.
 pathy and affection. Consciousness rooted in greed is divided into eight types based on three principles of dichotomization. The first principle is the accompanying feeling (vedana), be it a feeling of joy or tranquility; the second is the presence or absence of an erroneous view; third - analysis of what arose
 citta with or without prompting. By rearranging these three differences, eight different types of consciousness are obtained.</string>
+
+    <string name="textDiscribeKamavacharachitamUnwholsomeDosa">
+Consciousness rooted in anger (dosamulachittāni): \n \n
+The second class of unwholesome consciousness analyzed by the Abhidhamma is that rooted in anger, the second of the three unwholesome roots. This consciousness is of two types, distinguished only as arising without prompting or with prompting. Unlike consciousness rooted in greed, which
+may occur with different types of feelings - with joy or
+calm, the consciousness rooted in anger arises
+with only one type of feeling - dissatisfaction. Yet again,
+Unlike the mind rooted in greed, the mind rooted in anger does not arise with wrong view.
+Although wrong view can motivate acts of anger, according to the Abhidhamma, it does not arise simultaneously with anger, in the same citta, but arises earlier, in a different type of citta. \n \n
+Accompanied by discontent (domanassahagata):
+The feeling that accompanies states of consciousness rooted in anger is dissatisfaction. The Pali word domanassa, derived from du "bad" and manas "mind", means an unpleasant mental feeling. This feeling accompanies
+only consciousness rooted in anger, and such consciousness is necessarily accompanied by this feeling. Thus, dissatisfaction, or an unpleasant mental feeling, is always unwholesome. In this respect, domanassa differs from an unpleasant bodily feeling, which is kammically indefinite, as well as from joy and tranquility, which can
+be wholesome, unwholesome and indefinite. \n \n
+Associated with disgust (patighasampayutta):
+While the consciousness rooted in greed is clearly
+image is said to be accompanied by greed, the consciousness rooted in anger (dosa) is expressed by the synonymous term “aversion” (pat igha). Pat igha includes all degrees of disgust, from violent rage to mild irritation. This word literally means "to strike against", which shows the mental
+a position of resistance, denial or destruction. \n \n
+Although discontent and disgust always accompany
+each other, their qualities must be distinguished. Discontent
+(domanassa) is the experience of an unpleasant feeling, and disgust (pat igha) is the mental attitude of ill will or irritation. In terms of the five clusters, dissatisfaction is included in the cluster of feelings (vedanākkhandha), while
+while disgust is included in the accumulation of mental formations (sankhārakkhandha).
+</string>
 </resources>

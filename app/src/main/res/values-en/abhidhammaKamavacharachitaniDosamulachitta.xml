@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="textButtonDosamulachittaKoren">root</string>
+    <string name="textButtonDosamulachittaFunkciya">funkcion</string>
+    <string name="textButtonDosamulachittaKombinaciya">combination with mental factors</string>
+
+    <string name="textDosamulachittaKoren1">ROOT: \n ANGER (dosa) \n DELUSION (moha) </string>
+    <string name="textDosamulachittaKoren2">ROOT: \n ANGER (dosa) \n DELUSION (moha) </string>
+
+    <string name="textDosamulachittaFunkciya1">FUNCTION: Functions as a jawana.</string>
+    <string name="textDosamulachittaFunkciya2">FUNCTION: Functions as a jawana.</string>
+
+    <string name="forTextView8withDosa">2 types of consciousness rooted in anger</string>
+
+    <string name="textDosamulachittaKombinaciya1">
+         INCLUDED IN A COMBINATION WITH 20 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā) \n
+         >> 3. Perception (Saññā) \n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā) \n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME: \n
+     >> 8. Starter application (Vitakka) \n
+     >> 9. Sustainable application (Vicāra) \n
+     >> 10. Determination (Adhimokkha) \n
+     >> 11. Energy (Viriya) \n
+     >> 12. Desire to act (Chanda) \n\n
+         UNIVERSAL UNBENEFITABLE: \n
+     >> 13. Misconception (Moha) \n
+     >> 14. Shamelessness (Ahirika) \n
+     >> 15. Fearlessness of evil deeds (Anottappa) \n
+     >> 16. Anxiety (Uddhacca) \n\n
+         ADVERSE THINGS THAT HAPPEN FROM TIME TO TIME: \n
+     >> 17. Anger (Dosa) \n
+     >> 18. Envy (Issā) \n
+     >> 19. Stinginess (Macchariya) \n
+     >> 20. Excitement (Kukkucca) \n
+     </string>
+
+    <string name="textDosamulachittaKombinaciya2">
+         INCLUDED IN A COMBINATION WITH 22 CHETASIKAs: \n\n
+         UNIVERSAL: \n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā) \n
+         >> 3. Perception (Saññā) \n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā) \n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME: \n
+     >> 8. Starter application (Vitakka) \n
+     >> 9. Sustainable application (Vicāra) \n
+     >> 10. Determination (Adhimokkha) \n
+     >> 11. Energy (Viriya) \n
+     >> 12. Desire to act (Chanda) \n\n
+         UNIVERSAL UNBENEFITABLE: \n
+     >> 13. Misconception (Moha) \n
+     >> 14. Shamelessness (Ahirika) \n
+     >> 15. Fearlessness of evil deeds (Anottappa) \n
+     >> 16. Anxiety (Uddhacca) \n\n
+         ADVERSE THINGS THAT HAPPEN FROM TIME TO TIME: \n
+     >> 17. Anger (Dosa)\n
+     >> 18. Envy (Issā) \n
+     >> 19. Stinginess (Macchariya) \n
+     >> 20. Excitement (Kukkucca) \n
+     >> 21. Lethargy (Thīna) \n
+     >> 22. Apathy (Middha) \n
+     </string>
+
+    <string name="textDosamulachitta1">
+         EXAMPLE: Out of spite, one person kills another in a spontaneous fit of rage.
+     </string>
+    <string name="textDosamulachitta2">
+         EXAMPLE: Out of malice, one person kills another after deliberation.
+     </string>
+
+    <string name="textButton1Dosamulachitani">
+         1 \n One consciousness, accompanied by dissatisfaction, associated with disgust, without motivation. \n \n
+Domanassasahagatam patighasampayuttam asankharikam ekam.
+     </string>
+    <string name="textButton2Dosamulachitani">
+         2 \n One consciousness, accompanied by dissatisfaction, associated with disgust, with motivation. \n \n
+Domanassasahagatam patighasampayuttam sasankhārikam ekan ti.
+     </string>
+</resources>

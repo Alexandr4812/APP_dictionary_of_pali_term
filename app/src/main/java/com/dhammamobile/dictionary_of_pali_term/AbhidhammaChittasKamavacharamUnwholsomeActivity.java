@@ -3,6 +3,7 @@ package com.dhammamobile.dictionary_of_pali_term;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,9 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
     private TextView textViewAbhidhammaKammavacharamUnwholsomeLobha;
 
     private Button infoButtonAbhidhammaKammavacharamUnwholsomeLobha;
+    private TextView textViewAbhidhammaKammavacharamUnwholsomeDosa;
+
+    private Button infoButtonAbhidhammaKammavacharamUnwholsomeDosa;
 
     // Переменная для хранения последней нажатой кнопки
     private Button lastClickedButton = null;
@@ -29,12 +33,16 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
 
         textViewAbhidhammaKammavacharamUnwholsomeLobha = findViewById(R.id.textViewAbhidhammaKammavacharamUnwholsomeLobha);
         infoButtonAbhidhammaKammavacharamUnwholsomeLobha = findViewById(R.id.infoButtonKamamavacharaUwholsomeLobha);
+        textViewAbhidhammaKammavacharamUnwholsomeDosa = findViewById(R.id.textViewAbhidhammaKammavacharamUnwholsomeDosa);
+        infoButtonAbhidhammaKammavacharamUnwholsomeDosa = findViewById(R.id.infoButtonKamamavacharaUwholsomeDosa);
     }
+
 
     public void onButtonClickAbhidhammaKammavacharamUnwholsomeLobha(View view) {
         Button clickedButton = (Button) view;
         int visibility = textViewAbhidhammaKammavacharamUnwholsomeLobha.getVisibility();
         textViewAbhidhammaKammavacharamUnwholsomeLobha.setText("");
+        textViewAbhidhammaKammavacharamUnwholsomeDosa.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -46,6 +54,27 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
                 textViewAbhidhammaKammavacharamUnwholsomeLobha.setText(R.string.textDiscribeKamavacharachitamUnwholsomeLobha);
                 textViewAbhidhammaKammavacharamUnwholsomeLobha.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaKammavacharamUnwholsomeLobha, getString(R.string.textDiscribeKamavacharachitamUnwholsomeLobha));
+            }
+            lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
+        }
+    }
+
+    public void onButtonClickAbhidhammaKammavacharamUnwholsomeDosa(View view) {
+        Button clickedButton = (Button) view;
+        int visibility = textViewAbhidhammaKammavacharamUnwholsomeDosa.getVisibility();
+        textViewAbhidhammaKammavacharamUnwholsomeLobha.setText("");
+        textViewAbhidhammaKammavacharamUnwholsomeDosa.setText("");
+
+        // Если нажата та же кнопка, что и ранее
+        if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
+            textViewAbhidhammaKammavacharamUnwholsomeDosa.setText(""); // Установите текст в пустую строку
+            textViewAbhidhammaKammavacharamUnwholsomeDosa.setVisibility(View.INVISIBLE);
+            resetAnimator();
+        } else {
+            if (clickedButton == infoButtonAbhidhammaKammavacharamUnwholsomeDosa) {
+                textViewAbhidhammaKammavacharamUnwholsomeDosa.setText(R.string.textDiscribeKamavacharachitamUnwholsomeDosa);
+                textViewAbhidhammaKammavacharamUnwholsomeDosa.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaKammavacharamUnwholsomeDosa, getString(R.string.textDiscribeKamavacharachitamUnwholsomeDosa));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -84,10 +113,15 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
         startIntentActivityAndFinish(AbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniActivity.class);
     }
 
+    public void toAbhidhammaChittasKamavacharamUnwholsomeDosamulachitaniAct(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasKamavacharamUnwholsomeDosamulachitaniActivity.class);
+    }
+
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
     }
 
+    @SuppressLint("MissingSuperCall")
     @Override
     public void onBackPressed(){
         startIntentActivityAndFinish(AbhidhammaChittasKamavacharamActivity.class);

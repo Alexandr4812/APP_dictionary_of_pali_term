@@ -34,7 +34,8 @@
         app:layout_constraintBottom_toTopOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -45,16 +46,20 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/imageView2"
+            <androidx.cardview.widget.CardView
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:foregroundGravity="center"
                 android:onClick="toSumedha"
-                app:srcCompat="@drawable/asita"
-                tools:ignore="UsingOnClickInXml" />
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/asita" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/textViewToSumedha"
@@ -73,15 +78,20 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/imageView3"
+            <androidx.cardview.widget.CardView
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
                 android:onClick="toMaya"
-                app:srcCompat="@drawable/mahamaya_drim"
-                tools:ignore="UsingOnClickInXml" />
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mahamaya_drim" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/textViewToMaya"
@@ -100,14 +110,20 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/imageView4"
+            <androidx.cardview.widget.CardView
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
                 android:onClick="toBirthSidhartha"
-                app:srcCompat="@drawable/birth_sidhartha" />
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/birth_sidhartha" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/textViewToBirth"
@@ -125,14 +141,20 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/imageView5"
+            <androidx.cardview.widget.CardView
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
                 android:onClick="toAsita"
-                app:srcCompat="@drawable/mudrec" />
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/mudrec" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/textViewToAsita"
@@ -150,14 +172,20 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/imageView6"
+            <androidx.cardview.widget.CardView
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                app:srcCompat="@drawable/first_jhana"
-                android:onClick="toJhana"/>
+                android:onClick="toJhana"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/first_jhana" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/textViewToJhana"
@@ -165,23 +193,30 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
+                android:onClick="toJhana"
                 android:text="@string/pervoe_dostigenie_dgani"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button_face"
-                android:onClick="toJhana"/>
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
 
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/imageView7"
+            <androidx.cardview.widget.CardView
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
+                android:onClick="toSaveSwan"
                 android:contentDescription="TODO"
-                app:srcCompat="@drawable/saving_swan" />
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/saving_swan" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/textViewToSwalve"
@@ -198,13 +233,20 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/imageView8"
+            <androidx.cardview.widget.CardView
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                app:srcCompat="@drawable/skills" />
+                android:onClick="toShowAbilities"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/skills" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/textViewToUmeniya"
@@ -220,6 +262,15 @@
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/next"
+                android:textColor="@color/my_text_bacground_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:text="Продолжение следует." />
         </LinearLayout>
     </ScrollView>
 
@@ -242,81 +293,12 @@
                 android:contentDescription="TODO"
                 app:srcCompat="@drawable/asita" />
 
-            <ImageButton
-                android:id="@+id/backButtonLive0"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackIzTextVLive"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome0"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
             <TextView
                 android:id="@+id/textViewSumedha"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sumedha" />
-
-
-            <ImageButton
-                android:id="@+id/backButtonLive"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackIzTextVLive"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
     </ScrollView>
 
@@ -331,48 +313,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFE082"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:visibility="visible">
 
             <ImageView
                 android:id="@+id/imageView10"
                 style="@style/picsLiveBuddha"
-
                 android:contentDescription="TODO"
                 app:srcCompat="@drawable/mahamaya_drim" />
-
-            <ImageButton
-                android:id="@+id/backButtonMaya0"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackIzTextVLive"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome1"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
                 android:id="@+id/textViewMaya"
@@ -380,40 +328,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/mahamaya" />
-
-            <ImageButton
-                android:id="@+id/backButtonMaya"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackIzTextVLive"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome2"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
 
         </LinearLayout>
     </ScrollView>
@@ -438,80 +352,12 @@
                 android:contentDescription="TODO"
                 app:srcCompat="@drawable/birth_sidhartha" />
 
-            <ImageButton
-                android:id="@+id/backButtonBirthSidhartha0"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackIzTextVLive"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome3"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
             <TextView
                 android:id="@+id/textViewBirthSidhartha"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/birdth" />
-
-            <ImageButton
-                android:id="@+id/backButtonBirthSidhartha"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackIzTextVLive"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome4"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
 
         </LinearLayout>
     </ScrollView>
@@ -535,80 +381,12 @@
                 android:contentDescription="TODO"
                 app:srcCompat="@drawable/mudrec" />
 
-            <ImageButton
-                android:id="@+id/backButtonAsita0"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackIzTextVLive"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome5"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
             <TextView
                 android:id="@+id/textViewAsita"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/asita" />
-
-            <ImageButton
-                android:id="@+id/backButtonAsita"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackIzTextVLive"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHome6"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
 
         </LinearLayout>
     </ScrollView>
@@ -632,83 +410,100 @@
                 android:contentDescription="TODO"
                 app:srcCompat="@drawable/first_jhana" />
 
-            <ImageButton
-                android:id="@+id/backButtonJhana0"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackIzTextVLive"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHomeJhana"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
             <TextView
                 android:id="@+id/textViewJhana"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/djhana" />
-
-            <ImageButton
-                android:id="@+id/backButtonJhana1"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:contentDescription="возврат в главное меню"
-                android:foregroundGravity="center"
-                android:onClick="tobackIzTextVLive"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_back"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="UsingOnClickInXml" />
-
-            <ImageButton
-                android:id="@+id/imageButtonliveHomeJhana1"
-                android:layout_width="51dp"
-                android:layout_height="39dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:background="#FFE082"
-                android:foregroundGravity="center"
-                android:onClick="toMainAct"
-                android:scaleType="centerInside"
-                android:src="@drawable/button_home"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
         </LinearLayout>
     </ScrollView>
+
+    <ScrollView
+        android:id="@+id/liveScrollTextSaveSwan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView14"
+                style="@style/picsLiveBuddha"
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/saving_swan" />
+
+            <TextView
+                android:id="@+id/textViewSwan"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/saveSwan" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/liveScrollTextShowAbilities"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView15"
+                style="@style/picsLiveBuddha"
+                android:contentDescription="TODO"
+                app:srcCompat="@drawable/skills" />
+
+            <TextView
+                android:id="@+id/textViewShowAbilities"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/showAbilities" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/buttonLiveHome"
+            style="@style/buttonBackHomeNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="toMainAct"
+            android:visibility="invisible"
+            tools:ignore="UsingOnClickInXml" />
+
+        <Button
+            android:id="@+id/buttonliveToLive"
+            style="@style/buttonBackNotImageButton"
+            android:onClick="tobackIzTextVLive"
+            android:visibility="invisible"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="0dp"
+            tools:ignore="UsingOnClickInXml"
+            />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

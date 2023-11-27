@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="textButtonDosamulachittaKoren">корень</string>
+    <string name="textButtonDosamulachittaFunkciya">функция</string>
+    <string name="textButtonDosamulachittaKombinaciya">комбинация с ментальными факторами</string>
+
+    <string name="textDosamulachittaKoren1">КОРЕНЬ: \n ЗЛОСТЬ (доса) \n ЗАБЛУЖДЕНИЕ (моха) </string>
+    <string name="textDosamulachittaKoren2">КОРЕНЬ: \n ЗЛОСТЬ (доса) \n ЗАБЛУЖДЕНИЕ (моха) </string>
+
+    <string name="textDosamulachittaFunkciya1">ФУНКЦИЯ: функционирует как джавана.</string>
+    <string name="textDosamulachittaFunkciya2">ФУНКЦИЯ: функционирует как джавана.</string>
+
+    <string name="textDosamulachittaKombinaciya1">
+        ВХОДИТ В КОМБИНАЦИЮ С 20 ЧЕТАСИКАМИ: \n\n
+        УНИВЕРСАЛЬНЫЕ: \n
+        >> 1. Контакт (Phassa) \n
+        >> 2. Чувство (Vedanā) \n
+        >> 3. Восприятие (Saññā) \n
+        >> 4. Воление (Cetanā) \n
+        >> 5. Однонаправленность (Ekaggatā) \n
+        >> 6. Мент.упр. жизнь-способность (Jīvitindriya) \n
+        >> 7. Внимание (Manasikāra) \n\n
+        СЛУЧАЮЩИЕСЯ ВРЕМЯ ОТ ВРЕМЕНИ: \n
+    >> 8. Начальное приложение (Vitakka) \n
+    >> 9. Устойчивое приложение (Vicāra) \n
+    >> 10. Решимость (Adhimokkha) \n
+    >> 11. Энергия (Viriya) \n
+    >> 12. Желание действовать (Chanda) \n\n
+        УНИВЕРСАЛЬНЫЕ НЕБЛАГОТВОРНЫЕ: \n
+    >> 13. Заблуждение (Moha) \n
+    >> 14. Бесстыдство (Ahirika) \n
+    >> 15. Безбоязненность дурных поступков (Anottappa) \n
+    >> 16. Беспокойство (Uddhacca) \n\n
+        НЕБЛАГОТВОРНЫЕ, СЛУЧАЮЩИЕСЯ ВРЕМЯ ОТ ВРЕМЕНИ: \n
+    >> 17. Злость (Dosa) \n
+    >> 18. Зависть (Issā) \n
+    >> 19. Скупость (Macchariya) \n
+    >> 20. Волнение (Kukkucca) \n
+    </string>
+
+    <string name="textDosamulachittaKombinaciya2">
+        ВХОДИТ В КОМБИНАЦИЮ С 22 ЧЕТАСИКАМИ: \n\n
+        УНИВЕРСАЛЬНЫЕ: \n
+        >> 1. Контакт (Phassa) \n
+        >> 2. Чувство (Vedanā) \n
+        >> 3. Восприятие (Saññā) \n
+        >> 4. Воление (Cetanā) \n
+        >> 5. Однонаправленность (Ekaggatā) \n
+        >> 6. Мент.упр. жизнь-способность (Jīvitindriya) \n
+        >> 7. Внимание (Manasikāra) \n\n
+        СЛУЧАЮЩИЕСЯ ВРЕМЯ ОТ ВРЕМЕНИ: \n
+    >> 8. Начальное приложение (Vitakka) \n
+    >> 9. Устойчивое приложение (Vicāra) \n
+    >> 10. Решимость (Adhimokkha) \n
+    >> 11. Энергия (Viriya) \n
+    >> 12. Желание действовать (Chanda) \n\n
+        УНИВЕРСАЛЬНЫЕ НЕБЛАГОТВОРНЫЕ: \n
+    >> 13. Заблуждение (Moha) \n
+    >> 14. Бесстыдство (Ahirika) \n
+    >> 15. Безбоязненность дурных поступков (Anottappa) \n
+    >> 16. Беспокойство (Uddhacca) \n\n
+        НЕБЛАГОТВОРНЫЕ, СЛУЧАЮЩИЕСЯ ВРЕМЯ ОТ ВРЕМЕНИ: \n
+    >> 17. Злость (Dosa) \n
+    >> 18. Зависть (Issā) \n
+    >> 19. Скупость (Macchariya) \n
+    >> 20. Волнение (Kukkucca) \n
+    >> 21. Вялость (Thīna) \n
+    >> 22. Апатия (Middha) \n
+    </string>
+
+    <string name="textDosamulachitta1">
+        ПРИМЕР: со злобой один человек убивает другого в спонтанном припадке ярости.
+    </string>
+    <string name="textDosamulachitta2">
+        ПРИМЕР: Со злобой один человек убивает другого после предварительного обдумывания.
+    </string>
+
+    <string name="forTextView8withDosa">2 типа сознания коренящихся в злости</string>
+
+    <string name="textButton1Dosamulachitani">
+        1 \n Одно сознание, сопровождающееся недовольством, ассоциированное с отвращением, без побуждения. \n \n
+Доманассасахагатам патигхасампайуттам асанкхāрикам екам.
+    </string>
+    <string name="textButton2Dosamulachitani">
+        2 \n Одно сознание, сопровождающееся недовольством, ассоциированное с отвращением, с побуждением. \n \n
+Доманассасахагатам патигхасампайуттам сасанкхāрикам екан ти.
+    </string>
+</resources>

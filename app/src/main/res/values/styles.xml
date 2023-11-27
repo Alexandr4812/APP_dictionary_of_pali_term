@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="RoundedCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item> <!-- Задайте радиус закругления углов в dp -->
+    </style>
+
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

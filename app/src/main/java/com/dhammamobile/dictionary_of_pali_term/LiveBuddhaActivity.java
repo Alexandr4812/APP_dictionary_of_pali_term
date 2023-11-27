@@ -2,10 +2,15 @@ package com.dhammamobile.dictionary_of_pali_term;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ScrollView;
 
 
 public class LiveBuddhaActivity extends BaseActivityClass {
+
+    private Button home, back;
+
+    private ScrollView saveSwan, showAbilities;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,39 +18,72 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         setContentView(R.layout.activity_live_buddha);
 
         setWindowFlagsFullscreenAndNoLimits();
+
+        home = findViewById(R.id.buttonLiveHome);
+        back = findViewById(R.id.buttonliveToLive);
+
+        saveSwan = findViewById(R.id.liveScrollTextSaveSwan);
+        showAbilities = findViewById(R.id.liveScrollTextShowAbilities);
+
     }
 
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
+        home.setVisibility(View.INVISIBLE);
+        back.setVisibility(View.INVISIBLE);
     }
 
     public void toSumedha(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollText);
+        home.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
         scrollText.setVisibility(View.VISIBLE);
     }
 
 
     public void toMaya(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollTextMaya);
+        home.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
         scrollText.setVisibility(View.VISIBLE);
     }
 
     public void toBirthSidhartha(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollTextBirthSidhartha);
+        home.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
         scrollText.setVisibility(View.VISIBLE);
     }
 
     public void toAsita(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollTextAsita);
+        home.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
         scrollText.setVisibility(View.VISIBLE);
     }
 
     public void toJhana(View view) {
         ScrollView scrollText = findViewById(R.id.liveScrollTextJhana);
+        home.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
         scrollText.setVisibility(View.VISIBLE);
     }
 
+    public void toSaveSwan(View view) {
+        home.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
+        saveSwan.setVisibility(View.VISIBLE);
+    }
+
+    public void toShowAbilities(View view) {
+        home.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
+        showAbilities.setVisibility(View.VISIBLE);
+    }
+
     public void tobackIzTextVLive(View view) {
+        home.setVisibility(View.INVISIBLE);
+        back.setVisibility(View.INVISIBLE);
         ScrollView scrollText = findViewById(R.id.liveScrollText);
         scrollText.setVisibility(View.INVISIBLE);
         ScrollView scrollText2 = findViewById(R.id.liveScrollTextMaya);
@@ -56,10 +94,13 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         scrollText4.setVisibility(View.INVISIBLE);
         ScrollView scrollText5 = findViewById(R.id.liveScrollTextJhana);
         scrollText5.setVisibility(View.INVISIBLE);
+        saveSwan.setVisibility(View.INVISIBLE);
+        showAbilities.setVisibility(View.INVISIBLE);
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
+        super.onBackPressed();
         startIntentActivityAndFinish(MainActivity.class);
     }
 
