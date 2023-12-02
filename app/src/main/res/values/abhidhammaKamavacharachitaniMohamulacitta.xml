@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textButtonMohamulachittaKoren">корень</string>
+    <string name="textButtonMohamulachittaFunkciya">функция</string>
+    <string name="textButtonMohamulachittaKombinaciya">комбинация с ментальными факторами</string>
+
+    <string name="textMohamulachittaKoren1">КОРЕНЬ: ЗАБЛУЖДЕНИЕ (моха) </string>
+    <string name="textMohamulachittaKoren2">КОРЕНЬ: ЗАБЛУЖДЕНИЕ (моха) </string>
+
+    <string name="textMohamulachittaFunkciya1">ФУНКЦИЯ: функционирует как джавана.</string>
+    <string name="textMohamulachittaFunkciya2">ФУНКЦИЯ: функционирует как джавана.</string>
+
+    <string name="textMohamulachittaKombinaciya1">
+        ВХОДИТ В КОМБИНАЦИЮ С 15 ЧЕТАСИКАМИ: \n\n
+        УНИВЕРСАЛЬНЫЕ: \n
+        >> 1. Контакт (Phassa) \n
+        >> 2. Чувство (Vedanā) \n
+        >> 3. Восприятие (Saññā) \n
+        >> 4. Воление (Cetanā) \n
+        >> 5. Однонаправленность (Ekaggatā) \n
+        >> 6. Мент.упр. жизнь-способность (Jīvitindriya) \n
+        >> 7. Внимание (Manasikāra) \n\n
+        СЛУЧАЮЩИЕСЯ ВРЕМЯ ОТ ВРЕМЕНИ: \n
+    >> 8. Начальное приложение (Vitakka) \n
+    >> 9. Устойчивое приложение (Vicāra) \n
+    >> 10. Энергия (Viriya) \n \n
+        УНИВЕРСАЛЬНЫЕ НЕБЛАГОТВОРНЫЕ: \n
+    >> 11. Заблуждение (Moha) \n
+    >> 12. Бесстыдство (Ahirika) \n
+    >> 13. Безбоязненность дурных поступков (Anottappa) \n
+    >> 14. Беспокойство (Uddhacca) \n\n
+        НЕБЛАГОТВОРНЫЕ, СЛУЧАЮЩИЕСЯ ВРЕМЯ ОТ ВРЕМЕНИ: \n
+    >> 15. Сомнение (Vicikicchā)
+    </string>
+
+    <string name="textMohamulachittaKombinaciya2">
+        ВХОДИТ В КОМБИНАЦИЮ С 15 ЧЕТАСИКАМИ: \n\n
+        УНИВЕРСАЛЬНЫЕ: \n
+        >> 1. Контакт (Phassa) \n
+        >> 2. Чувство (Vedanā) \n
+        >> 3. Восприятие (Saññā) \n
+        >> 4. Воление (Cetanā) \n
+        >> 5. Однонаправленность (Ekaggatā) \n
+        >> 6. Мент.упр. жизнь-способность (Jīvitindriya) \n
+        >> 7. Внимание (Manasikāra) \n\n
+        СЛУЧАЮЩИЕСЯ ВРЕМЯ ОТ ВРЕМЕНИ: \n
+    >> 8. Начальное приложение (Vitakka) \n
+    >> 9. Устойчивое приложение (Vicāra) \n
+    >> 10. Решимость (Adhimokkha) \n
+    >> 11. Энергия (Viriya) \n \n
+        УНИВЕРСАЛЬНЫЕ НЕБЛАГОТВОРНЫЕ: \n
+    >> 12. Заблуждение (Moha) \n
+    >> 13. Бесстыдство (Ahirika) \n
+    >> 14. Безбоязненность дурных поступков (Anottappa) \n
+    >> 15. Беспокойство (Uddhacca) \n\n
+    </string>
+
+    <string name="textMohamulachitta1">
+        ПРИМЕР: Человек вследствие заблуждения сомневается в просветлённости Будды или эффективности Дхаммы
+как пути к освобождению.
+    </string>
+    <string name="textMohamulachitta2">
+        ПРИМЕР: Человек настолько рассеян, что не может сфокусировать свой ум ни на каком объекте.
+    </string>
+
+    <string name="forTextView8withMoha">2 типа сознания коренящихся в заблуждении</string>
+
+    <string name="textButton1Mohamulachitani">
+        1 \n Одно сознание, сопровождающееся спокойствием, ассоциированное с сомнением. \n \n
+        Упеккхāсахагатам вичикиччхāсампайуттам екам.
+
+    </string>
+    <string name="textButton2Mohamulachitani">
+        2 \n Одно сознание, сопровождающееся спокойствием, ассоциированное с беспокойством. \n \n
+        Упеккхāсахагатам уддхаччасампайуттам екан ти.
+
+    </string>
+</resources>

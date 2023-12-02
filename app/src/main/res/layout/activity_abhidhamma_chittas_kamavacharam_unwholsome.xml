@@ -109,6 +109,31 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:visibility="invisible"/>
+
+
+            <Button
+                android:id="@+id/infoButtonKamamavacharaUwholsomeMoha"
+                style="@style/infoButton"
+                android:foreground="@drawable/info7"
+                android:onClick="onButtonClickAbhidhammaKammavacharamUnwholsomeMoha"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_abhidhamma_chittas_kamavachara_unwholsome3"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="toAbhidhammaChittasKamavacharamUnwholsomeMohamulachitaniAct"
+                android:text="@string/textButtonMohamulachitani"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/textViewAbhidhammaKammavacharamUnwholsomeMoha"
+                style="@style/TextMessageStyleAbhidyamma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
         </LinearLayout>
     </ScrollView>
 

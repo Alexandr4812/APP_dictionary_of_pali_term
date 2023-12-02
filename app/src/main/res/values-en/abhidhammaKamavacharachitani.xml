@@ -4,6 +4,7 @@
     <string name="textButtonKamavacharamUnwholsome">Unwholesome consciousness \n (Akusalacittāni) – 12</string>
     <string name="textButtonLobhamulachitani">Consciousness rooted in greed \n (Lobhamulachittāni) – 8</string>
     <string name="textButtonDosamulachitani">Consciousness rooted in anger \n (Dosamulachitani) - 2</string>
+    <string name="textButtonMohamulachitani">Consciousness rooted in delusion \n (Mohamulachitani) - 2</string>
 
     <string name="textButton1Lobhamulachitani">1\n
 One consciousness accompanied by joy, associated with an erroneous view, arising without prompting. \n \n
@@ -50,4 +51,37 @@ each other, their qualities must be distinguished. Discontent
 (domanassa) is the experience of an unpleasant feeling, and disgust (pat igha) is the mental attitude of ill will or irritation. In terms of the five clusters, dissatisfaction is included in the cluster of feelings (vedanākkhandha), while
 while disgust is included in the accumulation of mental formations (sankhārakkhandha).
 </string>
+
+    <string name="textDiscribeKamavacharachitamUnwholsomeMoha">
+        CONSCIOUSNESS ROOT IN MISTAKE (mohamulachittāni): \n \n
+This last class of unwholesome consciousness includes
+those cittas in which the other two unwholesome roots - greed and anger - are absent. Usually the presence of a delusion
+also leads to the emergence of greed and anger. But, despite the fact that delusion is always present as a root
+in the cittas accompanied by greed and anger, its functions
+there are secondary. However, in these last two types of unwholesome consciousness, only delusion is present as the unwholesome root, and therefore they are classified as minds rooted in delusion. Since the function delusions are especially obvious in these two types of consciousness, they also described as a consciousness containing complete delusion
+(momuhachitta), where the Pali word momukha is a strengthening of the word moha "delusion". There are two types of consciousness, in which the delusion is especially pronounced: one is associated with doubt, the other with anxiety. \n \n
+Accompanied by tranquility (upekkhāsahagata): \n \n
+When a consciousness rooted in delusion arises,
+then, even if the desired object is present, it is not perceived as desired, and therefore the pleasant mental feeling (somanassa) does not arise. Likewise, an unwanted object is not experienced as such and, therefore, an unpleasant mental feeling (domanassa) also does not arise. Moreover, when the mind is clouded by doubt or worry, it is unable to form a definite positive or negative evaluation of an object and therefore cannot
+be associated with a pleasant or painful feeling.
+For this reason the feeling accompanying these two cittas is neutral, that is, calmness (upekkhā). \n \n
+
+Associated with doubt (vicikicchāsampayutta): \n \n
+Commentators give two etymological explanations for the word vicikicchha: \n
+1) frustration from confused thoughts and \n
+2) absence \n
+the cure lies in knowledge. Both these explanations show that vicikicchā, doubt, means confusion, skepticism or indecision due to the prevalence of error. Chitta associated with doubt is the first type of consciousness rooted in error. \n \n
+
+Associated with anxiety (uddhachcasampayutta): \n \n
+Worry is anxiety, mental distraction or agitation, and the citta infected with this restlessness is the second type of consciousness, rooted in delusion. According to the Abhidhamma, the mental factor is restlessness
+is found in all twelve unwholesome cittas, but in the remaining eleven cittas its strength (satti) is relatively weak and its function is secondary. One-
+but in this latter type of consciousness anxiety becomes
+the main factor. Therefore, only this type is described as consciousness associated with anxiety. It should be noted that to the description of these two cittas, which are rooted in delusion, no qualification is added in terms of arising with and without prompting. Commentators have offered various explanations for this omission.
+The Vibhavini-tika and Mahā-tika [-commentary] on the Visuddhimagga hold that the distinction in terms of impulse is omitted because both of these alternatives are not applicable [in this case]. They claim that since these
+the two cittas lack natural sharpness and cannot be described as arising without prompting; and since it is not the case that anyone deliberately tries to cause them, they cannot be described as arising from impulse. Lady Sayadaw, however, rejects this position, arguing that these cittas are exclusively arising without prompting. He claims:
+"Since these two cittas occur naturally in beings
+Thus, by their own real nature, they do not require motivation or special techniques to arise. They always arise without difficulty or difficulty. That`s why
+they are purely unprompted, and this must be considered as the reason why the distinction
+the type of motivation is not mentioned here.”
+    </string>
 </resources>

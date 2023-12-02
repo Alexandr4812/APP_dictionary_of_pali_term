@@ -19,6 +19,10 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
 
     private Button infoButtonAbhidhammaKammavacharamUnwholsomeDosa;
 
+    private TextView textViewAbhidhammaKammavacharamUnwholsomeMoha;
+
+    private Button infoButtonAbhidhammaKammavacharamUnwholsomeMoha;
+
     // Переменная для хранения последней нажатой кнопки
     private Button lastClickedButton = null;
 
@@ -35,6 +39,8 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
         infoButtonAbhidhammaKammavacharamUnwholsomeLobha = findViewById(R.id.infoButtonKamamavacharaUwholsomeLobha);
         textViewAbhidhammaKammavacharamUnwholsomeDosa = findViewById(R.id.textViewAbhidhammaKammavacharamUnwholsomeDosa);
         infoButtonAbhidhammaKammavacharamUnwholsomeDosa = findViewById(R.id.infoButtonKamamavacharaUwholsomeDosa);
+        textViewAbhidhammaKammavacharamUnwholsomeMoha = findViewById(R.id.textViewAbhidhammaKammavacharamUnwholsomeMoha);
+        infoButtonAbhidhammaKammavacharamUnwholsomeMoha = findViewById(R.id.infoButtonKamamavacharaUwholsomeMoha);
     }
 
 
@@ -43,6 +49,7 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
         int visibility = textViewAbhidhammaKammavacharamUnwholsomeLobha.getVisibility();
         textViewAbhidhammaKammavacharamUnwholsomeLobha.setText("");
         textViewAbhidhammaKammavacharamUnwholsomeDosa.setText("");
+        textViewAbhidhammaKammavacharamUnwholsomeMoha.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -64,6 +71,7 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
         int visibility = textViewAbhidhammaKammavacharamUnwholsomeDosa.getVisibility();
         textViewAbhidhammaKammavacharamUnwholsomeLobha.setText("");
         textViewAbhidhammaKammavacharamUnwholsomeDosa.setText("");
+        textViewAbhidhammaKammavacharamUnwholsomeMoha.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -75,6 +83,28 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
                 textViewAbhidhammaKammavacharamUnwholsomeDosa.setText(R.string.textDiscribeKamavacharachitamUnwholsomeDosa);
                 textViewAbhidhammaKammavacharamUnwholsomeDosa.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaKammavacharamUnwholsomeDosa, getString(R.string.textDiscribeKamavacharachitamUnwholsomeDosa));
+            }
+            lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
+        }
+    }
+
+    public void onButtonClickAbhidhammaKammavacharamUnwholsomeMoha(View view) {
+        Button clickedButton = (Button) view;
+        int visibility = textViewAbhidhammaKammavacharamUnwholsomeMoha.getVisibility();
+        textViewAbhidhammaKammavacharamUnwholsomeLobha.setText("");
+        textViewAbhidhammaKammavacharamUnwholsomeDosa.setText("");
+        textViewAbhidhammaKammavacharamUnwholsomeMoha.setText("");
+
+        // Если нажата та же кнопка, что и ранее
+        if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
+            textViewAbhidhammaKammavacharamUnwholsomeMoha.setText(""); // Установите текст в пустую строку
+            textViewAbhidhammaKammavacharamUnwholsomeMoha.setVisibility(View.INVISIBLE);
+            resetAnimator();
+        } else {
+            if (clickedButton == infoButtonAbhidhammaKammavacharamUnwholsomeMoha) {
+                textViewAbhidhammaKammavacharamUnwholsomeMoha.setText(R.string.textDiscribeKamavacharachitamUnwholsomeMoha);
+                textViewAbhidhammaKammavacharamUnwholsomeMoha.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaKammavacharamUnwholsomeMoha, getString(R.string.textDiscribeKamavacharachitamUnwholsomeMoha));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -115,6 +145,11 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
 
     public void toAbhidhammaChittasKamavacharamUnwholsomeDosamulachitaniAct(View view){
         startIntentActivityAndFinish(AbhidhammaChittasKamavacharamUnwholsomeDosamulachitaniActivity.class);
+    }
+
+
+    public void toAbhidhammaChittasKamavacharamUnwholsomeMohamulachitaniAct(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasKamavacharamUnwholsomeMohamulachitaniActivity.class);
     }
 
     public void toMainAct(View view){

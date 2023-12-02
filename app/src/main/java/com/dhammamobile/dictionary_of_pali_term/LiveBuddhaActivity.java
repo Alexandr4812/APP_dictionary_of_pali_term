@@ -10,7 +10,7 @@ public class LiveBuddhaActivity extends BaseActivityClass {
 
     private Button home, back;
 
-    private ScrollView saveSwan, showAbilities;
+    private ScrollView saveSwan, showAbilities, show8, show9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,8 @@ public class LiveBuddhaActivity extends BaseActivityClass {
 
         saveSwan = findViewById(R.id.liveScrollTextSaveSwan);
         showAbilities = findViewById(R.id.liveScrollTextShowAbilities);
+        show8 = findViewById(R.id.liveScrollTextShow8);
+        show9 = findViewById(R.id.liveScrollTextShow9);
 
     }
 
@@ -81,6 +83,18 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         showAbilities.setVisibility(View.VISIBLE);
     }
 
+    public void toShow8(View view) {
+        home.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
+        show8.setVisibility(View.VISIBLE);
+    }
+
+    public void toShow9(View view) {
+        home.setVisibility(View.VISIBLE);
+        back.setVisibility(View.VISIBLE);
+        show9.setVisibility(View.VISIBLE);
+    }
+
     public void tobackIzTextVLive(View view) {
         home.setVisibility(View.INVISIBLE);
         back.setVisibility(View.INVISIBLE);
@@ -96,6 +110,8 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         scrollText5.setVisibility(View.INVISIBLE);
         saveSwan.setVisibility(View.INVISIBLE);
         showAbilities.setVisibility(View.INVISIBLE);
+        show8.setVisibility(View.INVISIBLE);
+        show9.setVisibility(View.INVISIBLE);
     }
 
     @Override

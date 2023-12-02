@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textButtonMohamulachittaKoren">root</string>
+    <string name="textButtonMohamulachittaFunkciya">funkcion</string>
+    <string name="textButtonMohamulachittaKombinaciya">combination with mental factors</string>
+
+    <string name="textMohamulachittaKoren1">ROOT: DELUSION (moha) </string>
+    <string name="textMohamulachittaKoren2">ROOT: DELUSION (moha) </string>
+
+    <string name="textMohamulachittaFunkciya1">FUNCTION: Functions as a jawana.</string>
+    <string name="textMohamulachittaFunkciya2">FUNCTION: Functions as a jawana.</string>
+
+    <string name="forTextView8withMoha">2 types of consciousness rooted in delusion</string>
+
+    <string name="textMohamulachittaKombinaciya1">
+         INCLUDED IN A COMBINATION WITH 15 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā) \n
+         >> 3. Perception (Saññā) \n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā) \n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME: \n
+     >> 8. Starter application (Vitakka) \n
+     >> 9. Sustainable application (Vicāra) \n
+     >> 10. Energy (Viriya) \n \n
+         UNIVERSAL UNBENEFITABLE: \n
+     >> 11. Misconception (Moha) \n
+     >> 12. Shamelessness (Ahirika) \n
+     >> 13. Fearlessness of evil deeds (Anottappa) \n
+     >> 14. Anxiety (Uddhacca) \n\n
+         ADVERSE THINGS THAT HAPPEN FROM TIME TO TIME: \n
+     >> 15. Doubt (Vicikicchā)
+     </string>
+
+    <string name="textMohamulachittaKombinaciya2">
+         INCLUDED IN A COMBINATION WITH 15 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya) \n \n
+         UNIVERSAL UNBENEFITABLE: \n
+     >> 12. Misconception (Moha)\n
+     >> 13. Shamelessness (Ahirika)\n
+     >> 14. Fearlessness of evil deeds (Anottappa)\n
+     >> 15. Anxiety (Uddhacca)\n\n
+     </string>
+
+    <string name="textMohamulachitta1">
+         EXAMPLE: A person, due to delusion, doubts the enlightenment of the Buddha or the effectiveness of the Dhamma
+as a path to liberation.
+     </string>
+    <string name="textMohamulachitta2">
+         EXAMPLE: A person is so distracted that he cannot focus his mind on any object.
+     </string>
+
+    <string name="textButton1Mohamulachitani">
+         1 \n One consciousness, accompanied by calm, associated with doubt. \n \n
+         Upekkhāsahagatam vicikicchāsampayuttam ekam.
+
+     </string>
+    <string name="textButton2Mohamulachitani">
+         2 \n One consciousness, accompanied by calmness, associated with anxiety. \n \n
+         Upekkhāsahagatam uddhaccasampayuttam ekan ti.
+
+     </string>
+</resources>

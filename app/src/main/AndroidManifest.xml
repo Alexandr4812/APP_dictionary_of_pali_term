@@ -17,6 +17,14 @@
         android:versionName="3.1"
         tools:targetApi="33">
 
+        <activity
+            android:name=".AbhidhammaChittasKamavacharamUnwholsomeMohamulachitaniActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
 
         <activity
             android:name=".AbhidhammaChittasKamavacharamUnwholsomeDosamulachitaniActivity"
@@ -26,7 +34,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".SuttasRandomActivity"
             android:configChanges="orientation|screenSize"
