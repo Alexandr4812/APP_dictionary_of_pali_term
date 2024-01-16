@@ -17,6 +17,23 @@
         android:versionName="3.1"
         tools:targetApi="33">
 
+
+        <activity
+            android:name=".AbhidhammaChittasKamavacharamAhetukaUnwholsomeResultActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AbhidhammaChittasKamavacharamAhetukaActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".AbhidhammaChittasKamavacharamUnwholsomeMohamulachitaniActivity"
             android:exported="false"
@@ -25,7 +42,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".AbhidhammaChittasKamavacharamUnwholsomeDosamulachitaniActivity"
             android:exported="false"

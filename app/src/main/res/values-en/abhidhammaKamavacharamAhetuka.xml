@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textButtonAhetukaUnwholsomeResult">Unwholesome resultant consciousness \n (Akusalavipākacittāni) - 7</string>
+    <string name="textButtonAhetukaWholsomeResult">Beneficial resultant rootless consciousness \n (Kusalavipāka-ahetukacittāni) - 8</string>
+    <string name="textButtonAhetukaFunktion">Functional rootless consciousness (Ahetukakiriya-cittāni) – 3</string>
+
+    <string name="textDiscribeAhetukaUnwholsomeResult">
+        UNBENEFITABLE RESULTING CONSCIOUSNESS (akusalavipākacittāni): \n
+        The first category of rootless consciousness contains seven types of consciousness,
+        which are the results of unwholesome kamma. These seven types
+        consciousnesses in themselves are not considered unwholesome;
+        they are kamma indefinite (abyākata). The word "unwholesome"
+        (akusala) here means that they are the results produced by unwholesome kamma.
+        In this case, akusala characterizes not these states of consciousness themselves,
+        but the kamma from which they originated.
+    </string>
+    <string name="textDiscribeAhetukaWholsomeResult">
+        Beneficial Resulting Rootless Consciousness (kusalavipāka-ahetukacittāni): \n
+The eight types of consciousness in this category are the results of wholesome kamma. The word ahetuka was not included in the previous class designation because all unwholesome resultants are rootless—there are no unwholesome resultants accompanied by roots. However,
+as will be seen later, beneficial results can
+be accompanied by roots, namely beautiful roots,
+being kammically indefinite (abyākata). \n \n
+In order to distinguish beneficial resultants,
+who have no roots, from those who have roots, the word ahetuka was introduced into the designation of their class. \n \n
+Seven consciousnesses from all rootless types of consciousness correspond to unwholesome resultants. But while unwholesome resultants arise in relation to an undesirable object, wholesome resultants
+arise in relation to an object that is desirable (ittha) or extremely desirable (ati-ittha). \n \n
+The first four sensory consciousnesses here, like their unwholesome twins, are associated with calmness, that is, a neutral feeling; however, due to the fact that the object has a [comparatively] stronger effect on the body,
+the feeling associated with the beneficial resultant consciousness of the body is bodily pleasure (sukha). \n \n
+Beneficial resultant rootless consciousnesses
+include one type of consciousness that has no correspondence
+among the unwholesome resultants. It is an exploring consciousness accompanied by joy (somanassa).
+While the inquiring consciousness arising from unwholesome kamma is always accompanied by a neutral feeling, the inquiring consciousness arising from wholesome kamma is binary - one is accompanied by a neutral feeling and arises in the case of a moderately desirable object, the other is accompanied by joy and arises in the case of a particularly desirable object . So in this
+class has eight types of consciousness, in contrast to the previous class, which contains seven types.</string>
+    <string name="textDiscribeAhetukaFunktion">
+        ROOTELESS FUNCTIONAL CONSCIOUSNESS (ahetukakiriyachittāni): \n
+         The remaining three types of consciousness among the Ahetukas are not kammic results.
+         They belong to a category called qiriya, translated here as
+"functional" to indicate what they do
+tasks that do not have kammic potential. Such
+types of consciousness are neither kamma-producing nor
+the results of kamma. In this category, three types of consciousness are rootless,
+         the rest (described below) have roots.
+    </string>
+
+    <string name="forTextView7AhetukaUnwholsome">7 Unfavorably Resulting Consciousnesses</string>
+
+    <string name="textAhetukaKoren">WITHOUT ROOTS</string>
+
+    <string name="textButton1AhetukaUnwholsome">
+        1 \n
+        Consciousness of the eye accompanied by tranquility \n \n
+        Upekkhāsahagatam cakkhuvinnānam
+    </string>
+    <string name="textUnwholsomeAhetuka1">
+        EYE CONSCIOUSNESS (CHAKKHUVINNĀNA): The first five types of resultant consciousness in both cases - in the case of unwholesome resultants and in the case of wholesome ones
+The resultants are consciousnesses based on the sensory matter (pasāda) of the eye, ear, nose, tongue and body. These ten cittas are collectively called the two sets of fivefold sensory consciousnesses (dvipañcavinnāna).
+Eye consciousness arises based on the sensory properties of the eye (cakkhupasāda).
+Other types of sensory consciousness also arise based on their corresponding sensory senses. In the case of unwholesome resultants, the object is unpleasant or undesirable (anittha).
+    </string>
+    <string name="textAhetukaUnwholsomeFunkciya1">FUNCTION: vision.</string>
+    <string name="textAhetukaUnwholsomeKombinaciya1">
+        INCLUDED IN A COMBINATION WITH 7 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā) \n
+         >> 3. Perception (Saññā) \n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā) \n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+    </string>
+
+    <string name="textButton2AhetukaUnwholsome">
+        2 \n
+        Consciousness of the ear accompanied by tranquility \n \n
+        Upekkhāsahagatam sotavinnānam
+    </string>
+    <string name="textUnwholsomeAhetuka2">
+         EAR CONSCIOUSNESS (SOTAVINNĀNA): The first five types of resultant consciousness in both cases - in the case of unwholesome resultants and in the case of wholesome resultants
+The resultants are consciousnesses based on the sensory matter (pasāda) of the eye, ear, nose, tongue and body. These ten cittas are collectively called the two sets of fivefold sensory consciousnesses (dvipañcavinnāna).
+Ear consciousness arises based on the sensory experience of the ear (sotapasāda).
+Other types of sensory consciousness also arise based on their corresponding sensory senses. In the case of unwholesome resultants, the object is unpleasant or undesirable (anittha).
+     </string>
+    <string name="textAhetukaUnwholsomeFunkciya2">FUNCTION: hear.</string>
+    <string name="textAhetukaUnwholsomeKombinaciya2">
+        INCLUDED IN A COMBINATION WITH 7 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā) \n
+         >> 3. Perception (Saññā) \n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā) \n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+    </string>
+
+    <string name="textButton3AhetukaUnwholsome">
+         3\n
+Nose awareness accompanied by calm \n \n
+Upekkhāsahagatam ghanavinnānam
+     </string>
+    <string name="textUnwholsomeAhetuka3">
+         NOSE CONSCIOUSNESS (GHANAVINNANA): The first five types of resultant consciousness in both cases - in the case of unwholesome resultants and in the case of wholesome resultants
+The resultants are consciousnesses based on the sensory matter (pasāda) of the eye, ear, nose, tongue and body. These ten cittas are collectively called the two sets of fivefold sensory consciousnesses (dvipañcavinnāna).
+Nose consciousness arises based on the sensory experience of the nose (ghanapasāda).
+Other types of sensory consciousness also arise based
+on their corresponding sensory senses. In the case of unwholesome resultants, the object is unpleasant or undesirable (anittha).
+    </string>
+    <string name="textAhetukaUnwholsomeFunkciya3">FUNCTION: smell.</string>
+    <string name="textAhetukaUnwholsomeKombinaciya3">
+        INCLUDED IN A COMBINATION WITH 7 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā) \n
+         >> 3. Perception (Saññā) \n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā) \n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+    </string>
+
+    <string name="textButton4AhetukaUnwholsome">
+         4\n
+Tongue consciousness accompanied by calm \n \n
+Upekkhasahagatam jivhavinnanam
+     </string>
+    <string name="textUnwholsomeAhetuka4">
+         CONSCIOUSNESS OF THE TONGUE (JIVHAVINNNA): The first five types of resultant consciousness in both cases - in the case of unwholesome resultants and in the case of wholesome ones
+The resultants are consciousnesses based on the sensory matter (pasāda) of the eye, ear, nose, tongue and body. These ten cittas are collectively called the two sets of fivefold sensory consciousnesses (dvipañcavinnāna).
+Consciousness of the tongue arises based on the sensory nature of the tongue (jivhapasāda).
+Other types of sensory consciousness also arise based on their corresponding sensory senses. In the case of unwholesome resultants, the object is unpleasant or undesirable (anittha).
+     </string>
+    <string name="textAhetukaUnwholsomeFunkciya4">FUNCTION: taste perception.</string>
+    <string name="textAhetukaUnwholsomeKombinaciya4">
+         INCLUDED IN A COMBINATION WITH 7 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+     </string>
+
+    <string name="textButton5AhetukaUnwholsome">
+         5\n
+Body consciousness accompanied by pain \n \n
+Dukkhasahagatam kayavinnanam
+     </string>
+    <string name="textUnwholsomeAhetuka5">
+         BODY CONSCIOUSNESS (KAYAVINNANA): The first five types of resultant consciousness in both cases - in the case of unwholesome resultants and in the case of wholesome ones
+The resultants are consciousnesses based on the sensory matter (pasāda) of the eye, ear, nose, tongue and body.
+         These ten cittas are collectively called the two sets of fivefold sensory consciousnesses (dvipañcavinnāna).
+Body consciousness arises based on the sensory awareness of the body (kayapasāda).
+Other types of sensory consciousness also arise based on their corresponding sensory senses. \n \n In the case of unfavorable results
+         the object is unpleasant or unwanted (anittha).
+         However, the effect of the object on the first four sensory control abilities is weak, and therefore the associated feeling is neutral, that is, calm. But in the case of unwholesome resultant consciousness of the body, the effect of the object on the governing power of the body is very
+strong, and therefore the feeling that accompanies consciousness is bodily
+pain (dukkha).
+     </string>
+    <string name="textAhetukaUnwholsomeFunkciya5">FUNCTION: perception of tactile sensation.</string>
+    <string name="textAhetukaUnwholsomeKombinaciya5">
+         INCLUDED IN A COMBINATION WITH 7 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+     </string>
+
+    <string name="textButton6AhetukaUnwholsome">
+         6\n
+Receiving consciousness accompanied by calm \n \n
+Upekkhāsahagatam sampaticchhanacittam
+     </string>
+    <string name="textUnwholsomeAhetuka6">
+         RECEIVING CONSCIOUSNESS (SAMPTICHCHHANACHITTAM):
+         When a touch object "hits" the control touch
+ability at one of the five sensor doors - for example,
+the visible object “hits” the sensory of the eye, - first
+citta arises, directing towards the object. Right after
+This creates the consciousness of the eye, seeing this form. This
+the act of seeing lasts just one moment of the mind. At once
+behind this arises the citta, which takes or “receives” the volume
+object seen by the eye consciousness. This is the receiving consciousness
+is the result of kamma of the same type that produced
+consciousness of the eye. \n
+     </string>
+    <string name="textAhetukaUnwholsomeFunkciya6">FUNCTION:
+         In the case of the mental process through any of the five sensory doors,
+         following the chitta, performing the function of vision or others, sequentially
+cittas arise that perform the functions of receiving (sampaticchhana), research (santiran a)
+         and definition (votthapana) of the object. In the case of the mental process
+at the mind-door, independent of the physical senses, these three functions do not arise,
+         and the interruption of the bhavanga is immediately followed by the direction to the mind-door, without any intermediate function. \n
+.</string>
+    <string name="textAhetukaUnwholsomeKombinaciya6">
+         INCLUDED IN A COMBINATION WITH 10 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     </string>
+
+    <string name="textButton7AhetukaUnwholsome">
+         7\n
+Exploring consciousness accompanied by calm \n \n
+Upekkhāsahagatam santiranacittam
+     </string>
+    <string name="textUnwholsomeAhetuka7">
+         RESEARCHING CONSCIOUSNESS (SANTHIRANACHITTAM):
+         When a touch object "hits" the control touch
+ability at one of the five sensor doors - for example,
+the visible object “hits” the sensory of the eye, - first
+citta arises, directing towards the object. Right after
+This creates the consciousness of the eye, seeing this form. This
+the act of seeing lasts just one moment of the mind. At once
+behind this arises the citta, which takes or “receives” the volume
+object seen by the eye consciousness. This is the receiving consciousness
+is the result of kamma of the same type that produced
+consciousness of the eye. \n
+     </string>
+    <string name="textAhetukaUnwholsomeFunkciya7">FUNCTION:
+         In the case of the mental process through any of the five sensory doors,
+         following the chitta, performing the function of vision or others, sequentially
+cittas arise that perform the functions of receiving (sampaticchhana), research (santiran a)
+         and definition (votthapana) of the object. In the case of the mental process
+at the mind-door, independent of the physical senses, these three functions do not arise,
+         and the interruption of the bhavanga is immediately followed by the direction to the mind-door, without any intermediate function. \n
+.</string>
+    <string name="textAhetukaUnwholsomeKombinaciya7">
+         INCLUDED IN A COMBINATION WITH 10 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     </string>
+
+</resources>

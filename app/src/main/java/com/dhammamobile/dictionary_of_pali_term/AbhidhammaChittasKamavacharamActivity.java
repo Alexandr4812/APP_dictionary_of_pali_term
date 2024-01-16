@@ -15,6 +15,10 @@ public class AbhidhammaChittasKamavacharamActivity extends BaseActivityClass {
 
     private Button infoButtonAbhidhammaKammavacharamUnwholsome;
 
+    private TextView textViewAbhidhammaKammavacharamAhetuka;
+
+    private Button infoButtonAbhidhammaKammavacharamAhetuka;
+
     // Переменная для хранения последней нажатой кнопки
     private Button lastClickedButton = null;
 
@@ -29,12 +33,16 @@ public class AbhidhammaChittasKamavacharamActivity extends BaseActivityClass {
 
         textViewAbhidhammaKammavacharamUnwholsome = findViewById(R.id.textViewAbhidhammaKammavacharamUnwholsome);
         infoButtonAbhidhammaKammavacharamUnwholsome = findViewById(R.id.infoButtonKamamavacharaUwholsome);
+
+        textViewAbhidhammaKammavacharamAhetuka = findViewById(R.id.textViewAbhidhammaKammavacharamAhetuka);
+        infoButtonAbhidhammaKammavacharamAhetuka = findViewById(R.id.infoButtonKamamavacharaAhetuka);
     }
 
     public void onButtonClickAbhidhammaKammavacharamUnwholsome(View view) {
         Button clickedButton = (Button) view;
         int visibility = textViewAbhidhammaKammavacharamUnwholsome.getVisibility();
         textViewAbhidhammaKammavacharamUnwholsome.setText("");
+        textViewAbhidhammaKammavacharamAhetuka.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -46,6 +54,27 @@ public class AbhidhammaChittasKamavacharamActivity extends BaseActivityClass {
                 textViewAbhidhammaKammavacharamUnwholsome.setText(R.string.textDiscribeKamavacharachitamUnwholsome);
                 textViewAbhidhammaKammavacharamUnwholsome.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaKammavacharamUnwholsome, getString(R.string.textDiscribeKamavacharachitamUnwholsome));
+            }
+            lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
+        }
+    }
+
+    public void onButtonClickAbhidhammaKammavacharamAhetuka(View view) {
+        Button clickedButton = (Button) view;
+        int visibility = textViewAbhidhammaKammavacharamAhetuka.getVisibility();
+        textViewAbhidhammaKammavacharamUnwholsome.setText("");
+        textViewAbhidhammaKammavacharamAhetuka.setText("");
+
+        // Если нажата та же кнопка, что и ранее
+        if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
+            textViewAbhidhammaKammavacharamAhetuka.setText(""); // Установите текст в пустую строку
+            textViewAbhidhammaKammavacharamAhetuka.setVisibility(View.INVISIBLE);
+            resetAnimator();
+        } else {
+            if (clickedButton == infoButtonAbhidhammaKammavacharamAhetuka) {
+                textViewAbhidhammaKammavacharamAhetuka.setText(R.string.textDiscribeKamavacharachitamAhetuka);
+                textViewAbhidhammaKammavacharamAhetuka.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaKammavacharamAhetuka, getString(R.string.textDiscribeKamavacharachitamAhetuka));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -84,12 +113,17 @@ public class AbhidhammaChittasKamavacharamActivity extends BaseActivityClass {
         startIntentActivityAndFinish(AbhidhammaChittasKamavacharamUnwholsomeActivity.class);
     }
 
+    public void toAbhidhammaChittasKamavacharamAhetukaAct(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasKamavacharamAhetukaActivity.class);
+    }
+
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
+        super.onBackPressed();
         startIntentActivityAndFinish(AbhidhammaChittasActivity.class);
     }
 }

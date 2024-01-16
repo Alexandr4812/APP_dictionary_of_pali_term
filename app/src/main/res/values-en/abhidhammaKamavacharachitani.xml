@@ -2,6 +2,7 @@
 <resources>
     <string name="textButtonKamavacharachitani">Consciousness of the sensory environment \n (Kamavacaracittani) - 54</string>
     <string name="textButtonKamavacharamUnwholsome">Unwholesome consciousness \n (Akusalacittāni) – 12</string>
+    <string name="textButtonKamavacharamAhetuka">Rootless consciousness \n (Ahetukacittāni) – 18</string>
     <string name="textButtonLobhamulachitani">Consciousness rooted in greed \n (Lobhamulachittāni) – 8</string>
     <string name="textButtonDosamulachitani">Consciousness rooted in anger \n (Dosamulachitani) - 2</string>
     <string name="textButtonMohamulachitani">Consciousness rooted in delusion \n (Mohamulachitani) - 2</string>
@@ -10,6 +11,18 @@
 One consciousness accompanied by joy, associated with an erroneous view, arising without prompting. \n \n
 Somanassasahagatam dithigatasampayuttam asankharikam ekam.
 </string>
+
+    <string name="textDiscribeKamavacharachitamAhetuka">
+ROOTLESS CONSCIOUSNESS (ahetukacittāni): The word ahetuka means “without roots” and denotes those
+        types of consciousness that are devoid of mental factors called hetu - “roots”.
+        These types, of which there are eighteen in all, do not contain any of the three unwholesome roots -
+        greed, anger and delusion - just as they do not contain any of the three bright roots - non-greed,
+        non-anger and non-delusion, which can be both beneficial and uncertain. Since the root is the factor that
+        helps establish stability in the citta, those cittas that do not have roots are weaker than those that do have them.
+        The eighteen cittas in this class are divided into three groups: unwholesome resultants, wholesome resultants.
+basic and functional types of consciousness.
+</string>
+
     <string name="textDiscribeKamavacharachitam">CONSCIOUSNESS OF THE SENSORY ENVIRONMENT: The word kāma means both subjective voluptuousness,
          that is, the passionate desire for sensory pleasures, as well as objective sensory,
          that is, the five external sensory objects - visible forms, sounds, smells, tastes and objects of touch. \n
