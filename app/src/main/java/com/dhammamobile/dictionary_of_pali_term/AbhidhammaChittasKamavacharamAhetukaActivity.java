@@ -137,6 +137,14 @@ public class AbhidhammaChittasKamavacharamAhetukaActivity extends BaseActivityCl
         startIntentActivityAndFinish(AbhidhammaChittasKamavacharamAhetukaUnwholsomeResultActivity.class);
     }
 
+    public void toAbhidhammaChittasKamavacharamAhetukaWholsomeResultAct(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasKamavacharamAhetukaWholsomeResultActivity.class);
+    }
+
+    public void toAbhidhammaChittasKamavacharamAhetukaFunkcionalAct(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasKamavacharamAhetukaFunkcionalActivity.class);
+    }
+
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
     }

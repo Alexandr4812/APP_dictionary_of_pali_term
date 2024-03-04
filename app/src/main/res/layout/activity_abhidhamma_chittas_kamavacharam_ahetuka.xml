@@ -98,6 +98,7 @@
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="toAbhidhammaChittasKamavacharamAhetukaWholsomeResultAct"
                 android:text="@string/textButtonAhetukaWholsomeResult"
                 tools:ignore="UsingOnClickInXml" />
 
@@ -122,6 +123,7 @@
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="toAbhidhammaChittasKamavacharamAhetukaFunkcionalAct"
                 android:text="@string/textButtonAhetukaFunktion"
                 tools:ignore="UsingOnClickInXml" />
 

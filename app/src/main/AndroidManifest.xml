@@ -16,8 +16,22 @@
         android:versionCode="3"
         android:versionName="3.1"
         tools:targetApi="33">
-
-
+        <activity
+            android:name=".AbhidhammaChittasKamavacharamAhetukaFunkcionalActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AbhidhammaChittasKamavacharamAhetukaWholsomeResultActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".AbhidhammaChittasKamavacharamAhetukaUnwholsomeResultActivity"
             android:exported="false"

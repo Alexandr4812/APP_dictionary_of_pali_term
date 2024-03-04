@@ -141,6 +141,16 @@
                 android:text=""
                 android:visibility="invisible"/>
 
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Раздел Абхидхамма, в процессе  разработки, \n дополняется материалом. \n \n Следите за обновлениями."
+                android:textAlignment="center"
+                android:textColor="#E57373"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
 
