@@ -319,4 +319,89 @@ They rebuked Udāyī in many ways and then told the Buddha. Soon afterwards he h
 “It`s true, Sir.”
         \n \n
     </string>
+
+    <string name="textButtonSanghadisesa6">
+        6 \n
+        When a monk, by means of begging, builds a hut without a sponsoring owner and intended for himself,
+        it is to be no more than twelve standard handspans long and seven wide inside.
+        He must have monks approve a site where no harm will be done and which has space on all sides.
+        If a monk, by means of begging, builds a hut on a site where harm will be done and which lacks
+        space on all sides, or he does not have monks approve the site, or he exceeds the right size.
+        This entails an initial and subsequent community meeting.
+    </string>
+    <string name="sanghadisesaText6">
+        \n 6. (Kuṭikārasikkhāpada) \n
+        Правило о строительстве хижины. \n
+        <i>Rule about building a hut.</i> \n \n
+
+        <b>saññāsikāya pana bhikkhunā kuṭiṃ
+            kārayamānena assāmikaṃ attuddesāṃ </b> \n
+        Самостоятельно когда монах строит хижину без поручителя и предназначенную для себя, \n
+        <i>On his own, when a monk builds a hut without a guarantor and intended for himself,</i> \n \n
+
+        <b>pamāṇikā kāretabbā,</b> \n
+        соответствовать нужному размеру она должна \n
+        <i>it should fit the right size</i> \n \n
+
+        <b>tatridaṃ pamāṇaṃ, dīyaso dvādasa vidattiyo sugavidattiyā,tiriyaṃ sattantarā,</b>  \n
+        В данном случае, длинна должна быть 12 пядей Сугаты в длину и 7 в ширину,  \n
+        <i>In this case, the length should be 12 Sugata spans in length and 7 in width,</i> \n \n
+
+        <b>bhikkhū abhinetabbā vattudesanāya, tehi bhikkhūhi vattu desetabbaṃ anārambhaṃ saparikkamanaṃ,</b> \n
+        Бхикху должен пригласить других бхикху, которые должны признать,
+        что здесь не будет нанесён вред живым существам и будет достаточно места вокруг. \n
+        <i>A bhikhu must invite other bhikkhus, who must acknowledge
+         that there will be no harm to living beings and there will be enough space around.</i> \n \n
+
+
+        <b>sārambhe ce bhikkhuvatthusmiṃ
+        aparikkamane saññācikāya kuṭiṃ kāreyya </b> \n
+        Нанесён вред если и недостаточно места вокруг у самостоятельно построенного кути, \n
+        <i>Damage is caused if and there is not enough space around the self-built kuti</i> \n \n
+
+        <b>bhikkhū vā anabhineyya vatthudesanāya, pamāṇaṃ vā abhikkāmeyya,</b> \n
+        И бхикху небыли приглашены для обозначения участка, и размер неподходящий, \n
+        <i>And bhikkhus were not invited to designate the site, and the size is inappropriate,</i> \n \n
+
+        <b>saṃghādiseso</b> \n
+        Это влечет за собой собрание Сангхи. \n
+        <i>This entails a meeting of the Sangha</i> \n \n
+    </string>
+
+    <string name="textButtonSanghadisesa7">
+        7 \n
+        When a bhikkhu is having a large dwelling built—having a sponsor
+        and destined for himself—he is to assemble bhikkhus to designate the site.
+        The site the bhikkhus designate should be without disturbances and with adequate space.
+        If the bhikkhu should have a large dwelling built on a site with disturbances and
+        without adequate space, or if he should not assemble the bhikkhus to designate the site,
+        it entails initial and subsequent meetings of the Community.
+    </string>
+
+    <string name="sanghadisesaText7">
+        \n 7. (Vihārakārasikkhāpada) \n
+        Правило о строительстве большого жилища. \n
+        <i>Rule about building  a large dwelling.</i> \n \n
+
+        <b>Mahallakaṃ pana bhikkhu, vihāraṃ kārayamānena sassāmikaṃ attuddesaṃ</b> \n
+        Когда монах строит большое жилище - и у него есть спонсор, и оно предназначено для него самого \n
+        <i>When a monk builds a large dwelling and has a sponsor, it is intended for him.</i> \n \n
+
+        <b>bhikkhū abhinetabbā vatthudesanāya,</b> \n
+        Он должен собрать компетентных монахов \n
+        <i>He must gather qualified monks.</i> \n \n
+
+        <b>tehi bhikkhūhi vatthu desetabbaṃ anārambhaṃ saparikkamanaṃ.</b> \n
+        Эти монахи должны подтвердить, что не будет нанесен вред живым существам и что достаточно места вокруг. \n
+        <i>These monks must confirm that no harm will be done to living beings and that there is enough space around.</i> \n \n
+
+        <b>sārambe ce bhikkhusmiṃ aparikkamane mahallamane mahallakaṃ vihāraṃ kāreyya</b> \n
+        Если будет нанесен вред живым существам и будет недостаточно места вокруг большого жилища \n
+        <i>If there is harm to living beings and there is not enough space around a large dwelling.</i> \n \n
+
+        <b>bhikkhū vā anabhineyya vatthudesanāya, saṃghādiseso.</b> \n
+        И монахи небыли приглашены, это влечет за собой первоначальные и последующие собрания сангхи. \n
+        <i>And the monks were not invited, this entails the initial and subsequent sangha meetings.</i> \n \n
+        \n \n
+    </string>
 </resources>

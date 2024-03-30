@@ -255,7 +255,7 @@
     <string name="button_patimokha">Правила патимокхи</string>
     <string name="buttonAboutParajika">О ПРАВИЛАХ ПАТИМОККХИ</string>
     <string name="buttonaboutParajikaNakazanie">СИСТЕМА НАКАЗАНИЙ, ПРЕДУСМАТРИВАЕМАЯ ПРАВИЛАМИ ПАТИМОККХИ </string>
-    <string name="buttonPatimokhaRazdelParajika">РАЗДЕЛ ПАРАДЖИКА</string>
+    <string name="buttonPatimokhaRazdelParajika">ПАРАДЖИКА</string>
     <string name="buttonParajika1">1 \n Если какой-либо монах, участвующий в обучении и образе жизни монахов, без отказа от обучения, без открытого объявления о своей слабости, совершит половой акт с женщиной или с самкой животного, такой монах потерпел поражение и более не состоит в сангхе.</string>
     <string name="textViewHintParajika">Нажмите на правило, для того, чтобы увидеть правило на языке пали и причины его возникновения.</string>
     <string name="buttonAboutSanghadisesaText">о правилах сангхадисесы</string>
@@ -517,9 +517,8 @@ Both the Commentary and the Commentary state that a physical gesture—this woul
         Даже временно.
         Это влечет за собой начальное и последующее собрание сангхи.
     </string>
-
     <string name="sanghadisesaText5">
-      \n 4. (Sañcarittasikkhāpadaṃ) \n
+      \n 5. (Sañcarittasikkhāpadaṃ) \n
         Правило о посредничестве (сватовстве) .   \n
         <i>Mediation rule. \n rule about matchmaking.</i> \n \n
 
@@ -629,5 +628,92 @@ Both the Commentary and the Commentary state that a physical gesture—this woul
 Монахи услышали это, а монахи с немногими желаниями жаловались и критиковали его: «Как мог Достопочтенный Удайн выступать в роли свахи для короткого романа?»
 Они по-разному упрекали Удайна, а затем рассказали об этом Будде. Вскоре после этого он собрал Сангху и допросил Удая: «Правда ли, Удайи, что ты сделал это?»
 — Это правда, сэр. Будда ввел это правило. \n \n
+    </string>
+
+    <string name="textButtonSanghadisesa6">
+        6 \n
+        Когда монах путем подаяния строит хижину без поручителя и предназначенную для себя,
+        то внутри она должна быть не более двенадцати пядей Сугаты в длину ("пядь Сугаты" – примерно 25 см) и семи в ширину.
+        Он должен попросить монахов одобрить место, где не будет причинен вред живым существам и где будет
+        достаточно места со всех сторон. Если монах путем подаяния построит хижину без поручителя на участке,
+        где будет причиняться вред и которому не хватает места со всех сторон,
+        или не получит одобрения монахов на это место, или превысит положенные размеры.
+        Это влечет за собой начальное и последующее собрание сангхи.
+    </string>
+    <string name="sanghadisesaText6">
+       \n 6. (Kuṭikārasikkhāpada) \n
+        Правило о строительстве хижины. \n
+        <i>Rule about building a hut.</i> \n \n
+
+        <b>saññāsikāya pana bhikkhunā kuṭiṃ
+            kārayamānena assāmikaṃ attuddesāṃ </b> \n
+        Самостоятельно когда монах строит хижину без поручителя и предназначенную для себя, \n
+        <i>On his own, when a monk builds a hut without a guarantor and intended for himself,</i> \n \n
+
+        <b>pamāṇikā kāretabbā,</b> \n
+        соответствовать нужному размеру она должна \n
+        <i>it should fit the right size</i> \n \n
+
+        <b>tatridaṃ pamāṇaṃ, \n dīyaso dvādasa vidattiyo sugavidattiyā, \n tiriyaṃ sattantarā,</b>  \n
+        В данном случае, длинна должна быть 12 пядей Сугаты в длину и 7 в ширину,  \n
+        <i>In this case, the length should be 12 Sugata spans in length and 7 in width,</i> \n \n
+
+        <b>bhikkhū abhinetabbā vattudesanāya, \n tehi bhikkhūhi vattu desetabbaṃ anārambhaṃ saparikkamanaṃ,</b> \n
+        Бхикху должен пригласить других бхикху, которые должны признать,
+        что здесь не будет нанесён вред живым существам и будет достаточно места вокруг. \n
+        <i>A bhikhu must invite other bhikkhus, who must acknowledge
+         that there will be no harm to living beings and there will be enough space around.</i> \n \n
+
+        <b>sārambhe ce bhikkhuvatthusmiṃ
+        aparikkamane saññācikāya kuṭiṃ kāreyya </b> \n
+        Нанесён вред если и недостаточно места вокруг у самостоятельно построенного кути, \n
+        <i>Damage is caused if and there is not enough space around the self-built kuti</i> \n \n
+
+        <b>bhikkhū vā anabhineyya vatthudesanāya, \n pamāṇaṃ vā abhikkāmeyya,</b> \n
+        И бхикху небыли приглашены для обозначения участка, и размер неподходящий, \n
+        <i>And bhikkhus were not invited to designate the site, and the size is inappropriate,</i> \n \n
+
+        <b>saṃghādiseso</b> \n
+        Это влечет за собой собрание Сангхи. \n
+        <i>This entails a meeting of the Sangha</i> \n \n
+    </string>
+
+    <string name="textButtonSanghadisesa7">
+        7 \n
+        Когда монах строит большое жилище — и у него есть спонсор,
+        и оно предназначено для него самого, — он должен собрать монахов,
+        чтобы определить место где не будет причинен вред живым существам и где будет
+        достаточно места со всех сторон.
+        Если у монаха будет большое жилище,
+        построенное на участке где будет причинен вред живым существам и где будет
+        недостаточно места со всех сторон,
+        или если он не собирёт монахов для определения места,
+        это влечет за собой первоначальные и последующие собрания сангхи.
+    </string>
+    <string name="sanghadisesaText7">
+        \n 7. (Vihārakārasikkhāpada) \n
+        Правило о строительстве большого жилища. \n
+        <i>Rule about building  a large dwelling.</i> \n \n
+
+        <b>Mahallakaṃ pana bhikkhu, vihāraṃ kārayamānena sassāmikaṃ attuddesaṃ</b> \n
+        Когда монах строит большое жилище - и у него есть спонсор, и оно предназначено для него самого \n
+        <i>When a monk builds a large dwelling and has a sponsor, it is intended for him.</i> \n \n
+
+        <b>bhikkhū abhinetabbā vatthudesanāya,</b> \n
+        Он должен собрать компетентных монахов \n
+        <i>He must gather qualified monks.</i> \n \n
+
+        <b>tehi bhikkhūhi vatthu desetabbaṃ anārambhaṃ saparikkamanaṃ.</b> \n
+        Эти монахи должны подтвердить, что не будет нанесен вред живым существам и что достаточно места вокруг. \n
+        <i>These monks must confirm that no harm will be done to living beings and that there is enough space around.</i> \n \n
+
+        <b>sārambe ce bhikkhusmiṃ aparikkamane mahallamane mahallakaṃ vihāraṃ kāreyya</b> \n
+        Если будет нанесен вред живым существам и будет недостаточно места вокруг большого жилища \n
+        <i>If there is harm to living beings and there is not enough space around a large dwelling.</i> \n \n
+
+        <b>bhikkhū vā anabhineyya vatthudesanāya, saṃghādiseso.</b> \n
+        И монахи небыли приглашены, это влечет за собой первоначальные и последующие собрания сангхи. \n
+        <i>And the monks were not invited, this entails the initial and subsequent sangha meetings.</i> \n \n
+        \n \n
     </string>
 </resources>
