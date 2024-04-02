@@ -26,7 +26,7 @@ public class AbhidhammaChetasikasActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma_shetasikas);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         textViewAbhidhammaEticheskiVeriabelnie = findViewById(R.id.textViewAbhidhammaEticheskiVeriabelnie);
         infoButtonAbhidhammaEticheskiVeriabelnie = findViewById(R.id.infoButtonEticheskiVeriabelnie);

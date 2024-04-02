@@ -19,7 +19,7 @@ public class RulesSamaneraObInfoActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_samanera_ob_info);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         this.buttonHome = findViewById(R.id.buttonRulesSamaneraProtocolsHome);
         this.buttonLiveToRulesSamanera = findViewById(R.id.buttonliveToRulesSamaneraProtocols);

@@ -15,7 +15,7 @@ public class RulesBhikkhuPatimokhaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_patimokha);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         this.buttonBack = findViewById(R.id.buttonliveToBhikkhu);
         this.buttonHome = findViewById(R.id.buttonliveHomeFromUpasampada);

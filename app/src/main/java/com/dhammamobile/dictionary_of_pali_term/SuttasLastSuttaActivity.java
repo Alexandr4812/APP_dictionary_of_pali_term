@@ -20,7 +20,7 @@ public class SuttasLastSuttaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_last_sutta);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         webView = findViewById(R.id.webViewLastSutta);
 

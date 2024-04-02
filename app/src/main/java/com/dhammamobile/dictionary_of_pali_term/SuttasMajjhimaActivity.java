@@ -23,7 +23,7 @@ public class SuttasMajjhimaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_majjhima);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         Button buttonBack = findViewById(R.id.buttonliveToBeforePageMajjhima);
         webView = findViewById(R.id.webViewMajjhima);

@@ -33,7 +33,7 @@ public class AbhidhammaChittasKamavacharamUnwholsomeActivity extends BaseActivit
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma_chittas_kamavacharam_unwholsome);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         textViewAbhidhammaKammavacharamUnwholsomeLobha = findViewById(R.id.textViewAbhidhammaKammavacharamUnwholsomeLobha);
         infoButtonAbhidhammaKammavacharamUnwholsomeLobha = findViewById(R.id.infoButtonKamamavacharaUwholsomeLobha);

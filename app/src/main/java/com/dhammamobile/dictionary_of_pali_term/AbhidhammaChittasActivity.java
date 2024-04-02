@@ -24,7 +24,7 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma_chittas);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         textViewAbhidhammaKammavacharam = findViewById(R.id.textViewAbhidhammaKammavacharam);
         infoButtonAbhidhammaKammavacharam = findViewById(R.id.infoButtonKamamavachara);

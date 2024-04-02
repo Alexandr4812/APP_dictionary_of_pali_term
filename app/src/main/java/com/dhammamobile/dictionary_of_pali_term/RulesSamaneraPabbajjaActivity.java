@@ -11,7 +11,7 @@ public class RulesSamaneraPabbajjaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_samanera_pabbajja);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
     }
 
     public void toMainAct(View view){

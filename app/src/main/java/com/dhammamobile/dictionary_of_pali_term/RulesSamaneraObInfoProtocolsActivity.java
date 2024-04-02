@@ -22,7 +22,7 @@ public class RulesSamaneraObInfoProtocolsActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_samanera_ob_info_protocols);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         this.buttonHome = findViewById(R.id.buttonRulesSamaneraObInfoProtocolsHome);
         this.buttonLiveToRulesSamanera = findViewById(R.id.buttonliveToRulesSamaneraObInfoProtocols);

@@ -15,7 +15,7 @@ public class RulesActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         Button button1 = findViewById(R.id.button_rules_for_samanera);
         Button button2 = findViewById(R.id.button_rules_for_bhikkhu);

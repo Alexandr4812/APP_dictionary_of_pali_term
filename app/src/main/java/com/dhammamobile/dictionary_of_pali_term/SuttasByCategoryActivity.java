@@ -23,7 +23,7 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_by_category);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         Button buttonBack = findViewById(R.id.buttonliveToBeforePage);
         webView = findViewById(R.id.webViewByCategory);

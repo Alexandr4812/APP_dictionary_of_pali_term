@@ -11,7 +11,7 @@ public class RulesBhikkhuActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
     }
 
     public void toRulesAct(View view){

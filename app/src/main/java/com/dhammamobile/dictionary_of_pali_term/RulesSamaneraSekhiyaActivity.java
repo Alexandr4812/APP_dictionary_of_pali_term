@@ -12,7 +12,7 @@ public class RulesSamaneraSekhiyaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_samanera_sekhiya);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
     }
 
     public void toRulesSamaneraAct(View view){

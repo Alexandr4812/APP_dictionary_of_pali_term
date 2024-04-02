@@ -15,7 +15,7 @@ public class DeclomationParittaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_declomation_paritta);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         this.buttonHome = findViewById(R.id.buttonParittaHome);
         this.buttonLiveToParitta = findViewById(R.id.buttonliveToParitta);

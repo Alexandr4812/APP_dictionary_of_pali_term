@@ -36,7 +36,7 @@ public class AbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniActivity ext
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma_chittas_kamavacharam_unwholsome_lobhamulachitani);
 
-        setWindowFlagsFullscreenAndNoLimits();
+      //  setWindowFlagsFullscreenAndNoLimits();
 
         textViewAbhidhammaKammavacharamUnwholsomeLobhamulachitta1 =
                 findViewById(R.id.textView_abhidhamma_chittas_kamavachara_unwholsome_lobhamulachitani1);

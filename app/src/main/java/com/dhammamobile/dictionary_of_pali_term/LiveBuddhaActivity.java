@@ -17,7 +17,7 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_buddha);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         home = findViewById(R.id.buttonLiveHome);
         back = findViewById(R.id.buttonliveToLive);

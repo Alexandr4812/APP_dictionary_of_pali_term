@@ -16,7 +16,7 @@ public class DeclomationPujaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_declomation_puja);
 
-        setWindowFlagsFullscreenAndNoLimits();
+      //  setWindowFlagsFullscreenAndNoLimits();
 
         this.buttonHome = findViewById(R.id.buttonPujaHome);
         this.buttonLiveToPuja = findViewById(R.id.buttonliveToPuja);

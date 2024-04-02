@@ -23,7 +23,7 @@ public class SuttasKuddakaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_kuddaka);
 
-        setWindowFlagsFullscreenAndNoLimits();
+      //  setWindowFlagsFullscreenAndNoLimits();
 
         Button buttonBack = findViewById(R.id.buttonliveToBeforePageKuddaka);
         webView = findViewById(R.id.webViewKuddaka);

@@ -30,7 +30,7 @@ public class SuttasRandomActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_random);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         webView = findViewById(R.id.webViewRandomSutta);
 

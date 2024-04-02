@@ -33,7 +33,7 @@ public class AbhidhammaChittasKamavacharamAhetukaWholsomeResultActivity extends 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma_chittas_kamavacharam_ahetuka_wholsome_result);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         textViewAbhidhammaKammavacharamWholsomeAhetuka1 =
                 findViewById(R.id.textView_abhidhamma_chittas_kamavachara_wholsome_ahetuka1);

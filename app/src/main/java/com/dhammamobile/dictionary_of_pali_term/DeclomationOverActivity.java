@@ -16,7 +16,7 @@ public class DeclomationOverActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_declomation_over);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         this.buttonHome = findViewById(R.id.buttonDeclomationHome);
         this.buttonLiveToOver = findViewById(R.id.buttonliveToOver);

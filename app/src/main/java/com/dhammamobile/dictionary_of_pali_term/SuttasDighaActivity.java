@@ -24,7 +24,7 @@ public class SuttasDighaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_digha);
 
-        setWindowFlagsFullscreenAndNoLimits();
+      //  setWindowFlagsFullscreenAndNoLimits();
 
         Button buttonBack = findViewById(R.id.buttonliveToBeforePage);
         webView = findViewById(R.id.webView);

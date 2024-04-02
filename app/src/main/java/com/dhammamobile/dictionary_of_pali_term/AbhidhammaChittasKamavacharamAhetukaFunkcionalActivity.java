@@ -30,7 +30,7 @@ import android.widget.TextView;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma_chittas_kamavacharam_ahetuka_funkcional);
 
-        setWindowFlagsFullscreenAndNoLimits();
+      //  setWindowFlagsFullscreenAndNoLimits();
 
         textViewAbhidhammaKammavacharamAhetukaFunkcional1 =
                 findViewById(R.id.textView_abhidhamma_chittas_kamavachara_ahetuka_funkcional1);

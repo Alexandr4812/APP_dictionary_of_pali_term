@@ -15,7 +15,7 @@ public class DeklomationMainActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deklomation_main);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         Button button1 = findViewById(R.id.button_sutta);
         Button button2 = findViewById(R.id.button_paritta);

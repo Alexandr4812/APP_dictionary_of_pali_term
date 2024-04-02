@@ -28,7 +28,7 @@ public class AbhidhammaChittasKamavacharamAhetukaActivity extends BaseActivityCl
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma_chittas_kamavacharam_ahetuka);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         infoButtonKamamavacharaAhetukaUnwholsomeResult = findViewById(R.id.infoButtonKamamavacharaAhetukaUnwholsomeResult);
         infoButtonKamamavacharaAhetukaWholsomeResult = findViewById(R.id.infoButtonKamamavacharaAhetukaWholsomeResult);

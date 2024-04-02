@@ -29,7 +29,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         textViewAbhidhammaChitta = findViewById(R.id.textViewAbhidhammaChitta);
         textViewAbhidhammaChitasikas = findViewById(R.id.textViewAbhidhammaChetasika);

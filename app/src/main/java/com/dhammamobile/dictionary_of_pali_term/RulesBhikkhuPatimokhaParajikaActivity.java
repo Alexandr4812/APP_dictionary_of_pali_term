@@ -49,7 +49,7 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_parajika);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         textView = findViewById(R.id.textViewHintParajika);
         textToAnimate = getString(R.string.textViewHintParajika);

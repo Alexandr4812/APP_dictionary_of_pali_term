@@ -104,7 +104,7 @@ public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityCla
         buttonAssociaciya7 = findViewById(R.id.button_chetasika_kontakt_associaciya7);
 
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
     }
 
     public void onButtonClickGroup1(View view) {

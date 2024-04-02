@@ -24,7 +24,7 @@ public class SuttasActivity extends BaseActivityClass {
         TextView textViewLink = findViewById(R.id.textViewyy);
         Linkify.addLinks(textViewLink, Linkify.WEB_URLS);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         Button button1 = findViewById(R.id.button_suttas_for_dighanikaya);
         Button button2 = findViewById(R.id.button_suttas_for_majhimaNikaya);

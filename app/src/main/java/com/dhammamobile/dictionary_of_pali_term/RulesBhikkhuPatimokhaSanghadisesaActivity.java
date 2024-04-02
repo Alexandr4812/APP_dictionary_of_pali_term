@@ -56,7 +56,7 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_sanghadisesa);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         textView = findViewById(R.id.textViewHintSangkhadisesa);
         textToAnimate = getString(R.string.textViewHintParajika);

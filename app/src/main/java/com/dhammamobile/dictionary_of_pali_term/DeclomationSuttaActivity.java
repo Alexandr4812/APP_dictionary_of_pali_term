@@ -44,7 +44,7 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_declomation_sutta);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         this.textMaxTime = findViewById(R.id.textMaxTime);
         this.textCurrentPosition = findViewById(R.id.textCurrentPosition);

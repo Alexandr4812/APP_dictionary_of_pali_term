@@ -16,7 +16,7 @@ public class DeklomationDhammapadaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deklomation_dhammapada);
 
-        setWindowFlagsFullscreenAndNoLimits();
+       // setWindowFlagsFullscreenAndNoLimits();
 
         this.buttonHome = findViewById(R.id.buttonDhammapadaHome);
         this.buttonLiveToDhammapada = findViewById(R.id.buttonliveToDhammapada);
