@@ -284,6 +284,7 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
 
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
+        this.mediaPlayer.pause();
     }
 
     @Override

@@ -347,34 +347,134 @@
         </LinearLayout>
     </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal"
-        >
+    <TextView
+        android:id="@+id/textMaxTimeSanghadisesa"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/my_main_color"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="0:0"
+        android:textAlignment="center"
+        android:textColor="@color/my_text_bacground_color"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/buttonliveToPatimokhaSanghadisesa"
+        app:layout_constraintEnd_toStartOf="@id/seekBarSanghadisesa"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/buttonSanghadisesaHome"
-            style="@style/buttonBackHomeNotImageButton"
-            android:layout_gravity="bottom|center"
-            android:layout_marginRight="3dp"
-            android:layout_marginBottom="0dp"
-            android:onClick="toMainAct"
-            android:visibility="invisible"
-            tools:ignore="UsingOnClickInXml" />
+    <TextView
+        android:id="@+id/textCurrentPositionSanghadisesa"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/my_main_color"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="0:0"
+        android:textAlignment="center"
+        android:textColor="@color/my_text_bacground_color"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/buttonliveHomeFromSanghadisesa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/seekBarSanghadisesa" />
 
-        <Button
-            android:id="@+id/buttonliveToSanghadisesa"
-            style="@style/buttonBackNotImageButton"
-            android:onClick="toBackButtonSanghadisesa"
-            android:visibility="invisible"
-            android:layout_gravity="bottom|center"
-            android:layout_marginLeft="3dp"
-            android:layout_marginBottom="0dp"
-            tools:ignore="UsingOnClickInXml"
-            />
+    <Button
+        android:id="@+id/buttonliveToPatimokhaSanghadisesa"
+        style="@style/buttonBackNotImageButton"
+        android:onClick="toBackButtonSanghadisesa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonRewindSanghadisesa"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/buttonliveHomeFromSanghadisesa"
+        style="@style/buttonBackHomeNotImageButton"
+        android:onClick="toMainAct"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toEndOf="@id/buttonFastForwardSanghadisesa"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonRewindSanghadisesa"
+        style="@style/buttonRewind"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlaySanghadisesa"
+        app:layout_constraintStart_toEndOf="@+id/buttonliveToPatimokhaSanghadisesa"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonPlaySanghadisesa"
+        style="@style/buttonPlay"
+        app:icon="@mipmap/sound3_foreground"
+        app:iconPadding="0dp"
+        app:iconSize="30dp"
+        app:iconTint="#FFF59D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonPauseSanghadisesa"
+        app:layout_constraintStart_toEndOf="@id/buttonRewindSanghadisesa"
+        tools:ignore="RtlCompat"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonStopSanghadisesa"
+        style="@style/buttonStop"
+        app:icon="@mipmap/sound3off_foreground"
+        app:iconPadding="0dp"
+        app:iconSize="30dp"
+        app:iconTint="#FFF59D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonPauseSanghadisesa"
+        app:layout_constraintStart_toEndOf="@id/buttonRewindSanghadisesa"
+        tools:ignore="RtlCompat"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonPauseSanghadisesa"
+        style="@style/buttonPause"
+        app:icon="@mipmap/pause_foreground"
+        app:iconGravity="start"
+        app:iconPadding="0dp"
+        app:iconSize="30dp"
+        app:iconTint="#FFF59D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonFastForwardSanghadisesa"
+        app:layout_constraintStart_toEndOf="@id/buttonPlaySanghadisesa"
+        tools:ignore="RtlCompat"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/buttonFastForwardSanghadisesa"
+        style="@style/buttonFastForward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonliveHomeFromSanghadisesa"
+        app:layout_constraintStart_toEndOf="@+id/buttonPauseSanghadisesa"
+        tools:visibility="visible" />
+
+    <SeekBar
+        android:id="@+id/seekBarSanghadisesa"
+        android:layout_width="210dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/my_main_color"
+        android:indeterminateOnly="false"
+        android:progressTint="@color/my_text_bacground_color"
+        android:saveEnabled="false"
+        android:thumbTint="@color/my_text_bacground_color"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/buttonStopSanghadisesa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
