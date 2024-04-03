@@ -833,16 +833,28 @@ overestimation, such a monk has been defeated and is no longer a member of the s
     </string>
     <string name="textPatimokhaParajika1"> \n
         Pàr 1: (Methunadhammasikkhàpadam): \n
-        <i>    The rule of sexual intercourse.</i> \n \n
-        <b>Yo pana bhikkhu bhikkhūnaṃ sikkhāsājīvasamāpanno</b> \n \n
-        <b>sikkhaṃ appaccakkhāya dubbalyaṃ anāvikatvā methunaṃ dhammaṃ paṭiseveyya,</b> \n \n
-        <b>antamaso tiracchānagatāya pi; pārājiko hoti, asaṃvāso.</b>
+        Правило о половом акте. \n
+        <i>       The rule about sexual intercourse.</i> \n \n
+
+        <b>Yo pana bhikkhu bhikkhūnaṃ sikkhāsājīvasamāpanno</b> \n
+        Если какой-либо монах, монашеские обеты принявший ведет святую жизнь \n
+        <i>If any monk who has taken monastic vows leads a holy life</i> \n \n
+
+        <b>sikkhaṃ appaccakkhāya dubbalyaṃ anāvikatvā methunaṃ dhammaṃ paṭiseveyya,</b> \n
+        правила не оставив, не объявив о слабости, сексуальный акт совершит \n
+        <i>The rules are not to leave, without declaring weakness, to commit a sexual act</i> \n \n
+
+        <b>antamaso tiracchānagatāya pi; pārājiko hoti, asaṃvāso.</b> \n
+        даже с самкой животного, параджичником явяляется не членом сангхи \n
+        <i>even with a female animal, the affected one is not a member of the sangha</i> \n \n
+
         \n\n This rule arose as a result of three different events: \n \n
         The first event is connected with the story of the young Sudinna Kalandaki.
         Who had sexual intercourse with his ex-wife. \n \n
         The second event is connected with the story of a monk who performed sexual intercourse with a female monkey. \n \n
         The third rule is related to Buddhist monks who performed sexual acts without renouncing monasticism and without confessing their offense. \n \n \n
-    <b>Note</b> \n
+
+        <b>Note</b> \n
     Even if he does this in a cast, in a condom, in lay clothes, or while completely naked, or without experiencing any sensation (for example, due to loss of tactile sensations on the genital parts of the body), in the same way he loses his status as a monk. \n \n
     <b>There are six cases when parajika 1 is not performed:</b> \n \n
     1. When the monk is asleep or in all other cases when he is not aware of the sexual act while it is taking place. \n
@@ -853,17 +865,26 @@ overestimation, such a monk has been defeated and is no longer a member of the s
     6. When the monk performed this action before the rules were established. \n \n
     <i>This rule is partially included in the third of the Ten Commandments.</i> \n \n \n \n \n \n</string>
     <string name="textPatimokhaParajika2"> \n
+        \n
         Pàr 2: (Adinnàdànasikkhàpadam): \n
-        <i>       The rule about theft..</i> \n \n
-        <b>Yo pana bhikkhu gāmā vā araññā vā \n \n adinnaṃ theyyasaṅkhātaṃ
-        ādiyeyya, yathārūpe adinnādāne \n \n rājāno coraṃ gahetvā haneyyuṃ vā
-        bandheyyuṃ vā pabbājeyyuṃ vā: \n \n Coro’si, bālo’si, mūlho’si, theno’sī ti,
-        tathārūpaṃ bhikkhu adinnaṃ ādiyamāno; \n \n ayam-pi pārājiko hoti, asaṃvāso. </b>
-        \n \n This rule is the result of two different events: \n \n
-The first event is connected with the story of Dhaniya the son of a potter. \n
-Who tricked him into taking possession of the building materials for his hut. \n \n
-The second event is related to the monks from the group of six. \n
-They stole valuables from dyers in the wilderness. \n \n
+        Правило о воровстве. \n
+        <i>       The rule about theft.</i> \n \n
+        <b>Yo pana bhikkhu gāmā vā araññā vā \n </b>
+        если какой-либо монах из города ли, деревни ли \n
+        <i>if any monk from a city or village</i> \n \n
+        <b>adinnaṃ theyyasaṅkhātaṃ ādiyeyya, yathārūpe adinnādāne \n </b>
+        неданное воровским способом возьмет, \n
+        <i>takes what he has not stolen in a thievish way,</i> \n \n
+        <b>yathārūpe adinnādāne rājāno coraṃ gahetvā haneyyuṃ vā bandheyyuṃ vā pabbājeyyuṃ vā: \n </b>
+        такое за что цари вора схватив казнят, заковывают в цепи, изгоняют говоря \n
+        <i>such that the kings of the thief are seized, put in chains, banished saying</i> \n \n
+        <b>Coro’si, bālo’si, mūlho’si, theno’sī ti, \n </b>
+        “вор ты, глупец, дурак, воришка ты”, \n
+        <i>“you are a thief, you fool, you fool, you thief”,</i> \n \n
+        <b>tathārūpaṃ bhikkhu adinnaṃ ādiyamāno; ayam-pi pārājiko hoti, asaṃvāso. </b>
+        такой монах считается совершим параджику и более не в сангхе. \n
+        <i>such a monk is considered stricken and no longer in the sangha.</i> \n \n
+
         <b>Note:</b> \n \n
     If a bhikkhu takes possession of an object left behind by his owner or belonging to an animal, he does not commit the pārājika 2. \n \n
 
