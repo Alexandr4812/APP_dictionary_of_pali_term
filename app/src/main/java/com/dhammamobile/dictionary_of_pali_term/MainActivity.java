@@ -33,18 +33,10 @@ public class MainActivity extends BaseActivityClass {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        setContentView(R.layout.activity_main);
 
         imageButtonRu = findViewById(R.id.imageButtonRu);
         imageButtonEn = findViewById(R.id.imageButtonUk);
 
-        ImageButton closeButton = findViewById(R.id.button_exit);
-        closeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showConfirmationDialog();
-            }
-        });
 
 //        textView = findViewById(R.id.textViewHintMain);
 //        textToAnimate = "Приложение находится в стадии разработки, материал в разделах не полный, он только добавляется." +
@@ -52,25 +44,6 @@ public class MainActivity extends BaseActivityClass {
 //                " сделайте исключение для этого приложения в настройках телефона.";
 //
 //        animateText();
-    }
-
-    private void showConfirmationDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Вы уверены, что хотите закрыть приложение?");
-        builder.setPositiveButton("Да", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finish(); // Закрыть активность и приложение
-            }
-        });
-        builder.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // Пользователь отменил закрытие приложения
-            }
-        });
-        AlertDialog dialog = builder.create();
-        dialog.show();
     }
 
 //    private void animateText() {
@@ -181,6 +154,12 @@ public class MainActivity extends BaseActivityClass {
         imageButtonM.setVisibility(View.INVISIBLE);
     }
 
+    @Override
+    public void onBackPressed(){
+        showConfirmationDialog();
+    }
+
+
     public void toPopupMenuExit(View view) {
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
         ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
@@ -189,6 +168,8 @@ public class MainActivity extends BaseActivityClass {
         imageButtonEx.setVisibility(View.INVISIBLE);
         imageButtonM.setVisibility(View.VISIBLE);
     }
+
+
 
 
 }

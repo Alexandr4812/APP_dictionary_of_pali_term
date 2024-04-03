@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -31,6 +32,10 @@ public class SuttasRandomActivity extends BaseActivityClass {
         setContentView(R.layout.activity_suttas_random);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         webView = findViewById(R.id.webViewRandomSutta);
 

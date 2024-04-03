@@ -2,6 +2,7 @@ package com.dhammamobile.dictionary_of_pali_term;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
@@ -18,6 +19,10 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         setContentView(R.layout.activity_live_buddha);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         home = findViewById(R.id.buttonLiveHome);
         back = findViewById(R.id.buttonliveToLive);

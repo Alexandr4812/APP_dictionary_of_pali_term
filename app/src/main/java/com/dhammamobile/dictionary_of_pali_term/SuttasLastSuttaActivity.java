@@ -3,6 +3,7 @@ package com.dhammamobile.dictionary_of_pali_term;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.WebView;
 
 public class SuttasLastSuttaActivity extends BaseActivityClass {
@@ -21,6 +22,10 @@ public class SuttasLastSuttaActivity extends BaseActivityClass {
         setContentView(R.layout.activity_suttas_last_sutta);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         webView = findViewById(R.id.webViewLastSutta);
 

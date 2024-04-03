@@ -1,5 +1,7 @@
 package com.dhammamobile.dictionary_of_pali_term;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.view.View;
 import android.view.WindowManager;
@@ -36,6 +38,25 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         T view = super.findViewById(id);
         view.setOnDragListener(null);
         return view;
+    }
+
+    protected void showConfirmationDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Вы уверены, что хотите закрыть приложение?");
+        builder.setPositiveButton("Да", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish(); // Закрыть активность и приложение
+            }
+        });
+        builder.setNegativeButton("Отмена", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // Пользователь отменил закрытие приложения
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
 

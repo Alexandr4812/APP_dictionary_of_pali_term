@@ -149,24 +149,6 @@
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
         tools:visibility="invisible" />
 
-    <ImageButton
-        android:id="@+id/button_exit"
-        android:layout_width="51dp"
-        android:layout_height="39dp"
-        android:background="@color/my_main_color"
-        android:contentDescription="@string/todo"
-        android:scaleType="centerInside"
-        android:src="@drawable/logoutt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
-        app:layout_constraintStart_toEndOf="@id/button_menu"
-        app:layout_constraintTop_toBottomOf="@id/scrollView2"
-        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
-        tools:visibility="visible" />
-
-
-
     <ScrollView
         android:id="@+id/popupMenuSV"
         android:layout_width="50dp"

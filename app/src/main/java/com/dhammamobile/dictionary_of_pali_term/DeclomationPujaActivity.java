@@ -2,6 +2,7 @@ package com.dhammamobile.dictionary_of_pali_term;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
@@ -17,6 +18,10 @@ public class DeclomationPujaActivity extends BaseActivityClass {
         setContentView(R.layout.activity_declomation_puja);
 
       //  setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         this.buttonHome = findViewById(R.id.buttonPujaHome);
         this.buttonLiveToPuja = findViewById(R.id.buttonliveToPuja);

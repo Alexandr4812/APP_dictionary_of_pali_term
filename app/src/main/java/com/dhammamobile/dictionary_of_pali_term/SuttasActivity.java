@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.util.Linkify;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -25,6 +26,10 @@ public class SuttasActivity extends BaseActivityClass {
         Linkify.addLinks(textViewLink, Linkify.WEB_URLS);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Button button1 = findViewById(R.id.button_suttas_for_dighanikaya);
         Button button2 = findViewById(R.id.button_suttas_for_majhimaNikaya);

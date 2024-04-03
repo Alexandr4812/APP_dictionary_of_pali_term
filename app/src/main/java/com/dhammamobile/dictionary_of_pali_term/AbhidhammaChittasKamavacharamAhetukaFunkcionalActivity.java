@@ -7,6 +7,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -31,6 +32,10 @@ import android.widget.TextView;
         setContentView(R.layout.activity_abhidhamma_chittas_kamavacharam_ahetuka_funkcional);
 
       //  setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         textViewAbhidhammaKammavacharamAhetukaFunkcional1 =
                 findViewById(R.id.textView_abhidhamma_chittas_kamavachara_ahetuka_funkcional1);

@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -45,6 +46,10 @@ public class AbhidhammaChetasikasEtichVerUniversActivity extends BaseActivityCla
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma_chetasikas_etich_ver_univers);
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         textViewAbhidhammaChetasika1 = findViewById(R.id.textViewAbhidhammaChetasika1);
         textViewAbhidhammaChuvstvo2 = findViewById(R.id.textViewAbhidhammaChetasikaChuvstvo2);

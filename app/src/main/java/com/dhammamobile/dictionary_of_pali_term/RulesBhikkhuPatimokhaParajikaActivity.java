@@ -6,6 +6,7 @@ import android.animation.ValueAnimator;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
@@ -50,6 +51,10 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_parajika);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         textView = findViewById(R.id.textViewHintParajika);
         textToAnimate = getString(R.string.textViewHintParajika);

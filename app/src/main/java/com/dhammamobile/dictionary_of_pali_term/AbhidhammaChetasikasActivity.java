@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -27,6 +28,9 @@ public class AbhidhammaChetasikasActivity extends BaseActivityClass {
         setContentView(R.layout.activity_abhidhamma_shetasikas);
 
        // setWindowFlagsFullscreenAndNoLimits();
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         textViewAbhidhammaEticheskiVeriabelnie = findViewById(R.id.textViewAbhidhammaEticheskiVeriabelnie);
         infoButtonAbhidhammaEticheskiVeriabelnie = findViewById(R.id.infoButtonEticheskiVeriabelnie);

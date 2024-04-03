@@ -2,6 +2,7 @@ package com.dhammamobile.dictionary_of_pali_term;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -16,6 +17,10 @@ public class RulesActivity extends BaseActivityClass {
         setContentView(R.layout.activity_rules);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Button button1 = findViewById(R.id.button_rules_for_samanera);
         Button button2 = findViewById(R.id.button_rules_for_bhikkhu);

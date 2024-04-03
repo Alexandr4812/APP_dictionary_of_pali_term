@@ -7,6 +7,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -34,6 +35,10 @@ public class AbhidhammaChittasKamavacharamAhetukaWholsomeResultActivity extends 
         setContentView(R.layout.activity_abhidhamma_chittas_kamavacharam_ahetuka_wholsome_result);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         textViewAbhidhammaKammavacharamWholsomeAhetuka1 =
                 findViewById(R.id.textView_abhidhamma_chittas_kamavachara_wholsome_ahetuka1);

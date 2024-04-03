@@ -3,6 +3,7 @@ package com.dhammamobile.dictionary_of_pali_term;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
@@ -25,6 +26,10 @@ public class SuttasDighaActivity extends BaseActivityClass {
         setContentView(R.layout.activity_suttas_digha);
 
       //  setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         Button buttonBack = findViewById(R.id.buttonliveToBeforePage);
         webView = findViewById(R.id.webView);

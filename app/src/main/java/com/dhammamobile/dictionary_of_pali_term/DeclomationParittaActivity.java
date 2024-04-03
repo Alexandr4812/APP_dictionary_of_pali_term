@@ -2,6 +2,7 @@ package com.dhammamobile.dictionary_of_pali_term;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
@@ -16,6 +17,10 @@ public class DeclomationParittaActivity extends BaseActivityClass {
         setContentView(R.layout.activity_declomation_paritta);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         this.buttonHome = findViewById(R.id.buttonParittaHome);
         this.buttonLiveToParitta = findViewById(R.id.buttonliveToParitta);

@@ -3,6 +3,7 @@ package com.dhammamobile.dictionary_of_pali_term;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
@@ -45,6 +46,10 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
         setContentView(R.layout.activity_declomation_sutta);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         this.textMaxTime = findViewById(R.id.textMaxTime);
         this.textCurrentPosition = findViewById(R.id.textCurrentPosition);

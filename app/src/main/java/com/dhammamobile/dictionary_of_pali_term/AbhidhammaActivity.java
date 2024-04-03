@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -30,6 +31,9 @@ public class AbhidhammaActivity extends BaseActivityClass {
         setContentView(R.layout.activity_abhidhamma);
 
        // setWindowFlagsFullscreenAndNoLimits();
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         textViewAbhidhammaChitta = findViewById(R.id.textViewAbhidhammaChitta);
         textViewAbhidhammaChitasikas = findViewById(R.id.textViewAbhidhammaChetasika);

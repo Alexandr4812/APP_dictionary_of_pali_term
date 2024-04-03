@@ -2,6 +2,7 @@ package com.dhammamobile.dictionary_of_pali_term;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 
 
 public class RulesBhikkhuActivity extends BaseActivityClass {
@@ -12,6 +13,10 @@ public class RulesBhikkhuActivity extends BaseActivityClass {
         setContentView(R.layout.activity_rules_bhikkhu);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     public void toRulesAct(View view){

@@ -7,6 +7,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
@@ -57,6 +58,10 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_sanghadisesa);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         textView = findViewById(R.id.textViewHintSangkhadisesa);
         textToAnimate = getString(R.string.textViewHintParajika);
@@ -333,13 +338,13 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
             result = MediaPlayer.create(this, R.raw.sanghadisesa_4);
         }
         else if (this.flagSanghadisesa5 == 1) {
-            result = MediaPlayer.create(this, R.raw.sanghadisesa_1);
+            result = MediaPlayer.create(this, R.raw.sanghadisesa_5);
         }
         else if (this.flagSanghadisesa6 == 1) {
-            result = MediaPlayer.create(this, R.raw.sanghadisesa_2);
+            result = MediaPlayer.create(this, R.raw.sanghadisesa_6);
         }
         else if (this.flagSanghadisesa7 == 1) {
-            result = MediaPlayer.create(this, R.raw.sanghadisesa_3);
+            result = MediaPlayer.create(this, R.raw.sanghadisesa_7);
         }
         return result;
     }

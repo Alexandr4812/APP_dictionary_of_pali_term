@@ -7,6 +7,7 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -32,6 +33,10 @@ public class AbhidhammaChittasKamavacharamUnwholsomeDosamulachitaniActivity exte
         setContentView(R.layout.activity_abhidhamma_chittas_kamavacharam_unwholsome_dosamulachitani);
 
       //  setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         textViewAbhidhammaKammavacharamUnwholsomeDosamulachitta1 =
                 findViewById(R.id.textView_abhidhamma_chittas_kamavachara_unwholsome_dosamulachitani1);

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
@@ -23,6 +24,10 @@ public class RulesSamaneraObInfoProtocolsActivity extends BaseActivityClass {
         setContentView(R.layout.activity_rules_samanera_ob_info_protocols);
 
        // setWindowFlagsFullscreenAndNoLimits();
+
+        // Скрытие панели навигации и панели состояния
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         this.buttonHome = findViewById(R.id.buttonRulesSamaneraObInfoProtocolsHome);
         this.buttonLiveToRulesSamanera = findViewById(R.id.buttonliveToRulesSamaneraObInfoProtocols);
