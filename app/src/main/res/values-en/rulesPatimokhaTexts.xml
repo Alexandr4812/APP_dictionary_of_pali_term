@@ -340,7 +340,6 @@ They rebuked Udāyī in many ways and then told the Buddha. Soon afterwards he h
         without adequate space, or if he should not assemble the bhikkhus to designate the site,
         it entails initial and subsequent meetings of the Community.
     </string>
-
     <string name="sanghadisesaText7">
         \n 7. (Vihārakārasikkhāpada) \n
         Правило о строительстве большого жилища. \n
@@ -366,5 +365,32 @@ They rebuked Udāyī in many ways and then told the Buddha. Soon afterwards he h
         И монахи небыли приглашены, это влечет за собой первоначальные и последующие собрания сангхи. \n
         <i>And the monks were not invited, this entails the initial and subsequent sangha meetings.</i> \n \n
         \n \n
+    </string>
+
+    <string name="textButtonSanghadisesa8">
+        8 \n
+        If any monk, full of envy, anger or discontent,
+        baselessly accuses another monk of an offense warranting expulsion from the sangha, thinking:
+        “In this way I will excommunicate him from monastic life,” whether or not he is tested later,
+        if the accusation is unfounded and the monk admits his anger, this requires an initial and subsequent meeting of the sangha.
+    </string>
+    <string name="sanghadisesaText8">
+        \n 7. (Duṭṭhadosa) \n
+         \n
+        <b>Yo pana bhikkhu bhikkhuṁ duṭṭho doso appatīto amūlakena pārājikena dhammena anuddhaṁseyya</b> \n
+        Если какой-либо монах, полный зависти, гнева или недовольства, необоснованно обвинит другого монаха в поражении, думая: \n
+        <i>If any monk, full of envy, anger or dissatisfaction, unreasonably blames another monk for defeat, thinking:</i> \n \n
+            <b>“appeva nāma naṁ imamhā brahmacariyā cāveyya”nti,</b> \n
+        "Возможно, я могу вызвать его выпадение из целомудренной жизни" \n
+        <i>"Perhaps I can cause him to fall out of chastity."</i> \n \n
+            <b>tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā</b> \n
+        независимо от того, будет или нет он проверен позднее \n
+        <i>regardless of whether or not it is checked later</i> \n \n
+            <b>amūlakañceva taṁ adhikaraṇaṁ hoti, bhikkhu ca dosaṁ patiṭṭhāti,</b> \n
+        если обвинение необоснованно и монах признает свой гнев, \n
+        <i>if the accusation is unfounded and the monk admits his anger,</i> \n \n
+            <b>saṅghādiseso.</b> \n
+        это требует начального и последующего собрания сангхи. \n
+        <i>this entails the initial and subsequent sangha meetings.</i> \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n
     </string>
 </resources>

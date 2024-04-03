@@ -129,6 +129,13 @@
                 android:onClick="toSanghadisesaText7"
                 tools:ignore="UsingOnClickInXml" />
 
+            <Button
+                android:id="@+id/button_sangkhadisesa_8"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/textButtonSanghadisesa8"
+                android:onClick="toSanghadisesaText8"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
     </ScrollView>
     <ScrollView
@@ -344,6 +351,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sanghadisesaText7" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollSanghadisesaText8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSanghadisesaText8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSanghadisesaText8"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sanghadisesaText8" />
         </LinearLayout>
     </ScrollView>
 

@@ -846,4 +846,30 @@ Both the Commentary and the Commentary state that a physical gesture—this woul
         <i>And the monks were not invited, this entails the initial and subsequent sangha meetings.</i> \n \n
         \n \n \n \n \n \n \n \n \n \n \n \n
     </string>
+    <string name="textButtonSanghadisesa8">
+        8 \n
+        Если какой-либо монах, полный зависти, гнева или недовольства,
+        необоснованно обвинит другого монаха в нарушении, требующем исключения из сангхи, думая:
+        "Таким способом я отлучу его от монашеской жизни", независимо от того, будет или нет он проверен позднее,
+        если обвинение необоснованно и монах признает свой гнев, это требует начального и последующего собрания сангхи.
+    </string>
+    <string name="sanghadisesaText8">
+        \n 7. (Duṭṭhadosa) \n
+         \n
+        <b>Yo pana bhikkhu bhikkhuṁ duṭṭho doso appatīto amūlakena pārājikena dhammena anuddhaṁseyya</b> \n
+        Если какой-либо монах, полный зависти, гнева или недовольства, необоснованно обвинит другого монаха в поражении, думая: \n
+        <i>If any monk, full of envy, anger or dissatisfaction, unreasonably blames another monk for defeat, thinking:</i> \n \n
+            <b>“appeva nāma naṁ imamhā brahmacariyā cāveyya”nti,</b> \n
+        "Возможно, я могу вызвать его выпадение из целомудренной жизни" \n
+        <i>"Perhaps I can cause him to fall out of chastity."</i> \n \n
+            <b>tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā</b> \n
+        независимо от того, будет или нет он проверен позднее \n
+        <i>regardless of whether or not it is checked later</i> \n \n
+            <b>amūlakañceva taṁ adhikaraṇaṁ hoti, bhikkhu ca dosaṁ patiṭṭhāti,</b> \n
+        если обвинение необоснованно и монах признает свой гнев, \n
+        <i>if the accusation is unfounded and the monk admits his anger,</i> \n \n
+            <b>saṅghādiseso.</b> \n
+        это требует начального и последующего собрания сангхи. \n
+        <i>this entails the initial and subsequent sangha meetings.</i> \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n
+    </string>
 </resources>

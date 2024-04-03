@@ -43,6 +43,7 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     private ScrollView scrollTextSanghadisesa5;
     private ScrollView scrollTextSanghadisesa6;
     private ScrollView scrollTextSanghadisesa7;
+    private ScrollView scrollTextSanghadisesa8;
 
     private int flagSanghadisesa1;
     private int flagSanghadisesa2;
@@ -51,6 +52,7 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     private int flagSanghadisesa5;
     private int flagSanghadisesa6;
     private int flagSanghadisesa7;
+    private int flagSanghadisesa8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +86,7 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         this.scrollTextSanghadisesa5 = findViewById(R.id.viewScrollSanghadisesaText5);
         this.scrollTextSanghadisesa6 = findViewById(R.id.viewScrollSanghadisesaText6);
         this.scrollTextSanghadisesa7 = findViewById(R.id.viewScrollSanghadisesaText7);
+        this.scrollTextSanghadisesa8 = findViewById(R.id.viewScrollSanghadisesaText8);
 
         this.seekBarSanghadisesa = findViewById(R.id.seekBarSanghadisesa);
 
@@ -290,6 +293,21 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         this.buttonStartSanghadisesa.setVisibility(View.VISIBLE);
     }
 
+    public void toSanghadisesaText8(View view) {
+        this.flagSanghadisesa8 = 1;
+        mediaPlayer = changeSong();
+
+        this.scrollTextSanghadisesa8.setVisibility(View.VISIBLE);
+
+        this.buttonBackSanghadisesa = findViewById(R.id.buttonliveToPatimokhaSanghadisesa);
+        this.buttonHomeSanghadisesa = findViewById(R.id.buttonliveHomeFromSanghadisesa);
+        this.buttonStartSanghadisesa = findViewById(R.id.buttonPlaySanghadisesa);
+
+        this.buttonBackSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonHomeSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonStartSanghadisesa.setVisibility(View.VISIBLE);
+    }
+
     public void toBackButtonSanghadisesa(View view) {
         ScrollView scrollTextAboutSanghadisesa = findViewById(R.id.viewScrollSanghadisesaAbout);
         this.flagSanghadisesa1 = 0;
@@ -299,6 +317,7 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         this.flagSanghadisesa5 = 0;
         this.flagSanghadisesa6 = 0;
         this.flagSanghadisesa7 = 0;
+        this.flagSanghadisesa8 = 0;
 
         this.scrollTextSanghadisesa1.setVisibility(View.INVISIBLE);
         this.scrollTextSanghadisesa2.setVisibility(View.INVISIBLE);
@@ -307,6 +326,7 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         this.scrollTextSanghadisesa5.setVisibility(View.INVISIBLE);
         this.scrollTextSanghadisesa6.setVisibility(View.INVISIBLE);
         this.scrollTextSanghadisesa7.setVisibility(View.INVISIBLE);
+        this.scrollTextSanghadisesa8.setVisibility(View.INVISIBLE);
         scrollTextAboutSanghadisesa.setVisibility(View.INVISIBLE);
 
         this.buttonBackSanghadisesa.setVisibility(View.INVISIBLE);
@@ -345,6 +365,9 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         }
         else if (this.flagSanghadisesa7 == 1) {
             result = MediaPlayer.create(this, R.raw.sanghadisesa_7);
+        }
+        else if (this.flagSanghadisesa8 == 1) {
+            result = MediaPlayer.create(this, R.raw.sanghadisesa_8);
         }
         return result;
     }
