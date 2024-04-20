@@ -82,6 +82,18 @@
         <item name="cornerRadius">20dp</item>
     </style>
 
+    <style name="button_activity_parajika_details">
+        <item name="android:backgroundTint">@color/my_main_color</item>
+        <item name="android:textColor">@color/my_text_bacground_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:insetTop">20dp</item>
+        <item name="android:insetLeft">15dp</item>
+        <item name="android:insetRight">15dp</item>
+        <item name="android:text">@string/buttonParajikaDetails</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
+
     <style name="button_activity_chetasika">
         <item name="android:backgroundTint">@color/roza</item>
         <item name="android:textColor">@color/black</item>

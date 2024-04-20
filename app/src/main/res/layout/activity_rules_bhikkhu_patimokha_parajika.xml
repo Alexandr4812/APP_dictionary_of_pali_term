@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context="com.dhammamobile.dictionary_of_pali_term.RulesBhikkhuPatimokhaParajikaActivity">
+    tools:context="com.dhammamobile.dictionary_of_pali_term.Rules.RulesBhikkhuPatimokhaParajikaActivity">
 
     <ImageButton
         android:id="@+id/backButtonRules"
@@ -150,7 +150,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
+        tools:visibility="visible">
 
         <LinearLayout
             android:id="@+id/linearLayoutScrollPatimokhaParajika1"
@@ -159,12 +159,19 @@
             android:background="#FFE082"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/button"
+                style="@style/button_activity_parajika_details"
+                android:onClick="toParajikaDetail"
+                tools:ignore="OnClick" />
+
             <TextView
                 android:id="@+id/textViewPatimokhaParajika1"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/textPatimokhaParajika1" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -186,6 +193,12 @@
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/button_activity_parajika_details"
+                android:onClick="toParajika2Detail"
+                tools:ignore="OnClick" />
 
             <TextView
                 android:id="@+id/textViewPatimokhaParajika2"
@@ -214,6 +227,12 @@
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/button_activity_parajika_details"
+                android:onClick="toParajika3Detail"
+                tools:ignore="OnClick" />
 
             <TextView
                 android:id="@+id/textViewPatimokhaParajika3"

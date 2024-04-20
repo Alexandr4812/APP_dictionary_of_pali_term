@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context="com.dhammamobile.dictionary_of_pali_term.LiveBuddhaActivity">
+    tools:context="com.dhammamobile.dictionary_of_pali_term.LiveBuddha.LiveBuddhaActivity">
 
 
     <ImageButton
@@ -22,7 +22,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/liveScrollTextAsita"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="UsingOnClickInXml" />
 
@@ -51,8 +50,9 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toSumedha"
-                app:cardCornerRadius="16dp">
+                android:onClick="toShow1"
+                app:cardCornerRadius="16dp"
+                tools:ignore="UsingOnClickInXml">
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -67,7 +67,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toSumedha"
+                android:onClick="toShow1"
                 android:text="@string/namerenie_sumedhi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toMaya"
+                android:onClick="toShow2"
                 app:cardCornerRadius="16dp">
 
                 <ImageView
@@ -99,7 +99,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toMaya"
+                android:onClick="toShow2"
                 android:text="@string/son_mahamayi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +115,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toBirthSidhartha"
+                android:onClick="toShow3"
                 app:cardCornerRadius="16dp">
 
                 <ImageView
@@ -131,7 +131,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toBirthSidhartha"
+                android:onClick="toShow3"
                 android:text="@string/rogdenie_sidharthi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -146,7 +146,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toAsita"
+                android:onClick="toShow4"
                 app:cardCornerRadius="16dp">
 
                 <ImageView
@@ -162,7 +162,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toAsita"
+                android:onClick="toShow4"
                 android:text="@string/mudrec_asita"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -177,7 +177,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toJhana"
+                android:onClick="toShow5"
                 app:cardCornerRadius="16dp">
 
                 <ImageView
@@ -193,7 +193,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toJhana"
+                android:onClick="toShow5"
                 android:text="@string/pervoe_dostigenie_dgani"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -207,7 +207,7 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toSaveSwan"
+                android:onClick="toShow6"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -333,293 +333,5 @@
                 android:text="Продолжение следует." />
         </LinearLayout>
     </ScrollView>
-
-    <ScrollView
-        android:id="@+id/liveScrollText"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView9"
-                style="@style/picsLiveBuddha"
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/asita" />
-
-            <TextView
-                android:id="@+id/textViewSumedha"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/sumedha" />
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/liveScrollTextMaya"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFE082"
-            android:orientation="vertical"
-            tools:visibility="visible">
-
-            <ImageView
-                android:id="@+id/imageView10"
-                style="@style/picsLiveBuddha"
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/mahamaya_drim" />
-
-            <TextView
-                android:id="@+id/textViewMaya"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/mahamaya" />
-
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/liveScrollTextBirthSidhartha"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView11"
-                style="@style/picsLiveBuddha"
-
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/birth_sidhartha" />
-
-            <TextView
-                android:id="@+id/textViewBirthSidhartha"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/birdth" />
-
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/liveScrollTextAsita"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView12"
-                style="@style/picsLiveBuddha"
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/mudrec" />
-
-            <TextView
-                android:id="@+id/textViewAsita"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/asita" />
-
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/liveScrollTextJhana"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView13"
-                style="@style/picsLiveBuddha"
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/first_jhana" />
-
-            <TextView
-                android:id="@+id/textViewJhana"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/djhana" />
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/liveScrollTextSaveSwan"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView14"
-                style="@style/picsLiveBuddha"
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/saving_swan" />
-
-            <TextView
-                android:id="@+id/textViewSwan"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/textLive6" />
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/liveScrollTextShowAbilities"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView15"
-                style="@style/picsLiveBuddha"
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/skills" />
-
-            <TextView
-                android:id="@+id/textViewShowAbilities"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/textLive7" />
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/liveScrollTextShow8"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView16"
-                style="@style/picsLiveBuddha"
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/wedding" />
-
-            <TextView
-                android:id="@+id/textViewShow8"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="1500dp"
-                android:text="@string/textLive8" />
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/liveScrollTextShow9"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <ImageView
-                android:id="@+id/imageView17"
-                style="@style/picsLiveBuddha"
-                android:contentDescription="TODO"
-                app:srcCompat="@drawable/meetings" />
-
-            <TextView
-                android:id="@+id/textViewShow9"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/textLive9" />
-        </LinearLayout>
-    </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal"
-        >
-
-        <Button
-            android:id="@+id/buttonLiveHome"
-            style="@style/buttonBackHomeNotImageButton"
-            android:layout_gravity="bottom|center"
-            android:layout_marginRight="3dp"
-            android:layout_marginBottom="0dp"
-            android:onClick="toMainAct"
-            android:visibility="invisible"
-            tools:ignore="UsingOnClickInXml" />
-
-        <Button
-            android:id="@+id/buttonliveToLive"
-            style="@style/buttonBackNotImageButton"
-            android:onClick="tobackIzTextVLive"
-            android:visibility="invisible"
-            android:layout_gravity="bottom|center"
-            android:layout_marginLeft="3dp"
-            android:layout_marginBottom="0dp"
-            tools:ignore="UsingOnClickInXml"
-            />
-
-    </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,42 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="buttonAboutSanghadisesaText">about the rules of sanghadisesa</string>
     <string name="textAboutSanghadisesa"> \n Sanghadisesa \n \n This term means [violation] "involving the participation of the Community in the primary (adi) and subsequent (sesa) procedures". \n It follows from the fact that in case of violation of any of the rules of this class, it is the Community that initially imposes punishment on the monk (including a redemptive period and a probation period), imposes it again if the monk has not fulfilled the established requirements, and when the monk has fulfilled all the requirements, removes the punishment from him.   \n  This section contains 13 rules, in the case of the first nine, the monk is credited with a violation immediately after the offense is committed, in the last four only after the offender has been reprimanded three times in the form of a Community procedure.  \n  \n  \n  \n</string>
     <string name="buttonTextAboutParajika">about the rules of parajiki</string>
     <string name="textAboutParajika">\n Parajika (defeat) \n \n The book Parivara says that this term comes from a verb meaning to lose or to be defeated. A monk who commits the four prohibited acts described in this chapter is considered to have succumbed to his mental defilements (upakkilesa) to an extent that overpowers his original goal of becoming a monk. The Vibhanga gives a number of metaphors to illustrate the irreversible nature of defeat: like a man with his head cut off like a withered leaf torn from the stem… like a flat stone broken in two, which cannot be united… like a palm tree with its top cut off, unable to continue growth. A monk who commits any of these prohibited acts is irreversibly excommunicated from the life of the monastic community and is no longer considered a monk.</string>
     <string name="textSanghadisesa1">1 \n Intentional emission of semen, except while dreaming, entails initial and subsequent meetings of the Community.</string>
-    <string name="sanghadisesaText1">\n 1.(Sukkavissaṭṭhisikkhāpada) \n Правило о намеренном извержении семени \n <i>The rule of intentional ejaculation of the seed</i> \n \n <b>sañcetanikā sukkavissaṭṭhi \n \n aññatra</b>  <b>supinantā \n \n saṃghādiseso.</b> \n \n Намеренное извержение семени (за исключением семяизвержений во время сновидения) влечёт за собой первоначальное и последующие собрания Общины.  \n \n <i>Intentional ejaculation of semen (with the exception of ejaculations during a dream) entails the initial and subsequent meetings of the Community.</i>
+    <string name="sanghadisesaText1">
+        \n 1.(Sukkavissaṭṭhisikkhāpada) \n
+        <i>The rule of intentional ejaculation of the seed</i> \n \n
+
+        <b>sañcetanikā sukkavissaṭṭhi \n \n aññatra</b>
+        <b>supinantā \n \n saṃghādiseso.</b> \n \n
+
+        <i>Intentional ejaculation of semen (with the exception of ejaculations during a dream)
+            entails the initial and subsequent meetings of the Community.</i>
     \n \n  This rule arose as a result of an event connected with the Venerable Seiyasaka \n \n
 Seiyasaka was dissatisfied with the holy life and, on the advice of the venerable Udain, stopped to abstain from intention ejaculation. \n \n
 
-<b>Exceptions</b> \n \n
-While sleeping, if the sperm is released during a dream, no fault is being committed. \n \n
-While defecating, if some sperm does come out, the intention for it being absent, no fault is being committed. \n \n
-While nursing or cleaning one`s sex (due to an inflammation, an injury, an insect bite, etc.) by putting medicine (cream, ointment, etc.), if some sperm is released, the desire for it being absent, no fault is being committed. \n \n
-If at time of getting into bed, wishing to ejaculate, the bhikkhu wedges his sex between his thighs or holds it strongly in his fist and whilst sleeping the sperm is released, he commits the saṃghādisesa. \n \n
-If the sperm is naturally released without the bhikkhu`s intention to do so and that at this moment this latter does experience pleasure, he does not commit any fault. However, if during ejaculation, he seized the opportunity to release the sperm with his hand, he commits the saṃghādisesa. \n \n
-If while insistently looking at the body of a woman, with a burning desire, a bhikkhu ejaculates, he does not commit a saṃghādisesa. \n \n
-Note: This rule partly corresponds with the third of the ten precepts. \n \n
+        FACTORS \n \n
+For the perfection of Sanghadishesa in connection with the release of sperm
+The following conditions must be met. \n \n
+1. Selection intent\n
+2. Ability\n
+3. Sperm release \n \n
+
+          INTENTIONS WHEN SPERM RELEASE\n\n
+The Vinaya Pali specifies the typical intentions for releasing semen. They are as follows:\n
+1. Arogyatthaya urination - to maintain health\n
+2. Sukhatthaya of urination - for calmness\n
+3. Bheshajatthaya of urination - for medical purposes\n
+4. Danatthaya of urination - for offering to small creatures\n
+5. Punnathaya urination - for merit (ritual)\n
+6. Yannatthaya urination - as a yaga (ritual)\n
+7. Saggatthaya urination - for heavenly bliss (ritual)\n
+8. Bijatthaya of urination - for the production of offspring\n
+9. Vimamsatthaya urination - accepted\n
+10. Davatthaya urination - as a way of obtaining pleasure \n \n
+
+          PERCEPTION AND INTENT \n \n
+This violation occurs intentionally (sachittaka). This means that the violation
+occurs when the action is applied to the genital organ intentionally on any occasion when sleepy and seduced
+sensual pleasure from the release of sperm. \n \n
+
+          METHODS OF SPERM RELEASE \n \n
+Vigne describes four outlets by which sperm can be released \n \n
+
+1. Ajjhattharupe of urination - by pressing the organ to one’s own part of the body\n
+2. Bakhiddharupa of urination - by acting with an organ on something living or non-living that does not belong to your body. \P
+3. Ajjattha-bahiddharupe of urination - by pressing the organ.
+to one`s own body part and to an animate or inanimate object
+which does not belong to your body. \P
+4. Akase katih kampenena urination - by moving the hips and organ in empty space. \n \n
+
+          TWO THOUSAND WAYS TO COMMIT VIOLATION OF SPERM DISCHARGE:\n
+
+Combining all aspects, relying on a superior, it should be taken into account that there is
+two thousand (2000) Perfection of violations. \P
+1. There are ten (10) types of sperm based on color. \P
+2. There is (5) Method of erection of the penis. \P
+3. There are ten (10) types of intentions to graduate. \P
+4. There are four (4) sperm release outlets. \n \n
+10 x 5 x 10 x 4 = 2000\n\n
+
+          CASES OF NO VIOLATION: \n \n
+Below are cases where violations do not occur. \P
+1. Anupakkamantassa - No crime will be committed if the monk
+releases sperm without any manipulation of the penis. \P
+2. Na Mochanadhippayassa - No offense will be committed if the sperm
+An open monk who has no intention of advocating for the family. \n \n
+
+          HISTORY \n \n
+
+While the Tathagata lived in the Jetavana monastery at Savatthi,
+Venerable Seyasaka was not happy with his holy life
+(brahmachari). As a result, he turned pale and lost weight. Day hon.
+Udayi, his mentor, asked why he looked unhappy and
+unhealthy. Venerable Seyasaka told Venerable Udain about his problem. Then the Venerable Udayi admonished him thus: “Friend, you
+You need to eat as much delicious food as possible, sleep as much as you want, and masturbate whenever you get bored.” Hearing this advice, Venerable Seiyasaka asked Venerable Udain who, perhaps, the monks were guilty of such actions. Venerable Udain told him that this is completely normal and even he himself does it from time to time.
+After this, Venerable Seiyasaka, following the advice of his mentor, ate
+eating as much delicious food as he could, sleeping well and only masturbating when he got bored. Then his skin color became brighter and his body returned to normal. Noticing this difference, the other monks asked the venerable if he had taken any special medicine for his deteriorating physical condition. Venerable Seyasaka explained to them his secret to improving their health. Hearing this, the monks began to criticize
+Venerable Seyasaku and his unworthy behavior, which was not suitable for monks. They asked him: “Do you use the same hand for masturbation with which you drink the food offered to the believers?” Upon learning this news, the Buddha proclaimed a rule prohibiting monks from masturbating. \n \n \n
+ \n \n
     </string>
     <string name="textSanghadisesa2">2 \n If any monk under the influence of lust, with a distorted mind,
 makes bodily contact with a woman, takes her by the hand, by a lock of hair,
 or caresses other parts of her body, this entails the initial and subsequent meetings of the Community.</string>
     <string name="sanghadisesaText2">\n 2. (Kāyasaṁsagga) \n
-Похотливый телесный контакт  \n
 <i>Lustful body contact</i> \n \n
 <b>Yo pana bhikkhu otiṇṇo vipariṇatena cittena \n \n mātugāmena saddhiṁ kāyasaṁsaggaṁ samāpajjeyya \n \n hatthaggāhaṁ vā veṇiggāhaṁ vā aññatarassa vā aññatarassa vā \n \n aṅgassa parāmasanaṁ, \n \n saṅghādiseso”. \n \n</b>
-        Если какой-либо монах под влиянием похоти, с искажённым умом, совершит телесный контакт с женщиной, возьмёт её за руку, за локон волос, или будет ласкать другие части её тела, это влечёт за собой первоначальное и последующие собрания Общины. \n \n
+
 <i>If any monk under the influence of lust, with a distorted mind, makes bodily contact with a woman, takes her by the hand, by a lock of hair, or caresses other parts of her body, this entails the initial and subsequent meetings of the Community. \n \n</i>
     \n \n
 
 \n \n This rule arose as a result of one event related to the Venerable Udain \n \n
 Udain touched the brahman`s wife with lust. This happened when a brahmin and his wife were examining Udain`s kuti. \n \n
 
-By touching a cloth or a jewel worn by a woman, a bhikkhu commits a fault but not the saṃghādisesa (provided the woman is not touched along with that part of cloth or jewel). \n \n
-In the same way, by touching a woman who is a relative, his mother or sister for instance, even with a mind rid of lust, he commits a fault but not the saṃghādisesa. \n \n
-By accidentally touching a woman, there is no fault. However, if a woman touches a bhikkhu, this latter must not undergo it passively, because if he takes pleasure in it, even for a short while, he immediately commits the saṃghādisesa. \n \n
-By touching a woman with some kind of utensil, a bhikkhu commits a thullaccaya. \n \n
-Note: This rule partly corresponds with the third of the ten precepts. \n \n \n</string>
+FACTORS \n \n
+To perform kayasansagga, 5 factors must be fulfilled. \n \n
+1. The person being touched is a woman. \n
+2. understanding that this is a woman\n
+3. Lustful desire to touch\n
+4. Efforts made due to such desire\n
+5. Touching a woman`s body with your own body \n \n
+
+IMPORTANT \n \n
+If a woman is touched because of motherly love, sisterly love or as a daughter. The Sanghadisesa will not be accomplished. This will be a duccata. \n \n
+
+         DESIRE FOR KAYASAMSAGG \n \n
+Desire for kayasamsagga is defined as the desire to touch a woman`s body. A man takes great pleasure in touching a woman. The desire to receive this pleasure is the desire of kayasamsagga. In some cases it is defined as the pleasure derived from touch (phassada). From the point of view of ultimate realities, phassada is the desire to touch any kind of life or inanimate object. The kayasamsagga desire is the desire to touch the body,
+living or nonliving. However, the Sanghadisesa will only
+committed when touching a living woman. \n \n
+
+PERCEPTION AND INTENT \n \n
+From the desire for touch, with the thought: “I will touch a woman’s body,” bhikkhus
+knowingly touches a woman`s body, in which case a violation will be committed. Therefore,
+This rule is sachittaka and sassavimokha. \n \n
+
+CASES OF VIOLATION \n \n
+The violation can be classified under the following categories: woman (itthi), eunuch (pandaka),
+hermaphrodite (ubhatobyasjanaka), male human (purisa) and animal
+(tirakchana). \n \n
+CASES OF VIOLATIONS INVOLVING WOMEN
+1. If a monk touches a woman out of kayasamsagga desire,
+realizing that it is a woman, sanghadisesa will be committed. \n
+2. If a monk, out of desire for kayasamsagga, touches a woman, doubting
+whether it is a woman or not, sanghadisesa will be performed. \n
+3. If a monk, out of desire for kayasamsagga, touches a woman, assuming that
+if it is a eunuch, a man or an animal, then tulachaya will be performed. \n
+4. If a monk touches a woman out of kayasamsagga desire,
+knowing that it is a woman, using any inanimate object associated with his body (kayapatibadha) (for example: clothes, bowl), this is tullachkaya. \n
+5. If a monk touches kayapati badha out of desire for kayasamsagga
+of a woman, with the awareness that she is a woman, tulachaya will be performed. \n
+6. If a monk, out of desire for kayasamsagga, touches any inanimate object attached to a woman`s body (kayapatibadha) (for example, a dress), using any inanimate object attached to his body (kayapatibadha) (for example: a robe, a bowl), will be performed duccata. \n
+7. If a monk, out of desire for kayasamsagga, touches a woman by throwing some object at her (object nissaggya), duccata will be committed. \n
+8. If a monk touches kayapati badha out of desire for kayasamsagga
+the female body (piece of clothing, hair) will be subject to duccata. \n
+9. If a monk, out of desire for kayasamsagga, touches an object nissaggya
+women with the object nissagia, this is duccata. \n
+CASES OF VIOLATION WITH A EUNUCH \n
+1. If a monk touches a eunuch out of kayasamsagga desire,
+knowing that he is a eunuch, tullacchaya will be committed. \n
+2. If a monk, out of desire for kayasamsagga, touches a eunuch, doubting
+whether he is a eunuch or not, duccata will be committed. \n
+3. If a monk, out of kayasamsagga desire, touches a eunuch, assuming that
+whether it is a woman, a man or an animal, duccata will be made. \n
+4. If a monk, out of desire for kayasamsagga, touches a eunuch using
+kayapati-badha, dukkata will be performed. \n
+5. If a monk touches kayapati badha out of desire for kayasamsagga
+eunuch, tulakkaya will be performed. \n
+6. If a monk touches kayapati badha out of desire for kayasamsagga
+a eunuch using kayapatibadhu will have dukkata. \n
+7. If a monk, out of desire for kayasamsagga, touches a eunuch
+the object of nissaggiya, duccata will be committed. \n
+8. If a monk, out of desire for kayasamsagga, touches kayapatibadda
+the object of the eunuch will be the object of nissagiya, duccata. \n
+9. If a monk, out of desire for kayasamsagga, touches an object nissaggya
+the eunuch will be the object of nissagiya, duccata. \n
+CASES OF VIOLATIONS INVOLVING A MAN OR ANIMAL
+1. If a monk touches a man out of kayasamsagga desire,
+knowing that it is a man, there will be a duccata. \n
+2. If a monk, out of desire for kayasamsagga, touches a man, doubting
+whether it is a man or not, the duccata will be completed. \n
+3. If a monk, out of kayasamsagga desire, touches a man, assuming this
+is a woman, a eunuch or an animal, then duccata will be made. \n
+4. If a monk touches a man out of kayasamsagga desire,
+kayapati-badha, dukkata will be performed. \n
+5. If a monk touches kayapati badha out of kayasamsagga desire, tulachchaya will be performed. \n
+6. If a monk touches kayapati badha out of desire for kayasamsagga
+If a man has kayapatibadhu, duccata will be performed. \n
+7. If a monk touches a man out of kayasamsagga desire
+the object of nissaggiya, duccata will be committed. \n
+8. If a monk out of desire kaYasamsagga touches kayapati badha if a man has the object of nissagya, dukkata will be performed. \n
+9. If a monk, out of desire for kayasamsagga, touches an object nissaggya
+men with the object nissagiya, duccata will be. \n
+
+OTHER INFORMATION YOU SHOULD KNOW ABOUT INCIDENTS OF VIOLATION \n \n
+1. With lustful intent to touch a woman`s body, with awareness
+that it is a woman, if the body makes an effort and even the hair on a woman’s body touches the hair on a person’s body, sanghadisesa will be accomplished. \n
+2. In the case where a woman makes an effort, and a monk with
+the intention to feel the touch also makes an effort through your body
+touch each other`s bodies if two bodies come into contact
+Sanghadisesa will be performed. \n
+3. If a woman is held by one hand and her body is touched using the other hand, there will be one violation of sanghadise. \n
+4. Similarly, if you touch a woman with one hand from the top of her head to
+soles of the feet, without letting go of the hand from the body, while
+if the other hand is free from her touch, one sanghadisespa will be. \n
+5. If you touch all five fingers of a woman’s hand at the same time, then there will be one sanghadisesa. \n
+6. If five fingers belonging to five women are touched at the same time, there will be 5 sanghadises. \n
+7. If a monk puts his arms around a group of women, he will have
+a certain number of Sanghadises crimes equivalent to
+the number of women he touched. Moreover, he will do
+tullacchayu, equivalent to the number of women in
+group. Because he touched them with kayapatibadha object (i.e. the woman he directly touches). \n
+  If a monk grasps the fingers or hair of several women, it is not the number of fingers or strands of hair that will be counted, but the number of women. \n
+8. If a monk wraps a rope or cloth around women using kayasamsaggaraga,
+depending on the number of women participating, the same number of tullacchai will be. \n
+9. If a monk touches items of clothing or flowers worn by the group
+women, depending on the number of women involved, the tulachaya will be in the same number. \n
+10. If a monk physically tries to touch a woman`s body but fails
+any physical contact will commit the crime of duccat. \n \n
+
+CASES OF NO VIOLATIONS
+1. Avayamantassa - when a woman touches the body of a monk, while the monk enjoys the touch if the body makes no effort, and
+the monk remains motionless, no violation will be committed. \n
+2. Mokkhadhippayassa - when a woman approaches a monk and
+grabs him, the monk with the intention of distancing himself from her
+pushes her away. In such cases the monk will not perform
+violations. \n
+3. Asaschikka - If a woman is touched by mistake, and not with the thought: “I will touch a woman using this method,” there will be no violation. \n
+4. Asathiya - If a woman is touched when the mind is elsewhere, immersed,
+in some other matter and without the thought: “I will touch a woman,”
+no violation will be committed. \n
+5. Ajanantassa - If you touch a woman unknowingly, there will be no violation. For example, if a girl disguised as a boy is touched, assuming that it is a boy, no violation will be committed. \n
+6. Asadiyantassa - when a monk does not tolerate touching a woman, no violation will be committed. \n
+7. Ummattakassa\n
+8. Kittachittassa\n
+9. Vedanattassa\n
+10. Adikammikassa \n \n
+
+         HISTORY OF ORIGIN \n \n
+Once the Buddha lived in the Jetavana Monastery in Savatthi.
+At that time, Venerable Udayin lived in a forest monastery. His residence (vihara)
+was very attractive and beautifully built. In the middle there was a large room.
+and there were various storerooms around. Chairs, beds, pillows and rugs are stored in suitable places. The vessels were always filled with water, which could be
+used for drinking and other purposes. So people often came to see
+This. One day a Brahmin visited the monastery of Venerable Udain along with his wife.
+the Brahmins informed the venerable Udain of their desire to see his vihara. Venerable Udayin then opened the doors and windows of his vihara and ushered the couple out. The Brahmin followed Venerable Udain and his wife. Both of them observed the beauty and neatness of the vihara. Venerable Udayi, while showing his vihara to the Brahmin couple, opened and closed some windows and secretly touched the body of the Brahmin`s wife.
+Unaware of the immoral act committed by Venerable Udayin, the Brahmin praised him for maintaining such a beautiful vihara. He later praised
+Venerable Udayi to his wife. Hearing this, the Brahmin`s wife condemned the venerable Udayin, saying that he touched her limbs while showing his abode. Having learned about the immoral behavior of the Venerable Udayin, the Brahmin began to criticize the first and all Buddhist monks in general. Upon hearing the news, the Buddha announced a teaching rule prohibiting monks from touching women with lustful intentions. \n \n
+
+  \n \n \n
+</string>
 
     <string name="textButtonSanghadisesa3">
         3 \n
@@ -44,41 +238,94 @@ Note: This rule partly corresponds with the third of the ten precepts. \n \n \n<
     </string>
     <string name="sanghadisesaText3">
         \n 3. (Duṭṭhullavācāsikkhāpada) \n
-Правило о непристойной речи  \n
-<i>The rule of obscene speech</i> \n \n
-<b>Yo pana bhikkhu otiṇṇo vipariṇatena cittena \n \n mātugāmaṁ duṭṭhullāhi vācāhi obhāseyya \n \n yathā taṁ yuvā yuvatiṁ methunupasaṁhitāhi, \n \n saṅghādiseso. \n \n</b>
-       Если какой-либо монах, будучи охвачен желанием, с искажённым умом, обращается с непристойными словами к женщине, подобно тому как молодой человек обращается к девушке с намёком на сексуальный контакт, это влечёт за собой первоначальное и последующие собрания Общины. \n \n
-<i>If any monk, overcome by desire, with a distorted mind, addresses a woman with obscene words, just as a young man addresses a girl with a hint of sexual intercourse, this entails the initial and subsequent meetings of the Community.. \n \n</i>
-    \n \n
-\n \n This rule arose as a result of one event related to the Venerable Udain \n \n
-Udayin addressed the women who came to inspect his kuti with obscene words. \n \n
+         <i>The rule of obscene speech</i> \n \n
 
-<i>The K/Commentary lists five factors for a full breach of this rule.</i> \n \n
+         <b>Yo pana bhikkhu otiṇṇo vipariṇatena cittena </b> \n
+         If any monk, being overwhelmed by desire, with a distorted mind, \n \n
+         <b>mātugāmaṁ duṭṭhullāhi vācāhi obhāseyya </b> \n
+         addresses a woman with obscene words, \n \n
+         <b>yathā taṁ yuvā yuvatiṁ methunupasaṁhitāhi, </b> \n
+         just as a young man approaches a girl with a hint of sexual contact, \n \n
+         <b>saṅghādiseso. </b>\n
+         this entails the initial and subsequent meetings of the Community. \n \n
 
-<i>1) Object: a woman, i.e., any female human being experienced enough to know what is properly said and improperly said, what is lewd and not lewd.</i> \n \n
+         FACTORS \n \n
+         To perform dutthullavacha sanghadisesa, five elements are required. \n
+         1. Human-woman\n
+         2. Know that this is a woman\n
+         3. The desire to make obscene remarks. \n
+         4. Saying offensive words or indicating offensive connotations using physical gestures from this desire. \n
+         5. A woman instantly understands spoken words or
+         indicated gesture. \n \n \n \n
 
-<i>2) Perception: The bhikkhu perceives her to be such a woman.</i> \n \n
+         CASES OF OFFENSES \n \n
+         THE CASES OF OFFENSES PROVIDED FOR BY THIS RULE OF TRAINING SHOULD BE UNDERSTANDED AS RELATING TO WOMEN AND EUNUCHS. \n \n
+         CASES OF OFFENSES RELATING TO A WOMAN \n \n
+         1. When words relating to female private parts and sexual interaction,
+         uttered out of a desire to insult, and the woman instantly understands this, a sanghadisesa will be committed. If a woman does not understand this right away,
+         this would be a violation of tullacchai. \n
+         2. When words are spoken out of a desire to make obscene remarks,
+         relating to the parts of a woman`s body above the knees and below the navel, and the woman instantly understands this, a violation of tulachaya will be committed.
+         If a woman does not understand this right away, it will be a duccata. \n
+         3. When parts of a woman`s body below the knees are discussed due to the desire to make lewd remarks,
+         as well as any clothing associated with her body will be made duccata. \n \n
 
-<i>3) Intention: He is impelled by lust.</i> \n \n
+         CASES OF OFFENSES RELATED TO EUNUCHS \n \n
+         1. When words related to private parts and sexual interaction
+         are uttered out of a desire to make lewd remarks, and the troubled eunuch instantly understands this,
+         Tullachaya will be performed. \n
+         If the eunuch does not understand this immediately, it will be a duccata. \n
+         2. When words are spoken regarding the parts of the eunuch`s body above the knees and below the navel,
+         out of desire to make obscene remarks, duccata will be committed.
+         3. When regarding the parts of a eunuch`s body below the knees and above the navel, as well as any clothing associated with his body,
+         they say due to the desire to make obscene remarks, duccata will be committed. \n \n
 
-<i>As in the preceding rule, we can take the Commentary`s definition of lust here as the minimum amount of lust to fulfill this factor: He wants to enjoy saying something lewd or improper.</i> \n \n
+         CASES OF NO VIOLATION \n \n
+         1. Atthapurekkharassa. One who explains the meaning of words such as animintta`si and sikharani`si, or utters commentary phrases conveying the meaning of such words, does not commit an offense. \n
+         2. Dhammapurekkharassa. A monk who teaches or repeats phrases such as animintta`si and sikharani`si in the Tipitaka will not commit an offense. \n
+         3. Anusasanipurekkharassa - a monk who gives the following advice: “You are a being who does not carry the necessary organs in the present birth / You are a being who has both types of genitals. Therefore, collect merit without delay, so that this does not happen in your next births, so as not to commit a crime.
+         As stated above, offenses will not be committed when
+         explanation through the Tipitaka and commentaries on it; if phrases like
+         animita`si and sikharani`si are repeatedly pronounced to women behind the features
+         usual teaching style and the desire to make obscene remarks,
+         one should know that a sanghadisesa will be performed. \n
+         4. Ummattakassa\n
+         5. Hittachittassa\n
+         6. Vedanatassa\n
+         7. Adikammikassa \n \n
 
-<i>4) Effort: He makes remarks praising, criticizing, begging, imploring, asking, quizzing, advising, instructing, or insulting with reference to her genitals or anus, or to her performing sexual intercourse.</i> \n \n
+         OTHER INFORMATION YOU SHOULD KNOW ABOUT VIOLATIONS \n \n
+         1. In case of obscene remarks addressed to a woman, the number of violations will depend on the number of offensive words spoken and the number of women. For example, five insults to the Sanghadises will be considered committed when five insulting words are said to one woman, and also when one insulting word is said to five women. If five insulting words are spoken to five women, twenty-five insults will be committed. \n
+         2. When offensive words are spoken to a particular woman and she does not understand them, the crime of tulachchaya will be committed. While another woman nearby understands the offensive words being said, her awareness will not result in the insult. \n
+         3. When words are spoken in relation to animita`si, shikharani`si, etc.
+         insult to a woman can be committedonly if such words are spoken out of a desire to make obscene remarks. If these words are spoken purely out of anger, there will be no offense to the Sanghadisesa. If a woman (including a bhikkhuni) is scolded in this way out of anger, duccata will be committed according to the rule of omasavada training. \n
+         4. Vajirabuddhi Tika states that, according to some famous scholars, the insult of tullacaya
+         will be committed for making lewd remarks towards non-human women such as petis and yakchinis. \n \n
 
-<i>5) Result: The woman immediately understands.</i> \n \n \n
 
-<i>The Vibhaṅga makes clear that this rule does not cover statements made in anger. Thus any insults a bhikkhu may direct at a woman out of anger rather than out of desire — even if they refer to her genitals, etc. — would come under Pc 2, rather than here.</i> \n \n
+         NOTE\n\n
+         Talking with lustful intent about any organ or part of the body above the knees and below the navel,
+         except the vagina and anus, it will be a crime of Tullachaya. Talking about any other organ above the navel and below
+         kneeling out of lustful desire will lead to duccata.
+         The intention behind the desire to utter a word or make a physical gesture
+         associated with female private parts and sexual interaction is known as duthullasada.
+         The desire that arises with such an intention is called dutthullassadaraga.
+         A violation will be committed if words are spoken out of this desire.
+         It should be known that no violation will be committed if women are discussed in the context of preaching the Dhamma.
+         intimate body parts or sexual interactions. \n \n
 
-<i> \n \n
-Non-offenses.
-The Vibhaṅga states that there is no offense for a bhikkhu who speaks aiming at (spiritual) welfare (attha — this can also mean the "meaning of the Dhamma"), aiming at Dhamma, or aiming at teaching.
-Thus, for example, if one is talking in front of women and has no lustful intent, one may recite or explain this training rule or go into detail on the topic of the loathsomeness of the body as a topic of meditation, all without incurring a penalty.
-The Commentary here adds an example of a bhikkhu addressing a sexually deformed woman, telling her to be heedful in her practice so as not to be born that way again.
-If, however, one were to broach any of these topics out of a desire to enjoy saying something lewd to one`s listeners, one would not be immune from an offense.
-The New K/Sub-commentary illustrates this point with an example: A bhikkhu, teaching the Vibhaṅga of this rule to a bhikkhunī, departs from a normal tone of voice and keeps sniggering while reciting the examples of lewd speech.
-This sort of behavior, it says, incurs the full offense here.
-A bhikkhu who without intending to be lewd makes innocent remarks that his listener takes to be lewd commits no offense.
-</i>
+         HISTORY OF OPENING \n \n
+         Once the Buddha lived in the Jetavana monastery near Savatthi.
+         At that time, Venerable Udain lived in a monastery located in the forest.
+         The monastery was very beautiful and attractive. Some women asked Udayn for permission to see his monastery.
+         After showing the monastery to the women, Venerable Udain began making obscene remarks using
+         in words, intimate parts of the body. He also hinted at having an intimate relationship with him.
+         Some bad behaved ladies, among others, laughed at what he said.
+         They also responded by making obscene remarks on the words of Venerable Udain.
+         The ladies of good behavior did not like what Venerable Udain was doing.
+         And they criticized his behavior. Having learned about this, the Buddha proclaimed the rule of learning,
+         prohibiting monks from making obscene remarks related to intimate parts of the body. \n \n
+
 \n \n \n
 </string>
 
@@ -104,65 +351,72 @@ A bhikkhu who without intending to be lewd makes innocent remarks that his liste
             how to perform sexual intercourse with me.
             This entails an initial and subsequent community meeting. \n \n </i>
 
-        <i>The rule arose as a result of one event.
-            Venerable Udain asked a woman to provide him with sexual favors. \n \n </i>
+        The rule arose as a result of one event.
+         Venerable Udain asked a woman to provide him with sexual favors. \n \n
 
-        <i>“At that time there was one attractive woman, a widow.
- So, Ven.  Udayin got dressed early in the morning, took his clothes and a bowl, and went to her home.
- Upon arrival, he sat down in the assigned seat.
- Then the woman approached him and, bowing to him, sat aside.
- While she was sitting there, Ven.  Udayin instructed, convinced and encouraged her by talking about the Dhamma.
- After Udayin`s conversation about the Dhamma, she said to him: “Tell me, venerable sir,
-            what could I give you that you need: fabric for clothing?  Alms Housing?  Medicines?
- “It`s not difficult for us to get these things, sister...
- Give only what is difficult for us to get.
- “What, honorable sir?
- “Sexual intercourse.
- “Is this necessary, honorable sir?
- "Yes Sister.
- “Then let`s go, honorable sir.
- Entering the inner room, she took off her clothes and lay down on the bed.
- Then Ven.  Udayin approached the woman and said: “Who will touch this vile, stinking thing?”
- And he left, spitting.
- “So the woman criticized, complained and spread it... “How can this monk Udayin, when he
-            himself was begging me for sexual intercourse, say: “Who will touch this vile,
-            stinking thing?  and leave, spitting?
- What`s wrong with me?  What stinks about me?  In what ways am I inferior to whom? » \n \n</i>
+         FACTORS \n \n
+         To break this learning rule, the following elements must be met. \n \n
+         1. A female person. \n \n
+         2. Know that she is a woman. \n \n
+         3. A monk who has a desire for sexual interaction. \n \n
+         4. Statement of the benefits of providing sexual services based on this desire. \n \n
+         5. The woman instantly understands the words spoken by the monk. \n \n \n \n
 
-            <b>Object:</b>
-A woman experienced enough to know what is properly or improperly said, what is lewd and not lewd. \n \n
+         CASES OF VIOLATIONS \n \n
+Cases of violations in relation to this training rule are as follows:\n \n
+1. When a bhikkhu explains to a woman by words or bodily gestures the benefits of providing sexual favors, knowing that she is a woman, and if the woman instantly understands the words expressed, the bhikkhu will be committing a violation of sanghadises. If the woman does not understand immediately, a tulachaya violation will be committed. \n \n
+2. When a monk explains to a woman in words or gestures the benefits of providing sexual services, assuming that the woman is
+eunuch, man or animal, or even if the monk is not sure,
+the person is a woman or not, and if the woman to whom the words are addressed
+If what is said is understood, the monk will commit a tulachaya violation. \n \n
+3. When the monk explains to the eunuch in words or gestures,
+merit in providing sexual services, knowing that he is a eunuch, and if
+a eunuch understands spoken words instantly, a monk
+commits a tulachaya violation. If the eunuch doesn`t
+understand right away, a violation of the duccat will be committed. \n \n
+4. When a monk explains to a eunuch in words or gestures,
+the merits of providing sexual services, assuming the eunuch is a woman, a man or an animal, or even if the monk is not sure
+Whether a person is a eunuch or not, and if the eunuch to whom the words are spoken understands or does not understand, the offense of duccat will be committed by the monk. \n \n
+5. Vajirabuddhi Tika states that according to some scholars, when words of praise for sexual favors are expressed to non-human women, including women from the Yakkha and Peta groups, as well as hermaphrodites, a violation of tullacchaya will be committed. \n \n
+6. When a monk explains to a man or any other being other than a woman or a eunuch, by words or bodily gestures, the benefits of providing sexual services, and if he immediately understands or not what was said, the monk will commit a violation of duccat. \n \n
+7. If a monk indirectly states the following: “It is appropriate to serve those who live in your monastery through sexual behavior,” this will violate the duccat. \n \n \n \n
 
-            <b>Perception \n</b>>
-The bhikkhu perceives her to be a woman. \n \n
+         EXAMPLE OF NO VIOLATIONS \n \n
+         Cases where there are no violations in relation to this training rule are as follows: \n \n
+         1. Civaradihi vatthukamehi paricariyaya vannam bhasantassa - If the merits of serving a monk by offering items such as clothes and alms are declared, this will not result in any offense. \n \n
+         2. Ummattakassa \n \n
+         3. Hittachittassa \n \n
+         4. Vedanatassa\n\n
+         5. Adikammikassa \n \n \n \n
 
-            <b>Intention: \n</b>
-He is impelled by lust. According to the Commentary,
-            this means he is lustful for his listener to minister to his desire for sexual intercourse.
-            However, the Vibhaṅga defines overcome with lust here in the same broad terms it uses under Sg 2  3.
-            This suggests that the factor of intention here can be fulfilled simply by the desire
-            to enjoy making such remarks in a woman`s presence—say, getting a charge out of testing her reaction,
-            which appears to have been Ven. Udāyin`s impulse in the origin story—regardless of how one feels
-            about actually having sex with her. \n \n
+         PERCEPTION AND INTENT \n \n
+         From the desire for sexual interaction, with the thought:
+         “I will expound the merits of providing sexual services to a woman,”
+         and if one deliberately praises the provision of sexual services to a woman, a sanghadisesa will be committed.
+         Thus, this rule of training is based on intention (sachittaka) and is called sannyavimokkha. \n \n
 
-            <b>Effort: \n</b>
-The bhikkhu speaks to the woman in praise of her ministering to his sensual needs,
-            referring to sexual intercourse as a meritorious gift.
-            The Commentary maintains that his remarks must directly mention sexual intercourse for
-            this factor to be fulfilled, but the examples in the rule itself and in the Vibhaṅga contradict
-            its assertion. Some of the examples in the Vibhaṅga state simply, This is foremost.
-            This is best. This is the utmost. This is highest. This is excellent. These statements are
-            followed by the explanation that they have to allude to or be connected with sexual intercourse.
-            It does not say that the allusion has to be explicit. \n \n
+         IN ACCORDANCE WITH THIS TRAINING RULE, A VIOLATION WILL BE CONSIDERED COMPLETE \n \n
+If sexual services are praised and this is communicated to a woman who can understand the difference between obscene (dutthulla) and decent (adutthulla) words. Therefore, if the provision of sexual services is praised and told to a woman who does not understand such words, a violation of tullakchaya and not sanghadisesa will be committed. However, if a woman cannot immediately understand what the monk is saying, but understands it in retrospect or through later explanation, a violation of sanghadises will not be committed. This will only amount to tulachchaya.
+You can praise the provision of sexual services not only with words, but also with body language, for example, with hand gestures. When such intentions are implied through the body and the woman immediately understands what has been conveyed, sanghadisesa will be committed. \n \n
 
-Also, the Vinīta-vatthu contains a number of cases in which bhikkhus simply tell women to give the highest gift,
-            sexual intercourse—and one in which a bhikkhu simply tells a woman that sexual intercourse
-            is the highest gift—without explicitly saying to whom it should be given. The bhikkhus all earn
-            saṅghādisesas for their efforts, which shows that the reference to oneself need not be explicit,
-            either. \n \n
-
-Both the Commentary and the Commentary state that a physical gesture—this would include writing a
-            letter—can fulfill the factor of effort here as well.
-
+         ORIGIN STORIES \n \n
+         Once the Buddha lived in the Jetavana monastery near Savatthi.
+         In those days, Venerable Udain visited various worldly families and maintained very friendly relations with them. A beautiful widow lived in one house.
+         One day, the Venerable Udain, having dressed and taking a begging bowl, went to this house.
+         Entering the house, he sat down in the place prepared for him. This widow also approached the venerable Udayn,
+         She paid him respects and sat down next to him. Venerable Udayi made the widow happy with a conversation about the Dhamma.
+         Satisfied, she offered to tell himTell her about your needs in relation to the four necessary things.
+         At this invitation Venerable Udain spoke and the following conversation took place between them:
+         “Sister, we have enough of everything we need. Please give me something that is rare to get.”
+         “What is this?” “Sex.” She then, intending to give Venerable Udayn the opportunity to experience sexual intercourse,
+         invited him to her room. She came in earlier, took off her clothes and lay down on the bed. Venerable Udain
+         followed her into the room. Approaching the lady, he examined her and insulted her: “Who would touch this
+         disgusting and foul-smelling? Then, spitting, he left the room.
+         The widow was offended by the action of the venerable Udain. She blamed all the monks in general, saying:
+         “How could the monks first ask for sex and then insult me? What is repulsive about me?
+         What makes me smell bad? How could he spit and leave with the words: “Who will touch this disgusting
+         and smelly? Upon hearing this news, other women also began to criticize the act.
+         Venerable Udain. In this regard, the Buddha proclaimed this rule of teaching. \n \n
 \n \n \n
 
 </string>
@@ -177,27 +431,27 @@ Both the Commentary and the Commentary state that a physical gesture—this woul
     </string>
     <string name="sanghadisesaText5">
     \n 4. (Sañcarittasikkhāpadaṃ) \n
-        Правило о посредничестве (сватовстве) .   \n
+
         <i>Mediation rule. \n rule about matchmaking.</i> \n \n
 
         <b>yo pana bhikkhu sañcarittaṃ samāpajjeyya \n</b>
-            Если бхикху сватовством занимается \n
+
         <i>If a bhikkhu is engaged in matchmaking \n \n</i>
 
         <b>ittiyā vā purisamatiṃ purisassa vā ittimatiṃ \n</b>
-           Женщины с мужчиной, мужчины с женщиной.  \n
+
         <i>Women with men, men with women. \n \n</i>
 
         <b>jāyattane vā jārattane vā, \n</b>
-           Для женитьбы, для интимный отношений.  \n
+
         <i>For marriage, for intimate relationships \n \n</i>
 
         <b>antamaso taṅkheṇikāyapi,  \n</b>
-           Даже временно.  \n
+
         <i>Even temporarily. \n \n</i>
 
         <b>saṃghādiseso. \n</b>
-           Это влечет за собой начальное и последующее собрание сангхи \n
+
         <i>This entails an initial and subsequent community meeting.  \n \n</i>
 
         <i> The arose of this rule is associated with two events connected with the venerable Udain.
@@ -295,40 +549,112 @@ They rebuked Udāyī in many ways and then told the Buddha. Soon afterwards he h
     </string>
     <string name="sanghadisesaText6">
         \n 6. (Kuṭikārasikkhāpada) \n
-        Правило о строительстве хижины. \n
         <i>Rule about building a hut.</i> \n \n
 
         <b>saññāsikāya pana bhikkhunā kuṭiṃ
             kārayamānena assāmikaṃ attuddesāṃ </b> \n
-        Самостоятельно когда монах строит хижину без поручителя и предназначенную для себя, \n
         <i>On his own, when a monk builds a hut without a guarantor and intended for himself,</i> \n \n
 
         <b>pamāṇikā kāretabbā,</b> \n
-        соответствовать нужному размеру она должна \n
         <i>it should fit the right size</i> \n \n
 
         <b>tatridaṃ pamāṇaṃ, dīyaso dvādasa vidattiyo sugavidattiyā,tiriyaṃ sattantarā,</b>  \n
-        В данном случае, длинна должна быть 12 пядей Сугаты в длину и 7 в ширину,  \n
         <i>In this case, the length should be 12 Sugata spans in length and 7 in width,</i> \n \n
 
         <b>bhikkhū abhinetabbā vattudesanāya, tehi bhikkhūhi vattu desetabbaṃ anārambhaṃ saparikkamanaṃ,</b> \n
-        Бхикху должен пригласить других бхикху, которые должны признать,
-        что здесь не будет нанесён вред живым существам и будет достаточно места вокруг. \n
         <i>A bhikhu must invite other bhikkhus, who must acknowledge
          that there will be no harm to living beings and there will be enough space around.</i> \n \n
 
         <b>sārambhe ce bhikkhuvatthusmiṃ
         aparikkamane saññācikāya kuṭiṃ kāreyya </b> \n
-        Нанесён вред если и недостаточно места вокруг у самостоятельно построенного кути, \n
         <i>Damage is caused if and there is not enough space around the self-built kuti</i> \n \n
 
         <b>bhikkhū vā anabhineyya vatthudesanāya, pamāṇaṃ vā abhikkāmeyya,</b> \n
-        И бхикху небыли приглашены для обозначения участка, и размер неподходящий, \n
         <i>And bhikkhus were not invited to designate the site, and the size is inappropriate,</i> \n \n
 
         <b>saṃghādiseso</b> \n
-        Это влечет за собой собрание Сангхи. \n
         <i>This entails a meeting of the Sangha</i> \n \n
+
+        <b>Origin story</b> \n \n
+At one time the Buddha was staying at Rājagaha in the Bamboo Grove, the squirrel sanctuary.
+        At that time the monks of Āḷavī were building huts by means of begging.
+        The huts were intended for themselves, did not have a sponsoring owner,
+        and were inappropriately large. And since they were never finished,
+        the monks kept on begging and asking, “Please give a man, a servant, an ox, a cart,
+        a machete, a hatchet, an ax, a spade, a chisel; give creepers, bamboo, reeds, grass, clay.”
+        I have rendered muñja-reed and pabbaja-reed with the single word “reed”.
+        I am not aware that these two kinds of reed can be distinguished in English.
+        People felt oppressed by all the begging and asking,
+        so much so that when they saw a monk they became alarmed and fearful.
+        They turned away, took a different path, ran off, and closed their doors.
+        They even ran away when they saw cows, thinking they were monks.
+
+        <b>Definitions</b> \n \n
+By means of begging: \n \n
+having himself begged for a man, a servant, an ox, a cart, a machete, a
+        hatchet, an ax, a spade, a chisel; creepers, bamboo, reed, grass, clay.
+\n \n A hut: \n \n
+plastered inside or plastered outside or plastered both inside and outside.
+\n \n Builds: \n \n
+building it himself or having it built.
+\n \n Without a sponsoring owner: \n \n
+there is no other owner, either a woman or a man, either a lay person or one gone forth.
+\n \n Intended for himself: \n \n
+for his own use.
+\n \n It is to be no more than twelve standard handspans long:
+measured outside.
+\n \n And seven wide inside: \n \n
+measured inside.
+\n \n He must have monks approve a site: \n \n
+the monk who wants to build a hut should clear a site. He should then approach the Sangha,
+        arrange his upper robe over one shoulder, pay respect at the feet of the senior monks,
+        squat on his heels, raise his joined palms, and say:
+“Venerables, I want to build a hut by means of begging, without a sponsoring owner and intended for myself.
+        I request the Sangha to inspect the site for that hut.” \n \n
+
+        Where harm will be done: \n \n
+it is the abode of ants, termites, rats, snakes, scorpions, centipedes, elephants,
+        horses, lions, tigers, leopards, bears, or hyenas, or any other animal;
+        or it is bordering on a field of grain, a field of vegetables, a place of slaughter,
+        a place of execution, a charnel ground, a park, a royal property, an elephant stable,
+        a horse stable, a prison, a bar, a slaughterhouse, a street, a crossroads, a public meeting hall,
+        or a cul-de-sac—this is called “where harm will be done”.
+ \n \n Which lacks space on all sides: \n \n
+it is not possible to go around it with a yoked cart, or to go all the way around it with a
+        ladder—this is called “which lacks space on all sides”.
+ \n \n Where no harm will be done: \n \n
+it is not the abode of ants, termites, rats, snakes, scorpions, centipedes … it is not bordering on …
+        a cul-de-sac—this is called “where no harm will be done”.
+\n \n Which has space on all sides: \n \n
+it is possible to go around it with a yoked cart, or to go all the way around
+        it with a ladder—this is called “which has space on all sides”.
+\n \n By means of begging: \n \n
+having himself begged for a man, a servant … clay.
+\n \n A hut: \n \n
+plastered inside or plastered outside or plastered both inside and outside.
+\n \n Builds: \n \n
+building it himself or having it built.
+\n \n Or he does not have monks approve the site, or he exceeds the right size: \n \n
+if the site for the hut has not been approved through a legal procedure consisting
+        of one motion and three announcements, or if he builds a hut or has one built that
+        exceeds the allowable length or breadth even by the width of a hair, then
+        for the effort there is an act of wrong conduct. When there is one piece left
+        to complete the hut, he commits a serious offense. When the last piece is finished,
+        he commits an offense entailing suspension. \n \n
+        
+        SUGATA SPAN AND SUGATA ELBOW \n \n
+SPAND is the distance between the edge of the little finger and the edge of the thumb when the hand and fingers are spread apart. \n
+ELBOW is the distance from the elbow to the edge of the middle finger. According to the Theravada Vinaya, there are three types of measures. \n \n
+1 Standard Men`s Measures (Pakati Purisa) – Measurements taken according to the body size of a standard man in a society are called Standard Men`s Measures. The span and cubit of such a man are defined as
+an ordinary man`s span and elbow. \n \n
+2 Average men`s measure (majjhima purisa) - Measures that are one and a half times (x 1 1/2) higher than ordinary men`s measures are called average men`s measures. The span of Majjhima Purish is one and a half times the arm span of Pakati Purish, and the elbow of Majjhima Purish is equal to one and a half times the size of an ordinary male elbow. The middle men`s measures in the commentaries are also known as carpenter`s (vaḍhakī) measures. \n \n
+3 Measure of sugata. Measures three times larger than the average male measures are called sugata measures. a span of sugata is equal to three average spans, and a cubit of sugata is equal to three average male cubits. \n \n
+The size of the kuti is indicated in sugata arm spans in accordance with the cutikara training rule.
+Length of kuti = 12 hand spans sugata = 36 medium hand spans of men = 54 standard hand spans of men. \n \n
+Inner width of kuti = 7 sugata hand spans = 21 average man`s hand spans = 31 1/2 standard man`s hand spans. \n \n
+
+         \n \n He commits an offense entailing suspension: \n \n
+… Therefore, too, it is called “an offense entailing suspension”. \n \n \n \n
     </string>
 
     <string name="textButtonSanghadisesa7">
@@ -342,29 +668,43 @@ They rebuked Udāyī in many ways and then told the Buddha. Soon afterwards he h
     </string>
     <string name="sanghadisesaText7">
         \n 7. (Vihārakārasikkhāpada) \n
-        Правило о строительстве большого жилища. \n
         <i>Rule about building  a large dwelling.</i> \n \n
 
         <b>Mahallakaṃ pana bhikkhu, vihāraṃ kārayamānena sassāmikaṃ attuddesaṃ</b> \n
-        Когда монах строит большое жилище - и у него есть спонсор, и оно предназначено для него самого \n
         <i>When a monk builds a large dwelling and has a sponsor, it is intended for him.</i> \n \n
 
         <b>bhikkhū abhinetabbā vatthudesanāya,</b> \n
-        Он должен собрать компетентных монахов \n
         <i>He must gather qualified monks.</i> \n \n
 
         <b>tehi bhikkhūhi vatthu desetabbaṃ anārambhaṃ saparikkamanaṃ.</b> \n
-        Эти монахи должны подтвердить, что не будет нанесен вред живым существам и что достаточно места вокруг. \n
         <i>These monks must confirm that no harm will be done to living beings and that there is enough space around.</i> \n \n
 
         <b>sārambe ce bhikkhusmiṃ aparikkamane mahallamane mahallakaṃ vihāraṃ kāreyya</b> \n
-        Если будет нанесен вред живым существам и будет недостаточно места вокруг большого жилища \n
         <i>If there is harm to living beings and there is not enough space around a large dwelling.</i> \n \n
 
         <b>bhikkhū vā anabhineyya vatthudesanāya, saṃghādiseso.</b> \n
-        И монахи небыли приглашены, это влечет за собой первоначальные и последующие собрания сангхи. \n
         <i>And the monks were not invited, this entails the initial and subsequent sangha meetings.</i> \n \n
         \n \n
+
+        <b>Origin story</b> \n \n
+At one time when the Buddha was staying at Kosambī in Ghosita’s Monastery,
+        a householder who was a supporter of Venerable Channa said to him,
+        “I`ll have a dwelling built for you, Venerable, if you would find a site for it.”
+While Venerable Channa was clearing a site for that dwelling, he felled a tree that served as a
+        shrine and was revered by village, town, district, and kingdom.
+        People complained and criticized him, “How could the Sakyan monastics fell a tree
+        that serves as a shrine and is revered by village, town, district, and kingdom?
+        They are hurting one-sensed life.”
+The monks heard the criticism of those people, and the monks of few desires complained and
+        criticized Venerable Channa in the same way.
+After rebuking Venerable Channa in many ways, they told the Buddha.
+        Soon afterwards he had the Sangha gathered and questioned Channa: “Is it true, Channa, that you did this?”
+“It’s true, Sir.”
+The Buddha rebuked him … “Foolish man, how could you do this?
+        People perceive trees as conscious. This will affect people’s confidence …” …
+
+        \n \n He commits an offense entailing suspension: \n \n
+… Therefore, too, it is called “an offense entailing suspension”. \n \n \n \n
     </string>
 
     <string name="textButtonSanghadisesa8">
@@ -374,23 +714,99 @@ They rebuked Udāyī in many ways and then told the Buddha. Soon afterwards he h
         “In this way I will excommunicate him from monastic life,” whether or not he is tested later,
         if the accusation is unfounded and the monk admits his anger, this requires an initial and subsequent meeting of the sangha.
     </string>
-    <string name="sanghadisesaText8">
+    <string name="sanghadisesaText8" tools:ignore="TypographyEllipsis">
         \n 7. (Duṭṭhadosa) \n
          \n
         <b>Yo pana bhikkhu bhikkhuṁ duṭṭho doso appatīto amūlakena pārājikena dhammena anuddhaṁseyya</b> \n
-        Если какой-либо монах, полный зависти, гнева или недовольства, необоснованно обвинит другого монаха в поражении, думая: \n
         <i>If any monk, full of envy, anger or dissatisfaction, unreasonably blames another monk for defeat, thinking:</i> \n \n
             <b>“appeva nāma naṁ imamhā brahmacariyā cāveyya”nti,</b> \n
-        "Возможно, я могу вызвать его выпадение из целомудренной жизни" \n
         <i>"Perhaps I can cause him to fall out of chastity."</i> \n \n
             <b>tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā</b> \n
-        независимо от того, будет или нет он проверен позднее \n
         <i>regardless of whether or not it is checked later</i> \n \n
             <b>amūlakañceva taṁ adhikaraṇaṁ hoti, bhikkhu ca dosaṁ patiṭṭhāti,</b> \n
-        если обвинение необоснованно и монах признает свой гнев, \n
         <i>if the accusation is unfounded and the monk admits his anger,</i> \n \n
             <b>saṅghādiseso.</b> \n
-        это требует начального и последующего собрания сангхи. \n
-        <i>this entails the initial and subsequent sangha meetings.</i> \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n
+        <i>this entails the initial and subsequent sangha meetings.</i> \n \n
+
+        <b>A complete violation, according to this rule, includes four factors.</b> \n \n
+1) Object: another monk, considered a full monk. \n
+2) Understanding: the monk perceives him as innocent of the violation of which he is accused. \n
+3) Intention: a monk wants to see another monk expelled from the Sangha. \n
+4) Effort: The monk makes an unfounded accusation in his presence that he is guilty of violating the parajika class. \n
+
+         Actions that are not violations.
+         If one believes the accused to be guilty of parajika and sincerely accuses him based on what he saw, heard or suspects, then, regardless of whether he is guilty or not, one does not commit a violation.
+         However, even in such a case, if one makes an accusation without asking the permission of the accused, he takes upon himself dukkata, and pacittiya, if he makes an accusation, to insult him.
+         Summary: bringing an unfounded accusation of violating the class of parajika to a monk, in the hope that he will leave the monkhood, is a violation of the class of sanghadises. \n \n
+
+         <b>Origin story</b> \n \n
+         At that time, the householder, the owner of delicious food, regularly donated it to the Community, the four monks every day.
+         One day he happened to visit the monastery on some business.
+         He went to the Venerable Dabba Mallaputta, approaching, he respectfully greeted him and sat aside...
+         Venerable Dabba Mallaputta encouraged...his discussion of the Dhamma.
+         Then the householder, the owner of the delicious food, ... asked Dabbu Mallaputta: “Who, venerable one, is scheduled to receive the food offering in our house tomorrow?”
+         To the followers of Mettiya and Bhummaji (§), householder.
+         Mettiya and Bhummajya were among the leaders of the "group of six monks"
+         named after the number of leaders notorious for their shameless behavior,
+         the instigators of many excesses that forced the Buddha to formulate rules of teaching.
+         This upset the householder, the owner of the gourmet food.
+         Thinking: “How can these bad monks eat in our house?”, he returned home and ordered his slave:
+         “Hey! For those who come for breakfast tomorrow, prepare a mat at the gate and serve them porridge of husked rice with brine.”
+         “Yes, master,” answered the slave. At that time the followers of Mettiya and Bhummaji said to each other:
+         “Yesterday we were scheduled to have breakfast at the house of the householder, the owner of the gourmet food.
+         Tomorrow he will serve us along with his wives and children.
+         Some of them will offer us rice, some will offer us curry,
+         some will offer us oils, some will offer us seasonings.
+         Rejoicing, they were unable to sleep as much as they had planned that night.
+         The next day, early in the morning, ... they went to the house of the householder - the owner of the gourmet food.
+The slave noticed their approach from afar.
+Seeing them, having prepared a mat for them at the gate, she told them: “Sit down, dear ones.”
+A thought occurred to the followers of Mettia and Bhummaji: “There is no doubt that the food is not ready yet, that is why we are forced to sit at the gate.”
+Then the slave served them porridge from husked rice with brine, saying: “Eat, dear ones.”
+"Sister, we are here for a regular meal."
+“I know you are here for a regular meal.
+But yesterday the householder ordered me: “Hey! For those who come for breakfast tomorrow, prepare a mat at the gate and serve them porridge of husked rice with brine.”
+“So eat, dear ones.”
+Then the followers of Mettiya and Bhummaji said to each other: “Yesterday a householder, owner of delicious food, came to the monastery and met Dabba Mallaputta.
+No doubt Dabba Mallaputta has turned him against us."
+Disappointed, they were unable to eat as much as they had planned.
+Then... they returned to the monastery and, having put away their chivars and bowls, went outside the gates of the monastery, and having built a canopy from their sangati, they squatted under it (§) - silent, embarrassed, shoulders drooping, heads bowed, thoughtful, at a loss.
+“Then Mettiya bhikkhuni came up to them... and said: “I greet you, dear ones.”
+But when she said this, they did not answer.
+And for the second time...
+And for the third time she said: “I greet you, dear ones.”
+And for the third time they did not answer.
+"Did I insult you, dear ones?
+Why don`t you answer me?"
+"Because you, sister, are indifferent while Dabba Mallaputta treats us like dirt."
+"What can I do?"
+"If you wish, you can persuade the Blessed One to banish Dabba Mallaputta on that very day."
+"What can I do?
+How can i do this?"
+"Go ahead, sister.
+Go to the Blessed One and say: “This is inappropriate, Venerable One, and wrong.
+A place without fear, without harm, without danger, has now become a place where there is fear, where there is harm, where there is danger.
+From where there was calm, a stormy wind is now blowing.
+The water seems to be on fire.
+I was raped by the respected Dabba Mallaputta."
+“As you say, dear ones.”
+(And she left to follow their orders)."
+This is just the beginning of the story
+the origin of this rule, which is one of the longest and most controversial stories of the Vinaya.
+After Mettiya Bhikkhuni made her accusation, the Buddha called a meeting of the Sangha to resolve the issue with Venerable Dabba Mallaputta.
+He, being one who attained arahantship at the age of seven, answered truthfully that he could not remember ever having indulged in sexual intercourse even in his sleep, much less while awake.
+The Buddha then told the Sangha to expel Mettiya Bhikkhuni and interrogate her instigators, after which he returned to his abode.
+When the monks expelled her, the followers of Mettia and Bhummaji told them: “Friends, do not expel Mettiya bhikkhuni. She has not done anything wrong.
+It was provoked by us, we were upset, unhappy and wanted him to fall."
+“Do you mean that you wrongly accused the Venerable Dabba Mallaputta of a parajika class offense?”
+"Yes friends".
+Then the monks indignantly, and complained, and murmured: “How can the followers of Mettiya and Bhummajī unjustifiably accuse the Venerable Dabba Mallaputta of the offense of the parajika class?” \n \n
+
+         However, for centuries after the canon was compiled, many people became indignant and complained more about the Buddha`s attitude towards Mettiya bhikkhunis.
+According to the commentary, her expulsion was one of the controversial issues that separated the Abhayagiri Vihara monks from the Mahavihara monks located in the former capital of Sri Lanka - Anuradhapura.
+Even modern scholars have objected to the Buddha`s treatment of Mittiya bhikkhunis in this way and have interpreted this passage as a "monastic interpretation", as if the Buddha himself was not a monk and the entire Canon was not the work of monks and nuns.
+The commentary states that the Buddha did this because he knew that if he treated her less harshly, the followers of Mettiya and Bhummaji would never reveal that they had incited her to make an accusation, and the truth would never come out.
+This would lead some people to secretly believe that Venerable Dabba Mallaputta was guilty and, due to his being an arahant, it would cause them long-term harm and harm. \n \n \n \n \n \n
+
     </string>
 </resources>

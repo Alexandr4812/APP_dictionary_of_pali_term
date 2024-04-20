@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context="com.dhammamobile.dictionary_of_pali_term.SuttasAnguttaraActivity">
+    tools:context="com.dhammamobile.dictionary_of_pali_term.Suttas.SuttasAnguttaraActivity">
 
     <WebView
         android:id="@+id/webViewAnguttara"

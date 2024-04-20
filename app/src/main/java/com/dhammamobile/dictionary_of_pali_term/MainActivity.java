@@ -1,17 +1,20 @@
 package com.dhammamobile.dictionary_of_pali_term;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.dhammamobile.dictionary_of_pali_term.Abhidhamma.AbhidhammaActivity;
+import com.dhammamobile.dictionary_of_pali_term.Declomation.DeklomationMainActivity;
+import com.dhammamobile.dictionary_of_pali_term.LiveBuddha.LiveBuddhaActivity;
+import com.dhammamobile.dictionary_of_pali_term.Rules.RulesActivity;
+import com.dhammamobile.dictionary_of_pali_term.Suttas.SuttasActivity;
 
 import java.util.Locale;
 
@@ -21,85 +24,63 @@ public class MainActivity extends BaseActivityClass {
 
     private TextView textView;
     private String textToAnimate;
+//    private static final String LANGUAGE_PREF_KEY = "LANGUAGE_PREF_KEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        // Устанавливаем язык
+        updateLocale();
 
-       // setWindowFlagsFullscreenAndNoLimits();
+
+        // Загружаем макет
+        setContentView(R.layout.activity_main);
 
         // Скрытие панели навигации и панели состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
+        // Находим элементы управления
         imageButtonRu = findViewById(R.id.imageButtonRu);
         imageButtonEn = findViewById(R.id.imageButtonUk);
-
-
-//        textView = findViewById(R.id.textViewHintMain);
-//        textToAnimate = "Приложение находится в стадии разработки, материал в разделах не полный, он только добавляется." +
-//                " В данный момент приложение корректно работает если на телефоне установленна светлая тема. Если у вас темная тема," +
-//                " сделайте исключение для этого приложения в настройках телефона.";
-//
-//        animateText();
     }
 
-//    private void animateText() {
-//        ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
-//        animator.setDuration(2000); // Продолжительность анимации в миллисекундах
-//        animator.addUpdateListener(animation -> {
-//            int animatedValue = (int) animation.getAnimatedValue();
-//            String partialText = textToAnimate.substring(0, animatedValue);
-//            textView.setText(partialText);
-//        });
-//        animator.addListener(new AnimatorListenerAdapter() {
-//            @Override
-//            public void onAnimationEnd(Animator animation) {
-//                super.onAnimationEnd(animation);
-//                // Анимация завершена
-//            }
-//        });
-//        animator.start();
-//    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        updateLocale();
+    }
 
 
     public void changeLangEn(View view) {
-        Locale locale = new Locale("en");
-        changeLocale(locale);
-
-        ScrollView scrollText = findViewById(R.id.popupMenuSV);
-        ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
-        ImageButton imageButtonM = findViewById(R.id.button_menu);
-        scrollText.setVisibility(View.INVISIBLE);
-        imageButtonEx.setVisibility(View.INVISIBLE);
-        imageButtonM.setVisibility(View.VISIBLE);
+        setLocales("en");
+        updateViewsVisibility();
     }
 
     public void changeLangRu(View view) {
-        Locale locale = new Locale("en-us");
-        changeLocale(locale);
+        setLocales("ru");
+        updateViewsVisibility();
+    }
 
+
+    private void setLocales(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
+        saveLanguage(language);
+    }
+
+
+    private void updateViewsVisibility() {
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
         ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
         scrollText.setVisibility(View.INVISIBLE);
         imageButtonEx.setVisibility(View.INVISIBLE);
         imageButtonM.setVisibility(View.VISIBLE);
-    }
 
-    @SuppressWarnings("deprecation")
-    private void changeLocale(Locale locale)
-    {
-        Locale.setDefault(locale);
-        Configuration configuration = new Configuration();
-        configuration.setLocale(locale);
-        getBaseContext().getResources()
-                .updateConfiguration(configuration,
-                        getBaseContext()
-                                .getResources()
-                                .getDisplayMetrics());
         setTitle(R.string.app_name);
 
         TextView tv = findViewById(R.id.textView4);
@@ -155,8 +136,10 @@ public class MainActivity extends BaseActivityClass {
     }
 
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         showConfirmationDialog();
+        super.onBackPressed();
+
     }
 
 
