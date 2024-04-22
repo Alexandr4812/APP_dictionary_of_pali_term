@@ -262,6 +262,12 @@
             android:background="#FFE082"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/button4"
+                style="@style/button_activity_parajika_details"
+                android:onClick="toParajika4Detail"
+                tools:ignore="OnClick" />
+
             <TextView
                 android:id="@+id/textViewPatimokhaParajika4"
                 style="@style/TextMessageStyle"

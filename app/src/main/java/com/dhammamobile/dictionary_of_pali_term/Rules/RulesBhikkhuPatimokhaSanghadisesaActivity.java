@@ -61,6 +61,7 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        updateLocale(); // Установка языка
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_sanghadisesa);
 
        // setWindowFlagsFullscreenAndNoLimits();
@@ -146,6 +147,10 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
 
         this.buttonRewindSanghadisesa.setOnClickListener(v -> doRewind( ));
         this.buttonFastForwardSanghadisesa.setOnClickListener(v -> doFastForward( ));
+    }
+
+    protected void onResume() {
+        super.onResume();
     }
 
     private void animateText() {
@@ -411,5 +416,24 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
 
             threadHandler.postDelayed(this, 50);
         }
+    }
+    public void toSanghadisesaDetail1(View view){
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaSanghadisesaDetail1Activity.class);
+        this.mediaPlayer.pause();
+    }
+
+    public void toSanghadisesaDetail2(View view){
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaSanghadisesaDetail2Activity.class);
+        this.mediaPlayer.pause();
+    }
+
+    public void toSanghadisesaDetail3(View view){
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaSanghadisesaDetail3Activity.class);
+        this.mediaPlayer.pause();
+    }
+
+    public void toSanghadisesaDetail4(View view){
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaSanghadisesaDetail4Activity.class);
+        this.mediaPlayer.pause();
     }
 }

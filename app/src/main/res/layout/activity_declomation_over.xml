@@ -82,6 +82,10 @@
                 android:text="@string/blagopogelaniya_pri_vzyatii_pichi"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/button_after_evening_meditation"
                 style="@style/button_activity_declomation_main"
@@ -98,6 +102,13 @@
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomaciyaRefleksiyaOProshlihNeobhodimostyah"
                 android:text="@string/deklomationRefleksiyaOProshlihNeobhodimostyah"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_Refleksiya_O_32_chasti_tela"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomaciya32chasti"
+                android:text="@string/Deklomaciya32chastiTekstButton"
                 tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>
@@ -216,6 +227,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="@string/DeklomaciyaRefleksiyaOProshlihNeobhodimostyah" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/overScrollTextDeclomaciya32chasti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewDeclomaciya32chasti"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1500dp"
+                android:text="@string/Deklomaciya32chasti" />
         </LinearLayout>
     </ScrollView>
 

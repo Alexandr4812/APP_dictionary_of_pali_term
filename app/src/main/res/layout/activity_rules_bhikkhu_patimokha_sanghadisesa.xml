@@ -183,6 +183,12 @@
             android:background="#FFE082"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/button"
+                style="@style/button_activity_parajika_details"
+                android:onClick="toSanghadisesaDetail1"
+                tools:ignore="OnClick" />
+
             <TextView
                 android:id="@+id/textViewSanghadisesaText1"
                 style="@style/TextMessageStyle"
@@ -209,6 +215,12 @@
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/button_activity_parajika_details"
+                android:onClick="toSanghadisesaDetail2"
+                tools:ignore="OnClick" />
 
             <TextView
                 android:id="@+id/textViewSanghadisesaText2"
@@ -237,6 +249,12 @@
             android:background="#FFE082"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/button3"
+                style="@style/button_activity_parajika_details"
+                android:onClick="toSanghadisesaDetail3"
+                tools:ignore="OnClick" />
+
             <TextView
                 android:id="@+id/textViewSanghadisesaText3"
                 style="@style/TextMessageStyle"
@@ -263,6 +281,12 @@
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/button_activity_parajika_details"
+                android:onClick="toSanghadisesaDetail4"
+                tools:ignore="OnClick" />
 
             <TextView
                 android:id="@+id/textViewSanghadisesaText4"

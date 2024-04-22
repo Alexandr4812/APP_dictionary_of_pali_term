@@ -16,7 +16,50 @@
         android:versionCode="3"
         android:versionName="3.1"
         tools:targetApi="33">
-
+        <activity
+            android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail4Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail3Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail2Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail1Activity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Rules.RulesBhikkhuPatimokhaParajikaDetail4Activity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaDetail3Activity"
             android:configChanges="orientation|screenSize"

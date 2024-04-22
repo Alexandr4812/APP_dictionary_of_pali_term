@@ -312,6 +312,11 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
         this.mediaPlayer.pause();
     }
 
+    public void toParajika4Detail(View view){
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaParajikaDetail4Activity.class);
+        this.mediaPlayer.pause();
+    }
+
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
         this.mediaPlayer.pause();

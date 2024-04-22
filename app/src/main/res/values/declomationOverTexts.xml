@@ -171,9 +171,12 @@
 <i>пусть мир будет процветающим,</i> \n \n
 <i>пусть правительство будет праведным</i> \n \n \n
     </string>
-    <string name="deklomationRefleksiyaOProshlihNeobhodimostyah">РЕФЛЕКСИЯ О ПРОШЛОМ ИСПОЛЬЗОВАНИИ МОНАШЕСКИХ НЕОБХОДИМОСТЕЙ (ПИЩА С ПОДАЯНИЙ, ОДЕЯНИЯ, ЖИЛИЩЕ И ЛЕКАРСТВА)</string>
+    <string name="deklomationRefleksiyaOProshlihNeobhodimostyah">
+        РЕФЛЕКСИЯ О ПРОШЛОМ ИСПОЛЬЗОВАНИИ МОНАШЕСКИХ НЕОБХОДИМОСТЕЙ
+        (ПИЩА С ПОДАЯНИЙ, ОДЕЯНИЯ, ЖИЛИЩЕ И ЛЕКАРСТВА)</string>
 
-    <string name="DeklomaciyaRefleksiyaOProshlihNeobhodimostyah">\n РЕФЛЕКСИЯ О ПРОШЛОМ ИСПОЛЬЗОВАНИИ МОНАШЕСКИХ НЕОБХОДИМОСТЕЙ (ПИЩА С ПОДАЯНИЙ, ОДЕЯНИЯ, ЖИЛИЩЕ И ЛЕКАРСТВА) \n \n
+    <string name="DeklomaciyaRefleksiyaOProshlihNeobhodimostyah">
+        \n РЕФЛЕКСИЯ О ПРОШЛОМ ИСПОЛЬЗОВАНИИ МОНАШЕСКИХ НЕОБХОДИМОСТЕЙ (ПИЩА С ПОДАЯНИЙ, ОДЕЯНИЯ, ЖИЛИЩЕ И ЛЕКАРСТВА) \n \n
 REFLECTION ON THE PAST USE OF MONastic ESSENTIALS (FOOD FROM ALMS, ROBETS, HOUSING AND MEDICINES) \n \n
 <b>Mayā apaccavekkhitvā ajja yaṃ cīvaraṃ paribhuttaṃ taṃ</b> \n \n
 <i>Какое бы монашеское одеяние я ни использовал сегодня без размышления,</i> \n \n
@@ -289,4 +292,28 @@ REFLECTION ON THE PAST USE OF MONastic ESSENTIALS (FOOD FROM ALMS, ROBETS, HOUSI
 <b>pūtikāyaṃ patvā ativiya jigucchanīyāni jāyanti.</b>  \n \n
 <i>но соприкоснувшись с этим гнилостным телом, они станут чрезвычайно отвратительными.</i> \n \n
 <i>but when they come into contact with this putrid body, they will become extremely disgusting.</i> \n \n  \n</string>
+
+    <string name="Deklomaciya32chastiTekstButton">
+        РЕФЛЕКСИЯ О 32 частях тела</string>
+    <string name="Deklomaciya32chasti">
+    \n РЕФЛЕКСИЯ О 32 ЧАСТЯХ ТЕЛА \n \n
+        <b>Atthi imasmiṃ kāye</b> \n
+        <i> В этом теле есть:</i> \n \n
+        <b>kesā lomā nakhā dantā taco</b> \n
+        <i> волосы на голове, волосы на теле, ногти, зубы, кожа,</i> \n \n
+        <b>maṃsaṃ nahāru aṭṭhi aṭṭhimiñjaṃ vakkaṃ</b> \n
+        <i> плоть, сухожилия, кости, костный мозг, почки,</i> \n \n
+        <b>hadayaṃ yakanaṃ kilomakaṃ pihakaṃ papphāsaṃ</b> \n
+        <i> сердце, печень, плевра, селезёнка, лёгкие,</i> \n \n
+        <b>antaṃ antaguṇaṃ udariyaṃ karīsaṃ pittaṃ</b> \n
+        <i> кишки, брыжейка, проглоченное, кал, желчь,</i> \n \n
+        <b>semhaṃ pubbo lohitaṃ sedo medo</b> \n
+        <i> слизь, гной, кровь, пот, жир,</i> \n \n
+        <b>assu vasā kheḷo siṅghāṇikā lasikā</b> \n
+        <i> слёзы, кожное сало, слюна, сопли, суставная жидкость</i> \n \n
+        <b>muttaṃ matthake matthaluṅgan`ti</b> \n
+        <i> и моча, а также Мозг в пространстве черепа;</i> \n \n
+        <b>Iti imasmiṃ kāye dvātiṃsākarā anicca dukkhā anattā`ti</b> \n
+        <i> Тридцать две части эти суть непостоянны, страдательны, бессамостны.</i> \n \n \n \n
+    </string>
 </resources>

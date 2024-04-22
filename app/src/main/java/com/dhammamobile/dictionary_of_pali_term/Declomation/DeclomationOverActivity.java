@@ -70,6 +70,13 @@ public class DeclomationOverActivity extends BaseActivityClass {
         buttonLiveToOver.setVisibility(View.VISIBLE);
     }
 
+    public void toDeclomaciya32chasti(View view) {
+        ScrollView scrollText = findViewById(R.id.overScrollTextDeclomaciya32chasti);
+        scrollText.setVisibility(View.VISIBLE);
+        buttonHome.setVisibility(View.VISIBLE);
+        buttonLiveToOver.setVisibility(View.VISIBLE);
+    }
+
     public void tobackOver(View view) {
         ScrollView scrollText = findViewById(R.id.overScrollTextObed);
         scrollText.setVisibility(View.INVISIBLE);
@@ -81,6 +88,8 @@ public class DeclomationOverActivity extends BaseActivityClass {
         scrollText4.setVisibility(View.INVISIBLE);
         ScrollView scrollText5 = findViewById(R.id.overScrollTextDeclomaciyaRefleksiyaOProshlihNeobhodimostyah);
         scrollText5.setVisibility(View.INVISIBLE);
+        ScrollView scrollText6 = findViewById(R.id.overScrollTextDeclomaciya32chasti);
+        scrollText6.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
         buttonLiveToOver.setVisibility(View.INVISIBLE);
     }
