@@ -136,6 +136,41 @@
                 android:onClick="toSanghadisesaText8"
                 tools:ignore="UsingOnClickInXml" />
 
+            <Button
+                android:id="@+id/button_sangkhadisesa_9"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/textButtonSanghadisesa9"
+                android:onClick="toSanghadisesaText9"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_sangkhadisesa_10"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/textButtonSanghadisesa10"
+                android:onClick="toSanghadisesaText10"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_sangkhadisesa_11"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/textButtonSanghadisesa11"
+                android:onClick="toSanghadisesaText11"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_sangkhadisesa_12"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/textButtonSanghadisesa12"
+                android:onClick="toSanghadisesaText12"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_sangkhadisesa_13"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/textButtonSanghadisesa13"
+                android:onClick="toSanghadisesaText13"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
     </ScrollView>
     <ScrollView
@@ -395,6 +430,11 @@
             android:layout_height="wrap_content"
             android:background="#FFE082"
             android:orientation="vertical">
+            <Button
+                android:id="@+id/button8"
+                style="@style/button_activity_parajika_details"
+                android:onClick="toSanghadisesaDetail8"
+                tools:ignore="OnClick" />
 
             <TextView
                 android:id="@+id/textViewSanghadisesaText8"
@@ -402,6 +442,145 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/sanghadisesaText8" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/viewScrollSanghadisesaText9"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSanghadisesaText9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSanghadisesaText9"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sanghadisesaText9" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/viewScrollSanghadisesaText10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSanghadisesaText10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button10"
+                style="@style/button_activity_parajika_details"
+                android:onClick="toSanghadisesaDetail10"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/textViewSanghadisesaText10"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sanghadisesaText10" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollSanghadisesaText11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSanghadisesaText11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSanghadisesaText11"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sanghadisesaText11" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollSanghadisesaText12"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSanghadisesaText12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSanghadisesaText12"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sanghadisesaText12" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollSanghadisesaText13"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollSanghadisesaText13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSanghadisesaText13"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sanghadisesaText13" />
         </LinearLayout>
     </ScrollView>
 

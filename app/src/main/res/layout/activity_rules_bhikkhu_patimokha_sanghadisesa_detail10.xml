@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_main_color"
+    tools:context=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail10Activity">
+
+    <WebView
+        android:id="@+id/webViewSanghadisesaDetail10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonSanghadisesaDetail_10Home"
+            style="@style/buttonBackHomeNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="toMainAct"
+            android:visibility="visible"
+            tools:ignore="UsingOnClickInXml"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/buttonliveToLiveBuddha"
+            style="@style/buttonBackNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="toBack"
+            android:visibility="visible"
+            tools:ignore="UsingOnClickInXml"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

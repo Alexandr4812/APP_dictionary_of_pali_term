@@ -15,7 +15,7 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 
 import java.util.Locale;
 
-public class RulesBhikkhuPatimokhaSanghadisesaDetail4Activity extends BaseActivityClass {
+public class RulesBhikkhuPatimokhaSanghadisesaDetail8Activity extends BaseActivityClass {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -28,13 +28,13 @@ public class RulesBhikkhuPatimokhaSanghadisesaDetail4Activity extends BaseActivi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         updateLocale(); // Установка языка
-        setContentView(R.layout.activity_rules_bhikkhu_patimokha_sanghadisesa_detail4);
+        setContentView(R.layout.activity_rules_bhikkhu_patimokha_sanghadisesa_detail8);
 
         // Скрытие панели навигации и панели состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        webView = findViewById(R.id.webViewSanghadisesaDetail4);
+        webView = findViewById(R.id.webViewSanghadisesaDetail8);
 
 
 
@@ -51,9 +51,9 @@ public class RulesBhikkhuPatimokhaSanghadisesaDetail4Activity extends BaseActivi
         // Определить путь к HTML файлу в соответствии с текущим языком
         String htmlFilePath;
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/par_detail_ru/sd4.html";
+            htmlFilePath = "file:///android_asset/par_detail_ru/sd8.html";
         } else {
-            htmlFilePath = "file:///android_asset/par_detail_en/sd4 .html";
+            htmlFilePath = "file:///android_asset/par_detail_en/sd8.html";
         }
 
         webView.loadUrl(htmlFilePath);

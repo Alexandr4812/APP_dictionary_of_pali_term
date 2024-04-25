@@ -48,6 +48,11 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     private ScrollView scrollTextSanghadisesa6;
     private ScrollView scrollTextSanghadisesa7;
     private ScrollView scrollTextSanghadisesa8;
+    private ScrollView scrollTextSanghadisesa9;
+    private ScrollView scrollTextSanghadisesa10;
+    private ScrollView scrollTextSanghadisesa11;
+    private ScrollView scrollTextSanghadisesa12;
+    private ScrollView scrollTextSanghadisesa13;
 
     private int flagSanghadisesa1;
     private int flagSanghadisesa2;
@@ -57,6 +62,11 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     private int flagSanghadisesa6;
     private int flagSanghadisesa7;
     private int flagSanghadisesa8;
+    private int flagSanghadisesa9;
+    private int flagSanghadisesa10;
+    private int flagSanghadisesa11;
+    private int flagSanghadisesa12;
+    private int flagSanghadisesa13;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +102,11 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         this.scrollTextSanghadisesa6 = findViewById(R.id.viewScrollSanghadisesaText6);
         this.scrollTextSanghadisesa7 = findViewById(R.id.viewScrollSanghadisesaText7);
         this.scrollTextSanghadisesa8 = findViewById(R.id.viewScrollSanghadisesaText8);
+        this.scrollTextSanghadisesa9 = findViewById(R.id.viewScrollSanghadisesaText9);
+        this.scrollTextSanghadisesa10 = findViewById(R.id.viewScrollSanghadisesaText10);
+        this.scrollTextSanghadisesa11 = findViewById(R.id.viewScrollSanghadisesaText11);
+        this.scrollTextSanghadisesa12 = findViewById(R.id.viewScrollSanghadisesaText12);
+        this.scrollTextSanghadisesa13 = findViewById(R.id.viewScrollSanghadisesaText13);
 
         this.seekBarSanghadisesa = findViewById(R.id.seekBarSanghadisesa);
 
@@ -317,6 +332,81 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         this.buttonStartSanghadisesa.setVisibility(View.VISIBLE);
     }
 
+    public void toSanghadisesaText9(View view) {
+        this.flagSanghadisesa9 = 1;
+        mediaPlayer = changeSong();
+
+        this.scrollTextSanghadisesa9.setVisibility(View.VISIBLE);
+
+        this.buttonBackSanghadisesa = findViewById(R.id.buttonliveToPatimokhaSanghadisesa);
+        this.buttonHomeSanghadisesa = findViewById(R.id.buttonliveHomeFromSanghadisesa);
+        this.buttonStartSanghadisesa = findViewById(R.id.buttonPlaySanghadisesa);
+
+        this.buttonBackSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonHomeSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonStartSanghadisesa.setVisibility(View.VISIBLE);
+    }
+
+    public void toSanghadisesaText10(View view) {
+        this.flagSanghadisesa10 = 1;
+        mediaPlayer = changeSong();
+
+        this.scrollTextSanghadisesa10.setVisibility(View.VISIBLE);
+
+        this.buttonBackSanghadisesa = findViewById(R.id.buttonliveToPatimokhaSanghadisesa);
+        this.buttonHomeSanghadisesa = findViewById(R.id.buttonliveHomeFromSanghadisesa);
+        this.buttonStartSanghadisesa = findViewById(R.id.buttonPlaySanghadisesa);
+
+        this.buttonBackSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonHomeSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonStartSanghadisesa.setVisibility(View.VISIBLE);
+    }
+
+    public void toSanghadisesaText11(View view) {
+        this.flagSanghadisesa11 = 1;
+        mediaPlayer = changeSong();
+
+        this.scrollTextSanghadisesa11.setVisibility(View.VISIBLE);
+
+        this.buttonBackSanghadisesa = findViewById(R.id.buttonliveToPatimokhaSanghadisesa);
+        this.buttonHomeSanghadisesa = findViewById(R.id.buttonliveHomeFromSanghadisesa);
+        this.buttonStartSanghadisesa = findViewById(R.id.buttonPlaySanghadisesa);
+
+        this.buttonBackSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonHomeSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonStartSanghadisesa.setVisibility(View.VISIBLE);
+    }
+
+    public void toSanghadisesaText12(View view) {
+        this.flagSanghadisesa12 = 1;
+        mediaPlayer = changeSong();
+
+        this.scrollTextSanghadisesa12.setVisibility(View.VISIBLE);
+
+        this.buttonBackSanghadisesa = findViewById(R.id.buttonliveToPatimokhaSanghadisesa);
+        this.buttonHomeSanghadisesa = findViewById(R.id.buttonliveHomeFromSanghadisesa);
+        this.buttonStartSanghadisesa = findViewById(R.id.buttonPlaySanghadisesa);
+
+        this.buttonBackSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonHomeSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonStartSanghadisesa.setVisibility(View.VISIBLE);
+    }
+
+    public void toSanghadisesaText13(View view) {
+        this.flagSanghadisesa13 = 1;
+        mediaPlayer = changeSong();
+
+        this.scrollTextSanghadisesa13.setVisibility(View.VISIBLE);
+
+        this.buttonBackSanghadisesa = findViewById(R.id.buttonliveToPatimokhaSanghadisesa);
+        this.buttonHomeSanghadisesa = findViewById(R.id.buttonliveHomeFromSanghadisesa);
+        this.buttonStartSanghadisesa = findViewById(R.id.buttonPlaySanghadisesa);
+
+        this.buttonBackSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonHomeSanghadisesa.setVisibility(View.VISIBLE);
+        this.buttonStartSanghadisesa.setVisibility(View.VISIBLE);
+    }
+
     public void toBackButtonSanghadisesa(View view) {
         ScrollView scrollTextAboutSanghadisesa = findViewById(R.id.viewScrollSanghadisesaAbout);
         this.flagSanghadisesa1 = 0;
@@ -327,6 +417,11 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         this.flagSanghadisesa6 = 0;
         this.flagSanghadisesa7 = 0;
         this.flagSanghadisesa8 = 0;
+        this.flagSanghadisesa9 = 0;
+        this.flagSanghadisesa10 = 0;
+        this.flagSanghadisesa11 = 0;
+        this.flagSanghadisesa12 = 0;
+        this.flagSanghadisesa13 = 0;
 
         this.scrollTextSanghadisesa1.setVisibility(View.INVISIBLE);
         this.scrollTextSanghadisesa2.setVisibility(View.INVISIBLE);
@@ -336,6 +431,11 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         this.scrollTextSanghadisesa6.setVisibility(View.INVISIBLE);
         this.scrollTextSanghadisesa7.setVisibility(View.INVISIBLE);
         this.scrollTextSanghadisesa8.setVisibility(View.INVISIBLE);
+        this.scrollTextSanghadisesa9.setVisibility(View.INVISIBLE);
+        this.scrollTextSanghadisesa10.setVisibility(View.INVISIBLE);
+        this.scrollTextSanghadisesa11.setVisibility(View.INVISIBLE);
+        this.scrollTextSanghadisesa12.setVisibility(View.INVISIBLE);
+        this.scrollTextSanghadisesa13.setVisibility(View.INVISIBLE);
         scrollTextAboutSanghadisesa.setVisibility(View.INVISIBLE);
 
         this.buttonBackSanghadisesa.setVisibility(View.INVISIBLE);
@@ -377,6 +477,21 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         }
         else if (this.flagSanghadisesa8 == 1) {
             result = MediaPlayer.create(this, R.raw.sanghadisesa_8);
+        }
+        else if (this.flagSanghadisesa9 == 1) {
+            result = MediaPlayer.create(this, R.raw.sanghadisesa_9);
+        }
+        else if (this.flagSanghadisesa10 == 1) {
+            result = MediaPlayer.create(this, R.raw.sanghadisesa_10);
+        }
+        else if (this.flagSanghadisesa11 == 1) {
+            result = MediaPlayer.create(this, R.raw.sanghadisesa_11);
+        }
+        else if (this.flagSanghadisesa12 == 1) {
+            result = MediaPlayer.create(this, R.raw.sanghadisesa_12);
+        }
+        else if (this.flagSanghadisesa13 == 1) {
+            result = MediaPlayer.create(this, R.raw.sanghadisesa_13);
         }
         return result;
     }
@@ -434,6 +549,16 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
 
     public void toSanghadisesaDetail4(View view){
         startIntentActivityAndFinish(RulesBhikkhuPatimokhaSanghadisesaDetail4Activity.class);
+        this.mediaPlayer.pause();
+    }
+
+    public void toSanghadisesaDetail8(View view){
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaSanghadisesaDetail8Activity.class);
+        this.mediaPlayer.pause();
+    }
+
+    public void toSanghadisesaDetail10(View view){
+        startIntentActivityAndFinish(RulesBhikkhuPatimokhaSanghadisesaDetail10Activity.class);
         this.mediaPlayer.pause();
     }
 }
