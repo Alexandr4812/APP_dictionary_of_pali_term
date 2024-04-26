@@ -127,7 +127,6 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
 
 
     public void toMainAct(View view){
-        this.mediaPlayer.pause();
         startIntentActivityAndFinish(MainActivity.class);
     }
 

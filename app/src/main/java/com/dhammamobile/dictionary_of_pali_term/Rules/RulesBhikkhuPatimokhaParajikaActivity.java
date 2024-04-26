@@ -319,13 +319,11 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
 
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
-        this.mediaPlayer.pause();
     }
 
     @Override
     public void onBackPressed(){
         startIntentActivityAndFinish(RulesBhikkhuPatimokhaActivity.class);
-        this.mediaPlayer.pause();
     }
 
     public void toRulesPatimokhaAct(View view){
