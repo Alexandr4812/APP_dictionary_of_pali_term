@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.media.MediaPlayer;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
@@ -17,6 +18,7 @@ import java.util.Locale;
 
 public abstract class BaseActivityClass extends AppCompatActivity {
     protected static final String LANGUAGE_PREF_KEY = "LANGUAGE_PREF_KEY";
+    private MediaPlayer mediaPlayer;
     protected void setWindowFlagsFullscreenAndNoLimits() {
         // Убрать строку состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -62,6 +64,7 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         Intent intent = new Intent(this, cls);
         startActivity(intent);
         finish();
+        if (this.mediaPlayer != null) this.mediaPlayer.stop();
     }
 
 
