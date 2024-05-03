@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="buttonTeacherAboutText">Teacher Information</string>
+
+    <string name="teacherAboutText">
+         BHANTE NYANASIHA THERO \n \n
+Buddhist monk of the Theravada tradition from the island of Sri Lanka \n \n
+At the age of 24 he joined the monastic community. His first meditation teacher was Venerable Patekada Sumanatissa Thero, abbot of the famous Malvessa Vehera meditation center in Godakawela, near the city of Ratnapura. There Bhante Nyanasiha studied the Teachings of Buddha and Meditation. \n \n
+In 2008, with the assistance of Venerable Pallekande Ratanasara Anunayaka Thera, he came to Moscow and entered the Peoples` Friendship University, from which he graduated in 2013 with a bachelor`s degree in philology, specializing in Russian. Then, until 2015, he studied in Elista, Kalmykia, and completed his master’s degree. \n \n
+Currently, Venerable Nyanasiha Thero is the abbot of the international Buddhist monastery "Chittaviveka", Sri Lanka. There are 14 monks in the monastery. 12 of them are Russian-speaking monks. The monastery was visited by those interested in the Teachings of the Buddha and guests from Armenia, Bulgaria, Russia, Ukraine, Portugal, the USA, Switzerland, Australia, and Cyprus. \n \n
+     </string>
+
+    <string name="buttonToLecture1">
+         Upasamanussati \n Remembrance of the peace of Nibbana
+     </string>
+</resources>

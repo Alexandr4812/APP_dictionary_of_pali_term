@@ -10,6 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://releases.aspose.com/java/repo/" }
     }
 }
 rootProject.name = "Dictionary_of_pali_term"

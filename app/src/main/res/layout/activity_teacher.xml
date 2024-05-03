@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_main_color"
+    tools:context=".Teacher.TeacherActivity">
+
+  <ImageButton
+      android:id="@+id/backButton"
+      android:layout_width="51dp"
+      android:layout_height="39dp"
+      android:layout_marginBottom="10dp"
+      android:background="@color/my_main_color"
+      android:contentDescription="возврат в главное меню"
+      android:onClick="toMainAct"
+      android:scaleType="centerInside"
+      android:src="@drawable/button_back"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="1.0"
+      tools:ignore="UsingOnClickInXml" />
+
+  <ScrollView
+      android:id="@+id/viewScrollTeacher"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginBottom="10dp"
+      app:layout_constraintBottom_toTopOf="@+id/backButton"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutScrollTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <ImageView
+          style="@style/imageViewRazdelitelKnopok"
+          tools:ignore="ContentDescription" />
+
+      <Button
+          android:id="@+id/button_teacher_about"
+          style="@style/button_activity_declomation_main"
+          android:backgroundTint="#FFAB91"
+          android:onClick="toTeacherAboutAct"
+          android:text="@string/buttonTeacherAboutText"
+          tools:ignore="UsingOnClickInXml" />
+
+      <ImageView
+          style="@style/imageViewRazdelitelKnopok"
+          tools:ignore="ContentDescription" />
+
+      <Button
+          android:id="@+id/button_lecture1"
+          style="@style/button_activity_declomation_main"
+          android:onClick="toTeacherLec1Act"
+          android:text="@string/buttonToLecture1" />
+
+      <Button
+          android:id="@+id/button_lecture2"
+          style="@style/button_activity_declomation_main"
+
+          android:text="" />
+
+      <Button
+          android:id="@+id/button_lecture3"
+          style="@style/button_activity_declomation_main"
+
+          android:text="" />
+
+    </LinearLayout>
+  </ScrollView>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

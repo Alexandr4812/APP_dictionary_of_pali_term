@@ -96,6 +96,22 @@
                 android:text="@string/mainButtonMonksRules" />
 
             <ImageButton
+                android:id="@+id/button_face_teacher"
+                style="@style/MainButtons"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/mainButtonLiveBuddha"
+                android:src="@drawable/button_teacher"
+                android:onClick="toTeacherAct"
+                tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
+
+            <TextView
+                android:id="@+id/textView_face_teacher"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:text="@string/mainButtonTeachersLecture" />
+
+            <ImageButton
                 android:id="@+id/button_face"
                 style="@style/MainButtons"
                 android:layout_gravity="center"
@@ -109,7 +125,6 @@
                 android:id="@+id/textView4"
                 style="@style/TextViewStyle"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
                 android:text="@string/mainButtonLiveBuddha" />
 
         </LinearLayout>
@@ -117,8 +132,9 @@
 
     <ImageButton
         android:id="@+id/button_menu_exit"
-        android:layout_width="51dp"
-        android:layout_height="39dp"
+        android:layout_width="31dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="@string/todo"
         android:onClick="toPopupMenuExit"
@@ -134,8 +150,9 @@
 
     <ImageButton
         android:id="@+id/button_menu"
-        android:layout_width="61dp"
-        android:layout_height="49dp"
+        android:layout_width="31dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="@string/todo"
         android:onClick="toPopupMenu"

@@ -5,6 +5,7 @@
     <string name="title_dashboard" translatable="false">Dashboard</string>
     <string name="title_notifications" translatable="false">Notifications</string>
     <string name="mainButtonLiveBuddha">Жизнеописание Будды</string>
+    <string name="mainButtonTeachersLecture">Наставления учителя</string>
     <string name="mainButtonStofiDlyaDeclomacii">Строфы для декламаций</string>
     <string name="mainButtonShortSuttas">Палийский Канон</string>
     <string name="mainButtonMonksRules">Монашеские правила и \n церемонии</string>

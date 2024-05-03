@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_main_color"
+    tools:context=".Teacher.TeacherAboutActivity">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/my_main_color"
+        android:onClick="toTeacherAct"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="UsingOnClickInXml" />
+
+    <ImageButton
+        android:id="@+id/imageButtonTeacherHome"
+        android:layout_width="51dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@color/my_main_color"
+        android:foregroundGravity="center"
+        android:contentDescription="возврат в главное меню"
+        android:onClick="toMainAct"
+        android:scaleType="centerInside"
+        android:src="@drawable/button_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/overScrollTextMorningPuja"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/my_main_color"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="0dp"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="261dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="15dp"
+                android:outlineSpotShadowColor="@color/black"
+                android:outlineAmbientShadowColor="@color/black"
+                app:cardUseCompatPadding="true">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="261dp"
+                    android:layout_height="310dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="0dp"
+                    app:srcCompat="@drawable/bhante" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTeachrAbout"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:background="@color/my_main_color"
+                android:layout_height="match_parent"
+                android:textAlignment="textStart"
+                android:textSize="20dp"
+                android:layout_margin="10dp"
+                android:text="" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -83,7 +83,6 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toShow2"
                 app:cardCornerRadius="16dp">
 
                 <ImageView
@@ -99,7 +98,6 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toShow2"
                 android:text="@string/son_mahamayi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +113,6 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toShow3"
                 app:cardCornerRadius="16dp">
 
                 <ImageView
@@ -131,7 +128,6 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toShow3"
                 android:text="@string/rogdenie_sidharthi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -146,7 +142,6 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toShow4"
                 app:cardCornerRadius="16dp">
 
                 <ImageView
@@ -162,7 +157,6 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toShow4"
                 android:text="@string/mudrec_asita"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -177,7 +171,6 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toShow5"
                 app:cardCornerRadius="16dp">
 
                 <ImageView
@@ -193,7 +186,6 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toShow5"
                 android:text="@string/pervoe_dostigenie_dgani"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -207,7 +199,6 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow6"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -238,7 +229,6 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toShowAbilities"
                 app:cardCornerRadius="16dp">
 
                 <ImageView
@@ -268,7 +258,6 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toShow8"
                 app:cardCornerRadius="16dp">
 
                 <ImageView
@@ -298,7 +287,6 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toShow9"
                 app:cardCornerRadius="16dp">
 
                 <ImageView

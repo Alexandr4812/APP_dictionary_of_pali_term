@@ -15,6 +15,7 @@ import com.dhammamobile.dictionary_of_pali_term.Declomation.DeklomationMainActiv
 import com.dhammamobile.dictionary_of_pali_term.LiveBuddha.LiveBuddhaActivity;
 import com.dhammamobile.dictionary_of_pali_term.Rules.RulesActivity;
 import com.dhammamobile.dictionary_of_pali_term.Suttas.SuttasActivity;
+import com.dhammamobile.dictionary_of_pali_term.Teacher.TeacherActivity;
 
 import java.util.Locale;
 
@@ -113,6 +114,10 @@ public class MainActivity extends BaseActivityClass {
 
     public void toAbhidhammaAct(View view){
         startIntentActivityAndFinish(AbhidhammaActivity.class);
+    }
+
+    public void toTeacherAct(View view){
+        startIntentActivityAndFinish(TeacherActivity.class);
     }
 
     public void toMainAct(View view){
