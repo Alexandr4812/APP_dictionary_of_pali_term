@@ -34,6 +34,24 @@ public class TeacherActivity extends BaseActivityClass {
     public void toTeacherLec1Act(View view) {
         startIntentActivityAndFinish(TeacherLec1Activity.class);
     }
+    public void toTeacherLec2Act(View view) {
+        startIntentActivityAndFinish(TeacherLec2Activity.class);
+    }
+    public void toTeacherLec3Act(View view) {
+        startIntentActivityAndFinish(TeacherLec3Activity.class);
+    }
+
+    public void toTeacherLec4Act(View view) {
+        startIntentActivityAndFinish(TeacherLec4Activity.class);
+    }
+
+    public void toTeacherLec5Act(View view) {
+        startIntentActivityAndFinish(TeacherLec5Activity.class);
+    }
+
+    public void toTeacherLec6Act(View view) {
+        startIntentActivityAndFinish(TeacherLec6Activity.class);
+    }
 
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);

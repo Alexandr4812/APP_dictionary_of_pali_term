@@ -13,4 +13,19 @@ Currently, Venerable Nyanasiha Thero is the abbot of the international Buddhist 
     <string name="buttonToLecture1">
          Upasamanussati \n Remembrance of the peace of Nibbana
      </string>
+    <string name="buttonToLecture2">
+         Anicca\n impermanence
+     </string>
+    <string name="buttonToLecture3">
+        Sankhara Loka \n the world of mental formations
+    </string>
+    <string name="buttonToLecture4">
+        Salayatana \n six spheres of perception
+    </string>
+    <string name="buttonToLecture5">
+        18 dhatus \n 18 elements
+    </string>
+    <string name="buttonToLecture6">
+       Vedananupassana \n observation of sensations
+    </string>
 </resources>

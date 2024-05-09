@@ -67,14 +67,32 @@
       <Button
           android:id="@+id/button_lecture2"
           style="@style/button_activity_declomation_main"
-
-          android:text="" />
+          android:onClick="toTeacherLec2Act"
+          android:text="@string/buttonToLecture2" />
 
       <Button
           android:id="@+id/button_lecture3"
           style="@style/button_activity_declomation_main"
+          android:onClick="toTeacherLec3Act"
+          android:text="@string/buttonToLecture3" />
 
-          android:text="" />
+      <Button
+          android:id="@+id/button_lecture4"
+          style="@style/button_activity_declomation_main"
+          android:onClick="toTeacherLec4Act"
+          android:text="@string/buttonToLecture4" />
+
+      <Button
+          android:id="@+id/button_lecture5"
+          style="@style/button_activity_declomation_main"
+          android:onClick="toTeacherLec5Act"
+          android:text="@string/buttonToLecture5" />
+
+      <Button
+          android:id="@+id/button_lecture6"
+          style="@style/button_activity_declomation_main"
+          android:onClick="toTeacherLec6Act"
+          android:text="@string/buttonToLecture6" />
 
     </LinearLayout>
   </ScrollView>

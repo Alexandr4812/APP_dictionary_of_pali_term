@@ -13,4 +13,19 @@
     <string name="buttonToLecture1">
         Упасамануссати \n Памятование о покое ниббаны
     </string>
+    <string name="buttonToLecture2">
+        Аничча \n непостоянство
+    </string>
+    <string name="buttonToLecture3">
+        Санкхара лока \n мир формаций ума
+    </string>
+    <string name="buttonToLecture4">
+        Салаятана \n шесть сфер восприятия
+    </string>
+    <string name="buttonToLecture5">
+       18 дхату \n 18 элементов
+    </string>
+    <string name="buttonToLecture6">
+       Ведананупассана \n наблюдение ощущений
+    </string>
 </resources>
