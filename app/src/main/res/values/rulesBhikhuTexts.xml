@@ -2,4 +2,131 @@
 <resources>
     <string name="buttonSangkhadisesaText">сангхадисеса</string>
     <string name="buttonParajikaDetails">нажмите, чтобы более подробно узнать о правиле</string>
+
+    <string name="buttonInformationAboutUpasampada">Общая информация</string>
+
+    <string name="textForUpasampada">&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;Акт высшего посвящения&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Акт высшего посвящения — это возвышенный дисциплинарный акт в сасане Будды.
+        Это действие, которое можно совершать не везде, как и посвящение в саманеры, а только в симе.
+        Как сказано в книге «“Anujāmi bhikkhave! sabbapaccantimesu janapadesu
+        vinayadharapañcamena gaṇena upsapādetuṃ», Будда заявил, что, если посвящение проводится в срединной стране,
+        оно должно выполняться десятью или более членами Сангхи.
+        Будда заявил, что, если выполнять посвящение в соседних странах; это могут сделать пять членов Сангхи.
+        Будда уточнил, что подразумевается под соседними странами. Это следующее:&lt;br&gt;&lt;br&gt;
+
+        &lt;i&gt;“При рассмотрении относительно срединной страны, областей; вне Города Каджангала на востоке,
+        за рекой Салалавати на юго-западе. За городом Сетаканника  на юге.
+        За деревней браминов по имени Туна на западе. За скалой по имени Усираддхаджа на севере — это окружающие
+        государства.”&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+        Поскольку наша страна (Шри-Ланка) также принадлежит к соседним государствам,
+        акт высшего посвящения могут совершить пять монахов. Именно учителю приходится выполнять множество задач
+        при совершении акта высшего посвящения.&lt;br&gt;&lt;br&gt;
+
+        Когда человек, ожидающий высшего посвящения, прибывает в Симу, первое, что нужно сделать, — это присвоить имя Naga тому, кто ожидает более высокого посвящения, и имя Тиссы наставнику; если трудно произнести текст посвящения, используя их настоящие имена.&lt;br&gt;&lt;br&gt;
+
+        Учитель должен сделать это следующим образом:&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;“Для облегчения произнесения текста посвящения я удаляю старое имя претендента на высшее посвящение и присваиваю ему имя Naga, удаляю старое имя наставника и присваиваю  имя Тисса. Это должен знать тот, кто ожидает высшего посвящения, наставник и Sangha.”&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+        После присвоения имен учитель должен сказать претенденту на высшее посвящение следующее:&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;“Саманера! Вы, пришедшие с ожиданием высшего посвящения с целью пересечения самсары и достижения Ниббаны, должны сначала принять наставника, как Будда изложил «Paṭhamaṃ upajjhaṃ gāhāpetabbo”.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+        Когда это сказано, человек, ожидающий высшего посвящения (upasampadāpekkha), должен присесть перед наставником и произнести три раза:&lt;br&gt;
+        &lt;b&gt;«Uppajjhāyo me Bhante hohi».&lt;/b&gt;&lt;br&gt;
+        Наставнику следует принять это, сказав:&lt;br&gt;
+        &lt;b&gt;«Pāsādikena sampādehi».&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+        После этого учитель должен сказать следующее.&lt;br&gt;
+        &lt;b&gt;«Uppajjhaṃ gāhāpetvā pattacīvaraṃ ācikkhitabbaṃ»&lt;/b&gt;&lt;br&gt;
+        Что означает: «Для вашего сведения я говорю вам, что используется в сасане для обозначения чаши и одежд, потому что так сказал Благословенный, вожатый мира».&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;«Ayaṃ te patto»,&lt;/b&gt;&lt;br&gt;
+        «Саманера! Этот черный сферический сосуд — твоя чаша».&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;«Ayaṃ saṅghāṭi»,&lt;/b&gt;&lt;br&gt;
+        «Эта одежда, разрезанная на части, сшитая в два слоя и окрашенная, в сасане Будды называется saṅghāṭi»&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;«Ayaṃ uttarāsṅgoa»&lt;/b&gt;&lt;br&gt;
+        «Эта одежда, разрезанная на части, сшитая в один слой и окрашенная, в Сасане называется uttarāsṅgoa».&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;«Ayaṃ antaravāsako»,&lt;/b&gt;&lt;br&gt;
+        «Это одеяние, которое вы носите, в Будда-Сасане называется antaravāsako».&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;«Gaccha amumhi okāse tiṭṭhāhi»,&lt;/b&gt;&lt;br&gt;
+        «Саманера! Как заявил Татхагата:&lt;br&gt;
+        &lt;b&gt;«Anujāmi bhikkhave! Ekamantaṃ anusāsitvā saṅghamajjhe antarāyike dhamme pucchituṃ»,&lt;/b&gt;&lt;br&gt;
+        что с человеком, ожидающим высшего посвящения, следует вести собеседование в месте, далеком от Сангхи, неуместно давать вам советы среди Сангхи. Поэтому проходите на то место».&lt;br&gt;&lt;br&gt;
+
+        Когда ему об этом говорят, ожидающий высшего посвящения должен пройти некоторое расстояние, не поворачиваясь спиной к Сангхе, и остаться там. Учитель должен пойти туда и дать совет upasampadāpekkha. Как сказано:&lt;br&gt;
+        &lt;b&gt;«Na bhikkhave! asammatena anusātitabbo. Yo anusāseyya āpatti dukkaṭassa»&lt;/b&gt;&lt;br&gt;
+        Монах не должен давать советы ожидающему посвящения без подтверждения. Ему следует подтвердить себя, произнеся следующую фразу:&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;Suṇātu me bhante! Saṅgho, nāgo āyasmato tissassa upasampadāpekkho, yadi saṅghassa pattakallaṃ ahaṃ nāgaṃ anusāseyyaṃ.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+        После этого, тому кто даёт посвящение следует покинуть Sangha и пойти к ожидающему высшего посвящения и дать следующие советы:&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;Suṇasi, nāga. Ayaṃ te saccakālo, bhūtakālo. Yaṃ jātaṃ taṃ saṅghamajjhe pucchante santaṃ atthī’ti vattabbaṃ, asantaṃ natthi’ti vattabbaṃ. Mā kho vitthāsi, mā kho maṅku ahosi.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+        &lt;i&gt;Саманера по имени Naga, вы, принесший мирскую жизнь в жертву Сасане Будды с целью пересечения сансары.
+        Этот момент, когда вы собираетесь обрести высшее посвящение, состоящее из высшей нравственности,
+        в этой чрезвычайно редкой Будда сасане, — это время честно выражать истину, отвечая на задаваемые вопросы,
+        не скрывая и не пытаясь что-либо скрыть. Когда вас спросят, есть ли у вас какие-либо заболевания,
+        такие как кожные или врожденные, вы должны сообщить о фактическом положении дел. Когда вас расспрашивают
+        в Сангхе, не думайте, что это направлено во вред вам. Не впадайте в неблагие раздумия с грустью при мысли,
+        что расспросы о несуществующих вещах задаются для того, чтобы оскорбить вас.&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;Evaṃ tam pucchissanti, santi te evarūpā ābādhā, kuṭṭhaṃ gaṇḍo, kilāso, soso, apamāro, manusso’si, puriso’si, bhijisso’si, anaṇo’si, nasi rājabhaṭo anuññāto’si mātāpitūhi, paripuṇṇavīsativasso’si, paripuṇṇaṃ te pattacīvaraṃ, kiṃ nāmo’si, ko nāmo te uppajjhāyo.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+        &lt;i&gt;Саманера, так спрашивал Татхагата: «Anujānāmi, bhikkhave, upasampādentena terasa antarāyike dhamme pucchituṃ»,
+        что человека, ожидающего высшего посвящения, следует спросить, обладает ли он какой-либо из тринадцати опасных
+        дхамм. Следующие вопросы задаются посреди Сангхи. Есть ли в вашем организме какое-нибудь заболевание, такое
+        как проказа, сифилис, сыпь? Есть ли у вас на теле фурункулы размером с плоды домбы или лайма? Есть ли на вашей
+        коже белые корочки? Есть ли у вас туберкулез, который разрушает элементы и убивает? Вы страдаете эпилепсией,
+        вызывающей внезапную потерю сознания? Вы человек? Вы мужчина? Вы свободный человек? Не имеете задолженности?
+        Вы не королевский солдат? Родители дали согласие? Вам исполнилось двадцать лет? Ваша чаша и одежда готовы?
+        Как вас зовут? И как имя твоего наставника?&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+        После этого, тот кто проводит посвящение, оставляет там человека, ожидающего высшего посвящения, и идет к Сангхе  для получения их разрешения, произнося:&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;Suṇātu me Bhante saṅgho. Nāgo āyasmato tissassa upasampadāpekkho anusiṭṭho so mayā. yadi saṅghassa pattakallaṃ nāgo āgaccheyya.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+        И принимает ожидающего высшего посвящения среди Сангхи. После этого, как сказано:  «Na bhikkhave,
+        ayācitena upasampādetabbo, yo upsampādeyya āpatti dukkaṭassa», просят человека, ожидающего высшего
+        посвящения, просить о высшем посвящении. В это время кандидат, должен одеться в чивару, закрывающую одно плечо,
+        поклониться Сангхе, присесть, сложив ладони, и попросить о высшем посвящении, говоря:&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;&lt;font color="#046307"&gt;Saṅghaṃ, bhante, upasampadaṃ yācāmi, ullumpatu maṃ, bhante, saṅgho anukampaṃ upādāya. Dutiyampi, bhante,
+        saṅghaṃ upasampadaṃ yācāmi, ullumpatu maṃ, bhante, saṅgho anukampaṃ upādāya. Tatiyampi, bhante, saṅghaṃ
+        upasampadaṃ yācāmi, ullumpatu maṃ, bhante, saṅgho anukampaṃ upādāya.&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+
+        После этого учитель должен подтвердить согласие на расспрос о чертах, которые препятствуют высшему посвящению (antarāyika-dhammas), следующим образом:&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;Suṇātu me Bhante saṅgho, ayaṃ nāgo āyasmato tissassa upasampadāpekkho. Yadi saṅghassa pattakallaṃ ahaṃ nāgaṃ antarāyike dhamme puccheyyaṃ.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+        Высшее посвящение должно быть даровано kammavācā после того, как он спросил об antarāyikadhammas. Задавать вопросы следует следующим образом:&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;Suṇasi nāga! ayaṃ te saccakālo, bhūtakālo, yaṃ jātaṃ taṃ pucchāmi. Santaṃ atthiti vattabbaṃ. Asantaṃ natthiti vattabbaṃ.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;&lt;font color="#EB4C42"&gt;1. Santi te evarūpā ābādhā kuṭṭhaṃ? (natthi bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;&lt;font color="#EB4C42"&gt;2. gaṇḍo? (natthi bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;&lt;font color="#EB4C42"&gt;3. kilāso? (natthi bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;&lt;font color="#EB4C42"&gt;4. soso? (natthi bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;&lt;font color="#EB4C42"&gt;5. apamāro? (natthi bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+
+        &lt;b&gt;&lt;font color="#046307"&gt;2. purisosi? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;&lt;font color="#046307"&gt;3. bhujissosi? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;&lt;font color="#046307"&gt;4. anaṇosi? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;&lt;font color="#046307"&gt;5. nasi rājābhaṭo? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;&lt;font color="#046307"&gt;6. anuññātosi mātāpituhi? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;&lt;font color="#046307"&gt;7. paripuṇṇa vīsati vassosi? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;&lt;font color="#046307"&gt;8. paripuṇṇaṃ te pattacīvaraṃ? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+        &lt;b&gt;9. kiṃ nāmosi? (ahaṃ bhante nāgo nāma)&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+
+
+    </string>
 </resources>

@@ -59,11 +59,22 @@
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
+            <Button
+                android:id="@+id/button_rules_samanera_protocols"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toBhikkhuAboutAct"
+                android:text="@string/buttonInformationAboutUpasampada"
+                tools:ignore="UsingOnClickInXml" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
 
             <Button
                 android:id="@+id/button_rules_upasampada"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toRulesUpasampadaAct"
+                android:onClick="toRlesBhikkhuUpasampada"
                 android:text="@string/button_upasampada" />
 
             <Button
@@ -71,10 +82,63 @@
                 style="@style/button_activity_declomation_main"
                 android:onClick="toRulesPatimokhaAct"
                 android:text="@string/button_patimokha" />
-
         </LinearLayout>
-
-
     </ScrollView>
+
+    <ScrollView
+        android:id="@+id/overScrollTextUpasampada"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE082"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewUpasampada"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonBhikhuHome"
+            style="@style/buttonBackHomeNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="toMainAct"
+            android:visibility="invisible"
+            tools:ignore="UsingOnClickInXml"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/buttonliveToBhikhuFromUps"
+            style="@style/buttonBackNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="tobackBhikhuUps"
+            android:visibility="invisible"
+            tools:ignore="UsingOnClickInXml"
+            tools:visibility="visible" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

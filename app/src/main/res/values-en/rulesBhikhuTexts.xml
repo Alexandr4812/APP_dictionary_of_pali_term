@@ -2,4 +2,8 @@
 <resources>
     <string name="buttonSangkhadisesaText">sanghadisesa</string>
     <string name="buttonParajikaDetails">click to learn more about the rule</string>
+
+    <string name="buttonInformationAboutUpasampada">general information</string>
+
+    <string name="textForUpasampada"></string>
 </resources>

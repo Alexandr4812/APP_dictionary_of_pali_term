@@ -119,7 +119,7 @@
     <ScrollView
         android:id="@+id/overScrollTextObed"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="1500dp"
         android:visibility="invisible"
         tools:visibility="invisible">
 
@@ -144,7 +144,7 @@
     <ScrollView
         android:id="@+id/overScrollTextForgivennes"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="1500dp"
         android:visibility="invisible"
         tools:visibility="invisible">
 

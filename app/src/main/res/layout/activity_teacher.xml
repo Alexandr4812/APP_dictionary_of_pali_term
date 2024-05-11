@@ -43,6 +43,7 @@
         android:orientation="vertical">
 
       <ImageView
+          android:id="@+id/img_1"
           style="@style/imageViewRazdelitelKnopok"
           tools:ignore="ContentDescription" />
 
@@ -55,6 +56,7 @@
           tools:ignore="UsingOnClickInXml" />
 
       <ImageView
+          android:id="@+id/img_2"
           style="@style/imageViewRazdelitelKnopok"
           tools:ignore="ContentDescription" />
 
