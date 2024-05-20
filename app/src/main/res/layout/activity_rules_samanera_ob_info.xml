@@ -215,7 +215,7 @@
     <ScrollView
         android:id="@+id/viewScrollRulesSamaneraPurMoral"
         android:layout_width="match_parent"
-        android:layout_height="1500dp"
+        android:layout_height="match_parent"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -235,7 +235,7 @@
                 android:id="@+id/textViewRulesSamaneraPurMoral"
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="1500dp"
                 android:text="@string/purMoralText" />
         </LinearLayout>
     </ScrollView>

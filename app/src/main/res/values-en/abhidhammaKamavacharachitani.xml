@@ -3,6 +3,8 @@
     <string name="textButtonKamavacharachitani">Consciousness of the sensory environment \n (Kamavacaracittani) - 54</string>
     <string name="textButtonKamavacharamUnwholsome">Unwholesome consciousness \n (Akusalacittāni) – 12</string>
     <string name="textButtonKamavacharamAhetuka">Rootless consciousness \n (Ahetukacittāni) – 18</string>
+    <string name="textButtonKamavacharamBeautiful">Beautiful consciousness \n (Sobhanachittāni) - 24</string>
+
     <string name="textButtonLobhamulachitani">Consciousness rooted in greed \n (Lobhamulachittāni) – 8</string>
     <string name="textButtonDosamulachitani">Consciousness rooted in anger \n (Dosamulachitani) - 2</string>
     <string name="textButtonMohamulachitani">Consciousness rooted in delusion \n (Mohamulachitani) - 2</string>
@@ -11,7 +13,6 @@
 One consciousness accompanied by joy, associated with an erroneous view, arising without prompting. \n \n
 Somanassasahagatam dithigatasampayuttam asankharikam ekam.
 </string>
-
     <string name="textDiscribeKamavacharachitamAhetuka">
 ROOTLESS CONSCIOUSNESS (ahetukacittāni): The word ahetuka means “without roots” and denotes those
         types of consciousness that are devoid of mental factors called hetu - “roots”.
@@ -34,6 +35,10 @@ basic and functional types of consciousness.
 or delusion (moha). Greed and anger, according to the Abhidhamma, are mutually exclusive; they cannot arise in the same citta. Therefore, those states of consciousness in which greed is the main root,
 called “cittas rooted in greed”, there are eight of them in total. Those states in which anger predominates are called “cittas rooted in anger”; there are two such states in total. The third unwholesome root, delusion, is present in every unwholesome consciousness. Thus, in the cittas rooted in greed and rooted in anger, there is also
 and error as the underlying root. However, there are types of consciousness in which delusion arises without the accompaniment of greed or anger. These cittas, of which there are only two, are called “consciousness with complete delusion” or “cittas rooted in delusion.”</string>
+    <string name="textDiscribeKamavacharachitamBeautiful">
+         Beautiful consciousness (sobhanacittāni): Beautiful consciousness includes all cittas, “excluding those that are unwholesome,” that is, the twelve types of unwholesome consciousness, and excluding the “rootless”—eighteen types, completely devoid of roots. This type of consciousness is called beautiful because it is accompanied by beautiful mental factors (cetasikas). \n
+It is necessary to understand that the beautiful (sobhana) has a wider spectrum than the wholesome (kusala). The beautiful includes all the beneficial cittas, as well as the resultant and functional cittas, which have beautiful mental factors. The last [resultant and functional] cittas are not wholesome, they are kammically indeterminate (abyākata). The beautiful ones include the twenty-four sense-sphere cittas, as well as all the subtle-material cittas, the immaterial-sphere cittas, and the supramundane cittas. Those cittas that are not beautiful are called asobhana - "non-beautiful."
+     </string>
 
     <string name="textDiscribeKamavacharachitamUnwholsomeLobha">CONSCIOUSNESS ROOT IN GREED (lobhamulachittāni):
 Abhidhamma begins analysis of three classes
@@ -77,7 +82,6 @@ four types are those that arise without prompting, or
 spontaneous, and four types - arising with motivation,
 or forced.
     </string>
-
     <string name="textDiscribeKamavacharachitamUnwholsomeDosa">
 Consciousness rooted in anger (dosamulachittāni): \n \n
 The second class of unwholesome consciousness analyzed by the Abhidhamma is that rooted in anger, the second of the three unwholesome roots. This consciousness is of two types, distinguished only as arising without prompting or with prompting. Unlike consciousness rooted in greed, which
@@ -99,7 +103,6 @@ each other, their qualities must be distinguished. Discontent
 (domanassa) is the experience of an unpleasant feeling, and disgust (pat igha) is the mental attitude of ill will or irritation. In terms of the five clusters, dissatisfaction is included in the cluster of feelings (vedanākkhandha), while
 while disgust is included in the accumulation of mental formations (sankhārakkhandha).
 </string>
-
     <string name="textDiscribeKamavacharachitamUnwholsomeMoha">
         CONSCIOUSNESS ROOT IN MISTAKE (mohamulachittāni): \n \n
 This last class of unwholesome consciousness includes

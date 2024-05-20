@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textButtonWholsome">Beneficial consciousness of the sensory environment \n (Kāmāvacara-kusalacittāni) - 8</string>
+    <string name="textButtonResult">Resultant consciousness of the sensory environment \n (Kāmāvacara-vipākacittāni) - 8</string>
+    <string name="textButtonFunction">Functional consciousness of the sensory environment \n (Kāmāvacara-kriyaācittāni) - 8</string>
+
+    <string name="textButtonKusalachitaniKoren">root</string>
+    <string name="textButtonKusalachitaniFunkciya">function</string>
+    <string name="textButtonKusalachitaniKombinaciya">combination with mental factors</string>
+
+    <string name="textDescriptionKusalachitani">
+         BENEFITIVE CONSCIOUSNESS OF THE SENSORY ENVIRONMENT (kāmāvacarakusalacittāni): \n
+This class of consciousness is subdivided
+into eight types based on three principles of dichotomization. \n
+The first principle is the accompanying
+the feeling, which in four cases is joy (somanassa), that is, a pleasant mental feeling, and in four
+cases - calmness (upekkhā), that is, a neutral mental feeling; \n
+the second principle is the presence or
+lack of knowledge; \n
+and the third - a couple without prompting or with prompting. \n
+ASSOCIATED WITH KNOWLEDGE (nānasampayutta): \n
+Knowledge comprehends things as they are (yathāsabhāvam).
+In consciousness associated with knowledge, the word nāna refers to the mental factor wisdom (pannā-cetasika), which also means “the root of non-delusion” (amoha). Consciousness dissociated from knowledge (nanavippayutta) is devoid of this wisdom factor, but there is no ignorance (avijja) or delusion (moha) in it, which applies only to unwholesome consciousnesses. \n
+WITHOUT PROCESS:\n
+According to the commentary, someone does a good deed without prompting, due to good physical and mental fitness, suitable food, climate, etc., and also as a result of performing similar actions in the past. Motivation occurs either through motivation from another, or after independent deliberation. \n
+WITH ROOTS (SAKHETUKA): \n
+The four wholesome cittas associated with knowledge have all three wholesome roots; the four dissociated from knowledge have non-greed or generosity and non-malice or loving-kindness, but lack non-delusion.
+</string>
+    <string name="textDescriptionVipakachitani">
+         RESULTING CONSCIOUSNESS OF THE SENSORY ENVIRONMENT WITH ROOTS (sahetukakāmāvacaravipākacittāni): \n
+Just as there are eight beneficial types of consciousness, so there are eight corresponding types of resultant consciousness. These eight cittas are the kammic effects of beneficial
+citta of the sensory environment. To distinguish them from the rootless resultants resulting from wholesome kamma, they are described as sahetuka, “with roots.”
+Both classes are rootless wholesome resultants,
+and the root resultants are produced by the same eight wholesome cittas, but these two groups differ from each other in qualities and functions.
+</string>
+    <string name="textDescriptionKriyachitani">
+         FUNCTIONAL CONSCIOUSNESS OF THE SENSORY ENVIRONMENT WITH ROOTS (sahetukāmāvacharakriyaācittāni): \n
+While the eight wholesome sense-sphere cittas arise among laymen and practitioners [who have achieved initial Enlightenment], they
+do not arise among Buddhas and Arahants—those who have transcended the cycle of kamma and future becoming in the dimensions of rebirth.
+However, eight types of consciousness arise in the Buddhas and Arahants, which are their exact copies. They are called kriya (kiriya), or "functional cittas" because they simply perform their function without leaving any kammic contribution. Since a buddha or arahant has eradicated all traces of ignorance and craving, which are the causes of rebirth, their good deeds cannot generate future results. They simply appear, perform some function and then disappear without a trace.
+</string>
+
+    <string name="textForTextViewFirstCategoryKusalachitani">8 Beneficial Consciousnesses of the Sensory Environment \n (Kāmāvacara-kusalachittāni)</string>
+
+    <string name="textButton1Kusalachitani">
+         1 \n One consciousness, accompanied by joy, associated with knowledge, without motivation.
+         \n \nSomanassahagatam nānasampayuttam asankharikam ekam.</string>
+    <string name="textButton2Kusalachitani">
+         2 \nOne consciousness, accompanied by joy, associated with knowledge, with motivation.
+         \n \n Somanassahagatam nānasampayuttam sasankhārikam ekam.</string>
+    <string name="textButton3Kusalachitani">
+         3 \nOne consciousness, accompanied by joy, dissociated from knowledge, without motivation.
+         \n \nSomanassasahagatam nānavippayuttam asankharikam ekam.</string>
+    <string name="textButton4Kusalachitani">
+         4 \nOne consciousness, accompanied by joy, dissociated from knowledge, with motivation.
+         \n \nSomanassahagatam nānavippayuttam sasankhārikam ekam.</string>
+    <string name="textButton5Kusalachitani">
+         5 \nOne consciousness, accompanied by calmness, associated with knowledge, without motivation.
+         \n \nUpekkhāsahagatam nānasampayuttam asankhārikam ekam.</string>
+    <string name="textButton6Kusalachitani">
+         6 \nOne consciousness, accompanied by calmness, associated with knowledge, with motivation.
+         \n \nUpekkhāsahagatam nānasampayuttam sasankhārikam ekam.</string>
+    <string name="textButton7Kusalachitani">
+         7 \nOne consciousness, accompanied by calm, dissociated from knowledge, without motivation.
+         \n \n Upekkhāsahagatam nānavippayuttam asankhārikam ekam.</string>
+    <string name="textButton8Kusalachitani">
+         8 \nOne consciousness, accompanied by calm, dissociated from knowledge, with motivation.
+         \n \nUpekkhāsahagatam nānavippayuttam sasankhārikam ekan ti.</string>
+    <string name="textButtonKusalachitaniSumm">
+         Thus, there are a total of 8 types of wholesome sensory environment consciousness with roots.
+         \n \n Imāni attha pi sahetukakāmāvacarakusalacittāni nāma.</string>
+
+    <string name="textKusalachitani1">
+         EXAMPLE: Someone joyfully performs a generous act, doing it spontaneously, without prompting, realizing that it is a beneficial action.
+     </string>
+    <string name="textKusalachitani2">
+         EXAMPLE: Someone performs the same good deed, also with understanding, but after some thought or motivation on the part of someone else.
+     </string>
+    <string name="textKusalachitani3">
+         EXAMPLE: Someone joyfully performs a generous act spontaneously, without prompting, but also without understanding that this is a beneficial act.
+     </string>
+    <string name="textKusalachitani4">
+         EXAMPLE: Someone happily does a generous act without understanding, reflection or motivation from someone else.
+     </string>
+    <string name="textKusalachitani5_6">
+         EXAMPLE: These types of consciousness should be understood in the same way as the previous four, but with a neutral feeling instead of a joyful one.
+     </string>
+
+    <string name="textKusalachitaniKorenTwo">ROOT: \n Non-greed (Alobha) \n Non-anger (Adosa) </string>
+    <string name="textKusalachitaniKorenThri">ROOT: \n Non-greed (Alobha) \n Non-anger (Adosa) \n Wisdom (Pañña) </string>
+
+    <string name="textKusalachitaniFunkciyaJavana">FUNCTION: Functions as a jawana.</string>
+
+    <string name="textKusalachitaniKombinaciya1">
+         INCLUDED IN A COMBINATION WITH 38 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Enthusiasm (Pīti)\n
+     >> 13. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 14. Faith (Saddhā) \n
+     >> 15. Awareness (Sati)\n
+     >> 16. Shame (Hiri)\n
+     >> 17. Fear of bad deeds (Ottappa) \n
+     >> 18. Non-greed (Alobha) \n
+     >> 19. Non-anger (Adosa)\n
+     >> 20. Neutrality of mind (Tatramajjhattatā) \n
+     >> 21. Balance ment. body (Kāyapassaddhi)\n
+     >> 22. Balance of consciousness (Cittapassaddhi)\n
+     >> 23. Lightness of the mental body (Kāyalahutā) \n
+     >> 24. Ease of consciousness (Cittalahutā)\n
+     >> 25. Flexibility of the mental body (Kāyamudutā) \n
+     >> 26. Flexibility of consciousness (Cittamudutā)\n
+     >> 27. Manageability ment. body (Kāyakammaññatā)\n
+     >> 28. Controllability of consciousness (Cittakammaññatā) \n
+     >> 29. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 30. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 31. Straightness of the mental body (Kāyujjukatā) \n
+     >> 32. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+         ABSTINENCE\n
+     >> 33. Correct speech (Sammāvācā) \n
+     >> 34. Right Action (Sammākammanta)\n
+     >> 35. The right way to earn a living (Sammā-ājīva) \n\n
+         INFINITY\n
+     >> 36. Compassion (Karuṇā) \n
+     >> 37. Altruistic joy (Muditā)\n
+     >> 38. Wisdom (Pañña) \n
+     </string>
+    <string name="textKusalachitaniKombinaciya2">
+         INCLUDED IN A COMBINATION WITH 38 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Enthusiasm (Pīti)\n
+     >> 13. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 14. Faith (Saddhā) \n
+     >> 15. Awareness (Sati)\n
+     >> 16. Shame (Hiri)\n
+     >> 17. Fear of bad deeds (Ottappa) \n
+     >> 18. Non-greed (Alobha) \n
+     >> 19. Non-anger (Adosa)\n
+     >> 20. Neutrality of mind (Tatramajjhattatā) \n
+     >> 21. Balance ment. body (Kāyapassaddhi)\n
+     >> 22. Balance of consciousness (Cittapassaddhi)\n
+     >> 23. Lightness of the mental body (Kāyalahutā) \n
+     >> 24. Ease of consciousness (Cittalahutā)\n
+     >> 25. Flexibility of the mental body (Kāyamudutā) \n
+     >> 26. Flexibility of consciousness (Cittamudutā)\n
+     >> 27. Manageability ment. body (Kāyakammaññatā)\n
+     >> 28. Controllability of consciousness (Cittakammaññatā) \n
+     >> 29. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 30. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 31. Straightness of the mental body (Kāyujjukatā) \n
+     >> 32. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+         ABSTINENCE\n
+     >> 33. Correct speech (Sammāvācā) \n
+     >> 34. Right Action (Sammākammanta)\n
+     >> 35. The right way to earn a living (Sammā-ājīva) \n\n
+         INFINITY\n
+     >> 36. Compassion (Karuṇā) \n
+     >> 37. Altruistic joy (Muditā)\n
+     >> 38. Wisdom (Pañña) \n
+     </string>
+    <string name="textKusalachitaniKombinaciya3">
+         INCLUDED IN A COMBINATION WITH 37 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Enthusiasm (Pīti)\n
+     >> 13. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 14. Faith (Saddhā) \n
+     >> 15. Awareness (Sati)\n
+     >> 16. Shame (Hiri)\n
+     >> 17. Fear of bad deeds (Ottappa) \n
+     >> 18. Non-greed (Alobha) \n
+     >> 19. Non-anger (Adosa)\n
+     >> 20. Neutrality of mind (Tatramajjhattatā) \n
+     >> 21. Balance ment. body (Kāyapassaddhi)\n
+     >> 22. Balance of consciousness (Cittapassaddhi)\n
+     >> 23. Lightness of the mental body (Kāyalahutā) \n
+     >> 24. Ease of consciousness (Cittalahutā)\n
+     >> 25. Flexibility of the mental body (Kāyamudutā) \n
+     >> 26. Flexibility of consciousness (Cittamudutā)\n
+     >> 27. Manageability ment. body (Kāyakammaññatā)\n
+     >> 28. Controllability of consciousness (Cittakammaññatā) \n
+     >> 29. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 30. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 31. Straightness of the mental body (Kāyujjukatā) \n
+     >> 32. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+         ABSTINENCE\n
+     >> 33. Correct speech (Sammāvācā) \n
+     >> 34. Right Action (Sammākammanta)\n
+     >> 35. The right way to earn a living (Sammā-ājīva) \n\n
+         INFINITY\n
+     >> 36. Compassion (Karuṇā) \n
+     >> 37. Altruistic joy (Muditā)\n
+     </string>
+    <string name="textKusalachitaniKombinaciya4">
+         INCLUDED IN A COMBINATION WITH 37 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa) \n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Enthusiasm (Pīti)\n
+     >> 13. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 14. Faith (Saddhā) \n
+     >> 15. Awareness (Sati)\n
+     >> 16. Shame (Hiri)\n
+     >> 17. Fear of bad deeds (Ottappa) \n
+     >> 18. Non-greed (Alobha) \n
+     >> 19. Non-anger (Adosa)\n
+     >> 20. Neutrality of mind (Tatramajjhattatā) \n
+     >> 21. Balance ment. body (Kāyapassaddhi)\n
+     >> 22. Balance of consciousness (Cittapassaddhi)\n
+     >> 23. Lightness of the mental body (Kāyalahutā) \n
+     >> 24. Ease of consciousness (Cittalahutā)\n
+     >> 25. Flexibility of the mental body (Kāyamudutā) \n
+     >> 26. Flexibility of consciousness (Cittamudutā)\n
+     >> 27. Manageability ment. body (Kāyakammaññatā)\n
+     >> 28. Controllability of consciousness (Cittakammaññatā) \n
+     >> 29. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 30. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 31. Straightness of the mental body (Kāyujjukatā) \n
+     >> 32. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+         ABSTINENCE\n
+     >> 33. Correct speech (Sammāvācā) \n
+     >> 34. Right Action (Sammākammanta)\n
+     >> 35. The right way to earn a living (Sammā-ājīva) \n\n
+         INFINITY\n
+     >> 36. Compassion (Karuṇā) \n
+     >> 37. Altruistic joy (Muditā)\n
+     </string>
+    <string name="textKusalachitaniKombinaciya5">
+         INCLUDED IN A COMBINATION WITH 37 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 13. Faith (Saddhā) \n
+     >> 14. Awareness (Sati)\n
+     >> 15. Shame (Hiri)\n
+     >> 16. Fear of bad deeds (Ottappa) \n
+     >> 17. Non-greed (Alobha) \n
+     >> 18. Non-anger (Adosa)\n
+     >> 19. Neutrality of mind (Tatramajjhattatā) \n
+     >> 20. Balance ment. body (Kāyapassaddhi)\n
+     >> 21. Balance of consciousness (Cittapassaddhi)\n
+     >> 22. Lightness of the mental body (Kāyalahutā) \n
+     >> 23. Ease of consciousness (Cittalahutā) \n
+     >> 24. Flexibility of the mental body (Kāyamudutā) \n
+     >> 25. Flexibility of consciousness (Cittamudutā)\n
+     >> 26. Manageability ment. body (Kāyakammaññatā)\n
+     >> 27. Controllability of consciousness (Cittakammaññatā) \n
+     >> 28. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 39. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 30. Straightness of the mental body (Kāyujjukatā) \n
+     >> 31. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+         ABSTINENCE\n
+     >> 32. Correct speech (Sammāvācā) \n
+     >> 33. Right Action (Sammākammanta)\n
+     >> 34. The right way to earn a living (Sammā-ājīva) \n\n
+         INFINITY\n
+     >> 35. Compassion (Karuṇā) \n
+     >> 36. Altruistic joy (Muditā)\n
+         >> 37. Wisdom (Pañña) \n
+     </string>
+    <string name="textKusalachitaniKombinaciya6">
+         INCLUDED IN A COMBINATION WITH 37 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 13. Faith (Saddhā) \n
+     >> 14. Awareness (Sati)\n
+     >> 15. Shame (Hiri)\n
+     >> 16. Fear of bad deeds (Ottappa) \n
+     >> 17. Non-greed (Alobha) \n
+     >> 18. Non-anger (Adosa)\n
+     >> 19. Neutrality of mind (Tatramajjhattatā) \n
+     >> 20. Balance ment. body (Kāyapassaddhi)\n
+     >> 21. Balance of consciousness (Cittapassaddhi)\n
+     >> 22. Lightness of the mental body (Kāyalahutā) \n
+     >> 23. Ease of consciousness (Cittalahutā) \n
+     >> 24. Flexibility of the mental body (Kāyamudutā) \n
+     >> 25. Flexibility of consciousness (Cittamudutā)\n
+     >> 26. Manageability ment. body (Kāyakammaññatā)\n
+     >> 27. Controllability of consciousness (Cittakammaññatā) \n
+     >> 28. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 39. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 30. Straightness of the mental body (Kāyujjukatā) \n
+     >> 31. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+         ABSTINENCE\n
+     >> 32. Correct speech (Sammāvācā) \n
+     >> 33. Right Action (Sammākammanta)\n
+     >> 34. The right way to earn a living (Sammā-ājīva) \n\n
+         INFINITY\n
+     >> 35. Compassion (Karuṇā) \n
+     >> 36. Altruistic joy (Muditā)\n
+         >> 37. Wisdom (Pañña) \n
+     </string>
+    <string name="textKusalachitaniKombinaciya7">
+         INCLUDED IN A COMBINATION WITH 36 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 13. Faith (Saddhā) \n
+     >> 14. Awareness (Sati)\n
+     >> 15. Shame (Hiri)\n
+     >> 16. Fear of bad deeds (Ottappa) \n
+     >> 17. Non-greed (Alobha) \n
+     >> 18. Non-anger (Adosa)\n
+     >> 19. Neutrality of mind (Tatramajjhattatā) \n
+     >> 20. Balance ment. body (Kāyapassaddhi)\n
+     >> 21. Balance of consciousness (Cittapassaddhi)\n
+     >> 22. Lightness of the mental body (Kāyalahutā) \n
+     >> 23. Ease of consciousness (Cittalahutā) \n
+     >> 24. Flexibility of the mental body (Kāyamudutā) \n
+     >> 25. Flexibility of consciousness (Cittamudutā)\n
+     >> 26. Manageability ment. body (Kāyakammaññatā)\n
+     >> 27. Controllability of consciousness (Cittakammaññatā) \n
+     >> 28. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 39. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 30. Straightness of the mental body (Kāyujjukatā) \n
+     >> 31. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+         ABSTINENCE\n
+     >> 32. Correct speech (Sammāvācā) \n
+     >> 33. Right Action (Sammākammanta)\n
+     >> 34. The right way to earn a living (Sammā-ājīva) \n\n
+         INFINITY\n
+     >> 35. Compassion (Karuṇā) \n
+     >> 36. Altruistic joy (Muditā)\n
+     </string>
+    <string name="textKusalachitaniKombinaciya8">
+         INCLUDED IN A COMBINATION WITH 36 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 13. Faith (Saddhā) \n
+     >> 14. Awareness (Sati)\n
+     >> 15. Shame (Hiri)\n
+     >> 16. Fear of bad deeds (Ottappa) \n
+     >> 17. Non-greed (Alobha) \n
+     >> 18. Non-anger (Adosa)\n
+     >> 19. Neutrality of mind (Tatramajjhattatā) \n
+     >> 20. Balance ment. body (Kāyapassaddhi)\n
+     >> 21. Balance of consciousness (Cittapassaddhi)\n
+     >> 22. Lightness of the mental body (Kāyalahutā) \n
+     >> 23. Ease of consciousness (Cittalahutā) \n
+     >> 24. Flexibility of the mental body (Kāyamudutā) \n
+     >> 25. Flexibility of consciousness (Cittamudutā)\n
+     >> 26. Manageability ment. body (Kāyakammaññatā)\n
+     >> 27. Controllability of consciousness (Cittakammaññatā) \n
+     >> 28. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 39. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 30. Straightness of the mental body (Kāyujjukatā) \n
+     >> 31. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+         ABSTINENCE\n
+     >> 32. Correct speech (Sammāvācā) \n
+     >> 33. Right Action (Sammākammanta)\n
+     >> 34. The right way to earn a living (Sammā-ājīva) \n\n
+         INFINITY\n
+     >> 35. Compassion (Karuṇā) \n
+     >> 36. Altruistic joy (Muditā)\n
+     </string>
+
+    <string name="textKusalachitaniResult">
+         These eight types of consciousness are called wholesome (kusala) or beneficial (punna) because they suppress defilements and produce good results. They arise in laymen (puthujjana) [people absorbed in worldly interests] and in practitioners (sekkha) - in noble disciples in the three lower stages of Enlightenment: \n
+stream-enterers, once returning and not returning - when they perform noble bodily and verbal actions, and also when they generate beneficial states of mind pertaining to the sensory environment. These cittas do not arise in arahants whose actions do not have
+kammic potential. \n \n
+
+WITH ROOTS (SAHETUKA): The four wholesome cittas associated with knowledge have all three wholesome roots; the four dissociated from knowledge have non-greed or generosity and non-malice or loving-kindness, but lack non-delusion.
+     </string>
+</resources>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context="com.dhammamobile.dictionary_of_pali_term.Abhidhamma.AbhidhammaChittasKamavacharamActivity">
+    tools:context=".Abhidhamma.AbhidhammaChittasKamavacharamBeautifulActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -14,7 +14,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
-        android:onClick="toAbhidhammaChittasAct"
+        android:onClick="toAbhidhammaChittasKamavacharamAct"
         android:scaleType="centerInside"
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
-        android:id="@+id/viewScrollAbhidhammaMentalfakt"
+        android:id="@+id/viewScrollAbhidhammaChittasKamavacharaBeautiful"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollAbhidhammaChittasKamavachara"
+            android:id="@+id/linearLayoutScrollAbhidhammaChittasKamavacharaBeautiful"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -62,71 +62,73 @@
                 tools:ignore="ContentDescription" />
 
             <Button
-                android:id="@+id/infoButtonKamamavacharaUwholsome"
+                android:id="@+id/infoButtonKamamavacharamWholsome"
                 style="@style/infoButton"
                 android:foreground="@drawable/info7"
-                android:onClick="onButtonClickAbhidhammaKammavacharamUnwholsome"
+                android:onClick="onButtonClickAbhidhammaKammavacharamWholsome"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
-                android:id="@+id/button_abhidhamma_chittas_kamavachara1"
+                android:id="@+id/button_abhidhamma_chittas_kamavachara_beautiful1"
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="toAbhidhammaChittasKamavacharamUnwholsomeAct"
-                android:text="@string/textButtonKamavacharamUnwholsome"
+                android:onClick="toAbhidhammaChittasKamavacharamBeautifulKusalachitaniAct"
+                android:text="@string/textButtonWholsome"
                 tools:ignore="UsingOnClickInXml" />
 
             <TextView
-                android:id="@+id/textViewAbhidhammaKammavacharamUnwholsome"
+                android:id="@+id/textViewAbhidhammaKammavacharamWholsome"
                 style="@style/TextMessageStyleAbhidyamma"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:visibility="invisible"/>
 
+
             <Button
-                android:id="@+id/infoButtonKamamavacharaAhetuka"
+                android:id="@+id/infoButtonKamamavacharamResult"
                 style="@style/infoButton"
                 android:foreground="@drawable/info7"
-                android:onClick="onButtonClickAbhidhammaKammavacharamAhetuka"
+                android:onClick="onButtonClickAbhidhammaKammavacharamResult"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
-                android:id="@+id/button_abhidhamma_chittas_kamavachara2"
+                android:id="@+id/button_abhidhamma_chittas_kamavachara_beautiful2"
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="toAbhidhammaChittasKamavacharamAhetukaAct"
-                android:text="@string/textButtonKamavacharamAhetuka"
+
+                android:text="@string/textButtonResult"
                 tools:ignore="UsingOnClickInXml" />
 
             <TextView
-                android:id="@+id/textViewAbhidhammaKammavacharamAhetuka"
+                android:id="@+id/textViewAbhidhammaKammavacharamResult"
                 style="@style/TextMessageStyleAbhidyamma"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:visibility="invisible"/>
 
+
             <Button
-                android:id="@+id/infoButtonKamamavacharaBeautiful"
+                android:id="@+id/infoButtonKamamavacharamFunсtion"
                 style="@style/infoButton"
                 android:foreground="@drawable/info7"
-                android:onClick="onButtonClickAbhidhammaKammavacharamBeautiful"
+                android:onClick="onButtonClickAbhidhammaKammavacharamFunktion"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
-                android:id="@+id/button_abhidhamma_chittas_kamavachara3"
+                android:id="@+id/button_abhidhamma_chittas_kamavachara_beautiful3"
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="toAbhidhammaChittasKamavacharamBeautifulAct"
-                android:text="@string/textButtonKamavacharamBeautiful"
+
+                android:text="@string/textButtonFunction"
                 tools:ignore="UsingOnClickInXml" />
 
             <TextView
-                android:id="@+id/textViewAbhidhammaKammavacharamBeautiful"
+                android:id="@+id/textViewAbhidhammaKammavacharamFunktion"
                 style="@style/TextMessageStyleAbhidyamma"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -134,5 +136,4 @@
                 android:visibility="invisible"/>
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

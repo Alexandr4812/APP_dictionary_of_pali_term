@@ -17,6 +17,12 @@
         android:versionName="3.1"
         tools:targetApi="33">
         <activity
+            android:name=".Abhidhamma.AbhidhammaChittasKamavacharamBeautifulKusalachitaniActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Abhidhamma.AbhidhammaChittasKamavacharamBeautifulActivity"
+            android:exported="false" />
+        <activity
             android:name=".Rules.RulesBhikkhuAboutActivity"
             android:exported="false" />
         <activity
