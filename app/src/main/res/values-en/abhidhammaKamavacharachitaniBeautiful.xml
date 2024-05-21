@@ -41,6 +41,7 @@ However, eight types of consciousness arise in the Buddhas and Arahants, which a
 </string>
 
     <string name="textForTextViewFirstCategoryKusalachitani">8 Beneficial Consciousnesses of the Sensory Environment \n (Kāmāvacara-kusalachittāni)</string>
+    <string name="textForTextViewFirstCategoryVipakachitani">8 Resultant consciousnesses of the sensory environment \n (Kāmāvacara-vipakacittāni)</string>
 
     <string name="textButton1Kusalachitani">
          1 \n One consciousness, accompanied by joy, associated with knowledge, without motivation.
@@ -69,6 +70,34 @@ However, eight types of consciousness arise in the Buddhas and Arahants, which a
     <string name="textButtonKusalachitaniSumm">
          Thus, there are a total of 8 types of wholesome sensory environment consciousness with roots.
          \n \n Imāni attha pi sahetukakāmāvacarakusalacittāni nāma.</string>
+
+    <string name="textButton1Vipakachitani">
+         1 \nOne consciousness, accompanied by joy, associated with knowledge, without motivation.
+         \n \nSomanassahagatam nānasampayuttam asankharikam ekam.</string>
+    <string name="textButton2Vipakachitani">
+         2 \nOne consciousness, accompanied by joy, associated with knowledge, with motivation.
+         \n \n Somanassahagatam nānasampayuttam sasankhārikam ekam.</string>
+    <string name="textButton3Vipakachitani">
+         3 \nOne consciousness, accompanied by joy, dissociated from knowledge, without motivation.
+         \n \nSomanassasahagatam nānavippayuttam asankharikam ekam.</string>
+    <string name="textButton4Vipakachitani">
+         4 \nOne consciousness, accompanied by joy, dissociated from knowledge, with motivation.
+         \n \n Somanassahagatam nānavippayuttam sasankhārikam ekam.</string>
+    <string name="textButton5Vipakachitani">
+         5 \nOne consciousness, accompanied by calmness, associated with knowledge, without motivation.
+         \n \n Upekkhāsahagatam nānasampayuttam asankhārikam ekam.</string>
+    <string name="textButton6Vipakachitani">
+         6 \nOne consciousness, accompanied by calmness, associated with knowledge, with motivation.
+         \n \nUpekkhāsahagatam nānasampayuttam sasankhārikam ekam.</string>
+    <string name="textButton7Vipakachitani">
+         7 \nOne consciousness, accompanied by calm, dissociated from knowledge, without motivation.
+         \n \nUpekkhāsahagatam nānavippayuttam asankhārikam ekam.</string>
+    <string name="textButton8Vipakachitani">
+         8 \nOne consciousness, accompanied by calm, dissociated from knowledge, with motivation.
+         \n \nUpekkhāsahagatam nānavippayuttam sasankhārikam ekan ti.</string>
+    <string name="textButtonVipakachitaniSumm">
+         Thus, there are a total of eight types of resultant consciousness of the sensory environment by the skorni.
+         \n \n Imāni attha pi sahetuka-kāmāvacara-vipākacittāni nāma.</string>
 
     <string name="textKusalachitani1">
          EXAMPLE: Someone joyfully performs a generous act, doing it spontaneously, without prompting, realizing that it is a beneficial action.
@@ -460,6 +489,315 @@ However, eight types of consciousness arise in the Buddhas and Arahants, which a
      >> 36. Altruistic joy (Muditā)\n
      </string>
 
+    <string name="textVipakachitaniKombinaciya1">
+         INCLUDED IN A COMBINATION WITH 33 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Enthusiasm (Pīti)\n
+     >> 13. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 14. Faith (Saddhā) \n
+     >> 15. Awareness (Sati)\n
+     >> 16. Shame (Hiri)\n
+     >> 17. Fear of bad deeds (Ottappa) \n
+     >> 18. Non-greed (Alobha) \n
+     >> 19. Non-anger (Adosa)\n
+     >> 20. Neutrality of mind (Tatramajjhattatā) \n
+     >> 21. Balance ment. body (Kāyapassaddhi)\n
+     >> 22. Balance of consciousness (Cittapassaddhi)\n
+     >> 23. Lightness of the mental body (Kāyalahutā) \n
+     >> 24. Ease of consciousness (Cittalahutā)\n
+     >> 25. Flexibility of the mental body (Kāyamudutā) \n
+     >> 26. Flexibility of consciousness (Cittamudutā)\n
+     >> 27. Manageability ment. body (Kāyakammaññatā)\n
+     >> 28. Controllability of consciousness (Cittakammaññatā) \n
+     >> 29. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 30. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 31. Straightness of the mental body (Kāyujjukatā) \n
+     >> 32. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+     >> 33. Wisdom (Pañña) \n
+     </string>
+    <string name="textVipakachitaniKombinaciya2">
+         INCLUDED IN A COMBINATION WITH 33 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Enthusiasm (Pīti)\n
+     >> 13. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 14. Faith (Saddhā) \n
+     >> 15. Awareness (Sati)\n
+     >> 16. Shame (Hiri)\n
+     >> 17. Fear of bad deeds (Ottappa) \n
+     >> 18. Non-greed (Alobha) \n
+     >> 19. Non-anger (Adosa)\n
+     >> 20. Neutrality of mind (Tatramajjhattatā) \n
+     >> 21. Balance ment. body (Kāyapassaddhi)\n
+     >> 22. Balance of consciousness (Cittapassaddhi)\n
+     >> 23. Lightness of the mental body (Kāyalahutā) \n
+     >> 24. Ease of consciousness (Cittalahutā)\n
+     >> 25. Flexibility of the mental body (Kāyamudutā) \n
+     >> 26. Flexibility of consciousness (Cittamudutā)\n
+     >> 27. Manageability ment. body (Kāyakammaññatā)\n
+     >> 28. Controllability of consciousness (Cittakammaññatā) \n
+     >> 29. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 30. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 31. Straightness of the mental body (Kāyujjukatā) \n
+     >> 32. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+     >> 33. Wisdom (Pañña) \n
+     </string>
+    <string name="textVipakachitaniKombinaciya3">
+         INCLUDED IN A COMBINATION WITH 32 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Enthusiasm (Pīti)\n
+     >> 13. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 14. Faith (Saddhā) \n
+     >> 15. Awareness (Sati)\n
+     >> 16. Shame (Hiri)\n
+     >> 17. Fear of bad deeds (Ottappa) \n
+     >> 18. Non-greed (Alobha) \n
+     >> 19. Non-anger (Adosa)\n
+     >> 20. Neutrality of mind (Tatramajjhattatā) \n
+     >> 21. Balance ment. body (Kāyapassaddhi)\n
+     >> 22. Balance of consciousness (Cittapassaddhi)\n
+     >> 23. Lightness of the mental body (Kāyalahutā) \n
+     >> 24. Ease of consciousness (Cittalahutā)\n
+     >> 25. Flexibility of the mental body (Kāyamudutā) \n
+     >> 26. Flexibility of consciousness (Cittamudutā)\n
+     >> 27. Manageability ment. body (Kāyakammaññatā)\n
+     >> 28. Controllability of consciousness (Cittakammaññatā) \n
+     >> 29. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 30. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 31. Straightness of the mental body (Kāyujjukatā) \n
+     >> 32. Directness of consciousness (Cittujjukatā) \n\n
+     </string>
+    <string name="textVipakachitaniKombinaciya4">
+         INCLUDED IN A COMBINATION WITH 32 CHETASIKAs: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Enthusiasm (Pīti)\n
+     >> 13. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 14. Faith (Saddhā) \n
+     >> 15. Awareness (Sati)\n
+     >> 16. Shame (Hiri)\n
+     >> 17. Fear of bad deeds (Ottappa) \n
+     >> 18. Non-greed (Alobha) \n
+     >> 19. Non-anger (Adosa)\n
+     >> 20. Neutrality of mind (Tatramajjhattatā) \n
+     >> 21. Balance ment. body (Kāyapassaddhi)\n
+     >> 22. Balance of consciousness (Cittapassaddhi)\n
+     >> 23. Lightness of the mental body (Kāyalahutā) \n
+     >> 24. Ease of consciousness (Cittalahutā)\n
+     >> 25. Flexibility of the mental body (Kāyamudutā) \n
+     >> 26. Flexibility of consciousness (Cittamudutā)\n
+     >> 27. Manageability ment. body (Kāyakammaññatā)\n
+     >> 28. Controllability of consciousness (Cittakammaññatā) \n
+     >> 29. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 30. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 31. Straightness of the mental body (Kāyujjukatā) \n
+     >> 32. Directness of consciousness (Cittujjukatā) \n\n
+     </string>
+    <string name="textVipakachitaniKombinaciya5">
+         INCLUDED IN A COMBINATION WITH 32 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 13. Faith (Saddhā) \n
+     >> 14. Awareness (Sati)\n
+     >> 15. Shame (Hiri)\n
+     >> 16. Fear of bad deeds (Ottappa) \n
+     >> 17. Non-greed (Alobha) \n
+     >> 18. Non-anger (Adosa)\n
+     >> 19. Neutrality of mind (Tatramajjhattatā) \n
+     >> 20. Balance ment. body (Kāyapassaddhi)\n
+     >> 21. Balance of consciousness (Cittapassaddhi)\n
+     >> 22. Lightness of the mental body (Kāyalahutā) \n
+     >> 23. Ease of consciousness (Cittalahutā) \n
+     >> 24. Flexibility of the mental body (Kāyamudutā) \n
+     >> 25. Flexibility of consciousness (Cittamudutā)\n
+     >> 26. Manageability ment. body (Kāyakammaññatā)\n
+     >> 27. Controllability of consciousness (Cittakammaññatā) \n
+     >> 28. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 29. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 30. Straightness of the mental body (Kāyujjukatā) \n
+     >> 31. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+     >> 32. Wisdom (Pañña) \n
+     </string>
+    <string name="textVipakachitaniKombinaciya6">
+         INCLUDED IN A COMBINATION WITH 32 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 13. Faith (Saddhā) \n
+     >> 14. Awareness (Sati)\n
+     >> 15. Shame (Hiri)\n
+     >> 16. Fear of bad deeds (Ottappa) \n
+     >> 17. Non-greed (Alobha) \n
+     >> 18. Non-anger (Adosa)\n
+     >> 19. Neutrality of mind (Tatramajjhattatā) \n
+     >> 20. Balance ment. body (Kāyapassaddhi)\n
+     >> 21. Balance of consciousness (Cittapassaddhi)\n
+     >> 22. Lightness of the mental body (Kāyalahutā) \n
+     >> 23. Ease of consciousness (Cittalahutā) \n
+     >> 24. Flexibility of the mental body (Kāyamudutā) \n
+     >> 25. Flexibility of consciousness (Cittamudutā)\n
+     >> 26. Manageability ment. body (Kāyakammaññatā)\n
+     >> 27. Controllability of consciousness (Cittakammaññatā) \n
+     >> 28. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 29. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 30. Straightness of the mental body (Kāyujjukatā) \n
+     >> 31. Directness of consciousness (Cittujjukatā) \n\n
+         BENEFITS THAT HAPPEN FROM TIME TO TIME: \n
+     >> 32. Wisdom (Pañña) \n
+     </string>
+    <string name="textVipakachitaniKombinaciya7">
+         INCLUDED IN A COMBINATION WITH 31 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 13. Faith (Saddhā) \n
+     >> 14. Awareness (Sati)\n
+     >> 15. Shame (Hiri)\n
+     >> 16. Fear of bad deeds (Ottappa) \n
+     >> 17. Non-greed (Alobha) \n
+     >> 18. Non-anger (Adosa)\n
+     >> 19. Neutrality of mind (Tatramajjhattatā) \n
+     >> 20. Balance ment. body (Kāyapassaddhi)\n
+     >> 21. Balance of consciousness (Cittapassaddhi)\n
+     >> 22. Lightness of the mental body (Kāyalahutā) \n
+     >> 23. Ease of consciousness (Cittalahutā) \n
+     >> 24. Flexibility of the mental body (Kāyamudutā) \n
+     >> 25. Flexibility of consciousness (Cittamudutā)\n
+     >> 26. Manageability ment. body (Kāyakammaññatā)\n
+     >> 27. Controllability of consciousness (Cittakammaññatā) \n
+     >> 28. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 29. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 30. Straightness of the mental body (Kāyujjukatā) \n
+     >> 31. Directness of consciousness (Cittujjukatā) \n\n
+     </string>
+    <string name="textVipakachitaniKombinaciya8">
+         INCLUDED IN A COMBINATION WITH 31 CHETASIKAS: \n\n
+         UNIVERSAL:\n
+         >> 1. Contact (Phassa)\n
+         >> 2. Feeling (Vedanā)\n
+         >> 3. Perception (Saññā)\n
+         >> 4. Volition (Cetana) \n
+         >> 5. One-pointedness (Ekaggatā)\n
+         >> 6. Management life-ability (Jīvitindriya) \n
+         >> 7. Attention (Manasikāra) \n\n
+         HAPPENING FROM TIME TO TIME:\n
+     >> 8. Starter application (Vitakka)\n
+     >> 9. Sustainable application (Vicāra)\n
+     >> 10. Determination (Adhimokkha)\n
+     >> 11. Energy (Viriya)\n
+     >> 12. Desire to act (Chanda) \n\n
+         UNIVERSAL BENEFITS:\n
+     >> 13. Faith (Saddhā) \n
+     >> 14. Awareness (Sati)\n
+     >> 15. Shame (Hiri)\n
+     >> 16. Fear of bad deeds (Ottappa) \n
+     >> 17. Non-greed (Alobha) \n
+     >> 18. Non-anger (Adosa)\n
+     >> 19. Neutrality of mind (Tatramajjhattatā) \n
+     >> 20. Balance ment. body (Kāyapassaddhi)\n
+     >> 21. Balance of consciousness (Cittapassaddhi)\n
+     >> 22. Lightness of the mental body (Kāyalahutā) \n
+     >> 23. Ease of consciousness (Cittalahutā) \n
+     >> 24. Flexibility of the mental body (Kāyamudutā) \n
+     >> 25. Flexibility of consciousness (Cittamudutā)\n
+     >> 26. Manageability ment. body (Kāyakammaññatā)\n
+     >> 27. Controllability of consciousness (Cittakammaññatā) \n
+     >> 28. Dexterity of the mental body (Kāyapāguññatā) \n
+     >> 29. Dexterity of consciousness (Cittapāguññatā) \n
+     >> 30. Straightness of the mental body (Kāyujjukatā) \n
+     >> 31. Directness of consciousness (Cittujjukatā) \n\n
+     </string>
+
     <string name="textKusalachitaniResult">
          These eight types of consciousness are called wholesome (kusala) or beneficial (punna) because they suppress defilements and produce good results. They arise in laymen (puthujjana) [people absorbed in worldly interests] and in practitioners (sekkha) - in noble disciples in the three lower stages of Enlightenment: \n
 stream-enterers, once returning and not returning - when they perform noble bodily and verbal actions, and also when they generate beneficial states of mind pertaining to the sensory environment. These cittas do not arise in arahants whose actions do not have
@@ -467,4 +805,11 @@ kammic potential. \n \n
 
 WITH ROOTS (SAHETUKA): The four wholesome cittas associated with knowledge have all three wholesome roots; the four dissociated from knowledge have non-greed or generosity and non-malice or loving-kindness, but lack non-delusion.
      </string>
+    <string name="textVipakachitaniResult">
+RESULTING CONSCIOUSNESS OF THE SENSORY ENVIRONMENT WITH ROOTS (sahetukakāmāvacaravipākacittāni): \n
+Just as there are eight beneficial types of consciousness, so there are eight corresponding types of resultant consciousness. These eight cittas are the kammic effects of beneficial
+citta of the sensory environment. To distinguish them from the rootless resultants resulting from wholesome kamma, they are described as sahetuka, “with roots.”
+Both classes are rootless wholesome resultants,
+and the root resultants are produced by the same eight wholesome cittas, but these two groups differ from each other in qualities and functions.
+    </string>
 </resources>
