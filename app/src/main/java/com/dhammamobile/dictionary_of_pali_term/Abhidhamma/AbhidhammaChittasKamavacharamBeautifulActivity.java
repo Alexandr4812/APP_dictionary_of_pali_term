@@ -149,6 +149,10 @@ public class AbhidhammaChittasKamavacharamBeautifulActivity extends BaseActivity
         startIntentActivityAndFinish(AbhidhammaChittasKamavacharamBeautifulVipakachitaniActivity.class);
     }
 
+    public void toAbhidhammaChittasKamavacharamBeautifulKriyachitaniAct(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasKamavacharamBeautifulKriyachitaniActivity.class);
+    }
+
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
     }
