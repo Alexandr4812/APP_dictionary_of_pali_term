@@ -10,17 +10,20 @@ import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
 
-public class RulesBhikkhuAboutActivity extends BaseActivityClass {
+public class RulesBhikkhuAboutRequisitesActivity extends BaseActivityClass {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rules_bhikkhu_about);
+        setContentView(R.layout.activity_rules_bhikkhu_about_requisites);
 
         // Скрытие панели навигации и панели состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
 
+    public void toRulesBhikkhuAboutAct(View view){
+        startIntentActivityAndFinish(RulesBhikkhuAboutActivity.class);
     }
 
     public void toMainAct(View view){
@@ -29,19 +32,6 @@ public class RulesBhikkhuAboutActivity extends BaseActivityClass {
 
     @Override
     public void onBackPressed(){
-        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
-    }
-
-
-    public void toRulesBhikkhuAct(View view){
-        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
-    }
-
-    public void toRulesBhikkhuAboutGeneralInfoAct(View view){
-        startIntentActivityAndFinish(RulesBhikkhuAboutGeneralInfoActivity.class);
-    }
-
-    public void toRulesBhikkhuAboutRequisitesAct(View view){
-        startIntentActivityAndFinish(RulesBhikkhuAboutRequisitesActivity.class);
+        startIntentActivityAndFinish(RulesBhikkhuAboutActivity.class);
     }
 }

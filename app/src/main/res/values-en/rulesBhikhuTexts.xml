@@ -3,7 +3,582 @@
     <string name="buttonSangkhadisesaText">sanghadisesa</string>
     <string name="buttonParajikaDetails">click to learn more about the rule</string>
 
-    <string name="buttonInformationAboutUpasampada">general information</string>
+    <string name="buttonInformationAboutUpasampada">General information \n instructions for bhikkhus</string>
+    <string name="buttonInformationAbout">General information</string>
+    <string name="textInstruktion">instructions for bhikkhus</string>
 
-    <string name="textForUpasampada"></string>
+    <string name="textButtonGeneralInfo1">Upasampadā \n Highest Initiation</string>
+    <string name="textButtonGeneralInfo2">Upasampadā sīla \n (morality of the highest dedication)</string>
+    <string name="textButtonGeneralInfo3">Modes of Higher Initiation</string>
+    <string name="textButtonGeneralInfo4">Kammavācā \n of the highest initiation</string>
+    <string name="textButtonGeneralInfo5">Information about your highest initiation</string>
+    <string name="textButtonGeneralInfo6">Nissaya \n Four Supports</string>
+    <string name="textButtonGeneralInfo7">Akaraṇīya \n four avoidances</string>
+    <string name="textButtonGeneralInfo8">Those who are not suitable for higher initiation</string>
+    <string name="textButtonGeneralInfo9">Bhikkhus eligible to become mentors</string>
+    <string name="textButtonGeneralInfo10">After the highest initiation</string>
+    <string name="textButtonGeneralInfo11">Dependency compliance \n (nissaya samādāna)</string>
+    <string name="textButtonGeneralInfo12">Sikkhāpaccakkhāna: \n Refusal of the highest initiation</string>
+
+    <string name="textGeneralInfo1">&lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;Upasampadā &lt;br&gt; Highest Initiation&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+ Monasticism in Buddhism consists of two parts: the status of samanera and the status of upasampada.&lt;br&gt;
+After the son or daughter of a householder has entered into the dispensation, leaving family life, he or she first
+ become samanera or samaneri.&lt;br&gt;
+Then, after the novice has trained for a considerable period of time as a hermit, observing the 10 rules of training, observing the 75 rules of sekhiya, and performing the 14 duties, if the ordainer so desires, his or her rules of training can be promoted to a higher level. This high level of morality is called upasampada.&lt;br&gt;
+The act of supreme dedication is the sublime disciplinary act in the Buddha`s design. This is an action that can not be performed everywhere, like the initiation of a samanera, but only in the sim.&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo2">&lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;Upasampadā sīla&lt;br&gt;(morality of the highest initiation)&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;&lt;i&gt;“And even, O bhikkhu, just as the great ocean is stable and does not go beyond its shores, so, O bhikkhu , no matter what training rule I set for the Savak, they will not break it even at the cost of their own lives.”&lt;/i&gt;&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+ The morality of the highest initiation in the Buddha`s dispensation is the morality that brings all great and invaluable worldly and supramundane benefits to the sons of householders who settle in it.
+ Therefore, great kings who had luxuries such as devas (celestial beings), sons of kings who were heirs to the throne, great rich men with great wealth and sons of rich people
+ left royalty and luxurious life and received initiation.
+ This morality of supreme dedication is the highest among all moral values.
+ Therefore it is called "adhisīla (supreme morality)."
+ Since the one who observes it is freed from suffering in hell and self-flagellation, it is also called “pātimokka saṃvara sīla”. That morality which has many rules is very great.
+ That`s why he becomes a man of great fame.&lt;br&gt;&lt;br&gt;
+In the Visuddhimagga it is shown that the number of precepts to be observed in upasampadā sīla (morality of the highest initiation) is ninety-one billion eight hundred five million thirty-six thousand.&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo3">&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;Upasampadā sīla&lt;br&gt;Modes of Higher Initiation&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;
+    Eight methods of higher initiation (upasampadā) in this dispensation have been mentioned. They are as follows.&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;1. Ehi bhikkhu upasampadā&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;
+    Some people who came to the Tathagata listened to the Dhamma and, gaining faith, asked for initiation.
+    Those of them who had the opportunity to become arhats in the same life and had past merits,
+    The Tathagata bestowed the empowerment "ehi bhikkhu upasampadā". When one awaiting initiation asked for initiation,
+    The Tathagata extended his right hand and said:
+    &lt;i&gt;“Ehi bhikkhu, svākkhāto dhammo, caratha brahmacariyaṃ sammā dukkhassa antakiriyāya.”&lt;/i&gt;
+    Then the worldly appearance of the one awaiting initiation disappeared, the hair on his head was shaved, and he appeared with a cup
+    and robes received thanks to his past merits. After completing the Tathagata`s recitation
+    &lt;i&gt;“ehi bhikkhu”&lt;/i&gt; initiation and the highest initiation of the disciple takes place. Therefore such a supreme dedication
+    called ehi bhikkhu upasampadā.
+    Assākoṇḍassa thera was the first to receive ehi bhikkhu upasampadā.&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;2. Saraṇāgamana Upasampadā&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;
+    Upasampada achieved by taking refuge in the triple jewel is called Saraṇāgamana Upasampadā.
+    At the end of the first rainy season, the Tathagata sent sixty arhats for the purpose of spreading the Dhamma.
+    The sons of householders from those places where various Theras transmitted the Dhamma actually expressed
+    willingness to receive initiation after listening to the Dhamma. They were brought to the Tathagata and were given
+    initiation and supreme initiation. Bringing everyone who wants to receive initiation to the Tathagata has become very difficult
+    a task both for those awaiting ordination and for the monastic teachers. Therefore the Tathagata provided the monks
+    permission to bestow initiation and supreme initiation. This had to be done by taking refuge
+    in triple jewel. As shown above in the samanera empowerment, empowerment and supreme empowerment of the waiter
+    initiation culminates in taking refuge in the triple jewel given by the teacher and accepted by the person awaiting initiation.
+    The first person to receive initiation and higher initiation by this method is not found in the Vinaya.&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;3. Ovāda pratigrahaṇa upasampadā&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;
+    When the young man Piphalī visited the Tathāgata under the banyan tree named Bahuputtaka and expressed his
+    status as a disciple, the Tathagata gave the young man Piphalī three pieces of advice. His highest ordination occurred simply
+    thanks to taking these tips. The young man Piphalī who received the initiation became known as
+    Mahā Kassapa thera. The highest initiation of Kassapa thera is called ovāda pratigrahaṇa (taking advice) upasampadā,
+    for it was due to the acceptance of the Tathagata`s advice.
+    The Buddha gave Kassapa three instructions about the need to feel shame and fear of committing an offense towards
+    to your fellow monks, regardless of their status, to listen intently to the teachings that lead to growth
+    virtues (Dhamma) and not neglect mindfulness of the body.&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;4. Paсhabyākaraṇa upasampadā&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;
+    One day Sopāka Sāmaṇera was walking behind the Tathāgata in Pubbārāma Monastery. The Tathagata then turned to
+    Sopāka Sāmaṇera and asked ten questions:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;
+    1.&lt;br&gt;
+    ekaṃ nāma kiṃ?&lt;br&gt;
+    What is a unit called?&lt;br&gt;
+    sabbe sattā āhāraṭṭhitikā.&lt;br&gt;
+    All creatures exist on food.&lt;br&gt;&lt;br&gt;
+    2.&lt;br&gt;
+    dve nāma kiṃ?&lt;br&gt;
+    What do they call a deuce?&lt;br&gt;
+    nāmañca rūpañca&lt;br&gt;
+    Mental, material.&lt;br&gt;&lt;br&gt;
+    3.&lt;br&gt;
+    tīṇi nāma kiṃ?&lt;br&gt;
+    What do they call a troika?&lt;br&gt;
+    tisso vedanā&lt;br&gt;
+    Three feelings.&lt;br&gt;&lt;br&gt;
+    4.&lt;br&gt;
+    cattāri nāma kiṃ?&lt;br&gt;
+    What do they call four?&lt;br&gt;
+    cattāri ariyasaccāni&lt;br&gt;
+    Four noble truths.&lt;br&gt;&lt;br&gt;
+    5.&lt;br&gt;
+    pañca nāma kiṃ?&lt;br&gt;
+    What do they call five?&lt;br&gt;
+    pañcupādānakkhandhā&lt;br&gt;
+    The Five Attachment Aggregates.&lt;br&gt;&lt;br&gt;
+    6.&lt;br&gt;
+    cha nāma kiṃ?&lt;br&gt;
+    What do they call six?&lt;br&gt;
+    cha ajjhattikāni āyatanāni&lt;br&gt;
+    Six internal spheres of perception.&lt;br&gt;&lt;br&gt;
+    7.&lt;br&gt;
+    satta nāma kiṃ?&lt;br&gt;
+    What do they call a seven?&lt;br&gt;
+    satta bojjhaṅgā&lt;br&gt;
+    Seven Factors of Awakening.&lt;br&gt;&lt;br&gt;
+    8.&lt;br&gt;
+    aṭṭha nāma kiṃ?&lt;br&gt;
+    What do they call a figure eight?&lt;br&gt;
+    ariyo aṭṭhaṅgiko maggo&lt;br&gt;
+    The Noble Eightfold Path.&lt;br&gt;&lt;br&gt;
+    9.&lt;br&gt;
+    nava nāma kiṃ?&lt;br&gt;
+    What do they call nine?&lt;br&gt;
+    nava sattāvāsā&lt;br&gt;
+    Nine abodes of beings.&lt;br&gt;&lt;br&gt;
+    10.&lt;br&gt;
+    dasa nāma kiṃ?&lt;br&gt;
+    What do they call ten?&lt;br&gt;
+    dasahaṅgehi samannāgato ‘arahā’ti vuccatī"ti.&lt;br&gt;
+    The named Arhat has ten factors.&lt;/div&gt;&lt;br&gt;
+    Sopāka Sāmaṇera resolved them all very well. Pleased with this, the Tathagata proclaimed the highest initiation
+    Sopāka Sāmaṇera. Sopāka Sāmaṇera was seven years old when receiving the highest initiation.
+    This is called paṣhabyākaraṇa upasampadā because it is achieved by solving questions.&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;5. Сatti catuttha kamma upasampadā&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;
+    The senior Sārputta took upon himself the responsibility of bestowing the highest initiation of Rādha thera.
+    He asked the Tathagata how the highest initiation of Radha-thera should be performed. Then the Tathagata declared,
+    that the hitherto practiced saraṇāgamana upasampadā should be stopped and practiced
+    сatti catuttha kamma upasampadā for bestowing higher initiation. If this happens in the middle
+    part of India, then this must be done with the participation of ten monks who have received the highest monastic order,
+    if the initiation takes place outside the borders of central India, it must be carried out with the participation of five
+    monks A person who has no defects that prevent him from higher initiation can be initiated into
+    the highest initiation by correctly pronouncing the sentence catti catuttha kamma (kammavaca - proclamation).
+    By correctly pronouncing kammavaca among suitable people, the person awaiting the highest initiation will establish
+    highest initiation. Nowadays, the highest ordination of monks is carried out with the help of
+    сatti catuttha kamma upasampadā.&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;6. Garu dhamma paṭiggahaṇa upasampadā&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;
+    When Pajāpatī Gotamī, the stepmother/aunt of the Tathagata asked the Tathagata for higher initiation, the
+    Aṭṭha garu dhamma (eight basic rules). The Buddha stated that accepting Aṭṭha garu dhamma will itself lead to
+    her higher initiation. When Ananda Thera proclaimed Aṭṭha garu dhamma, she accepted them with joy,
+    and as a result received her highest initiation. This is known as Garu dhamma paṭiggahaṇa upasampadā.&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;7. Aṭṭhavācikā upasampadā&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;
+    In the early stages of the bhikkhuni dispensation, the highest ordination of women, except Pajāpatī Gotamī, who
+    left home with her, were performed by monks. It was during the catti catuttha kamma upasampadā.
+    But later the Tathagata included other factors in this method of supreme initiation, and it was declared that in order
+    for a woman to receive a higher initiation, her higher initiation must be carried out with the help of
+    Сatti catuttha kamma among the bhikkhunis, and then among the bhikkhus.
+    Since Catti catuttha kamma is repeated twice among bhikkhunis and bhikkhus, Kammavaca will be pronounced
+    eight times.
+    Thus, the highest initiation of a bhikkhuni becomes Aṭṭhavācikā upasampadā.
+    Five hundred women who left the house with Pajāpatī Gotamī were awarded the highest initiation
+    Catti catuttha kamma. In a similar way.
+    A bhikkhus who became a bhikkhuni as a result of gender reassignment also had a higher ordination in
+    Catti catuttha kamma. Although they were full-fledged bhikkhunis, in Pali they were called
+    ekato upasampannā, since they received the highest initiation only from one side, that is, from the bhikkhunis.
+    While those who received higher ordination only among the bhikkhunis were called
+    ekato upasampannanā until they again receive higher ordination among the bhikkhus;
+    they will not become full-fledged monks.&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;8. Dūtena upasampadā&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;
+    A harlot named Aḍḍhakāsī received initiation in the Buddha`s plan. After thatoh how she got higher
+ initiation among the bhikkhunis and was about to go to the bhikkhus, it became known that a group of men were waiting for her,
+ to rape. The Tathāgata then approved the sending of another bhikkhuni as agent in place of Aḍḍhakāsī and
+ performing the highest initiation Aḍḍhakāsī by saying kmma vacha. As this supreme initiation is made
+ using an agent, it is called Dūtena (by means of a messenger) upasampadā.&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo4">&lt;br&gt;
+ Suṇātu me Bhante saṅgho, ayaṃ nāgo āyasmato tissassa
+upasampadāpekkho parisuddho antarāyikehi dhammehi, paripuṇṇassa pattacīvaraṃ, nāgo saṅghaṃ upasampadaṃ yācati, āyasmatā tissena upajjhāyena, yadi saṅghassa pattakallaṃ, nāgaṃ upasampādeyya, āyasmatā tissena upajjhāyena. Esā catti. Suṇātu me bhante saṅgho, ayaṃ nāgo āyasmato tissassa
+upasampadāpekkhā parisuddho antarāyikehi dhammehi, paripuṇṇassa pattacīvaraṃ, nāgo saṅghaṃ upasampadaṃ yācati, āyasmatā tissena upajjhāyena. Saṅghā nāgaṃ upasampādeti, āyasmatā tissena upajjhāyena. Yassāyasmato khamati nāgassa upasampadā āyasmatā tissena upajjhāyena. So tuṇhassa. Yassa nakkhamati so bhāseyya
+Dutiyampi etamatthaṃ vadami. Suṇātu me bhante saṅgho, ayaṃ nāgo āyasmato tissassa upasampadāpekkhā, parisuddho antarāyikehi dhammehi. Paripuṇṇassa pattacīvaraṃ, nāgo saṅghaṃ upasampadaṃ yācati, āyasmatā tissena upajjhāyena. Yassāyasmato khamati nāgassa upasampadā āyasmatā tissena upajjhāyena. So tuṇhassa. Yassa nakkhamati so bhāseyya.
+Tatiyampi etamatthaṃ vadami. Suṇātu me bhante saṅgho, ayaṃ nāgo
+āyasmato tissassa upasampadāpekkhā, parisuddho antarāyikehi
+dhammehi. Paripuṇṇassa pattacīvaraṃ, nāgo saṅghaṃ upasampadaṃ yācati, āyasmatā tissena upajjhāyena. Yassāyasmato khamati nāgassa upasampadā āyasmatā tissena upajjhāyena. So tuṇhassa. Yassa nakkhamati so bhāseyya.
+Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghassa, tasmā tuṇhī, evametaṃ dhārayāmi.&lt;br&gt;&lt;br&gt;
+
+Kammavacha consists of two main parts. This is catti and anusāvana (proclamation). In the disciplinary act of the highest initiation, that part which begins with the words “Sunātu me, bhante, saṅgho” and ends with the words “esā catti” is catti. After this, all three expressions that begin with “Sunātu me, bhante, saṅgho” and end with “Yassa nakkhamati so bhāseyya” are anusāvana.
+In the disciplinary act of the highest initiation there are three anusāvanas.
+Some disciplinary actions involve only one catti and one anusāvana.&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo5">
+ &lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;Information about your highest initiation&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt;Tāvadeva chāyāmetabbā. Uttuppamāṇaṃ ācikkhitabbaṃ divasabhāgo ācikkhitabbo.
+ Saṅghīti ācikkhitabbā. Cattāro nissāya ācikkhitabbā. Cattāri akaraṇīyāni ācikkhitabbāni.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+ As our omniscient, all-compassionate, blessed Arahat, Sammasambuddha instructed us to tell
+ you about this inside Sima herself; time, period of the year and year when the Maha Sangha, having entered on the right path,
+ granted you absolutely pure supreme initiation and assessed you according to the four pillars and four forbidden things;
+ I do so, please listen to them with appreciation. Honorable man!&lt;br&gt;
+ On the day...... month...... B.E. or day...... month...... year AD;&lt;br&gt;
+ The Sangha has granted you absolutely pure supreme initiation and elevated you to the status of bhikkhu from the samanera realm.
+ Remember this at the cost of your life and defend the morality of the highest dedication without violating even the slightest rules.&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo6">
+ &lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;Nissaya Four Supports&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+ Venerable man who saw fear in Samsara and entered into the Buddha`s plan with the desire to achieve Nibbana!
+ Listen to the four supports that the Buddha declared for maintaining the prescribed life.&lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt;Piṇḍiyālopa bhojanaṃ nissāya pabbajjā. Tattha te yāvajīvaṃ
+ ussāho karaṇīyo. Atirekalābho saṅghattaṃ, uddesabhattaṃ,
+ nimaṇtanaṃ, salākabhattaṃ, pakkhikaṃ, uposathikaṃ, pāṭipādikaṃ.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+ This dedication is supported by food obtained by going from house to house.
+ You should try to live on alms all your life. Alms offered to the entire sangha,
+ alms offered to two or three members of the sangha, alms given privately,
+ periodic alms, alms given once, alms given on the day of singing, and alms given
+ served on the day after the full moon or new moon should be considered as additional benefits.&lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt;Paṃsakūla cīvaraṃ nissāya pabbajjā, tattha te yāvajīvaṃ ussāho karaṇīyo.
+ Atireka lābho khomaṃ, kappāsikaṃ, koseyyaṃ, kambalaṃ, sānaṃ, bhaṅgaṃ.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+ Pabbaja (initiation) is supported by clothing. You should try to make do with discarded clothes at the cost of your life.
+ If you receive clothing made from goat hair, cotton, silk, wool, and mixed materials due to
+ past beneficial merits; they should be used as additional benefits.&lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt;Rukkhamūlasenāsanaṃ nissāya pabbajjā, tattha te yāvajīvaṃ ussāho karaṇīyo.
+ Atireka lābho vihāro, aḍḍhayogo, pāsādo, hammiyaṃ guhā.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+ The pabbaja is supported by a shelter near the roots of the trees. You must try at the cost of your life to live at the roots of the trees.
+ If houses with two-sided roof, one-sided roof, four-sided roof,
+ caves are obtained as a result of past good merits; they can be used.&lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt;Pūtimuttabhesajjaṃ nissāya pabbajjā, tattha te yāvajīvaṃ ussāho karaṇīyo.
+ Atireka lābho sappi, navanītaṃ, telaṃ, madhu, phānītaṃ.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+ Pabbaja is supported by medicines prepared from gall nuts and cattle urine.
+ You must try with your life to live on this medicine.
+ However, if you get ghee, butter, spiced butter, bee honey,
+ jaggery due to past merit; they can be used in
+ as additional benefits.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo7">
+ &lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;Akaraṇīya four avoidances&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+ Now listen to four things to avoid.&lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt;Upasampannena bhikkhunā methuno dhammo na patisevitabbo,
+ antamaso titacchāna gatāyapi. Yo bhikkhu methunaṃ dhammaṃ
+ patisevati, assamaṇo hoti asakyaputtiyo. Seyyathāpi nāma puriso
+ sīsacchinno abhabbo tena sarīraṃ bandhena jīvatuṃ, evameva
+ bhikkhu methunaṃ dhammaṃ patisevitvā assamaṇo hoti
+ asakyaputtiyo taṃ te yāvajīvaṃ akaraṇīyaṃ.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+ A bhikkhu who has received the highest ordination should not engage in sexual intercourse.
+ If any monk breaks this rule, he will lose his status as a Samana. Will not be the son of Buddha.
+ Is it possible that any man whose head has been cut off can live again; similarly adobe,
+ whoever violates this rule will lose his status as a Samana. Will not be the son of Buddha. Therefore, one should not enter into
+ sexual intercourse throughout your monastic life.&lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt;Upasampannena bhikkhunā adinnaṃ theyya saṅkhātaṃ na ādatabbaṃ, antamaso tiṇasalākaṃ upādāya.
+ Yo bhikkhu pādaṃ vā pādārahaṃ vā atirekapādaṃ vā adinnaṃ theyyasaṅkhātaṃ ādiyati assamaṇo hoti asakyaputtiyo.
+ Seyyathāpi nāma paṇḍupalāso bandhanā pamutto abhabbo haritatthāya, evameva bhikkhu pādaṃ vā padārahaṃ
+ vā atirekapādaṃ vā adinnaṃ theyyasaṅkhātaṃ ādiyitvā assamaṇo hoti asakya puttiyo, taṃ te yāvajīvaṃ akaraṇīyaṃ.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+ A monk should not take anything for the purpose of stealing; even a blade of grass not given to him by the owner.
+ If some monk takes something more expensive than a pada (a currency unit in ancient India) or something worth
+ pada or more with the intention of stealing, he will lose his status as a samana. Will not be the son of Buddha. Is it really some kind of leaf?
+ Once detached from the stem, can it become a green leaf again? Just like the Samana who steals something
+ worth a pada or more will lose its adobe status. Will not be the son of Buddha. You shouldn`t do it all your way
+ monastic life.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt;Upasampannena bhikkhunā saṅcicca pāṇo jīvitā na voropetabbā, antamaso kuntha kipillikaṃ upādāya.
+ Yo hikkhu saṅcicca manussaviggahaṃ jīvitā voropeti, antamaso gabbhapātanaṃ upādāya, assamaṇo hoti asakyaputtiyo.
+ Evameva bhikkhu saṅcicca manussaviggahaṃ jīvitā voropetvā assamaṇo hoti asakyaputtiyo. Taṃ te yāvajīvaṃ akaraṇīyaṃ.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+ A bhikkhu who has received the highest ordination should not deliberately kill even an ant.
+ If a bhikkhu kills a person, even having an abortion, he will lose his status as a samana. Will not be the son of Buddha.
+ Just as a rock divided into two parts cannot be joined; Bhikshu who killed a man
+ will lose the status of Samana. Will not be the son of Buddha. You shouldn`t do this your entire monastic life.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt;Upasampannena bhikkhunā uttarimanussa dhammo na ullapitabbo, antamaso suсāgāro abhramāmīti.
+ Yo bhikkhu pāpccho icchāpakato asantaṃ abhūtaṃ uttarimanussadhammaṃ ullapti khānaṃ vā phalaṃ vā,
+ assamaṇo hoti, asakya puttiyo, seyyathāpi nāma tālo matthakacchinno abhabbo puna virḷhiyā,
+ evameva bhikkhu pāpiccho icchāpakato asaṅtaṃ abhūtaṃ uttarimanussadhammaṃ ullapitvā assamaṇo hoti, asakyaputtiyo.
+ Taṃ te yāvajīvaṃ akaraṇīyaṃ.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+ A bhikkhu who has received the highest initiation should not even say something like: “I live in an empty dwelling without attachment.”
+ Not to mention, if some monk has frivolous thoughts and talks about absorption, liberation,
+ concentration, achievement, path or fruit which he has not yet achieved; he will lose his status as a Samana. Will not be the son of Buddha.
+ Just as the Palmyra tree with its top cut off cannot grow, monk,
+ whoever proclaims the unattained sublime human dhamma will lose his status as a Samana.
+ Will not be the son of Buddha. You shouldn`t do this your entire monastic life.&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo8">
+ &lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;Those unfit for higher initiation&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+ Three people consisting of the eleven listed in the samanera section, such as eunuch, person, victim
+ failure, and one who has not reached the age of twenty, are not suitable for higher initiation.
+ The highest ordination will not be established even if the act of the highest ordination is performed.
+ If the action of a higher initiation is performed on the remaining people from the list of eleven,
+ for the Sangha there will be a violation of the dukkat, but a higher initiation will be established.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo9">
+ &lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt; Bhikkhus eligible to become mentors &lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+ Not everyone is qualified to become a mentor and ordain disciples. There will be a violation of the duccat if the monk ordaining disciples
+ will not meet the requirements.&lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt;Na, bhikkhave, bālena abyattena upasampādetabbo. Anujānāmi,
+ bhikkhave, byattena bhikkhunā paṭibalena dasavassena vā
+ atirekadasavassena vā upasampādetuṃ.&lt;/i&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+ Monks, unqualified monks are not suitable for higher ordination.
+ Monks! I authorize higher ordination for a monk who has completed ten years or more
+ (rainy seasons) and qualified.&lt;br&gt;&lt;br&gt;
+ 1. Know Bhikkhu, Bhikkhuni Vinaya&lt;br&gt;
+ 2. Know how to properly perform Vinayakamma&lt;br&gt;
+ 3. Knowledge of vattakkhanda and the ability to raise disciples in it&lt;br&gt;
+ 4. Having studied Mulapaṇṇāsaka Majjhima Nikāya or
+ Mahāvagga Dīga Nikāya or the first three chapters (vagga)
+ Saṃyutta Nikāya or half of Aṅguttara Nikāya, or
+ Dhammapada and Jātaka along with their commentaries.&lt;br&gt;
+ 5. Ten years after the highest ordination.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo10">
+ &lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt; After the highest initiation &lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+ If a samanera has undergone the highest initiation procedure in Theravada Buddhism and become a bhikkhu, then he must live with a mentor for 5 years
+ (for a samanera, living with a mentor is a matter of course). If a bhikhu has not acquired certain knowledge and skills after 5 years,
+ and has not become a nissayamuttaka bahussuta (a learned monk who does not need to live under the guidance of a teacher), then he must continue to live with the teacher
+ until he masters this knowledge. Otherwise, violation of the duccat will occur with every dawn for a new monk living far from his mentor.&lt;br&gt;&lt;br&gt;
+ Nissayamuttaka bahussuta in this case: &lt;br&gt;&lt;br&gt;
+ 1. Study both Patimokkha&lt;br&gt;
+ 2. Remember the four bhāṇavāra of the Dhamma in the Sutta Pitaka.&lt;br&gt;
+ 3. Having learned some stories [of the Dhamma] that can be told to the congregation.&lt;br&gt;
+ 4. Be able to deliver the three discourses on the Dhamma, at favorable times and at unfavorable occasions.&lt;br&gt;
+ 5. Knowledge of disciplinary measures such as uposatha and pavarana.&lt;br&gt;
+ 6. Having studied at least one method properly and completely
+ meditation leading to Arhatship.&lt;br&gt;
+ 7. Completion of five years after highest ordination.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo11">
+ &lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt; Compliance with dependency &lt;br&gt; (nissaya samādāna) &lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+ If a monk who is not a nissayamuttaka bahussuta loses dependence on a mentor for some reason, such as the death of the mentor,
+ he must live with the support of parisupaṭṭhāka bahussuta thera. A bhikkhu seeking support should go to a qualified teacher, wrap his clothes,
+ covering only one shoulder, bow with your hands folded in a position of respect, and say three times: &lt;br&gt;&lt;br&gt;
+ &lt;b&gt;&lt;i&gt; “Ācāriyo me Bhante hohi, āyasmato nissāya vacchāmi.” &lt;/i&gt;&lt;/b&gt;&lt;br&gt;
+ The teacher must accept this with &lt;b&gt;&lt;i&gt; "Pāsādikena sampādetha." &lt;/i&gt;&lt;/b&gt; The phrase Sāhu, lāhu, opāyikaṃ, patirūpaṃ is also suitable. &lt;br&gt;&lt;br&gt;
+
+ A bhikkhus who is not educated enough to recover from addiction and cannot find someone older should seek help
+ parisupaṭṭhāka bahussuta, who is younger than him. Even though the teacher is younger, he should be respected (but should not be bowed to).
+ However, a younger monk should not be addressed as "bhanta". When a senior monk has the support of a junior monk;
+ he should wrap a robe that covers only one shoulder, sit down with his hands folded in an attitude of respect, and say three times: &lt;br&gt;
+ &lt;b&gt;&lt;i&gt;“Ācāriyo me, bhante, hohi, āyasmato nissāya vacchāmi.” &lt;/i&gt;&lt;/b&gt;&lt;br&gt; When asking permission to go to the village, he must sit down with his hands folded in a pose of respect and say: &lt;br&gt;
+ &lt;b&gt;&lt;i&gt;“Gāmappavesanaṃ āpucchāmi ācariya.” &lt;/i&gt;&lt;/b&gt;&lt;br&gt; The same should be observed when asking questions.&lt;br&gt;&lt;br&gt;
+
+ Between the mentor-teacher (upajjhāya) and the teacher of dependence (nissayācariya), the mentor is the main one. Support should be obtained in cases where
+ when a person is at a distance from the mentor. In cases where the master lives elsewhere and the disciple (saddhivihārika) lives with the support of another thera,
+ such an arrangement becomes invalid from the moment the saddhivihārika sees the returning mentor.
+ If the mentor leaves again, support must be sought again, since the previous agreement has become invalid.
+ A monk who receives a mentor at the highest ordination, the mentor is valid forever. There is no need to do this again.
+ The dependency must be renewed whenever it is broken.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
+    <string name="textGeneralInfo12">
+    &lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt; Sikkhāpaccakkhāna: Refusal of the highest initiation &lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    The disciplinary rules laid down by the Tathagata are valid for a monk or nun only until he or she has renounced the higher ordination.&lt;br&gt;
+    There is no need to follow the rules of training after renouncing the highest initiation. Violation of the rules will take place only until there is a refusal
+    from the highest initiation. Refusal of the highest initiation is called sikkhāpaccakkhāna. The methods of renunciation of higher ordination of monks and nuns differ from each other.
+    The Tathagata did not indicate the method by which a bhikkhuni should renounce the highest ordination. Therefore, the supreme ordination of a bhikkhuni will be lost,
+    if she wears lay clothes with the intention of becoming a lay person. She will not be able to achieve the higher bhikkhuni ordination again in this life.
+    This is tantamount to defeat.&lt;br&gt;
+    On the other hand, the bhikkhus must express in words that he is refusing the highest initiation. In whatever period of time he wore the clothes of a layman,
+    without expressing it, he will remain a monk. If during this time he performs any action that leads to defeat, such a monk will be defeated
+    in secular clothes automatically. Therefore, a monk must know how to properly refuse higher ordination. If you refuse
+    The highest ordination of a monk must fulfill six points.&lt;br&gt;
+    They are as follows:&lt;br&gt;&lt;br&gt;
+    1. Citta &lt;br&gt;
+    2. Khetta &lt;br&gt;
+    3. Kāla &lt;br&gt;
+    4. Payoga &lt;br&gt;
+    5. Puggala &lt;br&gt;
+    6. Vijānana &lt;br&gt;&lt;br&gt;
+    Citta&lt;br&gt;
+    Citta is the intention that must be present when refusing the highest initiation.&lt;br&gt;
+    When any monk rejects higher ordination, he must say: &lt;br&gt;
+    “I reject higher initiation,” &lt;br&gt;
+    thinking about his refusal of the highest initiation.
+    When a person speaks quickly, if he says, “I reject the highest initiation,” by mistake, or by mistake he says: &lt;br&gt;
+    “I refuse the highest initiation” when he thinks of saying something else, the highest initiation will not be lost.
+    In the same way, it should be understood that the highest initiation will not be lost because he says: &lt;br&gt;
+    “I reject higher initiation,” while teaching others how to reject higher initiation, or jokingly say: &lt;br&gt;
+    “I reject the highest initiation” for the sake of entertainment. When abandoning the higher rules, it is necessary to have the thought of abandoning the highest initiation.&lt;br&gt;&lt;br&gt;
+    Khetta&lt;br&gt;
+    Khetta is a spoken word used to renounce the highest initiation. This is shown in twenty-two ways in the Vinaya books,
+    consisting of fourteen refusals and eight confirmations.&lt;br&gt;&lt;br&gt;
+    Fourteen failures:&lt;br&gt;&lt;br&gt;
+    1. Buddhaṃ paccakkhāmi - I reject Buddha.&lt;br&gt;
+    2. Dhammaṃ paccakkhāmi - I reject the Dhamma.&lt;br&gt;
+    3. Saṅghaṃ paccakkhāmi - I reject the Sangha.&lt;br&gt;
+    4. Sikkhaṃ paccakkhāmi - I reject the rules.&lt;br&gt;
+    5. Vinayaṃ paccakkhāmi - I reject Vinaya.&lt;br&gt;
+    6. Pātimokkhaṃ paccakkhāmi - I reject the disciplinary code.&lt;br&gt;
+    7. Uddesaṃ paccakkhāmi - I reject uddesa.&lt;br&gt;
+    8. Upajjhāyaṃ paccakkhāmi - I reject the mentor.&lt;br&gt;
+    9. Ācāriyaṃ paccakkhāmi - I reject the teacher.&lt;br&gt;
+    10. Saddhivihārikaṃ paccakkhāmi - I reject Saddhivihārikaṃ&lt;br&gt;
+    11. Antevāsikaṃ paccakkhāmi - I reject life with
+    teacher&lt;br&gt;
+    12. Samānupajjhāyakaṃ paccakkhāmi - I reject Samānupajjhāyakaṃ&lt;br&gt;
+    13. Samānācariyakaṃ paccakkhāmi - I reject Samānācariyakaṃ&lt;br&gt;
+    14. Sabrahmacāriṃ paccakkhāmi - I reject fellow bhikkhus.&lt;br&gt;&lt;br&gt;
+    Eight confirmations:&lt;br&gt;&lt;br&gt;
+    1. Gihī’ti maṃ dhārehi - consider me a layman.&lt;br&gt;
+    2. Upāsko’ti maṃ dhārehi - consider me a lay devotee.&lt;br&gt;
+    3. Ārāmiko’ti maṃ dhārehi - consider me a servant of the temple.&lt;br&gt;
+    4. Sāmaṇero’ti maṃ dhārehi - consider me a samanera.&lt;br&gt;
+    5. Titthiyo’ti maṃ dhārehi - consider me a heretic.&lt;br&gt;
+    6. Titthiyasāvako’ti maṃ dhārehi - consider me a follower of another teaching.&lt;br&gt;
+    7. Assamaṇo’ti maṃ dhārehi - consider me not a Samana.&lt;br&gt;
+    8. Asakkhyaputti’ti maṃ dhārehi - consider me not a son
+    Buddha.&lt;br&gt;&lt;br&gt;
+    A monk considering refusing higher ordination must refuse higher ordination byUsing any of the twenty-two,
+    the above statements. Instead of words like Buddha, equal words like Tathagata can be used.&lt;br&gt;&lt;br&gt;
+    To renounce the highest initiation, it is not necessary to use only the Pali language. You can use any language for this.
+    for example Sinhala or English. The highest initiation can be renounced by saying “I reject the Buddha,” “Let me be considered a layman.”
+    When a person rejects the highest initiation by saying, “Consider me a samanera,” he immediately enters the sphere of the samanera.
+    He does not need to take refuge again or be ordained.&lt;br&gt;&lt;br&gt;
+    Kāla &lt;br&gt;
+    By Kāla is meant the grammatical period (time) when the word is pronounced in the process of renunciation of the highest initiation.&lt;br&gt;&lt;br&gt;
+    1. In the present tense (Vattamānakālavasena).&lt;br&gt;
+    The proposal to refuse higher ordination can be expressed in the present tense.
+    That is, like “Buddhaṃ paccakkhāmi” and the like about the fourteen renunciations or like “Gihī’ti maṃ dhārehi” and the like about the eight ways of maintaining
+    present tense. Expressing it in the present tense thus rejects the higher rules of training.&lt;br&gt;&lt;br&gt;
+    2. Not expressing ones thoughts in terms of the past and the like (anamathakalavasena).&lt;br&gt;
+    A sentence expressing the refusal of higher initiation can be composed without using the periods of past, present or future.
+    That is, renunciation of the highest initiation can be accomplished by any of the fourteen methods without verb tense.
+    Kaṅkāvitaraṇī shows four such expressions.&lt;br&gt;&lt;br&gt;
+    Buddha doesnt bother me.&lt;br&gt;
+    What good is Buddha to me?&lt;br&gt;
+    Buddha is of no use to me.&lt;br&gt;
+    I successfully escaped from Buddha.&lt;br&gt;&lt;br&gt;
+    These methods of expression can be adopted with the fourteen Khetta, such as Buddha, Dhamma and Sangha, to renounce
+    highest dedication. The expression “I have refused higher ordination”, “I have become a layman” in the past tense, or “I will refuse higher ordination”,
+    “I will become a layman” in the future tense or “Okay, if I reject higher ordination” will not lead to rejection of higher ordination.&lt;br&gt;&lt;br&gt;
+    Payoga&lt;br&gt;
+    Payoga is the very act of renouncing the highest initiation. According to the Theravada tradition, this should always be done orally.
+    Writing these words or indicating to another with hand gestures does not result in a renunciation of the highest initiation. The question arises:
+    how can a monk who has become mute, or a mute who has received a higher ordination, refuse the higher ordination?&lt;br&gt;&lt;br&gt;
+    Puggala&lt;br&gt;
+    Human. This is a monk who rejects higher ordination and one in whose presence higher ordination is rejected. &lt;br&gt;
+    For the renunciation of higher initiation to take effect, both must not be insane or in great pain.
+    Refusals made by madmen and the like in the presence of madmen and the like will not lead to results.
+    If the highest initiation is rejected in the presence of someone, it must be a person. Refusals made in the presence of devas, demons and animals are invalid.
+    Further, the refusal of higher initiation must be done in the presence of a person. Sending messages like “Tell so-and-so,
+    that I reject the highest initiation" to a person at a distance, through a messenger or in writing, does not lead to rejection
+    highest dedication. When the refusal of higher initiation is expressed loudly so that it can be heard by a person located at a fair distance,
+    renunciation of higher initiation takes effect.&lt;br&gt;&lt;br&gt;
+    The points summarized above are as follows.&lt;br&gt;&lt;br&gt;
+    1. One who rejects the highest initiation (bhikkhu). He must not be crazy or in great pain.&lt;br&gt;&lt;br&gt;
+    2. The person who is being rejected must not be mad or suffer from pain. He must be human.
+    He must be available for conversation.&lt;br&gt;&lt;br&gt;
+    Vijānana&lt;br&gt;
+    Vijānana is the understanding of what is said when the highest rules of training are rejected. &lt;br&gt;
+    This understanding must occur at the same speed as it occurs when people speak normally.
+    The vows will not be rejected if the hearers ask, “What did this monk say?” and after a while he learns the meaning.
+    Giving up prescriptions will have no effect if the focused person or someone in the focused group does not understand them, but understands them
+    some other person. If it is said with the intention: “Let someone know about the refusal of the commandments,” it will take effect when some
+    human being the monk understands the intention.&lt;br&gt;&lt;br&gt;
+ The above points can be summarized as follows.&lt;br&gt;&lt;br&gt;
+ 1. When the renunciation of vows is directed at certain people,
+ vows will be rejected if at least one of them is instantly
+ understands the idea of a monk.&lt;br&gt;&lt;br&gt;
+ 2. When giving up vows is done without focusing on specific people, the vows will be rejected,
+ if even one person understands the idea of a monk.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
+
+    <string name="buttonRequisites">REQUISITES</string>
+
+    <string name="textForUpasampada">&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;An act of supreme dedication&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    The act of supreme initiation is the sublime disciplinary act in the Buddha`s sasan.
+    This is an action that can be performed not everywhere, like initiation into a samanera, but only in the Sim.
+    As stated in the book ““Anujāmi bhikkhave! sabbapaccantimesu janapadesu
+    vinayadharapañcamena gaṇena upsapādetuṃ", the Buddha stated that if initiation is carried out in the middle country,
+    it must be carried out by ten or more members of the Sangha.
+    The Buddha stated that if one performs empowerment in neighboring countries; this can be done by five members of the Sangha.
+    The Buddha clarified what is meant by neighboring countries. This is the following:&lt;br&gt;&lt;br&gt;
+
+    &lt;i&gt;“When considering the relative average of the country, regions; outside Kajangala City in the east,
+    beyond the Salalavati River in the southwest. Outside the town of Setakannika in the south.
+    Behind a Brahmin village named Tuna in the west. Behind the rock named Usiraddhaja in the north are the surrounding
+    states.”&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+    Since our country (Sri Lanka) also belongs to neighboring countries,
+    the act of supreme initiation can be performed by five monks. It is the teacher who has to perform many tasks
+    when performing an act of supreme dedication.&lt;br&gt;&lt;br&gt;
+
+    When a person awaiting higher initiation arrives at Shima, the first thing to be done is to assign the name Naga to the person awaiting higher initiation, and the name Tissa to the preceptor; if it is difficult to pronounce the text of the dedication using their real names.&lt;br&gt;&lt;br&gt;
+
+    The teacher should do this as follows:&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;“To make it easier to pronounce the text of initiation, I remove the old name of the candidate for the highest initiation and assign him the name Naga, remove the old name of the mentor and assign the name Tissa. This should be known by one who awaits the highest initiation, the master and the Sangha.”&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+    After the assignment of names, the teacher must say the following to the candidate for higher initiation: &lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;“Samanera! You who have come with the expectation of the highest initiation for the purpose of crossing samsara and achieving Nibbana must first accept a mentor, as the Buddha expounded “Paṭhamaṃ upajjhaṃ gāhāpetabbo.”&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+    When this is said, the person awaiting the highest initiation (upasampadāpekkha) should sit down before the preceptor and say three times: &lt;br&gt;
+    &lt;b&gt;“Uppajjhāyo me Bhante hohi.”&lt;/b&gt;&lt;br&gt;
+    The mentor should accept this by saying: &lt;br&gt;
+    &lt;b&gt;“Pāsādikena sampādehi.”&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+    After this, the teacher should say the following.&lt;br&gt;
+    &lt;b&gt;“Uppajjhaṃ gāhāpetvā pattacīvaraṃ ācikkhitabbaṃ”&lt;/b&gt;&lt;br&gt;
+    Which means: “For your information, I tell you what is used in sasan to denote the cup and the garments, because the Blessed One, the guide of the world, said so.”&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;“Ayaṃ te patto”,&lt;/b&gt;&lt;br&gt;
+    “Samanera! This black spherical vessel is your cup.”&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;“Ayaṃ saṅghāṭi”,&lt;/b&gt;&lt;br&gt;
+    “This robe, cut into pieces, sewn in two layers and dyed, is called saṅghāṭi in the Buddha`s sasan.”&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;“Ayaṃ uttarāsṅgoa”&lt;/b&gt;&lt;br&gt;
+    “This garment, cut into pieces, sewn in one layer and dyed, is called uttarāsṅgoa in Sasana.”&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;“Ayaṃ antaravāsako”,&lt;/b&gt;&lt;br&gt;
+    “This robe you wear is called antaravāsako in Buddha-Sasana.”&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;“Gaccha amumhi okāse tiṭṭhāhi”,&lt;/b&gt;&lt;br&gt;
+    “Samanera! As the Tathagata stated: &lt;br&gt;
+    &lt;b&gt;“Anujāmi bhikkhave! Ekamantaṃ anusāsitvā saṅghamajjhe antarāyike dhamme pucchituṃ",&lt;/b&gt;&lt;br&gt;
+    that a person awaiting higher initiation should be interviewed in a place far from the Sangha, it is inappropriate for you to be advised among the Sangha. Therefore, go to that place.”&lt;br&gt;&lt;br&gt;
+
+    When told this, the one awaiting the highest initiation must walk some distance without turning his back on the Sangha and remain there. The teacher should go there and advise upasampadāpekkha. As it is said:&lt;br&gt;
+    &lt;b&gt;“Na bhikkhave! asammatena anusātitabbo. Yo anusāseyya āpatti dukkaṭassa”&lt;/b&gt;&lt;br&gt;
+    A monk should not give advice to someone awaiting ordination without confirmation. He should confirm himself by saying the following phrase:&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;Suṇātu me bhante! Saṅgho, nāgo āyasmato tissassa upasampadāpekkho, yadi saṅghassa pattakallaṃ ahaṃ nāgaṃ anusāseyyaṃ.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+    After this, the one who gives the initiation goes to leave the Sangha and go to the one awaiting the highest initiation and give the following advice: &lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;Suṇasi, nāga. Ayaṃ te saccakālo, bhūtakālo. Yaṃ jātaṃ taṃ saṅghamajjhe pucchante santaṃ atthī’ti vattabbaṃ, asantaṃ natthi’ti vattabbaṃ. Mā kho vitthāsi, mā kho maṅku ahosi.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;i&gt;Samanera called Naga, you who sacrificed worldly life to the Sasana of the Buddha for the purpose of crossing samsara.
+    This moment when you are about to receive the highest initiation, consisting of the highest morality,
+    In this extremely rare Buddha Sasana, it is time to honestly express the truth by answering the questions asked,
+    without hiding or trying to hide anything. When asked if you have any medical conditions,
+    such as cutaneous or congenital, you must report the actual situation. When you are questioned
+    in the Sangha, do not think that this is intended to harm you. Do not fall into negative thoughts with sadness at the thought
+    that questions about non-existent things are asked in order to insult you.&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;Evaṃ tam pucchissanti, santi te evarūpā ābādhā, kuṭṭhaṃ gaṇḍo, kilāso, soso, apamāro, manusso`si, puriso`si, bhijisso`si, anaṇo`si, nasi anuññāto`si mātāpitūhi, paripuṇṇavīsativasso`si, paripuṇṇaṃ te pattacīvaraṃ, kiṃ nāmo`si, ko nāmo te uppajjhāyo.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;i&gt;Samanera, the Tathāgata asked: “Anujānāmi, bhikkhave, upasampādentena terasa antarāyike dhamme pucchituṃ,”
+    that a person awaiting the highest initiation should be asked whether he possesses any of the thirteen dangerous
+    dhamm. The following questions are asked in the midst of the Sangha. Is there any disease in your body such as
+    like leprosy, syphilis, rash? Do you have boils on your body the size of domba or lime fruits? Is there on your
+    white crusts on the skin? Do you have tuberculosis, which destroys the elements and kills? You suffer from epilepsy,
+    causing sudden loss of consciousness? Are you human? You are a man? Are you a free person? Don`t have any debt?
+    Are you not a royal soldier? Did your parents give consent? Are you twenty years old? Are your bowl and clothes ready?
+    What is your name? And what is the name of your mentor?&lt;/i&gt;&lt;br&gt;&lt;br&gt;
+
+    After this, the one who conducts the initiation leaves there the person awaiting the highest initiation and goes to the Sangha to obtain their permission, saying: &lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;Suṇātu me Bhante saṅgho. Nāgo āyasmato tissassa upasampadāpekkho anusiṭṭho so mayā. yadi saṅghassa pattakallaṃ nāgo āgaccheyya.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+    And accepts the one awaiting the highest initiation among the Sangha. After this, as it is said: “Na bhikkhave,
+    ayācitena upasampādetabbo, yo upsampādeyya āpatti dukkaṭassa”, asking a person expecting the highest
+    initiation, to ask for higher initiation. At this time, the candidate must wear a chivara covering one shoulder,
+    bow to the Sangha, sit down with folded palms, and ask for higher initiation, saying: &lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;&lt;font color="#046307"&gt;Saṅghaṃ, bhante, upasampadaṃ yācāmi, ullumpatu maṃ, bhante, saṅgho anukampaṃ upādāya. Dutiyampi, bhante,
+    saṅghaṃ upasampadaṃ yācāmi, ullumpatu maṃ, bhante, saṅgho anukampaṃ upādāya. Tatiyampi, bhante, saṅghaṃ
+    upasampadaṃ yācāmi, ullumpatu maṃ, bhante, saṅgho anukampaṃ upādāya.&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+
+    After this, the teacher must agree to be asked about the traits that hinder higher initiation (antarāyika-dhammas), as follows: &lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;Suṇātu me Bhante saṅgho, ayaṃ nāgo āyasmato tissassa upasampadāpekkho. Yadi saṅghassa pattakallaṃ ahaṃ nāgaṃ antarāyike dhamme puccheyyaṃ.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+    The highest initiation should be given to the kammavācā after he has inquired about the antarāyikadhammas. Questions should be asked as follows:&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;Suṇasi nāga! ayaṃ te saccakālo, bhūtakālo, yaṃ jātaṃ taṃ pucchāmi. Santaṃ atthiti vattabbaṃ. Asantaṃ natthiti vattabbaṃ.&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;&lt;font color="#EB4C42"&gt;1. Santi te evarūpā ābādhā kuṭṭhaṃ? (natthi bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+    &lt;b&gt;&lt;font color="#EB4C42"&gt;2. gaṇḍo? (natthi bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+    &lt;b&gt;&lt;font color="#EB4C42"&gt;3. kilaso? (natthi bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+    &lt;b&gt;&lt;font color="#EB4C42"&gt;4. soso? (natthi bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+    &lt;b&gt;&lt;font color="#EB4C42"&gt;5. apamāro? (natthi bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+
+    &lt;b&gt;&lt;font color="#046307"&gt;6. purisosi? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+    &lt;b&gt;&lt;font color="#046307"&gt;7. bhujissosi? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;b&gt;&lt;font color="#046307"&gt;8. Anaṇosi? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+ &lt;b&gt;&lt;font color="#046307"&gt;9. nasi rājābhaṭo? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+ &lt;b&gt;&lt;font color="#046307"&gt;10. anuññātosi mātāpituhi? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+ &lt;b&gt;&lt;font color="#046307"&gt;11. paripuṇṇa vīsati vassosi? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+ &lt;b&gt;&lt;font color="#046307"&gt;12. paripuṇṇaṃ te pattacīvaraṃ? (āma bhante)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;
+ &lt;b&gt;13. kiṃ nāmosi? (ahaṃ bhante nāgo nāma)&lt;/b&gt;&lt;br&gt;
+ &lt;b&gt;14. ko nāmo te uppajjhāyo? (ahaṃ bhante tissa nāma)&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ </string>
 </resources>
