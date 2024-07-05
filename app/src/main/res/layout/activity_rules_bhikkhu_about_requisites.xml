@@ -40,4 +40,234 @@
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ScrollView
+        android:id="@+id/viewScrollRulesBhikkhuRequisites"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutScrollRulesBhikkhuRequisites"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/button_rules_bhikkhu_requisites_1"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toRlesBhikkhuRequisites1"
+                android:text="@string/textButtonRequisites1"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_rules_bhikkhu_requisites_2"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toRlesBhikkhuRequisites2"
+                android:text="@string/textButtonRequisites2"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_rules_bhikkhu_requisites_3"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toRlesBhikkhuRequisites3"
+                android:text="@string/textButtonRequisites3"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_rules_bhikkhu_requisites_4"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toRlesBhikkhuRequisites4"
+                android:text="@string/textButtonRequisites4"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_rules_bhikkhu_requisites_5"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toRlesBhikkhuRequisites5"
+                android:text="@string/textButtonRequisites5"
+                tools:ignore="UsingOnClickInXml" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/viewScrollTextRulesBhikkhuRequisites1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textViewRequisites1"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1500dp"
+                android:text="@string/textRequisites1" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollTextRulesBhikkhuRequisites2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textViewRequisites2"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1500dp"
+                android:text="@string/textRequisites2" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollTextRulesBhikkhuRequisites3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textViewRequisites3"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="1500dp"
+                android:text="@string/textRequisites3" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollTextRulesBhikkhuRequisites4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textViewRequisites4"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textRequisites4" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/viewScrollTextRulesBhikkhuRequisites5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="invisible">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFE082"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/textViewRequisites5"
+                style="@style/TextMessageStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textRequisites5" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonBhikkhuRequisitesHome"
+            style="@style/buttonBackHomeNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="toMainAct"
+            android:visibility="invisible"
+            tools:ignore="UsingOnClickInXml"
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/buttonBhikkhuRequisitesLive"
+            style="@style/buttonBackNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="tobackBhikhuRequisites"
+            android:visibility="invisible"
+            tools:ignore="UsingOnClickInXml"
+            tools:visibility="visible" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

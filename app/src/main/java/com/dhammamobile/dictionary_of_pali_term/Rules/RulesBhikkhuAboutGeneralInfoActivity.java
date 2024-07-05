@@ -28,7 +28,6 @@ public class RulesBhikkhuAboutGeneralInfoActivity extends BaseActivityClass {
     private TextView textViewAboutGeneralInfo8;
     private TextView textViewAboutGeneralInfo9;
     private TextView textViewAboutGeneralInfo10;
-
     private TextView textViewAboutGeneralInfo11;
     private TextView textViewAboutGeneralInfo12;
 

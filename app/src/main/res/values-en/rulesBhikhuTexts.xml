@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="buttonSangkhadisesaText">sanghadisesa</string>
     <string name="buttonParajikaDetails">click to learn more about the rule</string>
 
@@ -459,6 +459,275 @@ Some disciplinary actions involve only one catti and one anusāvana.&lt;br&gt;&l
  </string>
 
     <string name="buttonRequisites">REQUISITES</string>
+
+    <string name="textButtonRequisites1">Bindu \n (Chivara marking)</string>
+    <string name="textButtonRequisites2">Adhiṫṫhanā \n (focused definition of chivara)</string>
+    <string name="textButtonRequisites3">Paccuddharaṇa \n (Relinquishing)</string>
+    <string name="textButtonRequisites4">Vikappana \n (Co-ownership)</string>
+    <string name="textButtonRequisites5">Vikappana-paccuddharaṇa \n (Relinquishment of joint property)</string>
+
+    <string name="textRequisites1">
+ &lt;br&gt;
+ Before use, a new chiwara must be marked with (three) blue (green) dots,
+ black or brown, saying out loud or mentally: &lt;br&gt;&lt;br&gt;
+ &lt;div style="text-align:center;"&gt;&lt;b&gt;"Imam bindukappam karomi"&lt;/b&gt;&lt;br&gt;
+ ("Im labeling it correctly")&lt;br&gt;
+ [cm. Vin,IV,120]&lt;/div&gt;&lt;br&gt;
+ </string>
+    <string name="textRequisites2">
+    &lt;br&gt;
+    &lt;div style="text-align:center;"  &gt;&lt;b&gt;&lt;big&gt; “Imaṁ saṅghа̄ṭiṁ adhiṭṭhа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (“I mindfully determine this robe”) &lt;br&gt;&lt;br&gt;
+    Replace “saṅghа̄ṭiṁ” from the corresponding item: &lt;br&gt;
+    *uttarā-saṅgaṁ (upper robe) &lt;br&gt;
+    *antara-vāsakaṁ (lower robe) &lt;br&gt;
+    *pattaṁ (alms bowl) &lt;br&gt;
+    *nisīdanaṁ (sitting cloth) &lt;br&gt;
+    *kaṇḍu-paṭichādiṃ (cloth covering skin eruptions) &lt;br&gt;
+    *vassika-sāṭikaṁ (rain cloth) &lt;br&gt;
+    *paccattharaṇaṁ (sleeping cloth) &lt;br&gt;
+    *mukha-puñchana-colaṁ (handkerchief) &lt;br&gt;
+    *parikkhāra-colaṁ (minor requisite). &lt;br&gt;
+    [SP, III, 643f] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    The first three items must be properly marked before being determined for use.
+    Only one of these items can be determined at any time. &lt;br&gt;&lt;br&gt;
+    The rain cloth can be used only during the four months of the rains. &lt;br&gt;[SP, III, 644] &lt;br&gt;&lt;br&gt;
+    There is no limit to the number of items that can be determined in each of the last three categories above,
+    for example: &lt;br&gt;
+    &lt;div style="text-align:center;" &gt;&lt;b&gt;&lt;big&gt;“Imaṁ paccattharaṇaṁ adhiṭṭhа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (“I determine this sleeping cloth.”) &lt;br&gt;&lt;br&gt;&lt;/div&gt;
+    Replace “mukha-puñchana-colaṁ” (handkerchiefs) or “parikkhāra-colaṁ” (minor requisite)
+    as necessary. &lt;br&gt;
+    [SP, III, 645] &lt;br&gt;&lt;br&gt;
+    Items are determined either by touching them and mentally repeating the appropriate Pali passage,
+    or by reciting the Pali without touching the item. In the latter case, if the item is beyond arms length: &lt;br&gt;
+    imaṁ → etaṁ; this (that) &lt;br&gt;
+    Imāni” → etāni these (those) &lt;br&gt;
+    [SP, III, 643] &lt;br&gt;&lt;br&gt;
+</string>
+    <string name="textRequisites3">
+    &lt;br&gt;
+    If it is necessary to replace the upper robe, lower robe, alms bowl, or mat,
+    you must first relinquish the already determined item:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“imaṁ saṅghāṭiṁ paccudharāmi”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (“I relinquish this upper robe”)&lt;br&gt;
+    [Sp, III, 643]&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+    Replace “saṅghāṭiṁ” with the corresponding item.&lt;br&gt;&lt;br&gt;
+    Apart from relinquishing from use, a determined article ceases to be determined if it is given to another,
+        is stolen, is taken on trust by a friend, or has a large visible hole in it
+</string>
+    <string name="textRequisites4">
+    &lt;br&gt;
+    There are various ways of dividing property. Here are the most common methods.
+    There are two formal acts in the presence of a second owner:&lt;br&gt;&lt;br&gt;
+    (i) In the presence of the receiving monk and with the item at arms length:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“imaṁ cīvaraṁ tuyhaṁ vikappemi”.&lt;br&gt;
+    (“I share this robe with you”)&lt;br&gt;
+    “imāni cīvarāni tuyhaṁ vikappemi”.&lt;br&gt;
+    (“…these robes…”)&lt;br&gt;
+    “imaṁ pattaṁ tuyhaṁ vikappemi”.&lt;br&gt;
+    (“…this bowl…”)&lt;br&gt;
+    “ime patte tuyhaṁ vikappemi”.&lt;br&gt;
+    (“…these bowls…”)&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    When the receiving monk is senior:&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“tuyhaṁ” → “āyasmato”&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    When sharing with more than one monk:&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“tuyhaṁ” → “tumhākaṁ”&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    When the item exceeds arms length:&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“imaṁ” → “etaṁ”;
+    “imāni” → “etāni”;
+    “ime” → “ete”&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;[Vin, IV, 122]&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    (ii) In the presence of the receiving monk (whose name is, for example, “Uttaro”) and with
+    the item at arms length, one says to another monk:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“imaṁ cīvaraṁ uttarassa bhikkhuno vikappemi”.&lt;br&gt;
+    (“I share this robe with Uttaro Bhikkhu”)&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    When the receiving monk is senior:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“uttarassa bhikkhuno” → “āyasmato uttarassa”&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    If sharing with a novice:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“uttarassa bhikkhuno” → “uttarassa sāmaṇerassa”&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    To share a bowl: &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“cīvaraṁ” → “pattaṁ”&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    If it is necessary to use more than one item, use the plural form as in (i) above.&lt;br&gt;&lt;br&gt;
+    If the item exceeds arms length, replace it as indicated in (i) above.&lt;br&gt;
+    [Vin, IV, 122]&lt;br&gt;&lt;br&gt;
+    (iii) In the absence of the receiving monks, tell a witness:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“imaṁ cīvaraṁ vikappanatthāya yuyhaṃ dammi”.
+    (“I give you this robe to share it”)&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    Then the witness should ask the original owner the names of two monks or novices who are his friends or acquaintances:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“ko te mitto vā sandiṭṭho vā”.&lt;br&gt;
+    (“Who is your friend or acquaintance?”)&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    After the original owner gives the names, for example:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“uttaro bhikhu ca tisso sāmaṇero ca”
+    (“Bhikkhu Uttaro and Samanera Tissa”)&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    Then the witness says:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“ahaṁ tessaṁ dammi”.&lt;br&gt;
+    (“I give this to them”).&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;
+    or&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“ahaṁ uttarasso bhikkhuno ca tissassa”.&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    (“I give this to Bhikkhu Uttaro and Samanera Tissa.)&lt;br&gt;
+    [Vin, IV, 122]&lt;br&gt;&lt;br&gt;
+    To share a bowl:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“cīvaraṁ” → “pattaṁ”&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    If it is necessary to use more than one item, use the plural form as in (i) above.&lt;br&gt;&lt;br&gt;
+    If the item exceeds arms length, replace it as indicated in (i) above.&lt;br&gt;&lt;br&gt;
+</string>
+    <string name="textRequisites5">
+    &lt;br&gt;
+    Before actually using a shared item, the other monk must relinquish their share.
+    If the other monk is senior and the item is within arms reach:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“imamaṁ cīvaraṁ mayhaṁ santakaṁ paribhuñja vā visajjehi vā yathāpaccayaṁ vā karohi”.&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (“This robe is mine: you may use it, give it away, or do with it as you wish”)&lt;br&gt;
+    [cf. Kv, 122]&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+    If more than one robe is being relinquished:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“imamaṁ cīvaraṁ” → “imamani cīvarāni”&lt;br&gt;
+    “santakaṁ” → “santakāni”&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;/big&gt;
+    When the second owner is junior:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“paribhuñja” → “paribhuñjatha”&lt;br&gt;
+    “visajjehi” → “visajjetha”&lt;br&gt;
+    “karohi” → “karotha”&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;/big&gt;
+    If the length of the item(s) exceeds arms length, modify the sentence accordingly:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imaṁ” (this) → “etaṁ” (that);&lt;br&gt;
+    “imāni” (these) → “etāni” (those).&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;/big&gt;
+    To cancel shared ownership as in case (4a.iii) mentioned above, the witness says:&lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Tesaṁ santakaṁ paribhuñja vā vissajjehi vā yathāpaccayaṁ vā karohi.”&lt;br&gt;&lt;/big&gt;
+    (“Use what belongs to them, give it away, or do with it as you wish”).&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+    To relinquish shared ownership of a bowl:&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“cīvaraṁ” → “pattaṁ” &lt;br&gt;&lt;/big&gt;
+    and change accordingly as in (4a.i) above.&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+    The practice of some communities regarding shared ownership of a bowl is that permission for its use is not required.
+    However, if the first owner wishes to obtain the shared bowl, the second owner must first relinquish it.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+</string>
+
+    <string name="buttonOffences">instructions for violations</string>
+
+    <string name="textButtonOffences1">āpatti-paṭidesanā \n (Admission of violation)</string>
+    
+    <string name="textOffences1" tools:ignore="TypographyEllipsis">
+    &lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;Confession of a junior monk to a senior.&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;
+    Junior confessing monk (JCM):&lt;br&gt;
+    &lt;b&gt;“Okāsa, ahaṁ bhante,&lt;br&gt;
+    Sabbā apāttiyo ārocemi.&lt;br&gt;
+    Dutiyam-pi ahaṁ bhante,&lt;br&gt;
+    Sabbā apāttiyo ārocemi.&lt;br&gt;
+    Tatiyam-pi ahaṁ bhante,&lt;br&gt;
+    Sabbā apāttiyo ārocemi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“I, Venerable, declare all offenses. The second time… The third time…”)&lt;br&gt;&lt;br&gt;
+    Senior confirming monk (SCM):&lt;br&gt;&lt;br&gt;
+    &lt;b&gt;“Sadhu, sadhu.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (good, good)&lt;br&gt;&lt;br&gt;
+    JCM:&lt;br&gt;
+    &lt;b&gt;“Okāsa, ahaṁ bhante,&lt;br&gt;
+    Sambahulā nānā-vatthukā nānā āpattiyo āpajjiṁ,&lt;br&gt;
+    Tā tumha-mūle paṭidesemi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“I, Venerable, have committed many different offenses on various grounds, which I confess.”)&lt;br&gt;&lt;br&gt;
+    SCM:&lt;br&gt;
+    &lt;b&gt;“Passasi āvuso tā āpattiyo?”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“Do you see these offenses, friend?”)&lt;br&gt;&lt;br&gt;
+    JCM:&lt;br&gt;
+    &lt;b&gt;“āma bhante passāmi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (Yes, Venerable, I see)&lt;br&gt;&lt;br&gt;
+    SCM:&lt;br&gt;
+    &lt;b&gt;“āyatiṁ āvuso saṁvareyyāsi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (In the future, friend, you should be more careful)&lt;br&gt;&lt;br&gt;
+    JCM:&lt;br&gt;
+    &lt;b&gt;“Sadhu suṭṭhu bhante āyatiṁ saṁvarissāmi.&lt;br&gt;
+    Dutiyam-pi sadhu suṭṭhu bhante āyatiṁ saṁvarissāmi.&lt;br&gt;
+    Tatiyam-pi sadhu suṭṭhu bhante āyatiṁ saṁvarissāmi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“This is indeed good, Venerable, in the future I will be restrained. The second time… The third time...”)&lt;br&gt;&lt;br&gt;
+    SCM:&lt;br&gt;
+    &lt;b&gt;“Sadhu, sadhu.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (good, good)&lt;br&gt;&lt;br&gt;
+    JCM:&lt;br&gt;
+    &lt;b&gt;“Okāsa, ahaṁ bhante,&lt;br&gt;
+    Sabbā tā garukāpattiyo āvikaromi.&lt;br&gt;
+    Dutiyam-pi okāsa, ahaṁ bhante,&lt;br&gt;
+    Sabbā tā garukāpattiyo āvikaromi.&lt;br&gt;
+    Tatiyam-pi okāsa, ahaṁ bhante,&lt;br&gt;
+    Sabbā tā garukāpattiyo āvikaromi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“Venerable, I reveal all offenses. The second time… The third time...”)&lt;br&gt;&lt;br&gt;
+    This concluding statement is used only in some communities.
+    Also, in some communities “sadhu” is indicated after each statement, not as shown above.
+    That is, after each “ārocemi” and each “saṁvarissāmi.”&lt;br&gt;&lt;br&gt;
+
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;Confession of a senior monk to a junior&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;
+    Senior confessing monk (SCM):&lt;br&gt;
+    &lt;b&gt;“Aham, avuso, sabbā apāttiyo ārocemi.&lt;br&gt;
+    Dutiyam-pi sabbā apāttiyo ārocemi.&lt;br&gt;
+    Tatiyam-pi sabbā apāttiyo ārocemi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“I, friend, declare all offenses. The second time… The third time…”)&lt;br&gt;&lt;br&gt;
+    Junior confirming monk (JCM):&lt;br&gt;
+    &lt;b&gt;“Sadhu, sadhu.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    SCM:&lt;br&gt;
+    &lt;b&gt;“Okāsa, aham avuso,&lt;br&gt;
+    Sambahulā nānā-vatthukā nānā āpattiyo āpajjim,&lt;br&gt;
+    Tā tumha-mūle paṭidesemi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“I, friend, have committed various offenses on different grounds, which I confess.”)&lt;br&gt;&lt;br&gt;
+    JCM:&lt;br&gt;
+    &lt;b&gt;“Passatha bhante tā apattiyo?”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“Do you see these offenses, Venerable?”)&lt;br&gt;&lt;br&gt;
+    SCM:&lt;br&gt;
+    &lt;b&gt;“Ama avuso passāmi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (Yes, friend, I see)&lt;br&gt;&lt;br&gt;
+    JCM:&lt;br&gt;
+    &lt;b&gt;“āyatim bhante samvareyyatha.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (In the future, Venerable, you should be more careful)&lt;br&gt;&lt;br&gt;
+    SCM:&lt;br&gt;
+    &lt;b&gt;“Sadhu sutthu avuso āyatim samvarissāmi.&lt;br&gt;
+    Dutiyam-pi sutthu samvarissāmi.&lt;br&gt;
+    Tatiyam-pi sutthu samvarissāmi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“Good, friend, in the future I will be restrained. The second time… The third time...”)&lt;br&gt;&lt;br&gt;
+    JCM:&lt;br&gt;
+    &lt;b&gt;“Sadhu, sadhu.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;If monks have the same offenses.&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;
+    JCM:&lt;br&gt;
+    &lt;b&gt;“Okāsa, ahaṁ bhante,&lt;br&gt;
+    Desanādukkaṭāpattiṁ āpajjiṁ,&lt;br&gt;
+    Taṁ tumha-mūle paṭidesemi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“I, Venerable, admit to the offense because I have confessed the same offenses.”)&lt;br&gt;&lt;br&gt;
+    SCM:&lt;br&gt;
+    &lt;b&gt;“Passasi āvuso taṁ apattiṁ?”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“Do you see this offense, friend?”)&lt;br&gt;&lt;br&gt;
+    JCM:&lt;br&gt;
+    &lt;b&gt;“āma bhante passāmi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (Yes, Venerable, I see)&lt;br&gt;&lt;br&gt;
+    SCM:&lt;br&gt;
+    &lt;b&gt;“āyatiṁ āvuso saṁvareyyāsi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (In the future, friend, you should be more careful)&lt;br&gt;&lt;br&gt;
+    JCM:&lt;br&gt;
+    &lt;b&gt;“Sadhu suṭṭhu bhante āyatiṁ saṁvarissāmi.&lt;br&gt;
+    Dutiyam-pi sadhu suṭṭhu bhante āyatiṁ saṁvarissāmi.&lt;br&gt;
+    Tatiyampi sadhu suṭṭhu bhante āyatiṁ saṁvarissāmi.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (“This is indeed good, Venerable, in the future I will be restrained. The second time… The third time...”)&lt;br&gt;&lt;br&gt;
+    SCM:&lt;br&gt;
+    &lt;b&gt;“Sadhu, sadhu.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;
+    (good, good)&lt;br&gt;&lt;br&gt;
+
+    &lt;b&gt;&lt;big&gt;(i) Six causes of āpatti:&lt;/big&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+    Lack of shame; ignorance of the rules; doubting but proceeding; thinking one should do it, though one should not; thinking one should not do it, though doing it; acting without thought (i.e., inattentively).&lt;br&gt;&lt;br&gt;
+    &lt;b&gt;&lt;big&gt;(ii) Āpatti does not occur for:&lt;/big&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+    Insane monks, delirious monks, monks suffering from severe pain, or the original offenders.&lt;br&gt;&lt;br&gt;
+    &lt;b&gt;&lt;big&gt;(iii) Types of āpatti:&lt;/big&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+    (a) Those that cannot be corrected (parājika).&lt;br&gt;
+    (b) Those that can be corrected:&lt;br&gt;
+    — Serious offenses (saṅghādisesa), confession to the Sangha.&lt;br&gt;
+    — Minor offenses, confession to another monk:&lt;br&gt;
+    thullaccaya (serious offense)&lt;br&gt;
+    pācittiya (offenses requiring expiation)&lt;br&gt;
+    paṭidesanīya (offenses requiring confession)&lt;br&gt;
+    dukkaṭa (offenses involving wrong actions)&lt;br&gt;
+    dubbhāsita (offenses involving wrong speech).&lt;br&gt;&lt;br&gt;
+    &lt;b&gt;&lt;big&gt;(iv) Method of confessing minor offenses:&lt;/big&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+    Before confessing, any known offenses should be indicated.
+    Two monks who have committed the same offense should not confess to each other.&lt;br&gt;
+    This constitutes a dukkaṭa offense.&lt;br&gt;
+    [Vin,IV,122]&lt;br&gt;
+    The junior monk confesses first, recalling various offenses.
+    Then the senior monk does the same:&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+</string>
+
 
     <string name="textForUpasampada">&lt;br&gt;
     &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;An act of supreme dedication&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;

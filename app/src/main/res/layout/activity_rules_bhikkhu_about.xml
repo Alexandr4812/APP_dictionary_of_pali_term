@@ -82,6 +82,13 @@
                 android:onClick="toRulesBhikkhuAboutRequisitesAct"
                 android:text="@string/buttonRequisites"
                 tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:id="@+id/button_rules_bhikhu_offences"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toRulesBhikkhuAboutOffencesAct"
+                android:text="@string/buttonOffences"
+                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
     </ScrollView>
 

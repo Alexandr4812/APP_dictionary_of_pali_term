@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="buttonSangkhadisesaText">сангхадисеса</string>
     <string name="buttonParajikaDetails">нажмите, чтобы более подробно узнать о правиле</string>
 
@@ -469,7 +469,277 @@ Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghass
     </string>
     
     
-    <string name="buttonRequisites">РЕКВИЗИТЫ</string>
+    <string name="buttonRequisites">использование реквизитов</string>
+
+    <string name="textButtonRequisites1">Bindu \n (Маркировка чивары)</string>
+    <string name="textButtonRequisites2">Adhiṭṭhanā \n (сосредоточенное определение чивары)</string>
+    <string name="textButtonRequisites3">Paccuddharaṇa \n (отказ)</string>
+    <string name="textButtonRequisites4">Vikappana \n (Совместное владение)</string>
+    <string name="textButtonRequisites5">Vikappana-paccuddharaṇa \n (Отказ от совместного владения)</string>
+
+    <string name="textRequisites1">
+        &lt;br&gt;
+        Перед использованием новую чивару необходимо пометить (тремя) точками синего (зеленого),
+        черного или коричневого цвета, произнеся вслух или мысленно:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«Imam bindukappam karomi»&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        («Я маркирую это правильно»)&lt;br&gt;
+        [см. Вин,IV,120]&lt;/div&gt;
+    </string>
+    <string name="textRequisites2">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imaṁ saṅghа̄ṭiṁ adhiṭṭhа̄mi.”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        («Я внимательно определяю эту чивару»)&lt;br&gt;&lt;br&gt;
+        Вместо «saṅghа̄ṭiṁ» замените из соответствующего пункта:&lt;br&gt;
+        *uttarā-saṅgaṁ (верхнее одеяние)&lt;br&gt;
+        *antara-vāsakaṁ (нижнее одеяние)&lt;br&gt;
+        *pattaṁ (миска для подаяния)&lt;br&gt;
+        *nisīdanaṁ (ткань для сидения)&lt;br&gt;
+        *kaṇḍu-paṭichādiṃ (ткань, прикрывающая высыпания на коже)&lt;br&gt;
+        *vassika-sāṭikaṁ (ткань от дождя)&lt;br&gt;
+        *paccattharaṇaṁ (ткань для сна)&lt;br&gt;
+        *mukha-puñchana-colaṁ (носовой платок)&lt;br&gt;
+        *parikkhāra-colaṁ (малый реквизит).&lt;br&gt;
+        [Сп,III,643f]&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Первые три пункта должны быть должным образом промаркированы прежде чем быть определены для использования.
+        Только один из этих элементов можно определить в любое время.&lt;br&gt;&lt;br&gt;
+        Ткань от дождя может использоваться только в течение четырех месяцев дождей.&lt;br&gt;[SP, III, 644]&lt;br&gt;&lt;br&gt;
+        Нет ограничений в количестве вещей, которые могут быть определены в каждой из трех последних категорий выше,
+        например:&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«Imaṁ paccattharaṇaṁ adhiṭṭhа̄mi»&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        («Я определяю эти спальные ткани».)&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+        Замените «mukha-puñchana-colaṁ» (носовые платки) или «parikkhāra-colaṁ» (малый реквизит)
+        в зависимости от необходимости.&lt;br&gt;
+        [SP, III, 645]&lt;br&gt;&lt;br&gt;
+        Вещи определяются либо путем прикосновения к ней, и умственного повторения соответствующего отрывка Пали,
+        либо произнося пали, не касаясь вещи. В последнем случае, если вещь находится за пределами длины предплечья:&lt;br&gt;
+        imaṁ → etaṁ;  это то&lt;br&gt;
+        Imāni» → etāni эти те&lt;br&gt;
+        [SP, III, 643]&lt;br&gt;&lt;br&gt;
+    </string>
+    <string name="textRequisites3">
+        &lt;br&gt;
+        Если необходимо заменить верхнюю одежду, нижнюю одежду, чашу для подаяния или коврик,
+        то предварительно нужно отказаться от уже определенного предмета:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«imaṁ saṅghāṭiṁ paccudharāmi»&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        («Я отказываюсь от этой верхней одежды»)&lt;br&gt;
+        [Sp,III,643]&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+        Замените «saṅghāṭiṁ» на соответствующий пункт.&lt;br&gt; &lt;br&gt;
+        Помимо отказа, определенная вещь перестает быть как определенная, если она передана другому,
+        украдена, принята на доверие другу или имеет в себе большую видимую дыру.
+    </string>
+    <string name="textRequisites4">
+        &lt;br&gt;
+        Существуют различные способы разделения собственности. Вот самые распространенные способы.
+        Существует два формальных акта при наличии второго собственника:&lt;br&gt;&lt;br&gt;
+        (i) В присутствии принимающего монаха и с предметом на расстоянии длины предплечья:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«imaṁ cīvaraṁ tuyhaṁ vikappemi».&lt;br&gt;
+        («Я делю эту чивару с тобой»)&lt;br&gt;
+        «imāni cīvarāni tuyhaṁ vikappemi».&lt;br&gt;
+        («…эти одежды…»)&lt;br&gt;
+        «imaṁ pattaṁ tuyhaṁ vikappemi».&lt;br&gt;
+        («…эту чашу…»)&lt;br&gt;
+        «ime patte tuyhaṁ vikappemi».&lt;br&gt;
+        («…эти чаши…»)&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Когда принимающий монах является старшим:&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«tuyhaṁ» → «āyasmato»&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Когда делят более чем с одним монахом:&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«tuyhaṁ» → «tumhākaṁ»&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Когда длина предмета превышает длину предплечья:&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«imaṁ» → «etaṁ»;&lt;br&gt;
+        «imāni» → «etāni»;&lt;br&gt;
+        «ime» → «ete»&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;[Вин,IV,122]&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        (ii) В присутствии принимающего монаха (которого зовут, например, «Uttaro») и с
+        предметом на расстоянии предплечья один говорит другому монаху:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«imaṁ cīvaraṁ uttarassa bhikkhuno vikappemi».&lt;br&gt;
+        («Я делю это одеяние с Уттаро Бхиккху»)&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Когда принимающий монах является старшим:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«uttarassa bhikkhuno» → «āyasmato uttarassa»&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Если делятся с новичком:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«uttarassa bhikkhuno» → «uttarassa sāmaṇerassa»&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Разделить патру: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«cīvaraṁ» → «pattam»&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Если необходимо использовать более одной вещи, замените форму множественного числа, как в пункте (i) выше.&lt;br&gt;&lt;br&gt;
+        Если длина предмета превышает длину предплечья, замените его, как указано в пункте (i) выше.&lt;br&gt;
+        [Вин,IV,122]&lt;br&gt;&lt;br&gt;
+        (iii) В отсутствие принимающих монахов скажите свидетелю:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«imaṁ cīvaraṁ vikappanatthāya yuyhaṃ dammi».&lt;br&gt;
+        («Я даю вам эту чивару, с целью поделиться ею»)&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Затем свидетель должен спросить у первоначального владельца имена двух монахов или саманер, которые являются его друзьями или знакомыми:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«ko te mitto vā sandiṭṭho vā».&lt;br&gt;
+        («Кто твой друг или знакомый?»)&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        После того, как первоначальный владелец называет имена, например:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«uttaro bhikhu ca tisso sāmaṇera ca»
+        («бхиккху Уттара и саманера Тисса»)&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Затем свидетель говорит:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«ahaṁ tessaṁ dammi».&lt;br&gt;
+        («Я даю это им»).&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;
+        или&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«ahaṁ uttarasso bhikkhuno ca tissassa».&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        («Я отдаю это бхиккху Уттарре и саманере Тиссе.)&lt;br&gt;
+        [Вин,IV,122]&lt;br&gt;&lt;br&gt;
+        Чтобы поделиться чашей:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«cīvaraṁ» → «pattaṁ»&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Если необходимо использовать более одной вещи, замените форму множественного числа, как в пункте (i) выше.&lt;br&gt;&lt;br&gt;
+        Если длина предмета превышает длину предплечья, замените его, как указано в пункте (i) выше.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+    <string name="textRequisites5">
+        &lt;br&gt;
+        Прежде чем фактически использовать общий предмет, другой монах должен отказаться от своей доли.
+        Если другой монах старше и предмет находится на расстоянии вытянутой руки:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«imamaṁ cīvaraṁ mayhaṁ santakaṁ paribhuñja vā visajjehi vā yathāpaccayaṁ vā karohi».&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        («Это мое одеяние: вы можете использовать его, отдать или делать с ним все, что пожелаете»)&lt;br&gt;
+        [см. Кв,122]&lt;br&gt;&lt;br&gt;&lt;/div&gt;
+        Если сдается более одной одежды:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;«imamaṁ cīvaraṁ» → «imamani cīvarāni»&lt;br&gt;
+        «santakaṁ» → «santakāni»&lt;/big&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;/b&gt;
+        Когда второй владелец младший:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“paribhuñja” → “paribhuñjatha”&lt;br&gt;
+        “visajjehi” → “visajjetha”&lt;br&gt;
+        “karohi” → “karotha”&lt;/big&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;/b&gt;
+        Если длина предмета(ов) превышает длину предплечья, измените предложение соответствующим образом:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imaṁ” (это) → “etaṁ” (то);&lt;br&gt;
+        “imāni” (эти) → “etāni” (те).&lt;/big&gt;&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;/b&gt;
+        Чтобы отменить совместное владение по случаю (4a.iii) указанному выше, свидетель говорит:&lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Tesaṁ santakaṁ paribhuñja vā vissajjehi vā yathāpaccayaṁ vā karohi.”&lt;/big&gt;&lt;br&gt;
+        («Используйте то, что принадлежит им, отдайте это или делайте с этим что хотите».)&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;/b&gt;
+        Чтобы отказаться от совместного владения чашей:&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“cīvaraṁ” →  “pattaṁ”&lt;/big&gt; &lt;br&gt;
+        и изменить в соответствии с (4a.i) выше.&lt;br&gt;&lt;br&gt;&lt;/div&gt;&lt;/b&gt;
+        Практика некоторых сообществ при совместном владении чашей заключается в том, что разрешение на ее использование не требуется.
+        Однако, если первый владелец желает получить общую чашу, второй владелец должен сначала отказаться от нее.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="buttonOffences">инструкции к нарушениям</string>
+
+    <string name="textButtonOffences1">āpatti-paṭidesanа̄ \n (Признание в нарушении)</string>
+
+    <string name="textOffences1" tools:ignore="TypographyEllipsis">
+        &lt;br&gt;
+        &lt;big&gt;&lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;Признание младшего монаха старшему.&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;/big&gt;
+        &lt;big&gt;Младший признающийся монах (МПМ):&lt;br&gt;
+        &lt;b&gt;“Okа̄sa, ahaṁ bhante,&lt;br&gt;
+        Sabbа̄ аpа̄ttiyo а̄rocemi.&lt;br&gt;
+        Dutiyam-pi ahaṁ bhante,&lt;br&gt;
+        Sabbа̄ аpа̄ttiyo а̄rocemi.&lt;br&gt;
+        Tatiyam-pi ahaṁ bhante,&lt;br&gt;
+        Sabbа̄ аpа̄ttiyo а̄rocemi.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        («Я достопочтенный, заявляю обо всех нарушениях. Во второй раз… В третий раз…»)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;Старший подтверждающий монах (СПМ):&lt;br&gt;
+        &lt;b&gt;“Sаdhu, sаdhu.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (хорошо, хорошо)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;МПМ:&lt;br&gt;
+        &lt;b&gt;“Okа̄sa, ahaṁ bhante,&lt;br&gt;
+        Sambahulа̄ nа̄nа̄ vatthukа̄ nа̄nа̄ а̄pattiyo а̄pajjiṁ,&lt;br&gt;
+        Tа̄ tumha-mūle paṭidesemi.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (“Я, достопочтенный, много раз совершал различные нарушения на разных основаниях, в чем я признаюсь”)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;СПМ:&lt;br&gt;
+        &lt;b&gt;“Passasi а̄vuso tа̄ а̄pattiyo?”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (“Видишь ли ты, друг, эти проступки?”)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;МПМ:&lt;br&gt;
+        &lt;b&gt;“а̄ma bhante passа̄mi.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (Да достопочтенный, я вижу)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;СПМ:&lt;br&gt;
+        &lt;b&gt;“а̄yatiṁ а̄vuso sаṁvareyyа̄si.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (В бедующем друг, тебе следует быть внимательнее)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;МПМ:&lt;br&gt;
+        &lt;b&gt;“Sа̄dhu suṭṭhu bhante а̄yatiṁ saṁvarissа̄mi.&lt;br&gt;
+        Dutiyam-pi sа̄dhu suṭṭhu bhante а̄yatiṁ saṁvarissа̄mi.&lt;br&gt;
+        Tatiyam-pi sа̄dhu suṭṭhu bhante а̄yatiṁ saṁvarissа̄mi.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (“Это действительно хорошо, достопочтенный, в будущем я буду сдержан. Во второй раз……В третий раз...”)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;СПМ:&lt;br&gt;
+        &lt;b&gt;“Sаdhu, sаdhu.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (хорошо, хорошо)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;МПМ:&lt;br&gt;
+        &lt;b&gt;“Okа̄sa, ahaṁ bhante,&lt;br&gt;
+        Sabbа̄ tа̄ garukа̄pattiyo а̄vikaromi.&lt;br&gt;
+        Dutiyam-pi okа̄sa, ahaṁ bhante,&lt;br&gt;
+        Sabbа̄ tа̄ garukа̄pattiyo а̄vikaromi.&lt;br&gt;
+        Tatiyam-pi okа̄sa, ahaṁ bhante,&lt;br&gt;
+        Sabbа̄ tа̄ garukа̄pattiyo а̄vikaromi.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (“Достопочтенный, я раскрываю все нарушения. Во второй раз...… В третий раз...”)&lt;br&gt;&lt;br&gt;
+        Это заключительное заявление используется только в некоторых сообществах.
+        Кроме того, в некоторых сообществах после каждого заявления указывается “sаdhu”, а не как показано выше.
+        То есть после каждого “а̄rocemi” и каждого “saṁvarissа̄mi”.&lt;br&gt;&lt;br&gt;
+
+       &lt;big&gt;&lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;Признание старшего монаха младшему&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;/big&gt;
+        &lt;big&gt;Старший признающийся монах (СПМ):&lt;br&gt;
+        &lt;b&gt;“Aham, avuso, sabbа‌ аpа‌ttiyo а‌rocemi.&lt;br&gt;
+        Dutiyam-pi sabbа‌ аpа‌ttiyo а‌rocemi&lt;br&gt;
+        Tatiyam-pi sabbа‌ аpа‌ttiyo а‌rocemi.&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        («Я, друг, заявляю обо всех нарушениях. Во второй раз… В третий раз…»)&lt;br&gt;&lt;br&gt;
+        Младший подтверждающий монах (МПМ):&lt;br&gt;
+        &lt;big&gt;“Sаdhu, sаdhu.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        &lt;big&gt;СПМ:&lt;br&gt;
+        &lt;b&gt;“Okа‌sa, aham avuso,&lt;br&gt;
+        Sambahulа‌ nа‌nа‌-vatthukа nа̄nа̄ а‌pattiyo а‌pajjim,&lt;br&gt;
+        Tа̄ tumha-mūle paṭidesemi.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (“Я, друг,  совершил различные нарушения на разных основаниях, в чем я признаюсь”)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;МПМ:&lt;br&gt;
+        &lt;b&gt;“Passatha bhante tа‌ а‌pattiyo”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (“Видите ли вы, бханте, эти проступки?”)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;СПМ:&lt;br&gt;
+        &lt;b&gt;“Ama avuso passа‌mi.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (Да друг, я вижу)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;МПМ:&lt;br&gt;
+        &lt;b&gt;“а‌yatim bhante  sаmvareyyatha”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (В бедующем бханте, вам следует быть внимательнее)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;СПМ:&lt;br&gt;
+        &lt;b&gt;“Sа‌dhu sutthu avuso а‌yatim samvarissа‌mi.&lt;br&gt;
+        Dutiyam-pi sutthu samvarissа‌mi.&lt;br&gt;
+        Tatiyam-pi sutthu samvarissа‌mi”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (“Хорошо, друг, в будущем я буду сдержан. Во второй раз...…В третий раз...”)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;МПМ:&lt;br&gt;
+        &lt;b&gt;“Sаdhu, sаdhu.”&lt;br&gt;&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+
+       &lt;big&gt; &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;Если у монахов одинаковые нарушения.&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;/big&gt;
+        &lt;big&gt;МПМ:&lt;br&gt;
+        &lt;b&gt;“Okа̄sa, ahaṁ bhante,&lt;br&gt;
+        Desanа̄dukkaṭа̄pattiṁ а̄pajjiṁ,&lt;br&gt;
+        Taṁ tumha-mūle paṭidesemi.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (“Я, достопочтенный, признаю себя виновным в нарушение, поскольку признался в тех же самых нарушениях”.)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;СПМ:&lt;br&gt;
+        &lt;b&gt;“Passasi а̄vuso taṁ аpaṭṭiṁ?”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (“Видишь ли ты, друг, этот проступок?”)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;МПМ:&lt;br&gt;
+        &lt;b&gt;“а̄ma bhante passа̄mi.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (Да достопочтенный, я вижу)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;СПМ:&lt;br&gt;
+        &lt;b&gt;“а̄yatiṁ а̄vuso sаṁvareyyа̄si.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (В бедующем друг, тебе следует быть внимательнее)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;МПМ:&lt;br&gt;
+        &lt;b&gt;“Sа̄dhu suṭṭhu bhante а̄yatiṁ saṁvarissа̄mi.&lt;br&gt;
+        Dutiyam-pi sа̄dhu suṭṭhu bhante а̄yatiṁ saṁvarissа̄mi.&lt;br&gt;
+        Tatiyam-pi sа̄dhu suṭṭhu bhante а̄yatiṁ saṁvarissа̄mi.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (“Это действительно хорошо, достопочтенный, в будущем я буду сдержан. Во второй раз...…В третий раз...”)&lt;br&gt;&lt;br&gt;
+        &lt;big&gt;СПМ:&lt;br&gt;
+        &lt;b&gt;“Sаdhu, sаdhu.”&lt;br&gt;&lt;/b&gt;&lt;/big&gt;
+        (хорошо, хорошо)&lt;br&gt;&lt;br&gt;
+
+        &lt;b&gt;&lt;big&gt;(i) Шесть причин āpatti:&lt;/big&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+        Отсутствие стыда; незнание правил; сомневается, но идет вперед; думает, что ему следует делать,
+        хотя ему не следует делать; думает, что ему не следует этого делать, хотя делает; действует не подумав
+        (т.е. рассеянно).&lt;br&gt;&lt;br&gt;
+        &lt;b&gt;&lt;big&gt;(ii) Не совершается āpatti для:&lt;/big&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+        Безумных монахов, бредящих, страдающих от сильной боли, или являющихся первоначальными нарушителями.&lt;br&gt;&lt;br&gt;
+        &lt;b&gt;&lt;big&gt;(iii) Виды āpatti:&lt;/big&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+        (а) Те, которые невозможно исправить (pаrаjika).&lt;br&gt;
+        (b) Те, которые можно исправить:&lt;br&gt;
+        — Тяжелые нарушения (saṅghа̄disesa), признание Сангхе.&lt;br&gt;
+        — Легкие нарушения, признание другому монаху:&lt;br&gt;
+        thullaccaya (серьёзное нарушение)&lt;br&gt;
+        pаcittiya (нарушения требующие искупления)&lt;br&gt;
+        pаtidesanīya (нарушения, требующие признания)&lt;br&gt;
+        dukkaṭa (нарушения, связанные с неправильными действиями)&lt;br&gt;
+        dubbhа̄sita (напушения, связанные с неправильной речью).&lt;br&gt;&lt;br&gt;
+        &lt;b&gt;&lt;big&gt;(iv) Метод признания в совершении легких нарушений:&lt;/big&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+        Перед признанием следует указать любые известные совершённые нарушения.
+        Два монаха, совершившие одно и то же нарушение, не должны признаваться друг другу.&lt;br&gt;
+        Это является нарушением dukkaṭa.&lt;br&gt;
+        [Вин,IV,122]&lt;br&gt;
+        Первым признается более младший монах, вспоминая различные нарушения.
+        Затем то же самое делает старший монах:&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    </string>
 
     <string name="textForUpasampada">&lt;br&gt;
         &lt;div style="text-align:center;"&gt;&lt;big&gt;&lt;b&gt;Акт высшего посвящения&lt;/b&gt;&lt;/big&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;

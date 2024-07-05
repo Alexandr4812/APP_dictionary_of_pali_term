@@ -44,4 +44,8 @@ public class RulesBhikkhuAboutActivity extends BaseActivityClass {
     public void toRulesBhikkhuAboutRequisitesAct(View view){
         startIntentActivityAndFinish(RulesBhikkhuAboutRequisitesActivity.class);
     }
+
+    public void toRulesBhikkhuAboutOffencesAct(View view){
+        startIntentActivityAndFinish(RulesBhikkhuAboutOffencesActivity.class);
+    }
 }
