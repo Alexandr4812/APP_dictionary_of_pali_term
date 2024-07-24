@@ -469,7 +469,7 @@ Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghass
     </string>
     
     
-    <string name="buttonRequisites">использование реквизитов</string>
+    <string name="buttonRequisites">использование принадлежностей</string>
 
     <string name="textButtonRequisites1">Bindu \n (Маркировка чивары)</string>
     <string name="textButtonRequisites2">Adhiṭṭhanā \n (сосредоточенное определение чивары)</string>
@@ -613,6 +613,7 @@ Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghass
     <string name="buttonOffences">инструкции к нарушениям</string>
 
     <string name="textButtonOffences1">āpatti-paṭidesanа̄ \n (Признание в нарушении)</string>
+    <string name="textButtonOffences2">Nissaggiya Pа̄cittiya \n (Признание в нарушении с конфискацией предмета)</string>
 
     <string name="textOffences1" tools:ignore="TypographyEllipsis">
         &lt;br&gt;
@@ -739,6 +740,192 @@ Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghass
         [Вин,IV,122]&lt;br&gt;
         Первым признается более младший монах, вспоминая различные нарушения.
         Затем то же самое делает старший монах:&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya1">1. \n Nissaggiya Pа̄cittiya \n (лишняя чивара)</string>
+    <string name="textOffencesPacittiyaAbout">
+        \n
+        Прежде чем совершать признание, предмет, о котором идет речь, должен быть передан другому монаху или Сангхе. \n [Vin, III, 196f]
+    </string>
+    <string name="textPacittiya1">
+        &lt;br&gt;
+        На одиннадцатой заре удержания одного "лишнего предмета" на расстоянии длины предплечья, монах отдает этот предмет более старшему монаху: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me *bhante* cīvaraṁ dasа̄hа̄tikkantaṁ nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi.”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (“Это дополнительное одеяние, достопочтенный, срок действия которого превысил десятидневный (лимит), подлежит возврату мной: я передаю его вам”.)&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Более одного “лишнего предмета”: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imа̄ni me bhante, cīvarаni dasа̄hа̄tikkantаni
+        nissaggiyа̄ni, imа̄nа̄haṁ а̄yasmato nissajjа̄mi.” &lt;/div&gt;&lt;/big&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+        Если вы отдаете “лишний предмет” Сангхе: &lt;br&gt;&lt;br&gt;
+         &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“а̄yasamato” → “saṅghassa”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        [Vin,III,197]&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Если вы отдаете “лишний предмет” группе монахов: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“а̄yasamato” → ““а̄ysamantа̄naṁ” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Если старший бхикху: &lt;br&gt;&lt;br&gt;
+         &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“bhante” → “а̄vuso”&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Если длина превышает длину предплечья: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“idaṁ” (эта) → “etaṁ”(та) &lt;br&gt;
+        “imа̄haṁ” → “etа̄haṁ” &lt;br&gt;
+         “imа̄ni”(эти) → “etа̄ni” (те) &lt;br&gt;
+        “imа̄nа̄haṁ” → “etа̄nа̄haṁ” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Возврат предмета назад, отдавшему монаху: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imaṁ cīvaraṁ а̄yasamato dammi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (“Я отдаю тебе это одеяние”.) &lt;br&gt;
+         [Вин, III, 197] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        При возврате больше чем одной чивары: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“imaṁ” → “imаni” ; “cīvaraṁ” → “cīvarāni” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Эта формула для возврата также применяется в Pа̄с. 2, 3, 6, 7, 8, 9, 10 ниже. &lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya2">2. \n Nissaggiya Pа̄cittiya \n (чивара ночью отдельно от бхикху)</string>
+    <string name="textPacittiya2">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante cīvaraṁ ratti-vippavutthaṁ aññatra bhikkhu-sammatiyа̄ nissaggiyaṁ. Imа̄haṁ а̄yasmato nissajjа̄mi.”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        («Эта одежда, досточтимый, которая оставалась отдельно (от меня) на ночь без согласия монахов, должна быть конфискована: я отдаю ее вам».)
+        [Вин,III,199–200] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Если несколько чивар: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“cīvaraṁ” →  “dvicīvaraṁ” /  “ticīvaraṁ” (две / три - чивары) &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya3">3. \n Nissaggiya Pа̄cittiya \n (передержанное одеяние)</string>
+    <string name="textPacittiya3">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante akа̄la-cīvaraṁ mа̄sа̄tikkantaṁ nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (“Это, достопочтенный, одеяние ”не по сезону", срок использования которого истек по истечении месячного срока, подлежит изъятию: я передаю её вам") &lt;br&gt;
+        [Vin, III, 205] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Для более чем одной чивары: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imа̄ni me bhante akа̄la-cīvarа̄ni mа̄sа̄tikkantа̄ni nissaggiyа̄ni. Imа̄nа̄haṁ а̄yasmato nissajjа̄mi. &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya6">6. \n Nissaggiya Pа̄cittiya \n (выпрошенное)</string>
+    <string name="textPacittiya6">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante cīvaraṁ aññа̄takaṁ gahapatikaṁ aññatra samayа̄ viññаpitaṁ nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (“Это одеяние, бханте, которое было выпрошено у неродственного домохозяина не по назначению, я должен вернуть: я отдаю его вам”) &lt;br&gt;
+        [Vin,III,213] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Для более чем одной ткани: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imаni me bhante cгvarаni aññа̄takaṁ gahapatikaṁ aññatra samayа̄ viññаpitаni nissaggiyаni. Imа̄nа̄haṁ а̄yasmato nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya7">7. \n Nissaggiya Pа̄cittiya \n (вне допустимого времени)</string>
+    <string name="textPacittiya7">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante cīvaraṁ aññаtakaṁ gahapatikaṁ *upasaṁkamitvа̄* tat’uttariṁ viññаpitaṁ nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (“Эта чивара, бханте, котороя было запрошена вне установленного срока у неродственного домохозяина, подлежит возврату мной: я отдаю её вам”) &lt;br&gt;
+        [Vin,III,214–215] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        *upasaṁkamitvа̄* используется в Шри-Ланке &lt;br&gt;&lt;br&gt;
+        Для более чем одной чивары: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imаni me bhante cīvarаni aññаtakaṁ gahapatikaṁ tat’uttariṁ viññаpitа̄ni nissaggiyа̄ni, imа̄haṁ а̄yasmato nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya8">8. \n Nissaggiya Pа̄cittiya \n (без предварительного запроса)</string>
+    <string name="textPacittiya8">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante cīvaraṁ pubbe appavа̄rito aññаtakaṁ gahapatikaṁ upasaṁkamitvа̄ cīvare vikappaṁ а̄pannaṁ nissaggiyaṁ. imа̄haṁ а̄yasmato nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (Эта чивара, бханте, которая была выпрошена у неродственного домохозяина без предварительного приглашения, подлежит возврату мной: я отдаю её вам.) &lt;br&gt;
+        [Vin,III,217] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya9">9. \n Nissaggiya Pа̄cittiya \n (без предварительного запроса)</string>
+    <string name="textPacittiya9">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;big&gt; Для чивары (одежды), полученной от двух или более домохозяев. Используйте формулу из 6.vi выше, но измените:&lt;br&gt;
+        &lt;b&gt;“aññаtakaṁ gahapatikaṁ” → “aññа̄take gahapatike” &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya10">10. \n Nissaggiya Pа̄cittiya \n (настойчивое вопрошание)</string>
+    <string name="textPacittiya10">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante cīvaraṁ atireka-tikkhattuṁ codanа̄ya atireka-chakkhattuṁ ṭhа̄nena abhinipphа̄ditaṁ nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Уважаемый учитель, я должен отдать вам эту одежду. Я получил её, нарушив правила: я либо просил о ней слишком настойчиво - более трех раз, либо слишком долго ждал её подаяния - более шести раз. Поэтому я не могу её оставить и передаю её вам.") &lt;br&gt;
+         [Vin,III,223]&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya18">18. \n Nissaggiya Pа̄cittiya \n (золото и серебро)</string>
+    <string name="textPacittiya18">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Ahaṁ bhante rūpiyaṁ paṭiggahesiṁ. Idaṁ me nissaggiyaṁ. imа̄haṁ saṅghassa nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Достопочтеннй бханте, я принял деньги. Это нарушение, требующее отказа от полученного: я отказываюсь от этих денег в пользу Сангхи.") &lt;br&gt;
+        [Vin,III,238] &lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya19">19. \n Nissaggiya Pа̄cittiya \n (обмен денег)</string>
+    <string name="textPacittiya19">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Ahaṁ bhante nа̄nappakа̄rakaṁ rūpiyasaṁvohаrāṁ samа̄pajjiṁ. Idaṁ me nissaggiyaṁ. Imа̄haṁ saṅghassa nissajjа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (Достопочтенный бхикху, я участвовал в различных видах денежных операций. Эти (деньги) подлежат отказу с моей стороны: я отказываюсь от них в пользу Сангхи.) &lt;br&gt;
+        [Vin,III,240]
+    </string>
+
+    <string name="textButtonOffencesPacittiya20">20. \n Nissaggiya Pа̄cittiya \n (покупка и продажа)</string>
+    <string name="textPacittiya20">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Ahaṁ bhante nа̄nappakа̄rakaṁ kayavikkayaṁ samа̄pajjiṁ, idaṁ me nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (Достопочтенный бханте, я занимался различными видами купли-продажи. Эта (прибыль) моя подлежит отказу с моей стороны, я отказываюсь от неё в вашу пользу.) &lt;br&gt;
+         [Vin,III,242]
+    </string>
+
+    <string name="textButtonOffencesPacittiya21">21. \n Nissaggiya Pа̄cittiya \n (дополнительная чаша)</string>
+    <string name="textPacittiya21">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Ayaṁ me bhante patto dasа̄hа̄tikkanto nissaggiyo, imа̄haṁ а̄yasmato nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Достопочтенный бханте, эта лишняя чаша, которая находилась у меня дольше десяти дней, подлежит отказу с моей стороны: я отказываюсь от неё в вашу пользу.") &lt;br&gt;
+        [Vin,III,243–244] &lt;br&gt;&lt;br&gt;
+        Для возврата чаши:&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;"Imaṁ pattaṁ āyasmato dammi."&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (Я возвращаю эту чашу вам)
+
+    </string>
+
+    <string name="textButtonOffencesPacittiya22">22. \n Nissaggiya Pа̄cittiya \n (новая чаша)</string>
+    <string name="textPacittiya22">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Ayaṁ me bhante patto ūnapañcabandhanena pattena cetа̄pito nissaggiyo imа̄haṁ saṅghassa nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Достопочтенный бханте, эта чаша, которая была обменена на чашу, имеющую менее пяти заплат, подлежит отказу с моей стороны: я отказываюсь от неё в пользу Сангхи.") &lt;br&gt;
+        [Vin,III,246] &lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya23">23. \n Nissaggiya Pа̄cittiya \n (хранение лекарств)</string>
+    <string name="textPacittiya23">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante bhesajjaṁ sattа̄hа̄tikkantaṁ nissaggiyaṁ. imа̄haṁ а̄yasmato nissajjа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Достопочтенный бханте, это лекарство, которое хранилось у меня дольше семи дней, подлежит отказу с моей стороны: я отказываюсь от него в вашу пользу.") &lt;br&gt; &lt;br&gt;
+        "Лекарство может быть возвращено, но не для употребления: &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;"Imaṁ bhesajjaṁ āyasmato dammi"&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (Я даю это лекарство вам.)" &lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya25">25. \n Nissaggiya Pа̄cittiya \n (Возвращение отданной чивары)</string>
+    <string name="textPacittiya25">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; "Idaṁ me bhante cīvaraṁ bhikkhussa sāmaṁ datvā acchinnaṁ nissaggiyaṁ. Imāhaṁ āyasmato nissajjāmi." &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Достопочтенный бханте, эта чивара, которую я сам дал монаху, а затем отобрал обратно, подлежит отказу с моей стороны: я отказываюсь от неё в вашу пользу.") &lt;br&gt; &lt;br&gt;
+         [Vin,III,255] &lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya28">28. \n Nissaggiya Pа̄cittiya \n (в срочном порядке)</string>
+    <string name="textPacittiya28">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; "Idaṁ me bhante acceka-cīvaraṁ cīvara-kāla-samayaṁ atikkāmitaṁ nissaggiyaṁ. Imāhaṁ āyasmato nissajjāmi." &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Достопочтенный бханте, эта чивара, предложенная в срочном порядке, которая была оставлена после окончания сезона одежды, подлежит отказу с моей стороны: я отказываюсь от неё в вашу пользу.") &lt;br&gt; &lt;br&gt;
+         [Vin,III,262] &lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya29">29. \n Nissaggiya Pа̄cittiya \n (в дикой местности)</string>
+    <string name="textPacittiya29">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; "Idaṃ me bhante cīvaraṃ atireka-cā-rattāṃ vippavutthaṃ aññatra bhikkhu-sammatiyā nissaggiyaṃ. Imāhaṃ āyasmato nissajjāmi." &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (“Эта чивара, достопочтенный бханте, которая оставалась отдельно (от меня) на одну ночь без согласия бхиккху, подлежит отказу с моей стороны: я отказываюсь от неё в вашу пользу”) &lt;br&gt; &lt;br&gt;
+        [Vin, III, 264] &lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya30">30. \n Nissaggiya Pа̄cittiya \n (Этот доход, принадлежащий Сангхе)</string>
+    <string name="textPacittiya30">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; "Idaṃ me bhante jānā saṅghikaṃ lābhaṃ pariṇataṃ attano pariṇāmitaṃ nissaggiyaṃ, imāhaṃ āyasmato nissajjāmi." &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (“Этот доход, принадлежащий Сангхе, достопочтенный бханте, который был (уже) направлен (кому-то), (и) который был осознанно перенаправлен мне (вместо этого), подлежит отказу с моей стороны: я отказываюсь от него в вашу пользу.”) &lt;br&gt; &lt;br&gt;
+        [Vin,III,266] &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; Чтобы вернуть предмет: &lt;br&gt; "Imaṃ āyasmato dammi."&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (Я возвращаю это вам, достопочтенный.)" &lt;br&gt;
     </string>
 
     <string name="textForUpasampada">&lt;br&gt;

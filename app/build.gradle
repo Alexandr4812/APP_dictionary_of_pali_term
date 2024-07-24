@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.dhammamobile.dictionary_of_pali_term"
         minSdk 21
-        targetSdk 33
+        targetSdk 34
         versionCode 16
         versionName "7.0"
 

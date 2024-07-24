@@ -602,6 +602,7 @@ Some disciplinary actions involve only one catti and one anusāvana.&lt;br&gt;&l
     <string name="buttonOffences">instructions for violations</string>
 
     <string name="textButtonOffences1">āpatti-paṭidesanā \n (Admission of violation)</string>
+    <string name="textButtonOffences2">Nissaggiya Pācittiya \n (Confession of violation with confiscation of the item)</string>
     
     <string name="textOffences1" tools:ignore="TypographyEllipsis">
     &lt;br&gt;
@@ -726,6 +727,192 @@ Some disciplinary actions involve only one catti and one anusāvana.&lt;br&gt;&l
     [Vin,IV,122]&lt;br&gt;
     The junior monk confesses first, recalling various offenses.
     Then the senior monk does the same:&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+</string>
+
+    <string name="textButtonOffencesPacittiya1">1. \n Nissaggiya Pа̄cittiya \n (extra chivara)</string>
+    <string name="textOffencesPacittiyaAbout">
+        \n
+ Before making a confession, the item in question must be given to another monk or Sangha. \n
+ [Vin, III, 196f]
+ </string>
+    <string name="textPacittiya1">
+    &lt;br&gt;
+    On the eleventh dawn of retaining one "extra item" at a forearm\`s length distance, the monk gives this item to a senior monk: &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me *bhante* cīvaraṁ dasа̄hа̄tikkantaṁ nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi.”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (“This extra robe, Venerable Sir, which has exceeded the ten-day limit, is to be returned by me: I hand it over to you.”)&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    More than one "extra item": &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imа̄ni me bhante, cīvarаni dasа̄hа̄tikkantаni
+    nissaggiyа̄ni, imа̄nа̄haṁ а̄yasmato nissajjа̄mi.” &lt;/div&gt;&lt;/big&gt;&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+    If you give the "extra item" to the Sangha: &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“а̄yasamato” → “saṅghassa”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    [Vin,III,197]&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    If you give the "extra item" to a group of monks: &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“а̄yasamato” → ““а̄ysamantа̄naṁ” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    If the senior bhikkhu: &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“bhante” → “а̄vuso”&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    If the length exceeds the forearm`s length: &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“idaṁ” (this) → “etaṁ”(that) &lt;br&gt;
+    “imа̄haṁ” → “etа̄haṁ” &lt;br&gt;
+    “imа̄ni”(these) → “etа̄ni” (those) &lt;br&gt;
+    “imа̄nа̄haṁ” → “etа̄nа̄haṁ” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    Return of the item back to the giving monk: &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imaṁ cīvaraṁ а̄yasamato dammi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (“I give you this robe.”) &lt;br&gt;
+    [Vin, III, 197] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    When returning more than one robe: &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“imaṁ” → “imаni” ; “cīvaraṁ” → “cīvarāni” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    This formula for return also applies in Pа̄c. 2, 3, 6, 7, 8, 9, 10 below. &lt;br&gt;&lt;br&gt;
+</string>
+
+    <string name="textButtonOffencesPacittiya2">2. \n Nissaggiya Pаcittiya \n (separate from)</string>
+    <string name="textPacittiya2">
+    &lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante cīvaraṁ ratti-vippavutthaṁ aññatra bhikkhu-sammatiyа̄ nissaggiyaṁ. Imа̄haṁ а̄yasmato nissajjа̄mi.”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (“This robe, Venerable Sir, which was left separately (from me) overnight without the consent of the monks, should be confiscated: I hand it over to you.”)
+    [Vin,III,199–200] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    If several robes: &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“cīvaraṁ” →  “dvicīvaraṁ” /  “ticīvaraṁ” (two / three robes) &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya3">3. \n Nissaggiya Pа̄cittiya \n (overexposed robe)</string>
+    <string name="textPacittiya3">
+    &lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante akа̄la-cīvaraṁ mа̄sа̄tikkantaṁ nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi.”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (“This, Venerable Sir, is an out-of-season robe, whose usage period has exceeded one month, and it should be forfeited: I hand it over to you.”) &lt;br&gt;
+    [Vin, III, 205] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    For more than one robe: &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imа̄ni me bhante akа̄la-cīvarа̄ni mа̄sа̄tikkantа̄ni nissaggiyа̄ni. Imа̄nа̄haṁ а̄yasmato nissajjа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+</string>
+
+    <string name="textButtonOffencesPacittiya6">6. \n Nissaggiya Pacittiya \n (requested)</string>
+    <string name="textPacittiya6">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante cīvaraṁ aññа̄takaṁ gahapatikaṁ aññatra samayа̄ viññаpitaṁ nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi.”&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (“This robe, Bhante, which was requested from a non-relative householder for an improper purpose, I must return: I give it to you”) &lt;br&gt;
+        [Vin,III,213] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        For more than one piece of cloth: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imаni me bhante cгvarаni aññа̄takaṁ gahapatikaṁ aññatra samayа̄ viññаpitаni nissaggiyаni. Imа̄nа̄haṁ а̄yasmato nissajjа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya7">7. \n Nissaggiya Pа̄cittiya \n (outside the allowed time)</string>
+    <string name="textPacittiya7">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante cīvaraṁ aññаtakaṁ gahapatikaṁ *upasaṁkamitvа̄* tat’uttariṁ viññаpitaṁ nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (“This robe, Bhante, which was requested outside the prescribed time from a non-relative householder, must be returned by me: I give it to you”) &lt;br&gt;
+        [Vin,III,214–215] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        *upasaṁkamitvа̄* is used in Sri Lanka &lt;br&gt;&lt;br&gt;
+        For more than one robe: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imаni me bhante cīvarаni aññаtakaṁ gahapatikaṁ tat’uttariṁ viññаpitа̄ni nissaggiyа̄ni, imа̄haṁ а̄yasmato nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya8">8. \n Nissaggiya Pа̄cittiya \n (without prior request)</string>
+    <string name="textPacittiya8">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante cīvaraṁ pubbe appavа̄rito aññаtakaṁ gahapatikaṁ upasaṁkamitvа̄ cīvare vikappaṁ а̄pannaṁ nissaggiyaṁ. imа̄haṁ а̄yasmato nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (This robe, Bhante, which was requested from a non-relative householder without prior invitation, must be forfeited by me: I forfeit it to you.) &lt;br&gt;
+        [Vin,III,217] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya9">9. \n Nissaggiya Pāṭimokkha \n (without prior request)</string>
+    <string name="textPacittiya9">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; For a robe (robe-cloth) received from two or more householders. Use the formula from 6.vi above, but change:&lt;br&gt;
+        “aññаtakaṁ gahapatikaṁ” → “aññа̄take gahapatike” &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya10">10. \n Nissaggiya Pāṭimokkha \n (persistent asking)</string>
+    <string name="textPacittiya10">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Idaṁ me bhante cīvaraṁ atireka-tikkhattuṁ codanа̄ya atireka-chakkhattuṁ ṭhа̄nena abhinipphа̄ditaṁ nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Venerable sir, I must give you this robe. I received it by breaking the rules: I either asked for it too persistently - more than three times, or waited too long for its offering - more than six times. Therefore, I cannot keep it and I give it to you.") &lt;br&gt;
+         [Vin,III,223]&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya18">18. \n Nissaggiya Pāṭimokkha \n (gold and silver)</string>
+    <string name="textPacittiya18">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Ahaṁ bhante rūpiyaṁ paṭiggahesiṁ. Idaṁ me nissaggiyaṁ. imа̄haṁ saṅghassa nissajjа̄mi” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Venerable Bhante, I accepted money. This is an offense requiring forfeiture: I forfeit this money to the Sangha.") &lt;br&gt;
+        [Vin,III,238] &lt;br&gt;&lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya19">19. \n Nissaggiya Pāṭimokkha \n (exchange of money)</string>
+    <string name="textPacittiya19">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Ahaṁ bhante nа̄nappakа̄rakaṁ rūpiyasaṁvohаrāṁ samа̄pajjiṁ. Idaṁ me nissaggiyaṁ. Imа̄haṁ saṅghassa nissajjа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Venerable Bhikkhu, I participated in various kinds of monetary transactions. These (monies) are to be forfeited by me: I forfeit them to the Sangha.") &lt;br&gt;
+        [Vin,III,240]
+    </string>
+
+    <string name="textButtonOffencesPacittiya20">20. \n Nissaggiya Pāṭimokkha \n (buying and selling)</string>
+    <string name="textPacittiya20">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Ahaṁ bhante nа̄nappakа̄rakaṁ kayavikkayaṁ samа̄pajjiṁ, idaṁ me nissaggiyaṁ, imа̄haṁ а̄yasmato nissajjа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Venerable Bhante, I engaged in various kinds of buying and selling. This (profit) of mine is to be forfeited by me: I forfeit it to you.") &lt;br&gt;
+         [Vin,III,242]
+    </string>
+
+    <string name="textButtonOffencesPacittiya21">21. \n Nissaggiya Pāṭimokkha \n (extra bowl)</string>
+    <string name="textPacittiya21">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Ayaṁ me bhante patto dasа̄hа̄tikkanto nissaggiyo, imа̄haṁ а̄yasmato nissajjа̄mi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Venerable Bhante, this extra bowl, which I have had for more than ten days, must be forfeited by me: I forfeit it to you.") &lt;br&gt;
+        [Vin,III,243–244] &lt;br&gt;&lt;br&gt;
+        For returning the bowl:&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;"Imaṁ pattaṁ āyasmato dammi"&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("I give this bowl to you")
+    </string>
+
+    <string name="textButtonOffencesPacittiya22">22. \n Nissaggiya Pācittiya \n (new bowl)</string>
+    <string name="textPacittiya22">
+    &lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;"Ayaṁ me bhante patto ūnapañcabandhanena pattena cetāpito nissaggiyo imāhaṁ saṅghassa nissajjāmi" &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    ("Venerable sir, this bowl, which was exchanged for a bowl that has less than five mends, is to be forfeited by me: I forfeit it to the Sangha.") &lt;br&gt;
+    [Vin,III,246] &lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya23">23. \n Nissaggiya Pācittiya \n (storing medicine)</string>
+    <string name="textPacittiya23">
+    &lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;"Idaṁ me bhante bhesajjaṁ sattāhātikkantaṁ nissaggiyaṁ. imāhaṁ āyasmato nissajjāmi." &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    ("Venerable sir, this medicine, which has been kept by me beyond seven days, is to be forfeited. I forfeit it to you.") &lt;br&gt; &lt;br&gt;
+    "The medicine can be returned, but not for consumption: &lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;"Imaṁ bhesajjaṁ āyasmato dammi"&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (I give this medicine to you.)" &lt;br&gt;
+</string>
+
+    <string name="textButtonOffencesPacittiya25">25. \n Nissaggiya Pācittiya \n (Taking back a given robe)</string>
+    <string name="textPacittiya25">
+    &lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; "Idaṁ me bhante cīvaraṁ bhikkhussa sāmaṁ datvā acchinnaṁ nissaggiyaṁ. Imāhaṁ āyasmato nissajjāmi." &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    ("Venerable sir, this robe, which I myself gave to a bhikkhu and then took back, is to be forfeited. I forfeit it to you.") &lt;br&gt; &lt;br&gt;
+     [Vin,III,255] &lt;br&gt;
+</string>
+
+    <string name="textButtonOffencesPacittiya28">28. \n Nissaggiya Pāṭimokkha \n (urgent)</string>
+    <string name="textPacittiya28">
+        &lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; "Idaṁ me bhante acceka-cīvaraṁ cīvara-kāla-samayaṁ atikkāmitaṁ nissaggiyaṁ. Imāhaṁ āyasmato nissajjāmi." &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        ("Venerable Bhante, this robe, offered in an urgent manner, which was left after the end of the robe season, must be forfeited by me: I forfeit it to you.") &lt;br&gt; &lt;br&gt;
+         [Vin,III,262] &lt;br&gt;
+    </string>
+
+    <string name="textButtonOffencesPacittiya29">29. \n Nissaggiya Pācittiya \n (wilderness)</string>
+    <string name="textPacittiya29">
+    &lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; "Idaṃ me bhante cīvaraṃ atireka-cā-rattāṃ vippavutthaṃ aññatra bhikkhu-sammatiyā nissaggiyaṃ. Imāhaṃ āyasmato nissajjāmi." &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (“This robe, ven. sir, which has stayed separate (from me) for a night without the consent of the bhikkhus, is to be forfeited by me: I forfeit it to you.”) &lt;br&gt; &lt;br&gt;
+    [Vin, III, 264] &lt;br&gt;
+</string>
+
+    <string name="textButtonOffencesPacittiya30">30. \n Nissaggiya Pācittiya \n (This gain belonging to the Saṅgha)</string>
+    <string name="textPacittiya30">
+    &lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; "Idaṃ me bhante jānā saṅghikaṃ lābhaṃ pariṇataṃ attano pariṇāmitaṃ nissaggiyaṃ, imāhaṃ āyasmato nissajjāmi." &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (“This gain belonging to the Saṅgha, venerable sir, which has been (already) diverted (to someone), (and) which has been knowingly diverted to myself (instead), is to be forfeited by me: I forfeit it to you.”) &lt;br&gt; &lt;br&gt;
+    [Vin,III,266] &lt;br&gt;&lt;br&gt;
+    &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt; To return the article: &lt;br&gt; "Imaṃ āyasmato dammi."&lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+    (I return this to you, venerable.)&lt;br&gt;
 </string>
 
 

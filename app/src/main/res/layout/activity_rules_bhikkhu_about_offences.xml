@@ -67,6 +67,16 @@
                 android:onClick="toRlesBhikkhuOffences1"
                 android:text="@string/textButtonOffences1"
                 tools:ignore="UsingOnClickInXml" />
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+            <Button
+                android:id="@+id/button_rules_bhikkhu_offences_2"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toRlesBhikkhuOffences2"
+                android:text="@string/textButtonOffences2"
+                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
     </ScrollView>
 
@@ -121,7 +131,7 @@
             android:layout_gravity="bottom|center"
             android:layout_marginLeft="3dp"
             android:layout_marginBottom="0dp"
-            android:onClick="tobackBhikhuRequisites"
+            android:onClick="tobackBhikhuOffences"
             android:visibility="invisible"
             tools:ignore="UsingOnClickInXml"
             tools:visibility="visible" />

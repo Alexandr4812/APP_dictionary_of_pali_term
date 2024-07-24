@@ -45,10 +45,15 @@ public class RulesBhikkhuAboutOffencesActivity extends BaseActivityClass {
         scrollTextOffences1.setVisibility(View.VISIBLE);
     }
 
-    public void tobackBhikhuRequisites(View view) {
+
+    public void tobackBhikhuOffences(View view) {
         scrollTextOffences1.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);
         buttonLiveToBhikhuAbout.setVisibility(View.INVISIBLE);
+    }
+
+    public void toRlesBhikkhuOffences2(View view){
+        startIntentActivityAndFinish(RulesBhikkhuAboutOffencesPacittiyaActivity.class);
     }
 
     public void toRulesBhikkhuAboutAct(View view){
