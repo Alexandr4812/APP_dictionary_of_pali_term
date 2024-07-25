@@ -60,6 +60,12 @@
           style="@style/imageViewRazdelitelKnopok"
           tools:ignore="ContentDescription" />
 
+<!--      <Button-->
+<!--          android:id="@+id/button_lecture7"-->
+<!--          style="@style/button_activity_declomation_main"-->
+<!--          android:onClick="toTeacherLec7Act"-->
+<!--          android:text="@string/buttonToLecture7" />-->
+
       <Button
           android:id="@+id/button_lecture1"
           style="@style/button_activity_declomation_main"

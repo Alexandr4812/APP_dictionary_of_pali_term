@@ -53,6 +53,25 @@
     	  }
       }
       </script>
+  <script type="text/javascript">
+        var currentFontSize = 40;
+
+        function increaseFontSize() {
+            currentFontSize += 2;
+            var elements = document.getElementsByTagName('font');
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.fontSize = currentFontSize + 'px'; // Увеличиваем размер шрифта
+            }
+        }
+
+        function decreaseFontSize() {
+            currentFontSize = Math.max(8, currentFontSize - 2); // Уменьшаем размер шрифта, но не меньше 8px
+            var elements = document.getElementsByTagName('font');
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.fontSize = currentFontSize + 'px'; // Уменьшаем размер шрифта
+            }
+        }
+    </script>
 <link type="text/css" rel="stylesheet" charset="UTF-8" href="./lecEn3_files/m=el_main_css"></head>
 <body text="#333300" leftmargin="1" topmargin="1" marginwidth="1" marginheight="1" no-repeat="" bgcolor="#FFFFCC" vlink="#C7B683" link="#C7B683" alink="#C7B683">
 <table width="1000" border="0" cellspacing="0" cellpadding="0" align="center" style="background:#FFFFCC;">

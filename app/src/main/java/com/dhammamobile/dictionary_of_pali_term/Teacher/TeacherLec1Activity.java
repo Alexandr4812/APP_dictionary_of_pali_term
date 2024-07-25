@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.LiveBuddha.LiveBuddhaActivity;
@@ -18,6 +19,8 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 import java.util.Locale;
 
 public class TeacherLec1Activity extends BaseActivityClass {
+    Button plusText, minusText;
+    WebView webView; // Declare WebView as a class member for easy access
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -36,7 +39,10 @@ public class TeacherLec1Activity extends BaseActivityClass {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        WebView webView = findViewById(R.id.webViewLec1);
+        plusText = findViewById(R.id.buttonPlusTextTeacher);
+        minusText = findViewById(R.id.buttonMinusTextTeacher);
+
+        webView = findViewById(R.id.webViewLec1); // Initialize WebView
         // Получить настройки WebView
         WebSettings webSettings = webView.getSettings();
 
@@ -59,6 +65,17 @@ public class TeacherLec1Activity extends BaseActivityClass {
         }
 
         webView.loadUrl(htmlFilePath);
+
+        // Set click listeners for buttons
+        plusText.setOnClickListener(v -> {
+            // Call JavaScript function to increase font size
+            webView.evaluateJavascript("increaseFontSize();", null);
+        });
+
+        minusText.setOnClickListener(v -> {
+            // Call JavaScript function to decrease font size
+            webView.evaluateJavascript("decreaseFontSize();", null);
+        });
     }
 
     protected void onResume() {

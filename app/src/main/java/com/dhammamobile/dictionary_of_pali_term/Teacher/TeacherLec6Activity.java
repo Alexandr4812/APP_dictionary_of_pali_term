@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
@@ -17,6 +18,8 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 import java.util.Locale;
 
 public class TeacherLec6Activity extends BaseActivityClass {
+    Button plusText, minusText;
+    WebView webView; // Declare WebView as a class member for easy access
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -33,6 +36,9 @@ public class TeacherLec6Activity extends BaseActivityClass {
         // Скрытие панели навигации и панели состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        plusText = findViewById(R.id.buttonPlusTextTeacher);
+        minusText = findViewById(R.id.buttonMinusTextTeacher);
 
         WebView webView = findViewById(R.id.webViewLec6);
         // Получить настройки WebView
@@ -57,6 +63,17 @@ public class TeacherLec6Activity extends BaseActivityClass {
         }
 
         webView.loadUrl(htmlFilePath);
+
+        // Set click listeners for buttons
+        plusText.setOnClickListener(v -> {
+            // Call JavaScript function to increase font size
+            webView.evaluateJavascript("increaseFontSize();", null);
+        });
+
+        minusText.setOnClickListener(v -> {
+            // Call JavaScript function to decrease font size
+            webView.evaluateJavascript("decreaseFontSize();", null);
+        });
     }
 
     protected void onResume() {
