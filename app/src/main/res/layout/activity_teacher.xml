@@ -60,11 +60,29 @@
           style="@style/imageViewRazdelitelKnopok"
           tools:ignore="ContentDescription" />
 
-<!--      <Button-->
-<!--          android:id="@+id/button_lecture7"-->
-<!--          style="@style/button_activity_declomation_main"-->
-<!--          android:onClick="toTeacherLec7Act"-->
-<!--          android:text="@string/buttonToLecture7" />-->
+      <Button
+          android:id="@+id/button_lecture7"
+          style="@style/button_activity_declomation_main"
+          android:onClick="toTeacherLec7Act"
+          android:text="@string/buttonToLecture7" />
+
+      <Button
+          android:id="@+id/button_lecture8"
+          style="@style/button_activity_declomation_main"
+          android:onClick="toTeacherLec8Act"
+          android:text="@string/buttonToLecture8" />
+
+      <Button
+          android:id="@+id/button_lecture9"
+          style="@style/button_activity_declomation_main"
+          android:onClick="toTeacherLec9Act"
+          android:text="@string/buttonToLecture9" />
+
+      <Button
+          android:id="@+id/button_lecture10"
+          style="@style/button_activity_declomation_main"
+          android:onClick="toTeacherLec10Act"
+          android:text="@string/buttonToLecture10" />
 
       <Button
           android:id="@+id/button_lecture1"
@@ -101,6 +119,12 @@
           style="@style/button_activity_declomation_main"
           android:onClick="toTeacherLec6Act"
           android:text="@string/buttonToLecture6" />
+
+      <Button
+          android:id="@+id/button_lecture11"
+          style="@style/button_activity_declomation_main"
+          android:onClick="toTeacherLec11Act"
+          android:text="@string/buttonToLecture11" />
 
     </LinearLayout>
   </ScrollView>

@@ -31,5 +31,18 @@ Currently, Venerable Nyanasiha Thero is the abbot of the international Buddhist 
     <string name="buttonToLecture7">
     Dana, Sila, Bhavana \n Three Types of Practice in Buddhism
 </string>
+    <string name="buttonToLecture8">
+Yoniso manasikara \n wise reflection
+</string>
+    <string name="buttonToLecture9">
+Pancha Khandha \n five aggregates
+</string>
+    <string name="buttonToLecture10">
+        Sankhara
+    </string>
+
+    <string name="buttonToLecture11">
+Vipasanukilesa: \n qualities that can become mental defilements during meditation
+</string>
 
 </resources>

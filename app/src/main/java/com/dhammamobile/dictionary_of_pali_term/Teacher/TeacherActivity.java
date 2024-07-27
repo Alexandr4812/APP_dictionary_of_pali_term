@@ -30,12 +30,17 @@ public class TeacherActivity extends BaseActivityClass {
         ImageView im1 =findViewById(R.id.img_1);
         Button button1 = findViewById(R.id.button_teacher_about);
         ImageView im2 =findViewById(R.id.img_2);
+        Button button8 = findViewById(R.id.button_lecture7);
+        Button button9 = findViewById(R.id.button_lecture8);
+        Button button10 = findViewById(R.id.button_lecture9);
+        Button button11 = findViewById(R.id.button_lecture10);
         Button button2 = findViewById(R.id.button_lecture1);
         Button button3 = findViewById(R.id.button_lecture2);
         Button button4 = findViewById(R.id.button_lecture3);
         Button button5 = findViewById(R.id.button_lecture4);
         Button button6 = findViewById(R.id.button_lecture5);
         Button button7 = findViewById(R.id.button_lecture6);
+        Button button12 = findViewById(R.id.button_lecture11);
 
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
         Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
@@ -44,14 +49,17 @@ public class TeacherActivity extends BaseActivityClass {
         im1.startAnimation(slideDown);
         button1.startAnimation(slideFromLeftAnimation);
         im2.startAnimation(slideFromRightAnimation);
+        button8.startAnimation(slideFromLeftAnimation);
+        button9.startAnimation(slideFromRightAnimation);
+        button10.startAnimation(slideFromLeftAnimation);
+        button11.startAnimation(slideFromRightAnimation);
         button2.startAnimation(slideFromLeftAnimation);
         button3.startAnimation(slideFromRightAnimation);
         button4.startAnimation(slideFromLeftAnimation);
         button5.startAnimation(slideFromRightAnimation);
         button6.startAnimation(slideFromLeftAnimation);
         button7.startAnimation(slideFromRightAnimation);
-
-
+        button12.startAnimation(slideFromLeftAnimation);
     }
 
     protected void onResume() {
@@ -82,6 +90,26 @@ public class TeacherActivity extends BaseActivityClass {
 
     public void toTeacherLec6Act(View view) {
         startIntentActivityAndFinish(TeacherLec6Activity.class);
+    }
+
+    public void toTeacherLec7Act(View view) {
+        startIntentActivityAndFinish(TeacherLec7Activity.class);
+    }
+
+    public void toTeacherLec8Act(View view) {
+        startIntentActivityAndFinish(TeacherLec8Activity.class);
+    }
+
+    public void toTeacherLec9Act(View view) {
+        startIntentActivityAndFinish(TeacherLec9Activity.class);
+    }
+
+    public void toTeacherLec10Act(View view) {
+        startIntentActivityAndFinish(TeacherLec10Activity.class);
+    }
+
+    public void toTeacherLec11Act(View view) {
+        startIntentActivityAndFinish(TeacherLec11Activity.class);
     }
 
     public void toMainAct(View view){
