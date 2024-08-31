@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description8">8. Marriage of Siddhartha and Yashodhara.</string>
-    <string name="description9">9. Four meetings.</string>
+    <string name="description8">8. Four meetings.</string>
+    <string name="description9">9. The Great Renunciation.</string>
+
+    <string name="Tobecontinued">To be continued</string>
 </resources>

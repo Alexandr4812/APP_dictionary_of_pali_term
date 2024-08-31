@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
@@ -22,6 +23,8 @@ public class LiveBuddhaToShow1Activity extends BaseActivityClass {
         super.onConfigurationChanged(newConfig);
         // Здесь вы можете добавить свои действия при изменении ориентации, если это необходимо
     }
+    Button plusText, minusText;
+    WebView webView; // Declare WebView as a class member for easy access
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -34,7 +37,10 @@ public class LiveBuddhaToShow1Activity extends BaseActivityClass {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        WebView webView = findViewById(R.id.webViewLive1);
+        plusText = findViewById(R.id.buttonPlusTextLiveBuddha);
+        minusText = findViewById(R.id.buttonMinusTextLiveBuddha);
+
+        webView = findViewById(R.id.webViewLive1);
         // Получить настройки WebView
         WebSettings webSettings = webView.getSettings();
 
@@ -51,12 +57,25 @@ public class LiveBuddhaToShow1Activity extends BaseActivityClass {
         // Определить путь к HTML файлу в соответствии с текущим языком
         String htmlFilePath;
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live_1.html";
+            htmlFilePath = "file:///android_asset/live_1_ru/live1.html";
         } else {
-            htmlFilePath = "file:///android_asset/live_1_en/live_1.html";
+            htmlFilePath = "file:///android_asset/live_1_en/liveEn1.html";
         }
 
         webView.loadUrl(htmlFilePath);
+
+        webView.getSettings().setBuiltInZoomControls(false); // Отключаем встроенные элементы управления масштабом
+        webView.getSettings().setDisplayZoomControls(false); // Отключаем отображение контролов зума
+        webView.getSettings().setSupportZoom(false); // Отключаем возможность зума
+
+        // Обработчики нажатий кнопок
+        plusText.setOnClickListener(v -> {
+            webView.evaluateJavascript("javascript:increaseFontSize();", null);
+        });
+
+        minusText.setOnClickListener(v -> {
+            webView.evaluateJavascript("javascript:decreaseFontSize();", null);
+        });
     }
 
     @Override

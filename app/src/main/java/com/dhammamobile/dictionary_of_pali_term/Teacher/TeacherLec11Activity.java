@@ -38,8 +38,8 @@ public class TeacherLec11Activity extends BaseActivityClass {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        plusText = findViewById(R.id.buttonPlusTextTeacher11);
-        minusText = findViewById(R.id.buttonMinusTextTeacher11);
+        plusText = findViewById(R.id.buttonPlusTextTeacher);
+        minusText = findViewById(R.id.buttonMinusTextTeacher);
 
         WebView webView = findViewById(R.id.webViewLec11);
         // Получить настройки WebView
@@ -49,6 +49,10 @@ public class TeacherLec11Activity extends BaseActivityClass {
         webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
         webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
         webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
+
+        webView.getSettings().setBuiltInZoomControls(false); // Отключаем встроенные элементы управления масштабом
+        webView.getSettings().setDisplayZoomControls(false); // Отключаем отображение контролов зума
+        webView.getSettings().setSupportZoom(false); // Отключаем возможность зума
 
         webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
         webView.clearCache(true);
@@ -60,7 +64,7 @@ public class TeacherLec11Activity extends BaseActivityClass {
         if (currentLanguage.equals("ru")) {
             htmlFilePath = "file:///android_asset/lec_ru/lec11.html";
         } else {
-            htmlFilePath = "file:///android_asset/lec_ru/lecEn11.html";
+            htmlFilePath = "file:///android_asset/lec_ru/lec11.html";
         }
 
         webView.loadUrl(htmlFilePath);

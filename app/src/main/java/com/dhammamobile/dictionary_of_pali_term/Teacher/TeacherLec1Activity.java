@@ -51,6 +51,10 @@ public class TeacherLec1Activity extends BaseActivityClass {
         webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
         webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
 
+        webView.getSettings().setBuiltInZoomControls(false); // Отключаем встроенные элементы управления масштабом
+        webView.getSettings().setDisplayZoomControls(false); // Отключаем отображение контролов зума
+        webView.getSettings().setSupportZoom(false); // Отключаем возможность зума
+
         webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
         webView.clearCache(true);
 
@@ -61,7 +65,7 @@ public class TeacherLec1Activity extends BaseActivityClass {
         if (currentLanguage.equals("ru")) {
             htmlFilePath = "file:///android_asset/lec_ru/lec1.html";
         } else {
-            htmlFilePath = "file:///android_asset/lec_ru/lecEn1.html";
+            htmlFilePath = "file:///android_asset/lec_ru/lec1.html";
         }
 
         webView.loadUrl(htmlFilePath);
