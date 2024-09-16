@@ -17,6 +17,14 @@
         android:versionName="3.1"
         tools:targetApi="33">
         <activity
+            android:name=".Declomation.DeklomationGatha"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".LiveBuddha.LiveBuddhaToShow9Activity"
             android:configChanges="orientation|screenSize"
             android:exported="false"

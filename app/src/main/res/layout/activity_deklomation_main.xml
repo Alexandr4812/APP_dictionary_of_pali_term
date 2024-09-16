@@ -57,10 +57,21 @@
                 android:text="@string/button_paritta" />
 
             <Button
+                android:id="@+id/button_gatha"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomationGatha"
+                android:text="@string/buttonMainGatha" />
+
+            <Button
                 android:id="@+id/button_dhammapada"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomationDhammapada"
                 android:text="@string/button_dhammapada" />
+
+            <ImageView
+                android:id="@+id/imageViewRazdelitelDeklomationMain2"
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
 
             <Button
                 android:id="@+id/button_puja"

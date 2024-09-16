@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+
+<style type="text/css">
+
+body {
+            background-color: #FFE082;
+        }
+
+body {
+            margin: 5;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+img {
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.a______ {
+mso-style-name:"Обычный";
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h1 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:18.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h2 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:16.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h3 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:14.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+
+.tm5 {
+text-align:center;
+}
+.tm6 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+text-align:center;
+}
+.tm7 {
+color:Red;
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm8 {
+color:Green;
+font-size:14.0pt;
+}
+.tm9 {
+font-size:14.0pt;
+}
+.tm10 {
+color:Red;
+font-size:14.0pt;
+}
+.tm11 {
+font-size:14.0pt;
+font-weight:bold;
+}
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript" style="font-size: 14pt;">
+        var initialFontSize = 14; // Установите начальный размер шрифта
+
+        // Функция для установки начального размера шрифта
+        function setInitialFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var computedStyle = window.getComputedStyle(element, null);
+                var currentSize = parseFloat(computedStyle.getPropertyValue('font-size'));
+                // Увеличиваем размер до начального значения
+                var scale = initialFontSize / currentSize;
+                element.style.fontSize = initialFontSize + 'pt';
+            });
+        }
+
+        function increaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = (fontSize + 2) + 'px';
+            });
+        }
+
+        function decreaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = Math.max(8, fontSize - 2) + 'px';
+            });
+        }
+
+        // Устанавливаем начальный размер шрифта после загрузки страницы
+        window.onload = setInitialFontSize;
+    </script>
+
+<p class="tm6"><strong><span class="tm7">**Confession of a Junior Monk to a Senior Monk**</span></strong></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">**Junior Confessing Monk (JCM):**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;Ok&#257;sa, aham&#775; bhante,  </span></p>
+<p class="tm6"><span class="tm8">Sabb&#257; ap&#257;ttiyo &#257;rocemi.  </span></p>
+<p class="tm6"><span class="tm8">Dutiyam-pi aham&#775; bhante,  </span></p>
+<p class="tm6"><span class="tm8">Sabb&#257; ap&#257;ttiyo &#257;rocemi.  </span></p>
+<p class="tm6"><span class="tm8">Tatiyam-pi aham&#775; bhante,  </span></p>
+<p class="tm6"><span class="tm8">Sabb&#257; ap&#257;ttiyo &#257;rocemi.&#8221;</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">(&quot;Venerable sir, I confess all offenses. A second time... A third time...&quot;)</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">**Senior Confirming Monk (SCM):**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;Sadhu, sadhu.&#8221;  </span></p>
+<p class="tm6"><span class="tm10">(&#8220;Good, good.&#8221;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">**JCM:**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;Ok&#257;sa, aham&#775; bhante,  </span></p>
+<p class="tm6"><span class="tm8">Sambahul&#257; n&#257;n&#257; vatthuk&#257; n&#257;n&#257; apattiyo apajjim&#775;,  </span></p>
+<p class="tm6"><span class="tm8">T&#257; tumha-m&#363;le pa&#7789;idesemi.&#8221;</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">(&quot;Venerable sir, I have committed various offenses on different grounds, and I confess them before you.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm10">**SCM:**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;Passasi &#257;vuso t&#257; apattiyo?&#8221;  </span></p>
+<p class="tm6"><span class="tm10">(&quot;Friend, do you see these offenses?&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">**JCM:**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;&#256;ma bhante pass&#257;mi.&#8221;  </span></p>
+<p class="tm6"><span class="tm8">(&quot;Yes, venerable sir, I see.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm10">**SCM:**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;&#256;yatim&#775; &#257;vuso sam&#775;vareyy&#257;si.&#8221;  </span></p>
+<p class="tm6"><span class="tm10">(&quot;In the future, friend, you should be more mindful.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">**JCM:**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;S&#257;dhu su&#7789;&#7789;hu bhante &#257;yatim&#775; sam&#775;variss&#257;mi.  </span></p>
+<p class="tm6"><span class="tm8">Dutiyam-pi s&#257;dhu su&#7789;&#7789;hu bhante &#257;yatim&#775; sam&#775;variss&#257;mi.  </span></p>
+<p class="tm6"><span class="tm8">Tatiyam-pi s&#257;dhu su&#7789;&#7789;hu bhante &#257;yatim&#775; sam&#775;variss&#257;mi.&#8221;</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">(&quot;That is indeed good, venerable sir, I will restrain myself in the future. A second time... A third time...&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm10">**SCM:**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;Sadhu, sadhu.&#8221;  </span></p>
+<p class="tm6"><span class="tm10">(&quot;Good, good.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">**JCM:**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;Ok&#257;sa, aham&#775; bhante,  </span></p>
+<p class="tm6"><span class="tm8">Sabb&#257; t&#257; garuk&#257;pattiyo &#257;vikaromi.  </span></p>
+<p class="tm6"><span class="tm8">Dutiyam-pi ok&#257;sa, aham&#775; bhante,  </span></p>
+<p class="tm6"><span class="tm8">Sabb&#257; t&#257; garuk&#257;pattiyo &#257;vikaromi.  </span></p>
+<p class="tm6"><span class="tm8">Tatiyam-pi ok&#257;sa, aham&#775; bhante,  </span></p>
+<p class="tm6"><span class="tm8">Sabb&#257; t&#257; garuk&#257;pattiyo &#257;vikaromi.&#8221;</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">(&quot;Venerable sir, I disclose all grave offenses. A second time... A third time...&quot;)</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">This concluding statement is used only in some communities. Additionally, in some communities, &#8220;sadhu&#8221; is recited after every statement, not as shown above (i.e., after every &quot;&#257;rocemi&quot;
+and every &quot;sam&#775;variss&#257;mi&quot;).</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm9">---</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm10">**Confession of a Senior Monk to a Junior Monk**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">**Senior Confessing Monk (SCM):**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;Aham&#775;, &#257;vuso, sabb&#257; ap&#257;ttiyo &#257;rocemi.  </span></p>
+<p class="tm6"><span class="tm10">Dutiyam-pi sabb&#257; ap&#257;ttiyo &#257;rocemi.  </span></p>
+<p class="tm6"><span class="tm10">Tatiyam-pi sabb&#257; ap&#257;ttiyo &#257;rocemi.&#8221;</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">(&quot;Friend, I confess all offenses. A second time... A third time...&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">**Junior Confirming Monk (JCM):**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;Sadhu, sadhu.&#8221;  </span></p>
+<p class="tm6"><span class="tm8">(&quot;Good, good.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm10">**SCM:**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;Ok&#257;sa, aham&#775; avuso,  </span></p>
+<p class="tm6"><span class="tm10">Sambahul&#257; n&#257;n&#257;-vatthuk&#257; n&#257;n&#257; apattiyo apajjim,  </span></p>
+<p class="tm6"><span class="tm10">T&#257; tumha-m&#363;le pa&#7789;idesemi.&#8221;</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">(&quot;Friend, I have committed various offenses on different grounds, and I confess them before you.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">**JCM:**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;Passatha bhante t&#257; apattiyo?&#8221;  </span></p>
+<p class="tm6"><span class="tm8">(&quot;Venerable sir, do you see these offenses?&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm10">**SCM:**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;&#256;ma avuso pass&#257;mi.&#8221;  </span></p>
+<p class="tm6"><span class="tm10">(&quot;Yes, friend, I see.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">**JCM:**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;&#256;yatim bhante samvareyyatha.&#8221;  </span></p>
+<p class="tm6"><span class="tm8">(&quot;In the future, venerable sir, you should be more mindful.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm10">**SCM:**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;S&#257;dhu su&#7789;&#7789;hu avuso &#257;yatim samvariss&#257;mi.  </span></p>
+<p class="tm6"><span class="tm10">Dutiyam-pi su&#7789;&#7789;hu samvariss&#257;mi.  </span></p>
+<p class="tm6"><span class="tm10">Tatiyam-pi su&#7789;&#7789;hu samvariss&#257;mi.&#8221;</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">(&quot;Good, friend, I will restrain myself in the future. A second time... A third time...&quot;)</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">**JCM:**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;Sadhu, sadhu.&#8221;  </span></p>
+<p class="tm6"><span class="tm8">(&quot;Good, good.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm9">---</span></p>
+<p class="tm6"><strong><span class="tm11">&#160;</span></strong></p>
+<p class="tm6"><strong><span class="tm11">**If Both Monks Have the Same Offenses**</span></strong></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">**JCM:**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;Ok&#257;sa, aham&#775; bhante,  </span></p>
+<p class="tm6"><span class="tm8">Desan&#257;dukkat&#803;&#257;pattim&#775; &#257;pajjim&#775;,  </span></p>
+<p class="tm6"><span class="tm8">Tam&#775; tumha-m&#363;le pa&#7789;idesemi.&#8221;</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">(&quot;Venerable sir, I admit my offense, having confessed the same offenses.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm10">**SCM:**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;Passasi &#257;vuso tam&#775; apattim&#775;?&#8221;  </span></p>
+<p class="tm6"><span class="tm10">(&quot;Friend, do you see this offense?&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">**JCM:**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;&#256;ma bhante pass&#257;mi.&#8221;  </span></p>
+<p class="tm6"><span class="tm8">(&quot;Yes, venerable sir, I see.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm10">**SCM:**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;&#256;yatim&#775; &#257;vuso sam&#775;vareyy&#257;si.&#8221;  </span></p>
+<p class="tm6"><span class="tm10">(&quot;In the future, friend, you should be more mindful.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm8">**JCM:**</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">&#8220;S&#257;dhu su&#7789;&#7789;hu bhante &#257;yatim&#775; sam&#775;variss&#257;mi.  </span></p>
+<p class="tm6"><span class="tm8">Dutiyam-pi s&#257;dhu su&#7789;&#7789;hu bhante &#257;yatim&#775; sam&#775;variss&#257;mi.  </span></p>
+<p class="tm6"><span class="tm8">Tatiyam-pi s&#257;dhu su&#7789;&#7789;hu bhante &#257;yatim&#775; sam&#775;variss&#257;mi.&#8221;</span></p>
+<p class="tm6"><span class="tm8">&#160;</span></p>
+<p class="tm6"><span class="tm8">(&quot;That is indeed good, venerable sir, in the future I will restrain myself. A second time... A third time...&quot;)</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">**SCM:**</span></p>
+<p class="tm6"><span class="tm10">&#160;</span></p>
+<p class="tm6"><span class="tm10">&#8220;Sadhu, sadhu.&#8221;  </span></p>
+<p class="tm6"><span class="tm10">(&quot;Good, good.&quot;)</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm9">---</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><strong><span class="tm11">(i) **Six Causes of an Offense (&#257;patthi):**</span></strong></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm9">Lack of shame; ignorance of the rules; doubt, but proceeding; thinking something should be done even though it shouldn&#8217;t; thinking something shouldn&#39;t be done but doing it; acting
+carelessly (i.e., absentmindedly).</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><strong><span class="tm11">(ii) **No Offense Occurs for:**</span></strong></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm9">Insane monks, delirious monks, those suffering from severe pain, or original transgressors.</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><strong><span class="tm11">(iii) **Types of Offenses (&#257;patthi):**</span></strong></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm9">(a) **Irremediable Offenses** (p&#257;r&#257;jika).  </span></p>
+<p class="tm6"><span class="tm9">(b) **Remediable Offenses:**</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm9">- Serious offenses (sangh&#257;disesa), confessed to the Sangha.</span></p>
+<p class="tm6"><span class="tm9">- Minor offenses, confessed to another monk:</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm9">&#160; **thullaccaya** (serious offenses),  </span></p>
+<p class="tm6"><span class="tm9">&#160; **p&#257;cittiya** (offenses requiring expiation),  </span></p>
+<p class="tm6"><span class="tm9">&#160; **pati-desan&#299;ya** (offenses requiring confession),  </span></p>
+<p class="tm6"><span class="tm9">&#160; **dukkata** (wrong actions),  </span></p>
+<p class="tm6"><span class="tm9">&#160; **dubbh&#257;sita** (wrong speech).</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><strong><span class="tm11">(iv) **Method of Confession for Minor Offenses:**</span></strong></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm9">Before confessing, any known offenses should be stated. Two monks who have committed the same offense should not confess to each other. This is a dukkata offense.  </span></p>
+<p class="tm6"><span class="tm9">[Vin. IV,122]</span></p>
+<p class="tm6"><span class="tm9">&#160;</span></p>
+<p class="tm6"><span class="tm9">First, the junior monk confesses, recalling various offenses. Then the senior monk does the same.</span></p><br><br><br><br>
+</body>
+</html>

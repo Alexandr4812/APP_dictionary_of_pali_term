@@ -28,6 +28,7 @@ public class DeklomationMainActivity extends BaseActivityClass {
 
         Button button1 = findViewById(R.id.button_sutta);
         Button button2 = findViewById(R.id.button_paritta);
+        Button buttonG = findViewById(R.id.button_gatha);
         Button button3 = findViewById(R.id.button_dhammapada);
         Button button4 = findViewById(R.id.button_puja);
         Button button5 = findViewById(R.id.button_over_declamation);
@@ -39,9 +40,10 @@ public class DeklomationMainActivity extends BaseActivityClass {
 
         button1.startAnimation(slideFromLeftAnimation);
         button2.startAnimation(slideFromRightAnimation);
-        button3.startAnimation(slideFromLeftAnimation);
-        button4.startAnimation(slideFromRightAnimation);
-        button5.startAnimation(slideFromLeftAnimation);
+        buttonG.startAnimation(slideFromLeftAnimation);
+        button3.startAnimation(slideFromRightAnimation);
+        button4.startAnimation(slideFromLeftAnimation);
+        button5.startAnimation(slideFromRightAnimation);
         im1.startAnimation(slideDown);
     }
 
@@ -63,6 +65,9 @@ public class DeklomationMainActivity extends BaseActivityClass {
 
     public void toDeclomationParitta(View view){
         startIntentActivityAndFinish(DeclomationParittaActivity.class);
+    }
+    public void toDeclomationGatha(View view){
+        startIntentActivityAndFinish(DeklomationGatha.class);
     }
 
     public void toDeclomationDhammapada(View view){

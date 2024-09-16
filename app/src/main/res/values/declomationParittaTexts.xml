@@ -1,46 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mora_paritta">
-        \n  <b>MORA PARITTA</b> \n \n
-        <b>Udet`ayañ-cakkhumā eka-rājā</b> \n \n
-        <i>Вот он восходит, всевидящий Властитель [т.е. солнце],</i> \n \n
-        <b>Harissa-vaṇṇo paṭhavippabhāso</b> \n \n
-        <i>золотым светом озаряющий Землю.</i> \n \n
-        <b>Taṃ taṃ namassāmi harissa-vaṇṇaṃ paṭhavippabhāsaṃ</b> \n \n
-        <i>Я кланяюсь тебе, золотым светом озаряющему Землю.</i> \n \n
-        <b>Tay`ajja guttā viharemu divasaṃ</b> \n \n
-        <i>Пусть сегодня под твоей защитой я проживу этот день.</i> \n \n
-        <b>Ye brāhmaṇā vedagu sabba-dhamme</b> \n \n
-        <i>Брахманам, которые знают всю Дхамму,</i> \n \n
-        <b>Te me namo te ca maṃ pālayantu</b> \n \n
-        <i>свидетельствую свое почтение, а они пусть охраняют меня.</i> \n \n
-        <b>Nam`atthu Buddhānaṃ nam`atthu bodhiyā</b> \n \n
-        <i>Почтение Буддам, почтение Пробуждению</i> \n \n
-        <b>Namo vimuttānaṃ namo vimuttiyā</b> \n \n
-        <i>Почтение освобожденным, почтение освобождению.</i> \n \n
-        <b>Imaṃ so parittaṃ katvā</b> \n \n
-        <i>Произнеся такие защитные строфы,</i> \n \n
-        <b>Moro carati esanā`ti</b> \n \n
-        <i>павлин отправляется на поиски пищи.</i> \n \n \n
-        <b>Apet’ayañ-cakkhumā eka-rājā</b> \n \n
-        <i>Вот он заходит, всевидящий Властитель,</i> \n \n
-        <b>Harissa-vaṇṇo paṭhavippabhāso</b> \n \n
-        <i>золотым светом озаряющий Землю.</i> \n \n
-        <b>Taṃ taṃ namassāmi harissa-vaṇṇaṃ paṭhavippabhāsaṃ</b> \n \n
-        <i>Я кланяюсь тебе, золотым светом озаряющему Землю.</i> \n \n
-        <b>Tay`ajja guttā viharemu rattiṃ</b> \n \n
-        <i>Пусть сегодня под твоей защитой я проживу эту ночь.</i> \n \n
-        <b>Ye brāhmaṇā vedagu sabba-dhamme</b> \n \n
-        <i>Брахманам, которые знают всю Дхамму,</i> \n \n
-        <b>Te me namo te ca maṃ pālayantu</b> \n \n
-        <i>свидетельствую свое почтение, а они пусть охраняют меня.</i> \n \n
-        <b>Nam’atthu Buddhānaṃ nam`atthu bodhiyā</b> \n \n
-        <i>Почтение Буддам, почтение Пробуждению.</i> \n \n
-        <b>Namo vimuttānaṃ namo vimuttiyā</b> \n \n
-        <i>Почтение освобожденным, почтение освобождению.</i> \n \n
-        <b>Imaṃ so parittaṃ katvā</b> \n \n
-        <i>Произнеся такие защитные строфы,</i> \n \n
-        <b>Moro vāsam-akappayī’ti</b> \n \n
-        <i>павлин приводит в порядок свое жилище.</i> \n \n \n \n
-    </string>
+<string name="buttonMainParittasAngulimala">Ангулимала паритта</string>
 </resources>

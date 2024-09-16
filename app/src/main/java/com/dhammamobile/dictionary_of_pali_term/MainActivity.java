@@ -1,11 +1,14 @@
 package com.dhammamobile.dictionary_of_pali_term;
 
+import android.annotation.SuppressLint;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -22,11 +25,16 @@ import java.util.Locale;
 public class MainActivity extends BaseActivityClass {
     ImageButton imageButtonRu;
     ImageButton imageButtonEn;
+    ImageButton imageButtonInfo;
+
+    Button toBackFromInfo;
+    WebView webViewMainInfo;
 
     private TextView textView;
     private String textToAnimate;
 //    private static final String LANGUAGE_PREF_KEY = "LANGUAGE_PREF_KEY";
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +52,10 @@ public class MainActivity extends BaseActivityClass {
         // Находим элементы управления
         imageButtonRu = findViewById(R.id.imageButtonRu);
         imageButtonEn = findViewById(R.id.imageButtonUk);
+        imageButtonInfo = findViewById(R.id.imageButtonInfoMain);
+
+        toBackFromInfo = findViewById(R.id.buttonToBackFromInfo);
+        webViewMainInfo =findViewById(R.id.webViewMainInfo);
     }
 
     @Override
@@ -130,6 +142,7 @@ public class MainActivity extends BaseActivityClass {
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
         imageButtonRu.startAnimation(slideDown);
         imageButtonEn.startAnimation(slideDown);
+        imageButtonInfo.startAnimation(slideDown);
 
         ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);
@@ -138,6 +151,28 @@ public class MainActivity extends BaseActivityClass {
         scrollText.setVisibility(View.VISIBLE);
         imageButtonEx.setVisibility(View.VISIBLE);
         imageButtonM.setVisibility(View.INVISIBLE);
+    }
+
+    private void loadHtmlPage(String htmlFilePath) {
+        webViewMainInfo.loadUrl(htmlFilePath);
+    }
+
+    public void toMainInfo(View view) {
+        toBackFromInfo.setVisibility(View.VISIBLE);
+        webViewMainInfo.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/info_ru/infoRu.html";
+        } else {
+            htmlFilePath = "file:///android_asset/info_en/infoEn.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void toBackFromInfo(View view){
+        toBackFromInfo.setVisibility(View.INVISIBLE);
+        webViewMainInfo.setVisibility(View.INVISIBLE);
     }
 
     @Override

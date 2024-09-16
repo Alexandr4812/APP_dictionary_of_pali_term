@@ -3,7 +3,7 @@
     <string name="buttonSangkhadisesaText">сангхадисеса</string>
     <string name="buttonParajikaDetails">нажмите, чтобы более подробно узнать о правиле</string>
 
-    <string name="buttonInformationAboutUpasampada">Общая информация \n инструкции для бхикху</string>
+    <string name="buttonInformationAboutUpasampada"> \n Общая информация \n инструкции для бхикху \n \n <b>ИНСТРУКЦИИ К НАРУШЕНИЯМ</b> \n </string>
     <string name="buttonInformationAbout">Общая информация</string>
     <string name="textInstruktion">Инструкции для бхикху</string>
 
@@ -610,7 +610,7 @@ Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghass
         Однако, если первый владелец желает получить общую чашу, второй владелец должен сначала отказаться от нее.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
     </string>
 
-    <string name="buttonOffences">инструкции к нарушениям</string>
+    <string name="buttonOffences">инструкции к нарушениям \n (āpatti)</string>
 
     <string name="textButtonOffences1">āpatti-paṭidesanа̄ \n (Признание в нарушении)</string>
     <string name="textButtonOffences2">Nissaggiya Pа̄cittiya \n (Признание в нарушении с конфискацией предмета)</string>
@@ -784,6 +784,13 @@ Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghass
         [Вин,III,199–200] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
         Если несколько чивар: &lt;br&gt;&lt;br&gt;
         &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“cīvaraṁ” →  “dvicīvaraṁ” /  “ticīvaraṁ” (две / три - чивары) &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Возврат предмета назад, отдавшему монаху: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“Imaṁ cīvaraṁ а̄yasamato dammi.” &lt;/big&gt;&lt;/b&gt;&lt;br&gt;
+        (“Я отдаю тебе это одеяние”.) &lt;br&gt;
+         [Вин, III, 197] &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        При возврате больше чем одной чивары: &lt;br&gt;&lt;br&gt;
+        &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;“imaṁ” → “imаni” ; “cīvaraṁ” → “cīvarāni” &lt;/big&gt;&lt;/b&gt;&lt;/div&gt;&lt;br&gt;&lt;br&gt;
+        Эта формула для возврата также применяется в Pа̄с. 2, 3, 6, 7, 8, 9, 10 ниже. &lt;br&gt;&lt;br&gt;
     </string>
 
     <string name="textButtonOffencesPacittiya3">3. \n Nissaggiya Pа̄cittiya \n (передержанное одеяние)</string>

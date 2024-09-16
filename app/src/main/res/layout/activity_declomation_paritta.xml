@@ -59,71 +59,38 @@
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
+            <Button
+                android:id="@+id/button_paritta_angulimala"
+                style="@style/button_activity_declomation_main"
+                android:onClick="angulimalaParitta"
+                android:text="@string/buttonMainParittasAngulimala"
+                tools:ignore="UsingOnClickInXml" />
 
             <Button
                 android:id="@+id/button_paritta"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomaciyaParittaMora"
+                android:onClick="moraParitta"
                 android:text="@string/button_mora_paritta"
                 tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>
     </ScrollView>
 
-    <ScrollView
-        android:id="@+id/overScrollTextMoraParitta"
+    <WebView
+        android:id="@+id/webViewParittas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scrollbars="vertical"
         android:visibility="invisible"
+        android:scrollbarThumbVertical="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewMoraParitta"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/mora_paritta" />
-        </LinearLayout>
-    </ScrollView>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/buttonParittaHome"
-            style="@style/buttonBackHomeNotImageButton"
-            android:layout_gravity="bottom|center"
-            android:layout_marginRight="3dp"
-            android:layout_marginBottom="0dp"
-            android:onClick="toMainAct"
-            android:visibility="invisible"
-            tools:ignore="UsingOnClickInXml"
-            tools:visibility="visible" />
-
-        <Button
-            android:id="@+id/buttonliveToParitta"
-            style="@style/buttonBackNotImageButton"
-            android:layout_gravity="bottom|center"
-            android:layout_marginLeft="3dp"
-            android:layout_marginBottom="0dp"
-            android:onClick="tobackParitta"
-            android:visibility="invisible"
-            tools:ignore="UsingOnClickInXml"
-            tools:visibility="visible" />
-    </LinearLayout>
+    <!-- Включаем макет с кнопками -->
+    <include
+        layout="@layout/buttons_layout_for_parittas"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

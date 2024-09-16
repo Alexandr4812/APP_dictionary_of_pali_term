@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".Rules.RulesBhikkhuAboutOffencesActivity">
+    tools:context=".Declomation.DeklomationGatha">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -14,7 +14,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
-        android:onClick="toRulesBhikkhuAboutAct"
+        android:onClick="toDeclomation"
         android:scaleType="centerInside"
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
-        android:id="@+id/viewScrollRulesBhikkhuRequisites"
+        android:id="@+id/viewScrollGatha"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollRulesBhikkhuOffences"
+            android:id="@+id/linearLayoutScrollGatha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -59,28 +59,18 @@
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
+            <Button
+                android:id="@+id/button_gatha_maha_jayamangala"
+                style="@style/button_activity_declomation_main"
+                android:onClick="jayamangalaGatha"
+                android:text="@string/buttonGathMahaJayaMangala"
+                tools:ignore="UsingOnClickInXml" />
 
-            <Button
-                android:id="@+id/button_rules_bhikkhu_offences_1"
-                style="@style/button_activity_declomation_main"
-                android:backgroundTint="#FFAB91"
-                android:onClick="toOffence1"
-                android:text="@string/textButtonOffences1"
-                tools:ignore="UsingOnClickInXml" />
-            <ImageView
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
-            <Button
-                android:id="@+id/button_rules_bhikkhu_offences_2"
-                style="@style/button_activity_declomation_main"
-                android:backgroundTint="#FFAB91"
-                android:onClick="toRlesBhikkhuOffences2"
-                android:text="@string/textButtonOffences2"
-                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
     </ScrollView>
+
     <WebView
-        android:id="@+id/webViewOffence"
+        android:id="@+id/webViewGatha"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
@@ -93,7 +83,7 @@
 
     <!-- Включаем макет с кнопками -->
     <include
-        layout="@layout/buttons_layout_for_offence"
+        layout="@layout/buttons_layout_for_gatha"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

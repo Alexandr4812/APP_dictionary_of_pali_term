@@ -122,6 +122,7 @@
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:text="@string/DeklomaciyaSuttaKaraniyaMettaSutta" />
         </LinearLayout>
     </ScrollView>
@@ -144,6 +145,7 @@
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:text="@string/DeklomaciyaSuttaMangala" />
         </LinearLayout>
     </ScrollView>
@@ -166,6 +168,7 @@
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textAlignment="center"
                 android:text="@string/DeklomaciyaSuttaRatana" />
         </LinearLayout>
     </ScrollView>
@@ -188,6 +191,7 @@
                 style="@style/TextMessageStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:textAlignment="center"
                 android:text="@string/DeklomaciyaSuttaGirimananda" />
         </LinearLayout>
     </ScrollView>

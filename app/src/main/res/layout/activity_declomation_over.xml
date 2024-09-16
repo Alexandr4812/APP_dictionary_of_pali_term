@@ -82,16 +82,6 @@
                 android:text="@string/blagopogelaniya_pri_vzyatii_pichi"
                 tools:ignore="UsingOnClickInXml" />
 
-            <ImageView
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
-
-            <Button
-                android:id="@+id/button_after_evening_meditation"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomaciyaOftereveningMeditstion"
-                android:text="@string/deklomation_after_evening_meditation"
-                tools:ignore="UsingOnClickInXml" />
 
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
@@ -183,28 +173,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/DeklomaciyaAlmsWish" />
-        </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/overScrollTextDeclomaciyaOftereveningMeditstion"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewDeclomaciyaOftereveningMeditstion"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/DeklomaciyaOfterEveningMeditationO" />
         </LinearLayout>
     </ScrollView>
 

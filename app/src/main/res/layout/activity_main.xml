@@ -132,8 +132,8 @@
 
     <ImageButton
         android:id="@+id/button_menu_exit"
-        android:layout_width="31dp"
-        android:layout_height="19dp"
+        android:layout_width="41dp"
+        android:layout_height="29dp"
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="@string/todo"
@@ -150,8 +150,8 @@
 
     <ImageButton
         android:id="@+id/button_menu"
-        android:layout_width="31dp"
-        android:layout_height="19dp"
+        android:layout_width="41dp"
+        android:layout_height="29dp"
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="@string/todo"
@@ -204,7 +204,48 @@
                 android:scaleType="centerInside"
                 android:src="@drawable/button_en" />
 
+            <ImageButton
+                android:id="@+id/imageButtonInfoMain"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@color/my_main_color"
+                android:onClick="toMainInfo"
+                android:scaleType="centerInside"
+                android:src="@drawable/buttoninfo" />
+
         </LinearLayout>
     </ScrollView>
+
+    <WebView
+        android:id="@+id/webViewMainInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        android:scrollbarThumbVertical="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/buttonToBackFromInfo"
+            style="@style/buttonBackNotImageButton"
+            android:layout_gravity="bottom|center"
+            android:layout_marginLeft="3dp"
+            android:layout_marginBottom="0dp"
+            android:onClick="toBackFromInfo"
+            android:visibility="invisible"
+            tools:ignore="UsingOnClickInXml"
+            tools:visibility="visible" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

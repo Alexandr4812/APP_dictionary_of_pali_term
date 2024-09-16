@@ -56,12 +56,7 @@ public class DeclomationOverActivity extends BaseActivityClass {
         buttonLiveToOver.setVisibility(View.VISIBLE);
     }
 
-    public void toDeclomaciyaOftereveningMeditstion(View view) {
-        ScrollView scrollText = findViewById(R.id.overScrollTextDeclomaciyaOftereveningMeditstion);
-        scrollText.setVisibility(View.VISIBLE);
-        buttonHome.setVisibility(View.VISIBLE);
-        buttonLiveToOver.setVisibility(View.VISIBLE);
-    }
+
 
     public void toDeclomaciyaRefleksiyaOProshlihNeobhodimostyah(View view) {
         ScrollView scrollText = findViewById(R.id.overScrollTextDeclomaciyaRefleksiyaOProshlihNeobhodimostyah);
@@ -84,8 +79,6 @@ public class DeclomationOverActivity extends BaseActivityClass {
         scrollText2.setVisibility(View.INVISIBLE);
         ScrollView scrollText3 = findViewById(R.id.overScrollTextAlmsWish);
         scrollText3.setVisibility(View.INVISIBLE);
-        ScrollView scrollText4 = findViewById(R.id.overScrollTextDeclomaciyaOftereveningMeditstion);
-        scrollText4.setVisibility(View.INVISIBLE);
         ScrollView scrollText5 = findViewById(R.id.overScrollTextDeclomaciyaRefleksiyaOProshlihNeobhodimostyah);
         scrollText5.setVisibility(View.INVISIBLE);
         ScrollView scrollText6 = findViewById(R.id.overScrollTextDeclomaciya32chasti);
