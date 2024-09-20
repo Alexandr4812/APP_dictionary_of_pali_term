@@ -51,9 +51,9 @@ public class RulesBhikkhuPatimokhaSanghadisesaDetail3Activity extends BaseActivi
         // Определить путь к HTML файлу в соответствии с текущим языком
         String htmlFilePath;
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/par_detail_ru/sd3.html";
+            htmlFilePath = "file:///android_asset/par_detail_ru/sdFullRu3.html";
         } else {
-            htmlFilePath = "file:///android_asset/par_detail_en/sd3.html";
+            htmlFilePath = "file:///android_asset/par_detail_en/sdFullEn3.html";
         }
 
         webView.loadUrl(htmlFilePath);

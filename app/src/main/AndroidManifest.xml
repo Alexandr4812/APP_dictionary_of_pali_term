@@ -17,6 +17,22 @@
         android:versionName="3.1"
         tools:targetApi="33">
         <activity
+            android:name=".Teacher.TeacherLec212Activity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Teacher.TeacherLec112Activity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Declomation.DeklomationGatha"
             android:exported="false"
             android:screenOrientation="portrait">

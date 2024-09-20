@@ -60,6 +60,12 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
             <Button
+                android:id="@+id/button_gatha_sabbapapassa"
+                style="@style/button_activity_declomation_main"
+                android:onClick="sabbapapassaGatha"
+                android:text="@string/buttonSabbapapassa"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
                 android:id="@+id/button_gatha_maha_jayamangala"
                 style="@style/button_activity_declomation_main"
                 android:onClick="jayamangalaGatha"

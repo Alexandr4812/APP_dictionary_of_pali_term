@@ -30,6 +30,7 @@ public class TeacherActivity extends BaseActivityClass {
         ImageView im1 =findViewById(R.id.img_1);
         Button button1 = findViewById(R.id.button_teacher_about);
         ImageView im2 =findViewById(R.id.img_2);
+        Button button1_12 = findViewById(R.id.button_lecture1_12);
         Button button8 = findViewById(R.id.button_lecture7);
         Button button9 = findViewById(R.id.button_lecture8);
         Button button10 = findViewById(R.id.button_lecture9);
@@ -49,17 +50,18 @@ public class TeacherActivity extends BaseActivityClass {
         im1.startAnimation(slideDown);
         button1.startAnimation(slideFromLeftAnimation);
         im2.startAnimation(slideFromRightAnimation);
-        button8.startAnimation(slideFromLeftAnimation);
-        button9.startAnimation(slideFromRightAnimation);
-        button10.startAnimation(slideFromLeftAnimation);
-        button11.startAnimation(slideFromRightAnimation);
-        button2.startAnimation(slideFromLeftAnimation);
-        button3.startAnimation(slideFromRightAnimation);
-        button4.startAnimation(slideFromLeftAnimation);
-        button5.startAnimation(slideFromRightAnimation);
-        button6.startAnimation(slideFromLeftAnimation);
-        button7.startAnimation(slideFromRightAnimation);
-        button12.startAnimation(slideFromLeftAnimation);
+        button1_12.startAnimation(slideFromLeftAnimation);
+        button8.startAnimation(slideFromRightAnimation);
+        button9.startAnimation(slideFromLeftAnimation);
+        button10.startAnimation(slideFromRightAnimation);
+        button11.startAnimation(slideFromLeftAnimation);
+        button2.startAnimation(slideFromRightAnimation);
+        button3.startAnimation(slideFromLeftAnimation);
+        button4.startAnimation(slideFromRightAnimation);
+        button5.startAnimation(slideFromLeftAnimation);
+        button6.startAnimation(slideFromRightAnimation);
+        button7.startAnimation(slideFromLeftAnimation);
+        button12.startAnimation(slideFromRightAnimation);
     }
 
     protected void onResume() {
@@ -68,6 +70,14 @@ public class TeacherActivity extends BaseActivityClass {
 
     public void toTeacherAboutAct(View view){
         startIntentActivityAndFinish(TeacherAboutActivity.class);
+    }
+
+    public void toTeacherLec112Act(View view) {
+        startIntentActivityAndFinish(TeacherLec112Activity.class);
+    }
+
+    public void toTeacherLec212Act(View view) {
+        startIntentActivityAndFinish(TeacherLec212Activity.class);
     }
 
     public void toTeacherLec1Act(View view) {

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title></title>
+
+<style type="text/css">
+
+body {
+            background-color: #FFE082;
+        }
+
+body {
+            margin: 5;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+.a______ {
+mso-style-name:"Обычный";
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h1 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:18.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h2 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:16.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h3 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:14.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+
+.tm5 {
+border:none;
+}
+.tm6 {
+text-align:center;
+}
+.tm7 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+text-align:center;
+}
+.tm8 {
+font-size:14.0pt;
+}
+.tm9 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+text-align:center;
+}
+.tm10 {
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm11 {
+font-style:italic;
+font-size:14.0pt;
+}
+.tm12 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+}
+.tm13 {
+text-align:justify;
+}
+.tm14 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+text-align:justify;
+}
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript" style="font-size: 14pt;">
+        var initialFontSize = 14; // Установите начальный размер шрифта
+
+        // Функция для установки начального размера шрифта
+        function setInitialFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var computedStyle = window.getComputedStyle(element, null);
+                var currentSize = parseFloat(computedStyle.getPropertyValue('font-size'));
+                // Увеличиваем размер до начального значения
+                var scale = initialFontSize / currentSize;
+                element.style.fontSize = initialFontSize + 'pt';
+            });
+        }
+
+        function increaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = (fontSize + 2) + 'px';
+            });
+        }
+
+        function decreaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = Math.max(8, fontSize - 2) + 'px';
+            });
+        }
+
+        // Устанавливаем начальный размер шрифта после загрузки страницы
+        window.onload = setInitialFontSize;
+    </script>
+
+<p class="tm7"><span class="tm8">&#1042; &#1064;&#1088;&#1080;-&#1051;&#1072;&#1085;&#1082;&#1077;, &#1087;&#1077;&#1088;&#1077;&#1076; &#1082;&#1072;&#1078;&#1076;&#1099;&#1084; &#1085;&#1072;&#1089;&#1090;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077;&#1084;
+&#1074; &#1044;&#1093;&#1072;&#1084;&#1084;&#1077; &#1084;&#1086;&#1085;&#1072;&#1093;&#1080; &#1095;&#1072;&#1089;&#1090;&#1086; &#1087;&#1088;&#1086;&#1080;&#1079;&#1085;&#1086;&#1089;&#1103;&#1090; &#1101;&#1090;&#1091;
+&#1075;&#1072;&#1090;&#1093;&#1091;:</span></p>
+<p class="tm9"><span class="tm8">&#160;</span></p>
+<p class="tm9"><strong><span class="tm10">&#160;</span></strong></p>
+<p class="tm9"><strong><span class="tm10">Sabbap&#257;passa akara&#7751;a&#7747;,</span></strong></p>
+<p class="tm9"><em><span class="tm11">&#1053;&#1080;&#1082;&#1072;&#1082;&#1086;&#1075;&#1086; &#1079;&#1083;&#1072; &#1085;&#1077; &#1076;&#1077;&#1083;&#1072;&#1090;&#1100;</span></em></p>
+<p class="tm9"><em><span class="tm11">&#160;</span></em></p>
+<p class="tm9"><strong><span class="tm10">Kusalassa upasampad&#257;;</span></strong></p>
+<p class="tm9"><em><span class="tm11">&#1041;&#1083;&#1072;&#1075;&#1086;&#1077; &#1085;&#1072;&#1082;&#1072;&#1087;&#1083;&#1080;&#1074;&#1072;&#1090;&#1100;</span></em></p>
+<p class="tm9"><em><span class="tm11">&#160;</span></em></p>
+<p class="tm9"><strong><span class="tm10">Sacitta pariyo dapana&#7747;,</span></strong></p>
+<p class="tm9"><em><span class="tm11">&#1057;&#1074;&#1086;&#1081; &#1091;&#1084;, &#1082; &#1087;&#1086;&#1089;&#1090;&#1080;&#1078;&#1077;&#1085;&#1080;&#1102; &#1087;&#1086;&#1073;&#1091;&#1078;&#1076;&#1072;&#1090;&#1100;</span></em></p>
+<p class="tm9"><em><span class="tm11">&#160;</span></em></p>
+<p class="tm9"><strong><span class="tm10">Eta&#7747; buddh&#257;na s&#257;sana&#7747;</span></strong></p>
+<p class="tm9"><em><span class="tm11">&#1069;&#1090;&#1086; &#1041;&#1091;&#1076;&#1076;&#1099; &#1091;&#1095;&#1077;&#1085;&#1080;&#1077;.</span></em></p>
+<p class="tm9"><em><span class="tm11">&#160;</span></em></p>
+<p class="tm12"><span class="tm8">&#1069;&#1090;&#1072; &#1075;&#1072;&#1090;&#1093;&#1072; &#1089;&#1086;&#1076;&#1077;&#1088;&#1078;&#1080;&#1090;&#1089;&#1103; &#1074; &#1044;&#1093;&#1072;&#1084;&#1084;&#1072;&#1087;&#1072;&#1076;&#1077;.
+&#1042; &#1082;&#1086;&#1084;&#1084;&#1077;&#1085;&#1090;&#1072;&#1088;&#1080;&#1080; &#1087;&#1088;&#1080;&#1074;&#1086;&#1076;&#1080;&#1090;&#1089;&#1103; &#1089;&#1083;&#1077;&#1076;&#1091;&#1102;&#1097;&#1077;&#1077; &#1087;&#1086;&#1103;&#1089;&#1085;&#1077;&#1085;&#1080;&#1077;
+&#1082; &#1101;&#1090;&#1086;&#1081; &#1075;&#1072;&#1090;&#1093;&#1077;:</span></p>
+<p class="tm12"><span class="tm8">&#160;</span></p>
+<p class="tm12"><span class="tm8">&#160;</span></p>
+<p class="tm14"><span class="tm8">&#1042;&#1086; &#1074;&#1088;&#1077;&#1084;&#1103; &#1087;&#1088;&#1077;&#1073;&#1099;&#1074;&#1072;&#1085;&#1080;&#1103; &#1074; &#1084;&#1086;&#1085;&#1072;&#1089;&#1090;&#1099;&#1088;&#1077;
+&#1044;&#1078;&#1077;&#1090;&#1072;&#1074;&#1072;&#1085;&#1072; &#1041;&#1091;&#1076;&#1076;&#1072; &#1087;&#1088;&#1086;&#1080;&#1079;&#1085;&#1077;&#1089; &#1089;&#1090;&#1080;&#1093;&#1080; (183, 184 </span></p>
+<p class="tm14"><span class="tm8">&#1080; 185) &#1074; &#1089;&#1074;&#1103;&#1079;&#1080; &#1089; &#1080;&#1089;&#1090;&#1086;&#1088;&#1080;&#1077;&#1081; &#1086; &#1074;&#1086;&#1087;&#1088;&#1086;&#1089;&#1077;, &#1087;&#1086;&#1076;&#1085;&#1103;&#1090;&#1086;&#1084;
+&#1090;&#1093;&#1077;&#1088;&#1086;&#1081; &#1040;&#1085;&#1072;&#1085;&#1076;&#1086;&#1081; &#1082;&#1072;&#1089;&#1072;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086; &#1086;&#1089;&#1085;&#1086;&#1074;&#1085;&#1099;&#1093; &#1085;&#1072;&#1089;&#1090;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1081;
+&#1076;&#1083;&#1103; &#1084;&#1086;&#1085;&#1072;&#1093;&#1086;&#1074;, &#1089;&#1086;&#1079;&#1076;&#1072;&#1085;&#1085;&#1099;&#1093; &#1087;&#1088;&#1077;&#1076;&#1099;&#1076;&#1091;&#1097;&#1080;&#1084;&#1080; &#1041;&#1091;&#1076;&#1076;&#1072;&#1084;&#1080;.
+</span></p>
+<p class="tm14"><span class="tm8">&#1054;&#1076;&#1085;&#1072;&#1078;&#1076;&#1099; &#1090;&#1093;&#1077;&#1088;&#1072; &#1040;&#1085;&#1072;&#1085;&#1076;&#1072; &#1089;&#1087;&#1088;&#1086;&#1089;&#1080;&#1083; &#1041;&#1091;&#1076;&#1076;&#1091;,
+&#1086;&#1090;&#1083;&#1080;&#1095;&#1072;&#1083;&#1080;&#1089;&#1100; &#1083;&#1080; &#1054;&#1089;&#1085;&#1086;&#1074;&#1085;&#1099;&#1077; &#1053;&#1072;&#1089;&#1090;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1103; </span></p>
+<p class="tm14"><span class="tm8">&#1076;&#1083;&#1103; &#1084;&#1086;&#1085;&#1072;&#1093;&#1086;&#1074;, &#1089;&#1086;&#1079;&#1076;&#1072;&#1085;&#1085;&#1099;&#1077; &#1087;&#1088;&#1077;&#1076;&#1099;&#1076;&#1091;&#1097;&#1080;&#1084;&#1080;
+&#1041;&#1091;&#1076;&#1076;&#1072;&#1084;&#1080;, &#1086;&#1090; &#1085;&#1099;&#1085;&#1077;&#1096;&#1085;&#1080;&#1093;. &#1041;&#1091;&#1076;&#1076;&#1072; &#1078;&#1077; &#1086;&#1090;&#1074;&#1077;&#1090;&#1080;&#1083;
+&#1077;&#1084;&#1091;, &#1095;&#1090;&#1086; &#1085;&#1072;&#1089;&#1090;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1103; &#1074;&#1089;&#1077;&#1093; &#1041;&#1091;&#1076;&#1076; &#1074;&#1099;&#1088;&#1072;&#1078;&#1072;&#1102;&#1090;&#1089;&#1103;
+&#1074; &#1089;&#1083;&#1077;&#1076;&#1091;&#1102;&#1097;&#1080;&#1093; &#1089;&#1090;&#1080;&#1093;&#1072;&#1093;: </span></p>
+<p class="tm14"><span class="tm8">&#1047;&#1072;&#1090;&#1077;&#1084; &#1041;&#1091;&#1076;&#1076;&#1072; &#1087;&#1088;&#1086;&#1080;&#1079;&#1085;&#1077;&#1089; &#1089;&#1083;&#1077;&#1076;&#1091;&#1102;&#1097;&#1080;&#1077;
+&#1089;&#1090;&#1080;&#1093;&#1080;: </span></p>
+<p class="tm14"><span class="tm8">&#160;</span></p>
+<p class="tm9"><strong><span class="tm10">Sabbap&#257;passa akara&#7751;a&#7747;,</span></strong></p>
+<p class="tm9"><em><span class="tm11"></span></em><strong><span class="tm10">Kusalassa upasampad&#257;;<br />Sacitta pariyo dapana&#7747;,</span></strong></p>
+<p class="tm9"><strong><span class="tm10">Eta&#7747; buddh&#257;na s&#257;sana&#7747;</span></strong></p>
+<p class="tm9"><em><span class="tm11">&#1053;&#1077; &#1076;&#1077;&#1083;&#1072;&#1090;&#1100; &#1079;&#1083;&#1072;, &#1088;&#1072;&#1079;&#1074;&#1080;&#1074;&#1072;&#1090;&#1100; &#1076;&#1086;&#1073;&#1088;&#1086;&#1076;&#1077;&#1090;&#1077;&#1083;&#1100;,
+</span></em></p>
+<p class="tm9"><em><span class="tm11">&#1086;&#1095;&#1080;&#1097;&#1072;&#1090;&#1100; &#1088;&#1072;&#1079;&#1091;&#1084; &#8212; &#1074;&#1086;&#1090; &#1059;&#1095;&#1077;&#1085;&#1080;&#1077; &#1041;&#1091;&#1076;&#1076;</span></em></p>
+<p class="tm9"><span class="tm8">&#160;</span></p>
+<p class="tm9"><strong><span class="tm10">Khant&#299; parama&#7745; tapo titikkh&#257;,</span></strong></p>
+<p class="tm7"><strong><span class="tm10">Nibb&#257;na&#7745; parama&#7745; vadanti buddh&#257;;</span></strong></p>
+<p class="tm7"><strong><span class="tm10">Na hi pabbajito par&#363;pagh&#257;t&#299;,</span></strong></p>
+<p class="tm7"><strong><span class="tm10">Na sama&#7751;o hoti para&#7745; vihe&#7789;hayanto.</span></strong></p>
+<p class="tm9"><strong><span class="tm10">&#160;</span></strong></p>
+<p class="tm9"><em><span class="tm11">&#1051;&#1091;&#1095;&#1096;&#1072;&#1103; &#1084;&#1086;&#1088;&#1072;&#1083;&#1100;&#1085;&#1072;&#1103; &#1087;&#1088;&#1072;&#1082;&#1090;&#1080;&#1082;&#1072; &#8212; &#1101;&#1090;&#1086;
+&#1090;&#1077;&#1088;&#1087;&#1077;&#1085;&#1080;&#1077; &#1080; &#1089;&#1085;&#1080;&#1089;&#1093;&#1086;&#1076;&#1080;&#1090;&#1077;&#1083;&#1100;&#1085;&#1086;&#1090;&#1100;; </span></em></p>
+<p class="tm9"><em><span class="tm11">&laquo;&#1053;&#1080;&#1088;&#1074;&#1072;&#1085;&#1072; &#1087;&#1088;&#1077;&#1074;&#1099;&#1096;&#1077; &#1074;&#1089;&#1077;&#1075;&#1086;&raquo;, &#8212; &#1075;&#1086;&#1074;&#1086;&#1088;&#1103;&#1090;
+&#1041;&#1091;&#1076;&#1076;&#1099;</span></em></p>
+<p class="tm9"><em><span class="tm11">&#1052;&#1086;&#1085;&#1072;&#1093; &#1085;&#1080;&#1082;&#1086;&#1075;&#1076;&#1072; &#1085;&#1077; &#1089;&#1076;&#1077;&#1083;&#1072;&#1077;&#1090; &#1076;&#1088;&#1091;&#1075;&#1086;&#1084;&#1091;
+&#1085;&#1080;&#1095;&#1077;&#1075;&#1086; &#1087;&#1083;&#1086;&#1093;&#1086;&#1075;&#1086;. </span></em></p>
+<p class="tm9"><span class="tm8"></span><em><span class="tm11">&#1058;&#1086;&#1090;, &#1082;&#1090;&#1086; &#1087;&#1083;&#1086;&#1093;&#1086; &#1087;&#1086;&#1089;&#1090;&#1091;&#1087;&#1072;&#1077;&#1090; &#1089; &#1076;&#1088;&#1091;&#1075;&#1080;&#1084;&#1080;
+&#8212; &#1085;&#1077; &#1084;&#1086;&#1085;&#1072;&#1093;.</span></em><span class="tm8"> </span></p>
+<p class="tm9"><span class="tm8">&#160;</span></p>
+<p class="tm9"><span class="tm8">&#160;</span></p>
+<p class="tm9"><strong><span class="tm10">An&#363;pav&#257;do an&#363;pagh&#257;to,</span></strong></p>
+<p class="tm7"><strong><span class="tm10">P&#257;timokkhe ca sa&#7745;varo;</span></strong></p>
+<p class="tm7"><strong><span class="tm10">Matta&ntilde;&ntilde;ut&#257; ca bhattasmi&#7745;,</span></strong></p>
+<p class="tm7"><strong><span class="tm10">Panta&ntilde;ca sayan&#257;sana&#7745;;</span></strong></p>
+<p class="tm7"><strong><span class="tm10">Adhicitte ca &#257;yogo,</span></strong></p>
+<p class="tm7"><strong><span class="tm10">Eta&#7745; buddh&#257;na s&#257;sana&#7745;.</span></strong></p>
+<p class="tm9"><em><span class="tm11">&#1053;&#1077; &#1073;&#1088;&#1072;&#1085;&#1080;&#1090;&#1100;&#1089;&#1103;, &#1085;&#1077; &#1087;&#1088;&#1080;&#1095;&#1080;&#1085;&#1103;&#1090;&#1100; &#1074;&#1088;&#1077;&#1076;&#1072;,
+&#1079;&#1072;&#1085;&#1080;&#1084;&#1072;&#1090;&#1100;&#1089;&#1103; &#1074;&#1086;&#1079;&#1076;&#1077;&#1088;&#1078;&#1072;&#1085;&#1080;&#1077;&#1084; </span></em></p>
+<p class="tm9"><em><span class="tm11">&#1074; &#1089;&#1086;&#1086;&#1090;&#1074;&#1077;&#1090;&#1089;&#1090;&#1074;&#1080;&#1080; &#1089; &#1054;&#1089;&#1085;&#1086;&#1074;&#1085;&#1099;&#1084;&#1080; &#1053;&#1072;&#1089;&#1090;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1103;&#1084;&#1080;
+&#1076;&#1083;&#1103; &#1084;&#1086;&#1085;&#1072;&#1093;&#1086;&#1074;, </span></em></p>
+<p class="tm9"><em><span class="tm11">&#1073;&#1099;&#1090;&#1100; &#1091;&#1084;&#1077;&#1088;&#1077;&#1085;&#1085;&#1099;&#1084; &#1074; &#1077;&#1076;&#1077;, &#1078;&#1080;&#1090;&#1100; &#1074; &#1091;&#1077;&#1076;&#1080;&#1085;&#1077;&#1085;&#1085;&#1086;&#1084;
+&#1084;&#1077;&#1089;&#1090;&#1077;, </span></em></p>
+<p class="tm9"><em><span class="tm11">&#1087;&#1086;&#1089;&#1074;&#1103;&#1090;&#1080;&#1090;&#1100; &#1089;&#1077;&#1073;&#1103; &#1074;&#1099;&#1089;&#1096;&#1077;&#1081; &#1082;&#1086;&#1085;&#1094;&#1077;&#1085;&#1090;&#1088;&#1072;&#1094;&#1080;&#1080;
+&#8212; &#1074;&#1086;&#1090; &#1059;&#1095;&#1077;&#1085;&#1080;&#1077; &#1041;&#1091;&#1076;&#1076;.</span></em></p>
+<p class="tm9"><em><span class="tm11">&#160;</span></em></p>
+<p class="tm9"><em><span class="tm11">&#160;</span></em></p>
+<p class="tm9"><em><span class="tm11">&#160;</span></em></p>
+<p class="tm9"><em><span class="tm11">&#160;</span></em></p>
+<p class="tm9"><em><span class="tm11">&#160;</span></em></p>
+<p class="tm14"><span class="tm8">&#160;</span></p>
+<p class="tm14"><em><span class="tm11">&#160;</span></em></p>
+</body>
+</html>

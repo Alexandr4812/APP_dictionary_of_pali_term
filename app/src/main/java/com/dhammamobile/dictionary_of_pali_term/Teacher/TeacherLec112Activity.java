@@ -1,4 +1,4 @@
-package com.dhammamobile.dictionary_of_pali_term.Declomation;
+package com.dhammamobile.dictionary_of_pali_term.Teacher;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,7 +10,6 @@ import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.LinearLayout;
 
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
@@ -18,34 +17,33 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 
 import java.util.Locale;
 
-public class DeklomationGatha extends BaseActivityClass {
+public class TeacherLec112Activity extends BaseActivityClass {
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         // Здесь вы можете добавить свои действия при изменении ориентации, если это необходимо
     }
-    LinearLayout buttonGatha;
+
     Button plusText, minusText;
     WebView webView; // Declare WebView as a class member for easy access
+
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         updateLocale(); // Установка языка
-        setContentView(R.layout.activity_deklomation_gatha);
+        setContentView(R.layout.activity_teacher_lec112);
 
         // Скрытие панели навигации и панели состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        plusText = findViewById(R.id.buttonPlusGatha);
-        minusText = findViewById(R.id.buttonMinusGatha);
+        plusText = findViewById(R.id.buttonPlusTextTeacher);
+        minusText = findViewById(R.id.buttonMinusTextTeacher);
 
-        webView = findViewById(R.id.webViewGatha);
-
-        buttonGatha = findViewById(R.id.button_layout_gatha);
+        webView = findViewById(R.id.webViewLec112);
 
         // Настройки WebView
         WebSettings webSettings = webView.getSettings();
@@ -61,44 +59,27 @@ public class DeklomationGatha extends BaseActivityClass {
             webView.evaluateJavascript("javascript:decreaseFontSize();", null);
         });
 
+        toSatrtTeacherLec112Act();
     }
+
     private void loadHtmlPage(String htmlFilePath) {
         webView.loadUrl(htmlFilePath);
     }
 
-    public void jayamangalaGatha(View view) {
-        buttonGatha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
+    public void toSatrtTeacherLec112Act() {
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/gatha_ru/jayamangalaGathaRu.html";
+            htmlFilePath = "file:///android_asset/lec_ru/vivekaRu.html";
         } else {
-            htmlFilePath = "file:///android_asset/gatha_en/jayamangalaGathaEn.html";
+            htmlFilePath = "file:///android_asset/lec_ru/vivekaRu.html";
         }
         loadHtmlPage(htmlFilePath);
     }
 
-    public void sabbapapassaGatha(View view) {
-        buttonGatha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/gatha_ru/sabbapapassaRu.html";
-        } else {
-            htmlFilePath = "file:///android_asset/gatha_en/sabbapapassaEn.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
 
-    public void toDeclomation(View view){
-        startIntentActivityAndFinish(DeklomationMainActivity.class);
-    }
-
-    public void toGathaBack(View view){
-        webView.setVisibility(View.INVISIBLE);
-        buttonGatha.setVisibility(View.INVISIBLE);
+    public void toBack(View view){
+        startIntentActivityAndFinish(TeacherActivity.class);
     }
 
     public void toMainAct(View view){
@@ -108,6 +89,6 @@ public class DeklomationGatha extends BaseActivityClass {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startIntentActivityAndFinish(DeklomationMainActivity.class);
+        startIntentActivityAndFinish(TeacherActivity.class);
     }
 }
