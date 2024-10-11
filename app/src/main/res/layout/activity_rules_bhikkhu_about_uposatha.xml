@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".Rules.RulesBhikkhuAboutActivity">
+    tools:context=".Rules.RulesBhikkhuAboutUposathaActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -14,7 +14,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
-        android:onClick="toRulesBhikkhuAct"
+        android:onClick="toRulesBhikkhuAboutAct"
         android:scaleType="centerInside"
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
-        android:id="@+id/viewScrollRulesBhikhuAbout"
+        android:id="@+id/viewScrollBhikkhuAboutUposatha"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollRulesBhikhuAbout"
+            android:id="@+id/linearLayoutScrollBhikkhuAboutUposatha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -59,67 +59,33 @@
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
-
             <Button
-                android:id="@+id/button_rules_bhikhu_about_info"
+                android:id="@+id/button_bhikkhu_about_ubosatha1"
                 style="@style/button_activity_declomation_main"
+                android:onClick="uposatha1"
+                android:text="@string/buttonUposathaPurity"
                 android:backgroundTint="#FFAB91"
-                android:onClick="toRulesBhikkhuAboutGeneralInfoAct"
-                android:text="@string/buttonInformationAbout"
                 tools:ignore="UsingOnClickInXml" />
-
-            <ImageView
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
-            <TextView
-                android:id="@+id/textViewFirstCategory"
-                style="@style/textBetweenButtons"
-                android:text="@string/textInstruktion" />
             <Button
-                android:id="@+id/button_rules_bhikhu_offences"
+                android:id="@+id/button_bhikkhu_about_ubosatha2"
                 style="@style/button_activity_declomation_main"
+                android:onClick="uposatha2"
+                android:text="@string/buttonUposathaPurity2"
                 android:backgroundTint="#FFAB91"
-                android:onClick="toRulesBhikkhuAboutOffencesAct"
-                android:text="@string/buttonOffences"
                 tools:ignore="UsingOnClickInXml" />
-
             <Button
-                android:id="@+id/button_rules_bhikhu_abou_manual"
+                android:id="@+id/button_bhikkhu_about_ubosatha3"
                 style="@style/button_activity_declomation_main"
+                android:onClick="uposatha3"
+                android:text="@string/buttonUposathaPurity3"
                 android:backgroundTint="#FFAB91"
-                android:onClick="toRulesBhikkhuAboutRequisitesAct"
-                android:text="@string/buttonRequisites"
-                tools:ignore="UsingOnClickInXml" />
-
-            <Button
-                android:id="@+id/button_rules_bhikhu_abou_uposatha"
-                style="@style/button_activity_declomation_main"
-                android:backgroundTint="#FFAB91"
-                android:onClick="toRulesBhikkhuAboutUposathaAct"
-                android:text="@string/buttonUposatha"
-                tools:ignore="UsingOnClickInXml" />
-
-            <Button
-                android:id="@+id/button_rules_bhikhu_abou_kathina"
-                style="@style/button_activity_declomation_main"
-                android:backgroundTint="#FFAB91"
-                android:onClick="toRulesBhikkhuAboutKathinaAct"
-                android:text="@string/buttonKathina"
-                tools:ignore="UsingOnClickInXml" />
-
-            <Button
-                android:id="@+id/button_rules_bhikhu_abou_other"
-                style="@style/button_activity_declomation_main"
-                android:backgroundTint="#FFAB91"
-                android:onClick="otherProcedures"
-                android:text="@string/buttonOther"
                 tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>
     </ScrollView>
 
     <WebView
-        android:id="@+id/webViewBhikkhuAboutKathina"
+        android:id="@+id/webViewBhikkhuAboutUposatha"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"

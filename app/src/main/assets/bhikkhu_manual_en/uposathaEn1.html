@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+
+<style type="text/css">
+.a______ {
+mso-style-name:"Обычный";
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h1 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:18.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h2 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:16.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h3 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:14.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+
+.tm5 {
+border:none;
+}
+.tm6 {
+text-align:center;
+}
+.tm7 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+text-align:center;
+}
+.tm8 {
+font-size:14.0pt;
+}
+.tm9 {
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm10 {
+color:Red;
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm11 {
+color:Red;
+font-size:14.0pt;
+}
+.tm12 {
+font-style:italic;
+font-size:14.0pt;
+}
+.tm13 {
+list-style-type:disc;
+}
+.tm14 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+list-style-type:disc;
+}
+.tm15 {
+margin-left:14.0pt;
+text-align:center;
+}
+.tm16 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+margin-left:14.0pt;
+text-align:center;
+}
+.tm17 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+}
+
+body {
+            background-color: #FFE082;
+        }
+
+body {
+            margin: 5;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+img {
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+        var initialFontSize = 14; // Установите начальный размер шрифта
+
+        // Функция для установки начального размера шрифта
+        function setInitialFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var computedStyle = window.getComputedStyle(element, null);
+                var currentSize = parseFloat(computedStyle.getPropertyValue('font-size'));
+                // Увеличиваем размер до начального значения
+                var scale = initialFontSize / currentSize;
+                element.style.fontSize = initialFontSize + 'pt';
+            });
+        }
+
+        function increaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = (fontSize + 2) + 'px';
+            });
+        }
+
+        function decreaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = Math.max(8, fontSize - 2) + 'px';
+            });
+        }
+
+        // Устанавливаем начальный размер шрифта после загрузки страницы
+        window.onload = setInitialFontSize;
+    </script>
+
+<p class="tm7"><span class="tm8"></span><strong><span class="tm9">PARISUDDHI-UPOSATHA (PURITY OF UPOSATHA)</span></strong></p>
+<p class="tm7"><span class="tm8"></span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm10">(i)</span></strong><span class="tm11"> </span><strong><span
+ class="tm10">Parisuddhi before the Sangha</span></strong><span class="tm8"> </span><em><span class="tm12"><br /><br />Declaration of one&#39;s purity before the Sangha:</span></em><span
+ class="tm8"> </span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm9">&quot;Parisuddho aha&#7747; bhante, parisuddho&#39;ti ma&#7747; sa&#7749;gho dh&#257;retu.&quot;</span></strong><span
+ class="tm8"> </span></p>
+<p class="tm7"><span class="tm8"></span><em><span class="tm12">(&quot;Venerable sirs, I am completely pure. May the Sangha regard me as pure.&quot;)</span></em><span
+ class="tm8"> [cf. Vin,I,129]</span></p>
+<p class="tm7"><span class="tm8">&#160;</span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm10">(ii)</span></strong><span class="tm11"> </span><strong><span
+ class="tm10">Parisuddhi for 3 bhikkhus</span></strong><span class="tm8"> </span></p>
+<p class="tm7"><span class="tm8"></span><em><span class="tm12">At least four bhikkhus are required to recite the Patimokkha. If only three bhikkhus are present, then after performing the preliminary duties and general confession,
+one bhikkhu pronounces the &ntilde;atti:</span></em><span class="tm8"> </span></p>
+<p class="tm7"><span class="tm8">&#160;</span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm9">&quot;Su&#7751;antu me bhante, &#257;yasmanto ajj&#39;uposatho pannaraso, yadi &#257;yasmant&#257;na&#7747; pattakalla&#7747;, mayam a&ntilde;&ntilde;ama&ntilde;&ntilde;a&#7747;
+parisuddhi uposatha&#7747; kareyy&#257;ma.&quot;</span></strong><span class="tm8"> </span><em><span class="tm12">(&quot;Let the venerable ones hear me. Today is the Uposatha, the fifteenth day (of the fortnight). If it is
+convenient for the venerable ones, let us perform the Uposatha in complete purity among ourselves.&quot;)</span></em></p>
+<p class="tm7"><em><span class="tm12">&#160;</span></em></p>
+<ul class="tm14">
+<li class="tm15"><span class="tm8">When it&#39;s the 14th day: </span><strong><span class="tm9">&quot;pannaraso&quot; &#8594; &quot;catuddaso&quot;</span></strong></li>
+<li class="tm16"><span class="tm8">If the announcing bhikkhu is the most senior: </span><strong><span class="tm9">&quot;bhante&quot; &#8594; &quot;&#257;vuso&quot;</span></strong></li>
+</ul>
+<p class="tm6"><span class="tm8">[cf. Vin,I,124]</span></p>
+<p class="tm7"><span class="tm8">&#160;</span></p>
+<p class="tm7"><span class="tm8">Then, starting with the most senior bhikkhu: </span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm9">&quot;Parisuddho aha&#7747; &#257;vuso, parisuddho&#39;ti ma&#7747; dh&#257;retha.&quot;</span></strong><span
+ class="tm8"> </span></p>
+<p class="tm7"><span class="tm8"></span><em><span class="tm12">(&quot;Friends, I am completely pure. Please understand that I am completely pure.&quot;)</span></em></p>
+<p class="tm7"><em><span class="tm12">&#160;</span></em></p>
+<p class="tm7"><span class="tm8">For each of the two junior bhikkhus: </span><strong><span class="tm9">&quot;&#257;vuso&quot; &#8594; &quot;bhante&quot;</span></strong></p>
+<p class="tm7"><strong><span class="tm9">&#160;</span></strong></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm10">(iii)</span></strong><span class="tm11"> </span><strong><span
+ class="tm10">Parisuddhi for 2 bhikkhus</span></strong><span class="tm8"> </span></p>
+<p class="tm7"><span class="tm8">Skip the &ntilde;atti. The senior bhikkhu declares purity first: </span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm9">&quot;Parisuddho aha&#7747; &#257;vuso, parisuddho&#39;ti ma&#7747; dh&#257;rehi.&quot;</span></strong><span
+ class="tm8"> </span></p>
+<p class="tm7"><span class="tm8"></span><em><span class="tm12">(&quot;Friend, I am completely pure. Please understand that I am completely pure.&quot;)</span></em></p>
+<p class="tm7"><em><span class="tm12">&#160;</span></em></p>
+<ul class="tm14">
+<li class="tm15"><span class="tm8">For the junior bhikkhu: </span><strong><span class="tm9">&quot;&#257;vuso&quot; &#8594; &quot;bhante&quot; &quot;dh&#257;rehi&quot; &#8594; &quot;dh&#257;retha&quot;</span></strong><span
+ class="tm8"> [cf. Vin,I,124&#8211;125]</span></li>
+<li class="tm16"><span class="tm8">&#160;</span></li>
+</ul>
+<p class="tm6"><span class="tm11"></span><strong><span class="tm10">(iv) Adhicch&#257;nuposatha (For one bhikkhu)</span></strong><span
+ class="tm11"> </span></p>
+<p class="tm7"><span class="tm8"></span><em><span class="tm12">For a bhikkhu who is alone on the day of Uposatha. After performing the preliminary duties, he says:</span></em><span
+ class="tm8"> </span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm9">&quot;Ajja me uposatho.&quot;</span></strong><span class="tm8"> </span></p>
+<p class="tm7"><span class="tm8"></span><em><span class="tm12">(&quot;Today is my Uposatha day.&quot;)</span></em><span class="tm8"> [cf. Vin,I,125]</span></p><br><br><br>
+</body>
+</html>

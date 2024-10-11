@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonTeacherAboutText">Информация об учителе</string>
+    <string name="buttonTeacherAboutText"><b>Информация об учителе</b></string>
 
     <string name="teacherAboutText">
         БХАНТЕ НЬЯНАСИХА ТХЕРО \n \n
@@ -10,41 +10,41 @@
 В настоящее время Досточтимый Ньянасиха Тхеро является настоятелем интернационального буддийского монастыря «Читтавивека», Шри-Ланка. В монастыре числится 14 монахов. 12 из них - русскоязычные монахи. Монастырь посещали интересующиеся Учением Будды и гости из Армении, Болгарии, России, Украины, Португалии, США, Англии, Швейцарии, Австралии, Кипра. \n \n
     </string>
 
-    <string name="buttonToLecture1_12">Вивека\nотдых</string>
+    <string name="buttonToLecture1_12">\n <b>Вивека</b>\n отдых \n</string>
 
-    <string name="buttonToLecture2_12">Кама\nчувственные удовольствия</string>
+    <string name="buttonToLecture2_12">\n <b>Кама</b> \nчувственные удовольствия \n</string>
 
     <string name="buttonToLecture1">
-        Упасамануссати \n Памятование о покое ниббаны
+        \n <b>Упасамануссати</b> \n Памятование о покое ниббаны \n
     </string>
     <string name="buttonToLecture2">
-        Аничча \n непостоянство
+        \n <b>Аничча</b> \n непостоянство \n
     </string>
     <string name="buttonToLecture3">
-        Санкхара лока \n мир формаций ума
+        \n <b>Санкхара лока</b> \n мир формаций ума \n
     </string>
     <string name="buttonToLecture4">
-        Салаятана \n шесть сфер восприятия
+        \n <b>Салаятана</b> \n шесть сфер восприятия \n
     </string>
     <string name="buttonToLecture5">
-       18 дхату \n 18 элементов
+       \n <b>18 дхату</b> \n 18 элементов \n
     </string>
     <string name="buttonToLecture6">
-       Ведананупассана \n наблюдение ощущений
+       \n <b>Ведананупассана</b> \n наблюдение ощущений \n
     </string>
     <string name="buttonToLecture7">
-       Дана, сила, бхавана \n три вида практики в буддизме
+       \n <b>Дана, сила, бхавана</b> \n три вида практики в буддизме \n
     </string>
     <string name="buttonToLecture8">
-        Йонисо манасикара \n мудрое размышление
+        \n <b>Йонисо манасикара</b> \n мудрое размышление \n
     </string>
     <string name="buttonToLecture9">
-        Паньча кхандха \n пять совокупностей
+        \n <b>Паньча кхандха</b> \n пять совокупностей \n
     </string>
     <string name="buttonToLecture10">
-        Санкхары
+        \n <b>Санкхары</b> \n
     </string>
     <string name="buttonToLecture11">
-        Випасанукилеса: \n качества, которые могут стать загрязнениями ума во время медитации
+        \n <b>Випасанукилеса:</b> \n качества, которые могут стать загрязнениями ума во время медитации \n
     </string>
 </resources>

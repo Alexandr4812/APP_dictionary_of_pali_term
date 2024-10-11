@@ -77,6 +77,13 @@
                 android:onClick="toRlesBhikkhuOffences2"
                 android:text="@string/textButtonOffences2"
                 tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:id="@+id/button_rules_bhikkhu_offences_3"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#FFAB91"
+                android:onClick="toOffenceSanghadisesa"
+                android:text="@string/textButtonOffences3"
+                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
     </ScrollView>
     <WebView

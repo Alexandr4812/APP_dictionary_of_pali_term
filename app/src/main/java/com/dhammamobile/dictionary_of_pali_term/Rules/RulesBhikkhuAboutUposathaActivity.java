@@ -3,16 +3,14 @@ package com.dhammamobile.dictionary_of_pali_term.Rules;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.res.Configuration;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
@@ -20,8 +18,14 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 
 import java.util.Locale;
 
-public class RulesBhikkhuAboutOffencesActivity extends BaseActivityClass {
-    LinearLayout buttonOffence;
+public class RulesBhikkhuAboutUposathaActivity extends BaseActivityClass {
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // Здесь вы можете добавить свои действия при изменении ориентации, если это необходимо
+    }
+    LinearLayout buttonUposatha;
     Button plusText, minusText;
     WebView webView; // Declare WebView as a class member for easy access
 
@@ -29,19 +33,19 @@ public class RulesBhikkhuAboutOffencesActivity extends BaseActivityClass {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rules_bhikkhu_about_offences);
         updateLocale(); // Установка языка
+        setContentView(R.layout.activity_rules_bhikkhu_about_uposatha);
 
         // Скрытие панели навигации и панели состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        plusText = findViewById(R.id.buttonPlusOffence);
-        minusText = findViewById(R.id.buttonMinusOffence);
+        plusText = findViewById(R.id.buttonPlusUposatha);
+        minusText = findViewById(R.id.buttonMinusUposatha);
 
-        webView = findViewById(R.id.webViewOffence);
+        webView = findViewById(R.id.webViewBhikkhuAboutUposatha);
 
-        buttonOffence = findViewById(R.id.button_layout_offence);
+        buttonUposatha = findViewById(R.id.button_layout_uposatha);
 
         // Настройки WebView
         WebSettings webSettings = webView.getSettings();
@@ -56,46 +60,54 @@ public class RulesBhikkhuAboutOffencesActivity extends BaseActivityClass {
         minusText.setOnClickListener(v -> {
             webView.evaluateJavascript("javascript:decreaseFontSize();", null);
         });
-    }
 
+    }
     private void loadHtmlPage(String htmlFilePath) {
         webView.loadUrl(htmlFilePath);
     }
 
-    public void toOffence1(View view) {
-        buttonOffence.setVisibility(View.VISIBLE);
+    public void uposatha1(View view) {
+        buttonUposatha.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/offences_ru/offenceRu.html";
+            htmlFilePath = "file:///android_asset/bhikkhu_manual_ru/uposathaRu1.html";
         } else {
-            htmlFilePath = "file:///android_asset/offences_en/offenceEn.html";
+            htmlFilePath = "file:///android_asset/bhikkhu_manual_en/uposathaEn1.html";
         }
         loadHtmlPage(htmlFilePath);
     }
 
-    public void toOffenceSanghadisesa(View view) {
-        buttonOffence.setVisibility(View.VISIBLE);
+    public void uposatha2(View view) {
+        buttonUposatha.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/offences_ru/offenceSanghadisesaRu.html";
+            htmlFilePath = "file:///android_asset/bhikkhu_manual_ru/uposathaRu2.html";
         } else {
-            htmlFilePath = "file:///android_asset/offences_en/offenceSanghadisesaEn.html";
+            htmlFilePath = "file:///android_asset/bhikkhu_manual_en/uposathaEn2.html";
         }
         loadHtmlPage(htmlFilePath);
     }
 
-    public void toOffenceBack(View view){
+    public void uposatha3(View view) {
+        buttonUposatha.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/bhikkhu_manual_ru/uposathaRu3.html";
+        } else {
+            htmlFilePath = "file:///android_asset/bhikkhu_manual_en/uposathaEn3.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void toUposathaBack(View view){
         webView.setVisibility(View.INVISIBLE);
-        buttonOffence.setVisibility(View.INVISIBLE);
-    }
-
-
-    public void toRlesBhikkhuOffences2(View view){
-        startIntentActivityAndFinish(RulesBhikkhuAboutOffencesPacittiyaActivity.class);
+        buttonUposatha.setVisibility(View.INVISIBLE);
     }
 
     public void toRulesBhikkhuAboutAct(View view){

@@ -323,6 +323,40 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
 
+
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:onClick="toShow10"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bimbisara" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo10"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description10"
+                android:onClick="toShow10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
@@ -337,5 +371,22 @@
                 android:text="@string/Tobecontinued" />
         </LinearLayout>
     </ScrollView>
+
+    <WebView
+        android:id="@+id/webViewLiveBuddha"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        android:scrollbarThumbVertical="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Включаем макет с кнопками -->
+    <include
+        layout="@layout/buttons_layout_for_live_buddha_new"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

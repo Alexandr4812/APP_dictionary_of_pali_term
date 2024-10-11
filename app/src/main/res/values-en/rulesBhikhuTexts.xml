@@ -601,9 +601,10 @@ Some disciplinary actions involve only one catti and one anusāvana.&lt;br&gt;&l
 
     <string name="buttonOffences">instructions for violations</string>
 
-    <string name="textButtonOffences1">āpatti-paṭidesanā \n (Admission of violation)</string>
-    <string name="textButtonOffences2">Nissaggiya Pācittiya \n (Confession of violation with confiscation of the item)</string>
-    
+    <string name="textButtonOffences1"><b>āpatti-paṭidesanā</b> \n\n (Admission of violation)</string>
+    <string name="textButtonOffences2"><b>Nissaggiya Pācittiya</b> \n\n (Confession of violation with confiscation of the item)</string>
+    <string name="textButtonOffences3"><b>Sanghаdisesa</b> \n\n (offense requiring a sangha gathering)</string>
+
     <string name="textOffences1" tools:ignore="TypographyEllipsis">
     &lt;br&gt;
     &lt;div style="text-align:center;"&gt;&lt;b&gt;&lt;big&gt;Confession of a junior monk to a senior.&lt;/big&gt;&lt;/b&gt;&lt;/div&gt;
@@ -1044,4 +1045,17 @@ Some disciplinary actions involve only one catti and one anusāvana.&lt;br&gt;&l
  &lt;b&gt;13. kiṃ nāmosi? (ahaṃ bhante nāgo nāma)&lt;/b&gt;&lt;br&gt;
  &lt;b&gt;14. ko nāmo te uppajjhāyo? (ahaṃ bhante tissa nāma)&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
  </string>
+
+    <string name="buttonUposatha">\n<b>uposatha</b>\n</string>
+    <string name="buttonUposathaPurity">\n<b>uposatha</b>\n statement of cleanliness \n</string>
+    <string name="buttonUposathaPurity2">\n<b>uposatha</b>\n sick bhikkhus \n</string>
+    <string name="buttonUposathaPurity3">\n<b>uposatha</b>\n uposatha for lay people \n</string>
+
+    <string name="buttonKathina">\n<b>Rains and \n </b>Kathina \n Pavāraṇā \n</string>
+    <string name="buttonKathina1">\n<b>KHAMĀPANA-KAMMA</b>\n ASKING FOR FORGIVENESS \n</string>
+    <string name="buttonKathina2">\n<b>VASSĀVĀSA</b>\n RAINS-RESIDENCE \n</string>
+    <string name="buttonKathina3">\n<b>PAVĀRAṆĀ</b>\n INVITING \n</string>
+    <string name="buttonKathina4">\n<b>KAṬHINA</b>\n</string>
+
+    <string name="buttonOther">\n<b>other procedures</b> \n \n Going out into the city after midday \n Saṅghadāna-apalokana \n Paṃsukūla-cīvara \n Desanā \n</string>
 </resources>

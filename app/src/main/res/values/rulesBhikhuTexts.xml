@@ -3,7 +3,7 @@
     <string name="buttonSangkhadisesaText">сангхадисеса</string>
     <string name="buttonParajikaDetails">нажмите, чтобы более подробно узнать о правиле</string>
 
-    <string name="buttonInformationAboutUpasampada"> \n Общая информация \n инструкции для бхикху \n \n <b>ИНСТРУКЦИИ К НАРУШЕНИЯМ</b> \n </string>
+    <string name="buttonInformationAboutUpasampada"> \n Общая информация \n инструкции для бхикху \n \n <b>ИНСТРУКЦИИ К НАРУШЕНИЯМ \n (āpatti) \n \n VASSĀVĀSA \n uposatha \n Kathina \n Pavāraṇā</b> \n </string>
     <string name="buttonInformationAbout">Общая информация</string>
     <string name="textInstruktion">Инструкции для бхикху</string>
 
@@ -469,13 +469,13 @@ Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghass
     </string>
     
     
-    <string name="buttonRequisites">использование принадлежностей</string>
+    <string name="buttonRequisites"><b>использование принадлежностей:</b> \n\n Bindu\nAdhiṭṭhanā\nPaccuddharaṇa\nVikappana\nVikappana-paccuddharaṇa</string>
 
-    <string name="textButtonRequisites1">Bindu \n (Маркировка чивары)</string>
-    <string name="textButtonRequisites2">Adhiṭṭhanā \n (сосредоточенное определение чивары)</string>
-    <string name="textButtonRequisites3">Paccuddharaṇa \n (отказ)</string>
-    <string name="textButtonRequisites4">Vikappana \n (Совместное владение)</string>
-    <string name="textButtonRequisites5">Vikappana-paccuddharaṇa \n (Отказ от совместного владения)</string>
+    <string name="textButtonRequisites1">\n <b>Bindu</b> \n (Маркировка чивары) \n</string>
+    <string name="textButtonRequisites2">\n <b>Adhiṭṭhanā</b> \n (сосредоточенное определение чивары) \n</string>
+    <string name="textButtonRequisites3">\n <b>Paccuddharaṇa</b> \n (отказ) \n</string>
+    <string name="textButtonRequisites4">\n <b>Vikappana</b> \n (Совместное владение) \n</string>
+    <string name="textButtonRequisites5">\n <b>Vikappana-paccuddharaṇa</b> \n (Отказ от совместного владения) \n</string>
 
     <string name="textRequisites1">
         &lt;br&gt;
@@ -610,10 +610,11 @@ Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghass
         Однако, если первый владелец желает получить общую чашу, второй владелец должен сначала отказаться от нее.&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
     </string>
 
-    <string name="buttonOffences">инструкции к нарушениям \n (āpatti)</string>
+    <string name="buttonOffences">\n<b>(āpatti)</b> \n инструкции к нарушениям\n</string>
 
-    <string name="textButtonOffences1">āpatti-paṭidesanа̄ \n (Признание в нарушении)</string>
-    <string name="textButtonOffences2">Nissaggiya Pа̄cittiya \n (Признание в нарушении с конфискацией предмета)</string>
+    <string name="textButtonOffences1">\n<b>āpatti-paṭidesanа̄</b> \n (Признание в нарушении)\n</string>
+    <string name="textButtonOffences2">\n<b>Nissaggiya Pа̄cittiya</b> \n (Признание в нарушении с конфискацией предмета)\n</string>
+    <string name="textButtonOffences3">\n<b>Sanghаdisesa</b> \n (нарушение требующее собрания сангхи)\n</string>
 
     <string name="textOffences1" tools:ignore="TypographyEllipsis">
         &lt;br&gt;
@@ -1057,4 +1058,17 @@ Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghass
         &lt;b&gt;13. kiṃ nāmosi? (ahaṃ bhante nāgo nāma)&lt;/b&gt;&lt;br&gt;
         &lt;b&gt;14. ko nāmo te uppajjhāyo? (ahaṃ bhante tissa nāma)&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
     </string>
+
+    <string name="buttonUposatha">\n<b>uposatha</b>\n</string>
+    <string name="buttonUposathaPurity">\n<b>parisuddhi</b>\n заявление о чистоте \n</string>
+    <string name="buttonUposathaPurity2">\n<b>uposatha</b>\n болеющие бхиккху \n</string>
+    <string name="buttonUposathaPurity3">\n<b>uposatha</b>\n упосатха для мирян \n</string>
+
+    <string name="buttonKathina">\n<b>сезон дождей \n</b>\n Kathina \n Pavāraṇā \n</string>
+    <string name="buttonKathina1">\n<b>KHAMĀPANA-KAMMA</b>\n Просьба о прощении \n</string>
+    <string name="buttonKathina2">\n<b>VASSĀVĀSA</b>\n ПРЕБЫВАНИЕ В СЕЗОН ДОЖДЕЙ \n</string>
+    <string name="buttonKathina3">\n<b>PAVĀRAṆĀ</b>\n ПРИГЛАШЕНИЕ \n</string>
+    <string name="buttonKathina4">\n<b>KAṬHINA</b>\n подношение чивары \n</string>
+
+    <string name="buttonOther">\n<b>другие процедуры</b> \n \n Выход в город после полудня \n РАЗДЕЛЕНИЕ SAṄGHADĀNA \n Paṃsukūla-cīvara \n Desanā \n</string>
 </resources>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title></title>
+
+<style type="text/css">
+.a______ {
+mso-style-name:"Обычный";
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h1 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:18.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h2 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:16.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h3 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:14.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+
+.tm5 {
+border:none;
+}
+.tm6 {
+text-align:center;
+}
+.tm7 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+text-align:center;
+}
+.tm8 {
+font-size:14.0pt;
+}
+.tm9 {
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm10 {
+color:Red;
+font-size:14.0pt;
+}
+.tm11 {
+color:Red;
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm12 {
+font-style:italic;
+font-size:14.0pt;
+}
+.tm13 {
+margin-left:14.0pt;
+text-align:center;
+}
+.tm14 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+margin-left:14.0pt;
+text-align:center;
+}
+.tm15 {
+list-style-type:disc;
+}
+.tm16 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+list-style-type:disc;
+}
+.tm17 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+}
+
+body {
+            background-color: #FFE082;
+        }
+
+body {
+            margin: 5;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+img {
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+        var initialFontSize = 14; // Установите начальный размер шрифта
+
+        // Функция для установки начального размера шрифта
+        function setInitialFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var computedStyle = window.getComputedStyle(element, null);
+                var currentSize = parseFloat(computedStyle.getPropertyValue('font-size'));
+                // Увеличиваем размер до начального значения
+                var scale = initialFontSize / currentSize;
+                element.style.fontSize = initialFontSize + 'pt';
+            });
+        }
+
+        function increaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = (fontSize + 2) + 'px';
+            });
+        }
+
+        function decreaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = Math.max(8, fontSize - 2) + 'px';
+            });
+        }
+
+        // Устанавливаем начальный размер шрифта после загрузки страницы
+        window.onload = setInitialFontSize;
+    </script>
+
+<p class="tm7"><u><span class="tm8"></span><strong><span class="tm9">SICK BHIKKHUS</span></strong></u></p>
+<p class="tm7"><span class="tm8"></span></p>
+<p class="tm7"><span class="tm10"></span><strong><span class="tm11">(I)</span></strong><span class="tm10"> </span><strong><span
+ class="tm11">PARISUDDHI</span></strong></p>
+<p class="tm7"><span class="tm8">(a) A sick bhikkhu makes a general confession, then says: </span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm9">&quot;P&#257;risuddhi&#7747; dammi, p&#257;risuddhi&#7747; me hara, p&#257;risuddhi&#7747; me &#257;rocehi.&quot;</span></strong></p>
+<p class="tm7"><span class="tm8">&#160;</span><em><span class="tm12">(&quot;I give my purity. Please convey my purity (and) announce my purity.&quot;)</span></em></p>
+<p class="tm7"><em><span class="tm12">&#160;</span></em></p>
+<p class="tm14"><span class="tm8">*</span></p>
+<p class="tm14"><span class="tm8">&#160;</span></p>
+<ul class="tm16">
+<li class="tm13"><span class="tm8">If the sick bhikkhu is junior: </span></li>
+<li class="tm14"><span class="tm8"></span><strong><span class="tm9">&quot;hara&quot; &#8594; &quot;haratha&quot;; &quot;&#257;rocehi&quot; &#8594; &quot;&#257;rocetha&quot;</span></strong><span
+ class="tm8"> [Vin,I,120]</span></li>
+<li class="tm14"><span class="tm8">&#160;</span></li>
+</ul>
+<p class="tm6"><span class="tm10"></span><strong><span class="tm11">(II) SENDING CONSENT (CHANDA)</span></strong></p>
+<p class="tm7"><span class="tm8">(a) A sick bhikkhu sends his consent for sa&#7749;ghakamma: </span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm9">&quot;Chanda&#7747; dammi, chanda&#7747; me hara, chanda&#7747; me &#257;rocehi.&quot;</span></strong><span
+ class="tm8"> </span></p>
+<p class="tm7"><span class="tm8"></span><em><span class="tm12">(&quot;I give my consent. Please convey my consent (to the Sangha). Please announce my consent.&quot;)</span></em></p>
+<p class="tm7"><em><span class="tm12">&#160;</span></em></p>
+<p class="tm14"><span class="tm8">*</span></p>
+<ul class="tm16">
+<li class="tm13"><span class="tm8">If the sick bhikkhu is junior: </span></li>
+<li class="tm14"><span class="tm8"></span><strong><span class="tm9">&quot;hara&quot; &#8594; &quot;haratha&quot;; &quot;&#257;rocehi&quot; &#8594; &quot;&#257;rocetha&quot;</span></strong><span
+ class="tm8"> </span></li>[Vin,I,121]&#160;
+</ul>
+<p class="tm6"><span class="tm8">(b) Informing the Sangha about the sick bhikkhu&#39;s consent: </span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm9">&quot;&#256;yasm&#257; bhante &#39;Uttaro&#39; mayha&#7747; chanda&#7747; ad&#257;si, tassa chando may&#257; &#257;hato, s&#257;dhu bhante sa&#7749;gho dh&#257;retu.&quot;</span></strong><span
+ class="tm8"> </span></p>
+<p class="tm7"><span class="tm8"></span><em><span class="tm12">(&quot;Venerable sirs, &#39;Uttaro Bhikkhu&#39; has given me his consent. I have conveyed his consent. May the Sangha acknowledge this, venerable sirs.&quot;)</span></em></p>
+<p class="tm7"><em><span class="tm12">&#160;</span></em></p>
+<ul class="tm16">
+<li class="tm13"><span class="tm8">If the bhikkhu conveying the consent is senior to the sick bhikkhu: </span></li>
+<li class="tm14"><span class="tm8"></span><strong><span class="tm9">&quot;&#256;yasm&#257; bhante &#39;Uttaro&#39;&quot; &#8594; &quot;&#39;Uttaro&#39; bhante bhikkhu&quot;</span></strong><span
+ class="tm8"> </span></li>[Thai; cf. Vin,I,122]&#160;
+</ul>
+<p class="tm6"><span class="tm10"></span><strong><span class="tm11">(III) PARISUDDHI + CHANDA</span></strong><span class="tm10"> </span></p>
+<p class="tm7"><span class="tm8">When both purity and consent are conveyed to the Sangha: </span></p>
+<p class="tm7"><span class="tm8"></span><strong><span class="tm9">&quot;Uttaro&#39; bhante bhikkhu gil&#257;no mayha&#7747; chanda&ntilde;ca p&#257;risuddhi&ntilde;ca ad&#257;si, tassa chando ca p&#257;risuddhi ca may&#257;
+&#257;hata, s&#257;dhu bhante sa&#7749;gho dh&#257;retu.&quot;</span></strong><span class="tm8"> </span><em><span class="tm12">(&quot;Venerable sirs, &#39;Uttaro Bhikkhu&#39; is sick. He has given me his consent and purity.
+I have conveyed his consent and purity. May the Sangha acknowledge this, venerable sirs.&quot;)</span></em><span class="tm8"> </span></p>
+<p class="tm7"><span class="tm8">[cf. Vin,I,122]</span></p>
+<p class="tm7"><span class="tm8">&#160;</span></p>
+<p class="tm7"><span class="tm8">&#160;</span></p>
+<p class="tm7"><span class="tm8">&#160;</span></p>
+<p class="tm7"><span class="tm8">&#160;</span></p>
+<p class="tm7"><span class="tm8">&#160;</span></p>
+<p class="tm7"><span class="tm8">&#160;</span></p>
+</body>
+</html>

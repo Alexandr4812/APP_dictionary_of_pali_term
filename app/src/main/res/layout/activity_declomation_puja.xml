@@ -62,13 +62,6 @@
                 tools:ignore="ContentDescription" />
 
             <Button
-                android:id="@+id/button_morning_puja"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomaciyaMorningPuja"
-                android:text="@string/utrennaia_pudga"
-                tools:ignore="UsingOnClickInXml" />
-
-            <Button
                 android:id="@+id/button_before_evening_meditation"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclamaciyaBeforeEveningMeditation"
@@ -80,6 +73,17 @@
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomaciyaOftereveningMeditation"
                 android:text="@string/deklomation_after_evening_meditation"
+                tools:ignore="UsingOnClickInXml" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <Button
+                android:id="@+id/button_morning_puja"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomaciyaMorningPuja"
+                android:text="@string/utrennaia_pudga"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button

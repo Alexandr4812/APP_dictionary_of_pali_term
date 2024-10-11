@@ -21,15 +21,20 @@
     <string name="sutta">Сутта</string>
     <string name="drugie_declomacii">Другие декламации</string>
     <string name="button_karaniya_metta">Карания метта сутта</string>
-    <string name="utrennaia_pudga">Утренняя вандана в монастыре Читтавивека</string>
+
+    <string name="utrennaia_pudga">\n <b>Утренняя вандана в монастыре Читтавивека</b> \n</string>
+
     <string name="decl_pered_priemom_pichi">декламация перед приёмом пищи</string>
     <string name="prosba_o_prochenii_nedostatkov">Просьба о прощении недостатков перед старшими монахами</string>
     <string name="blagopogelaniya_pri_vzyatii_pichi">Благопожелания мирянам при взятии даны</string>
     <string name="rukovodstvo_dlya_samaner">руководство для саманер</string>
     <string name="sekhiya_n">75 секхийа \n правила для тренировки</string>
     <string name="pabaja_text">паббаджжа \n строфы для церемонии становления саманерой</string>
-    <string name="button_morning_vandana_with_laymans">Вандана с мирянами во время даны в монастыре Читтавивека</string>
-    <string name="deklomation_after_evening_meditation">Декламация после вечерней медитации в монастыре Читтавивека</string>
+
+    <string name="button_morning_vandana_with_laymans"> \n <b>Вандана с мирянами во время даны в монастыре Читтавивека</b> \n</string>
+
+    <string name="deklomation_after_evening_meditation">\n <b>Декламация после вечерней медитации в монастыре Читтавивека</b> \n</string>
+
     <string name="buttonPlayMettaSutta" translatable="false">play</string>
     <string name="buttonStopMettaSutta" translatable="false">stop</string>
     <string name="buttonRewind" translatable="false"><![CDATA[<<]]></string>
