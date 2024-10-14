@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="DeklomaciyaPeredPrinyatiemPichi">
-        <b>ДЕКЛАМАЦИЯ ПЕРЕД ОБЕДОМ</b> \n \n \n
-<b><u>Paṭisaṅkhā yoniso piṇḍapātaṁ paṭisevāmi,</u></b> \n \n
-<i>Вдумчиво обдумав это, я употребляю пищу c подаяний </i> \n \n
-<b><u>N’eva davāya na madāya na maṇḍanāya na vibhūsanāya,</u></b> \n \n
-<i>Не для развлечения, ни для опьянения, ни для увеличения массы, ни для того чтобы быть красивым,</i> \n \n
-<b><u>Yāvadeva imassa kāyassa ṭhitiyā yāpanāya vihiṁsuparatiyā brahma-cariyānuggahāya,</u></b> \n \n
-<i>Но просто для выживания, для поддержки этого тела, для прекращения его страданий, для поддержки святой жизни,</i> \n \n
-<b><u>Iti purāṇañ-ca vedanaṁ paṭihaṅkhāmi navañ-ca vedanaṁ na uppādessāmi,</u></b> \n \n
-<i>Думая: “Таким образом я уничтожу прежнее чувство голода и не создам новых чувств от переедания”.</i> \n \n
-<b><u>Yātrā ca me bhavissati anavajjatā ca phāsu-vihāro cāti.</u></b> \n \n
-<i>Я буду стараться быть безупречным</i> \n
-    </string>
 
-    <string name="DeklomaciyaForgivennes">
-        <b>ПРОСЬБА О ПРОЩЕНИИ НЕДОСТАТКОВ ПЕРЕД СТАРШИМИ МОНАХАМИ</b> \n \n \n
-<b><u>Okāsa vandāmi Bhante. Sabbam accayam kamatha me bhante.</u></b> \n \n
-<i>Позвольте почтить вас досточтимый. Все ошибки простите мне досточтимый.</i> \n \n
- <b><u>Mayākataṁ puññaṁ, sāminā anumodi tabbaṁ.</u></b> \n \n
-<i>Пожалуйста, Бханте, позвольте мне поделиться с вами заслугами, которые я приобрёл.</i> \n \n
-<i>(Bhantes: Sādhu, Sādhu, anumodāmi! Хорошо, хорошо, я сорадуюсь!)</i> \n \n
-<b><u>Saminā kataṁ puññaṁ, mayhaṁ dātabbaṁ</u></b> \n \n
-<i>Пожалуйста, Бханте, поделитесь со мной заслугами, которые вы приобрели.</i> \n \n
-<i>(Bhantes: Sādhu, Sādhu, anumodetha! Хорошо, хорошо, я сорадуюсь!)</i> \n \n
-<b><u>Sādhu, Sādhu anumodāmi!</u></b> \n \n
-<i>Хорошо, хорошо, я ценю это!</i> \n \n
-<b><u>Okāsa! Dvārattena kataṁ sabbaṁ accayaṁ khamatha me Bhante.</u></b> \n \n
-<i>Простите меня, о Бханте, за любые ошибки, которые я, возможно, совершил телом, речью или умом.</i> \n \n
-<i>(Bhantes: Kamāmi kamitabbaṁ. Я прощаю.)</i> \n \n
-<b><u>Sadhu Okāsa khamāmi Bhante!</u></b> \n \n
-<i>Я прошу прощения, о Бханте.</i> \n \n \n
-    </string>
 
     <string name="DeklomaciyaAlmsWish">
         <b>БЛАГОПОЖЕЛАНИЯ МИРЯНАМ ПРИ ВЗЯТИИ ДАНЫ</b> \n \n \n

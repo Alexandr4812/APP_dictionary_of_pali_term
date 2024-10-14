@@ -57,31 +57,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
-
-            <Button
-                android:id="@+id/button_before_eating"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomaciyaPeredObedom"
-                android:text="@string/decl_pered_priemom_pichi"
-                tools:ignore="UsingOnClickInXml" />
-
-            <Button
-                android:id="@+id/button_forgivennes"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomaciyaForgivennes"
-                android:text="@string/prosba_o_prochenii_nedostatkov"
-                tools:ignore="UsingOnClickInXml" />
-
-            <Button
-                android:id="@+id/button_alms_wish"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomaciyaAlmsWish"
-                android:text="@string/blagopogelaniya_pri_vzyatii_pichi"
-                tools:ignore="UsingOnClickInXml" />
-
 
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
@@ -106,53 +81,6 @@
 
     </ScrollView>
 
-    <ScrollView
-        android:id="@+id/overScrollTextObed"
-        android:layout_width="match_parent"
-        android:layout_height="1500dp"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1500dp"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewOver"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="800dp"
-                android:text="@string/DeklomaciyaPeredPrinyatiemPichi" />
-
-        </LinearLayout>
-
-
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/overScrollTextForgivennes"
-        android:layout_width="match_parent"
-        android:layout_height="1500dp"
-        android:visibility="invisible"
-        tools:visibility="invisible">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="1500dp"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewForgivennes"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/DeklomaciyaForgivennes" />
-        </LinearLayout>
-    </ScrollView>
 
     <ScrollView
         android:id="@+id/overScrollTextAlmsWish"

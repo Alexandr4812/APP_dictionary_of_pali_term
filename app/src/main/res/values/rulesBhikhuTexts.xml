@@ -3,7 +3,7 @@
     <string name="buttonSangkhadisesaText">сангхадисеса</string>
     <string name="buttonParajikaDetails">нажмите, чтобы более подробно узнать о правиле</string>
 
-    <string name="buttonInformationAboutUpasampada"> \n Общая информация \n инструкции для бхикху \n \n <b>ИНСТРУКЦИИ К НАРУШЕНИЯМ \n (āpatti) \n \n VASSĀVĀSA \n uposatha \n Kathina \n Pavāraṇā</b> \n </string>
+    <string name="buttonInformationAboutUpasampada"> \n <b>Общая информация \n инструкции для бхикху \n \n ИНСТРУКЦИИ К НАРУШЕНИЯМ \n (āpatti)</b> \n \n VASSĀVĀSA \n uposatha \n Kathina \n Pavāraṇā \n </string>
     <string name="buttonInformationAbout">Общая информация</string>
     <string name="textInstruktion">Инструкции для бхикху</string>
 
@@ -1067,7 +1067,8 @@ Upasampanno saṅghena nāgo āyasmatā tissena upajjhāyena. Khamati saṅghass
     <string name="buttonKathina">\n<b>сезон дождей \n</b>\n Kathina \n Pavāraṇā \n</string>
     <string name="buttonKathina1">\n<b>KHAMĀPANA-KAMMA</b>\n Просьба о прощении \n</string>
     <string name="buttonKathina2">\n<b>VASSĀVĀSA</b>\n ПРЕБЫВАНИЕ В СЕЗОН ДОЖДЕЙ \n</string>
-    <string name="buttonKathina3">\n<b>PAVĀRAṆĀ</b>\n ПРИГЛАШЕНИЕ \n</string>
+    <string name="buttonKathina3_1">\n<b>PAVĀRAṆĀ \n ПРИГЛАШЕНИЕ \n </b> \n расширенный вариант \n</string>
+    <string name="buttonKathina3">\n<b>PAVĀRAṆĀ \n ПРИГЛАШЕНИЕ \n </b> \n короткий вариант\n </string>
     <string name="buttonKathina4">\n<b>KAṬHINA</b>\n подношение чивары \n</string>
 
     <string name="buttonOther">\n<b>другие процедуры</b> \n \n Выход в город после полудня \n РАЗДЕЛЕНИЕ SAṄGHADĀNA \n Paṃsukūla-cīvara \n Desanā \n</string>

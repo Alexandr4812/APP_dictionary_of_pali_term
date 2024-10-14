@@ -1054,7 +1054,8 @@ Some disciplinary actions involve only one catti and one anusāvana.&lt;br&gt;&l
     <string name="buttonKathina">\n<b>Rains and \n </b>Kathina \n Pavāraṇā \n</string>
     <string name="buttonKathina1">\n<b>KHAMĀPANA-KAMMA</b>\n ASKING FOR FORGIVENESS \n</string>
     <string name="buttonKathina2">\n<b>VASSĀVĀSA</b>\n RAINS-RESIDENCE \n</string>
-    <string name="buttonKathina3">\n<b>PAVĀRAṆĀ</b>\n INVITING \n</string>
+    <string name="buttonKathina3">\n<b>PAVĀRAṆĀ \n INVITATION \n </b> \n short version \n</string>
+    <string name="buttonKathina3_1">\n<b>PAVĀRAṆĀ \n INVITATION \n </b> \n extended option \n</string>
     <string name="buttonKathina4">\n<b>KAṬHINA</b>\n</string>
 
     <string name="buttonOther">\n<b>other procedures</b> \n \n Going out into the city after midday \n Saṅghadāna-apalokana \n Paṃsukūla-cīvara \n Desanā \n</string>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title></title>
+
+<style type="text/css">
+.a______ {
+mso-style-name:"Обычный";
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h1 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:18.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h2 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:16.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h3 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:14.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+.a__________ {
+color:blue;}
+
+.tm6 {
+border:none;
+}
+.tm7 {
+margin-top:1.0pt;
+margin-bottom:1.5pt;
+line-height:110%;
+text-align:center;
+}
+.tm8 {
+border:none;
+margin-top:1.0pt;
+margin-bottom:1.5pt;
+line-height:110%;
+text-align:center;
+}
+.tm9 {
+font-size:14.0pt;
+font-family:"Times New Roman";
+}
+.tm10 {
+font-style:italic;
+font-size:14.0pt;
+font-family:"Times New Roman";
+font-weight:normal;
+}
+.tm11 {
+text-align:center;
+}
+.tm12 {
+border:none;
+text-align:center;
+}
+.tm13 {
+margin-top:1.5pt;
+margin-bottom:1.5pt;
+line-height:110%;
+text-align:center;
+}
+.tm14 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+margin-top:1.5pt;
+margin-bottom:1.5pt;
+line-height:110%;
+text-align:center;
+}
+.tm15 {
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm16 {
+font-style:italic;
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm17 {
+margin-top:1.5pt;
+margin-bottom:1.5pt;
+text-align:center;
+}
+.tm18 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+margin-top:1.5pt;
+margin-bottom:1.5pt;
+text-align:center;
+}
+.tm19 {
+font-style:italic;
+font-size:14.0pt;
+}
+
+body {
+            background-color: #FFE082;
+        }
+
+body {
+            margin: 5;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+img {
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+        var initialFontSize = 14; // Установите начальный размер шрифта
+
+        // Функция для установки начального размера шрифта
+        function setInitialFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var computedStyle = window.getComputedStyle(element, null);
+                var currentSize = parseFloat(computedStyle.getPropertyValue('font-size'));
+                // Увеличиваем размер до начального значения
+                var scale = initialFontSize / currentSize;
+                element.style.fontSize = initialFontSize + 'pt';
+            });
+        }
+
+        function increaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = (fontSize + 2) + 'px';
+            });
+        }
+
+        function decreaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = Math.max(8, fontSize - 2) + 'px';
+            });
+        }
+
+        // Устанавливаем начальный размер шрифта после загрузки страницы
+        window.onload = setInitialFontSize;
+    </script>
+
+<h2 class="tm8"><strong><span class="tm9"></span><u><span class="tm9">MAH&#256;-MA&#7748;GALA-CAKKAV&#256;&#7734;A</span></u><span
+ class="tm9"><br /></span></strong><em><span class="tm10">The Great Universe of Blessings</span></em></h2>
+<p class="a______">&#160;</p>
+<h2 class="tm12"><strong><span class="tm9"></span><span class="tm9">Siri-dhiti-mati-tejo-jayasiddhi-mahiddhi-</span></strong></h2>
+<p class="tm14"><strong><span class="tm15">ma</span><em><u><span class="tm16">h&#257;</span></u></em><span class="tm15">gu&#7751;&#257;parimita-pu&ntilde;&ntilde;&#257;dhik&#257;rassa</span></strong></p>
+<p class="tm14"><strong><span class="tm15">sabbantar&#257;ya-niv&#257;ra&#7751;a-samatthassa</span></strong></p>
+<p class="tm14"><strong><span class="tm15">bhagavato arahato&nbsp;</span><em><u><span class="tm16">sam</span></u></em><span
+ class="tm15">m&#257;-</span><em><u><span class="tm16">sam</span></u></em><span class="tm15">buddhassa</span></strong></p>
+<p class="tm14"><strong><span class="tm15">dvatti&#7745;sa-ma</span><em><u><span class="tm16">h&#257;</span></u></em><span
+ class="tm15">purisa-lakkha&#7751;&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">Through the power of the 32 marks of the Great Man belonging to the</span></em></p>
+<p class="tm18"><em><span class="tm19">Blessed One, the Worthy One, the Rightly Self-awakened One, who</span></em></p>
+<p class="tm18"><em><span class="tm19">through his accumulation of merit is endowed with glory, steadfastness of</span></em></p>
+<p class="tm18"><em><span class="tm19">intent, majesty, victorious power, great might, countless great virtues,</span></em></p>
+<p class="tm18"><em><span class="tm19">who settles all dangers &amp; obstacles,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">a</span><em><u><span class="tm16">s&#299;</span></u></em><span class="tm15">ty&#257;nubya&ntilde;jan&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his 80 minor characteristics,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">a&#7789;&#7789;h&#8217;uttara-sata-ma&#7749;gal&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his 108 blessings,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">chabba&#7751;&#7751;a-ra&#7745;siy&#8217;&#257;nubh&#257;vena ketum&#257;l&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his sixfold radiance,</span></em></p>
+<p class="tm18"><em><span class="tm19">through the power of the aura surrounding his head,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">dasa-p&#257;ramit&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm14"><strong><span class="tm15">dasa-upap&#257;ramit&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm14"><strong><span class="tm15">dasa-paramattha-p&#257;ramit&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his ten perfections, ten higher perfections,</span></em></p>
+<p class="tm18"><em><span class="tm19">&amp; ten ultimate perfections,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15"></span><em><u><span class="tm16">s&#299;</span></u></em><span class="tm15">la-sam&#257;dhi-pa&ntilde;&ntilde;&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his virtue, concentration, &amp; discernment,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">buddh&#8217;&#257;nubh&#257;vena dhamm&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm14"><strong><span class="tm15"></span><em><u><span class="tm16">sa&#7749;</span></u></em><span class="tm15">gh&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of the Buddha, Dhamma, &amp; Sa&#7749;gha,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">tej&#8217;&#257;nubh&#257;vena iddh&#8217;&#257;nubh&#257;vena bal&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his majesty, might, &amp; strength,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">&ntilde;eyya-dhamm&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his Dhammas that can be known,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">catur&#257;</span><em><u><span class="tm16">s&#299;</span></u></em><span class="tm15">ti-sahassa-dhammak</span><em><u><span
+ class="tm16">khan</span></u></em><span class="tm15">dh&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of the 84,000 divisions of his Dhamma,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">nava-lokuttara-dhamm&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his nine transcendent Dhammas,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">a&#7789;</span><em><u><span class="tm16">&#7789;ha&#7749;</span></u></em><span
+ class="tm15">gika-magg&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his eightfold path,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">a&#7789;&#7789;ha-sam&#257;pattiy&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his eight meditative attainments,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">cha&#7735;abhi&ntilde;&ntilde;&#8217;&#257;nubh&#257;vena catu-sacca-&ntilde;&#257;&#7751;&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his six cognitive skills,</span></em></p>
+<p class="tm18"><em><span class="tm19">through the power of his knowledge of the four noble truths,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">dasa-bala-&ntilde;&#257;&#7751;&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his knowledge of the ten strengths,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">sabba&ntilde;&ntilde;uta-&ntilde;&#257;&#7751;&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his omniscience,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">mett&#257;-karu&#7751;&#257;-mudit&#257;-upek</span><em><u><span class="tm16">kh&#8217;&#257;</span></u></em><span
+ class="tm15">nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of his goodwill, compassion, empathetic joy, &amp; equanimity,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">sabba-paritt&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of all protective chants,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">ratanattaya-sara&#7751;&#8217;&#257;nubh&#257;vena</span></strong></p>
+<p class="tm18"><em><span class="tm19">through the power of refuge in the Triple Gem:</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">Tuy</span><em><u><span class="tm16">ha&#7745;</span></u></em><span class="tm15">&nbsp;sabba-roga-</span><em><u><span
+ class="tm16">so</span></u></em><span class="tm15">k&#8217;upaddava-dukkha-domanass-up&#257;y&#257;</span><em><u><span class="tm16">s&#257;</span></u></em><span
+ class="tm15">&nbsp;vinas</span><em><u><span class="tm16">san</span></u></em><span class="tm15">tu</span></strong></p>
+<p class="tm18"><em><span class="tm19">May all your diseases, griefs, misfortunes, pains, distresses, &amp; despairs be destroyed,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">sabba-antar&#257;y&#257;pi vinas</span><em><u><span class="tm16">san</span></u></em><span
+ class="tm15">tu</span></strong></p>
+<p class="tm14"><strong><span class="tm15">sabba-</span><em><u><span class="tm16">sa&#7749;</span></u></em><span class="tm15">kapp&#257; tuy</span><em><u><span
+ class="tm16">ha&#7745;</span></u></em><span class="tm15">&nbsp;samijjhantu</span></strong></p>
+<p class="tm18"><em><span class="tm19">may all obstructions be destroyed, may all your resolves succeed,</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">d&#299;ghayut&#257; tuy</span><em><u><span class="tm16">ha&#7745;</span></u></em><span
+ class="tm15">&nbsp;</span><em><u><span class="tm16">ho</span></u></em><span class="tm15">tu sata-vassa-j&#299;vena</span></strong></p>
+<p class="tm14"><strong><span class="tm15">sama&#7749;giko&nbsp;</span><em><u><span class="tm16">ho</span></u></em><span class="tm15">tu sabbad&#257;.</span></strong></p>
+<p class="tm18"><em><span class="tm19">may you live long, always attaining 100 years.</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm14"><strong><span class="tm15">&#256;k&#257;sa-pabbata-vana-bh&#363;mi-ga&#7749;g&#257;-ma</span><em><u><span
+ class="tm16">h&#257;</span></u></em><span class="tm15">samudd&#257;</span></strong></p>
+<p class="tm14"><strong><span class="tm15">&#257;rakkhak&#257; devat&#257; sad&#257; tum</span><em><u><span class="tm16">he</span></u></em><span
+ class="tm15">,</span></strong></p>
+<p class="tm14"><strong><span class="tm15">anurak</span><em><u><span class="tm16">khan</span></u></em><span class="tm15">tu.</span></strong></p>
+<p class="tm18"><em><span class="tm19">May the protective devas of the sky, the mountains, the forests, the land,</span></em></p>
+<p class="tm18"><em><span class="tm19">the River Ganges, &amp; the great ocean always protect you.</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm18"><em><span class="tm19">&#160;</span></em></p>
+</body>
+</html>

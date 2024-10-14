@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonMainGatha">гатха</string>
+    <string name="buttonMainGatha">\n<b>гатха</b>\n</string>
 
     <string name="buttonGathMahaJayaMangala">маха джайямангала гатха</string>
     <string name="buttonSabbapapassa">Гатха, произносимая перед наставлением в Дхамме.</string>
+
+    <string name="buttonYata">\n <b>Yathā vāri-vahā pūrā</b> \n</string>
+    <string name="buttonSabbītiyo">\n <b>Sabbītiyo vivajjantu</b> \n</string>
+    <string name="buttonAbhivādana">\n <b>Abhivādana-sīlissa—Niccaṁ vuḍḍhāpacāyino</b> \n</string>
+    <string name="buttonCulla">\n <b>CULLA-MAṄGALA-CAKKA-VĀḶA</b> \n</string>
+    <string name="buttonMahaCulla">\n <b>Mahā-maṅgala-cakka-vāḷa</b> \n</string>
+    <string name="buttonAbhivadana">\n <b>Abhivādana-sīlissa</b> \n</string>
 </resources>

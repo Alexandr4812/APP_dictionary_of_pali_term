@@ -80,6 +80,12 @@
                 android:text="@string/pudja" />
 
             <Button
+                android:id="@+id/button_anumodana"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomationAnumodana"
+                android:text="@string/buttonTextAnumodana" />
+
+            <Button
                 android:id="@+id/button_over_declamation"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomationOver"

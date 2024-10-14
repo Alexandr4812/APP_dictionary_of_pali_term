@@ -70,6 +70,10 @@ public class DeklomationMainActivity extends BaseActivityClass {
         startIntentActivityAndFinish(DeklomationGatha.class);
     }
 
+    public void toDeclomationAnumodana(View view){
+        startIntentActivityAndFinish(DeklomationAnumodanaActivity.class);
+    }
+
     public void toDeclomationDhammapada(View view){
         startIntentActivityAndFinish(DeklomationDhammapadaActivity.class);
     }

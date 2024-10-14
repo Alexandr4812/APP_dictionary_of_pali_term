@@ -17,16 +17,19 @@
     <string name="pervoe_dostigenie_dgani">5. Первое достижение джханы</string>
     <string name="spasenie_lebedya">6. Спасение лебедя</string>
     <string name="demonstraciya_umenii">7. Демонстрация умений</string>
-    <string name="pudja">Вандана</string>
-    <string name="sutta">Сутта</string>
-    <string name="drugie_declomacii">Другие декламации</string>
+
+    <string name="pudja">\n<b>Вандана</b>\n</string>
+    <string name="sutta">\n<b>Сутта</b>\n</string>
+    <string name="buttonTextAnumodana">\n<b>Anumodanā</b>\n Благословения \n</string>
+    <string name="buttonTextReflections">\n<b>декламации для рефлексии</b>\n </string>
+    <string name="drugie_declomacii">\n<b>декламации для рефлексии</b>\n</string>
+
     <string name="button_karaniya_metta">Карания метта сутта</string>
 
     <string name="utrennaia_pudga">\n <b>Утренняя вандана в монастыре Читтавивека</b> \n</string>
 
-    <string name="decl_pered_priemom_pichi">декламация перед приёмом пищи</string>
-    <string name="prosba_o_prochenii_nedostatkov">Просьба о прощении недостатков перед старшими монахами</string>
-    <string name="blagopogelaniya_pri_vzyatii_pichi">Благопожелания мирянам при взятии даны</string>
+
+
     <string name="rukovodstvo_dlya_samaner">руководство для саманер</string>
     <string name="sekhiya_n">75 секхийа \n правила для тренировки</string>
     <string name="pabaja_text">паббаджжа \n строфы для церемонии становления саманерой</string>
@@ -44,9 +47,9 @@
     <string name="rukovodstvo_dllya_bhikkhu">руководство для бхиккху</string>
     <string name="button_upasampada">упасампада \n Строфы для церемонии становления Бхикху</string>
     <string name="button_sutta_girimananda">гиримананда сутта</string>
-    <string name="button_paritta">паритта</string>
+    <string name="button_paritta">\n <b>паритта</b> \n</string>
     <string name="button_mora_paritta">Мора паритта</string>
-    <string name="button_dhammapada">дхаммапада</string>
+    <string name="button_dhammapada">\n<b>дхаммапада</b>\n</string>
     <string name="textViewParnieStrofy">ПАРНЫЕ СТРОФЫ</string>
     <string name="buttonDigha">Дигха Никая</string>
     <string name="buttonSuttasForMajhima">мадджхима никая</string>

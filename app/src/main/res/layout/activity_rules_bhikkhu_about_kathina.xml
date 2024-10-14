@@ -74,6 +74,15 @@
           android:text="@string/buttonKathina2"
           android:backgroundTint="#FFAB91"
           tools:ignore="UsingOnClickInXml" />
+
+      <Button
+          android:id="@+id/button_bhikkhu_about_kathina3_1"
+          style="@style/button_activity_declomation_main"
+          android:onClick="kathina3_1"
+          android:text="@string/buttonKathina3_1"
+          android:backgroundTint="#FFAB91"
+          tools:ignore="UsingOnClickInXml" />
+
       <Button
           android:id="@+id/button_bhikkhu_about_kathina3"
           style="@style/button_activity_declomation_main"

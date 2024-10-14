@@ -12,16 +12,17 @@
     <string name="pervoe_dostigenie_dgani">5. The first achievement of jhana</string>
     <string name="spasenie_lebedya">6. Saving the swan</string>
     <string name="demonstraciya_umenii">7. Demonstration of skills</string>
-    <string name="pudja">Vandana</string>
-    <string name="sutta">Sutta</string>
-    <string name="drugie_declomacii">Other recitations</string>
+
+    <string name="pudja">\n<b>Vandana</b>\n</string>
+    <string name="sutta">\n<b>Sutta</b>\n</string>
+    <string name="buttonTextAnumodana">\n<b>Anumodanā</b>\n Blessings \n</string>
+    <string name="buttonTextReflections">\n<b>recitations for reflection</b>\n </string>
+
+    <string name="drugie_declomacii">\n<b>declamations for reflection</b>\n</string>
     <string name="button_karaniya_metta">Karania metta sutta</string>
     <string name="utrennaia_pudga">Morning Vandana in Chittaviveka</string>
-    <string name="decl_pered_priemom_pichi">recitation before meals</string>
-    <string name="prosba_o_prochenii_nedostatkov">A request for forgiveness of shortcomings in front of senior monks</string>
-    <string name="blagopogelaniya_pri_vzyatii_pichi">Well -wishes to the laity at the taking are given</string>
-    <string name="DeklomaciyaPeredPrinyatiemPichi">" <b>RECITATION BEFORE LUNCH</b>\n \n <b><u>Paṭisaṅkhā yoniso piṇḍapātaṁ paṭisevāmi,</u></b>\n \n <i>Having thoughtfully considered this, I eat the food presented to me </i>  \n   \n <b><u>N’eva davāya na madāya na maṇḍanāya na vibhūsanāya,</u></b>\n  \n <i>Not for entertainment, not for intoxication, not for weight gain, not to be beautiful,</i> \n    \n <b><u>Yāvadeva imassa kāyassa ṭhitiyā yāpanāya vihiṁsuparatiyā brahma-cariyānuggahāya,</u></b>\n   \n <i>But just for survival, for the support of this body, for the cessation of its suffering, for the support of a holy life,</i> \n  \n <b><u>Iti purāṇañ-ca vedanaṁ paṭihaṅkhāmi navañ-ca vedanaṁ na uppādessāmi,</u></b>\n   \n <i> “This way I will destroy the old feeling of hunger and will not create new feelings from overeating.”</i>  \n \n <b><u>Yātrā ca me bhavissati anavajjatā ca phāsu-vihāro cāti.</u></b>  \n <i>I will try to be perfect</i>"</string>
-    <string name="DeklomaciyaForgivennes">\n        <b>A REQUEST FOR FORGIVENESS OF SHORTCOMINGS IN FRONT OF SENIOR MONKS</b> \n \n \n\n<b><u>Okāsa vandāmi Bhante. Sabbam accayam kamatha me bhante.</u></b> \n \n\n<i>Allow me to honor you, venerable one. Forgive me all the mistakes, my dear.</i> \n \n\n <b><u>Mayākataṁ puññaṁ, sāminā anumodi tabbaṁ.</u></b> \n \n\n<i>Please, Bhante, let me share with you the merits that I have acquired.</i> \n \n\n<i>(Bhantes: Sādhu, Sādhu, anumodāmi! Okay, okay, I\`m happy!)</i> \n \n\n<b><u>Saminā kataṁ puññaṁ, mayhaṁ dātabbaṁ</u></b> \n \n\n<i>Please, Bhante, share with me the merits that you have acquired.</i> \n \n\n<i>(Bhantes: Sādhu, Sādhu, anumodetha! Okay, okay, I\`m happy!)</i> \n \n\n<b><u>Sādhu, Sādhu anumodāmi!</u></b> \n \n\n<i>Okay, okay, I appreciate it!</i> \n \n\n<b><u>Okāsa! Dvārattena kataṁ sabbaṁ accayaṁ khamatha me Bhante.</u></b> \n \n\n<i>Forgive me, O Bhante, for any mistakes I may have made in body, speech or mind.</i> \n \n\n<i>(Bhantes: Kamāmi kamitabbaṁ. I forgive.)</i> \n \n\n<b><u>Sadhu Okāsa khamāmi Bhante!</u></b> \n \n\n<i>I beg your pardon, O Bhanta. \n \n \n</i></string>
+
+
     <string name="DeklomaciyaAlmsWish"><b>БЛАГОПОЖЕЛАНИЯ МИРЯНАМ ПРИ ВЗЯТИИ ДАНЫ</b> \n \n \n
         <u>ВАРИАНТ 1</u> \n
 <b>Abhivādana-sīlissa—Niccaṁ vuḍḍhāpacāyino;</b> \n \n
@@ -1007,52 +1008,10 @@ Even if something is taken from a living person, and the owner is not happy that
      10. Ādikammikassa \n \n \n \n
     </string>
 
-    <string name="button_paritta">paritta</string>
+    <string name="button_paritta">\n <b>paritta</b> \n</string>
     <string name="button_mora_paritta">mora paritta</string>
-    <string name="button_dhammapada">dhammapada</string>
-    <string name="mora_paritta">
-        \n  <b>MORA PARITTA</b> \n \n
-        <b>Udet`ayañ-cakkhumā eka-rājā</b> \n \n
-        <i>The One King, rising, with Vision,</i> \n \n
-        <b>Harissa-vaṇṇo paṭhavippabhāso</b> \n \n
-        <i>golden-hued, illuminating the Earth: I pay homage to you,</i> \n \n
-        <b>Taṃ taṃ namassāmi harissa-vaṇṇaṃ paṭhavippabhāsaṃ</b> \n \n
-        <i>golden-hued, illuminating the Earth.</i> \n \n
-        <b>Tay`ajja guttā viharemu divasaṃ</b> \n \n
-        <i>Guarded today by you, may I live through the day.</i> \n \n
-        <b>Ye brāhmaṇā vedagu sabba-dhamme</b> \n \n
-        <i>Those Brahmans who are knowers of all truths,</i> \n \n
-        <b>Te me namo te ca maṃ pālayantu</b> \n \n
-        <i>I pay homage to them; may they keep watch over me.</i> \n \n
-        <b>Nam`atthu Buddhānaṃ nam`atthu bodhiyā</b> \n \n
-        <i>Homage to the Awakened Ones. Homage to Awakening.</i> \n \n
-        <b>Namo vimuttānaṃ namo vimuttiyā</b> \n \n
-        <i>Homage to the Released Ones. Homage to Release.</i> \n \n
-        <b>Imaṃ so parittaṃ katvā</b> \n \n
-        <i>Having made this protection,</i> \n \n
-        <b>Moro carati esanā`ti</b> \n \n
-        <i>the peacock sets out in search for food.</i> \n \n \n
-        <b>Apet’ayañ-cakkhumā eka-rājā</b> \n \n
-        <i>The One King, setting, with Vision,</i> \n \n
-        <b>Harissa-vaṇṇo paṭhavippabhāso</b> \n \n
-        <i>golden-hued, illuminating the Earth: I pay homage to you,</i> \n \n
-        <b>Taṃ taṃ namassāmi harissa-vaṇṇaṃ paṭhavippabhāsaṃ</b> \n \n
-        <i>golden-hued, illuminating the Earth.</i> \n \n
-        <b>Tay`ajja guttā viharemu rattiṃ</b> \n \n
-        <i>Guarded today by you, may I live through the night.</i> \n \n
-        <b>Ye brāhmaṇā vedagu sabba-dhamme</b> \n \n
-        <i>Those Brahmans who are knowers of all truths,</i> \n \n
-        <b>Te me namo te ca maṃ pālayantu</b> \n \n
-        <i>I pay homage to them; may they keep watch over me.</i> \n \n
-        <b>Nam’atthu Buddhānaṃ nam`atthu bodhiyā</b> \n \n
-        <i>Homage to the Awakened Ones. Homage to Awakening.</i> \n \n
-        <b>Namo vimuttānaṃ namo vimuttiyā</b> \n \n
-        <i>Homage to the Released Ones. Homage to Release.</i> \n \n
-        <b>Imaṃ so parittaṃ katvā</b> \n \n
-        <i>Having made this protection,</i> \n \n
-        <b>Moro vāsam-akappayī’ti</b> \n \n
-        <i>the peacock arranges his nest.</i> \n \n \n \n
-    </string>
+    <string name="button_dhammapada">\n<b>dhammapada</b>\n</string>
+
     <string name="textViewParnieStrofy">PAIRED STANZAS</string>
     <string name="button1Dhammapada">1 \n Led by the mind of the dhamma, the mind governs them, the mind generates them. If a person with malice speaks or acts, Dukkha follows him, like a wheel following the trail of a driver.</string>
     <string name="button2Dhammapada">2 \n Guided by the mind of the dhamma, the mind controls them, the mind generates them. If a person with a purified mind speaks or acts, Happiness follows him like a persistent shadow.</string>

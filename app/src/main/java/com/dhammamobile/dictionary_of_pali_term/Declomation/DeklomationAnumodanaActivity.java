@@ -1,8 +1,7 @@
-package com.dhammamobile.dictionary_of_pali_term.Rules;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.dhammamobile.dictionary_of_pali_term.Declomation;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -18,14 +17,14 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 
 import java.util.Locale;
 
-public class RulesBhikkhuAboutKathinaActivity extends BaseActivityClass {
+public class DeklomationAnumodanaActivity extends BaseActivityClass {
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         // Здесь вы можете добавить свои действия при изменении ориентации, если это необходимо
     }
-    LinearLayout buttonKathina;
+    LinearLayout buttonGatha;
     Button plusText, minusText;
     WebView webView; // Declare WebView as a class member for easy access
 
@@ -34,18 +33,18 @@ public class RulesBhikkhuAboutKathinaActivity extends BaseActivityClass {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         updateLocale(); // Установка языка
-        setContentView(R.layout.activity_rules_bhikkhu_about_kathina);
+        setContentView(R.layout.activity_deklomation_anumodana);
 
         // Скрытие панели навигации и панели состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        plusText = findViewById(R.id.buttonPlusUposatha);
-        minusText = findViewById(R.id.buttonMinusUposatha);
+        plusText = findViewById(R.id.buttonPlusGatha);
+        minusText = findViewById(R.id.buttonMinusGatha);
 
-        webView = findViewById(R.id.webViewBhikkhuAboutKathina);
+        webView = findViewById(R.id.webViewGatha);
 
-        buttonKathina = findViewById(R.id.button_layout_uposatha);
+        buttonGatha = findViewById(R.id.button_layout_gatha);
 
         // Настройки WebView
         WebSettings webSettings = webView.getSettings();
@@ -66,79 +65,91 @@ public class RulesBhikkhuAboutKathinaActivity extends BaseActivityClass {
         webView.loadUrl(htmlFilePath);
     }
 
-    public void kathina1(View view) {
-        buttonKathina.setVisibility(View.VISIBLE);
+    public void declomationAnumodana1(View view) {
+        buttonGatha.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/bhikkhu_manual_ru/kathinaRu1.html";
+            htmlFilePath = "file:///android_asset/anumodana_ru/anumodanaRu1.html";
         } else {
-            htmlFilePath = "file:///android_asset/bhikkhu_manual_en/kathinaEn1.html";
+            htmlFilePath = "file:///android_asset/anumodana_en/anumodanaEn1.html";
         }
         loadHtmlPage(htmlFilePath);
     }
 
-    public void kathina2(View view) {
-        buttonKathina.setVisibility(View.VISIBLE);
+    public void declomationAnumodana2(View view) {
+        buttonGatha.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/bhikkhu_manual_ru/kathinaRu2.html";
+            htmlFilePath = "file:///android_asset/anumodana_ru/anumodanaRu2.html";
         } else {
-            htmlFilePath = "file:///android_asset/bhikkhu_manual_en/kathinaEn2.html";
+            htmlFilePath = "file:///android_asset/anumodana_en/anumodanaEn2.html";
         }
         loadHtmlPage(htmlFilePath);
     }
 
-    public void kathina3(View view) {
-        buttonKathina.setVisibility(View.VISIBLE);
+    public void declomationAnumodana3(View view) {
+        buttonGatha.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/bhikkhu_manual_ru/kathinaRu3.html";
+            htmlFilePath = "file:///android_asset/anumodana_ru/anumodanaRu3.html";
         } else {
-            htmlFilePath = "file:///android_asset/bhikkhu_manual_en/kathinaEn3.html";
+            htmlFilePath = "file:///android_asset/anumodana_en/anumodanaEn3.html";
         }
         loadHtmlPage(htmlFilePath);
     }
 
-    public void kathina3_1(View view) {
-        buttonKathina.setVisibility(View.VISIBLE);
+    public void declomationAnumodana4(View view) {
+        buttonGatha.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/bhikkhu_manual_ru/kathinaRu3_1.html";
+            htmlFilePath = "file:///android_asset/anumodana_ru/anumodanaRu4.html";
         } else {
-            htmlFilePath = "file:///android_asset/bhikkhu_manual_en/kathinaRu3_1.html";
+            htmlFilePath = "file:///android_asset/anumodana_en/anumodanaEn4.html";
         }
         loadHtmlPage(htmlFilePath);
     }
-
-    public void kathina4(View view) {
-        buttonKathina.setVisibility(View.VISIBLE);
+    public void declomationAnumodana5(View view) {
+        buttonGatha.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/bhikkhu_manual_ru/kathinaRu4.html";
+            htmlFilePath = "file:///android_asset/anumodana_ru/anumodanaRu5.html";
         } else {
-            htmlFilePath = "file:///android_asset/bhikkhu_manual_en/kathinaEn4.html";
+            htmlFilePath = "file:///android_asset/anumodana_en/anumodanaEn5.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void declomationAnumodana6(View view) {
+        buttonGatha.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/anumodana_ru/anumodanaRu6.html";
+        } else {
+            htmlFilePath = "file:///android_asset/anumodana_en/anumodanaEn6.html";
         }
         loadHtmlPage(htmlFilePath);
     }
 
 
-    public void toUposathaBack(View view){
+    public void toDeclomation(View view){
+        startIntentActivityAndFinish(DeklomationMainActivity.class);
+    }
+
+    public void toGathaBack(View view){
         webView.setVisibility(View.INVISIBLE);
-        buttonKathina.setVisibility(View.INVISIBLE);
-    }
-
-    public void toRulesBhikkhuAboutAct(View view){
-        startIntentActivityAndFinish(RulesBhikkhuAboutActivity.class);
+        buttonGatha.setVisibility(View.INVISIBLE);
     }
 
     public void toMainAct(View view){
@@ -146,7 +157,8 @@ public class RulesBhikkhuAboutKathinaActivity extends BaseActivityClass {
     }
 
     @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(RulesBhikkhuAboutActivity.class);
+    public void onBackPressed() {
+        super.onBackPressed();
+        startIntentActivityAndFinish(DeklomationMainActivity.class);
     }
 }

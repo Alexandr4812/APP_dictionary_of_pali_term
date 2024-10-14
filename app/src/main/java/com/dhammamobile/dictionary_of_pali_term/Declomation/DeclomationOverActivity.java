@@ -35,19 +35,6 @@ public class DeclomationOverActivity extends BaseActivityClass {
         startIntentActivityAndFinish(DeklomationMainActivity.class);
     }
 
-    public void toDeclomaciyaPeredObedom(View view) {
-        ScrollView scrollText = findViewById(R.id.overScrollTextObed);
-        scrollText.setVisibility(View.VISIBLE);
-        buttonHome.setVisibility(View.VISIBLE);
-        buttonLiveToOver.setVisibility(View.VISIBLE);
-    }
-
-    public void toDeclomaciyaForgivennes(View view) {
-        ScrollView scrollText = findViewById(R.id.overScrollTextForgivennes);
-        scrollText.setVisibility(View.VISIBLE);
-        buttonHome.setVisibility(View.VISIBLE);
-        buttonLiveToOver.setVisibility(View.VISIBLE);
-    }
 
     public void toDeclomaciyaAlmsWish(View view) {
         ScrollView scrollText = findViewById(R.id.overScrollTextAlmsWish);
@@ -73,10 +60,6 @@ public class DeclomationOverActivity extends BaseActivityClass {
     }
 
     public void tobackOver(View view) {
-        ScrollView scrollText = findViewById(R.id.overScrollTextObed);
-        scrollText.setVisibility(View.INVISIBLE);
-        ScrollView scrollText2 = findViewById(R.id.overScrollTextForgivennes);
-        scrollText2.setVisibility(View.INVISIBLE);
         ScrollView scrollText3 = findViewById(R.id.overScrollTextAlmsWish);
         scrollText3.setVisibility(View.INVISIBLE);
         ScrollView scrollText5 = findViewById(R.id.overScrollTextDeclomaciyaRefleksiyaOProshlihNeobhodimostyah);
