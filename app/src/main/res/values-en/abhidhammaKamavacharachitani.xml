@@ -135,4 +135,39 @@ Thus, by their own real nature, they do not require motivation or special techni
 they are purely unprompted, and this must be considered as the reason why the distinction
 the type of motivation is not mentioned here.”
     </string>
+
+
+
+
+    <string name="textButtonRupavacharachitani">Consciousness of the thin-material environment \n (Rupāvachachittaāni) - 15 </string>
+    <string name="textDiscribeRupavacharachitani">CONSCIOUSNESS OF THE FINE-MATERIAL REALM (rūpāvacaracittāni):
+This realm of consciousness includes all the cittas that "move within" or are associated with the fine-material plane of existence (rūpabhūmi)—dimensions where gross matter is absent, leaving only its subtle residue. Rebirth in these dimensions occurs through the attainment of meditative states known as jhānas—high achievements in the development of concentration (samādhi). States of consciousness that "frequently visit" this plane, being qualitatively connected with it, are called "consciousnesses of the fine-material realm."
+
+Fifteen cittas fall under this category—five wholesome, five resultant, and five functional. Wholesome cittas of the fine-material realm are experienced by laypeople and practitioners (sekha) who have developed jhānas directly in this life. Their corresponding results (vipāka) arise only in the fine-material world, in beings who have been reborn there due to the development of jhānas.
+
+The five functional (kriyā) jhāna cittas are experienced only by arahants who have attained jhānas.
+Commentators derive the Pali word jhāna from a root meaning "to contemplate" as well as from a root meaning "to burn." Thus, jhānas are called such because they carefully contemplate the object and because they burn away various states that oppose concentration. The various states are the five hindrances (nīvaraṇa): sensory desire, ill will, sloth and torpor, restlessness, and worry, as well as doubt.
+
+Jhānas are attained through a meditation method called "the development of tranquility" (samathabhāvanā). This type of meditation leads to an enhancement of the ability to concentrate (samādhi). By fixing the mind on a single object, all mental distractions are eliminated. The hindrances are suppressed, and the mind becomes fully collected on the object. The development of tranquility will be discussed in detail later.
+
+The object of jhāna consciousness is a mental image called the "counterpart sign" (paṭibhāganimitta). This image is considered a conceptual object (paññatti), but it usually arises based on a visible form, and therefore these jhānas belong to the fine-material realm. A meditator who aspires to jhānas may choose a meditation device called a kasiṇa, such as a colored disk, as the initial object of concentration. When concentration matures, this physical device gives rise to its visualized replica, known as the "learning sign" (uggahanimitta), which in turn forms the counterpart sign, taken as the object of jhāna.</string>
+
+    <string name="textButtonRupavacaraKusala">Wholesome consciousness \n (rupavacara-kusalacittani) — 5</string>
+    <string name="textDiscribeRupavacaraKusala">
+        This category contains five cittas, distinguished according to the types of the five jhānas,
+        where each jhāna includes different types of cittas. The jhānas are numbered in this order for
+        two reasons: 1) because, when someone meditates to attain the jhānas, they achieve them in this
+        sequence, and 2) because the Buddha taught them in this sequence. Wholesome cittas of the fine-material
+        realm are experienced by laypeople and practitioners (sekha) who have developed jhānas directly in
+        this life.</string>
+
+    <string name="textButtonRupavacaraVipaka">Resultant consciousness \n (vipaka-cittāni) — 5</string>
+    <string name="textDiscribeRupavacaraVipaka">
+        The resultant cittas (vipāka) of the fine-material realm arise only in the fine-material world,
+        in beings who have been reborn there due to the development of jhānas.</string>
+
+    <string name="textButtonRupavacaraKriya">Functional consciousness \n (kriya-cittāni) — 5</string>
+    <string name="textDiscribeRupavacaraKriya">
+        The five functional (kriyā) jhāna cittas are experienced only by arahants who have attained the jhānas.</string>
+
 </resources>

@@ -15,9 +15,9 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 
 public class AbhidhammaChittasActivity extends BaseActivityClass {
 
-    private TextView textViewAbhidhammaKammavacharam;
+    private TextView textViewAbhidhammaKammavacharam, textViewAbhidhammaRupavacharam;
 
-    private Button infoButtonAbhidhammaKammavacharam;
+    private Button infoButtonAbhidhammaKammavacharam, infoButtonAbhidhammaRupavacharam;
 
     // Переменная для хранения последней нажатой кнопки
     private Button lastClickedButton = null;
@@ -37,12 +37,16 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
 
         textViewAbhidhammaKammavacharam = findViewById(R.id.textViewAbhidhammaKammavacharam);
         infoButtonAbhidhammaKammavacharam = findViewById(R.id.infoButtonKamamavachara);
+
+        textViewAbhidhammaRupavacharam = findViewById(R.id.textViewAbhidhammaRupavachara);
+        infoButtonAbhidhammaRupavacharam = findViewById(R.id.infoButtonRupavachara);
     }
 
     public void onButtonClickAbhidhammaKammavacharam(View view) {
         Button clickedButton = (Button) view;
         int visibility = textViewAbhidhammaKammavacharam.getVisibility();
         textViewAbhidhammaKammavacharam.setText("");
+        textViewAbhidhammaRupavacharam.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -54,6 +58,27 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
                 textViewAbhidhammaKammavacharam.setText(R.string.textDiscribeKamavacharachitam);
                 textViewAbhidhammaKammavacharam.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaKammavacharam, getString(R.string.textDiscribeKamavacharachitam));
+            }
+            lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
+        }
+    }
+
+    public void onButtonClickAbhidhammaRupavachara(View view) {
+        Button clickedButton = (Button) view;
+        int visibility = textViewAbhidhammaRupavacharam.getVisibility();
+        textViewAbhidhammaKammavacharam.setText("");
+        textViewAbhidhammaRupavacharam.setText("");
+
+        // Если нажата та же кнопка, что и ранее
+        if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
+            textViewAbhidhammaRupavacharam.setText(""); // Установите текст в пустую строку
+            textViewAbhidhammaRupavacharam.setVisibility(View.INVISIBLE);
+            resetAnimator();
+        } else {
+            if (clickedButton == infoButtonAbhidhammaRupavacharam) {
+                textViewAbhidhammaRupavacharam.setText(R.string.textDiscribeRupavacharachitani);
+                textViewAbhidhammaRupavacharam.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaRupavacharam, getString(R.string.textDiscribeRupavacharachitani));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -90,6 +115,10 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
 
     public void toAbhidhammaChittasKamavacharam(View view){
         startIntentActivityAndFinish(AbhidhammaChittasKamavacharamActivity.class);
+    }
+
+    public void toAbhidhammaChittasRupavacara(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasRupavacaraActivity.class);
     }
 
     public void toMainAct(View view){

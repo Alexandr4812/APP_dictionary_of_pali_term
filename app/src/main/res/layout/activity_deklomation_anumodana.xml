@@ -59,12 +59,7 @@
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
-            <Button
-                android:id="@+id/button_anumodana6"
-                style="@style/button_activity_declomation_main"
-                android:onClick="declomationAnumodana6"
-                android:text="@string/buttonAbhivadana"
-                tools:ignore="UsingOnClickInXml" />
+
             <Button
                 android:id="@+id/button_anumodana1"
                 style="@style/button_activity_declomation_main"

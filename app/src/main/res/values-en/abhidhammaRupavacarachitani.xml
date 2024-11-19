@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="forTextViewZagolovokRupavacaraKusala">5 Beneficial Consciousnesses of the Subtle-Material Sphere \n (Rupāvacaracittāni)</string>
+
+    <string name="textButton1RupavacaraKusala">
+    1 \n Wholesome consciousness of the first jhāna accompanied by initial application, sustained application,
+    zest, happiness, and one-pointedness. \n\n
+    Vitakka-vicāra-pīti-sukh`-ekaggatā-sahitaṃ paṭhamajjhāna-kusalacittaṃ.</string>
+    <string name="textButton2RupavacaraKusala">
+    2. \n Wholesome consciousness of the second jhāna accompanied by sustained application, zest,
+    happiness, and one-pointedness. \n\n
+    Vicāra-pīti-sukh`-ekaggatā-sahitaṃ dutiyajjhāna-kusalacittaṃ.
+</string>
+    <string name="textButton3RupavacaraKusala">
+    3. \n Wholesome consciousness of the third jhāna accompanied by zest, happiness, and one-pointedness. \n\n
+    Pīti-sukh`-ekaggatā-sahitaṃ tatiyajjhāna-kusalacittaṃ.</string>
+    <string name="textButton4RupavacaraKusala">
+    4 \n Wholesome consciousness of the fourth jhāna accompanied by happiness and
+    one-pointedness. \n\n
+    Sukh`-ekaggatā-sahitaṃ catutthajjhāna-kusalacittaṃ.</string>
+    <string name="textButton5RupavacaraKusala">
+    5. \n Wholesome consciousness of the fifth jhāna accompanied by equanimity and one-pointedness. \n\n
+    Upekkhā-ekaggatā-sahitaṃ pañcamajjhāna-kusalacittaṃ cā ti</string>
+    <string name="textButton6RupavacaraKusala">\n <b>About Jhana Factors</b> \n</string>
+    <string name="textButton7RupavacaraKusala">\n <b>Summary of Fine-Material Sphere Consciousness</b> \n</string>
+
+
+    <string name="textRupavacaraKusala1">
+    The first jhāna, as enumerated in the text, contains five factors.
+    To achieve the first jhāna, all these five factors must be present in a balanced form,
+    closely contemplating the object and "burning" the five hindrances that obstruct absorption.
+    </string>
+    <string name="textRupavacaraKusala2">
+   Higher jhānas are achieved through the successive elimination of gross jhāna factors and purification of
+   more refined factors by strengthening concentration. In the Suttas, the Buddha speaks of four jhānas,
+   teaching the simultaneous elimination of vitakka and vicāra when transitioning from the first to the second jhāna.
+   In the Abhidhamma, due to the inclusion of an intermediate jhāna where vitakka is already eliminated
+   while vicāra still remains, five jhānas are described. In the Abhidhamma scheme, this
+   [intermediate] jhāna is the second one.
+</string>
+    <string name="textRupavacaraKusala3">
+        In the third jhana, vichara is eliminated. \n \n
+        According to the Suttanta method, which enumerates four jhānas of the fine-material realm,
+        the first jhāna is in all respects identical to the first jhāna of the Abhidhamma method.
+        However, the second jhāna of the Suttanta method is achieved by the simultaneous elimination
+        of both initial application and sustained application, and thus has only three jhāna factors:
+        rapture, happiness, and one-pointedness, just like the third jhāna of the Abhidhamma method.
+        In the third jhāna of the Suttanta method, there are two factors: happiness and one-pointedness.
+        The fourth jhāna has two factors: equanimity (that is, neutral feeling) and one-pointedness.
+        These two jhānas correspond to the fourth and fifth jhānas of the Abhidhamma method.
+        Although the Suttas do not explicitly mention the analysis of jhānas according to a fivefold system,
+        they provide an implied basis for such an analysis in that the Buddha distinguished three types of
+        concentration: concentration accompanied by both initial and sustained application;
+        concentration without initial application, but with sustained application;
+        and concentration without both initial and sustained application
+        (*savitakka savicāra samādhi*, *avitakka vicāramatta samādhi*, *avitakka avicāra sammādhi*
+        [Majjhima Nikāya, 128/iii, 162]). The first type, of course, is the first jhāna in both systems,
+        while the third type corresponds to the second and higher jhānas of the Suttanta method,
+        as well as the third and higher jhānas of the Abhidhamma method. The second type, however,
+        is not classified anywhere in the Suttas themselves and only becomes clear as the second
+        jhāna of the Abhidhamma method.
+</string>
+    <string name="textRupavacaraKusala4">
+    In the fourth jhāna, pīti (rapture) is eliminated.
+</string>
+    <string name="textRupavacaraKusala5">
+    In the fifth jhāna, upekkhā — equanimity or neutral feeling — replaces sukha — happiness — as the accompanying feeling. Thus, whereas the cittas of the first four jhānas are associated with joy (somanassasahita), the citta of the fifth jhāna is associated with equanimity (upekkhāsahita).
+</string>
+
+
+
+
+    <string name="textRupavacaraKusala6">
+    INITIAL APPLICATION (VITAKKA): In the Suttas, the word *vitakka* is often used in a loose sense, but in the Abhidhamma, it is used in a precise technical sense, meaning the mental factor that directs or fixes the mind onto an object. Just as a king’s favorite might lead a villager into the palace, *vitakka* directs the mind towards an object. In the practice of achieving jhāna, *vitakka* has a specific role—suppressing the hindrance of sluggishness and dullness (*thīna-middha*).
+    SUSTAINED APPLICATION (VICĀRA): The word *vicāra* usually means "examination," but here it refers to the sustained application of the mind to an object. While *vitakka* involves directing the mind and its accompanying states [mental factors] towards the object, *vicāra* is the continued engagement of the mind with the object. The commentaries offer various comparisons to highlight the difference between the two jhāna factors. *Vitakka* is like a bird flapping its wings to take off, while *vicāra* is like a bird gliding through the air with outstretched wings. *Vitakka* is like a bee diving towards a flower, while *vicāra* is like the bee hovering over the flower. *Vitakka* is like a hand holding a tarnished metal plate, while *vicāra* is like a hand polishing the plate. In the jhānas, *vicāra* serves to temporarily suppress the hindrance of doubt (*vicikicchā*).
+    RAPTURE (PĪTI): *Pīti* derives from the verb *pināyati*, which means "to refresh," and can be explained as a delight or pleasant exhilaration towards the object. The term is often translated as "rapture," which is quite suitable for conveying its role as a jhāna factor, but may not be broad enough to encompass all its nuances. Commentators distinguish five levels of *pīti* that arise during the development of concentration: minor rapture, momentary rapture, flooding rapture, uplifting rapture, and all-pervading rapture. Minor rapture can cause hairs on the body to stand on end. Momentary rapture is like flashes of light. Flooding rapture strikes the body again and again, like waves hitting the seashore. Uplifting rapture can make the body float. And all-pervading rapture fills the whole body, like a flood filling a cave. The latter is identified as *pīti* in jhāna. As a jhāna factor, *pīti* suppresses the hindrance of ill will (*vyāpāda*).
+    HAPPINESS (SUKHA): This jhāna factor is a pleasant mental feeling. It is identical to *somanassa* (joy), not to *sukha* as a pleasant bodily feeling that accompanies wholesome resultant body-consciousness. *Sukha*, also translated as "bliss," is generated by detachment from sensory pleasures; and therefore, it is explained as *nirāmisa sukha*—unworldly or spiritual happiness. It counters the hindrance of restlessness and worry (*uddhacca-kukkucca*). Although *pīti* and *sukha* are closely related, they are distinct in that *pīti* is a volitional factor belonging to the aggregate of mental formations (*saṅkhārakkhandha*), while *sukha* is a feeling belonging to the aggregate of feelings (*vedanākkhandha*). *Pīti* is comparable to the delight a tired traveler would feel upon stumbling upon an oasis, while *sukha* is like his contentment after bathing and drinking.
+    ONE-POINTEDNESS (EKAGGATĀ): This Pāli term literally means "one-" (*eka*) "pointed" (*agga*) "state" (*tā*). This mental factor is a primary component in all five jhānas and the essence of concentration (*samādhi*). One-pointedness temporarily suppresses sensory desire, which is a prerequisite for any meditative attainment. *Ekaggatā* performs the function of closely contemplating the object, the primary characteristic of jhāna, but this mental factor cannot perform this function alone. It requires the cooperative action of the other four jhāna factors, each fulfilling its own specific function: *vitakka*, applying the associated states to the object; *vicāra*, holding them there; *pīti*, bringing delight towards the object; and *sukha*, experiencing happiness in jhāna.
+</string>
+
+
+    <string name="textRupavacaraKusalaKoren1">
+3 ROOTS: \n
+Non-greed \n
+Non-hatred \n
+Non-delusion
+</string>
+
+    <string name="textRupavacaraKusalaFunkciya1">
+FUNCTIONS AS JAVANA
+</string>
+
+    <string name="textRupavacaraKusalaKombinaciya1">
+COMBINES WITH 35 CETASIKAS: \n\n
+    UNIVERSALS: \n
+    >> 1. Contact (Phassa) \n
+    >> 2. Feeling (Vedanā) \n
+    >> 3. Perception (Saññā) \n
+    >> 4. Volition (Cetanā) \n
+    >> 5. One-pointedness (Ekaggatā) \n
+    >> 6. Mental life faculty (Jīvitindriya) \n
+    >> 7. Attention (Manasikāra) \n\n
+
+    OCCASIONALS: \n
+>> 8. Initial application (Vitakka) \n
+>> 9. Sustained application (Vicāra) \n
+>> 10. Decision (Adhimokkha) \n
+>> 11. Energy (Viriya) \n
+>> 12. Enthusiasm (Pīti) \n
+>> 13. Desire to act (Chanda) \n\n
+
+    UNIVERSAL BEAUTIFUL: \n
+>> 14. Faith (Saddhā) \n
+>> 15. Mindfulness (Sati) \n
+>> 16. Shame (Hiri) \n
+>> 17. Fear of wrongdoing (Ottappa) \n
+>> 18. Non-greed (Alobha) \n
+>> 19. Non-hatred (Adosa) \n
+>> 20. Neutrality of mind (Tatramajjhattatā) \n
+>> 21. Tranquility of mental body (Kāyapassaddhi) \n
+>> 22. Tranquility of consciousness (Cittapassaddhi) \n
+>> 23. Lightness of mental body (Kāyalahutā) \n
+>> 24. Lightness of consciousness (Cittalahutā) \n
+>> 25. Malleability of mental body (Kāyamudutā) \n
+>> 26. Malleability of consciousness (Cittamudutā) \n
+>> 27. Wieldiness of mental body (Kāyakammaññatā) \n
+>> 28. Wieldiness of consciousness (Cittakammaññatā) \n
+>> 29. Proficiency of mental body (Kāyapāguññatā) \n
+>> 30. Proficiency of consciousness (Cittapāguññatā) \n
+>> 31. Rectitude of mental body (Kāyujjukatā) \n
+>> 32. Rectitude of consciousness (Cittujjukatā) \n\n
+
+    BEAUTIFUL OCCASIONALS: \n
+    ABSTINENCES \n
+        >>     absent \n
+    ILLIMITABLES \n
+>> 33. Compassion (Karuṇā) \n
+>> 34. Appreciative joy (Muditā) \n
+>> 35. Wisdom (Pañña) \n
+</string>
+    <string name="textRupavacaraKusalaKombinaciya2">
+COMBINES WITH 4 CETASIKAS: \n\n
+    UNIVERSALS: \n
+    >> 1. Contact (Phassa) \n
+    >> 2. Feeling (Vedanā) \n
+    >> 3. Perception (Saññā) \n
+    >> 4. Volition (Cetanā) \n
+    >> 5. One-pointedness (Ekaggatā) \n
+    >> 6. Mental life faculty (Jīvitindriya) \n
+    >> 7. Attention (Manasikāra) \n\n
+
+    OCCASIONALS: \n
+>> __ absent (vitaka)__ \n
+>> 8. Sustained application (Vicāra) \n
+>> 9. Decision (Adhimokkha) \n
+>> 10. Energy (Viriya) \n
+>> 11. Enthusiasm (Pīti) \n
+>> 12. Desire to act (Chanda) \n\n
+
+    UNIVERSAL BEAUTIFUL: \n
+>> 13. Faith (Saddhā) \n
+>> 14. Mindfulness (Sati) \n
+>> 15. Shame (Hiri) \n
+>> 16. Fear of wrongdoing (Ottappa) \n
+>> 17. Non-greed (Alobha) \n
+>> 18. Non-hatred (Adosa) \n
+>> 19. Neutrality of mind (Tatramajjhattatā) \n
+>> 20. Tranquility of mental body (Kāyapassaddhi) \n
+>> 21. Tranquility of consciousness (Cittapassaddhi) \n
+>> 22. Lightness of mental body (Kāyalahutā) \n
+>> 23. Lightness of consciousness (Cittalahutā) \n
+>> 24. Malleability of mental body (Kāyamudutā) \n
+>> 25. Malleability of consciousness (Cittamudutā) \n
+>> 26. Wieldiness of mental body (Kāyakammaññatā) \n
+>> 27. Wieldiness of consciousness (Cittakammaññatā) \n
+>> 28. Proficiency of mental body (Kāyapāguññatā) \n
+>> 29. Proficiency of consciousness (Cittapāguññatā) \n
+>> 30. Rectitude of mental body (Kāyujjukatā) \n
+>> 31. Rectitude of consciousness (Cittujjukatā) \n\n
+
+    BEAUTIFUL OCCASIONALS: \n
+    ABSTINENCES \n
+        >>     absent \n
+    ILLIMITABLES \n
+>> 32. Compassion (Karuṇā) \n
+>> 33. Appreciative joy (Muditā) \n
+>> 34. Wisdom (Pañña) \n
+</string>
+    <string name="textRupavacaraKusalaKombinaciya3">
+    COMBINES WITH 33 CETASIKAS: \n\n
+        UNIVERSAL MENTAL FACTORS: \n
+        >> 1. Contact (Phassa) \n
+        >> 2. Feeling (Vedanā) \n
+        >> 3. Perception (Saññā) \n
+        >> 4. Volition (Cetanā) \n
+        >> 5. One-pointedness (Ekaggatā) \n
+        >> 6. Mental Vitality (Jīvitindriya) \n
+        >> 7. Attention (Manasikāra) \n\n
+
+        OCCASIONAL FACTORS: \n
+    >> __ absent (vitaka)__ \n
+    >> __ absent (vicara)__  \n
+    >> 8. Determination (Adhimokkha) \n
+    >> 9. Energy (Viriya) \n
+    >> 10. Rapture (Pīti) \n
+    >> 11. Desire to Act (Chanda) \n\n
+
+        UNIVERSAL WHOLESOME FACTORS: \n
+    >> 12. Faith (Saddhā) \n
+    >> 13. Mindfulness (Sati) \n
+    >> 14. Moral Shame (Hiri) \n
+    >> 15. Fear of Wrongdoing (Ottappa) \n
+    >> 16. Non-greed (Alobha) \n
+    >> 17. Non-ill-will (Adosa) \n
+    >> 18. Neutrality of Mind (Tatramajjhattatā) \n
+    >> 19. Tranquillity of Mental Body (Kāyapassaddhi) \n
+    >> 20. Tranquillity of Consciousness (Cittapassaddhi) \n
+    >> 21. Lightness of Mental Body (Kāyalahutā) \n
+    >> 22. Lightness of Consciousness (Cittalahutā) \n
+    >> 23. Flexibility of Mental Body (Kāyamudutā) \n
+    >> 24. Flexibility of Consciousness (Cittamudutā) \n
+    >> 25. Manageability of Mental Body (Kāyakammaññatā) \n
+    >> 26. Manageability of Consciousness (Cittakammaññatā) \n
+    >> 27. Proficiency of Mental Body (Kāyapāguññatā) \n
+    >> 28. Proficiency of Consciousness (Cittapāguññatā) \n
+    >> 29. Uprightness of Mental Body (Kāyujjukatā) \n
+    >> 30. Uprightness of Consciousness (Cittujjukatā) \n\n
+
+        OCCASIONAL WHOLESOME FACTORS: \n
+        ABSTINENCES \n
+    >>     absent \n
+        ILLIMITABLES \n
+    >> 31. Compassion (Karuṇā) \n
+    >> 32. Altruistic Joy (Muditā) \n
+    >> 33. Wisdom (Paññā) \n
+</string>
+    <string name="textRupavacaraKusalaKombinaciya4">
+    COMBINES WITH 32 CETASIKAS: \n\n
+        UNIVERSAL MENTAL FACTORS: \n
+        >> 1. Contact (Phassa) \n
+        >> 2. Feeling (Vedanā) \n
+        >> 3. Perception (Saññā) \n
+        >> 4. Volition (Cetanā) \n
+        >> 5. One-pointedness (Ekaggatā) \n
+        >> 6. Mental Vitality (Jīvitindriya) \n
+        >> 7. Attention (Manasikāra) \n\n
+
+        OCCASIONAL FACTORS: \n
+    >> __ absent (vitakka) __ \n
+    >> __ absent (vicāra) __ \n
+    >> 8. Determination (Adhimokkha) \n
+    >> 9. Energy (Viriya) \n
+    >> __ absent (pīti) __\n
+    >> 10. Desire to Act (Chanda) \n\n
+
+        UNIVERSAL WHOLESOME FACTORS: \n
+    >> 11. Faith (Saddhā) \n
+    >> 12. Mindfulness (Sati) \n
+    >> 13. Moral Shame (Hiri) \n
+    >> 14. Fear of Wrongdoing (Ottappa) \n
+    >> 15. Non-greed (Alobha) \n
+    >> 16. Non-ill-will (Adosa) \n
+    >> 17. Neutrality of Mind (Tatramajjhattatā) \n
+    >> 18. Tranquillity of Mental Body (Kāyapassaddhi) \n
+    >> 19. Tranquillity of Consciousness (Cittapassaddhi) \n
+    >> 20. Lightness of Mental Body (Kāyalahutā) \n
+    >> 21. Lightness of Consciousness (Cittalahutā) \n
+    >> 22. Flexibility of Mental Body (Kāyamudutā) \n
+    >> 23. Flexibility of Consciousness (Cittamudutā) \n
+    >> 24. Manageability of Mental Body (Kāyakammaññatā) \n
+    >> 25. Manageability of Consciousness (Cittakammaññatā) \n
+    >> 26. Proficiency of Mental Body (Kāyapāguññatā) \n
+    >> 27. Proficiency of Consciousness (Cittapāguññatā) \n
+    >> 28. Uprightness of Mental Body (Kāyujjukatā) \n
+    >> 29. Uprightness of Consciousness (Cittujjukatā) \n\n
+
+        OCCASIONAL WHOLESOME FACTORS: \n
+        ABSTINENCES \n
+    >>     absent \n
+        ILLIMITABLES \n
+    >> 30. Compassion (Karuṇā) \n
+    >> 31. Altruistic Joy (Muditā) \n
+    >> 32. Wisdom (Paññā) \n
+</string>
+    <string name="textRupavacaraKusalaKombinaciya5">
+    COMBINES WITH 30 CETASIKAS: \n\n
+        UNIVERSALS: \n
+        >> 1. Contact (Phassa) \n
+        >> 2. Feeling (Vedanā) \n
+        >> 3. Perception (Saññā) \n
+        >> 4. Volition (Cetanā) \n
+        >> 5. One-pointedness (Ekaggatā) \n
+        >> 6. Mental-life faculty (Jīvitindriya) \n
+        >> 7. Attention (Manasikāra) \n\n
+
+        OCCASIONAL: \n
+    >> __ absent (vitaka) __ \n
+    >> __ absent (vicara) __ \n
+    >> 8. Determination (Adhimokkha) \n
+    >> 9. Energy (Viriya) \n
+    >> __ absent (piti)__ \n
+    >> 10. Desire to act (Chanda) \n\n
+
+        UNIVERSAL WHOLESOME: \n
+    >> 11. Faith (Saddhā) \n
+    >> 12. Mindfulness (Sati) \n
+    >> 13. Shame (Hiri) \n
+    >> 14. Fear of wrong (Ottappa) \n
+    >> 15. Non-greed (Alobha) \n
+    >> 16. Non-hatred (Adosa) \n
+    >> 17. Mental neutrality (Tatramajjhattatā) \n
+    >> 18. Tranquility of mental body (Kāyapassaddhi) \n
+    >> 19. Tranquility of consciousness (Cittapassaddhi) \n
+    >> 20. Lightness of mental body (Kāyalahutā) \n
+    >> 21. Lightness of consciousness (Cittalahutā) \n
+    >> 22. Softness of mental body (Kāyamudutā) \n
+    >> 23. Softness of consciousness (Cittamudutā) \n
+    >> 24. Adaptability of mental body (Kāyakammaññatā) \n
+    >> 25. Adaptability of consciousness (Cittakammaññatā) \n
+    >> 26. Proficiency of mental body (Kāyapāguññatā) \n
+    >> 27. Proficiency of consciousness (Cittapāguññatā) \n
+    >> 28. Uprightness of mental body (Kāyujjukatā) \n
+    >> 29. Uprightness of consciousness (Cittujjukatā) \n\n
+
+        WHOLESOME OCCASIONAL: \n
+        RESTRAINTS: \n
+    >> absent \n\n
+
+        IMMEASURABLES: \n
+    >> 30. Compassion (Karuṇā) \n
+    >> __ absent (Muditā)__ \n
+    >> __ absent (Paññā)__ \n
+    </string>
+
+
+
+
+</resources>

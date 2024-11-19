@@ -129,20 +129,6 @@ public class DeklomationAnumodanaActivity extends BaseActivityClass {
         loadHtmlPage(htmlFilePath);
     }
 
-    public void declomationAnumodana6(View view) {
-        buttonGatha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/anumodana_ru/anumodanaRu6.html";
-        } else {
-            htmlFilePath = "file:///android_asset/anumodana_en/anumodanaEn6.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-
-
     public void toDeclomation(View view){
         startIntentActivityAndFinish(DeklomationMainActivity.class);
     }
