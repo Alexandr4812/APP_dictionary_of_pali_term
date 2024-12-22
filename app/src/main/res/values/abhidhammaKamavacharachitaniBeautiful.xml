@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="textButtonWholsome">Благотворное сознание сенсорной среды \n (Кāмāвачара-кусалачиттāни) — 8</string>
-    <string name="textButtonResult">Результирующее сознание сенсорной среды \n (Кāмāвачара-випāкачиттāни) — 8</string>
-    <string name="textButtonFunction">Функциональное сознание сенсорной среды \n (Кāмāвачара-крийāчиттāни) — 8</string>
+    <string name="textButtonWholsome">\n <b>Благотворное сознание сенсорной среды \n (Кāмāвачара-кусалачиттāни) — 8</b> \n</string>
+    <string name="textButtonResult">\n <b>Результирующее сознание сенсорной среды \n (Кāмāвачара-випāкачиттāни) — 8</b> \n</string>
+    <string name="textButtonFunction">\n <b>Функциональное сознание сенсорной среды \n (Кāмāвачара-крийāчиттāни) — 8</b> \n</string>
 
     <string name="textButtonKusalachitaniKoren">корень</string>
     <string name="textButtonKusalachitaniFunkciya">функция</string>

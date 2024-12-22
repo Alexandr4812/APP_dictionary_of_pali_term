@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="buttonNissayaText">прошение (Nissaya) \n Нахождение под опекой</string>
+    <string name="buttonNissayaText">\b <b>прошение (Nissaya) \n Нахождение под опекой</b> \n</string>
     <string name="nisayaText">
         \n <b>Ācariyo me bhante hohi \n</b>
            <i>Почтенный, будьте моим учителем \n \n</i>
@@ -503,8 +503,8 @@ Mv.VI.40.1: "Что бы я ни запрещал, говоря: Это не р�
 
     </string>
 
-    <string name="buttonTextAbout1">протоколы \n и общая информация</string>
+    <string name="buttonTextAbout1">\n <b>протоколы \n и общая информация</b> \n</string>
     <string name="buttonTextAbout2">кому позволительно принять монашеский постриг, и кому не позволительно.</string>
-    <string name="textButtonGenInfo">общая информация</string>
-    <string name="textButtonProtocolsInfo">протоколы</string>
+    <string name="textButtonGenInfo">\n <b>общая информация</b> \n</string>
+    <string name="textButtonProtocolsInfo">\n <b>протоколы</b> \n</string>
 </resources>

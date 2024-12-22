@@ -79,16 +79,16 @@
                 android:text="@string/buttonAbhivādana"
                 tools:ignore="UsingOnClickInXml" />
             <Button
-                android:id="@+id/button_anumodana4"
-                style="@style/button_activity_declomation_main"
-                android:onClick="declomationAnumodana4"
-                android:text="@string/buttonCulla"
-                tools:ignore="UsingOnClickInXml" />
-            <Button
                 android:id="@+id/button_anumodana5"
                 style="@style/button_activity_declomation_main"
                 android:onClick="declomationAnumodana5"
                 android:text="@string/buttonMahaCulla"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:id="@+id/button_anumodana4"
+                style="@style/button_activity_declomation_main"
+                android:onClick="declomationAnumodana4"
+                android:text="@string/buttonCulla"
                 tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>

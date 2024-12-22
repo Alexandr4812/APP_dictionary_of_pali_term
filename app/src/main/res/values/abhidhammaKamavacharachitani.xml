@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="textButtonKamavacharachitani">Сознание сенсорной среды \n (Кāмāвачарачиттāни) — 54</string>
-    <string name="textButtonKamavacharamUnwholsome">Неблаготворное сознание \n (Акусалачиттāни) — 12</string>
-    <string name="textButtonKamavacharamAhetuka">Бескоренное сознание \n (Ахетукачиттāни) — 18</string>
-    <string name="textButtonKamavacharamBeautiful">Прекрасное сознание \n (Собханачиттāни) — 24</string>
+    <string name="textButtonKamavacharachitani">\n <b>Сознание сенсорной среды \n (Кāмāвачарачиттāни) — 54</b> \n</string>
+    <string name="textButtonKamavacharamUnwholsome">\n <b>Неблаготворное сознание \n (Акусалачиттāни) — 12</b> \n</string>
+    <string name="textButtonKamavacharamAhetuka">\n <b>Бескоренное сознание \n (Ахетукачиттāни) — 18</b> \n</string>
+    <string name="textButtonKamavacharamBeautiful">\n <b>Прекрасное сознание \n (Собханачиттāни) — 24</b> \n</string>
 
-    <string name="textButtonLobhamulachitani">Сознание, коренящееся в жадности \n (Лобхамулачиттāни) — 8</string>
-    <string name="textButtonDosamulachitani">Сознание, коренящееся в злости \n (Досамулачиттāни) — 2</string>
-    <string name="textButtonMohamulachitani">Сознание, коренящееся в заблуждении \n (Мохамулачиттāни) — 2</string>
+    <string name="textButtonLobhamulachitani">\n <b>Сознание, коренящееся в жадности \n (Лобхамулачиттāни) — 8</b> \n</string>
+    <string name="textButtonDosamulachitani">\n <b>Сознание, коренящееся в злости \n (Досамулачиттāни) — 2</b> \n</string>
+    <string name="textButtonMohamulachitani">\n <b>Сознание, коренящееся в заблуждении \n (Мохамулачиттāни) — 2</b> \n</string>
 
     <string name="textButton1Lobhamulachitani">1 \n Одно сознание, сопровождающееся радостью, ассоциированное с ошибочным взглядом, возникающее без побуждения. \n \n Соманассасахагатам диттхигатасампайуттам асанкхāрикам екам.</string>
 
@@ -172,7 +172,7 @@
 
 
 
-    <string name="textButtonRupavacharachitani">Сознание тонкоматериальной среды \n (Рупāвачарачиттāни) — 15</string>
+    <string name="textButtonRupavacharachitani">\n <b>Сознание тонкоматериальной среды \n (Рупāвачарачиттāни) — 15</b> \n</string>
     <string name="textDiscribeRupavacharachitani">СОЗНАНИЕ ТОНКОМАТЕРИАЛЬНОЙ СРЕДЫ (рупāвачарачиттāни):
         Эта среда сознания включает все читты, которые «перемещаются в» или относятся к тонкоматериальному
         плану существования  (рупабхуми)  — к  измерениям, в  которых грубая материя отсутствует,
@@ -201,7 +201,7 @@
         (уггаханимитта), а из него в свою очередь сформируется образ-копия,
         который берётся в качестве объекта джхāны.</string>
 
-    <string name="textButtonRupavacaraKusala">Благотворное сознание \n (рупавачара-кусалачиттани) — 5</string>
+    <string name="textButtonRupavacaraKusala">\n <b>Благотворное сознание \n (рупавачара-кусалачиттани) — 5</b> \n</string>
     <string name="textDiscribeRupavacaraKusala">
         Эта категория содержит пять читт, различаемых по типу пяти джхāн,
         где каждая джхāна содержит различные типы читт. Джхāны пронумерованы в данном порядке по двум причинам:
@@ -210,12 +210,12 @@
         переживаются мирянами и практикующими (секкха), которые развили
         джхāны непосредственно в  этой жизни.</string>
 
-    <string name="textButtonRupavacaraVipaka">Результирующее сознание \n (випака-читтāни) — 5</string>
+    <string name="textButtonRupavacaraVipaka">\n <b>Результирующее сознание \n (випака-читтāни) — 5</b> \n</string>
     <string name="textDiscribeRupavacaraVipaka">
         Результирующие читты (випāка) тонкоматериальной среды возникают только в тонкоматериальном мире,
         в существах, которые переродились там вследствие развития джхāн.</string>
 
-    <string name="textButtonRupavacaraKriya">Функциональное сознание \n (крийа-читтāни) — 5</string>
+    <string name="textButtonRupavacaraKriya">\n <b>Функциональное сознание \n (крийа-читтāни) — 5</b> \n</string>
     <string name="textDiscribeRupavacaraKriya">
         Пять функциональных (крийā) читт джхāн испытываются только арахантами, которые достигли джхāн.</string>
 

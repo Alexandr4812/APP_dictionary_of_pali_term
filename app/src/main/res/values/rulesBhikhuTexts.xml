@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="buttonSangkhadisesaText">сангхадисеса</string>
+    <string name="buttonSangkhadisesaText">\n <b>сангхадисеса</b> \n</string>
     <string name="buttonParajikaDetails">нажмите, чтобы более подробно узнать о правиле</string>
 
     <string name="buttonInformationAboutUpasampada"> \n <b>Общая информация \n инструкции для бхикху \n \n ИНСТРУКЦИИ К НАРУШЕНИЯМ \n (āpatti)</b> \n \n VASSĀVĀSA \n uposatha \n Kathina \n Pavāraṇā \n </string>

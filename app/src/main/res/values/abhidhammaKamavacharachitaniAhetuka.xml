@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="textButtonAhetukaUnwholsomeResult">Неблаготворное результирующее сознание \n (Акусалавипāкачиттāни) — 7</string>
-    <string name="textButtonAhetukaWholsomeResult">Благотворное результирующее бескоренное сознание \n (Кусалавипāка-ахетукачиттāни) — 8</string>
-    <string name="textButtonAhetukaFunktion">Функциональное бескоренное сознание \n (Ахетукакирийа-читтāни) — 3</string>
+    <string name="textButtonAhetukaUnwholsomeResult">\n <b>Неблаготворное результирующее сознание \n (Акусалавипāкачиттāни) — 7</b> \n</string>
+    <string name="textButtonAhetukaWholsomeResult">\n <b>Благотворное результирующее бескоренное сознание \n (Кусалавипāка-ахетукачиттāни) — 8</b> \n</string>
+    <string name="textButtonAhetukaFunktion">\n <b>Функциональное бескоренное сознание \n (Ахетукакирийа-читтāни) — 3</b> \n</string>
 
     <string name="textDiscribeAhetukaUnwholsomeResult">
         НЕБЛАГОТВОРНОЕ РЕЗУЛЬТИРУЮЩЕЕ СОЗНАНИЕ (акусалавипāкачиттāни): \n

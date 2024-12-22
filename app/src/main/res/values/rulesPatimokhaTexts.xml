@@ -501,10 +501,10 @@ III	Ālapito, Jīvati, Gahite ca attamano \n
     \n \n \n \n
     </string>
 
-    <string name="button_patimokha">Правила патимокхи</string>
-    <string name="buttonAboutParajika">О ПРАВИЛАХ ПАТИМОККХИ</string>
-    <string name="buttonaboutParajikaNakazanie">СИСТЕМА НАКАЗАНИЙ, ПРЕДУСМАТРИВАЕМАЯ ПРАВИЛАМИ ПАТИМОККХИ </string>
-    <string name="buttonPatimokhaRazdelParajika">ПАРАДЖИКА</string>
+    <string name="button_patimokha">\n <b>Правила патимокхи</b> \n</string>
+    <string name="buttonAboutParajika">\n <b>О ПРАВИЛАХ ПАТИМОККХИ</b> \n</string>
+    <string name="buttonaboutParajikaNakazanie">\n <b>СИСТЕМА НАКАЗАНИЙ, ПРЕДУСМАТРИВАЕМАЯ ПРАВИЛАМИ ПАТИМОККХИ</b> \n </string>
+    <string name="buttonPatimokhaRazdelParajika">\n <b>ПАРАДЖИКА</b> \n</string>
     <string name="buttonParajika1">1 \n Если какой-либо монах, участвующий в обучении и образе жизни монахов, без отказа от обучения, без открытого объявления о своей слабости, совершит половой акт с женщиной или с самкой животного, такой монах потерпел поражение и более не состоит в сангхе.</string>
     <string name="textViewHintParajika">Нажмите на правило, для того, чтобы увидеть правило на языке пали и причины его возникновения.</string>
     <string name="buttonAboutSanghadisesaText">о правилах сангхадисесы</string>

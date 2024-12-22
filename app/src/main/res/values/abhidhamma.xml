@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonAbhidhammaChetasika">54 \n ментальных фактора \n (chetasika)</string>
+    <string name="buttonAbhidhammaChetasika"> \n <b>54 \n ментальных фактора \n (chetasika)</b> \n</string>
     <string name="button_kontakt">1 \nКонтакт \n(phassa)</string>
     <string name="universal">Этически вериабельные \nУниверсальные 7</string>
     <string name="button_kontakt_harakteristika">Характеристика</string>
@@ -89,7 +89,7 @@
     <string name="text_for_jivitindriya_proyavlenie">ПРОЯВЛЕНИЕ: установление присутствия ассоциированных ментальных состояний.</string>
     <string name="text_for_jivitindriya_prichina">НЕПОСРЕДСТВЕННАЯ ПРИЧИНА: ментальные состояния, которые необходимо поддерживать.</string>
 
-    <string name="buttonAbhidhammaChetasikaEtichVerFakt">13 \n этически вериабельных ментальных факторов \n(Аннасамāначетасика)</string>
+    <string name="buttonAbhidhammaChetasikaEtichVerFakt">\n <b>13 \n этически вериабельных ментальных факторов \n(Аннасамāначетасика)</b> \n</string>
 
 
     <string name="button_vnimanie">7 \nВнимание \n(манасикāра)</string>
@@ -112,7 +112,7 @@
     <string name="text_for_vnimanie_proyavlenie">ПРОЯВЛЕНИЕ: проявляется как конфронтация с объектом.</string>
     <string name="text_for_vnimanie_prichina">НЕПОСРЕДСТВЕННАЯ ПРИЧИНА: объект.</string>
     <string name="buttonChetasikaKontaktKombinaciya">Ассоциация с сознанием</string>
-    <string name="textButtonChittas">89 или 121 \n видов сознания \n (chitta)</string>
+    <string name="textButtonChittas">\n <b>89 или 121 \n видов сознания \n (chitta)</b> \n</string>
 
     <string name="text_for_chittas">
         Палийское слово «читта» происходит от глагольного

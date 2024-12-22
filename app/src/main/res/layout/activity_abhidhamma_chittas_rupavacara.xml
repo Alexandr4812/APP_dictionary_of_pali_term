@@ -133,6 +133,12 @@
                 android:text=""
                 android:visibility="invisible"/>
 
+            <ImageView
+                android:id="@+id/imageVievAbhidhammaRupavacara2"
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+
             <Button
                 android:id="@+id/button_abhidhamma_chittas_rupavacara4"
                 style="@style/button_activity_chetasika"
