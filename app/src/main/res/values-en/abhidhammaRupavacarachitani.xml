@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="forTextViewZagolovokRupavacaraKusala">5 Beneficial Consciousnesses of the Subtle-Material Sphere \n (Rupāvacaracittāni)</string>
+    <string name="forTextViewZagolovokRupavacaraKriya">5 Functional Consciousnesses of the Fine-Material Sphere \n (Rūpāvacara-kriyācittāni)</string>
+    <string name="forTextViewZagolovokRupavacaraVipaka">5 Resultant Consciousnesses of the Fine-Material Sphere \n (Rūpāvacara-vipākacittāni)</string>
 
     <string name="textButton1RupavacaraKusala">
     1 \n Wholesome consciousness of the first jhāna accompanied by initial application, sustained application,
@@ -22,7 +24,51 @@
     5. \n Wholesome consciousness of the fifth jhāna accompanied by equanimity and one-pointedness. \n\n
     Upekkhā-ekaggatā-sahitaṃ pañcamajjhāna-kusalacittaṃ cā ti</string>
     <string name="textButton6RupavacaraKusala">\n <b>About Jhana Factors</b> \n</string>
-    <string name="textButton7RupavacaraKusala">\n <b>Summary of Fine-Material Sphere Consciousness</b> \n</string>
+
+    <string name="textButton1RupavacaraVipaka">
+        1 \n Resultant consciousness of the first jhāna together with initial application, sustained application,
+        rapture, happiness, and one-pointedness. \n\n
+        Vitakka-vicāra-pīti-sukha-ekaggatā-sahitaṃ paṭhamajjhāna-vipākacitta.</string>
+    <string name="textButton2RupavacaraVipaka">
+        2. \n Resultant consciousness of the second jhāna together with sustained application, rapture,
+        happiness, and one-pointedness.  \n\n
+        Vicāra-pīti-sukha-ekaggatā-sahitaṃ dutiyajjhāna-vipākacitta.
+    </string>
+    <string name="textButton3RupavacaraVipaka">
+        3. \n Resultant consciousness of the third jhāna together with rapture, happiness, and one-pointedness. \n\n
+        Pīti-sukha-ekaggatā-sahitaṃ tatiyajjhāna-vipākacitta.</string>
+    <string name="textButton4RupavacaraVipaka">
+        4  \n  Resultant consciousness of the fourth jhāna together with happiness and
+        one-pointedness. \n\n
+        Sukha-ekaggatā-sahitaṃ catutthajjhāna-vipākacitta.</string>
+    <string name="textButton5RupavacaraVipaka">
+        5. \n  Resultant consciousness of the fifth jhāna together with equanimity and one-pointedness.  \n\n
+        Upekkhā-ekaggatā-sahitaṃ pañcamajjhāna-vipākacitta ca ti</string>
+    <string name="textButton6RupavacaraVipaka">\n <b>About the factors of jhāna</b> \n
+</string>
+
+    <string name="textButton1RupavacaraKriya">
+        1 \n Functional consciousness of the first jhāna together with initial application, sustained application,
+        rapture, happiness, and one-pointedness. \n\n
+        Vitakka-vicāra-pīti-sukha-ekaggatā-sahitaṃ paṭhamajjhāna-kriyācitta.</string>
+    <string name="textButton2RupavacaraKriya">
+        2. \n Functional consciousness of the second jhāna together with sustained application, rapture,
+        happiness, and one-pointedness.  \n\n
+        Vicāra-pīti-sukha-ekaggatā-sahitaṃ dutiyajjhāna-kriyācitta.
+    </string>
+    <string name="textButton3RupavacaraKriya">
+        3. \n Functional consciousness of the third jhāna together with rapture, happiness, and one-pointedness. \n\n
+        Pīti-sukha-ekaggatā-sahitaṃ tatiyajjhāna-kriyācitta.</string>
+    <string name="textButton4RupavacaraKriya">
+        4  \n  Functional consciousness of the fourth jhāna together with happiness and
+        one-pointedness. \n\n
+        Sukha-ekaggatā-sahitaṃ catutthajjhāna-kriyācitta.</string>
+    <string name="textButton5RupavacaraKriya">
+        5. \n  Functional consciousness of the fifth jhāna together with equanimity and one-pointedness.  \n\n
+        Upekkhā-ekaggatā-sahitaṃ pañcamajjhāna-kriyācitta ca ti</string>
+    <string name="textButton6RupavacaraKriya">\n <b>About the factors of jhāna</b> \n
+</string>
+
 
 
     <string name="textRupavacaraKusala1">

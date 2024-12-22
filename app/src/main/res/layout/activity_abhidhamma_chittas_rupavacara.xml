@@ -132,6 +132,33 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/button_abhidhamma_chittas_rupavacara4"
+                style="@style/button_activity_chetasika"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="toShowInfo"
+                android:text="@string/textButtonRupavacaraInfo"
+                android:textSize="13dp"
+                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
     </ScrollView>
+
+    <WebView
+        android:id="@+id/webViewRupavachara"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        android:scrollbarThumbVertical="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Включаем макет с кнопками -->
+    <include
+        layout="@layout/buttons_layout_for_live_buddha_new"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

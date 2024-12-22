@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title></title>
+
+<style type="text/css">
+.a______ {
+mso-style-name:"Обычный";
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h1 {
+line-height:115%;
+margin:1.0pt;
+margin-top:20.0pt;
+margin-bottom:6.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:20.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h2 {
+line-height:115%;
+margin:1.0pt;
+margin-top:18.0pt;
+margin-bottom:6.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:16.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h3 {
+line-height:115%;
+margin:1.0pt;
+margin-top:16.0pt;
+margin-bottom:4.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:14.0pt;
+color:#434343;
+font-weight:normal;
+border:none;
+}
+h4 {
+line-height:115%;
+margin:1.0pt;
+margin-top:14.0pt;
+margin-bottom:4.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:12.0pt;
+color:#666666;
+font-weight:normal;
+border:none;
+}
+h5 {
+line-height:115%;
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:4.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:#666666;
+font-weight:normal;
+border:none;
+}
+h6 {
+line-height:115%;
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:4.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:#666666;
+font-style:italic;
+font-weight:normal;
+border:none;
+}
+.a_______ {
+mso-style-name:"Название";
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:26.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+.a___________ {
+mso-style-name:"Подзаголовок";
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:16.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:15.0pt;
+color:#666666;
+font-weight:normal;
+border:none;
+}
+
+.tm10 {
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+line-height:100%;
+text-align:center;
+}
+.tm11 {
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+line-height:100%;
+text-align:center;
+}
+.tm12 {
+font-size:14.0pt;
+font-family:"Times New Roman";
+font-weight:bold;
+}
+.tm13 {
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+line-height:100%;
+}
+.tm14 {
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+line-height:100%;
+}
+.tm15 {
+font-size:14.0pt;
+font-family:"Times New Roman";
+}
+.tm16 {
+margin-top:1.0pt;
+margin-bottom:6.0pt;
+line-height:100%;
+text-align:center;
+}
+.tm17 {
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+margin-top:1.0pt;
+margin-bottom:6.0pt;
+line-height:100%;
+text-align:center;
+}
+.tm18 {
+font-style:italic;
+color:#222222;
+font-size:14.0pt;
+font-family:"Times New Roman";
+font-weight:bold;
+}
+.tm19 {
+font-style:italic;
+color:#222222;
+font-size:14.0pt;
+font-family:"Times New Roman";
+}
+.tm20 {
+color:#222222;
+font-size:14.0pt;
+font-family:"Times New Roman";
+font-weight:bold;
+}
+.tm21 {
+margin-top:1.0pt;
+margin-bottom:6.0pt;
+line-height:100%;
+text-align:justify;
+}
+.tm22 {
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+margin-top:1.0pt;
+margin-bottom:6.0pt;
+line-height:100%;
+text-align:justify;
+}
+.tm23 {
+color:#222222;
+font-size:14.0pt;
+font-family:"Times New Roman";
+}
+.tm24 {
+margin-top:12.0pt;
+margin-bottom:12.0pt;
+line-height:100%;
+text-align:justify;
+}
+.tm25 {
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+margin-top:12.0pt;
+margin-bottom:12.0pt;
+line-height:100%;
+text-align:justify;
+}
+.tm26 {
+font-style:italic;
+color:#38761D;
+font-size:14.0pt;
+font-family:"Times New Roman";
+}
+.tm27 {
+border:none;
+}
+.tm28 {
+margin-top:12.0pt;
+margin-bottom:12.0pt;
+line-height:120%;
+text-align:center;
+}
+.tm29 {
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+margin-top:12.0pt;
+margin-bottom:12.0pt;
+line-height:120%;
+text-align:center;
+}
+.tm30 {
+margin-top:12.0pt;
+margin-bottom:12.0pt;
+line-height:120%;
+}
+.tm31 {
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+margin-top:12.0pt;
+margin-bottom:12.0pt;
+line-height:120%;
+}
+.tm32 {
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+}
+.tm33 {
+font-style:italic;
+font-size:14.0pt;
+font-family:"Times New Roman";
+}
+
+body {
+            background-color: #FFE082;
+        }
+
+body {
+            margin: 5;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+img {
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+        var initialFontSize = 14; // Установите начальный размер шрифта
+
+        // Функция для установки начального размера шрифта
+        function setInitialFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var computedStyle = window.getComputedStyle(element, null);
+                var currentSize = parseFloat(computedStyle.getPropertyValue('font-size'));
+                // Увеличиваем размер до начального значения
+                var scale = initialFontSize / currentSize;
+                element.style.fontSize = initialFontSize + 'pt';
+            });
+        }
+
+        function increaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = (fontSize + 2) + 'px';
+            });
+        }
+
+        function decreaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = Math.max(8, fontSize - 2) + 'px';
+            });
+        }
+
+        // Устанавливаем начальный размер шрифта после загрузки страницы
+        window.onload = setInitialFontSize;
+    </script>
+
+<p class="tm11"><strong><span class="tm12"></span></strong>
+<img src="liveEn12_&#1092;&#1072;&#1081;&#1083;&#1099;/img00001.JPG" width="752" height="510" border="3" hspace="15" vspace="15" alt="" /></p>
+<p class="tm14"><strong><span class="tm12">&#160;</span></strong></p>
+<p class="tm11"><strong><span class="tm12">&#160;</span></strong></p>
+<p class="tm11"><strong><span class="tm12">Namo tassa bhagavato arahato samm&#257;sambuddhassa</span></strong></p>
+<p class="tm11"><span class="tm15">Homage to the Blessed One, the Worthy One, the Fully Enlightened One.</span></p>
+<p class="tm11"><span class="tm15">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">Namo tassa bhagavato arahato samm&#257;sambuddhassa</span></strong></p>
+<p class="tm11"><span class="tm15">Homage to the Blessed One, the Worthy One, the Fully Enlightened One.</span></p>
+<p class="tm11"><span class="tm15">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">Namo tassa bhagavato arahato samm&#257;sambuddhassa</span></strong></p>
+<p class="tm11"><span class="tm15">Homage to the Blessed One, the Worthy One, the Fully Enlightened One.</span></p>
+<p class="tm11"><span class="tm15">&#160;</span></p>
+<p class="tm11"><span class="tm15">&#160;</span></p>
+<p class="tm17"><strong><em><span class="tm18">Sabbap&#257;passa akara&#7751;a&#7747;,</span></em></strong></p>
+<p class="tm17"><em><span class="tm19">To abstain from all evil;</span></em></p>
+<p class="tm17"><strong><em><span class="tm18">Kusalassa upasampad&#257;</span></em><span class="tm20">;</span></strong></p>
+<p class="tm17"><em><span class="tm19">To cultivate good;</span></em></p>
+<p class="tm17"><strong><em><span class="tm18">Sacitta pariyo dapana&#7747;,</span></em></strong></p>
+<p class="tm17"><em><span class="tm19">To purify one&#39;s mind;</span></em></p>
+<p class="tm17"><strong><em><span class="tm18">Eta&#7747; buddh&#257;na s&#257;sana&#7747;</span></em></strong></p>
+<p class="tm17"><strong><span class="tm12"></span></strong><em><span class="tm19">This is the teaching of the Buddhas.</span></em></p>
+<p class="tm17"><em><span class="tm19">&#160;</span></em></p>
+<p class="tm22"><span class="tm23">In this image, the moment is captured when the Bodhisatta approaches the ascetic and meditation teacher, Uddaka R&#257;maputta, with a request to teach him his art.</span></p>
+<p class="tm22"><span class="tm23">Alternatively, Uddaka R&#257;maputta offers the Bodhisatta, who had already fully mastered the knowledge he received from him, to lead the training of his group of followers.</span></p>
+<p class="tm22"><span class="tm23">&#160;</span></p>
+<p class="tm25"><span class="tm23">After leaving the community led by &#256;&#7735;&#257;ra and in his pursuit of the bliss of Nibb&#257;na, known as the sublime peace (santi-vara), the Bodhisatta continued his quest until
+he met the leader of another community named Udaka, son of R&#257;ma. He then asked Udaka for permission to learn from him, saying: &#8220;Friend, I wish to lead the holy life according to this doctrine.&#8221;</span></p>
+<p class="tm25"><span class="tm23">The community leader Udaka, son of R&#257;ma, responded, granting permission: &#8220;Friend, please practice according to our doctrine! Our doctrine, if practiced diligently by learned individuals,
+will enable them to realize through higher knowledge the views of the teacher (&#257;cariya-v&#257;da) in a short time and live happily.&#8221;</span></p>
+<p class="tm25"><span class="tm23">Thus, the Bodhisatta wasted no time in learning the doctrine and practice of Udaka, the community leader. Just as with &#256;&#7735;&#257;ra, the leader of the previous community, the Bodhisatta,
+being a person of great intelligence, easily mastered the doctrine and practice in theory. Simply by repeating what the teacher uttered with barely perceptible movements of his lips, the Bodhisatta reached the point where
+he could say, &#8220;I understand!&#8221; In fact, he declared, &#8220;I understand! I have realized the path!&#8221; and this was confirmed by the community leader Udaka and his disciples.</span></p>
+<p class="tm25"><span class="tm23">Reflecting on how Udaka explained the path of practice according to the traditional method inherited from his father, which leads to the absorption in the state of neither perception nor
+non-perception (nevasa&ntilde;&ntilde;&#257;-n&#257;sa&ntilde;&ntilde;&#257;yatana-jh&#257;na), the Bodhisatta realized the following: &#8220;It seems that R&#257;ma, Udaka&#8217;s late father, did not merely memorize and
+believe what others said about the path of practice leading to the absorption in the state of neither perception nor non-perception. In fact, the teacher R&#257;ma, Udaka&#8217;s father, likely personally attained and realized
+the eight worldly absorptions.&#8221;</span></p>
+<p class="tm25"><em><span class="tm26">As the commentary explains:<br />When the community leader Udaka discussed the doctrine with the Bodhisatta, he had not yet attained the eight absorptions. He was passing on to the Bodhisatta
+what his father R&#257;ma had told him. When the Bodhisatta studied the teaching and within two or three days realized the eight worldly absorptions, including the highest one &#8212; the absorption in the state of neither
+perception nor non-perception, he left Udaka.</span></em></p>
+<p class="tm25"><em><span class="tm26">As for Udaka, it was only after the Bodhisatta&#39;s departure that he was struck by a deep spiritual urgency (sa&#7745;vega). He began to make efforts to attain the absorptions. As is
+fitting for someone with previous meditation experience, he attained the absorptions, up to the state of neither perception nor non-perception. This is explicitly mentioned in the sub-commentary to MN 26. This fact clarifies
+the Bodhisatta&#39;s reflections on Udaka&#39;s father, R&#257;ma, and his inquiry about the great teacher R&#257;ma during their discussions with Udaka.</span></em></p>
+<p class="tm25"><span class="tm15">The Bodhisatta once again approached the community leader Udaka with a direct question: &#8220;Friend, to what extent did your father, the teacher R&#257;ma, say that he himself had realized
+this doctrine of his?&#8221;</span></p>
+<p class="tm25"><span class="tm15">Udaka replied that his father had attained the absorption in the state of neither perception nor non-perception.</span></p>
+<p class="tm25"><span class="tm15">Then the Bodhisatta had a thought: &#8220;Not only did Udaka&#8217;s father, the teacher R&#257;ma, have firm enough faith to attain this absorption, but I also possess such faith that leads
+to it. Not only did he have the energy, mindfulness, concentration, and wisdom sufficient to achieve this absorption, but I too have the same energy, mindfulness, concentration, and wisdom.&#8221;</span></p>
+<p class="tm25"><span class="tm15">Udaka&#8217;s father, the teacher R&#257;ma, said that he had personally realized the eight worldly absorptions up to the state of neither perception nor non-perception with higher knowledge
+(abhi&ntilde;&ntilde;&#257;) and abided in that state with bliss. The Bodhisatta decided that he too should attempt to attain these eight worldly absorptions.</span></p>
+<p class="tm25"><span class="tm15">With this aim, he began to diligently practice the preparatory exercises (kasi&#7751;a-parikamma). Within two or three days, he reached the same state as Udaka&#8217;s father, the teacher
+R&#257;ma &#8212; the eight worldly absorptions up to the state of neither perception nor non-perception, and abided in that state with bliss.</span></p>
+<p class="tm25"><span class="tm15">Then the Bodhisatta returned to the community leader Udaka and asked: &#8220;Friend, did your father, the teacher R&#257;ma, say that through this practice he personally attained the eight
+worldly absorptions with higher knowledge and abided in that state with bliss?&#8221;</span></p>
+<p class="tm25"><span class="tm15">When Udaka confirmed this, the Bodhisatta joyfully informed him: &#8220;Friend, through this practice, I too have personally attained the eight worldly absorptions up to the state of neither
+perception nor non-perception with higher knowledge and abided in that state with bliss.&#8221;</span></p>
+<p class="tm25"><span class="tm15">And then, as befits a noble person free from envy and selfishness, Udaka, the community leader, spoke words of joyful altruism: &#8220;We have seen with our own eyes a fellow spiritual practitioner
+as sharp-minded as you. It is a great fortune for us, friend!&#8221;</span></p>
+<p class="tm22"><span class="tm15">&#160;</span></p>
+<p class="tm25"><span class="tm15"></span><strong><span class="tm12">Udaka offers him leadership<br /></span></strong><span
+ class="tm15">As mentioned earlier, the community leader Udaka not only spoke words of congratulations but went further, saying: &#8220;Excellent person, what my father, the teacher R&#257;ma, himself realized with higher
+knowledge and taught, you, excellent person, have also realized with higher knowledge. What you yourself have realized with higher knowledge, my father, the teacher R&#257;ma, himself realized with higher knowledge and taught.
+Thus, the doctrine that my father realized, you have realized. The doctrine that you have realized, my father, the teacher R&#257;ma, realized as well. In this way, you are like my father, and my father is like you. Please,
+friend, lead this great community.&#8221;</span></p>
+<p class="tm25"><span class="tm15">Saying this, he entrusted the entire community to the Bodhisatta. Thus, Udaka appointed his spiritual companion, the Bodhisatta, as his own teacher. Not only did he entrust the whole community
+to him, but he also honored him with the same respect that &#256;&#7735;&#257;ra, the leader of the previous community, had shown, as mentioned earlier.</span></p>
+<p class="tm22"><span class="tm15"></span></p>
+<p class="tm25"><span class="tm15"></span><strong><span class="tm12">The Bodhisatta&#39;s departure<br /></span></strong><span
+ class="tm15">Having made great efforts, the Bodhisatta attained the eight worldly absorptions. Since he already had experience with absorptions in his previous lives and was extremely intelligent, he soon reflected on the
+nature and prospects of these eight absorptions. He fully realized them, up to the absorption in the sphere of neither perception nor non-perception in this life and the rebirth that would occur in the Brahma realm of the
+Sphere of Neither Perception Nor Non-Perception (Nevasa&ntilde;&ntilde;&#257;-n&#257;sa&ntilde;&ntilde;&#257;yatana) in the future.</span></p>
+<p class="tm25"><span class="tm15">Thus, he came to the conclusion that these eight worldly absorptions are part of the cycle of suffering. He also reflected in this way: &#8220;The accumulation of these attainments cannot
+lead to disillusionment with the cycle of suffering, to renunciation, to the cessation of defilements such as craving (r&#257;ga), hatred (dosa), etc., to the extinguishing of all these defilements, to the knowledge of all
+that should be known, to the attainment of the knowledge of the four paths, or to the realization of Nibb&#257;na. In fact, these eight attainments lead, at best, only to the Brahma realm of the Sphere of Neither Perception
+Nor Non-Perception, where a being lives for 84,000 great eons (mah&#257;-kappa), but they cannot bring any benefit beyond this. The highest Brahma realm of the Sphere of Neither Perception Nor Non-Perception, where the same
+absorption is attained, is a realm that is not free from the dangers of birth, aging, and death. Essentially, it is already a realm surrounded by the traps of the king of death.&#8221;</span></p>
+<p class="tm25"><span class="tm15">A person suffering from intense hunger initially enjoys eating a large dish of delicious food. But then he becomes full and feels repelled by it due to bile or phlegm issues or because a
+fly lands on the food, and he leaves it without a second thought about taking another bite. Similarly, the Bodhisatta, having made efforts and attained these eight worldly absorptions in two or three days without much difficulty,
+initially abided in them and enjoyed them. But as soon as he realized the aforementioned flaws, such as their belonging to the cycle of suffering, he completely lost interest in the practice of these eight attainments, even
+using one of the five types of mastery. He repeatedly rejected these attainments, saying, &#8220;These eight attainments are useless! These eight attainments are useless!&#8221; And, growing weary of them, he left the community
+leader Udaka.</span></p>
+<p class="tm22"><span class="tm15">&#160;</span></p>
+<p class="tm25"><span class="tm15">Let us now examine how the meetings with the teachers &#256;&#7735;&#257;ra K&#257;l&#257;ma and Udaka R&#257;maputta are described in the P&#257;li Canon.</span></p>
+<p class="tm22"><strong><span class="tm12">&#160;</span></strong></p>
+<p class="tm22"><span class="tm15">&#160;</span></p>
+<p class="tm17"><strong><span class="tm12"></span></strong>Ariyapariyesana Sutta: The Noble Search</p>
+<p class="tm29">&#1052;&#1053; 26</p>
+<p class="tm31"><br /></p>
+<p class="tm31">&laquo;I have heard that on one occasion the Blessed One was staying at Savatthi, in Jeta&#39;s Grove, Anathapindika&#39;s monastery. Then early in the morning, having put on his robes and carrying his bowl
+&amp; outer robe, he went into Savatthi for alms. Then a large number of monks went to Ven. Ananda and said, &quot;It has been a long time, friend Ananda, since we have heard a Dhamma talk in the Blessed One&#39;s presence.
+It would be good if we could get to hear a Dhamma talk in the Blessed One&#39;s presence.&quot;</p>
+<p class="tm31">&quot;In that case, venerable ones, go to the hermitage of Rammaka the brahman. Perhaps you will get to hear a Dhamma talk in the Blessed One&#39;s presence.&quot;</p>
+<p class="tm31">&quot;As you say, friend,&quot; the monks replied to Ven. Ananda and left.</p>
+<p class="tm31">Then the Blessed One, having gone for alms, after his meal, on returning from his alms round, said to Ven. Ananda, &quot;Ananda, let&#39;s go to the Eastern Park, the palace of Migara&#39;s mother, for the
+day&#39;s abiding.&quot;</p>
+<p class="tm31">&quot;As you say, lord,&quot; Ven. Ananda replied to the Blessed One.</p>
+<p class="tm31">So the Blessed One, together with Ven. Ananda, went to the Eastern Park, the palace of Migara&#39;s mother, for the day&#39;s abiding. Then in the evening, emerging from seclusion, he said to Ven. Ananda, &quot;Ananda,
+let&#39;s go to the Eastern Gatehouse to bathe our limbs.&quot;</p>
+<p class="tm31">&quot;As you say, lord,&quot; Ven. Ananda replied to the Blessed One.</p>
+<p class="tm31">So the Blessed One, together with Ven. Ananda, went to the Eastern Gatehouse to bathe his limbs. Having bathed his limbs at the Eastern Gatehouse, coming out of the water, he stood in his lower robe, drying
+his limbs. Then Ven. Ananda said to him, &quot;Lord, the hermitage of Rammaka the brahman is not far away. Pleasing is the hermitage of Rammaka the brahman. Delightful is the hermitage of Rammaka the brahman. It would be good
+if the Blessed One went to the hermitage of Rammaka the brahman out of sympathy.&quot; The Blessed One acquiesced through silence.</p>
+<p class="tm31">So the Blessed One went to the hermitage of Rammaka the brahman. Now at that time a large number of monks had gathered in the hermitage of Rammaka the brahman for a Dhamma discussion. The Blessed One stood
+outside the door waiting for the discussion to end. On knowing that the discussion had ended, clearing his throat, he tapped at the door. The monks opened the door for him. Entering the hermitage of Rammaka the brahman, the
+Blessed One sat down on a seat made ready. As he was sitting there, he addressed the monks: &quot;For what discussion are you gathered together here? In the midst of what discussion have you been interrupted?&quot;</p>
+<p class="tm31">&quot;Lord, our interrupted Dhamma discussion was about the Blessed One himself, and then the Blessed One arrived.&quot;</p>
+<p class="tm31">&quot;Good, monks. It&#39;s fitting that you, as sons of good families who have gone forth out of faith from home to the homeless life, should gather for Dhamma discussion. When you have gathered you have two
+duties: either Dhamma discussion or noble silence. [1]</p>
+<p class="tm31">&quot;Monks, there are these two searches: ignoble search &amp; noble search. And what is ignoble search? There is the case where a person, being subject himself to birth, seeks [happiness in] what is likewise
+subject to birth. Being subject himself to aging... illness... death... sorrow... defilement, he seeks [happiness in] what is likewise subject to illness... death... sorrow... defilement.</p>
+<p class="tm31">&quot;And what may be said to be subject to birth? Spouses &amp; children are subject to birth. Men &amp; women slaves... goats &amp; sheep... fowl &amp; pigs... elephants, cattle, horses, &amp; mares... gold
+&amp; silver are subject to birth. Subject to birth are these acquisitions, and one who is tied to them, infatuated with them, who has totally fallen for them, being subject to birth, seeks what is likewise subject to birth.</p>
+<p class="tm31">&quot;And what may be said to be subject to aging... illness... death... sorrow... defilement? Spouses &amp; children... men &amp; women slaves... goats &amp; sheep... fowl &amp; pigs... elephants, cattle,
+horses, &amp; mares... gold &amp; silver [2] are subject to aging... illness... death... sorrow... defilement. Subject to aging... illness... death... sorrow... defilement are these acquisitions, and one who is tied to them,
+infatuated with them, who has totally fallen for them, being subject to birth, seeks what is likewise subject to aging... illness... death... sorrow... defilement. This is ignoble search.</p>
+<p class="tm31">&quot;And what is the noble search? There is the case where a person, himself being subject to birth, seeing the drawbacks of birth, seeks the unborn, unexcelled rest from the yoke: Unbinding. Himself being
+subject to aging... illness... death... sorrow... defilement, seeing the drawbacks of aging... illness... death... sorrow... defilement, seeks the aging-less, illness-less, deathless, sorrow-less, undefiled, unexcelled rest
+from the yoke: Unbinding. This is the noble search.</p>
+<p class="tm31">&quot;I, too, monks, before my Awakening, when I was an unawakened bodhisatta, being subject myself to birth, sought what was likewise subject to birth. Being subject myself to aging... illness... death...
+sorrow... defilement, I sought [happiness in] what was likewise subject to illness... death... sorrow... defilement. The thought occurred to me, &#39;Why do I, being subject myself to birth, seek what is likewise subject to
+birth? Being subject myself to aging... illness... death... sorrow... defilement, why do I seek what is likewise subject to illness... death... sorrow... defilement? What if I, being subject myself to birth, seeing the drawbacks
+of birth, were to seek the unborn, unexcelled rest from the yoke: Unbinding? What if I, being subject myself to aging... illness... death... sorrow... defilement, seeing the drawbacks of aging... illness... death... sorrow...
+defilement, were to seek the aging-less, illness-less, deathless, sorrow-less,, unexcelled rest from the yoke: Unbinding?&#39;</p>
+<p class="tm31">&quot;So, at a later time, while still young, a black-haired young man endowed with the blessings of youth in the first stage of life &#8212; and while my parents, unwilling, were crying with tears streaming
+down their faces &#8212; I shaved off my hair &amp; beard, put on the ochre robe and went forth from the home life into homelessness.</p>
+<p class="tm31">&quot;Having thus gone forth in search of what might be skillful, seeking the unexcelled state of sublime peace, I went to Alara Kalama and, on arrival, said to him: &#39;Friend Kalama, I want to practice in
+this doctrine &amp; discipline.&#39;</p>
+<p class="tm31">&quot;When this was said, he replied to me, &#39;You may stay here, my friend. This doctrine is such that a wise person can soon enter &amp; dwell in his own teacher&#39;s knowledge, having realized it for
+himself through direct knowledge.&#39;</p>
+<p class="tm31">&quot;It was not long before I quickly learned the doctrine. As far as mere lip-reciting &amp; repetition, I could speak the words of knowledge, the words of the elders, and I could affirm that I knew &amp;
+saw &#8212; I, along with others.</p>
+<p class="tm31">&quot;I thought: &#39;It isn&#39;t through mere conviction alone that Alara Kalama declares, &quot;I have entered &amp; dwell in this Dhamma, having realized it for myself through direct knowledge.&quot; Certainly
+he dwells knowing &amp; seeing this Dhamma.&#39; So I went to him and said, &#39;To what extent do you declare that you have entered &amp; dwell in this Dhamma?&#39; When this was said, he declared the dimension of nothingness.</p>
+<p class="tm31">&quot;I thought: &#39;Not only does Alara Kalama have conviction, persistence, mindfulness, concentration, &amp; discernment. I, too, have conviction, persistence, mindfulness, concentration, &amp; discernment.
+What if I were to endeavor to realize for myself the Dhamma that Alara Kalama declares he has entered &amp; dwells in, having realized it for himself through direct knowledge.&#39; So it was not long before I quickly entered
+&amp; dwelled in that Dhamma, having realized it for myself through direct knowledge. I went to him and said, &#39;Friend Kalama, is this the extent to which you have entered &amp; dwell in this Dhamma, having realized it
+for yourself through direct knowledge?&#39;</p>
+<p class="tm31">&quot;&#39;Yes, my friend...&#39;</p>
+<p class="tm31">&quot;&#39;This, friend, is the extent to which I, too, have entered &amp; dwell in this Dhamma, having realized it for myself through direct knowledge.&#39;</p>
+<p class="tm31">&quot;&#39;It is a gain for us, my friend, a great gain for us, that we have such a companion in the holy life. So the Dhamma I declare I have entered &amp; dwell in, having realized it for myself through direct
+knowledge, is the Dhamma you declare you have entered &amp; dwell in, having realized it for yourself through direct knowledge. And the Dhamma you declare you have entered &amp; dwell in, having realized it for yourself through
+direct knowledge, is the Dhamma I declare I have entered &amp; dwell in, having realized it for myself through direct knowledge. The Dhamma I know is the Dhamma you know; the Dhamma you know is the Dhamma I know. As I am,
+so are you; as you are, so am I. Come friend, let us now lead this community together.&#39;</p>
+<p class="tm31">&quot;In this way did Alara Kalama, my teacher, place me, his pupil, on the same level with himself and pay me great honor. But the thought occurred to me, &#39;This Dhamma leads not to disenchantment, to dispassion,
+to cessation, to stilling, to direct knowledge, to Awakening, nor to Unbinding, but only to reappearance in the dimension of nothingness.&#39; So, dissatisfied with that Dhamma, I left.</p>
+<p class="tm31">&quot;In search of what might be skillful, seeking the unexcelled state of sublime peace, I went to Uddaka Ramaputta and, on arrival, said to him: &#39;Friend Uddaka, I want to practice in this doctrine &amp;
+discipline.&#39;</p>
+<p class="tm31">&quot;When this was said, he replied to me, &#39;You may stay here, my friend. This doctrine is such that a wise person can soon enter &amp; dwell in his own teacher&#39;s knowledge, having realized it for
+himself through direct knowledge.&#39;</p>
+<p class="tm31">&quot;It was not long before I quickly learned the doctrine. As far as mere lip-reciting &amp; repetition, I could speak the words of knowledge, the words of the elders, and I could affirm that I knew &amp;
+saw &#8212; I, along with others.</p>
+<p class="tm31">&quot;I thought: &#39;It wasn&#39;t through mere conviction alone that Rama declared, &quot;I have entered &amp; dwell in this Dhamma, having realized it for myself through direct knowledge.&quot; Certainly
+he dwelled knowing &amp; seeing this Dhamma.&#39; So I went to Uddaka and said, &#39;To what extent did Rama declare that he had entered &amp; dwelled in this Dhamma?&#39; When this was said, Uddaka declared the dimension
+of neither perception nor non-perception.</p>
+<p class="tm31">&quot;I thought: &#39;Not only did Rama have conviction, persistence, mindfulness, concentration, &amp; discernment. I, too, have conviction, persistence, mindfulness, concentration, &amp; discernment. What
+if I were to endeavor to realize for myself the Dhamma that Rama declared he entered &amp; dwelled in, having realized it for himself through direct knowledge.&#39; So it was not long before I quickly entered &amp; dwelled
+in that Dhamma, having realized it for myself through direct knowledge. I went to Uddaka and said, &#39;Friend Uddaka, is this the extent to which Rama entered &amp; dwelled in this Dhamma, having realized it for himself through
+direct knowledge?&#39;</p>
+<p class="tm31">&quot;&#39;Yes, my friend...&#39;</p>
+<p class="tm31">&quot;&#39;This, friend, is the extent to which I, too, have entered &amp; dwell in this Dhamma, having realized it for myself through direct knowledge.&#39;</p>
+<p class="tm31">&quot;&#39;It is a gain for us, my friend, a great gain for us, that we have such a companion in the holy life. So the Dhamma Rama declared he entered &amp; dwelled in, having realized it for himself through
+direct knowledge, is the Dhamma you declare you have entered &amp; dwell in, having realized it for yourself through direct knowledge. And the Dhamma you declare you have entered &amp; dwell in, having realized it for yourself
+through direct knowledge, is the Dhamma Rama declared he entered &amp; dwelled in, having realized it for himself through direct knowledge. The Dhamma he knew is the Dhamma you know; the Dhamma you know is the Dhamma he knew.
+As he was, so are you; as you are, so was he. Come friend, lead this community.&#39;</p>
+<p class="tm31">&quot;In this way did Uddaka Ramaputta, my companion in the holy life, place me in the position of teacher and pay me great honor. But the thought occurred to me, &#39;This Dhamma leads not to disenchantment,
+to dispassion, to cessation, to stilling, to direct knowledge, to Awakening, nor to Unbinding, but only to reappearance in the dimension of neither perception nor non-perception.&#39; So, dissatisfied with that Dhamma, I left...&raquo;</p>
+<p class="tm32"><br /></p>
+<p class="tm17"><strong><span class="tm12">&#160;</span></strong></p>
+<p class="tm17"><em><span class="tm33">&#160;</span></em></p>
+<p class="tm17"><em><span class="tm33">&#160;</span></em></p>
+<p class="tm17"><em><span class="tm33">&#160;</span></em></p>
+<p class="tm17"><em><span class="tm33">&#160;</span></em></p>
+<p class="tm17"><em><span class="tm33">&#160;</span></em></p>
+<p class="tm17"><span class="tm15">&#160;</span></p>
+<p class="tm22"><span class="tm15">&#160;</span></p>
+<p class="tm22"><span class="tm15">&#160;</span></p>
+</body>
+</html>

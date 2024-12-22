@@ -80,6 +80,32 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         loadHtmlPage(htmlFilePath);
     }
 
+    public void toShow11(View view) {
+        buttonBuddha.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/live_1_ru/live11.html";
+        } else {
+            htmlFilePath = "file:///android_asset/live_1_en/liveEn11.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void toShow12(View view) {
+        buttonBuddha.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/live_1_ru/live12.html";
+        } else {
+            htmlFilePath = "file:///android_asset/live_1_en/liveEn12.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
     }
