@@ -106,6 +106,19 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         loadHtmlPage(htmlFilePath);
     }
 
+
+    public void toShow13(View view) {
+        buttonBuddha.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/live_1_ru/live13.html";
+        } else {
+            htmlFilePath = "file:///android_asset/live_1_en/liveEn13.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
     }
