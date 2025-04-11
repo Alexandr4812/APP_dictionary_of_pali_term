@@ -8,7 +8,7 @@
     <string name="mainButtonTeachersLecture">Наставления учителя</string>
     <string name="mainButtonStofiDlyaDeclomacii">Строфы для декламаций</string>
     <string name="mainButtonShortSuttas">Палийский Канон</string>
-    <string name="mainButtonMonksRules">Монашеские правила и \n церемонии</string>
+    <string name="mainButtonMonksRules">Монашеские правила \n Правила для мирян \n Церемонии</string>
     <string name="todo" translatable="false">TODO</string>
     <string name="namerenie_sumedhi">1. Намерение Сумедхи</string>
     <string name="son_mahamayi">2. Сон Махамайи</string>
@@ -28,7 +28,7 @@
 
     <string name="utrennaia_pudga">\n <b>Утренняя вандана в монастыре Читтавивека</b> \n</string>
 
-
+    <string name="rukovodstvo_dlya_lay">\n <b>руководство для мирян</b> \n</string>
     <string name="rukovodstvo_dlya_samaner">\n <b>руководство для саманер</b> \n</string>
     <string name="sekhiya_n">\n <b>75 секхийа \n правила для тренировки</b> \n</string>
     <string name="pabaja_text">\n <b>паббаджжа \n строфы для церемонии становления саманерой</b> \n</string>

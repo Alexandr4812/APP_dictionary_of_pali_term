@@ -49,6 +49,9 @@ public class RulesActivity extends BaseActivityClass {
     public void toRulesBhikhuAct(View view){
         startIntentActivityAndFinish(RulesBhikkhuActivity.class);
     }
+    public void toRulesLayAct(View view){
+        startIntentActivityAndFinish(RulesLayActivity.class);
+    }
 
     @Override
     public void onBackPressed(){

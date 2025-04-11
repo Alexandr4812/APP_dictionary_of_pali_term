@@ -46,6 +46,14 @@
                 tools:ignore="ContentDescription" />
 
             <Button
+                android:id="@+id/button_rules_for_lay"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="toRulesLayAct"
+                android:text="@string/rukovodstvo_dlya_lay" />
+
+            <Button
                 android:id="@+id/button_rules_for_samanera"
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
