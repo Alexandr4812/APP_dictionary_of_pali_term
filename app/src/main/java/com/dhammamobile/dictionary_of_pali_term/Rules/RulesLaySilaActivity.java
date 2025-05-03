@@ -13,20 +13,20 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
-import com.dhammamobile.dictionary_of_pali_term.Declomation.DeklomationMainActivity;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
 
 import java.util.Locale;
 
-public class RulesLayActivity extends BaseActivityClass {
+public class RulesLaySilaActivity extends BaseActivityClass {
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         // Здесь вы можете добавить свои действия при изменении ориентации, если это необходимо
     }
-    LinearLayout buttonLay;
+
+    LinearLayout buttonLaySila;
     Button plusText, minusText;
     WebView webView; // Declare WebView as a class member for easy access
 
@@ -35,18 +35,18 @@ public class RulesLayActivity extends BaseActivityClass {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         updateLocale(); // Установка языка
-        setContentView(R.layout.activity_rules_lay);
+        setContentView(R.layout.activity_rules_lay_sila);
 
         // Скрытие панели навигации и панели состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        plusText = findViewById(R.id.buttonPlusLay);
-        minusText = findViewById(R.id.buttonMinusLay);
+        plusText = findViewById(R.id.buttonPlusLaySila);
+        minusText = findViewById(R.id.buttonMinusLaySila);
 
-        webView = findViewById(R.id.webViewLay);
+        webView = findViewById(R.id.webViewLaySila);
 
-        buttonLay = findViewById(R.id.button_layout_lay);
+        buttonLaySila = findViewById(R.id.button_layout_lay_sila);
 
         // Настройки WebView
         WebSettings webSettings = webView.getSettings();
@@ -61,48 +61,30 @@ public class RulesLayActivity extends BaseActivityClass {
         minusText.setOnClickListener(v -> {
             webView.evaluateJavascript("javascript:decreaseFontSize();", null);
         });
-
     }
     private void loadHtmlPage(String htmlFilePath) {
         webView.loadUrl(htmlFilePath);
     }
 
-    public void tisarana1(View view) {
-        buttonLay.setVisibility(View.VISIBLE);
+    public void sila1(View view) {
+        buttonLaySila.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/upasaka_ru/tisaranaRU.html";
+            htmlFilePath = "file:///android_asset/upasaka_ru/1_panchasila_ru.html";
         } else {
-            htmlFilePath = "file:///android_asset/upasaka_en/tisaranaEn.html";
+            htmlFilePath = "file:///android_asset/upasaka_en/1_panchasila_en.html";
         }
         loadHtmlPage(htmlFilePath);
     }
 
-    public void tisarana2(View view) {
-        buttonLay.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/upasaka_ru/tisaranaBoRu.html";
-        } else {
-            htmlFilePath = "file:///android_asset/upasaka_en/tisaranaBoEn.html";
-        }
-        loadHtmlPage(htmlFilePath);
+    public void toRulesLayAct(View view){
+        startIntentActivityAndFinish(RulesLayActivity.class);
     }
-
-
-    public void toRules(View view){
-        startIntentActivityAndFinish(RulesActivity.class);
-    }
-    public void toSila(View view){
-        startIntentActivityAndFinish(RulesLaySilaActivity.class);
-    }
-    public void toLayBack(View view){
+    public void toLaySilaBack(View view){
         webView.setVisibility(View.INVISIBLE);
-        buttonLay.setVisibility(View.INVISIBLE);
+        buttonLaySila.setVisibility(View.INVISIBLE);
     }
 
     public void toMainAct(View view){
@@ -112,6 +94,6 @@ public class RulesLayActivity extends BaseActivityClass {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startIntentActivityAndFinish(RulesActivity.class);
+        startIntentActivityAndFinish(RulesLayActivity.class);
     }
 }

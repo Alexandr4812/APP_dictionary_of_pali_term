@@ -26,6 +26,7 @@ public class RulesActivity extends BaseActivityClass {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        Button button0 = findViewById(R.id.button_rules_for_lay);
         Button button1 = findViewById(R.id.button_rules_for_samanera);
         Button button2 = findViewById(R.id.button_rules_for_bhikkhu);
         ImageView im1 =findViewById(R.id.imageVievRules1);
@@ -33,8 +34,10 @@ public class RulesActivity extends BaseActivityClass {
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
         Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
         Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
-        button1.startAnimation(slideFromLeftAnimation);
-        button2.startAnimation(slideFromRightAnimation);
+
+        button0.startAnimation(slideFromLeftAnimation);
+        button1.startAnimation(slideFromRightAnimation);
+        button2.startAnimation(slideFromLeftAnimation);
         im1.startAnimation(slideDown);
     }
 

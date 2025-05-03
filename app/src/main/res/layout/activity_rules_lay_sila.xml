@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context=".Rules.RulesLayActivity">
+    tools:context=".Rules.RulesLaySilaActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -14,7 +14,7 @@
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
         android:contentDescription="возврат в главное меню"
-        android:onClick="toRules"
+        android:onClick="toRulesLayAct"
         android:scaleType="centerInside"
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
-        android:id="@+id/viewScrollLay"
+        android:id="@+id/viewScrollLaySila"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollGatha"
+            android:id="@+id/linearLayoutScrollLaySila"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -60,35 +60,19 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
             <Button
-                android:id="@+id/button_lay_saranagamanakatha"
+                android:id="@+id/button_lay_sila1"
                 style="@style/button_activity_declomation_main"
-                android:onClick="tisarana1"
-                android:text="@string/textButtonUpasaka1"
-                android:backgroundTint="@color/roza"
-                tools:ignore="UsingOnClickInXml" />
-            <Button
-                android:id="@+id/button_lay_bodhi"
-                style="@style/button_activity_declomation_main"
-                android:onClick="tisarana2"
-                android:text="@string/textButtonUpasaka2"
-                android:backgroundTint="@color/roza"
-                tools:ignore="UsingOnClickInXml" />
-            <ImageView
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
-            <Button
-                android:id="@+id/button_lay_sila"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toSila"
-                android:text="@string/textButtonUpasaka3"
+                android:onClick="sila1"
+                android:text="@string/textButtonSila1"
                 android:backgroundTint="@color/my_text_bacground_color"
                 tools:ignore="UsingOnClickInXml" />
+
 
         </LinearLayout>
     </ScrollView>
 
     <WebView
-        android:id="@+id/webViewLay"
+        android:id="@+id/webViewLaySila"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
@@ -101,7 +85,7 @@
 
     <!-- Включаем макет с кнопками -->
     <include
-        layout="@layout/buttons_layout_for_lay"
+        layout="@layout/buttons_layout_for_lay_sila"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
