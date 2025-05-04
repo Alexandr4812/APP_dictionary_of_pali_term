@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="mainButtonLiveBuddha">The Life of the Buddha</string>
-    <string name="mainButtonTeachersLecture">Teacher`s instructions</string>
-    <string name="mainButtonStofiDlyaDeclomacii">Stanzas for recitation</string>
-    <string name="mainButtonShortSuttas">Suttas</string>
-    <string name="mainButtonMonksRules">Monastic Rules \n Lay People Rules \n Ceremonies</string>
+    <string name="mainButtonLiveBuddha">THE LIFE OF BUDDHA</string>
+    <string name="mainButtonTeachersLecture">DHAMMADESANA</string>
+    <string name="mainButtonStofiDlyaDeclomacii">RECITATION</string>
+    <string name="mainButtonShortSuttas">SUTTAS</string>
+    <string name="mainButtonMonksRules">FOR LAYS AND MONKS</string>
     <string name="namerenie_sumedhi">1. Sumedha\`s Intention</string>
     <string name="son_mahamayi">2. Mahamaya\`s Dream</string>
     <string name="rogdenie_sidharthi">3. The Birth of Siddhartha</string>
@@ -1237,7 +1237,7 @@ The primary reason for the announcement of the fourth rule of parajika is the mo
     <string name="buttonSuttasForKuddaka">khuddaka nikaya</string>
     <string name="buttonTextSuttasToByCategory">suttas by category</string>
     <string name="theravada_ru">The material was copied from the site: \n theravada.ru</string>
-    <string name="mainButtonMonksAbhidhamma">Abhidhamma</string> />
+    <string name="mainButtonMonksAbhidhamma"><A>ABHIDHAMMA</A></string> />
 
 
 </resources>

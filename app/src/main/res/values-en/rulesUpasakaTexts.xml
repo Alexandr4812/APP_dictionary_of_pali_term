@@ -9,6 +9,10 @@
 
     <string name="textButtonSila1">\n <b>5 rules of moral training</b> \n
 (PAÑCASĪLA) \n</string>
-
-
+    <string name="textButtonSila2">\n <b>5 rules of moral training for brahmacariya</b> \n
+(BRAHMACARIYASĪLA) \n</string>
+    <string name="textButtonSila3">\n <b>8 rules of moral training (uposatha)</b> \n
+(UPOSATHASĪLA) \n</string>
 </resources>
+
+

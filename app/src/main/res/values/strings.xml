@@ -4,11 +4,11 @@
     <string name="title_home" translatable="false">Home</string>
     <string name="title_dashboard" translatable="false">Dashboard</string>
     <string name="title_notifications" translatable="false">Notifications</string>
-    <string name="mainButtonLiveBuddha">Жизнеописание Будды</string>
-    <string name="mainButtonTeachersLecture">Наставления учителя</string>
-    <string name="mainButtonStofiDlyaDeclomacii">Строфы для декламаций</string>
-    <string name="mainButtonShortSuttas">Палийский Канон</string>
-    <string name="mainButtonMonksRules">Монашеские правила \n Правила для мирян \n Церемонии</string>
+    <string name="mainButtonLiveBuddha">ЖИЗНЕОПИСАНИЕ БУДДЫ</string>
+    <string name="mainButtonTeachersLecture">НАСТАВЛЕНИЯ УЧИТЕЛЯ</string>
+    <string name="mainButtonStofiDlyaDeclomacii">СТРОФЫ ДЛЯ ДЕКЛАМАЦИЙ</string>
+    <string name="mainButtonShortSuttas">ПАЛИЙСКИЙ КАНОН</string>
+        <string name="mainButtonMonksRules">МОНАХАМ И МИРЯНАМ</string>
     <string name="todo" translatable="false">TODO</string>
     <string name="namerenie_sumedhi">1. Намерение Сумедхи</string>
     <string name="son_mahamayi">2. Сон Махамайи</string>
@@ -58,6 +58,6 @@
     <string name="buttonTextSuttasToByCategory">\n <b>сутты по темам</b> \n</string>
     <string name="descriptionBackMainMenu" translatable="false">возврат в главное меню</string>
     <string name="theravada_ru">Материал скопирован с сайта: \n theravada.ru</string>
-    <string name="mainButtonMonksAbhidhamma">Абхидхамма</string>
+    <string name="mainButtonMonksAbhidhamma">АБХИДХАММА</string>
     />
 </resources>

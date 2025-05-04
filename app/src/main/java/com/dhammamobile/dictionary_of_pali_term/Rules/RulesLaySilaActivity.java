@@ -79,6 +79,32 @@ public class RulesLaySilaActivity extends BaseActivityClass {
         loadHtmlPage(htmlFilePath);
     }
 
+    public void sila2(View view) {
+        buttonLaySila.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/upasaka_ru/2_BrahmacariyaSīla_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/upasaka_en/2_BrahmacariyaSīla_en.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void sila3(View view) {
+        buttonLaySila.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/upasaka_ru/3_UposathaSīla_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/upasaka_en/3_UposathaSīla_en.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
     public void toRulesLayAct(View view){
         startIntentActivityAndFinish(RulesLayActivity.class);
     }
