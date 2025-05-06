@@ -26,7 +26,8 @@
 
     <string name="button_karaniya_metta">\n <b>Карания метта сутта</b>\n</string>
 
-    <string name="utrennaia_pudga">\n <b>Утренняя вандана в монастыре Читтавивека</b> \n</string>
+    <string name="utrennaia_short_pudga">\n <b>Короткая \n утренняя вандана в монастыре Читтавивека</b> \n</string>
+    <string name="utrennaia_pudga">\n <b>Полная \n утренняя вандана в монастыре Читтавивека</b> \n</string>
 
     <string name="rukovodstvo_dlya_lay">\n <b>руководство для мирян</b> \n</string>
     <string name="rukovodstvo_dlya_samaner">\n <b>руководство для саманер</b> \n</string>
@@ -34,6 +35,7 @@
     <string name="pabaja_text">\n <b>паббаджжа \n строфы для церемонии становления саманерой</b> \n</string>
 
     <string name="button_morning_vandana_with_laymans"> \n <b>Вандана с мирянами во время даны в монастыре Читтавивека</b> \n</string>
+    <string name="button_morning_vandana_with_laymans2"> \n <b>Вандана с мирянами во время даны в монастыре Читтавивека \n \n подношение бхиккхусангхе  \n (на сингальском)</b> \n</string>
 
     <string name="deklomation_after_evening_meditation">\n <b>Декламация после вечерней медитации в монастыре Читтавивека</b> \n</string>
 

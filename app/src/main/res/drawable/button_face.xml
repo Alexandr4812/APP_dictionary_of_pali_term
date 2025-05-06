@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/button_buddha_color"
+    <item android:drawable="@drawable/button_buddha_black"
         android:state_pressed="true"/>
-    <item android:drawable="@drawable/button_buddha_black"
+    <item android:drawable="@drawable/button_buddha_color"
         android:state_focused="true"/>
-    <item android:drawable="@drawable/button_buddha_black"
+    <item android:drawable="@drawable/button_buddha_color"
         android:state_enabled="true"/>
 </selector>

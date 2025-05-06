@@ -73,6 +73,19 @@ public class DeclomationPujaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(DeklomationMainActivity.class);
     }
 
+    public void toDeclomaciyaShortMorningPuja(View view) {
+        buttonVandana.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/vandana_ru/shortVandana_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/vandana_ru/shortVandana_ru.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
     public void toDeclomaciyaMorningPuja(View view) {
         ScrollView scrollText = findViewById(R.id.overScrollTextMorningPuja);
         scrollText.setVisibility(View.VISIBLE);
@@ -123,6 +136,19 @@ public class DeclomationPujaActivity extends BaseActivityClass {
         scrollText.setVisibility(View.VISIBLE);
         buttonHome.setVisibility(View.VISIBLE);
         buttonLiveToPuja.setVisibility(View.VISIBLE);
+    }
+
+    public void toDeclomaciyaVandanaWithLayman2(View view) {
+        buttonVandana.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/vandana_ru/vandanaLay_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/vandana_en/vandanaLay_en.html";
+        }
+        loadHtmlPage(htmlFilePath);
     }
 
     public void tobackOver(View view) {

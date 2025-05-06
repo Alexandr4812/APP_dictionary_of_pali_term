@@ -80,17 +80,35 @@
                 tools:ignore="ContentDescription" />
 
             <Button
+                android:id="@+id/button_morning_short_puja"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomaciyaShortMorningPuja"
+                android:text="@string/utrennaia_short_pudga"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
                 android:id="@+id/button_morning_puja"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomaciyaMorningPuja"
                 android:text="@string/utrennaia_pudga"
                 tools:ignore="UsingOnClickInXml" />
 
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/button_vandana_with_laymans"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomaciyaVandanaWithLayman"
                 android:text="@string/button_morning_vandana_with_laymans"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_vandana_with_laymans2"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomaciyaVandanaWithLayman2"
+                android:text="@string/button_morning_vandana_with_laymans2"
                 tools:ignore="UsingOnClickInXml" />
 
             <ImageView
