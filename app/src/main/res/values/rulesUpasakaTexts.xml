@@ -15,4 +15,10 @@
 (UPOSATHASĪLA) \n</string>
     <string name="textButtonSila4">\n <b>8 правил правильного образа жизни</b> \n
 (Ājīva aṭṭhamaka Sīla) \n</string>
+    <string name="textButtonSila5">\n <b>9 правил нравственной тренировки (упосатха)</b> \n
+(NAVANGA UPOSATHASĪLA) \n</string>
+    <string name="textButtonSila6">\n <b>10 правил нравственной тренировки</b> \n
+(DASASĪLA) \n</string>
+    <string name="textButtonSila7">\n <b>10 правил нравственной тренировки (анагарика)</b> \n
+(ANAGARIKA DASASĪLA) \n</string>
 </resources>

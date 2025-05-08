@@ -87,6 +87,27 @@
                 android:text="@string/textButtonSila4"
                 android:backgroundTint="@color/my_text_bacground_color"
                 tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:id="@+id/button_lay_sila5"
+                style="@style/button_activity_declomation_main"
+                android:onClick="sila5"
+                android:text="@string/textButtonSila5"
+                android:backgroundTint="@color/my_text_bacground_color"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:id="@+id/button_lay_sila6"
+                style="@style/button_activity_declomation_main"
+                android:onClick="sila6"
+                android:text="@string/textButtonSila6"
+                android:backgroundTint="@color/my_text_bacground_color"
+                tools:ignore="UsingOnClickInXml" />
+            <Button
+                android:id="@+id/button_lay_sila7"
+                style="@style/button_activity_declomation_main"
+                android:onClick="sila7"
+                android:text="@string/textButtonSila7"
+                android:backgroundTint="@color/my_text_bacground_color"
+                tools:ignore="UsingOnClickInXml" />
 
 
         </LinearLayout>

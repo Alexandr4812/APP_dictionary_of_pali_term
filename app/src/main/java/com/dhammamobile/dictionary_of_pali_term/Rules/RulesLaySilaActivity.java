@@ -118,6 +118,45 @@ public class RulesLaySilaActivity extends BaseActivityClass {
         loadHtmlPage(htmlFilePath);
     }
 
+    public void sila5(View view) {
+        buttonLaySila.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/upasaka_ru/5_NavangaUposathaSila_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/upasaka_en/5_NavangaUposathaSila_en.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void sila6(View view) {
+        buttonLaySila.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/upasaka_ru/6_DasaSila_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/upasaka_en/6_DasaSila_en.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void sila7(View view) {
+        buttonLaySila.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/upasaka_ru/7_AnagarikaDasaSila_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/upasaka_en/7_AnagarikaDasaSila_en.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
     public void toRulesLayAct(View view){
         startIntentActivityAndFinish(RulesLayActivity.class);
     }
