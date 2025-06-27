@@ -93,6 +93,18 @@ public class RulesLayActivity extends BaseActivityClass {
         loadHtmlPage(htmlFilePath);
     }
 
+    public void tisarana3(View view) {
+        buttonLay.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/upasaka_ru/Upasakajanalankaro.html";
+        } else {
+            htmlFilePath = "file:///android_asset/upasaka_ru/Upasakajanalankaro.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
 
     public void toRules(View view){
         startIntentActivityAndFinish(RulesActivity.class);

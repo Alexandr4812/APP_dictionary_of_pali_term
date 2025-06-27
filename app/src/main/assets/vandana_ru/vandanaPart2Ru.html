@@ -160,6 +160,44 @@ img {
 </style>
 </head>
 <body>
+
+<script type="text/javascript">
+        var initialFontSize = 14; // Установите начальный размер шрифта
+
+        // Функция для установки начального размера шрифта
+        function setInitialFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var computedStyle = window.getComputedStyle(element, null);
+                var currentSize = parseFloat(computedStyle.getPropertyValue('font-size'));
+                // Увеличиваем размер до начального значения
+                var scale = initialFontSize / currentSize;
+                element.style.fontSize = initialFontSize + 'pt';
+            });
+        }
+
+        function increaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = (fontSize + 2) + 'px';
+            });
+        }
+
+        function decreaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = Math.max(8, fontSize - 2) + 'px';
+            });
+        }
+
+        // Устанавливаем начальный размер шрифта после загрузки страницы
+        window.onload = setInitialFontSize;
+    </script>
+
 <p class="tm6"><strong><span class="tm7">&#1044;&#1045;&#1050;&#1051;&#1040;&#1052;&#1040;&#1062;&#1048;&#1071; &#1055;&#1054;&#1057;&#1051;&#1045; &#1042;&#1045;&#1063;&#1045;&#1056;&#1053;&#1045;&#1049; &#1052;&#1045;&#1044;&#1048;&#1058;&#1040;&#1062;&#1048;&#1048;
 </span></strong></p>
 <p class="tm6"><strong><span class="tm8">(&#1042; &#1052;&#1054;&#1053;&#1040;&#1057;&#1058;&#1067;&#1056;&#1045; &#1063;&#1048;&#1058;&#1058;&#1040;&#1042;&#1048;&#1042;&#1045;&#1050;&#1040;) </span></strong></p>

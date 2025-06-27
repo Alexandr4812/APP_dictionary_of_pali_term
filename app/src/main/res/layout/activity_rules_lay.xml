@@ -73,9 +73,19 @@
                 android:text="@string/textButtonUpasaka2"
                 android:backgroundTint="@color/roza"
                 tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_lay_upasakajanalankaro"
+                style="@style/button_activity_declomation_main"
+                android:onClick="tisarana3"
+                android:text="@string/textButtonUpasaka4"
+                android:backgroundTint="@color/roza"
+                tools:ignore="UsingOnClickInXml" />
+
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
+
             <Button
                 android:id="@+id/button_lay_sila"
                 style="@style/button_activity_declomation_main"
