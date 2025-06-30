@@ -120,9 +120,9 @@ public class AbhidhammaChittasKamavacharamBeautifulVipakachitaniActivity extends
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani1.setVisibility(View.VISIBLE);
                 animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani1, getString(R.string.textKusalachitaniKorenThri));
             } else if (clickedButton == funkciya1) {
-                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani1.setText(R.string.textKusalachitaniFunkciyaJavana);
+                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani1.setText(R.string.textBeautifulKusalachitaniVipaka);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani1.setVisibility(View.VISIBLE);
-                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani1, getString(R.string.textKusalachitaniFunkciyaJavana));
+                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani1, getString(R.string.textBeautifulKusalachitaniVipaka));
             } else if (clickedButton == kombinaciya1) {
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani1.setText(R.string.textVipakachitaniKombinaciya1);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani1.setVisibility(View.VISIBLE);
@@ -154,9 +154,9 @@ public class AbhidhammaChittasKamavacharamBeautifulVipakachitaniActivity extends
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani2.setVisibility(View.VISIBLE);
                 animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani2, getString(R.string.textKusalachitaniKorenThri));
             } else if (clickedButton == funkciya2) {
-                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani2.setText(R.string.textKusalachitaniFunkciyaJavana);
+                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani2.setText(R.string.textBeautifulKusalachitaniVipaka);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani2.setVisibility(View.VISIBLE);
-                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani2, getString(R.string.textKusalachitaniFunkciyaJavana));
+                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani2, getString(R.string.textBeautifulKusalachitaniVipaka));
             } else if (clickedButton == kombinaciya2) {
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani2.setText(R.string.textVipakachitaniKombinaciya2);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani2.setVisibility(View.VISIBLE);
@@ -188,9 +188,9 @@ public class AbhidhammaChittasKamavacharamBeautifulVipakachitaniActivity extends
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani3.setVisibility(View.VISIBLE);
                 animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani3, getString(R.string.textKusalachitaniKorenTwo));
             } else if (clickedButton == funkciya3) {
-                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani3.setText(R.string.textKusalachitaniFunkciyaJavana);
+                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani3.setText(R.string.textBeautifulKusalachitaniVipaka);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani3.setVisibility(View.VISIBLE);
-                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani3, getString(R.string.textKusalachitaniFunkciyaJavana));
+                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani3, getString(R.string.textBeautifulKusalachitaniVipaka));
             } else if (clickedButton == kombinaciya3) {
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani3.setText(R.string.textVipakachitaniKombinaciya3);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani3.setVisibility(View.VISIBLE);
@@ -222,9 +222,9 @@ public class AbhidhammaChittasKamavacharamBeautifulVipakachitaniActivity extends
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani4.setVisibility(View.VISIBLE);
                 animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani4, getString(R.string.textKusalachitaniKorenTwo));
             } else if (clickedButton == funkciya4) {
-                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani4.setText(R.string.textKusalachitaniFunkciyaJavana);
+                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani4.setText(R.string.textBeautifulKusalachitaniVipaka);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani4.setVisibility(View.VISIBLE);
-                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani4, getString(R.string.textKusalachitaniFunkciyaJavana));
+                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani4, getString(R.string.textBeautifulKusalachitaniVipaka));
             } else if (clickedButton == kombinaciya4) {
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani4.setText(R.string.textVipakachitaniKombinaciya4);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani4.setVisibility(View.VISIBLE);
@@ -256,9 +256,9 @@ public class AbhidhammaChittasKamavacharamBeautifulVipakachitaniActivity extends
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani5.setVisibility(View.VISIBLE);
                 animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani5, getString(R.string.textKusalachitaniKorenThri));
             } else if (clickedButton == funkciya5) {
-                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani5.setText(R.string.textKusalachitaniFunkciyaJavana);
+                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani5.setText(R.string.textBeautifulKusalachitaniVipaka);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani5.setVisibility(View.VISIBLE);
-                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani5, getString(R.string.textKusalachitaniFunkciyaJavana));
+                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani5, getString(R.string.textBeautifulKusalachitaniVipaka));
             } else if (clickedButton == kombinaciya5) {
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani5.setText(R.string.textVipakachitaniKombinaciya5);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani5.setVisibility(View.VISIBLE);
@@ -290,9 +290,9 @@ public class AbhidhammaChittasKamavacharamBeautifulVipakachitaniActivity extends
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani6.setVisibility(View.VISIBLE);
                 animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani6, getString(R.string.textKusalachitaniKorenThri));
             } else if (clickedButton == funkciya6) {
-                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani6.setText(R.string.textKusalachitaniFunkciyaJavana);
+                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani6.setText(R.string.textBeautifulKusalachitaniVipaka);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani6.setVisibility(View.VISIBLE);
-                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani6, getString(R.string.textKusalachitaniFunkciyaJavana));
+                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani6, getString(R.string.textBeautifulKusalachitaniVipaka));
             } else if (clickedButton == kombinaciya6) {
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani6.setText(R.string.textVipakachitaniKombinaciya6);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani6.setVisibility(View.VISIBLE);
@@ -324,9 +324,9 @@ public class AbhidhammaChittasKamavacharamBeautifulVipakachitaniActivity extends
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani7.setVisibility(View.VISIBLE);
                 animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani7, getString(R.string.textKusalachitaniKorenTwo));
             } else if (clickedButton == funkciya7) {
-                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani7.setText(R.string.textKusalachitaniFunkciyaJavana);
+                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani7.setText(R.string.textBeautifulKusalachitaniVipaka);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani7.setVisibility(View.VISIBLE);
-                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani7, getString(R.string.textKusalachitaniFunkciyaJavana));
+                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani7, getString(R.string.textBeautifulKusalachitaniVipaka));
             } else if (clickedButton == kombinaciya7) {
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani7.setText(R.string.textVipakachitaniKombinaciya7);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani7.setVisibility(View.VISIBLE);
@@ -358,9 +358,9 @@ public class AbhidhammaChittasKamavacharamBeautifulVipakachitaniActivity extends
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani8.setVisibility(View.VISIBLE);
                 animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani8, getString(R.string.textKusalachitaniKorenTwo));
             } else if (clickedButton == funkciya8) {
-                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani8.setText(R.string.textKusalachitaniFunkciyaJavana);
+                textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani8.setText(R.string.textBeautifulKusalachitaniVipaka);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani8.setVisibility(View.VISIBLE);
-                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani8, getString(R.string.textKusalachitaniFunkciyaJavana));
+                animateText(textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani8, getString(R.string.textBeautifulKusalachitaniVipaka));
             } else if (clickedButton == kombinaciya8) {
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani8.setText(R.string.textVipakachitaniKombinaciya8);
                 textView_abhidhamma_chittas_kamavachara_beautiful_vipakachitani8.setVisibility(View.VISIBLE);
