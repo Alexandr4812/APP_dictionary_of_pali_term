@@ -1,6 +1,9 @@
 package com.dhammamobile.dictionary_of_pali_term.Abhidhamma;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -45,9 +48,15 @@ public class AbhidhammaChittasKamavacharamBeautifulKusalachitaniActivity extends
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abhidhamma_chittas_kamavacharam_beautiful_kusalachitani);
 
+        enableEdgeToEdgeMode();
+
         // Скрытие панели навигации и панели состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        View rootView = findViewById(android.R.id.content);
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
+            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
+            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            return insets;
+        });
 
         textView_abhidhamma_chittas_kamavachara_beautiful_kusalachitani1 = findViewById(R.id.textView_abhidhamma_chittas_kamavachara_beautiful_kusalachitani1);
         textView_abhidhamma_chittas_kamavachara_beautiful_kusalachitani2 = findViewById(R.id.textView_abhidhamma_chittas_kamavachara_beautiful_kusalachitani2);

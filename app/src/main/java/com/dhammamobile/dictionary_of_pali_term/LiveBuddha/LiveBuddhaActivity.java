@@ -1,14 +1,22 @@
 package com.dhammamobile.dictionary_of_pali_term.LiveBuddha;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
@@ -18,15 +26,20 @@ import java.util.Locale;
 
 
 public class LiveBuddhaActivity extends BaseActivityClass {
-
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         // Здесь вы можете добавить свои действия при изменении ориентации, если это необходимо
     }
+    int savedScrollY = 0;
+    private String currentHtmlFilePath; // полный путь к HTML
+    private String getBookmarkKeyFromPath(String fullPath) {
+        return fullPath.replace("file:///android_asset/", "");
+    }
+
     LinearLayout buttonBuddha;
-    Button plusText, minusText;
-    WebView webView; // Declare WebView as a class member for easy access
+    Button plusText, minusText, buttonZakladka;
+    WebView webView;
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -37,9 +50,15 @@ public class LiveBuddhaActivity extends BaseActivityClass {
 
        // setWindowFlagsFullscreenAndNoLimits();
 
+        enableEdgeToEdgeMode();
+
         // Скрытие панели навигации и панели состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        View rootView = findViewById(android.R.id.content);
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
+            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
+            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            return insets;
+        });
 
         plusText = findViewById(R.id.buttonPlusTextLiveBuddha);
         minusText = findViewById(R.id.buttonMinusTextLiveBuddha);
@@ -61,185 +80,80 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         minusText.setOnClickListener(v -> {
             webView.evaluateJavascript("javascript:decreaseFontSize();", null);
         });
+
+    }
+
+    private void saveScrollPosition() {
+        if (currentHtmlFilePath == null) return;
+
+        webView.evaluateJavascript("window.scrollY.toString()", value -> {
+            try {
+                if (value == null || value.equals("null") || value.equals("")) return;
+
+                value = value.replaceAll("\"", "");
+                float scrollYFloat = Float.parseFloat(value);
+                int scrollY = Math.round(scrollYFloat);
+
+                SharedPreferences prefs = getSharedPreferences("Bookmarks", MODE_PRIVATE);
+                String key = getBookmarkKeyFromPath(currentHtmlFilePath);
+                prefs.edit().putInt("scroll_" + key, scrollY).apply();
+
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     private void loadHtmlPage(String htmlFilePath) {
+        currentHtmlFilePath = htmlFilePath;
+
+        // Получаем сохранённую позицию
+        SharedPreferences prefs = getSharedPreferences("Bookmarks", MODE_PRIVATE);
+        String key = getBookmarkKeyFromPath(htmlFilePath);
+        savedScrollY = prefs.getInt("scroll_" + key, 0);
+
         webView.loadUrl(htmlFilePath);
+
+        // После полной загрузки страницы — прокручиваем
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                // Устанавливаем позицию с небольшой задержкой
+                webView.postDelayed(() -> {
+                    webView.evaluateJavascript(
+                            "window.scrollTo({ top: " + savedScrollY + ", behavior: 'smooth' });",
+                            null);
+
+                }, 100);
+            }
+        });
     }
 
-    public void toShow10(View view) {
+    public void showHtmlByNumber(View view) {
+        Object tagObj = view.getTag();
+        if (tagObj == null) return;
+
+        String tag = tagObj.toString();
+        String currentLanguage = Locale.getDefault().getLanguage();
+
+        String htmlFilePath;
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/live_1_ru/live" + tag + ".html";
+        } else {
+            htmlFilePath = "file:///android_asset/live_1_en/liveEn" + tag + ".html";
+        }
+
         buttonBuddha.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live10.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn10.html";
-        }
         loadHtmlPage(htmlFilePath);
     }
 
-    public void toShow11(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live11.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn11.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-
-    public void toShow12(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live12.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn12.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-
-
-    public void toShow13(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live13.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn13.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    public void toShow1(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live1.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn1.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-
-    public void toShow2(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live2.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn2.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-
-    public void toShow3(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live3.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn3.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-
-    public void toShow4(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live4.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn4.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-
-    public void toShow5(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live5.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn5.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-
-    public void toShow6(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live6.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn6.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-    public void toShow7(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live7.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn7.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-    public void toShow8(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live8.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn8.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-    public void toShow9(View view) {
-        buttonBuddha.setVisibility(View.VISIBLE);
-        webView.setVisibility(View.VISIBLE);
-        String htmlFilePath;
-        String currentLanguage = Locale.getDefault().getLanguage();
-        if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/live_1_ru/live9.html";
-        } else {
-            htmlFilePath = "file:///android_asset/live_1_en/liveEn9.html";
-        }
-        loadHtmlPage(htmlFilePath);
-    }
-
-
-
     public void toLiveBack(View view){
+        saveScrollPosition();
         webView.setVisibility(View.INVISIBLE);
         buttonBuddha.setVisibility(View.INVISIBLE);
     }
@@ -247,6 +161,7 @@ public class LiveBuddhaActivity extends BaseActivityClass {
 
     @Override
     public void onBackPressed() {
+        saveScrollPosition();
         super.onBackPressed();
         startIntentActivityAndFinish(MainActivity.class);
     }

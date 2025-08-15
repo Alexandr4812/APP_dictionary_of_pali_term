@@ -82,16 +82,10 @@
             <Button
                 android:id="@+id/button_morning_short_puja"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomaciyaShortMorningPuja"
-                android:text="@string/utrennaia_short_pudga"
+                android:onClick="toDeclomaciyaMorningPuja"
+                android:text="@string/buttonTextMorningPuja"
                 tools:ignore="UsingOnClickInXml" />
 
-            <Button
-                android:id="@+id/button_morning_puja"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomaciyaMorningPuja"
-                android:text="@string/utrennaia_pudga"
-                tools:ignore="UsingOnClickInXml" />
 
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
@@ -126,54 +120,6 @@
     </ScrollView>
 
     <ScrollView
-        android:id="@+id/overScrollTextMorningPuja"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewOverMorningPuja"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/DeklomaciyaMorningPuja" />
-        </LinearLayout>
-    </ScrollView>
-
-<!--    <ScrollView-->
-<!--        android:id="@+id/overScrollTextDeclomaciyaOftereveningMeditstion"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:visibility="invisible"-->
-<!--        tools:visibility="invisible">-->
-
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:background="#FFE082"-->
-<!--            android:orientation="vertical">-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/textViewDeclomaciyaOftereveningMeditstion"-->
-<!--                style="@style/TextMessageStyle"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent"-->
-<!--                android:text="@string/DeklomaciyaOfterEveningMeditationO" />-->
-<!--        </LinearLayout>-->
-<!--    </ScrollView>-->
-
-    <ScrollView
         android:id="@+id/overScrollTextVandanaAmbokote"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -197,33 +143,6 @@
                 android:layout_height="match_parent"
                 android:text="@string/textAmbokoteVandana" />
         </LinearLayout>
-    </ScrollView>
-
-    <ScrollView
-        android:id="@+id/overScrollTextVandanaWithLayman"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="invisible">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#FFE082"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textViewOverVandanaWithLayman"
-                style="@style/TextMessageStyle"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/DeklomaciyaVandanaWithLaiman" />
-        </LinearLayout>
-
     </ScrollView>
 
     <LinearLayout

@@ -13,6 +13,10 @@ import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import com.dhammamobile.dictionary_of_pali_term.Abhidhamma.AbhidhammaActivity;
 import com.dhammamobile.dictionary_of_pali_term.Declomation.DeklomationMainActivity;
 import com.dhammamobile.dictionary_of_pali_term.LiveBuddha.LiveBuddhaActivity;
@@ -46,8 +50,19 @@ public class MainActivity extends BaseActivityClass {
         setContentView(R.layout.activity_main);
 
         // Скрытие панели навигации и панели состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        enableEdgeToEdgeMode();
+
+        // Скрытие панели навигации и панели состояния
+        View rootView = findViewById(android.R.id.content);
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
+            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
+            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            return insets;
+        });
+
 
         // Находим элементы управления
         imageButtonRu = findViewById(R.id.imageButtonRu);

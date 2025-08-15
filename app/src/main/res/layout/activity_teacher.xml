@@ -63,82 +63,111 @@
       <Button
           android:id="@+id/button_lecture1_12"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec112Act"
+          android:tag="1"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture1_12" />
 
       <Button
           android:id="@+id/button_lecture7"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec7Act"
+          android:tag="2"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture7" />
 
       <Button
           android:id="@+id/button_lecture2_12"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec212Act"
+          android:tag="3"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture2_12" />
 
       <Button
           android:id="@+id/button_lecture8"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec8Act"
+          android:tag="4"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture8" />
 
       <Button
           android:id="@+id/button_lecture9"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec9Act"
+          android:tag="5"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture9" />
 
       <Button
           android:id="@+id/button_lecture10"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec10Act"
+          android:tag="6"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture10" />
 
       <Button
           android:id="@+id/button_lecture1"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec1Act"
+          android:tag="7"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture1" />
 
       <Button
           android:id="@+id/button_lecture2"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec2Act"
+          android:tag="8"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture2" />
 
       <Button
           android:id="@+id/button_lecture3"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec3Act"
+          android:tag="9"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture3" />
 
       <Button
           android:id="@+id/button_lecture4"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec4Act"
+          android:tag="10"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture4" />
 
       <Button
           android:id="@+id/button_lecture5"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec5Act"
+          android:tag="11"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture5" />
 
       <Button
           android:id="@+id/button_lecture6"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec6Act"
+          android:tag="12"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture6" />
 
       <Button
           android:id="@+id/button_lecture11"
           style="@style/button_activity_declomation_main"
-          android:onClick="toTeacherLec11Act"
+          android:tag="13"
+          android:onClick="showHtmlByNumber"
           android:text="@string/buttonToLecture11" />
 
     </LinearLayout>
   </ScrollView>
+  <WebView
+      android:id="@+id/webViewTeacher"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="vertical"
+      android:visibility="invisible"
+      android:scrollbarThumbVertical="@android:color/holo_red_dark"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <!-- Включаем макет с кнопками -->
+  <include
+      layout="@layout/buttons_layout_for_teacher"
+      />
 
   </androidx.constraintlayout.widget.ConstraintLayout>

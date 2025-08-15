@@ -1,14 +1,19 @@
 package com.dhammamobile.dictionary_of_pali_term.Rules;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
@@ -26,6 +31,13 @@ public class RulesLayActivity extends BaseActivityClass {
         super.onConfigurationChanged(newConfig);
         // Здесь вы можете добавить свои действия при изменении ориентации, если это необходимо
     }
+
+    int savedScrollY = 0;
+    private String currentHtmlFilePath; // полный путь к HTML
+    private String getBookmarkKeyFromPath(String fullPath) {
+        return fullPath.replace("file:///android_asset/", "");
+    }
+
     LinearLayout buttonLay;
     Button plusText, minusText;
     WebView webView; // Declare WebView as a class member for easy access
@@ -37,9 +49,15 @@ public class RulesLayActivity extends BaseActivityClass {
         updateLocale(); // Установка языка
         setContentView(R.layout.activity_rules_lay);
 
+        enableEdgeToEdgeMode();
+
         // Скрытие панели навигации и панели состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        View rootView = findViewById(android.R.id.content);
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
+            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
+            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            return insets;
+        });
 
         plusText = findViewById(R.id.buttonPlusLay);
         minusText = findViewById(R.id.buttonMinusLay);
@@ -63,9 +81,54 @@ public class RulesLayActivity extends BaseActivityClass {
         });
 
     }
+
+    private void saveScrollPosition() {
+        if (currentHtmlFilePath == null) return;
+
+        webView.evaluateJavascript("window.scrollY.toString()", value -> {
+            try {
+                if (value == null || value.equals("null") || value.equals("")) return;
+
+                value = value.replaceAll("\"", "");
+                float scrollYFloat = Float.parseFloat(value);
+                int scrollY = Math.round(scrollYFloat);
+
+                SharedPreferences prefs = getSharedPreferences("Bookmarks", MODE_PRIVATE);
+                String key = getBookmarkKeyFromPath(currentHtmlFilePath);
+                prefs.edit().putInt("scroll_" + key, scrollY).apply();
+
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
     private void loadHtmlPage(String htmlFilePath) {
+        currentHtmlFilePath = htmlFilePath;
+
+        SharedPreferences prefs = getSharedPreferences("Bookmarks", MODE_PRIVATE);
+        String key = getBookmarkKeyFromPath(htmlFilePath);
+        savedScrollY = prefs.getInt("scroll_" + key, 0);
+
+        final String baseWithoutHash = htmlFilePath.split("#")[0];
+
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                // Только если это начальная загрузка (а не переход по якорю)
+                if (url.equals(baseWithoutHash)) {
+                    webView.postDelayed(() -> {
+                        webView.evaluateJavascript(
+                                "window.scrollTo({ top: " + savedScrollY + ", behavior: 'smooth' });",
+                                null);
+                    }, 100);
+                }
+            }
+        });
+
         webView.loadUrl(htmlFilePath);
     }
+
 
     public void tisarana1(View view) {
         buttonLay.setVisibility(View.VISIBLE);
@@ -113,6 +176,7 @@ public class RulesLayActivity extends BaseActivityClass {
         startIntentActivityAndFinish(RulesLaySilaActivity.class);
     }
     public void toLayBack(View view){
+        saveScrollPosition();
         webView.setVisibility(View.INVISIBLE);
         buttonLay.setVisibility(View.INVISIBLE);
     }
@@ -123,6 +187,7 @@ public class RulesLayActivity extends BaseActivityClass {
 
     @Override
     public void onBackPressed() {
+        saveScrollPosition();
         super.onBackPressed();
         startIntentActivityAndFinish(RulesActivity.class);
     }

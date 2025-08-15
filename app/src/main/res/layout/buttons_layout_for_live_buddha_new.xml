@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -15,7 +16,7 @@
         android:layout_marginBottom="0dp"
         android:onClick="toMainAct"
         android:visibility="visible"
-        />
+        tools:visibility="visible" />
 
     <Button
         android:id="@+id/buttonliveLiveBuddha"
@@ -25,7 +26,7 @@
         android:layout_marginBottom="0dp"
         android:onClick="toLiveBack"
         android:visibility="visible"
-        />
+        tools:visibility="visible" />
 
     <Button
         android:id="@+id/buttonMinusTextLiveBuddha"
@@ -35,7 +36,7 @@
         android:layout_marginBottom="0dp"
         android:foreground="@mipmap/minus_foreground"
         android:visibility="visible"
-        />
+        tools:visibility="visible" />
 
     <Button
         android:id="@+id/buttonPlusTextLiveBuddha"
@@ -45,6 +46,16 @@
         android:foreground="@mipmap/plus_foreground"
         android:foregroundGravity="fill"
         android:visibility="visible"
-        />
+        tools:visibility="visible" />
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonZakladkaTextLiveBuddha"-->
+<!--        style="@style/buttonZakladkaTextNotImageButton"-->
+<!--        android:layout_gravity="bottom|center"-->
+<!--        android:layout_marginBottom="0dp"-->
+<!--        android:foreground="@mipmap/zakladka_blue"-->
+<!--        android:foregroundGravity="fill"-->
+<!--        android:visibility="visible"-->
+<!--        tools:visibility="visible" />-->
 
 </LinearLayout>

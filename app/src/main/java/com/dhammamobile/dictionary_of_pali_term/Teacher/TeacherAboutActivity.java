@@ -1,6 +1,9 @@
 package com.dhammamobile.dictionary_of_pali_term.Teacher;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -25,8 +28,17 @@ public class TeacherAboutActivity extends BaseActivityClass {
         TextView textViewLink = findViewById(R.id.textViewTeachrAbout);
 
         // Скрытие панели навигации и панели состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        enableEdgeToEdgeMode();
+
+        // Скрытие панели навигации и панели состояния
+        View rootView = findViewById(android.R.id.content);
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
+            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
+            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            return insets;
+        });
 
         animateText(textViewLink, getString(R.string.teacherAboutText));
     }
