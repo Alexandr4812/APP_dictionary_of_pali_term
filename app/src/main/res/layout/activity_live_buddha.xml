@@ -483,6 +483,105 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="14"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dreams" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo14"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description14"
+                android:tag="14"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="15"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live15" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo15"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description15"
+                android:tag="15"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="16"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live16" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo16"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description16"
+                android:tag="16"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
             <TextView
                 android:id="@+id/next"
                 android:textColor="@color/my_text_bacground_color"
