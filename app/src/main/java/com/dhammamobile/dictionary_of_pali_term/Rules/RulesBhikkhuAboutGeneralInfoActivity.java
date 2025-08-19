@@ -1,6 +1,10 @@
 package com.dhammamobile.dictionary_of_pali_term.Rules;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -49,9 +53,15 @@ public class RulesBhikkhuAboutGeneralInfoActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_about_general_info);
 
+        enableEdgeToEdgeMode();
+
         // Скрытие панели навигации и панели состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        View rootView = findViewById(android.R.id.content);
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
+            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
+            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            return insets;
+        });
 
         this.buttonHome = findViewById(R.id.buttonBhikkhuAmoutGeneralInfoHome);
         this.buttonLiveToBhikhuAbout = findViewById(R.id.buttonBhikkhuAmoutGeneralInfoLive);

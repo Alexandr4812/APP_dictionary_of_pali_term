@@ -11,6 +11,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
@@ -36,9 +40,15 @@ public class DeclomationParittaActivity extends BaseActivityClass {
         updateLocale(); // Установка языка
         setContentView(R.layout.activity_declomation_paritta);
 
+        enableEdgeToEdgeMode();
+
         // Скрытие панели навигации и панели состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        View rootView = findViewById(android.R.id.content);
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
+            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
+            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            return insets;
+        });
 
         plusText = findViewById(R.id.buttonPlusParittas);
         minusText = findViewById(R.id.buttonMinusParittas);

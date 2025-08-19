@@ -10,6 +10,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
@@ -34,9 +38,15 @@ public class DeclomationPujaActivity extends BaseActivityClass {
 
       //  setWindowFlagsFullscreenAndNoLimits();
 
+        enableEdgeToEdgeMode();
+
         // Скрытие панели навигации и панели состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        View rootView = findViewById(android.R.id.content);
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
+            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
+            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            return insets;
+        });
 
         plusText = findViewById(R.id.buttonPlusVandana);
         minusText = findViewById(R.id.buttonMinusVandana);
@@ -73,25 +83,20 @@ public class DeclomationPujaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(DeklomationMainActivity.class);
     }
 
-    public void toDeclomaciyaShortMorningPuja(View view) {
+    public void toDeclomaciyaMorningPuja(View view) {
         buttonVandana.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/vandana_ru/shortVandana_ru.html";
+            htmlFilePath = "file:///android_asset/vandana_ru/vandanaMorning.html";
         } else {
-            htmlFilePath = "file:///android_asset/vandana_ru/shortVandana_ru.html";
+            htmlFilePath = "file:///android_asset/vandana_ru/vandanaMorning.html";
         }
         loadHtmlPage(htmlFilePath);
     }
 
-    public void toDeclomaciyaMorningPuja(View view) {
-        ScrollView scrollText = findViewById(R.id.overScrollTextMorningPuja);
-        scrollText.setVisibility(View.VISIBLE);
-        buttonHome.setVisibility(View.VISIBLE);
-        buttonLiveToPuja.setVisibility(View.VISIBLE);
-    }
+
 
     public void toDeclomaciyaOftereveningMeditation(View view) {
         buttonVandana.setVisibility(View.VISIBLE);
@@ -132,11 +137,19 @@ public class DeclomationPujaActivity extends BaseActivityClass {
     }
 
     public void toDeclomaciyaVandanaWithLayman(View view) {
-        ScrollView scrollText = findViewById(R.id.overScrollTextVandanaWithLayman);
-        scrollText.setVisibility(View.VISIBLE);
-        buttonHome.setVisibility(View.VISIBLE);
-        buttonLiveToPuja.setVisibility(View.VISIBLE);
+        buttonVandana.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/vandana_ru/vandanaWithLays.html";
+        } else {
+            htmlFilePath = "file:///android_asset/vandana_ru/vandanaWithLays.html";
+        }
+        loadHtmlPage(htmlFilePath);
     }
+
+
 
     public void toDeclomaciyaVandanaWithLayman2(View view) {
         buttonVandana.setVisibility(View.VISIBLE);
@@ -153,11 +166,9 @@ public class DeclomationPujaActivity extends BaseActivityClass {
 
     public void tobackOver(View view) {
         ScrollView scrollText = findViewById(R.id.overScrollTextMorningPuja);
-        ScrollView scrollTextVandanaWithLayman = findViewById(R.id.overScrollTextVandanaWithLayman);
         ScrollView scrollTextVandanaAmbokote = findViewById(R.id.overScrollTextVandanaAmbokote);
 //        ScrollView scrollTextAfterEvening = findViewById(R.id.overScrollTextDeclomaciyaOftereveningMeditstion);
         scrollText.setVisibility(View.INVISIBLE);
-        scrollTextVandanaWithLayman.setVisibility(View.INVISIBLE);
         scrollTextVandanaAmbokote.setVisibility(View.INVISIBLE);
 //        scrollTextAfterEvening.setVisibility(View.INVISIBLE);
         buttonHome.setVisibility(View.INVISIBLE);

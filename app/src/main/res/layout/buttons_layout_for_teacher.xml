@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:id="@+id/button_layout_teacher"
+    android:visibility="invisible">
 
     <Button
         android:id="@+id/buttonLec_1Home"
@@ -13,6 +16,7 @@
         android:layout_marginBottom="0dp"
         android:onClick="toMainAct"
         android:visibility="visible"
+        tools:visibility="visible"
         />
 
     <Button
@@ -23,6 +27,7 @@
         android:layout_marginBottom="0dp"
         android:onClick="toBack"
         android:visibility="visible"
+        tools:visibility="visible"
         />
 
     <Button
@@ -33,6 +38,7 @@
         android:layout_marginBottom="0dp"
         android:foreground="@mipmap/minus_foreground"
         android:visibility="visible"
+        tools:visibility="visible"
         />
 
     <Button
@@ -43,6 +49,7 @@
         android:foreground="@mipmap/plus_foreground"
         android:foregroundGravity="fill"
         android:visibility="visible"
+        tools:visibility="visible"
         />
 
 </LinearLayout>

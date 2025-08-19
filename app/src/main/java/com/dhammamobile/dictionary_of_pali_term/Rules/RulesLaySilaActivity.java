@@ -1,6 +1,9 @@
 package com.dhammamobile.dictionary_of_pali_term.Rules;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import android.annotation.SuppressLint;
 import android.content.res.Configuration;
@@ -37,9 +40,15 @@ public class RulesLaySilaActivity extends BaseActivityClass {
         updateLocale(); // Установка языка
         setContentView(R.layout.activity_rules_lay_sila);
 
+        enableEdgeToEdgeMode();
+
         // Скрытие панели навигации и панели состояния
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        View rootView = findViewById(android.R.id.content);
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
+            Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
+            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            return insets;
+        });
 
         plusText = findViewById(R.id.buttonPlusLaySila);
         minusText = findViewById(R.id.buttonMinusLaySila);

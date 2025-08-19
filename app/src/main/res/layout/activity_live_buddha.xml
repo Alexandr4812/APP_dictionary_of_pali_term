@@ -50,7 +50,8 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:contentDescription="TODO"
-                android:onClick="toShow1"
+                android:tag="1"
+                android:onClick="showHtmlByNumber"
                 app:cardCornerRadius="16dp"
                 tools:ignore="UsingOnClickInXml">
 
@@ -67,7 +68,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toShow1"
+                android:tag="1"
+                android:onClick="showHtmlByNumber"
                 android:text="@string/namerenie_sumedhi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +84,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow2"
+                android:tag="2"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -99,7 +102,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toShow2"
+                android:tag="2"
+                android:onClick="showHtmlByNumber"
                 android:text="@string/son_mahamayi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -114,7 +118,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow3"
+                android:tag="3"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -132,7 +137,8 @@
                 android:layout_marginTop="0dp"
                 android:gravity="center"
                 android:text="@string/rogdenie_sidharthi"
-                android:onClick="toShow3"
+                android:tag="3"
+                android:onClick="showHtmlByNumber"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -145,7 +151,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow4"
+                android:tag="4"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -162,7 +169,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toShow4"
+                android:tag="4"
+                android:onClick="showHtmlByNumber"
                 android:text="@string/mudrec_asita"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -176,7 +184,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow5"
+                android:tag="5"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -193,7 +202,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toShow5"
+                android:tag="5"
+                android:onClick="showHtmlByNumber"
                 android:text="@string/pervoe_dostigenie_dgani"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -207,7 +217,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow6"
+                android:tag="6"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -225,7 +236,8 @@
                 android:layout_marginTop="0dp"
                 android:gravity="center"
                 android:text="@string/spasenie_lebedya"
-                android:onClick="toShow6"
+                android:tag="6"
+                android:onClick="showHtmlByNumber"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -238,7 +250,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow7"
+                android:tag="7"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -255,7 +268,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp"
                 android:gravity="center"
-                android:onClick="toShow7"
+                android:tag="7"
+                android:onClick="showHtmlByNumber"
                 android:text="@string/demonstraciya_umenii"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -269,7 +283,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow8"
+                android:tag="8"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -287,7 +302,8 @@
                 android:layout_marginTop="0dp"
                 android:gravity="center"
                 android:text="@string/description8"
-                android:onClick="toShow8"
+                android:tag="8"
+                android:onClick="showHtmlByNumber"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -300,7 +316,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow9"
+                android:tag="9"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -318,7 +335,8 @@
                 android:layout_marginTop="0dp"
                 android:gravity="center"
                 android:text="@string/description9"
-                android:onClick="toShow9"
+                android:tag="9"
+                android:onClick="showHtmlByNumber"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -334,7 +352,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow10"
+                android:tag="10"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -352,7 +371,8 @@
                 android:layout_marginTop="0dp"
                 android:gravity="center"
                 android:text="@string/description10"
-                android:onClick="toShow10"
+                android:tag="10"
+                android:onClick="showHtmlByNumber"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -366,7 +386,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow11"
+                android:tag="11"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -384,7 +405,8 @@
                 android:layout_marginTop="0dp"
                 android:gravity="center"
                 android:text="@string/description11"
-                android:onClick="toShow11"
+                android:tag="11"
+                android:onClick="showHtmlByNumber"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -398,7 +420,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow12"
+                android:tag="12"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -416,7 +439,8 @@
                 android:layout_marginTop="0dp"
                 android:gravity="center"
                 android:text="@string/description12"
-                android:onClick="toShow12"
+                android:tag="12"
+                android:onClick="showHtmlByNumber"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -430,7 +454,8 @@
                 android:layout_width="200dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:onClick="toShow13"
+                android:tag="13"
+                android:onClick="showHtmlByNumber"
                 android:contentDescription="TODO"
                 app:cardCornerRadius="16dp">
 
@@ -448,7 +473,8 @@
                 android:layout_marginTop="0dp"
                 android:gravity="center"
                 android:text="@string/description13"
-                android:onClick="toShow13"
+                android:tag="13"
+                android:onClick="showHtmlByNumber"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_face" />
@@ -456,6 +482,306 @@
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="14"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/dreams" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo14"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description14"
+                android:tag="14"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="15"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live15" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo15"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description15"
+                android:tag="15"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="16"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live16" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo16"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description16"
+                android:tag="16"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="17"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live17" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo17"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description17"
+                android:tag="17"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="18"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live18" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo18"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description18"
+                android:tag="18"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="19"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live19" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo19"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description19"
+                android:tag="19"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="20"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live20" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo20"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description20"
+                android:tag="20"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="21"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live21" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo21"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description21"
+                android:tag="21"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:tag="22"
+                android:onClick="showHtmlByNumber"
+                android:contentDescription="TODO"
+                app:cardCornerRadius="16dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/live22" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textViewTo22"
+                style="@style/TextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:text="@string/description22"
+                android:tag="22"
+                android:onClick="showHtmlByNumber"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_face" />
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
 
             <TextView
                 android:id="@+id/next"

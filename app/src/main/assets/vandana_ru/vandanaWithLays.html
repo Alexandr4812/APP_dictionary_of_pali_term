@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title></title>
+
+<style type="text/css">
+.a______ {
+mso-style-name:"Обычный";
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h1 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:18.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h2 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:16.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+h3 {
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:14.0pt;
+color:Black;
+font-weight:bold;
+border:none;
+}
+
+.tm5 {
+text-align:center;
+}
+.tm6 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+text-align:center;
+}
+.tm7 {
+font-size:14.0pt;
+}
+.tm8 {
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm9 {
+color:Green;
+font-size:14.0pt;
+}
+.tm10 {
+font-style:italic;
+font-size:14.0pt;
+}
+.tm11 {
+border:none;
+}
+.tm12 {
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Times New Roman";
+font-size:10.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+border:none;
+text-align:center;
+}
+.tm13 {
+color:Green;
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm14 {
+color:Red;
+font-size:14.0pt;
+}
+.tm15 {
+color:Red;
+font-size:14.0pt;
+font-weight:bold;
+}
+.tm16 {
+font-style:italic;
+color:Red;
+font-size:14.0pt;
+}
+.tm17 {
+color:Red;
+}
+
+body {
+            background-color: #FFE082;
+        }
+
+body {
+            margin: 5;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+img {
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+        var initialFontSize = 14; // Установите начальный размер шрифта
+
+        // Функция для установки начального размера шрифта
+        function setInitialFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var computedStyle = window.getComputedStyle(element, null);
+                var currentSize = parseFloat(computedStyle.getPropertyValue('font-size'));
+                // Увеличиваем размер до начального значения
+                var scale = initialFontSize / currentSize;
+                element.style.fontSize = initialFontSize + 'pt';
+            });
+        }
+
+        function increaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = (fontSize + 2) + 'px';
+            });
+        }
+
+        function decreaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = Math.max(8, fontSize - 2) + 'px';
+            });
+        }
+
+        // Устанавливаем начальный размер шрифта после загрузки страницы
+        window.onload = setInitialFontSize;
+    </script>
+
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><u><span class="tm8">ВАНДАНА С МИРЯНАМИ В МОНАСТЫРЕ
+ЧИТТАВИВЕКА</span></u></strong><u><span class="tm7"> </span></u></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><span class="tm9">Монах произносит:</span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><strong><span class="tm8"> Sadhukela namaskare kiane</span></strong><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Сказав садху произнесите
+намаскаре</span></em><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><span class="tm9">Миряне произносят: </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><strong><span class="tm8"> Namō tassa bhagavatō arahatō sammā′sambuddhassa [3x]</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><span class="tm9">Монах произносит, миряне повторяют:
+</span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Buddhaṃ saraṇaṃ gacchāmi </span></strong></p>
+<p class="tm6"><span class="tm7"></span><em><span class="tm10"> Я прибегаю к Будде как к прибежищу.</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><strong><span class="tm8"> Dhammaṃ saraṇaṃ gacchāmi</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><em><span class="tm10"> Я прибегаю к Учению Будды (Дхамма)
+как к прибежищу.</span></em><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Saṅghaṃ saraṇaṃ gacchāmi</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><em><span class="tm10"> Я прибегаю к Сангхе (благородным
+ученикам Будды) как к прибежищу.</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> Dutiyampi… </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Во второй раз… </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> Tatiyampi… </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">В третий раз... </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm9"> Монах произносит: </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Tisarana gamanamsumpunnam </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Тройное прибежище завершено
+</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm9">Монах произносит, миряне повторяют:
+</span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Pāṇātipātā vēra′maṇī sikkhā′padaṃ samā′diyāmi.</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><em><span class="tm10"> Я принимаю правило воздерживаться
+от лишения жизни.</span></em><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Adinnādānā vēra′maṇī sikkhā′padaṃ samā′diyāmi.</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Я принимаю правило воздерживаться
+от взятия того, что мне не дано.</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Kāmesu′micchācārā vēra′maṇī sikkhā′padaṃ samā′diyāmi. </span></strong></p>
+<p class="tm6"><span class="tm7"></span><em><span class="tm10"> Я принимаю правило воздерживаться
+от половой распущенности.</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Musāvādā vēra′maṇī sikkhā′padaṃ samā′diyāmi.</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><em><span class="tm10"> Я принимаю правило воздерживаться
+от ложной речи.</span></em><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Surā′mēraya′majja′pamādaṭṭhānā vēra′maṇī sikkhā′padaṃ samā′diyāmi.</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><em><span class="tm10"> Я принимаю правило воздерживаться
+от употребления опьяняющих веществ,
+ведущих к беспечности. </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><span class="tm9">Монах декламирует (миряне
+молчат): </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> tisaraṇena saddhiṃ pañcasīlaṃ dhammaṃ sādhukaṃ surakkhitaṃ katvā </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Тщательно соблюдая эти 5 правил
+с тремя прибежищами,</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> appamādena sampādetha </span></strong></p>
+<p class="tm6"><span class="tm7"></span><em><span class="tm10"> усердно старайтесь.</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><span class="tm9">миряне отвечают: </span><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><strong><span class="tm8"> āma bhantē</span></strong><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Да, почтенный </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><span class="tm9">Монах говорит: </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8"> Den api eketamevandena karemu </span></strong></p>
+<p class="tm6"><span class="tm7">  </span><em><span class="tm10">сейчас мы будем совершать
+вандану. </span></em><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><span class="tm9"> миряне отвечают: </span><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">sadhu sadhu sadhu.</span></strong><span class="tm7">  </span></p>
+<p class="tm6"><strong><span class="tm8"> </span></strong></p>
+<p class="tm6"><strong><span class="tm8"> </span></strong></p>
+<p class="tm6"><strong><span class="tm8"> ОБРАЩЕНИЕ К БУДДЕ </span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> NĪVEDAYĀMI SAMBUDDHAM</span></p>
+<p class="tm6"><em><span class="tm10">Воспринимая Самасамбудду</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> VĪTARĀGAM MAHĀMUNIM</span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Великого мудреца свободного
+от страсти</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> NĪMANTAYĀMI SUGATAM</span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Рассуждаю о хорошо ушедшем</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> LOKAJETTHAM NARĀSABAM</span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">лучшем в мире среди людей</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">ПОДНОШЕНИЕ СВЕТА</span></strong></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> GHANASĀRAPPADITTENA - DĪPENA TAMADHAṂSINĀ</span></p>
+<p class="tm6"><em><span class="tm10"> Светом пылающей камфоры, устраняющей
+тьму</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> TILOKADĪPAṂ SAMBUDDHAṂ - PŪJAYĀMI TAMONUDAṂ</span></p>
+<p class="tm6"><em><span class="tm10"> я выражаю почтение просветителю
+трёх миров, постигшему, рассеивающему
+тьму (невежества).</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> ПОДНОШЕНИЕ БЛАГОВОНИЙ</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> SUGANDHIKĀYA VADANAṂ - ANANTA GUṆA GANDHINAṂ</span></p>
+<p class="tm6"><em><span class="tm10"> Тому, чьё тело и лицо благоухает,
+от которого исходит запах бессчётных
+благих качеств,</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> SUGANDHINĀHAṂ GANDHENA - PŪJAYĀMI TATHĀGATAṂ</span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">я подношу эти благовония -
+Татхагате.</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> ПОДНОШЕНИ ЦВЕТОВ</span></strong></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> VAṆṆAGANDHAGUṆOPETAṂ - ETAṂ KUSUMASANTATIṂ</span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Обладающую красотой и приятным
+запахом эту россыпь цветов,</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> PŪJAYĀMI MUNINDASSA - SIRĪPĀDASARORUHE</span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">я подношу к лотосовым стопам
+Высшего мудреца.</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> PŪJEMI BUDDHAṂ KUSUMENANENA – PUÑÑENA METENA LABHAMI MOKKHAṂ</span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><em><span class="tm10"> Я почитаю Будду этими цветами
+(kusumena+anena), пусть благодаря этому благодеянию
+я обрету освобождение.</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> PUPPHAṂ MILĀYĀTI YATHĀ IDAMME - KĀYO TATHĀ YĀTI VINĀSABHĀVAṂ</span></p>
+<p class="tm6"><span class="tm7"></span><em><span class="tm10"> Как вянут эти цветы, так и это
+моё тело подвержено разрушению.</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8">ПОДНОШЕНИЕ ВОДЫ</span></strong></p>
+<p class="tm6"><strong><span class="tm8"> </span></strong></p>
+<p class="tm6"><strong><span class="tm8">Adhivāsetu no bhante,  </span><span class="tm8">Pāniyam </span><span class="tm8">parikappitaṃ,  anukampaṃ upādāya,  </span></strong></p>
+<p class="tm6"><strong><span class="tm8">patiggaṇhātu muttamam.</span></strong></p>
+<p class="tm12"><em><span class="tm10">Пусть бханте примет от нас эту приготовленню
+воду, приняв её из сострадания, пусть Благословенный
+примет это подношение, как наилучшее</span></em>.</p>
+<p class="tm12"><em><span class="tm10"> </span></em></p>
+<p class="tm6"><strong><span class="tm8">ПОДНОШЕНИЕ ЧАЯ</span></strong></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8">Adhivāsetu no bhante,  </span><span class="tm8">gilāna paccayaṃ imām</span><span
+ class="tm8">,  anukampaṃ upādāya,  </span></strong></p>
+<p class="tm6"><strong><span class="tm8">patiggaṇhātu muttamam.</span></strong></p>
+<p class="tm12"><em><span class="tm10">Пусть бханте примет от нас приготовленное
+гилянпасе, приняв это из сострадания,
+пусть Благословенный примет это подношение,
+как наилучшее</span></em>.</p>
+<p class="tm12"> </p>
+<p class="tm6"><strong><span class="tm8">ПОДНОШЕНИЕ ЕДЫ</span></strong></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8">Adhivāsetu no bhante,  </span><span class="tm8">bhojanam parikappitaṃ</span><span
+ class="tm8">,  anukampaṃ upādāya,  </span></strong></p>
+<p class="tm6"><strong><span class="tm8">patiggaṇhātu muttamam.</span></strong></p>
+<p class="tm12"><em><span class="tm10">Пусть бханте примет от нас эту приготовленню
+воду, приняв её из сострадания, пусть Благословенный
+примет это подношение, как наилучшее</span></em>.</p>
+<p class="tm12"> </p>
+<p class="tm12"><strong><span class="tm13">То, что красным шрифтом не обязательно
+произносить</span></strong></p>
+<p class="tm12"><span class="tm14"> </span></p>
+<p class="tm6"><strong><span class="tm15">ПОДНОШЕНИЕ СОКА</span></strong></p>
+<p class="tm6"><span class="tm14"> </span></p>
+<p class="tm6"><strong><span class="tm15">Adhivāsetu no bhante,  pānakam parikappitaṃ</span></strong> <strong><span
+ class="tm15">anukampaṃ upādāya,  </span></strong></p>
+<p class="tm6"><strong><span class="tm15">patiggaṇhātu muttamam.</span></strong></p>
+<p class="tm12"><em><span class="tm16">Пусть бханте примет от нас этот
+приготовленный сок, приняв его из сострадания,
+пусть Благословенный примет это подношение,
+как наилучшее</span></em><span class="tm17">.</span></p>
+<p class="tm12"><span class="tm17"> </span></p>
+<p class="tm6"><strong><span class="tm15">ПОДНОШЕНИЕ ФРУКТОВ</span></strong></p>
+<p class="tm6"><span class="tm14"> </span></p>
+<p class="tm6"><strong><span class="tm15">Adhivāsetu no bhante,  phalam</span></strong> <strong><span class="tm15">parikappitaṃ</span></strong> <strong><span
+ class="tm15">anukampaṃ upādāya,  </span></strong></p>
+<p class="tm6"><strong><span class="tm15">patiggaṇhātu muttamam.</span></strong></p>
+<p class="tm12"><em><span class="tm16">Пусть бханте примет от нас эти приготовленные
+фрукты, приняв их из сострадания, пусть
+Благословенный примет это подношение,
+как наилучшее</span></em><span class="tm17">.</span></p>
+<p class="tm12"><span class="tm17"> </span></p>
+<p class="tm6"><strong><span class="tm15">ПОДНОШЕНИЕ ЛЕКАРСТВ</span></strong></p>
+<p class="tm12"><span class="tm17"> </span></p>
+<p class="tm6"><strong><span class="tm15">Adhivāsetu no bhante,  bhesajjam</span></strong> <strong><span class="tm15">parikappitaṃ</span></strong> <strong><span
+ class="tm15">anukampaṃ upādāya,  </span></strong></p>
+<p class="tm6"><strong><span class="tm15">patiggaṇhātu muttamam.</span></strong></p>
+<p class="tm12"><em><span class="tm16">Пусть бханте примет от нас эти лекарства,
+приняв их из сострадания, пусть Благословенный
+примет это подношение, как наилучшее</span></em><span
+ class="tm17">.</span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><strong><span class="tm8"> ПОДНОШЕНИЕ ПРОЧИХ БЛЮД</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><strong><span class="tm8"> adhivāsetu no bhante - sabbaṃ saddhāya pūjitaṃ anukampaṃ upādāya - patigaṇhātu muttamaṃ</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Пусть бханте примет от нас
+всё поднесённое, приняв это из сострадания,
+пусть Благословенный примет это подношение,
+как наилучшее</span></em>.<span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> КАЧЕСТВА БУДДЫ </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> Itipi so bhagavā arahaṃ sammāsambuddho </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Благословенный действительно
+является таким: он достойный, постигший
+в совершенстве,</span></em><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> Vijjācaraṇasampanno sugato lokavidū </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">обладающий знанием и [благим]
+поведением, достигший блага, знаток мира,</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Anuttaro purisadammasārathi </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">несравненный укротитель
+существ, подходящих для обуздания </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Satthā devamanussānaṃ buddho bhagavāti </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">учитель богов и людей, Постигший,
+Благословенный.</span></em><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">ПОЧТЕНИЕ ПАМЯТНИКАМ </span></strong></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Vandāmi cetiyaṃ sabbaṃ - sabbaṭṭhānesu patiṭṭhitaṃ </span></strong></p>
+<p class="tm6"><span class="tm7"></span><em><span class="tm10"> Я почитаю все памятники во
+всех местах, где они установлены,</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> Sārīrikadhātu mahābodhiṃ - buddharūpaṃ sakalaṃ sadā </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">останки-реликвии, дерево Бодхи,
+всегда почитаю все изображения Будды.</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">ПРОЩЕНИЕ НЕДОСТАТКОВ </span></strong></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> Kāyena vācā cittena pamādena mayā kataṃ </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">[Если] телом, речью или мыслями
+мною из-за беспечности был совершён </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Accayaṃ khama me bhante - bhūripañña tathāgata</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">проступок - прости мне почтенный,
+глубокомудрый Татхагата.</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Kāyena vācā cittena pamādena mayā kataṃ </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">[Если] телом, речью или мыслями
+мною из-за беспечности был совершён</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"></span><strong><span class="tm8"> Accayaṃ khama me dhamma - sandiṭṭhika akālika</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">проступок - прости мне Дхамма,
+видимая непосредственно, не требующая
+времени.</span></em><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Kāyena vācā cittena pamādena mayā kataṃ</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">[Если] телом, речью или мыслями
+мною из-за беспечности был совершён</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Accayaṃ khama me saṅgha supaṭipanna anuttara </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">проступок - прости мне Сангха,
+вступившая на хороший путь, несравненная.
+</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">ПРИГЛАШЕНИЕ ДЭВОВ К СОРАДОВАНИЮ</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> Ākāsatthā ca bhummaṭṭhā devā nāgā mahiddhikā </span></strong></p>
+<p class="tm6"><em><span class="tm10"> Пусть могучие божества и наги,
+живущие на земле и в небе </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> Puññaṃ taṃ anumoditvā ciraṃ rakkhantu lokasāsanaṃ </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">возрадовавшись этому благодеянию
+долго защищают систему [Будды] в этом мире.
+</span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Ākāsatthā ca bhummaṭṭhā devā nāgā mahiddhikā </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Пусть могучие божества и наги,
+живущие на земле и в небе </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Puññaṃ taṃ anumoditvā ciraṃ rakkhantu desanaṃ</span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">возрадовавшись этому благодеянию
+долго защищают наставление [Будды].</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> Ākāsatthā ca bhummaṭṭhā devā nāgā mahiddhikā </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Пусть могучие божества и наги,
+живущие на земле и в небе</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Puññaṃ taṃ anumoditvā ciraṃ rakkhantu maṃ paraṃ </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">возрадовавшись этому благодеянию
+долго защищают меня и других.</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7">*** </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Iminā puññakammēna - mā me bālasamāgamō  </span></strong></p>
+<p class="tm6"><em><span class="tm10"> Пусть благодаря этой заслуге
+я никогда не буду следовать глупцам. </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> Sataṃ samāgamō hōtu - yāva nibbāna pattiyā </span></strong></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Пусть я буду следовать только
+мудрым, пока не достигну Ниббаны.</span></em><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Idaṃ me puññaṃ - āsavakkhayā vahaṃ hōtu </span></strong><span
+ class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><em><span class="tm10">Пусть эта заслуга приведёт
+к меня к прекращению асасав. </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span><strong><span class="tm8">Sabba dukkhā pamuccatu </span></strong></p>
+<p class="tm6"><em><span class="tm10">Прекращению всех страданий</span></em></p>
+<p class="tm6"><em><span class="tm10"> </span></em></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> РАЗДЕЛЕНИЕ ЗАСЛУГ </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><strong><span class="tm8"> idaṃ no (me) ñātīnaṃ hotu - sukhitā hontu ñātayo [3x] </span></strong></p>
+<p class="tm6"><span class="tm7"> П</span><em><span class="tm10">усть это пойдёт на благо нашим
+(моим) родственникам, пусть родственники
+будут счастливы.</span></em><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+<p class="tm6"><span class="tm7"> </span></p>
+</body>
+</html>

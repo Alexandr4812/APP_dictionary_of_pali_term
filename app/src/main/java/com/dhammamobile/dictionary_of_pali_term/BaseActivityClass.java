@@ -13,6 +13,9 @@ import android.view.WindowManager;
 
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.WindowCompat;
+import androidx.core.view.WindowInsetsCompat;
+import androidx.core.view.WindowInsetsControllerCompat;
 
 import java.util.Locale;
 
@@ -24,6 +27,15 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         // Убрать панель навигации (если нужно)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+    }
+
+    protected void enableEdgeToEdgeMode() {
+        View decorView = getWindow().getDecorView();
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), false); // Важно!
+
+        WindowInsetsControllerCompat controller = new WindowInsetsControllerCompat(getWindow(), decorView);
+        controller.hide(WindowInsetsCompat.Type.systemBars()); // Скрыть навигацию + статус
+        controller.setSystemBarsBehavior(WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
     }
 
     @Override
@@ -102,6 +114,8 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+
+
 
 
 }
