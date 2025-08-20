@@ -13,3 +13,20 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+
+# Build
+.gradle/
+build/
+app/build/
+
+# Logs
+*.log
+
+# Local configs
+local.properties
+
+# Debug source (не нужен в репо)
+app/src/debug/
