@@ -70,7 +70,7 @@
 
                 <Button
                     android:id="@+id/button_chitta_harakteristika"
-                    style="@style/button_activity_chetasika"
+                    style="@style/button_activity_chittas"
                     android:layout_weight="1"
                     android:onClick="onButtonClickAbhidhamma1"
                     android:text="@string/button_kontakt_harakteristika"
@@ -78,7 +78,7 @@
 
                 <Button
                     android:id="@+id/button_chitta_function"
-                    style="@style/button_activity_chetasika"
+                    style="@style/button_activity_chittas"
                     android:layout_weight="1"
                     android:onClick="onButtonClickAbhidhamma1"
                     android:text="@string/button_kontakt_function"
@@ -94,7 +94,7 @@
 
                 <Button
                     android:id="@+id/button_chitta_proyavlenie"
-                    style="@style/button_activity_chetasika"
+                    style="@style/button_activity_chittas"
                     android:layout_weight="1"
                     android:onClick="onButtonClickAbhidhamma1"
                     android:text="@string/button_kontakt_proyavlenie"
@@ -102,7 +102,7 @@
 
                 <Button
                     android:id="@+id/button_chitta_prichina"
-                    style="@style/button_activity_chetasika"
+                    style="@style/button_activity_chittas"
                     android:layout_weight="1"
                     android:onClick="onButtonClickAbhidhamma1"
                     android:text="@string/button_kontakt_prichina"

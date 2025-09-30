@@ -61,6 +61,11 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
+            <TextView
+                android:id="@+id/textViewFirstCategoryDosa"
+                style="@style/textBetweenButtons"
+                android:text="@string/forTextViewKamavachara" />
+
             <Button
                 android:id="@+id/infoButtonKamamavacharaUwholsome"
                 style="@style/infoButton"

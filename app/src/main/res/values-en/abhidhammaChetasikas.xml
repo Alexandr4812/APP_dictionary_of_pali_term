@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="forTextViewChetasikas">52 MENTAL FACTORS</string>
+
     <string name="forButtonEtichVeriabUniversal">
         \n <b>7 \n ethically verifiable, universal mental factors \n (sabbacittasādhārana)</b> \n
     </string>
+
+    <string name="forTextViewChetasikasVer">13 ETHICALLY VARIABLE MENTAL FACTORS</string>
 
     <string name="textDescribeEtichVeriabUniversal">
         UNIVERSAL MENTAL FACTORS (sabbacittasādhārana): \n\n

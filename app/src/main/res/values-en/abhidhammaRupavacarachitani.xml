@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="forTextViewRupavacara">15 CONSCIOUSNESSES OF THE FINE-MATERIAL SPHERE</string>
+
     <string name="forTextViewZagolovokRupavacaraKusala">5 Beneficial Consciousnesses of the Subtle-Material Sphere \n (Rupāvacaracittāni)</string>
     <string name="forTextViewZagolovokRupavacaraKriya">5 Functional Consciousnesses of the Fine-Material Sphere \n (Rūpāvacara-kriyācittāni)</string>
     <string name="forTextViewZagolovokRupavacaraVipaka">5 Resultant Consciousnesses of the Fine-Material Sphere \n (Rūpāvacara-vipākacittāni)</string>
@@ -135,6 +138,9 @@ Non-delusion
     <string name="textRupavacaraKusalaFunkciya1">
 FUNCTION: operates as: \n REBIRTH \n BHAVANGA \n DEATH
 </string>
+    <string name="textRupavacaraKusalaFunkciya2">
+    FUNCTION: operates as: JAVANA
+    </string>
 
     <string name="textRupavacaraKusalaKombinaciya1">
 COMBINES WITH 35 CETASIKAS: \n\n
@@ -329,53 +335,53 @@ COMBINES WITH 4 CETASIKAS: \n\n
     >> 32. Wisdom (Paññā) \n
 </string>
     <string name="textRupavacaraKusalaKombinaciya5">
-    COMBINES WITH 30 CETASIKAS: \n\n
-        UNIVERSALS: \n
-        >> 1. Contact (Phassa) \n
-        >> 2. Feeling (Vedanā) \n
-        >> 3. Perception (Saññā) \n
-        >> 4. Volition (Cetanā) \n
-        >> 5. One-pointedness (Ekaggatā) \n
-        >> 6. Mental-life faculty (Jīvitindriya) \n
-        >> 7. Attention (Manasikāra) \n\n
+    ASSOCIATED WITH 30 CETASIKAS: \n\n
+        UNIVERSALS (Sabbacittasādhāraṇa): \n
+        &gt;&gt; 1. Contact (Phassa) \n
+        &gt;&gt; 2. Feeling (Vedanā) \n
+        &gt;&gt; 3. Perception (Saññā) \n
+        &gt;&gt; 4. Volition (Cetanā) \n
+        &gt;&gt; 5. One-pointedness (Ekaggatā) \n
+        &gt;&gt; 6. Mental life-faculty (Jīvitindriya) \n
+        &gt;&gt; 7. Attention (Manasikāra) \n\n
 
-        OCCASIONAL: \n
-    >> __ absent (vitaka) __ \n
-    >> __ absent (vicara) __ \n
-    >> 8. Determination (Adhimokkha) \n
-    >> 9. Energy (Viriya) \n
-    >> __ absent (piti)__ \n
-    >> 10. Desire to act (Chanda) \n\n
+        OCCASIONALS (Pakiṇṇaka): \n
+    &gt;&gt; __ absent (vitakka) __ \n
+    &gt;&gt; __ absent (vicāra) __ \n
+    &gt;&gt; 8.  Decision (Adhimokkha) \n
+    &gt;&gt; 9.  Energy (Viriya) \n
+    &gt;&gt; __ absent (pīti)__\n
+    &gt;&gt; 10. Desire-to-act (Chanda) \n\n
 
-        UNIVERSAL WHOLESOME: \n
-    >> 11. Faith (Saddhā) \n
-    >> 12. Mindfulness (Sati) \n
-    >> 13. Shame (Hiri) \n
-    >> 14. Fear of wrong (Ottappa) \n
-    >> 15. Non-greed (Alobha) \n
-    >> 16. Non-hatred (Adosa) \n
-    >> 17. Mental neutrality (Tatramajjhattatā) \n
-    >> 18. Tranquility of mental body (Kāyapassaddhi) \n
-    >> 19. Tranquility of consciousness (Cittapassaddhi) \n
-    >> 20. Lightness of mental body (Kāyalahutā) \n
-    >> 21. Lightness of consciousness (Cittalahutā) \n
-    >> 22. Softness of mental body (Kāyamudutā) \n
-    >> 23. Softness of consciousness (Cittamudutā) \n
-    >> 24. Adaptability of mental body (Kāyakammaññatā) \n
-    >> 25. Adaptability of consciousness (Cittakammaññatā) \n
-    >> 26. Proficiency of mental body (Kāyapāguññatā) \n
-    >> 27. Proficiency of consciousness (Cittapāguññatā) \n
-    >> 28. Uprightness of mental body (Kāyujjukatā) \n
-    >> 29. Uprightness of consciousness (Cittujjukatā) \n\n
+        BEAUTIFUL UNIVERSALS (Sobhana Sādhāraṇa): \n
+    &gt;&gt; 11. Faith (Saddhā) \n
+    &gt;&gt; 12. Mindfulness (Sati) \n
+    &gt;&gt; 13. Moral shame (Hiri) \n
+    &gt;&gt; 14. Moral dread (Ottappa) \n
+    &gt;&gt; 15. Non-greed (Alobha) \n
+    &gt;&gt; 16. Non-hatred (Adosa) \n
+    &gt;&gt; 17. Neutrality of mind (Tatramajjhattatā) \n
+    &gt;&gt; 18. Tranquility of mental body (Kāyapassaddhi) \n
+    &gt;&gt; 19. Tranquility of consciousness (Cittapassaddhi) \n
+    &gt;&gt; 20. Lightness of mental body (Kāyalahutā) \n
+    &gt;&gt; 21. Lightness of consciousness (Cittalahutā) \n
+    &gt;&gt; 22. Malleability of mental body (Kāyamudutā) \n
+    &gt;&gt; 23. Malleability of consciousness (Cittamudutā) \n
+    &gt;&gt; 24. Wieldiness of mental body (Kāyakammaññatā) \n
+    &gt;&gt; 25. Wieldiness of consciousness (Cittakammaññatā) \n
+    &gt;&gt; 26. Proficiency of mental body (Kāyapāguññatā) \n
+    &gt;&gt; 27. Proficiency of consciousness (Cittapāguññatā) \n
+    &gt;&gt; 28. Rectitude of mental body (Kāyujjukatā) \n
+    &gt;&gt; 29. Rectitude of consciousness (Cittujjukatā) \n\n
 
-        WHOLESOME OCCASIONAL: \n
-        RESTRAINTS: \n
-    >> absent \n\n
+        OCCASIONAL WHOLESOME (Included as needed):\n
+        ABSTINENCES (Virati) \n
+    &gt;&gt;     absent \n \n
 
-        IMMEASURABLES: \n
-    >> 30. Compassion (Karuṇā) \n
-    >> __ absent (Muditā)__ \n
-    >> __ absent (Paññā)__ \n
+        ILLIMITABLES (Appamaññā) \n
+    &gt;&gt; __ Absent (Karuṇā)__ \n
+    &gt;&gt; __ Absent (Muditā)__ \n
+    &gt;&gt; 30. Wisdom (Paññā) \n
     </string>
 
 

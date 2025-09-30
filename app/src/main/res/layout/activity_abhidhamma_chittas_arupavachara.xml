@@ -2,10 +2,11 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/my_main_color"
-    tools:context="com.dhammamobile.dictionary_of_pali_term.Abhidhamma.AbhidhammaChittasActivity">
+    tools:context=".Abhidhamma.AbhidhammaChittasArupavacharaActivity">
 
     <ImageButton
         android:id="@+id/backButton"
@@ -13,8 +14,8 @@
         android:layout_height="39dp"
         android:layout_marginBottom="10dp"
         android:background="@color/my_main_color"
-        android:contentDescription="возврат в главное меню"
-        android:onClick="toAbhidhammaAct"
+        android:contentDescription="@string/backButtonArupavachara"
+        android:onClick="toAbhidhammaChittasAct"
         android:scaleType="centerInside"
         android:src="@drawable/button_back"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +42,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
-        android:id="@+id/viewScrollAbhidhammaChittas"
+        android:id="@+id/viewScrollAbhidhammaMentalfakt"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
@@ -51,39 +52,39 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/linearLayoutScrollAbhidhammaChittas"
+            android:id="@+id/linearLayoutScrollAbhidhammaChittasArupavachara"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageVievAbhidhammaChittas1"
+                android:id="@+id/imageVievAbhidhamma1"
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textViewFirstCategoryDosa"
                 style="@style/textBetweenButtons"
-                android:text="@string/forTextViewChittas" />
+                android:text="@string/forTextViewArupavachara" />
 
             <Button
-                android:id="@+id/infoButtonKamamavachara"
+                android:id="@+id/infoButtonArupavacharaWholsome"
                 style="@style/infoButton"
                 android:foreground="@drawable/info7"
-                android:onClick="onButtonClickAbhidhammaKammavacharam"
+                android:onClick="onButtonClickAbhidhammaArupavacharamWholsome"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
-                android:id="@+id/button_abhidhamma_kammavacharam"
+                android:id="@+id/button_abhidhamma_chittas_arupavachara1"
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="toAbhidhammaChittasKamavacharam"
-                android:text="@string/textButtonKamavacharachitani"
+                android:onClick="toAbhidhammaChittasArupavacharamWholsomeAct"
+                android:text="@string/textButtonArupavacharamWholsome"
                 tools:ignore="UsingOnClickInXml" />
 
             <TextView
-                android:id="@+id/textViewAbhidhammaKammavacharam"
+                android:id="@+id/textViewAbhidhammaArupavacharamWholsome"
                 style="@style/TextMessageStyleAbhidyamma"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -91,23 +92,23 @@
                 android:visibility="invisible"/>
 
             <Button
-                android:id="@+id/infoButtonRupavachara"
+                android:id="@+id/infoButtonArupavacharaVipaka"
                 style="@style/infoButton"
                 android:foreground="@drawable/info7"
-                android:onClick="onButtonClickAbhidhammaRupavachara"
+                android:onClick="onButtonClickAbhidhammaArupavacharaVipaka"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
-                android:id="@+id/button_abhidhamma_rupavachara"
+                android:id="@+id/button_abhidhamma_chittas_arupavachara2"
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="toAbhidhammaChittasRupavacara"
-                android:text="@string/textButtonRupavacharachitani"
+                android:onClick="toAbhidhammaChittasArupavacharaVipakaAct"
+                android:text="@string/textButtonArupavacharaVipaka"
                 tools:ignore="UsingOnClickInXml" />
 
             <TextView
-                android:id="@+id/textViewAbhidhammaRupavachara"
+                android:id="@+id/textViewAbhidhammaArupavacharaVipaka"
                 style="@style/TextMessageStyleAbhidyamma"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -115,31 +116,28 @@
                 android:visibility="invisible"/>
 
             <Button
-                android:id="@+id/infoButtonArupavachara"
+                android:id="@+id/infoButtonArupavacharaFunkcional"
                 style="@style/infoButton"
                 android:foreground="@drawable/info7"
-                android:onClick="onButtonClickAbhidhammaArupavachara"
+                android:onClick="onButtonClickAbhidhammaArupavacharaFunkcional"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
-                android:id="@+id/button_abhidhamma_arupavachara"
+                android:id="@+id/button_abhidhamma_chittas_arupavachara3"
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="toAbhidhammaChittasArupavacara"
-                android:text="@string/textButtonArupavacharachitani"
+                android:onClick="toAbhidhammaChittasArupavacharaFunkcionalAct"
+                android:text="@string/textButtonArupavacharaFunkcional"
                 tools:ignore="UsingOnClickInXml" />
 
             <TextView
-                android:id="@+id/textViewAbhidhammaArupavachara"
+                android:id="@+id/textViewAbhidhammaArupavacharaFunkcional"
                 style="@style/TextMessageStyleAbhidyamma"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
                 android:text=""
-                android:visibility="invisible" />
-
-
+                android:visibility="invisible"/>
         </LinearLayout>
     </ScrollView>
 

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="forTextViewRupavacara">15 СОЗНАНИЙ ТОНКОМАТЕРИАЛЬНОЙ СРЕДЫ</string>
+
     <string name="forTextViewZagolovokRupavacaraKusala">5 Благотворных сознаний тонкоматериальной среды \n (Рупāвачарачиттāни)</string>
     <string name="forTextViewZagolovokRupavacaraKriya">5 Функциональных сознаний тонкоматериальной среды \n (Рупāвачара-крийāчиттāни)</string>
     <string name="forTextViewZagolovokRupavacaraVipaka">5 Результирующих сознаний тонкоматериальной среды \n (Рупāвачара-випāкачиттāни)</string>
@@ -130,6 +133,9 @@
 
     <string name="textRupavacaraKusalaFunkciya1">
     ФУНКЦИЯ: функционирует как: \n ПЕРЕРОЖДЕНИЕ \n БХАВАНГА \n СМЕРТЬ
+    </string>
+    <string name="textRupavacaraKusalaFunkciya2">
+    ФУНКЦИЯ: функционирует как: ДЖАВАНЫ
     </string>
 
 
@@ -370,8 +376,8 @@
     >>     остутствуют \n \n
 
         БЕЗГРАНИЧНОСТИ \n
-    >> 30. Сострадание (Karuṇā) \n
+    >> __ Отсутствует (Karuṇā)__ \n
     >> __ Отсутствует (Muditā)__ \n
-    >> __ Отсутствует (Pañña)__ \n
+    >> 30. Мудрость (Pañña) \n
     </string>
 </resources>

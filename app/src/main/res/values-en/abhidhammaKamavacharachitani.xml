@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="forTextViewKamavachara">54 CONSCIOUSNESSES OF THE SENSORY SPHERE</string>
+    <string name="forTextViewKamavacharaUnwholsome">12 UNWHOLESOME CONSCIOUSNESSES OF THE SENSUOUS SPHERE</string>
+    <string name="forTextViewKamavacharaAhrtuka">18 ROOTLESS CONSCIOUSNESSES OF THE SENSUOUS SPHERE</string>
+    <string name="forTextViewKamavacharaBeautiful">24 BEAUTIFUL CONSCIOUSNESSES OF THE SENSUOUS SPHERE</string>
+
+
     <string name="textButtonKamavacharachitani">\n Consciousness of the sensory environment \n (Kamavacaracittani) - 54 \n</string>
     <string name="textButtonKamavacharamUnwholsome">Unwholesome consciousness \n (Akusalacittāni) – 12</string>
     <string name="textButtonKamavacharamAhetuka">Rootless consciousness \n (Ahetukacittāni) – 18</string>

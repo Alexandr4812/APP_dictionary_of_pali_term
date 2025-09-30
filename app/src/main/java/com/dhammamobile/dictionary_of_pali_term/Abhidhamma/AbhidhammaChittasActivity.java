@@ -5,7 +5,6 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -19,9 +18,9 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 
 public class AbhidhammaChittasActivity extends BaseActivityClass {
 
-    private TextView textViewAbhidhammaKammavacharam, textViewAbhidhammaRupavacharam;
+    private TextView textViewAbhidhammaKammavacharam, textViewAbhidhammaRupavacharam, textViewAbhidhammaArupavacharam;
 
-    private Button infoButtonAbhidhammaKammavacharam, infoButtonAbhidhammaRupavacharam;
+    private Button infoButtonAbhidhammaKammavacharam, infoButtonAbhidhammaRupavacharam, infoButtonAbhidhammaArupavacharam;
 
     // Переменная для хранения последней нажатой кнопки
     private Button lastClickedButton = null;
@@ -50,6 +49,9 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
 
         textViewAbhidhammaRupavacharam = findViewById(R.id.textViewAbhidhammaRupavachara);
         infoButtonAbhidhammaRupavacharam = findViewById(R.id.infoButtonRupavachara);
+
+        textViewAbhidhammaArupavacharam = findViewById(R.id.textViewAbhidhammaArupavachara);
+        infoButtonAbhidhammaArupavacharam = findViewById(R.id.infoButtonArupavachara);
     }
 
     public void onButtonClickAbhidhammaKammavacharam(View view) {
@@ -57,6 +59,7 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
         int visibility = textViewAbhidhammaKammavacharam.getVisibility();
         textViewAbhidhammaKammavacharam.setText("");
         textViewAbhidhammaRupavacharam.setText("");
+        textViewAbhidhammaArupavacharam.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -78,6 +81,7 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
         int visibility = textViewAbhidhammaRupavacharam.getVisibility();
         textViewAbhidhammaKammavacharam.setText("");
         textViewAbhidhammaRupavacharam.setText("");
+        textViewAbhidhammaArupavacharam.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -89,6 +93,28 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
                 textViewAbhidhammaRupavacharam.setText(R.string.textDiscribeRupavacharachitani);
                 textViewAbhidhammaRupavacharam.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaRupavacharam, getString(R.string.textDiscribeRupavacharachitani));
+            }
+            lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
+        }
+    }
+
+    public void onButtonClickAbhidhammaArupavachara(View view) {
+        Button clickedButton = (Button) view;
+        int visibility = textViewAbhidhammaArupavacharam.getVisibility();
+        textViewAbhidhammaKammavacharam.setText("");
+        textViewAbhidhammaRupavacharam.setText("");
+        textViewAbhidhammaArupavacharam.setText("");
+
+        // Если нажата та же кнопка, что и ранее
+        if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
+            textViewAbhidhammaArupavacharam.setText(""); // Установите текст в пустую строку
+            textViewAbhidhammaArupavacharam.setVisibility(View.INVISIBLE);
+            resetAnimator();
+        } else {
+            if (clickedButton == infoButtonAbhidhammaArupavacharam) {
+                textViewAbhidhammaArupavacharam.setText(R.string.textDiscribeArupavacharachitani);
+                textViewAbhidhammaArupavacharam.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaArupavacharam, getString(R.string.textDiscribeArupavacharachitani));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -129,6 +155,10 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
 
     public void toAbhidhammaChittasRupavacara(View view){
         startIntentActivityAndFinish(AbhidhammaChittasRupavacaraActivity.class);
+    }
+
+    public void toAbhidhammaChittasArupavacara(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasArupavacharaActivity.class);
     }
 
     public void toMainAct(View view){

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="forTextViewChetasikas">52 МЕНТАЛЬНЫХ ФАКТОРА</string>
+
     <string name="forButtonEtichVeriabUniversal">
         <b>7 \n этически вериабельных, универсальных ментальных факторов \n (саббачиттасāдхāрана)</b> \n
     </string>
+
+    <string name="forTextViewChetasikasVer">13 ЭТИЧЕСКИ ВЕРИАБЕЛЬНЫХ МЕНТАЛЬНЫХ ФАКТОРОВ</string>
 
     <string name="textDescribeEtichVeriabUniversal">
         УНИВЕРСАЛЬНЫЕ МЕНТАЛЬНЫЕ ФАКТОРЫ (саббачиттасāдхāрана): \n\n

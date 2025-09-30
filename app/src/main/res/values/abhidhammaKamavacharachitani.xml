@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <string name="forTextViewKamavachara">54 СОЗНАНИЯ СЕНСОРНОЙ СРЕДЫ</string>
+    <string name="forTextViewKamavacharaUnwholsome">12 НЕБЛАГОТВОРНЫХ СОЗНАНИЙ СЕНСОРНОЙ СРЕДЫ</string>
+    <string name="forTextViewKamavacharaAhrtuka">18 БЕСКОРЕННЫХ СОЗНАНИЙ СЕНСОРНОЙ СРЕДЫ</string>
+    <string name="forTextViewKamavacharaBeautiful">24 ПРЕКРАСНЫХ СОЗНАНИЙ СЕНСОРНОЙ СРЕДЫ</string>
+
     <string name="textButtonKamavacharachitani">\n <b>Сознание сенсорной среды \n (Кāмāвачарачиттāни) — 54</b> \n</string>
     <string name="textButtonKamavacharamUnwholsome">\n <b>Неблаготворное сознание \n (Акусалачиттāни) — 12</b> \n</string>
     <string name="textButtonKamavacharamAhetuka">\n <b>Бескоренное сознание \n (Ахетукачиттāни) — 18</b> \n</string>

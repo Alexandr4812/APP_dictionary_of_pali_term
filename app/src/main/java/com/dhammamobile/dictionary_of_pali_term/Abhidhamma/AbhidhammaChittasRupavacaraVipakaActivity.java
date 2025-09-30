@@ -131,9 +131,9 @@ public class AbhidhammaChittasRupavacaraVipakaActivity extends BaseActivityClass
                 textViewAbhidhammaRupavacaraKusala1.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaRupavacaraKusala1, getString(R.string.textRupavacaraKusalaKoren1));
             } else if (clickedButton == funkciya1) {
-                textViewAbhidhammaRupavacaraKusala1.setText(R.string.textRupavacaraKusalaFunkciya1);
+                textViewAbhidhammaRupavacaraKusala1.setText(R.string.textRupavacaraKusalaFunkciya2);
                 textViewAbhidhammaRupavacaraKusala1.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaRupavacaraKusala1, getString(R.string.textRupavacaraKusalaFunkciya1));
+                animateText(textViewAbhidhammaRupavacaraKusala1, getString(R.string.textRupavacaraKusalaFunkciya2));
             } else if (clickedButton == kombinaciya1) {
                 textViewAbhidhammaRupavacaraKusala1.setText(R.string.textRupavacaraKusalaKombinaciya1);
                 textViewAbhidhammaRupavacaraKusala1.setVisibility(View.VISIBLE);
@@ -168,9 +168,9 @@ public class AbhidhammaChittasRupavacaraVipakaActivity extends BaseActivityClass
                 textViewAbhidhammaRupavacaraKusala2.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaRupavacaraKusala2, getString(R.string.textRupavacaraKusalaKoren1));
             } else if (clickedButton == funkciya2) {
-                textViewAbhidhammaRupavacaraKusala2.setText(R.string.textRupavacaraKusalaFunkciya1);
+                textViewAbhidhammaRupavacaraKusala2.setText(R.string.textRupavacaraKusalaFunkciya2);
                 textViewAbhidhammaRupavacaraKusala2.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaRupavacaraKusala2, getString(R.string.textRupavacaraKusalaFunkciya1));
+                animateText(textViewAbhidhammaRupavacaraKusala2, getString(R.string.textRupavacaraKusalaFunkciya2));
             } else if (clickedButton == kombinaciya2) {
                 textViewAbhidhammaRupavacaraKusala2.setText(R.string.textRupavacaraKusalaKombinaciya2);
                 textViewAbhidhammaRupavacaraKusala2.setVisibility(View.VISIBLE);
@@ -205,9 +205,9 @@ public class AbhidhammaChittasRupavacaraVipakaActivity extends BaseActivityClass
                 textViewAbhidhammaRupavacaraKusala3.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaRupavacaraKusala3, getString(R.string.textRupavacaraKusalaKoren1));
             } else if (clickedButton == funkciya3) {
-                textViewAbhidhammaRupavacaraKusala3.setText(R.string.textRupavacaraKusalaFunkciya1);
+                textViewAbhidhammaRupavacaraKusala3.setText(R.string.textRupavacaraKusalaFunkciya2);
                 textViewAbhidhammaRupavacaraKusala3.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaRupavacaraKusala3, getString(R.string.textRupavacaraKusalaFunkciya1));
+                animateText(textViewAbhidhammaRupavacaraKusala3, getString(R.string.textRupavacaraKusalaFunkciya2));
             } else if (clickedButton == kombinaciya3) {
                 textViewAbhidhammaRupavacaraKusala3.setText(R.string.textRupavacaraKusalaKombinaciya3);
                 textViewAbhidhammaRupavacaraKusala3.setVisibility(View.VISIBLE);
@@ -241,9 +241,9 @@ public class AbhidhammaChittasRupavacaraVipakaActivity extends BaseActivityClass
                 textViewAbhidhammaRupavacaraKusala4.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaRupavacaraKusala4, getString(R.string.textRupavacaraKusalaKoren1));
             } else if (clickedButton == funkciya4) {
-                textViewAbhidhammaRupavacaraKusala4.setText(R.string.textRupavacaraKusalaFunkciya1);
+                textViewAbhidhammaRupavacaraKusala4.setText(R.string.textRupavacaraKusalaFunkciya2);
                 textViewAbhidhammaRupavacaraKusala4.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaRupavacaraKusala4, getString(R.string.textRupavacaraKusalaFunkciya1));
+                animateText(textViewAbhidhammaRupavacaraKusala4, getString(R.string.textRupavacaraKusalaFunkciya2));
             } else if (clickedButton == kombinaciya4) {
                 textViewAbhidhammaRupavacaraKusala4.setText(R.string.textRupavacaraKusalaKombinaciya4);
                 textViewAbhidhammaRupavacaraKusala4.setVisibility(View.VISIBLE);
@@ -278,9 +278,9 @@ public class AbhidhammaChittasRupavacaraVipakaActivity extends BaseActivityClass
                 textViewAbhidhammaRupavacaraKusala5.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaRupavacaraKusala5, getString(R.string.textRupavacaraKusalaKoren1));
             } else if (clickedButton == funkciya5) {
-                textViewAbhidhammaRupavacaraKusala5.setText(R.string.textRupavacaraKusalaFunkciya1);
+                textViewAbhidhammaRupavacaraKusala5.setText(R.string.textRupavacaraKusalaFunkciya2);
                 textViewAbhidhammaRupavacaraKusala5.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaRupavacaraKusala5, getString(R.string.textRupavacaraKusalaFunkciya1));
+                animateText(textViewAbhidhammaRupavacaraKusala5, getString(R.string.textRupavacaraKusalaFunkciya2));
             } else if (clickedButton == kombinaciya5) {
                 textViewAbhidhammaRupavacaraKusala5.setText(R.string.textRupavacaraKusalaKombinaciya5);
                 textViewAbhidhammaRupavacaraKusala5.setVisibility(View.VISIBLE);

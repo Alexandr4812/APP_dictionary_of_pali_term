@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonAbhidhammaChetasika">\n <b>54 \n mental factors\n(chetasika)</b> \n</string>
+
+    <string name="forTextViewChittas"> 89 OR 121 TYPES OF CONSCIOUSNESS (citta)</string>
+
+
+    <string name="buttonAbhidhammaChetasika">\n <b>52 \n mental factors\n(chetasika)</b> \n</string>
     <string name="button_kontakt">1 \ncontact \n(phassa)</string>
     <string name="universal">Universal 7</string>
     <string name="button_kontakt_harakteristika">Characteristic</string>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textButtonArupavacharachitani">"\n<b>Formless Sphere Consciousness (Arūpāvacaracittāni) — 12 \n </b> "</string>
+
+    <string name="textDiscribeArupavacharachitani">FORMLESS SPHERE CONSCIOUSNESS (arūpāvacaracittāni):
+    This sphere of consciousness comprises the cittas pertaining to the immaterial plane of existence (arūpabhūmi),
+    four planes in which matter has been completely transcended and only consciousness and mental factors remain.
+    Rebirth into these four planes occurs through the attainment of the arūpajjhānas, the four immaterial, or
+    formless, absorptions, which are achieved by developing concentration beyond the five jhānas of the fine-material sphere.
+    The formless sphere consists of twelve cittas: four wholesome cittas, with which laypeople and practitioners
+    [in the initial stages of Enlightenment] experience the immaterial attainments; four resultant,
+    which arise through rebirth in the immaterial planes; and four functional,
+    which arise in Arahants who undertake the immaterial attainments.
+</string>
+
+    <string name="forTextViewArupavachara"> 12 CONSCIOUSNESSES OF THE IMMATERIAL SPHERE (Arūpāvacaracittāni)</string>
+    <string name="forTextViewArupavacharaWholsome"> 4 WHOLESOME CONSCIOUSNESSES OF THE IMMATERIAL SPHERE (Arūpāvacara-kusalacittāni)</string>
+
+
+    <string name="textButtonArupavacharamWholsome">\n <b>Immaterial Sphere Wholesome Consciousness \n (Arūpāvacara-kusalacittāni) — 4</b> \n</string>
+    <string name="textButtonArupavacharaVipaka">\n <b>Immaterial Sphere Resultant Consciousness \n (Arūpāvacara-vipākacittāni) — 4</b> \n</string>
+    <string name="textButtonArupavacharaFunkcional">\n <b>Functional Consciousness of the Immaterial Sphere \n (Arūpāvacara-kriyācittāni) — 4</b> \n</string>
+
+    <string name="textButton1ArupavacharaWholsome">Wholesome consciousness pertaining to the sphere of infinite space.\n\n Ākāsānañcāyatana-kusalacittam</string>
+
+    <string name="textArupavacharaWholsome1">
+    The first wholesome citta with which immaterial attainments are experienced by laypeople and
+    practitioners [in the initial stages of Enlightenment]. \n \n
+    The Sphere of Infinite Space (ākāsānañcāyatana):
+    The first of the four immaterial jhānas is the attainment of the sphere of infinite space. To achieve it, a meditator who has mastered the fifth fine-material jhāna, based on a kasiṇa object, extends the kasiṇa’s counterpart sign to immeasurable dimensions.
+        Then, they remove the kasiṇa, attending only to the space it pervaded, contemplating it as “infinite space.”
+        Continuing to attend in this way, at a certain point in immersion, a citta arises having as its object the concept of infinite
+        space (ākāsapaññatti). The expression “sphere of infinite space,” strictly speaking, refers to the concept
+of infinite space, which serves as the object of the first consciousness of the immaterial sphere. Here the word āyatana,
+“sphere,” has the meaning of a habitat or dwelling place for the citta of this jhāna. However, in a derivative sense,
+the expression “sphere of infinite space” also extends to the jhāna itself.
+</string>
+
+
+    <string name="textArupavacharaWholsomeKoren">
+        3 ROOTS: \n
+    Non-greed \n
+    Non-hatred \n
+    Non-delusion
+    </string>
+
+    <string name="textArupavacharaWholsomeFunkciya1">
+        FUNCTION: functions as: JAVANAS
+    </string>
+
+    <string name="textArupavacharaWholsomeKombinaciya1">
+        ASSOCIATED WITH 30 CETASIKAS: \n\n
+        UNIVERSALS (Sabbacittasādhāraṇa): \n
+        &gt;&gt; 1. Contact (Phassa) \n
+        &gt;&gt; 2. Feeling (Vedanā) \n
+        &gt;&gt; 3. Perception (Saññā) \n
+        &gt;&gt; 4. Volition (Cetanā) \n
+        &gt;&gt; 5. One-pointedness (Ekaggatā) \n
+        &gt;&gt; 6. Mental life-faculty (Jīvitindriya) \n
+        &gt;&gt; 7. Attention (Manasikāra) \n\n
+
+        OCCASIONALS (Pakiṇṇaka): \n
+    &gt;&gt; __ absent (vitakka) __ \n
+    &gt;&gt; __ absent (vicāra) __ \n
+    &gt;&gt; 8.  Decision (Adhimokkha) \n
+    &gt;&gt; 9.  Energy (Viriya) \n
+    &gt;&gt; __ absent (pīti)__\n
+    &gt;&gt; 10. Desire-to-act (Chanda) \n\n
+
+        BEAUTIFUL UNIVERSALS (Sobhana Sādhāraṇa): \n
+    &gt;&gt; 11. Faith (Saddhā) \n
+    &gt;&gt; 12. Mindfulness (Sati) \n
+    &gt;&gt; 13. Moral shame (Hiri) \n
+    &gt;&gt; 14. Moral dread (Ottappa) \n
+    &gt;&gt; 15. Non-greed (Alobha) \n
+    &gt;&gt; 16. Non-hatred (Adosa) \n
+    &gt;&gt; 17. Neutrality of mind (Tatramajjhattatā) \n
+    &gt;&gt; 18. Tranquility of mental body (Kāyapassaddhi) \n
+    &gt;&gt; 19. Tranquility of consciousness (Cittapassaddhi) \n
+    &gt;&gt; 20. Lightness of mental body (Kāyalahutā) \n
+    &gt;&gt; 21. Lightness of consciousness (Cittalahutā) \n
+    &gt;&gt; 22. Malleability of mental body (Kāyamudutā) \n
+    &gt;&gt; 23. Malleability of consciousness (Cittamudutā) \n
+    &gt;&gt; 24. Wieldiness of mental body (Kāyakammaññatā) \n
+    &gt;&gt; 25. Wieldiness of consciousness (Cittakammaññatā) \n
+    &gt;&gt; 26. Proficiency of mental body (Kāyapāguññatā) \n
+    &gt;&gt; 27. Proficiency of consciousness (Cittapāguññatā) \n
+    &gt;&gt; 28. Rectitude of mental body (Kāyujjukatā) \n
+    &gt;&gt; 29. Rectitude of consciousness (Cittujjukatā) \n\n
+
+        OCCASIONAL WHOLESOME (Included as needed):\n
+        ABSTINENCES (Virati) \n
+    &gt;&gt;     absent \n \n
+
+        ILLIMITABLES (Appamaññā) \n
+    &gt;&gt; __ Absent (Karuṇā)__ \n
+    &gt;&gt; __ Absent (Muditā)__ \n
+    &gt;&gt; 30. Wisdom (Paññā) \n
+    </string>
+
+
+</resources>
