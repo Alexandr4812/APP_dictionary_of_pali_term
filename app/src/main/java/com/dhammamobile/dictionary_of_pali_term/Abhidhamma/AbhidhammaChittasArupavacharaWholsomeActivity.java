@@ -72,7 +72,7 @@ public class AbhidhammaChittasArupavacharaWholsomeActivity extends BaseActivityC
         funkciya1 = findViewById(R.id.button_abhidhamma_chittas_arupavachara_wholsome_funkciya1);
         funkciya2 = findViewById(R.id.button_abhidhamma_chittas_arupavachara_wholsome_funkciya2);
         funkciya3 = findViewById(R.id.button_abhidhamma_chittas_arupavachara_wholsome_funkciya3);
-        funkciya3 = findViewById(R.id.button_abhidhamma_chittas_arupavachara_wholsome_funkciya4);
+        funkciya4 = findViewById(R.id.button_abhidhamma_chittas_arupavachara_wholsome_funkciya4);
 
         kombinaciya1 = findViewById(R.id.button_abhidhamma_chittas_arupavachara_wholsome_kombinaciya1);
         kombinaciya2 = findViewById(R.id.button_abhidhamma_chittas_arupavachara_wholsome_kombinaciya2);

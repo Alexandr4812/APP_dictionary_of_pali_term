@@ -17,6 +17,15 @@
         android:versionName="3.1"
         tools:targetApi="33">
         <activity
+            android:name=".Abhidhamma.AbhidhammaChittasArupavacharaResultActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Abhidhamma.AbhidhammaChittasArupavacharaWholsomeActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
@@ -25,7 +34,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".Abhidhamma.AbhidhammaChittasArupavacharaActivity"
             android:configChanges="orientation|screenSize"

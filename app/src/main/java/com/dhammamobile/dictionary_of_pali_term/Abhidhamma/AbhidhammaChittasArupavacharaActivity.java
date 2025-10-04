@@ -5,7 +5,10 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.core.graphics.Insets;
@@ -16,7 +19,13 @@ import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
 
+import java.util.Locale;
+
 public class AbhidhammaChittasArupavacharaActivity extends BaseActivityClass {
+
+    LinearLayout buttonInfo;
+    Button plusText, minusText;
+    WebView webView; // Declare WebView as a class member for easy access
 
     private TextView textViewAbhidhammaArupavacharamWholsome;
 
@@ -38,6 +47,7 @@ public class AbhidhammaChittasArupavacharaActivity extends BaseActivityClass {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        updateLocale(); // Установка языка
         setContentView(R.layout.activity_abhidhamma_chittas_arupavachara);
 
         // setWindowFlagsFullscreenAndNoLimits();
@@ -52,6 +62,13 @@ public class AbhidhammaChittasArupavacharaActivity extends BaseActivityClass {
             return insets;
         });
 
+        plusText = findViewById(R.id.buttonPlusTextLiveBuddha);
+        minusText = findViewById(R.id.buttonMinusTextLiveBuddha);
+
+        webView = findViewById(R.id.webViewuArupavachara);
+
+        buttonInfo = findViewById(R.id.button_layout_live_buddha);
+
         textViewAbhidhammaArupavacharamWholsome = findViewById(R.id.textViewAbhidhammaArupavacharamWholsome);
         infoButtonAbhidhammaArupavacharamWholsome = findViewById(R.id.infoButtonArupavacharaWholsome);
 
@@ -60,7 +77,39 @@ public class AbhidhammaChittasArupavacharaActivity extends BaseActivityClass {
 
         textViewAbhidhammaArupavacharaFunkcional = findViewById(R.id.textViewAbhidhammaArupavacharaFunkcional);
         infoButtonAbhidhammaArupavacharaFunkcional = findViewById(R.id.infoButtonArupavacharaFunkcional);
+
+        // Настройки WebView
+        WebSettings webSettings = webView.getSettings();
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.clearCache(true);
+
+        // Обработчики нажатий кнопок для увеличения/уменьшения шрифта
+        plusText.setOnClickListener(v -> {
+            webView.evaluateJavascript("javascript:increaseFontSize();", null);
+        });
+
+        minusText.setOnClickListener(v -> {
+            webView.evaluateJavascript("javascript:decreaseFontSize();", null);
+        });
     }
+
+    private void loadHtmlPage(String htmlFilePath) {
+        webView.loadUrl(htmlFilePath);
+    }
+
+    public void toShowInfoArupavacara(View view) {
+        buttonInfo.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/info_rupavachara_arupavachara_ru/commentArupalokaRu.html";
+        } else {
+            htmlFilePath = "file:///android_asset/info_rupavachara_arupavachara_en/commentArupalokaEn.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
 
     public void onButtonClickAbhidhammaArupavacharamWholsome(View view) {
         Button clickedButton = (Button) view;
@@ -76,9 +125,9 @@ public class AbhidhammaChittasArupavacharaActivity extends BaseActivityClass {
             resetAnimator();
         } else {
             if (clickedButton == infoButtonAbhidhammaArupavacharamWholsome) {
-                textViewAbhidhammaArupavacharamWholsome.setText(R.string.textDiscribeKamavacharachitamUnwholsome);
+                textViewAbhidhammaArupavacharamWholsome.setText(R.string.textDiscribeArupavacharaWholsome);
                 textViewAbhidhammaArupavacharamWholsome.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaArupavacharamWholsome, getString(R.string.textDiscribeKamavacharachitamUnwholsome));
+                animateText(textViewAbhidhammaArupavacharamWholsome, getString(R.string.textDiscribeArupavacharaWholsome));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -98,9 +147,9 @@ public class AbhidhammaChittasArupavacharaActivity extends BaseActivityClass {
             resetAnimator();
         } else {
             if (clickedButton == infoButtonAbhidhammaArupavacharaVipaka) {
-                textViewAbhidhammaArupavacharaVipaka.setText(R.string.textDiscribeKamavacharachitamAhetuka);
+                textViewAbhidhammaArupavacharaVipaka.setText(R.string.textDiscribeArupavacharaResult);
                 textViewAbhidhammaArupavacharaVipaka.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaArupavacharaVipaka, getString(R.string.textDiscribeKamavacharachitamAhetuka));
+                animateText(textViewAbhidhammaArupavacharaVipaka, getString(R.string.textDiscribeArupavacharaResult));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -120,9 +169,9 @@ public class AbhidhammaChittasArupavacharaActivity extends BaseActivityClass {
             resetAnimator();
         } else {
             if (clickedButton == infoButtonAbhidhammaArupavacharaFunkcional) {
-                textViewAbhidhammaArupavacharaFunkcional.setText(R.string.textDiscribeKamavacharachitamBeautiful);
+                textViewAbhidhammaArupavacharaFunkcional.setText(R.string.textDiscribeArupavacharaFunkcional);
                 textViewAbhidhammaArupavacharaFunkcional.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaArupavacharaFunkcional, getString(R.string.textDiscribeKamavacharachitamBeautiful));
+                animateText(textViewAbhidhammaArupavacharaFunkcional, getString(R.string.textDiscribeArupavacharaFunkcional));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -161,16 +210,21 @@ public class AbhidhammaChittasArupavacharaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(AbhidhammaChittasArupavacharaWholsomeActivity.class);
     }
 
-   /* public void toAbhidhammaChittasArupavacharaVipakaAct(View view){
-        startIntentActivityAndFinish(AbhidhammaChittasArupavacharaVipakaActivity.class);
+    public void toAbhidhammaChittasArupavacharaVipakaAct(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasArupavacharaResultActivity.class);
     }
 
-    public void toAbhidhammaChittasArupavacharaFunkcionalAct(View view){
-        startIntentActivityAndFinish(AbhidhammaChittasArupavacharaFunkcionalActivity.class);
-    }*/
+//    public void toAbhidhammaChittasArupavacharaFunkcionalAct(View view){
+//        startIntentActivityAndFinish(AbhidhammaChittasArupavacharaFunkcionalActivity.class);
+//    }
 
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
+    }
+
+    public void toLiveBack(View view){
+        webView.setVisibility(View.INVISIBLE);
+        buttonInfo.setVisibility(View.INVISIBLE);
     }
 
     @Override
