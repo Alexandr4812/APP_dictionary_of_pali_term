@@ -16,6 +16,25 @@
         android:versionCode="3"
         android:versionName="3.1"
         tools:targetApi="33">
+
+        <activity
+            android:name=".Abhidhamma.AbhidhammaChittasArupavacharaFunkcionalActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Abhidhamma.AbhidhammaChittasLokutaraActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Abhidhamma.AbhidhammaChittasArupavacharaResultActivity"
             android:configChanges="orientation|screenSize"

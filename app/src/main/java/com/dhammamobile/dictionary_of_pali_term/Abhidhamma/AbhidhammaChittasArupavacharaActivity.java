@@ -214,9 +214,9 @@ public class AbhidhammaChittasArupavacharaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(AbhidhammaChittasArupavacharaResultActivity.class);
     }
 
-//    public void toAbhidhammaChittasArupavacharaFunkcionalAct(View view){
-//        startIntentActivityAndFinish(AbhidhammaChittasArupavacharaFunkcionalActivity.class);
-//    }
+    public void toAbhidhammaChittasArupavacharaFunkcionalAct(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasArupavacharaFunkcionalActivity.class);
+    }
 
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);

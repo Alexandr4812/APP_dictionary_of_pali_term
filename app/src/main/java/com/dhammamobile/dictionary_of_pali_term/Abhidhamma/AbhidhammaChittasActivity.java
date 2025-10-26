@@ -18,9 +18,11 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 
 public class AbhidhammaChittasActivity extends BaseActivityClass {
 
-    private TextView textViewAbhidhammaKammavacharam, textViewAbhidhammaRupavacharam, textViewAbhidhammaArupavacharam;
+    private TextView textViewAbhidhammaKammavacharam, textViewAbhidhammaRupavacharam,
+            textViewAbhidhammaArupavacharam, textViewAbhidhammaLokutara;
 
-    private Button infoButtonAbhidhammaKammavacharam, infoButtonAbhidhammaRupavacharam, infoButtonAbhidhammaArupavacharam;
+    private Button infoButtonAbhidhammaKammavacharam, infoButtonAbhidhammaRupavacharam,
+            infoButtonAbhidhammaArupavacharam, infoButtonAbhidhammaLokutara;
 
     // Переменная для хранения последней нажатой кнопки
     private Button lastClickedButton = null;
@@ -52,6 +54,9 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
 
         textViewAbhidhammaArupavacharam = findViewById(R.id.textViewAbhidhammaArupavachara);
         infoButtonAbhidhammaArupavacharam = findViewById(R.id.infoButtonArupavachara);
+
+        textViewAbhidhammaLokutara = findViewById(R.id.textViewAbhidhammaLokutara);
+        infoButtonAbhidhammaLokutara = findViewById(R.id.infoButtonLokutara);
     }
 
     public void onButtonClickAbhidhammaKammavacharam(View view) {
@@ -60,6 +65,7 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
         textViewAbhidhammaKammavacharam.setText("");
         textViewAbhidhammaRupavacharam.setText("");
         textViewAbhidhammaArupavacharam.setText("");
+        textViewAbhidhammaLokutara.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -82,6 +88,7 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
         textViewAbhidhammaKammavacharam.setText("");
         textViewAbhidhammaRupavacharam.setText("");
         textViewAbhidhammaArupavacharam.setText("");
+        textViewAbhidhammaLokutara.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -104,6 +111,7 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
         textViewAbhidhammaKammavacharam.setText("");
         textViewAbhidhammaRupavacharam.setText("");
         textViewAbhidhammaArupavacharam.setText("");
+        textViewAbhidhammaLokutara.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -115,6 +123,29 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
                 textViewAbhidhammaArupavacharam.setText(R.string.textDiscribeArupavacharachitani);
                 textViewAbhidhammaArupavacharam.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaArupavacharam, getString(R.string.textDiscribeArupavacharachitani));
+            }
+            lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
+        }
+    }
+
+    public void onButtonClickAbhidhammaLokutara(View view) {
+        Button clickedButton = (Button) view;
+        int visibility = textViewAbhidhammaLokutara.getVisibility();
+        textViewAbhidhammaKammavacharam.setText("");
+        textViewAbhidhammaRupavacharam.setText("");
+        textViewAbhidhammaArupavacharam.setText("");
+        textViewAbhidhammaLokutara.setText("");
+
+        // Если нажата та же кнопка, что и ранее
+        if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
+            textViewAbhidhammaLokutara.setText(""); // Установите текст в пустую строку
+            textViewAbhidhammaLokutara.setVisibility(View.INVISIBLE);
+            resetAnimator();
+        } else {
+            if (clickedButton == infoButtonAbhidhammaLokutara) {
+                textViewAbhidhammaLokutara.setText(R.string.textDiscribeLokutarachitani);
+                textViewAbhidhammaLokutara.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaLokutara, getString(R.string.textDiscribeLokutarachitani));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -159,6 +190,10 @@ public class AbhidhammaChittasActivity extends BaseActivityClass {
 
     public void toAbhidhammaChittasArupavacara(View view){
         startIntentActivityAndFinish(AbhidhammaChittasArupavacharaActivity.class);
+    }
+
+    public void toAbhidhammaChittasLokutara(View view){
+        startIntentActivityAndFinish(AbhidhammaChittasLokutaraActivity.class);
     }
 
     public void toMainAct(View view){

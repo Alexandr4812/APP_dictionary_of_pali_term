@@ -31,6 +31,8 @@
     <string name="forTextViewArupavachara"> 12 CONSCIOUSNESSES OF THE IMMATERIAL SPHERE (Arūpāvacaracittāni)</string>
     <string name="forTextViewArupavacharaWholsome"> 4 WHOLESOME CONSCIOUSNESSES OF THE IMMATERIAL SPHERE (Arūpāvacara-kusalacittāni)</string>
     <string name="forTextViewArupavacharaResult">4 RESULTANT CONSCIOUSNESSES OF THE IMMATERIAL SPHERE (Arūpāvacara-vipākacittāni)</string>
+    <string name="forTextViewArupavacharaFunkcional">4 FUNCTIONAL CONSCIOUSNESSES OF THE IMMATERIAL SPHERE (Arūpāvacara-kiriyācittāni)</string>
+
 
 
     <string name="textButtonArupavacharamWholsome">\n <b>Immaterial Sphere Wholesome Consciousness \n (Arūpāvacara-kusalacittāni) — 4</b> \n</string>
@@ -46,6 +48,11 @@
     <string name="textButton2ArupavacharaResult">Resultant consciousness pertaining to the sphere of infinite consciousness.\n\n Viññāṇañcāyatana-vipākacittam</string>
     <string name="textButton3ArupavacharaResult">Resultant consciousness pertaining to the sphere of nothingness.\n\n Ākiñcaññāyatana-vipākacittam</string>
     <string name="textButton4ArupavacharaResult">Resultant consciousness pertaining to the sphere of neither perception nor non-perception.\n\n Nevasaññānāsaññāyatana-vipākacittam</string>
+
+    <string name="textButton1ArupavacharaFunkcional">Functional consciousness pertaining to the sphere of infinite space.\n\n Ākāsānañcāyatana-kiriyācittam</string>
+    <string name="textButton2ArupavacharaFunkcional">Functional consciousness pertaining to the sphere of infinite consciousness.\n\n Viññāṇañcāyatana-kiriyācittam</string>
+    <string name="textButton3ArupavacharaFunkcional">Functional consciousness pertaining to the sphere of nothingness.\n\n Ākiñcaññāyatana-kiriyācittam</string>
+    <string name="textButton4ArupavacharaFunkcional">Functional consciousness pertaining to the sphere of neither perception nor non-perception.\n\n Nevasaññānāsaññāyatana-kiriyācittam</string>
 
 
     <string name="textArupavacharaWholsome1">
@@ -115,6 +122,24 @@ as its object the consciousness of the sphere of nothingness, the third immateri
         the sphere of neither perception nor non-perception. \n\n Nevasaññānāsaññāyatana.
     </string>
 
+    <string name="textArupavacharaFunkcional1">
+    Arises in Arahants who undertake
+    the immaterial attainments.
+    </string>
+    <string name="textArupavacharaFunkcional2">
+    Arises in Arahants who undertake
+    the immaterial attainments.
+    </string>
+    <string name="textArupavacharaFunkcional3">
+    Arises in Arahants who undertake
+    the immaterial attainments.
+    </string>
+    <string name="textArupavacharaFunkcional4">
+    Arises in Arahants who undertake
+    the immaterial attainments.
+    </string>
+
+
 
 
     <string name="textArupavacharaWholsomeKoren">
@@ -136,7 +161,9 @@ as its object the consciousness of the sphere of nothingness, the third immateri
     <string name="textArupavacharaResultFunkciya1">
         FUNCTION: functions as: \n REBIRTH \n BHAVANGA \n DEATH
     </string>
-
+    <string name="textArupavacharaFunkcionalFunkciya1">
+        FUNCTION: functions as: JAVANAS
+    </string>
 
 
     <string name="textArupavacharaWholsomeKombinaciya1">
@@ -237,6 +264,56 @@ as its object the consciousness of the sphere of nothingness, the third immateri
     &gt;&gt; __ Absent (Muditā)__ \n
     &gt;&gt; 30. Wisdom (Paññā) \n
     </string>
+    <string name="textArupavacharaFunkcionalKombinaciya1">
+        COMBINES WITH 30 CETASIKAS: \n\n
+        UNIVERSALS: \n
+        >> 1. Contact (Phassa) \n
+        >> 2. Feeling (Vedanā) \n
+        >> 3. Perception (Saññā) \n
+        >> 4. Volition (Cetanā) \n
+        >> 5. One-pointedness (Ekaggatā) \n
+        >> 6. Mental life faculty (Jīvitindriya) \n
+        >> 7. Attention (Manasikāra) \n\n
+
+        OCCASIONALS: \n
+    >> __ absent (vitakka) __ \n
+    >> __ absent (vicāra) __ \n
+    >> 8.  Decision (Adhimokkha) \n
+    >> 9.  Energy (Viriya) \n
+    >> __ absent (pīti)__\n
+    >> 10. Desire-to-do (Chanda) \n\n
+
+        UNIVERSAL BEAUTIFUL: \n
+    >> 11. Faith (Saddhā) \n
+    >> 12. Mindfulness (Sati) \n
+    >> 13. Moral shame (Hiri) \n
+    >> 14. Moral dread (Ottappa) \n
+    >> 15. Non-greed (Alobha) \n
+    >> 16. Non-hatred (Adosa) \n
+    >> 17. Neutrality of mind (Tatramajjhattatā) \n
+    >> 18. Tranquility of mental body (Kāyapassaddhi) \n
+    >> 19. Tranquility of consciousness (Cittapassaddhi) \n
+    >> 20. Lightness of mental body (Kāyalahutā) \n
+    >> 21. Lightness of consciousness (Cittalahutā) \n
+    >> 22. Malleability of mental body (Kāyamudutā) \n
+    >> 23. Malleability of consciousness (Cittamudutā) \n
+    >> 24. Wieldiness of mental body (Kāyakammaññatā) \n
+    >> 25. Wieldiness of consciousness (Cittakammaññatā) \n
+    >> 26. Proficiency of mental body (Kāyapāguññatā) \n
+    >> 27. Proficiency of consciousness (Cittapāguññatā) \n
+    >> 28. Rectitude of mental body (Kāyujjukatā) \n
+    >> 29. Rectitude of consciousness (Cittujjukatā) \n\n
+
+        OCCASIONAL BEAUTIFUL: \n
+        ABSTINENCES \n
+    >>     absent \n \n
+
+        ILLIMITABLES \n
+    >> __ Absent (Karuṇā)__ \n
+    >> __ Absent (Muditā)__ \n
+    >> 30. Wisdom (Pañña) \n
+    </string>
+
 
 
 </resources>

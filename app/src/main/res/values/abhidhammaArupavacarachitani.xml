@@ -31,6 +31,7 @@
     <string name="forTextViewArupavachara"> 12 СОЗНАНИЙ НЕМАТЕРИАЛЬНОЙ СРЕДЫ (Арупāвачарачиттāни)</string>
     <string name="forTextViewArupavacharaWholsome"> 4 БЛАГОТВОРНЫХ СОЗНАНИЯ НЕМАТЕРИАЛЬНОЙ СРЕДЫ (Арупāвачара-кусалачиттāни)</string>
     <string name="forTextViewArupavacharaResult"> 4 РЕЗУЛЬТИРУЮЩИХ СОЗНАНИЯ НЕМАТЕРИАЛЬНОЙ СРЕДЫ (Арупāвачара-випāкачиттāни)</string>
+    <string name="forTextViewArupavacharaFunkcional"> 4 ФУНКЦИОНАЛЬНЫХ СОЗНАНИЯ НЕМАТЕРИАЛЬНОЙ СРЕДЫ (Арупāвачара-крийāчиттāни)</string>
 
     <string name="textButtonArupavacharamWholsome">\n <b>Благотворное сознание нематериальной среды \n (Арупāвачара-кусалачиттāни) — 4</b> \n</string>
     <string name="textButtonArupavacharaVipaka">\n <b>Результирующее сознание нематериальной среды \n (Арупāвачара-випāкачиттāни) — 4</b> \n</string>
@@ -45,6 +46,11 @@
     <string name="textButton2ArupavacharaResult">Результирующее сознание, относящееся к сфере бесконечного сознания.\n\n Виннāнанчāйатана-випāкачиттам</string>
     <string name="textButton3ArupavacharaResult">Результирующее сознание, относящееся к сфере ничто.\n\n Āкинчаннāйатана-випāкачиттам</string>
     <string name="textButton4ArupavacharaResult">Результирующее сознание, относящееся к сфере ни восприятия ни не-восприятия.\n\n Невасаннāнāсаннāйатана-випāкачиттам</string>
+
+    <string name="textButton1ArupavacharaFunkcional">Функциональное сознание, относящееся к сфере бесконечного пространства.\n\n Āкāсāнанчāйатана-крийāчиттам</string>
+    <string name="textButton2ArupavacharaFunkcional">Функциональное сознание, относящееся к сфере бесконечного сознания.\n\n Виннāнанчāйатана-крийāчиттам</string>
+    <string name="textButton3ArupavacharaFunkcional">Функциональное сознание, относящееся к сфере ничто.\n\n Āкинчаннāйатана-крийāчиттам</string>
+    <string name="textButton4ArupavacharaFunkcional">Функциональное сознание, относящееся к сфере ни восприятия ни не-восприятия.\n\n Невасаннāнāсаннāйатана-крийāчиттам</string>
 
     <string name="textArupavacharaWholsome1">
         Первая благотворная читта, с которой нематериальные достижения испытываются мирянами и практикующими  [находящимися на начальных стадиях Просветления] \n \n
@@ -112,6 +118,23 @@
         сфере ни восприятия ни не-восприятия. \n\n Невасаннāнāсаннāйатана.
     </string>
 
+    <string name="textArupavacharaFunkcional1">
+    Возникает у арахантов, которые берутся
+    за нематериальные достижения.
+    </string>
+    <string name="textArupavacharaFunkcional2">
+    Возникает у арахантов, которые берутся
+    за нематериальные достижения.
+    </string>
+    <string name="textArupavacharaFunkcional3">
+    Возникает у арахантов, которые берутся
+    за нематериальные достижения.
+    </string>
+    <string name="textArupavacharaFunkcional4">
+    Возникает у арахантов, которые берутся
+    за нематериальные достижения.
+    </string>
+
     <string name="textArupavacharaWholsomeKoren">
         3 КОРНЯ: \n
     Не-жаднось \n
@@ -132,9 +155,9 @@
     <string name="textArupavacharaResultFunkciya1">
         ФУНКЦИЯ: функционирует как: \n ПЕРЕРОЖДЕНИЕ \n БХАВАНГА \n СМЕРТЬ
     </string>
-    <!--<string name="textArupavacharaWholsomeFunkciya2">
-        ФУНКЦИЯ: функционирует как: \n ПЕРЕРОЖДЕНИЕ \n БХАВАНГА \n СМЕРТЬ
-    </string>-->
+    <string name="textArupavacharaFunkcionalFunkciya1">
+        ФУНКЦИЯ: функционирует как: ДЖАВАНЫ
+    </string>
 
 
     <string name="textArupavacharaWholsomeKombinaciya1">
@@ -187,6 +210,56 @@
     >> 30. Мудрость (Pañña) \n
     </string>
     <string name="textArupavacharaResultKombinaciya1">
+        ВХОДИТ В КОМБИНАЦИЮ С 30 ЧЕТАСИКАМИ: \n\n
+        УНИВЕРСАЛЬНЫЕ: \n
+        >> 1. Контакт (Phassa) \n
+        >> 2. Чувство (Vedanā) \n
+        >> 3. Восприятие (Saññā) \n
+        >> 4. Воление (Cetanā) \n
+        >> 5. Однонаправленность (Ekaggatā) \n
+        >> 6. Мент.упр. жизнь-способность (Jīvitindriya) \n
+        >> 7. Внимание (Manasikāra) \n\n
+
+        СЛУЧАЮЩИЕСЯ ВРЕМЯ ОТ ВРЕМЕНИ: \n
+    >> __ остутствует (vitaka) __ \n
+    >> __ остутствует (vicara) __ \n
+    >> 8.  Решимость (Adhimokkha) \n
+    >> 9.  Энергия (Viriya) \n
+    >> __ отсутствует (piti)__\n
+    >> 10. Желание действовать (Chanda) \n\n
+
+        УНИВЕРСАЛЬНЫЕ БЛАГОТВОРНЫЕ: \n
+    >> 11. Вера (Saddhā) \n
+    >> 12. Осознанность (Sati) \n
+    >> 13. Стыд (Hiri) \n
+    >> 14. Боязнь дурных поступков (Ottappa) \n
+    >> 15. Не-жадность (Alobha) \n
+    >> 16. Не-злость (Adosa) \n
+    >> 17. Нейтральность ума (Tatramajjhattatā) \n
+    >> 18. Уравновешенность мент. тела (Kāyapassaddhi) \n
+    >> 19. Уравновешенность сознания (Cittapassaddhi) \n
+    >> 20. Лёгкость ментального тела (Kāyalahutā) \n
+    >> 21. Лёгкость сознания (Cittalahutā) \n
+    >> 22. Гибкость ментального тела (Kāyamudutā) \n
+    >> 23. Гибкость сознания (Cittamudutā) \n
+    >> 24. Управляемость мент. тела (Kāyakammaññatā) \n
+    >> 25. Управляемость сознания (Cittakammaññatā) \n
+    >> 26. Сноровка ментального тела (Kāyapāguññatā) \n
+    >> 27. Сноровка сознания (Cittapāguññatā) \n
+    >> 28. Прямота ментального тела (Kāyujjukatā) \n
+    >> 29. Прямота сознания (Cittujjukatā) \n\n
+
+        БЛАГОТВОРНЫЕ, СЛУЧАЮЩИЕСЯ ВРЕМЯ ОТ ВРЕМЕНИ: \n
+        ВОЗДЕРЖАНИЯ \n
+    >>     остутствуют \n \n
+
+        БЕЗГРАНИЧНОСТИ \n
+    >> __ Отсутствует (Karuṇā)__ \n
+    >> __ Отсутствует (Muditā)__ \n
+    >> 30. Мудрость (Pañña) \n
+    </string>
+
+    <string name="textArupavacharaFunkcionalKombinaciya1">
         ВХОДИТ В КОМБИНАЦИЮ С 30 ЧЕТАСИКАМИ: \n\n
         УНИВЕРСАЛЬНЫЕ: \n
         >> 1. Контакт (Phassa) \n
