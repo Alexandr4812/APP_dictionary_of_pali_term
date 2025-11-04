@@ -107,9 +107,9 @@ public class AbhidhammaChittasRupavacaraActivity extends BaseActivityClass {
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/info_rupavachara_arupavachara_ru/infoRupavacharaRu.html";
+            htmlFilePath = "file:///android_asset/info_rupavachara_arupavachara_lokutara_ru/infoRupavacharaRu.html";
         } else {
-            htmlFilePath = "file:///android_asset/info_rupavachara_arupavachara_en/infoRupavacharaEn.html";
+            htmlFilePath = "file:///android_asset/info_rupavachara_arupavachara_lokutara_en/infoRupavacharaEn.html";
         }
         loadHtmlPage(htmlFilePath);
     }

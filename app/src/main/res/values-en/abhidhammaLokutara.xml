@@ -29,6 +29,177 @@ to discern their true qualities of impermanence, suffering, and non-self.
         When these insights reach full maturity, they culminate in the paths and fruits.
     </string>
 
+    <string name="textDiscribeLokutaraWholsome">
+        Path consciousness is a kusalacitta, a wholesome state.
+    </string>
+    <string name="textDiscribeLokutaraResult">
+        Fruit consciousness is a vipākacitta, a resultant state.
+    </string>
+
+
+
     <string name="forTextViewLokutara">8 SUPRAMUNDANE CONSCIOUSNESSES (Lokuttaracittāni)</string>
+
+    <string name="textButtonLokutaraWholsome">
+        \n <b>Supramundane Wholesome Consciousness \n (Lokuttara-kusalacittāni) — 4</b>
+    </string>
+    <string name="textButtonLokutaraResult">
+        \n <b>Supramundane Resultant Consciousness \n (Lokuttara-vipākacittāni) — 4</b> \n
+    </string>
+
+    <string name="forTextViewZagolovokLokutaraWholsome">
+        4 SUPRAMUNDANE WHOLESOME CONSCIOUSNESSES
+    </string>
+
+    <string name="textButton1LokutaraWholsome">
+        <b> 1 \n Path consciousness of stream-entry. \n\n
+         Sotāpatti-maggacittam. </b>
+    </string>
+    <string name="textButton2LokutaraWholsome">
+        <b> 2 \n Path consciousness of once-returning. \n\n
+         Sakadāgāmi-maggacittam. </b>
+    </string>
+    <string name="textButton3LokutaraWholsome">
+        <b> 3 \n Path consciousness of non-returning. \n\n
+         Anāgāmi-maggacittam. </b>
+    </string>
+    <string name="textButton4LokutaraWholsome">
+        <b> 4 \n Path consciousness of Arahantship. \n\n
+         Arahatta-maggacittaṃ cā ti. </b>
+    </string>
+    <string name="textButton5LokutaraWholsome">
+        <b> These various classes of consciousness, which thus number 89,
+            are divided by the wise into 121.</b>
+    </string>
+
+
+    <string name="textLokutaraWholsome1">
+    Path consciousness of stream-entry (sotāpattimaggacitta):
+    Entering the irreversible path to liberation is called stream-entry, and the citta that experiences this
+    attainment is the path consciousness of stream-entry. The stream
+    (sota) is the Noble Eightfold Path, consisting
+    of eight factors: right view, right intention, right speech, right action, right
+    livelihood, right effort, right mindfulness, and right concentration.
+    Just as the stream of the river Ganges flows continuously from the Himalayas to the ocean,
+    so the supramundane Noble Eightfold Path flows continuously from
+    the arising of right view to the attainment of Nibbāna.
+    Although worldly wholesome cittas of virtuous worldlings can also arise through the factors of the Eightfold Path,
+    these factors do not have a clear predetermination, as a worldling can change their character and
+    turn away from the Dhamma. But in a noble disciple who has
+    attained the experience of stream-entry, the path factors become predetermined in
+    their destination and flow like a stream leading to Nibbāna.
+    The path consciousness of stream-entry has the function of cutting off
+    the first three fetters, which are: "personality belief" or wrong view of
+    self, doubt in the Three Jewels, and clinging to rites and ceremonies
+    with the belief that they can lead to liberation. Further,
+    it cuts off all greed, hatred, and delusion that had sufficient power
+    to lead to rebirth in an existence lower than the human one. This
+    citta also irreversibly eliminates five other cittas, namely: the four cittas rooted in greed
+    associated with wrong view, and the citta rooted in delusion
+    associated with doubt. One who has experienced stream-entry is guaranteed to attain final
+    liberation within a maximum of seven lifetimes and will never
+    be reborn in the woeful planes of existence.
+</string>
+    <string name="textLokutaraWholsome2">
+        Path consciousness of once-returning (sakadāgāmimaggacitta):
+        This citta is the consciousness associated
+with the Noble Eightfold Path that gives access
+to the plane of the once-returner. Although this citta does not eradicate any fetters,
+        it weakens the grossest forms of sensory desire and ill will. A being
+        who has reached this stage will be reborn in this world one more time at most
+before attaining liberation.
+    </string>
+    <string name="textLokutaraWholsome3">
+        Path consciousness of non-returning (anāgāmimaggacitta):
+One who has reached the third path will never be reborn again
+in the sensory plane. If such a person does not attain Arahantship in
+        this very life, they will be reborn in a fine-material
+world and attain the goal there. The path consciousness of non-returning cuts off the fetters of sensory desire and
+         ill will; it also irreversibly suppresses the two cittas rooted in hatred.
+    </string>
+    <string name="textLokutaraWholsome4">
+        Path consciousness of Arahantship (arahattamaggacitta):
+An Arahant is a fully liberated person, one
+who has destroyed (hata) the enemy (ari) consisting of defilements.
+The path consciousness of Arahantship is the citta that leads directly
+        to full liberation, to Arahantship. This citta
+        destroys the five subtle fetters: desire for fine-material
+and immaterial existence, conceit, restlessness,
+and ignorance. It also eliminates the remaining types of unwholesome cittas:
+        the four rooted in greed, dissociated from views; and the one
+        rooted in delusion, associated with restlessness.
+    </string>
+
+    <string name="textLokutaraWholsomeKoren1">
+    3 ROOTS: \n
+    Non-greed \n
+    Non-hatred \n
+    Non-delusion
+    </string>
+
+    <string name="textLokutaraWholsomeFunkciya1">
+    FUNCTION: functions as: \n JAVANA
+</string>
+
+    <string name="textLokutaraWholsomeKombinaciya1">
+    COMBINES WITH \n
+        36 CETASIKAS (via 1st jhāna)
+        35 CETASIKAS (via 2nd jhāna) absent (vitakka)
+        34 CETASIKAS (via 3rd jhāna) absent (vitakka, vicāra)
+        33 CETASIKAS (via 4th jhāna) absent (vitakka, vicāra, pīti)
+        33 CETASIKAS (via 5th jhāna) absent (vitakka, vicāra, pīti. instead of happiness, equanimity) \n\n
+
+        EXAMPLE OF THE 1ST JHĀNA \n
+        UNIVERSALS: \n
+        >> 1. Contact (Phassa) \n
+        >> 2. Feeling (Vedanā) \n
+        >> 3. Perception (Saññā) \n
+        >> 4. Volition (Cetanā) \n
+        >> 5. One-pointedness (Ekaggatā) \n
+        >> 6. Mental life faculty (Jīvitindriya) \n
+        >> 7. Attention (Manasikāra) \n\n
+
+        OCCASIONALS: \n
+    >> 8. Initial application (Vitakka) \n
+    >> 9. Sustained application (Vicāra) \n
+    >> 10. Decision (Adhimokkha) \n
+    >> 11. Energy (Viriya) \n
+    >> 12. Rapture (Pīti) \n
+    >> 13. Desire-to-do (Chanda) \n\n
+
+        UNIVERSAL BEAUTIFUL: \n
+    >> 14. Faith (Saddhā) \n
+    >> 15. Mindfulness (Sati) \n
+    >> 16. Moral shame (Hiri) \n
+    >> 17. Moral dread (Ottappa) \n
+    >> 18. Non-greed (Alobha) \n
+    >> 19. Non-hatred (Adosa) \n
+    >> 20. Neutrality of mind (Tatramajjhattatā) \n
+    >> 21. Tranquility of mental body (Kāyapassaddhi) \n
+    >> 22. Tranquility of consciousness (Cittapassaddhi) \n
+    >> 23. Lightness of mental body (Kāyalahutā) \n
+    >> 24. Lightness of consciousness (Cittalahutā) \n
+    >> 25. Malleability of mental body (Kāyamudutā) \n
+    >> 26. Malleability of consciousness (Cittamudutā) \n
+    >> 27. Wieldiness of mental body (Kāyakammaññatā) \n
+    >> 28. Wieldiness of consciousness (Cittakammaññatā) \n
+    >> 29. Proficiency of mental body (Kāyapāguññatā) \n
+    >> 30. Proficiency of consciousness (Cittapāguññatā) \n
+    >> 31. Rectitude of mental body (Kāyujjukatā) \n
+    >> 32. Rectitude of consciousness (Cittujjukatā) \n\n
+
+        OCCASIONAL BEAUTIFUL: \n
+        ABSTINENCES \n
+    >> 33. Right speech (Sammāvācā) \n
+    >> 34. Right action (Sammākammanta) \n
+    >> 35. Right livelihood (Sammā-ājīva) \n\n
+
+        ILLIMITABLES \n
+    >> ABSENT. Compassion (Karuṇā) \n
+    >> ABSENT. Altruistic joy (Muditā) \n
+    >> 36. Wisdom (Pañña) \n
+    </string>
+
+
 
 </resources>

@@ -80,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="toAbhidhammaChittasLokutaraWholsomeAct"
-                android:text="@string/textButtonLokutaraResult"
+                android:text="@string/textButtonLokutaraWholsome"
                 tools:ignore="UsingOnClickInXml" />
 
             <TextView
@@ -115,40 +115,7 @@
                 android:text=""
                 android:visibility="invisible"/>
 
-
-            <ImageView
-                android:id="@+id/imageVievAbhidhammaLokutara2"
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
-
-
-            <Button
-                android:id="@+id/button_abhidhamma_chittas_lokutara3"
-                style="@style/button_activity_chetasika"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:onClick="toShowInfoLokutara"
-                android:text="@string/textButtonLokutaraInfo"
-                android:textSize="13dp"
-                tools:ignore="UsingOnClickInXml" />
         </LinearLayout>
     </ScrollView>
-
-    <WebView
-        android:id="@+id/webViewLokutara"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="vertical"
-        android:visibility="invisible"
-        android:scrollbarThumbVertical="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Включаем макет с кнопками -->
-    <include
-        layout="@layout/buttons_layout_for_live_buddha_new"
-        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
