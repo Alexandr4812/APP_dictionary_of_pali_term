@@ -143,9 +143,9 @@ public class AbhidhammaChittasLokutaraActivity extends BaseActivityClass {
         startIntentActivityAndFinish(AbhidhammaChittasLokutaraWholsomeActivity.class);
     }
 
-    /*public void toAbhidhammaChittasLokutaraVipakaAct(View view){
+    public void toAbhidhammaChittasLokutaraResultAct(View view){
         startIntentActivityAndFinish(AbhidhammaChittasLokutaraResultActivity.class);
-    }*/
+    }
 
 
     public void toMainAct(View view){

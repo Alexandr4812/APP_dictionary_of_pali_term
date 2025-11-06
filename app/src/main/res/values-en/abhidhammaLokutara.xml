@@ -50,6 +50,12 @@ to discern their true qualities of impermanence, suffering, and non-self.
     <string name="forTextViewZagolovokLokutaraWholsome">
         4 SUPRAMUNDANE WHOLESOME CONSCIOUSNESSES
     </string>
+    <string name="forTextViewZagolovokLokutaraResult">
+        4 SUPRAMUNDANE RESULTANT CONSCIOUSNESSES
+</string>
+
+
+
 
     <string name="textButton1LokutaraWholsome">
         <b> 1 \n Path consciousness of stream-entry. \n\n
@@ -71,6 +77,28 @@ to discern their true qualities of impermanence, suffering, and non-self.
         <b> These various classes of consciousness, which thus number 89,
             are divided by the wise into 121.</b>
     </string>
+
+    <string name="textButton1LokutaraResult">
+    <b> 1 \n Fruit consciousness of stream-entry. \n\n
+     Sotāpatti-phalacittam. </b>
+    </string>
+    <string name="textButton2LokutaraResult">
+    <b> 2 \n Fruit consciousness of once-returning. \n\n
+     Sakadāgāmi-phalacittam. </b>
+    </string>
+    <string name="textButton3LokutaraResult">
+    <b> 3 \n Fruit consciousness of non-returning. \n\n
+     Anāgāmi-phalacittam. </b>
+    </string>
+    <string name="textButton4LokutaraResult">
+    <b> 4 \n Fruit consciousness of Arahantship. \n\n
+     Arahatta-phalacittaṃ cā ti. </b>
+    </string>
+    <string name="textButton5LokutaraResult">
+    <b> These various classes of consciousness, which thus number 89,
+        are divided by the wise into 121.</b>
+    </string>
+
 
 
     <string name="textLokutaraWholsome1">
@@ -130,7 +158,27 @@ and ignorance. It also eliminates the remaining types of unwholesome cittas:
         rooted in delusion, associated with restlessness.
     </string>
 
+    <string name="textLokutaraResult1">
+    Each path consciousness
+    automatically resolves into its corresponding fruit in the same
+    cognitive series, immediately following the path. Subsequently, the fruit citta
+        can arise many times when the noble disciple enters the meditative attainment of fruition.
+    The fruit consciousness, as mentioned earlier, is classified by its type as resultant (vipāka).
+        It should be noted that there are no supramundane functional
+    (kiriya) cittas. This is because when an Arahant enters the attainment of fruition,
+        the cittas that occur in this attainment belong to the class of resultants,
+    being the fruits of the supramundane path.
+</string>
+
+
     <string name="textLokutaraWholsomeKoren1">
+    3 ROOTS: \n
+    Non-greed \n
+    Non-hatred \n
+    Non-delusion
+    </string>
+
+    <string name="textLokutaraResultKoren1">
     3 ROOTS: \n
     Non-greed \n
     Non-hatred \n
@@ -140,8 +188,69 @@ and ignorance. It also eliminates the remaining types of unwholesome cittas:
     <string name="textLokutaraWholsomeFunkciya1">
     FUNCTION: functions as: \n JAVANA
 </string>
+    <string name="textLokutaraResultFunkciya1">
+    FUNCTION: functions as: \n JAVANA
+</string>
 
     <string name="textLokutaraWholsomeKombinaciya1">
+    COMBINES WITH \n
+        36 CETASIKAS (via 1st jhāna)
+        35 CETASIKAS (via 2nd jhāna) absent (vitakka)
+        34 CETASIKAS (via 3rd jhāna) absent (vitakka, vicāra)
+        33 CETASIKAS (via 4th jhāna) absent (vitakka, vicāra, pīti)
+        33 CETASIKAS (via 5th jhāna) absent (vitakka, vicāra, pīti. instead of happiness, equanimity) \n\n
+
+        EXAMPLE OF THE 1ST JHĀNA \n
+        UNIVERSALS: \n
+        >> 1. Contact (Phassa) \n
+        >> 2. Feeling (Vedanā) \n
+        >> 3. Perception (Saññā) \n
+        >> 4. Volition (Cetanā) \n
+        >> 5. One-pointedness (Ekaggatā) \n
+        >> 6. Mental life faculty (Jīvitindriya) \n
+        >> 7. Attention (Manasikāra) \n\n
+
+        OCCASIONALS: \n
+    >> 8. Initial application (Vitakka) \n
+    >> 9. Sustained application (Vicāra) \n
+    >> 10. Decision (Adhimokkha) \n
+    >> 11. Energy (Viriya) \n
+    >> 12. Rapture (Pīti) \n
+    >> 13. Desire-to-do (Chanda) \n\n
+
+        UNIVERSAL BEAUTIFUL: \n
+    >> 14. Faith (Saddhā) \n
+    >> 15. Mindfulness (Sati) \n
+    >> 16. Moral shame (Hiri) \n
+    >> 17. Moral dread (Ottappa) \n
+    >> 18. Non-greed (Alobha) \n
+    >> 19. Non-hatred (Adosa) \n
+    >> 20. Neutrality of mind (Tatramajjhattatā) \n
+    >> 21. Tranquility of mental body (Kāyapassaddhi) \n
+    >> 22. Tranquility of consciousness (Cittapassaddhi) \n
+    >> 23. Lightness of mental body (Kāyalahutā) \n
+    >> 24. Lightness of consciousness (Cittalahutā) \n
+    >> 25. Malleability of mental body (Kāyamudutā) \n
+    >> 26. Malleability of consciousness (Cittamudutā) \n
+    >> 27. Wieldiness of mental body (Kāyakammaññatā) \n
+    >> 28. Wieldiness of consciousness (Cittakammaññatā) \n
+    >> 29. Proficiency of mental body (Kāyapāguññatā) \n
+    >> 30. Proficiency of consciousness (Cittapāguññatā) \n
+    >> 31. Rectitude of mental body (Kāyujjukatā) \n
+    >> 32. Rectitude of consciousness (Cittujjukatā) \n\n
+
+        OCCASIONAL BEAUTIFUL: \n
+        ABSTINENCES \n
+    >> 33. Right speech (Sammāvācā) \n
+    >> 34. Right action (Sammākammanta) \n
+    >> 35. Right livelihood (Sammā-ājīva) \n\n
+
+        ILLIMITABLES \n
+    >> ABSENT. Compassion (Karuṇā) \n
+    >> ABSENT. Altruistic joy (Muditā) \n
+    >> 36. Wisdom (Pañña) \n
+    </string>
+    <string name="textLokutaraResultKombinaciya1">
     COMBINES WITH \n
         36 CETASIKAS (via 1st jhāna)
         35 CETASIKAS (via 2nd jhāna) absent (vitakka)
