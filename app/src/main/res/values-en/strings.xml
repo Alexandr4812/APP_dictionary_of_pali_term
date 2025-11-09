@@ -843,7 +843,43 @@ Even if something is taken from a living person, and the owner is not happy that
 
     <string name="button_paritta">\n <b>paritta</b> \n</string>
     <string name="button_mora_paritta">mora paritta</string>
+    <string name="button_girimananda">\n<b>Girimananda Sutta</b>\n</string>
     <string name="button_dhammapada">\n<b>dhammapada</b>\n</string>
+    <string name="button_khanda">\n<b>Khanda Paritta</b>\n</string>
+
+
+    <string name="textDiscribeGirimananda">
+    This sutta is a teaching that the Buddha gave to the venerable Girimananda
+    when he became seriously ill. From the earliest times, it came to be revered
+    as a protective sermon — paritta — and was included in an ancient anthology of such sermons
+    known as the Catubhāṇavāra.\n\n
+
+    The Girimananda Sutta is both a protective sutta and a profound teaching.
+    The best protection for a person is to understand this sutta and practice in accordance with it.
+    If such a practitioner falls ill, by listening to or reading this sutta, he
+    will recall his practice. This will awaken and strengthen his
+    bojjhaṅga — the factors of enlightenment — and the illness may weaken or even recede completely.\n\n
+
+    This sutta brings three kinds of well-being:\n\n
+
+    The first well-being is when a person understands it and practices in accordance with its meaning.\n\n
+    The second well-being is when, during an illness, reading this sutta helps in the healing of that person.\n\n
+    The third well-being is born from listening with saddhā — faith, trust, openness to the Teaching.
+    From listening to the paritta with saddhā, a person can find relief from illness and even recover.
+</string>
+    <string name="textDiscribeKhanda">
+    The Paritta combines admonition and verses of goodwill:
+    four kinds of "snake kings" are listed (Virūpakkha, Erāpatha, Chabyāputta, Kaṇhāgotamaka)
+    and an intention of goodwill is established towards all kinds of beings —
+    footless, two-footed, four-footed, and many-footed —
+    with the wish that no one should cause harm. \n\n
+
+    In the tradition, it is believed that sincere mettā pacifies hostile forces and prevents misfortunes;
+    in practice, however, the main protection is the stable development of mettā and mindfulness (sati)
+    in daily life.
+</string>
+
+
 
     <string name="textViewParnieStrofy">PAIRED STANZAS</string>
     <string name="button1Dhammapada">1 \n Led by the mind of the dhamma, the mind governs them, the mind generates them. If a person with malice speaks or acts, Dukkha follows him, like a wheel following the trail of a driver.</string>

@@ -73,6 +73,50 @@
                 android:text="@string/button_mora_paritta"
                 tools:ignore="UsingOnClickInXml" />
 
+            <Button
+                android:id="@+id/infoButtonGirimananda"
+                style="@style/infoButton"
+                android:foreground="@drawable/info7"
+                android:onClick="onButtonClickParittaGirimananda"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_paritta_girimananda"
+                style="@style/button_activity_declomation_main"
+                android:onClick="girimanandaParitta"
+                android:text="@string/button_girimananda"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/textViewParittaGirimananda"
+                style="@style/TextMessageStyleAbhidyamma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/infoButtonKhanda"
+                style="@style/infoButton"
+                android:foreground="@drawable/info7"
+                android:onClick="onButtonClickParittaKhanda"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_paritta_khanda"
+                style="@style/button_activity_declomation_main"
+                android:onClick="khandaParitta"
+                android:text="@string/button_khanda"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/textViewParittaKhanda"
+                style="@style/TextMessageStyleAbhidyamma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
+
         </LinearLayout>
     </ScrollView>
 
