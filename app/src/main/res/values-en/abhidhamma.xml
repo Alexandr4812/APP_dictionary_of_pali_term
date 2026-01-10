@@ -6,7 +6,8 @@
 
     <string name="buttonAbhidhammaChetasika">\n <b>52 \n mental factors\n(chetasika)</b> \n</string>
     <string name="button_kontakt">1 \ncontact \n(phassa)</string>
-    <string name="universal">Universal 7</string>
+    <string name="universal">Ethically Variable \n Universal 7</string>
+    <string name="sometime">Ethically Variable \n Occasional 6</string>
     <string name="button_kontakt_harakteristika">Characteristic</string>
     <string name="button_kontakt_function">Function</string>
     <string name="button_kontakt_proyavlenie">Manifestation</string>
@@ -181,6 +182,261 @@ The relationship between the Citta and the Cetasikas is comparable to the relati
          and in kammically indefinite cittas they become kammically indefinite.
          For this reason they are called “common with others,” that is, ethically variable. \n\n
     </string>
+
+    <string name="button_vitakka">1 \nInitial Application \n(vitakka)</string>
+    <string name="text_for_mentalnie_faktori_sometime1">
+    INITIAL APPLICATION (vitakka):
+    The mental factor vitakka is also presented in the discussion of the jhānas,
+    where it is presented as the first of the five jhānic factors. Vitakka is the application of the mind to the object.
+    Its characteristic is the directing of the mind onto the object. Its function is to strike
+    and thresh the object. It is manifested as the leading of the mind onto the object.
+    Although no proximate cause is mentioned in the commentaries, the object itself can be understood as its proximate cause.
+    Ordinarily, vitakka simply applies the mind to the object. But when this mental factor is cultivated through concentration, it becomes a jhāna factor.
+    In this case, it is called appanā— "absorption of the mind in the object."
+    Vitakka is also called saṅkappa— "intention"— and as such is distinguished as micchāsaṅkappa, or wrong
+    intention, and sammāsaṅkappa, or right intention.
+    The latter is the second factor of the Noble Eightfold Path.
+</string>
+    <string name="text_for_harakteristika_sometime1">
+        CHARACTERISTIC: the directing of the mind onto the object.
+    </string>
+    <string name="text_for_function_sometime1">
+        FUNCTION: to strike and thresh the object.
+    </string>
+    <string name="text_for_proyavlenie_sometime1">
+        MANIFESTATION: It is manifested as the leading of the mind onto the object.
+    </string>
+    <string name="text_for_prichina_sometime1">
+        PROXIMATE CAUSE: the object itself can be understood as its proximate cause.
+    </string>
+    <string name="text_for_button_associaciya_sometime1">
+    ASSOCIATED WITH 55 TYPES OF CONSCIOUSNESS: \n\n
+    8 — consciousnesses rooted in GREED \n
+    2 — consciousnesses rooted in HATRED \n
+    2 — consciousnesses rooted in DELUSION \n
+    1 — unwholesome-resultant receiving consciousness \n
+    1 — unwholesome-resultant investigating consciousness \n
+    1 — wholesome-resultant receiving consciousness \n
+    1 — wholesome-resultant investigating consciousness \n
+    1 — wholesome-resultant investigating consciousness accompanied by joy \n
+    1 — five-door adverting consciousness \n
+    1 — mind-door adverting consciousness \n
+    1 — smile-producing consciousness \n
+    8 — great wholesome consciousnesses \n
+    8 — great resultant consciousnesses \n
+    8 — great functional consciousnesses \n
+    1 — wholesome first jhāna consciousness \n
+    1 — resultant first jhāna consciousness \n
+    1 — functional first jhāna consciousness \n
+    1 — stream-entry path first jhāna consciousness \n
+    1 — stream-entry fruition first jhāna consciousness \n
+    1 — once-returning path first jhāna consciousness \n
+    1 — once-returning fruition first jhāna consciousness \n
+    1 — non-returning path first jhāna consciousness \n
+    1 — non-returning fruition first jhāna consciousness \n
+    1 — arahatship path first jhāna consciousness \n
+    1 — arahatship fruition first jhāna consciousness \n\n
+    NOT ASSOCIATED WITH: \n\n
+    the two sets of fivefold sensory consciousness (-10) \n
+    32 path and fruition consciousnesses of the 2nd, 3rd, 4th, and 5th jhānas (-32) \n
+    12 consciousnesses of the 2nd, 3rd, 4th, and 5th jhānas (wholesome, functional, resultant) (-12) \n
+    12 immaterial-sphere consciousnesses (wholesome, functional, resultant) (-12)
+</string>
+
+    <string name="button_vichara">2 \nSustained Application \n(vicāra)</string>
+    <string name="text_for_mentalnie_faktori_sometime2">
+    SUSTAINED APPLICATION (vicāra):
+    Vicāra, which is also a jhāna factor, has the characteristic of continued pressure on the object
+    in the sense of examining it.
+    While they often occur together, initial application is the first impact of the mind in the sense of
+    grossness and the beginning stage, similar to the striking of a bell. Sustained application is the act
+    of keeping the mind anchored in the sense that it is subtle, and its individual essence is continued
+    pressure, similar to the humming of the bell.
+    Initial application is the mind’s intervention at the moment of first emergence, like a bird
+    spreading its wings to take flight, or a bee diving toward a lotus after previously catching its scent.
+    The behavior of sustained application is calm, bordering on non-intervention by the mind,
+    similar to a bird soaring with outstretched wings after taking flight, or the buzzing of a bee
+    over the lotus once it has already dived onto it.
+</string>
+
+    <string name="text_for_harakteristika_sometime2">
+    CHARACTERISTIC: Continued pressure on the object.
+</string>
+
+    <string name="text_for_function_sometime2">
+    FUNCTION: Sustained application of associated mental phenomena to the object.
+</string>
+
+    <string name="text_for_proyavlenie_sometime2">
+    MANIFESTATION: It manifests as the anchoring of these phenomena upon the object.
+</string>
+
+    <string name="text_for_prichina_sometime2">
+    PROXIMATE CAUSE: The object may be understood as its proximate cause.
+</string>
+
+    <string name="text_for_button_associaciya_sometime2">
+    ASSOCIATED WITH 66 TYPES OF CONSCIOUSNESS: \n\n
+    8 — consciousnesses rooted in GREED \n
+    2 — consciousnesses rooted in HATRED \n
+    2 — consciousnesses rooted in DELUSION \n
+    1 — unwholesome-resultant receiving consciousness \n
+    1 — unwholesome-resultant investigating consciousness \n
+    1 — wholesome-resultant receiving consciousness \n
+    1 — wholesome-resultant investigating consciousness \n
+    1 — wholesome-resultant investigating consciousness accompanied by joy \n
+    1 — five-door adverting consciousness \n
+    1 — mind-door adverting consciousness \n
+    1 — smile-producing consciousness \n
+    8 — great wholesome consciousnesses \n
+    8 — great resultant consciousnesses \n
+    8 — great functional consciousnesses \n
+    2 — wholesome consciousnesses of the first and second jhānas \n
+    2 — resultant consciousnesses of the first and second jhānas \n
+    2 — functional consciousnesses of the first and second jhānas \n
+    2 — stream-entry path consciousnesses of the first and second jhānas \n
+    2 — stream-entry fruition consciousnesses of the first and second jhānas \n
+    2 — once-returning path consciousnesses of the first and second jhānas \n
+    2 — once-returning fruition consciousnesses of the first and second jhānas \n
+    2 — non-returning path consciousnesses of the first and second jhānas \n
+    2 — non-returning fruition consciousnesses of the first and second jhānas \n
+    2 — arahatship path consciousnesses of the first and second jhānas \n
+    2 — arahatship fruition consciousnesses of the first and second jhānas \n\n
+    NOT ASSOCIATED WITH: \n\n
+    the two sets of fivefold sensory consciousness (-10) \n
+    24 path and fruition consciousnesses of the 3rd, 4th, and 5th jhānas (-24) \n
+    9 consciousnesses of the 3rd, 4th, and 5th jhānas (wholesome, functional, resultant) (-9) \n
+    12 immaterial-sphere consciousnesses (wholesome, functional, resultant) (-12)
+</string>
+
+    <string name="button_adhimokkha">3 \nDecision \n(adhimokkha)</string>
+    <string name="text_for_mentalnie_faktori_sometime3">
+    DECISION (adhimokkha):
+    The word adhimokkha literally means "the releasing of the mind onto the object."
+    Therefore, it is translated as "decision" or "resolution."
+    Because of its unshakable determination regarding the object, it is compared
+    to a stone pillar.
+</string>
+
+    <string name="text_for_harakteristika_sometime3">
+    CHARACTERISTIC: Conviction.
+</string>
+
+    <string name="text_for_function_sometime3">
+    FUNCTION: Not groping [meaning the opposite of wandering in the dark "by touch"].
+</string>
+
+    <string name="text_for_proyavlenie_sometime3">
+    MANIFESTATION: Decisiveness.
+</string>
+
+    <string name="text_for_prichina_sometime3">
+    PROXIMATE CAUSE: A thing to be convinced of.
+</string>
+    <string name="text_for_button_associaciya_sometime3">
+    ASSOCIATED WITH 78 or 110 TYPES OF CONSCIOUSNESS: \n\n
+    Decision arises in all types of consciousness, except for the
+    two sets of fivefold sensory consciousness and the consciousness
+    accompanied by doubt.
+</string>
+
+    <string name="button_viriya">4 \nEnergy \n(viriya)</string>
+    <string name="text_for_mentalnie_faktori_sometime4">
+    ENERGY (viriya):
+    Viriya is the state or action of one who is energetic.
+    Just as new logs added to an old house prevent it
+    from collapsing, or as strong reinforcements enable a king\'s army to defeat the enemy,
+    so too does energy support and assist all associated states and not allow them to retreat.
+</string>
+    <string name="text_for_harakteristika_sometime4">
+    CHARACTERISTIC: supporting, striving, and upholding.
+</string>
+    <string name="text_for_function_sometime4">
+    FUNCTION: to support associated states.
+</string>
+    <string name="text_for_proyavlenie_sometime4">
+    MANIFESTATION: non-collapse.
+</string>
+    <string name="text_for_prichina_sometime4">
+    PROXIMATE CAUSE: a sense of urgency
+    (saṃvega) or any grounds for arousing energy,
+    that is, whatever prompts energetic action.
+</string>
+    <string name="text_for_button_associaciya_sometime4">
+    ASSOCIATED WITH 73 TYPES OF CONSCIOUSNESS: \n\n
+    Energy arises in all types of consciousness except for the five-door-adverting
+    consciousness, the two sets of fivefold sense consciousnesses,
+    the receiving consciousness, and the investigating consciousness (89 – 16 = 73).
+</string>
+
+    <string name="button_piti">5 \nRapture \n(pīti)</string>
+    <string name="text_for_mentalnie_faktori_sometime5">
+    RAPTURE (pīti):
+    It is of five kinds: minor rapture, momentary rapture, showering rapture,
+    uplifting rapture, and pervading (thrilling) rapture.
+    This fivefold rapture, when realized and cultivated, perfects the twofold serenity:
+    serenity of mind and serenity of body. When serenity is realized and cultivated,
+    it perfects the twofold happiness: bodily and mental.
+    When happiness is realized and cultivated, it perfects the threefold concentration:
+    momentary concentration, access concentration, and absorption concentration.
+    In this context, rapture refers to pervading rapture,
+    which is the root of absorption and arises through development in association with absorption.
+</string>
+    <string name="text_for_harakteristika_sometime5">
+    CHARACTERISTIC: pīti has the characteristic of endearing
+    (sampiyāyana).
+</string>
+    <string name="text_for_function_sometime5">
+    FUNCTION: to refresh the body and mind, or its function is to pervade (to the point of thrilling).
+</string>
+    <string name="text_for_proyavlenie_sometime5">
+    MANIFESTATION: It is manifested as delight, elation [or enthusiasm].
+</string>
+    <string name="text_for_prichina_sometime5">
+    PROXIMATE CAUSE: mentality-materiality (nāmarūpa) is its proximate cause.
+</string>
+    <string name="text_for_button_associaciya_sometime5">
+    ASSOCIATED WITH 35 or 51 TYPES OF CONSCIOUSNESS: \n\n
+    Rapture arises in all types of consciousness
+    except those accompanied by displeasure
+    and equanimity, the two sets of fivefold consciousness, and the consciousness of the fourth
+    jhāna.
+</string>
+
+    <string name="button_chanda">6 \nDesire \n(chanda)</string>
+    <string name="text_for_mentalnie_faktori_sometime6">
+    DESIRE (chanda):
+    Chanda here signifies the desire to act (kattu-kāmatā), that is, to perform an action
+or achieve some result.
+    This type of desire must be distinguished from desire in a reprehensible sense,
+that is, from lobha, greed, and rāga, passion. While
+these latter terms are always unwholesome,
+chanda is an ethically variable factor which, when
+conjoined with wholesome concomitants,
+can function as a moral desire
+to achieve a worthy goal. Desire should be regarded
+as the stretching forth of the mind’s hands towards the object.
+</string>
+    <string name="text_for_harakteristika_sometime6">
+    CHARACTERISTIC: the desire to act.
+</string>
+    <string name="text_for_function_sometime6">
+    FUNCTION: searching for an object.
+</string>
+    <string name="text_for_proyavlenie_sometime6">
+    MANIFESTATION: a need for the object.
+</string>
+    <string name="text_for_prichina_sometime6">
+    PROXIMATE CAUSE: the object is its proximate cause.
+</string>
+    <string name="text_for_button_associaciya_sometime6">
+    ASSOCIATED WITH 69 or 101 TYPES OF CONSCIOUSNESS: \n\n
+    Desire arises in all types of consciousness except for the rootless
+    and the two types of consciousness accompanied by delusion (89 – 20 = 69).
+</string>
+
+
+
 
     <string name="inProcess">The Abhidhamma section, in development, is being supplemented with material. \n \n Stay tuned for updates.</string>
 

@@ -89,6 +89,30 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/infoButtonEticheskiVeriabelnieSometime"
+                style="@style/infoButton"
+                android:foreground="@drawable/info7"
+                android:onClick="onButtonClickAbhidhammaEyicheskiVeriabelnieSometime"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_mentalnie_faktori_etich_ver_sometime"
+                style="@style/button_activity_declomation_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/forButtonEtichVeriabSometime"
+                android:onClick="toChetasikasEtichVerUniversalSometimeAct"
+                tools:ignore="UsingOnClickInXml" />
+
+            <TextView
+                android:id="@+id/textViewAbhidhammaEticheskiVerSometime"
+                style="@style/TextMessageStyleAbhidyamma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
         </LinearLayout>
     </ScrollView>
 

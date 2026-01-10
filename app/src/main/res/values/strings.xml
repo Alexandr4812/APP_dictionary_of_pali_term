@@ -46,7 +46,7 @@
     <string name="rukovodstvo_dllya_bhikkhu">\n <b>руководство для бхиккху</b> \n</string>
     <string name="button_upasampada">\n <b>упасампада \n Строфы для церемонии становления Бхикху</b> \n</string>
     <string name="button_sutta_girimananda">гиримананда сутта</string>
-    <string name="button_paritta">\n <b>паритта \n\n защитные строфы</b> \n</string>
+    <string name="button_paritta">\n <b>паритта</b> \n защитные строфы \n</string>
     <string name="button_mora_paritta">\n<b>Мора паритта</b>\n</string>
     <string name="button_dhammapada">\n<b>дхаммапада</b>\n</string>
     <string name="textViewParnieStrofy">ПАРНЫЕ СТРОФЫ</string>

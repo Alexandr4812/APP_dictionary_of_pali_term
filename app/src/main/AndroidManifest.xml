@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -15,7 +15,16 @@
         android:theme="@style/Theme.Dictionary_of_pali_term"
         android:versionCode="3"
         android:versionName="3.1"
-        tools:targetApi="33" >
+        tools:targetApi="33">
+        <activity
+            android:name=".Abhidhamma.AbhidhammaChetasikasEtichVerUniversSometimeActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".Abhidhamma.AbhidhammaChittasLokutaraResultActivity"
             android:configChanges="orientation|screenSize"
@@ -29,11 +38,12 @@
         <meta-data
             android:name="android.app.lib_name"
             android:value="" />
+
         <activity
             android:name=".Abhidhamma.AbhidhammaChittasLokutaraWholsomeActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -42,7 +52,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasArupavacharaFunkcionalActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -51,7 +61,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasLokutaraActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -60,7 +70,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasArupavacharaResultActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -69,7 +79,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasArupavacharaWholsomeActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -78,7 +88,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasArupavacharaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -87,7 +97,7 @@
             android:name=".Rules.RulesLaySilaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -96,7 +106,7 @@
             android:name=".Rules.RulesLayActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -105,7 +115,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasRupavacaraKriyaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -114,7 +124,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasRupavacaraVipakaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -123,7 +133,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasRupavacaraKusalaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -132,7 +142,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasRupavacaraActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -141,7 +151,7 @@
             android:name=".Declomation.DeklomationAnumodanaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -150,7 +160,7 @@
             android:name=".Rules.RulesBhikkhuAboutKathinaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -159,7 +169,7 @@
             android:name=".Rules.RulesBhikkhuAboutUposathaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -168,7 +178,7 @@
             android:name=".Declomation.DeklomationGatha"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -177,7 +187,7 @@
             android:name=".Rules.RulesBhikkhuAboutOffencesPacittiyaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -186,7 +196,7 @@
             android:name=".Rules.RulesBhikkhuAboutOffencesActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -195,7 +205,7 @@
             android:name=".Rules.RulesBhikkhuAboutRequisitesActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -204,7 +214,7 @@
             android:name=".Rules.RulesBhikkhuAboutGeneralInfoActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -213,7 +223,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamBeautifulKriyachitaniActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -222,7 +232,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamBeautifulVipakachitaniActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -231,7 +241,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamBeautifulKusalachitaniActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -240,7 +250,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamBeautifulActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -249,7 +259,7 @@
             android:name=".Rules.RulesBhikkhuAboutActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -258,7 +268,7 @@
             android:name=".Teacher.TeacherAboutActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -267,7 +277,7 @@
             android:name=".Teacher.TeacherActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -276,7 +286,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail10Activity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -285,7 +295,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail8Activity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -294,7 +304,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail4Activity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -303,7 +313,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail3Activity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -312,7 +322,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail2Activity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -321,7 +331,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail1Activity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -329,7 +339,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaDetail4Activity"
             android:configChanges="orientation|screenSize"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -338,7 +348,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaDetail3Activity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -347,7 +357,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaDetail2Activity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -356,7 +366,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaDetailActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -365,7 +375,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamAhetukaFunkcionalActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -374,7 +384,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamAhetukaWholsomeResultActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -383,7 +393,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamAhetukaUnwholsomeResultActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -392,7 +402,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamAhetukaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -401,7 +411,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamUnwholsomeMohamulachitaniActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -410,7 +420,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamUnwholsomeDosamulachitaniActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -420,7 +430,7 @@
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="Random Sutta"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -430,7 +440,7 @@
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:label="Last Visited Page"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -439,7 +449,7 @@
             android:name=".Rules.RulesSamaneraObInfoProtocolsActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -448,7 +458,7 @@
             android:name=".Rules.RulesSamaneraObInfoActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -457,7 +467,7 @@
             android:name=".Abhidhamma.AbhidhammaChetasikasEtichVerActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -466,7 +476,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamUnwholsomeLobhamulachitaniActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -475,7 +485,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamUnwholsomeActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -484,7 +494,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasKamavacharamActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -493,7 +503,7 @@
             android:name=".Abhidhamma.AbhidhammaChittasActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -502,7 +512,7 @@
             android:name=".Abhidhamma.AbhidhammaChetasikasActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -511,7 +521,7 @@
             android:name=".Abhidhamma.AbhidhammaChetasikasEtichVerUniversActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -520,7 +530,7 @@
             android:name=".Abhidhamma.AbhidhammaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -529,7 +539,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -538,7 +548,7 @@
             android:name=".Suttas.SuttasByCategoryActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -547,7 +557,7 @@
             android:name=".Suttas.SuttasKuddakaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -557,7 +567,7 @@
             android:configChanges="orientation|screenSize"
             android:exported="false"
             android:hardwareAccelerated="true"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -566,7 +576,7 @@
             android:name=".Suttas.SuttasSanyuttaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -575,7 +585,7 @@
             android:name=".Suttas.SuttasMajjhimaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -584,7 +594,7 @@
             android:name=".Suttas.SuttasDighaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -593,7 +603,7 @@
             android:name=".Declomation.DeklomationDhammapadaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -602,7 +612,7 @@
             android:name=".Declomation.DeclomationParittaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -611,7 +621,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -620,7 +630,7 @@
             android:name=".Rules.RulesBhikkhuPatimokhaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -629,7 +639,7 @@
             android:name=".Rules.RulesBhikkhuActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -638,7 +648,7 @@
             android:name=".Rules.RulesSamaneraPabbajjaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -647,7 +657,7 @@
             android:name=".Rules.RulesSamaneraActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -656,7 +666,7 @@
             android:name=".Rules.RulesSamaneraSekhiyaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -665,7 +675,7 @@
             android:name=".Declomation.DeclomationOverActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -674,7 +684,7 @@
             android:name=".Declomation.DeclomationSuttaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -683,7 +693,7 @@
             android:name=".Declomation.DeclomationPujaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -692,7 +702,7 @@
             android:name=".Rules.RulesActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -701,7 +711,7 @@
             android:name=".Suttas.SuttasActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -710,7 +720,7 @@
             android:name=".Declomation.DeklomationMainActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -719,7 +729,7 @@
             android:name=".LiveBuddha.LiveBuddhaActivity"
             android:configChanges="orientation|screenSize"
             android:exported="false"
-            android:screenOrientation="fullSensor" >
+            android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -728,7 +738,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="fullSensor"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

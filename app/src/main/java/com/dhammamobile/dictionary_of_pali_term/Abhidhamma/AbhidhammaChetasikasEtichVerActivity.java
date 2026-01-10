@@ -20,8 +20,11 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 public class AbhidhammaChetasikasEtichVerActivity extends BaseActivityClass {
 
     private TextView textViewAbhidhammaEticheskiVeriabelnieUnivers;
+    private TextView textViewAbhidhammaEticheskiVeriabelnieSometime;
+
 
     private Button infoButtonAbhidhammaEticheskiVeriabelnieUnivers;
+    private Button infoButtonAbhidhammaEticheskiVeriabelnieSometime;
 
     // Переменная для хранения последней нажатой кнопки
     private Button lastClickedButton = null;
@@ -46,12 +49,15 @@ public class AbhidhammaChetasikasEtichVerActivity extends BaseActivityClass {
 
         textViewAbhidhammaEticheskiVeriabelnieUnivers = findViewById(R.id.textViewAbhidhammaEticheskiVerUnivers);
         infoButtonAbhidhammaEticheskiVeriabelnieUnivers = findViewById(R.id.infoButtonEticheskiVeriabelnieUnivers);
+        textViewAbhidhammaEticheskiVeriabelnieSometime = findViewById(R.id.textViewAbhidhammaEticheskiVerSometime);
+        infoButtonAbhidhammaEticheskiVeriabelnieSometime = findViewById(R.id.infoButtonEticheskiVeriabelnieSometime);
     }
 
     public void onButtonClickAbhidhammaEyicheskiVeriabelnieUnivers(View view) {
         Button clickedButton = (Button) view;
         int visibility = textViewAbhidhammaEticheskiVeriabelnieUnivers.getVisibility();
         textViewAbhidhammaEticheskiVeriabelnieUnivers.setText("");
+        textViewAbhidhammaEticheskiVeriabelnieSometime.setText("");
 
         // Если нажата та же кнопка, что и ранее
         if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
@@ -60,9 +66,29 @@ public class AbhidhammaChetasikasEtichVerActivity extends BaseActivityClass {
             resetAnimator();
         } else {
             if (clickedButton == infoButtonAbhidhammaEticheskiVeriabelnieUnivers) {
-                textViewAbhidhammaEticheskiVeriabelnieUnivers.setText(R.string.textDescribeEtichVeriabUniversal);
+                textViewAbhidhammaEticheskiVeriabelnieUnivers.setText(R.string.textDescribeEtichVeriabSometime);
                 textViewAbhidhammaEticheskiVeriabelnieUnivers.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaEticheskiVeriabelnieUnivers, getString(R.string.textDescribeEtichVeriabUniversal));
+                animateText(textViewAbhidhammaEticheskiVeriabelnieUnivers, getString(R.string.textDescribeEtichVeriabSometime));
+            }
+            lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
+        }
+    }
+    public void onButtonClickAbhidhammaEyicheskiVeriabelnieSometime(View view) {
+        Button clickedButton = (Button) view;
+        int visibility = textViewAbhidhammaEticheskiVeriabelnieSometime.getVisibility();
+        textViewAbhidhammaEticheskiVeriabelnieUnivers.setText("");
+        textViewAbhidhammaEticheskiVeriabelnieSometime.setText("");
+
+        // Если нажата та же кнопка, что и ранее
+        if (clickedButton == lastClickedButton && visibility == View.VISIBLE) {
+            textViewAbhidhammaEticheskiVeriabelnieSometime.setText(""); // Установите текст в пустую строку
+            textViewAbhidhammaEticheskiVeriabelnieSometime.setVisibility(View.INVISIBLE);
+            resetAnimator();
+        } else {
+            if (clickedButton == infoButtonAbhidhammaEticheskiVeriabelnieSometime) {
+                textViewAbhidhammaEticheskiVeriabelnieSometime.setText(R.string.textDescribeEtichVeriabSometime);
+                textViewAbhidhammaEticheskiVeriabelnieSometime.setVisibility(View.VISIBLE);
+                animateText(textViewAbhidhammaEticheskiVeriabelnieSometime, getString(R.string.textDescribeEtichVeriabSometime));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -103,6 +129,9 @@ public class AbhidhammaChetasikasEtichVerActivity extends BaseActivityClass {
 
     public void toChetasikasEtichVerUniversalAct(View view){
         startIntentActivityAndFinish(AbhidhammaChetasikasEtichVerUniversActivity.class);
+    }
+    public void toChetasikasEtichVerUniversalSometimeAct(View view){
+        startIntentActivityAndFinish(AbhidhammaChetasikasEtichVerUniversSometimeActivity.class);
     }
 
     @Override

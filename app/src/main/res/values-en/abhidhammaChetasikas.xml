@@ -4,8 +4,13 @@
     <string name="forTextViewChetasikas">52 MENTAL FACTORS</string>
 
     <string name="forButtonEtichVeriabUniversal">
-        \n <b>7 \n ethically verifiable, universal mental factors \n (sabbacittasādhārana)</b> \n
+        \n <b>7 \n ethically verifiable,</b> universal mental factors \n (sabbacittasādhārana) \n
     </string>
+    <string name="forButtonEtichVeriabSometime">
+        <b>6 \n ethically variable,</b> occasional factors\n (pakiṇṇaka) \n
+    </string>
+
+
 
     <string name="forTextViewChetasikasVer">13 ETHICALLY VARIABLE MENTAL FACTORS</string>
 
@@ -15,6 +20,14 @@
          These factors perform the most rudimentary and basic cognitive functions,
          without which awareness of the object would be completely impossible. \n\n
     </string>
+    <string name="textDescribeEtichVeriabSometime">
+    OCCASIONAL MENTAL FACTORS (pakiṇṇaka): \n\n
+    The six cetasikas in this group are similar to the universals in that
+    they are ethically variable factors which take on the moral quality of the citta, determined by other
+    accompanying factors. They differ from the universal mental factors, however,
+    in that they are found only in some types of consciousness, not in all. \n\n
+    </string>
+
 
     <string name="forButtonAssociaciya">
         ASSOCIATED WITH ALL TYPES OF CONSCIOUSNESS.
