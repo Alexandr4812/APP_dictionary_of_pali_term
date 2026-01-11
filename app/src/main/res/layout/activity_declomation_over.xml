@@ -83,6 +83,13 @@
                 android:text="@string/Deklomaciya32chastiTekstButton"
                 tools:ignore="UsingOnClickInXml" />
 
+            <Button
+                android:id="@+id/button_attavisati"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomaciyaAttavisati"
+                android:text="@string/DeklomaciyaAttavisati"
+                tools:ignore="UsingOnClickInXml" />
+
         </LinearLayout>
 
 

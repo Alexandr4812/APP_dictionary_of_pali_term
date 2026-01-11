@@ -84,6 +84,19 @@ public class DeclomationOverActivity extends BaseActivityClass {
         loadHtmlPage(htmlFilePath);
     }
 
+    public void toDeclomaciyaAttavisati(View view) {
+        buttonOver.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/parittas_ru/attavisatti_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/parittas_en/attavisatti_en.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
     private void loadHtmlPage(String htmlFilePath) {
         webView.loadUrl(htmlFilePath);
     }
