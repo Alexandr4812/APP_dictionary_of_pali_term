@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+     <string name="DeklomaciyaCaturarakha">
+        \n <b>4 защитные медитации</b> \n\n
+         <b>Размышление о достоинствах Будды</b> \n
+         (Буддханусати) \n
+         <b>Доброжелательность</b> \n
+         (метта) \n
+         <b>Отвратность</b> \n
+         (Асубха) \n
+         <b>Размышление о смерти</b> \n
+         (Маранануссати) \n
+     </string>
+
 
     <string name="DeklomaciyaAlmsWish">
         <b>БЛАГОПОЖЕЛАНИЯ МИРЯНАМ ПРИ ВЗЯТИИ ДАНЫ</b> \n \n \n

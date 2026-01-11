@@ -63,6 +63,13 @@
                 tools:ignore="ContentDescription" />
 
             <Button
+                android:id="@+id/button_chaturarakha"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomaciyaChaturarakha"
+                android:text="@string/DeklomaciyaCaturarakha"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
                 android:id="@+id/button_Refleksiya_O_Proshlih_Neobhodimostyah"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomaciyaRefleksiyaOProshlihNeobhodimostyah"
@@ -175,5 +182,22 @@
             tools:ignore="UsingOnClickInXml"
             tools:visibility="visible" />
     </LinearLayout>
+
+    <WebView
+        android:id="@+id/webViewOver"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        android:scrollbarThumbVertical="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Включаем макет с кнопками -->
+    <include
+        layout="@layout/buttons_layout_for_over"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
