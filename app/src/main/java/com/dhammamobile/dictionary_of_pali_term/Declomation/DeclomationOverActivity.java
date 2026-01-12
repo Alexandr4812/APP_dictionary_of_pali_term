@@ -71,6 +71,19 @@ public class DeclomationOverActivity extends BaseActivityClass {
         });
     }
 
+    public void toDeclomaciyaDasadhamma(View view) {
+        buttonOver.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/parittas_ru/dasadhamma_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/parittas_en/dasadhamma_en.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
     public void toDeclomaciyaChaturarakha(View view) {
         buttonOver.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
@@ -93,6 +106,19 @@ public class DeclomationOverActivity extends BaseActivityClass {
             htmlFilePath = "file:///android_asset/parittas_ru/attavisatti_ru.html";
         } else {
             htmlFilePath = "file:///android_asset/parittas_en/attavisatti_en.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void toDeclomaciyaSamvega(View view) {
+        buttonOver.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/parittas_ru/samvega_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/parittas_en/samvega_en.html";
         }
         loadHtmlPage(htmlFilePath);
     }

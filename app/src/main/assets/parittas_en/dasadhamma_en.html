@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<title></title>
+
+<style type="text/css">
+.a______ {
+mso-style-name:"Обычный";
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h1 {
+line-height:115%;
+margin:1.0pt;
+margin-top:20.0pt;
+margin-bottom:6.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:20.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h2 {
+line-height:115%;
+margin:1.0pt;
+margin-top:18.0pt;
+margin-bottom:6.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:16.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+h3 {
+line-height:115%;
+margin:1.0pt;
+margin-top:16.0pt;
+margin-bottom:4.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:14.0pt;
+color:#434343;
+font-weight:normal;
+border:none;
+}
+h4 {
+line-height:115%;
+margin:1.0pt;
+margin-top:14.0pt;
+margin-bottom:4.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:12.0pt;
+color:#666666;
+font-weight:normal;
+border:none;
+}
+h5 {
+line-height:115%;
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:4.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:#666666;
+font-weight:normal;
+border:none;
+}
+h6 {
+line-height:115%;
+margin:1.0pt;
+margin-top:12.0pt;
+margin-bottom:4.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:#666666;
+font-style:italic;
+font-weight:normal;
+border:none;
+}
+.a_______ {
+mso-style-name:"Название";
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:3.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:26.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+}
+.a___________ {
+mso-style-name:"Подзаголовок";
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:16.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:15.0pt;
+color:#666666;
+font-weight:normal;
+border:none;
+}
+
+.tm10 {
+text-align:center;
+}
+.tm11 {
+line-height:115%;
+margin:1.0pt;
+margin-top:1.0pt;
+margin-bottom:1.0pt;
+margin-left:0.0pt;
+margin-right:0.0pt;
+text-indent:0.0pt;
+font-family:"Arial";
+font-size:11.0pt;
+color:Black;
+font-weight:normal;
+border:none;
+text-align:center;
+}
+.tm12 {
+font-size:14.0pt;
+font-family:"Times New Roman";
+font-weight:bold;
+}
+.tm13 {
+font-size:14.0pt;
+font-family:"Times New Roman";
+}
+
+body {
+            background-color: #FFE082;
+        }
+
+body {
+            margin: 5;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+img {
+    max-width: 95%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+</style>
+</head>
+<body>
+
+<script type="text/javascript">
+        var initialFontSize = 14; // Установите начальный размер шрифта
+
+        // Функция для установки начального размера шрифта
+        function setInitialFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var computedStyle = window.getComputedStyle(element, null);
+                var currentSize = parseFloat(computedStyle.getPropertyValue('font-size'));
+                // Увеличиваем размер до начального значения
+                var scale = initialFontSize / currentSize;
+                element.style.fontSize = initialFontSize + 'pt';
+            });
+        }
+
+        function increaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = (fontSize + 2) + 'px';
+            });
+        }
+
+        function decreaseFontSize() {
+            var elements = document.querySelectorAll('body *');
+            elements.forEach(element => {
+                var style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+                var fontSize = parseFloat(style);
+                element.style.fontSize = Math.max(8, fontSize - 2) + 'px';
+            });
+        }
+
+        // Устанавливаем начальный размер шрифта после загрузки страницы
+        window.onload = setInitialFontSize;
+    </script>
+
+<p class="tm11"><strong><span class="tm12">DASADHAMMA SUTTA</span></strong></p>
+<p class="tm11"><span class="tm13">(S&#257;vatthinid&#257;na&#7747;)</span></p>
+<p class="tm11"><span class="tm13">&#9967;</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">DASA IME BHIKKHAVE DHAMM&#256; PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKH&#298;TABB&#256;. KATAME DASA:</span></strong></p>
+<p class="tm11"><span class="tm13">Bhikkhus, these ten dhammas should be frequently reflected upon by one who has gone forth.</span></p>
+<p class="tm11"><span class="tm13">What are the ten?</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">1. &#8220;VEVA&#7750;&#7750;IYAMHI AJJHUPAGATO&#8221;TI PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABBA&#7746;,</span></strong></p>
+<p class="tm11"><span class="tm13">&#160;  A bhikkhu should constantly reflect:</span></p>
+<p class="tm11"><span class="tm13">&#160;  &#8220;I have entered upon a state different from that of householders.&#8221;</span></p>
+<p class="tm11"><strong><span class="tm12">&#160;</span></strong></p>
+<p class="tm11"><strong><span class="tm12">2. &#8220;PARAPA&#7788;IBADDH&#256; ME J&#298;VIK&#256;&#8221;TI PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABBA&#7746;.</span></strong></p>
+<p class="tm11"><span class="tm13">&#160;  A bhikkhu should constantly reflect:</span></p>
+<p class="tm11"><span class="tm13">&#160;  &#8220;My life (my means of livelihood) is bound up with others; my support depends on others.&#8221;</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">3. &#8220;A&Ntilde;&Ntilde;O ME &#256;KAPPO KARA&#7750;&#298;YO&#8221;TI PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABBA&#7746;.</span></strong></p>
+<p class="tm11"><span class="tm13">&#160;  A bhikkhu should constantly reflect:</span></p>
+<p class="tm11"><span class="tm13">&#160;  &#8220;My conduct should be different from that of householders.&#8221;</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">4. &#8220;KACCINU KHO ME ATT&#256; S&#298;LATO NA UPAVADAT&#298;&#8221;TI PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABBA&#7746;.</span></strong></p>
+<p class="tm11"><span class="tm13">&#160;  A bhikkhu should constantly reflect:</span></p>
+<p class="tm11"><span class="tm13">&#160;  &#8220;Does my own mind reproach me regarding my virtue?&#8221;</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">5. &#8220;KACCINU KHO MA&#7746; ANUVICCA VI&Ntilde;&Ntilde;&#362; SABRAHMAC&#256;R&#298; S&#298;LATO NA UPAVADANT&#298;&#8221;TI PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABBA&#7746;.</span></strong></p>
+<p class="tm11"><span class="tm13">&#160;  A bhikkhu should constantly reflect:</span></p>
+<p class="tm11"><span class="tm13">&#160;  &#8220;Do wise fellow bhikkhus, upon careful examination, reproach me regarding my virtue?&#8221;</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">6. &#8220;SABBEHI ME PIYEHI MAN&#256;PEHI N&#256;N&#256; BH&#256;VO VIN&#256;BH&#256;VOTI&#8221; PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABBA&#7746;.</span></strong></p>
+<p class="tm11"><span class="tm13">&#160;  A bhikkhu should constantly reflect:</span></p>
+<p class="tm11"><span class="tm13">&#160;  &#8220;Death will separate me from all that is dear and pleasing to me.&#8221;</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">7. &#8220;KAMMASSAKOMHI KAMMAD&#256;Y&#256;DO KAMMAYONI KAMMABANDHU KAMMAPA&#7788;ISARA&#7750;O YA&#7746; KAMMA&#7746; KARISS&#256;MI KALY&#256;&#7750;A&#7746; V&#256; P&#256;PAKA&#7746;
+V&#256; TASSA D&#256;Y&#256;DO BHAVISS&#256;M&#298;TI&#8221; PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABBA&#7746;.</span></strong></p>
+<p class="tm11"><span class="tm13">&#160;  A bhikkhu should constantly reflect:</span></p>
+<p class="tm11"><span class="tm13">&#160;  &#8220;I understand that kamma belongs to me. I am the heir of kamma; kamma is my origin, kamma is my relative, kamma is my refuge. Whatever kamma I perform, whether wholesome or
+unwholesome, I shall inherit its results.&#8221;</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">8. &#8220;KATHA&#7746; BH&#362;TASSA ME RATTINDIV&#256; V&#298;TIPATANT&#298;&#8221;TI PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABBA&#7746;.</span></strong></p>
+<p class="tm11"><span class="tm13">&#160;  A bhikkhu should constantly reflect:</span></p>
+<p class="tm11"><span class="tm13">&#160;  &#8220;What am I doing as my days and nights pass?&#8221;</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">9. &#8220;KACCINU KHOHA&#7746; SU&Ntilde;&Ntilde;&#256;G&#256;RE ABHIRAM&#256;M&#298;&#8221;TI PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABBA&#7746;.</span></strong></p>
+<p class="tm11"><span class="tm13">&#160;  A bhikkhu should constantly reflect:</span></p>
+<p class="tm11"><span class="tm13">&#160;  &#8220;Do I delight in seclusion? Do I take pleasure in an empty dwelling?&#8221;</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">10. &#8220;ATTHINU KHO ME UTTARIMANUSSADHAMM&#256; ALAMARIYA&Ntilde;&#256;&#7750;ADASSANA VISESO ADHIGATO SOHA&#7746; PACCHIME K&#256;LE SABRAHMAC&#256;R&#298;HI PU&#7788;&#7788;HO
+NA MA&#7748;KUBHAVISS&#256;M&#298;&#8221;TI PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABBA&#7746;.</span></strong></p>
+<p class="tm11"><span class="tm13">&#160;   A bhikkhu should constantly reflect:</span></p>
+<p class="tm11"><span class="tm13">&#160;   &#8220;If, near the end of my life, fellow bhikkhus were to ask me whether I have attained any superhuman states, any distinction in noble knowledge and vision, would I be able to
+answer without embarrassment?&#8221;</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+<p class="tm11"><strong><span class="tm12">IME KHO BHIKKHAVE DASA DHAMM&#256; PABBAJITENA ABHI&#7750;HA&#7746; PACCAVEKKHITABB&#256; TI</span></strong></p>
+<p class="tm11"><span class="tm13">Bhikkhus, these ten dhammas should be frequently reflected upon by one who has gone forth.</span></p>
+<p class="tm11"><span class="tm13">&#160;</span></p>
+</body>
+</html>

@@ -2,6 +2,13 @@
 <resources>
     <string name="deklomationRefleksiyaOProshlihNeobhodimostyah">REFLECTION ON THE PAST USE OF MONastic ESSENTIALS (FOOD FROM ALMS, ROBETS, HOUSING AND MEDICINES)</string>
 
+    <string name="DeklomaciyaDasadhamma">
+    \n
+     <b>DASADHAMA SUTTA</b> \n
+     (SĀVATTHINIDĀNAṂ) \n
+    \n
+</string>
+
     <string name="DeklomaciyaCaturarakha">
     \n <b>4 Protective Meditations</b> \n\n
      <b>Recollection of the Buddha</b> \n
@@ -13,6 +20,14 @@
      <b>Recollection of Death</b> \n
      (Maraṇānussati) \n
  </string>
+
+    <string name="DeklomaciyaSamvega">
+    \n
+     <b>Eight Bases for a Sense of Urgency</b> \n
+     (SAṂVEGA VATTHU) \n
+    \n
+</string>
+
 
     <string name="DeklomaciyaAttavisati">
     \n

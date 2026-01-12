@@ -63,10 +63,24 @@
                 tools:ignore="ContentDescription" />
 
             <Button
+                android:id="@+id/button_dasadhamma"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomaciyaDasadhamma"
+                android:text="@string/DeklomaciyaDasadhamma"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
                 android:id="@+id/button_chaturarakha"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomaciyaChaturarakha"
                 android:text="@string/DeklomaciyaCaturarakha"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_samvega"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomaciyaSamvega"
+                android:text="@string/DeklomaciyaSamvega"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
