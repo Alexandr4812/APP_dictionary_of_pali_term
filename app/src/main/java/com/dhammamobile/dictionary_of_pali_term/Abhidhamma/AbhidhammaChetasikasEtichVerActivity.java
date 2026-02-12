@@ -66,9 +66,9 @@ public class AbhidhammaChetasikasEtichVerActivity extends BaseActivityClass {
             resetAnimator();
         } else {
             if (clickedButton == infoButtonAbhidhammaEticheskiVeriabelnieUnivers) {
-                textViewAbhidhammaEticheskiVeriabelnieUnivers.setText(R.string.textDescribeEtichVeriabSometime);
+                textViewAbhidhammaEticheskiVeriabelnieUnivers.setText(R.string.textDescribeEtichVeriabUniversal);
                 textViewAbhidhammaEticheskiVeriabelnieUnivers.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaEticheskiVeriabelnieUnivers, getString(R.string.textDescribeEtichVeriabSometime));
+                animateText(textViewAbhidhammaEticheskiVeriabelnieUnivers, getString(R.string.textDescribeEtichVeriabUniversal));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
