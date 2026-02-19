@@ -29,7 +29,7 @@ public class AdaptiveWebViewClient extends WebViewClient {
             // Принудительно разрешаем масштабирование через WebView API
             // Это гарантирует, что жесты будут работать в обе стороны
             view.getSettings().setSupportZoom(true);
-            view.getSettings().setBuiltInZoomControls(false);
+            view.getSettings().setBuiltInZoomControls(true);
         }, 200);
     }
 
@@ -43,7 +43,7 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "}" +
                 "viewport = document.createElement('meta');" +
                 "viewport.name = 'viewport';" +
-                "viewport.content = 'width=device-width, initial-scale=1.0, minimum-scale=0.25, maximum-scale=5.0, user-scalable=yes';" +
+                "viewport.content = 'width=device-width, initial-scale=1.0, minimum-scale=0.3, maximum-scale=5.0, user-scalable=yes';" +
                 "var head = document.getElementsByTagName('head')[0];" +
                 "if (head.firstChild) {" +
                 "  head.insertBefore(viewport, head.firstChild);" +
