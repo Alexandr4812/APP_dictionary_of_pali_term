@@ -7,7 +7,7 @@ import android.webkit.WebViewClient;
  * WebViewClient с поддержкой автоматического адаптивного масштабирования для HTML файлов сутт
  */
 public class AdaptiveWebViewClient extends WebViewClient {
-    
+
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
         if (url.startsWith("file:///android_asset/")) {
@@ -16,11 +16,11 @@ public class AdaptiveWebViewClient extends WebViewClient {
         }
         return false;
     }
-    
+
     @Override
     public void onPageFinished(WebView view, String url) {
         super.onPageFinished(view, url);
-        
+
         // Небольшая задержка для гарантии полной загрузки DOM
         view.postDelayed(() -> {
             // Инжектируем CSS и JavaScript для адаптивного масштабирования
@@ -32,7 +32,7 @@ public class AdaptiveWebViewClient extends WebViewClient {
             view.getSettings().setBuiltInZoomControls(false);
         }, 200);
     }
-    
+
     private void injectAdaptiveStyles(WebView webView) {
         // JavaScript код для добавления viewport meta тега и адаптивного CSS
         // Без фиксированных размеров, чтобы не блокировать жестовое масштабирование
@@ -76,7 +76,7 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "}" +
                 "makeTablesResponsive();" +
                 "})();";
-        
+
         webView.evaluateJavascript(js, null);
     }
 }
