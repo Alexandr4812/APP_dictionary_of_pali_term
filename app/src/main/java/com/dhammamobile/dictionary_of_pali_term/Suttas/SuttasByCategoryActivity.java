@@ -54,7 +54,7 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
         webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
         webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
         webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
-        webView.getSettings().setLoadWithOverviewMode(true); // Загружать страницу с правильным масштабом
+        // Не используем setLoadWithOverviewMode, чтобы не блокировать уменьшение масштаба
 
         webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript для адаптивного масштабирования
         webView.clearCache(true);

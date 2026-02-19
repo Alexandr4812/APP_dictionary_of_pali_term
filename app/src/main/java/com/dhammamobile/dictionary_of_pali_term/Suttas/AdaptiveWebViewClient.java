@@ -38,7 +38,7 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "  viewport.name = 'viewport';" +
                 "  document.getElementsByTagName('head')[0].appendChild(viewport);" +
                 "}" +
-                "viewport.content = 'width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=5.0, user-scalable=yes';" +
+                "viewport.content = 'width=device-width, initial-scale=1.0, minimum-scale=0.25, maximum-scale=5.0, user-scalable=yes';" +
                 "var style = document.createElement('style');" +
                 "style.type = 'text/css';" +
                 "style.textContent = " +
@@ -50,13 +50,15 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "  var tables = document.querySelectorAll('table[width]');" +
                 "  tables.forEach(function(table) {" +
                 "    var width = table.getAttribute('width');" +
-                "    if (width && width.indexOf('px') !== -1) {" +
-                "      var widthValue = parseInt(width);" +
-                "      if (widthValue > 800) {" +
-                "        if (!table.hasAttribute('data-original-width')) {" +
-                "          table.setAttribute('data-original-width', width);" +
+                "    if (width) {" +
+                "      if (!table.hasAttribute('data-original-width')) {" +
+                "        table.setAttribute('data-original-width', width);" +
+                "      }" +
+                "      if (width.indexOf('px') !== -1) {" +
+                "        var widthValue = parseInt(width);" +
+                "        if (widthValue > 600) {" +
+                "          table.removeAttribute('width');" +
                 "        }" +
-                "        table.removeAttribute('width');" +
                 "      }" +
                 "    }" +
                 "  });" +
