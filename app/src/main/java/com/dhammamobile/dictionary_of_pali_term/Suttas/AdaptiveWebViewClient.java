@@ -25,7 +25,12 @@ public class AdaptiveWebViewClient extends WebViewClient {
         view.postDelayed(() -> {
             // Инжектируем CSS и JavaScript для адаптивного масштабирования
             injectAdaptiveStyles(view);
-        }, 100);
+            
+            // Принудительно разрешаем масштабирование через WebView API
+            // Это гарантирует, что жесты будут работать в обе стороны
+            view.getSettings().setSupportZoom(true);
+            view.getSettings().setBuiltInZoomControls(false);
+        }, 200);
     }
     
     private void injectAdaptiveStyles(WebView webView) {
@@ -33,12 +38,18 @@ public class AdaptiveWebViewClient extends WebViewClient {
         // Без фиксированных размеров, чтобы не блокировать жестовое масштабирование
         String js = "(function() {" +
                 "var viewport = document.querySelector('meta[name=viewport]');" +
-                "if (!viewport) {" +
-                "  viewport = document.createElement('meta');" +
-                "  viewport.name = 'viewport';" +
-                "  document.getElementsByTagName('head')[0].appendChild(viewport);" +
+                "if (viewport) {" +
+                "  viewport.remove();" +
                 "}" +
+                "viewport = document.createElement('meta');" +
+                "viewport.name = 'viewport';" +
                 "viewport.content = 'width=device-width, initial-scale=1.0, minimum-scale=0.25, maximum-scale=5.0, user-scalable=yes';" +
+                "var head = document.getElementsByTagName('head')[0];" +
+                "if (head.firstChild) {" +
+                "  head.insertBefore(viewport, head.firstChild);" +
+                "} else {" +
+                "  head.appendChild(viewport);" +
+                "}" +
                 "var style = document.createElement('style');" +
                 "style.type = 'text/css';" +
                 "style.textContent = " +

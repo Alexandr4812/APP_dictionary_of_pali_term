@@ -51,8 +51,8 @@ public class SuttasKuddakaActivity extends BaseActivityClass {
         Button buttonBack = findViewById(R.id.buttonliveToBeforePageKuddaka);
         webView = findViewById(R.id.webViewKuddaka);
 
-        webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование
-        webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
+        webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования (ВАЖНО: первым!)
+        webView.getSettings().setBuiltInZoomControls(false); // Отключаем встроенные контролы
         webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
         webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
         // Не используем setLoadWithOverviewMode, чтобы не блокировать уменьшение масштаба
