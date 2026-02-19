@@ -34,9 +34,8 @@ public class AdaptiveWebViewClient extends WebViewClient {
     }
     
     private void injectAdaptiveStyles(WebView webView) {
-        // JavaScript код для правильной настройки viewport и адаптивного CSS
-        // Используем width=device-width с правильным initial-scale для адаптации
-        // Это позволяет тексту масштабироваться при жестах увеличения/уменьшения
+        // Финальный простой подход: минимальный viewport, который не блокирует жестовое масштабирование
+        // Убираем все автоматические расчеты - пусть WebView сам управляет масштабированием
         String js = "(function() {" +
                 "var viewport = document.querySelector('meta[name=viewport]');" +
                 "if (viewport) {" +
@@ -44,14 +43,8 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "}" +
                 "viewport = document.createElement('meta');" +
                 "viewport.name = 'viewport';" +
-                // Используем device-width с правильным initial-scale для адаптации под экран
-                // minimum-scale и maximum-scale позволяют жестовое масштабирование
-                "var screenWidth = window.innerWidth || screen.width;" +
-                "var contentWidth = 1000;" +
-                "var initialScale = screenWidth / contentWidth;" +
-                "if (initialScale > 1) initialScale = 1;" +
-                "if (initialScale < 0.3) initialScale = 0.3;" +
-                "viewport.content = 'width=device-width, initial-scale=' + initialScale + ', minimum-scale=0.25, maximum-scale=5.0, user-scalable=yes';" +
+                // Минимальный viewport: только разрешаем масштабирование, без автоматических расчетов
+                "viewport.content = 'width=device-width, initial-scale=1.0, minimum-scale=0.25, maximum-scale=5.0, user-scalable=yes';" +
                 "var head = document.getElementsByTagName('head')[0];" +
                 "if (head.firstChild) {" +
                 "  head.insertBefore(viewport, head.firstChild);" +
@@ -69,15 +62,13 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "  var tables = document.querySelectorAll('table[width]');" +
                 "  tables.forEach(function(table) {" +
                 "    var width = table.getAttribute('width');" +
-                "    if (width) {" +
-                "      if (!table.hasAttribute('data-original-width')) {" +
-                "        table.setAttribute('data-original-width', width);" +
-                "      }" +
-                "      if (width.indexOf('px') !== -1) {" +
-                "        var widthValue = parseInt(width);" +
-                "        if (widthValue > 600) {" +
-                "          table.removeAttribute('width');" +
+                "    if (width && width.indexOf('px') !== -1) {" +
+                "      var widthValue = parseInt(width);" +
+                "      if (widthValue > 600) {" +
+                "        if (!table.hasAttribute('data-original-width')) {" +
+                "          table.setAttribute('data-original-width', width);" +
                 "        }" +
+                "        table.removeAttribute('width');" +
                 "      }" +
                 "    }" +
                 "  });" +

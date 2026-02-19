@@ -51,13 +51,13 @@ public class SuttasAnguttaraActivity extends BaseActivityClass {
         Button buttonBack = findViewById(R.id.buttonliveToBeforePageAnguttara);
         webView = findViewById(R.id.webViewAnguttara);
 
-        webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
-        webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование (нужно для жестов!)
-        webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
-        webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
-        // Не используем setLoadWithOverviewMode, чтобы не блокировать уменьшение масштаба
-
-        webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript для адаптивного масштабирования
+        // Настройки масштабирования - порядок важен!
+        webView.getSettings().setJavaScriptEnabled(true); // Сначала включаем JavaScript
+        webView.getSettings().setSupportZoom(true); // Разрешить жестовое масштабирование
+        webView.getSettings().setBuiltInZoomControls(true); // Включить поддержку масштабирования
+        webView.getSettings().setDisplayZoomControls(false); // Скрыть кнопки +/-
+        webView.getSettings().setUseWideViewPort(false); // ОТКЛЮЧАЕМ - это может блокировать масштабирование!
+        // Не используем setLoadWithOverviewMode - блокирует уменьшение
         webView.clearCache(true);
 
         // Загрузка первой страницы

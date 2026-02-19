@@ -51,12 +51,14 @@ public class SuttasRandomActivity extends BaseActivityClass {
 
         webView = findViewById(R.id.webViewRandomSutta);
 
-        webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
-        webView.getSettings().setBuiltInZoomControls(true); // Разрешить встроенное масштабирование (нужно для жестов!)
-        webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
-        webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
-        // Не используем setLoadWithOverviewMode, чтобы не блокировать уменьшение масштаба
+        // Настройки масштабирования - порядок важен!
+        webView.getSettings().setJavaScriptEnabled(true); // Сначала включаем JavaScript
+        webView.getSettings().setSupportZoom(true); // Разрешить жестовое масштабирование
+        webView.getSettings().setBuiltInZoomControls(true); // Включить поддержку масштабирования
+        webView.getSettings().setDisplayZoomControls(false); // Скрыть кнопки +/-
+        webView.getSettings().setUseWideViewPort(false); // ОТКЛЮЧАЕМ - это может блокировать масштабирование!
         webView.getSettings().setAllowFileAccess(true);
+        // Не используем setLoadWithOverviewMode - блокирует уменьшение
         webView.getSettings().setAllowContentAccess(true);
         webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript для адаптивного масштабирования
         webView.clearCache(true);
