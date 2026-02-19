@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg-color: #161923;
+            --accent-color: #FFE082;
+            --text-main: #E2E8F0;
+            --text-dim: #94A3B8;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-color: #2D3748;
+            --variable: #94A3B8;
+            --unwholesome: #EF4444;
+            --beautiful: #10B981;
+        }
+
+        body {
+            margin: 0; padding: 15px;
+            font-family: -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.4;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .main-title {
+            text-align: center; color: var(--accent-color);
+            font-size: 1.1rem; font-weight: bold;
+            text-transform: uppercase; letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        details.sphere-group {
+            margin-bottom: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            background: var(--card-bg);
+            overflow: hidden;
+        }
+
+        summary.sphere-summary {
+            padding: 16px; list-style: none; cursor: pointer;
+            background-color: var(--accent-color);
+            color: #161923; font-weight: 800; font-size: 0.85rem;
+            display: flex; justify-content: space-between; align-items: center;
+            text-transform: uppercase;
+        }
+
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; }
+        details[open] > summary::after { transform: rotate(180deg); }
+
+        .category-title {
+            font-weight: bold; color: var(--accent-color);
+            font-size: 0.75rem; text-transform: uppercase;
+            padding: 12px 10px 5px 15px; opacity: 0.8;
+        }
+
+        .factor-card {
+            border-bottom: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .factor-card:active { background: rgba(255,255,255,0.05); }
+
+        .factor-header {
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 10px;
+            padding: 12px 15px;
+            align-items: center;
+        }
+
+        .num { color: var(--text-dim); font-family: monospace; font-size: 0.8rem; }
+        .name-ru { font-weight: 500; font-size: 0.9rem; }
+        .name-pali { color: var(--text-dim); font-style: italic; font-size: 0.8rem; margin-left: 5px; }
+
+        .factor-desc {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: rgba(0,0,0,0.2);
+            font-size: 0.8rem;
+            color: #CBD5E1;
+            padding: 0 15px 0 40px;
+        }
+
+        .factor-card.open .factor-desc {
+            max-height: 200px;
+            padding: 0 15px 12px 40px;
+        }
+
+        .b-var { border-left: 3px solid var(--variable); }
+        .b-unw { border-left: 3px solid var(--unwholesome); }
+        .b-beau { border-left: 3px solid var(--beautiful); }
+
+    </style>
+</head>
+<body>
+<br>
+<div class="main-title">52 Четасики</div>
+
+<details class="sphere-group" open>
+    <summary class="sphere-summary">Этически вариабельные (13)</summary>
+    
+    <div class="category-title">Универсальные (7)</div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">1</div><div class="name-ru">Контакт <span class="name-pali">(Phassa)</span></div></div>
+        <div class="factor-desc">Касание сознания и факторов с объектом.</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">2</div><div class="name-ru">Чувство <span class="name-pali">(Vedanā)</span></div></div>
+        <div class="factor-desc">Переживание вкуса объекта (приятное, неприятное, нейтральное).</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">3</div><div class="name-ru">Восприятие <span class="name-pali">(Saññā)</span></div></div>
+        <div class="factor-desc">Отмечивание признаков объекта для его узнавания в будущем.</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">4</div><div class="name-ru">Воление <span class="name-pali">(Cetanā)</span></div></div>
+        <div class="factor-desc">Намерение, координирующее факторы; суть каммы.</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">5</div><div class="name-ru">Однонаправленность <span class="name-pali">(Ekaggatā)</span></div></div>
+        <div class="factor-desc">Фокусировка на одном объекте; семя сосредоточения.</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">6</div><div class="name-ru">Жизнеспособность <span class="name-pali">(Jīvitindriya)</span></div></div>
+        <div class="factor-desc">Поддержание жизнеспособности ментальных состояний.</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">7</div><div class="name-ru">Внимание <span class="name-pali">(Manasikāra)</span></div></div>
+        <div class="factor-desc">Поворот ума к объекту. Ведение (направление) ассоциированных факторов к объекту.</div>
+    </div>
+
+    <div class="category-title">Время от времени (6)</div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">8</div><div class="name-ru">Начальное приложение <span class="name-pali">(Vitakka)</span></div></div>
+        <div class="factor-desc">Направление (приложение) ума к объекту.</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">9</div><div class="name-ru">Устойчивое приложение <span class="name-pali">(Vicāra)</span></div></div>
+        <div class="factor-desc">Продолжительная занятость (удержание) ума на объекте.</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">10</div><div class="name-ru">Решение <span class="name-pali">(Adhimokkha)</span></div></div>
+        <div class="factor-desc">Принятие решения, отсутствие колебаний.</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">11</div><div class="name-ru">Энергия <span class="name-pali">(Viriya)</span></div></div>
+        <div class="factor-desc">Усилие, поддерживающее благие и неблагие состояния.</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">12</div><div class="name-ru">Восторженность <span class="name-pali">(Pīti)</span></div></div>
+        <div class="factor-desc">Радостный интерес, вдохновение (освежение тела и ума).</div>
+    </div>
+    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">13</div><div class="name-ru">Желание <span class="name-pali">(Chanda)</span></div></div>
+        <div class="factor-desc">Желание действовать или достичь (нейтральное).</div>
+    </div>
+</details>
+
+<details class="sphere-group">
+    <summary class="sphere-summary">Неблаготворные факторы (14)</summary>
+    <div class="category-title">Универсальные (4)</div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">14</div><div class="name-ru">Заблуждение <span class="name-pali">(Moha)</span></div></div>
+        <div class="factor-desc">Слепота ума к истинной природе вещей.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">15</div><div class="name-ru">Бесстыдство <span class="name-pali">(Ahirika)</span></div></div>
+        <div class="factor-desc">Отсутствие отвращения к дурным поступкам.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">16</div><div class="name-ru">Безбоязненность <span class="name-pali">(Anottappa)</span></div></div>
+        <div class="factor-desc">Отсутствие страха перед последствиями зла.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">17</div><div class="name-ru">Беспокойство <span class="name-pali">(Uddhacca)</span></div></div>
+        <div class="factor-desc">Неуспокоенность, возбуждение ума.</div>
+    </div>
+
+    <div class="category-title">Время от времени (10)</div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">18</div><div class="name-ru">Жадность <span class="name-pali">(Lobha)</span></div></div>
+        <div class="factor-desc">Привязанность, жажда чувственных объектов.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">19</div><div class="name-ru">Ошибочный взгляд <span class="name-pali">(Diṭṭhi)</span></div></div>
+        <div class="factor-desc">Искаженное восприятие реальности (вера в "я" и т.д.).</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">20</div><div class="name-ru">Тщеславие <span class="name-pali">(Māna)</span></div></div>
+        <div class="factor-desc">Гордыня, сравнение себя с другими.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">21</div><div class="name-ru">Злость <span class="name-pali">(Dosa)</span></div></div>
+        <div class="factor-desc">Раздражение, гнев, враждебность, отвращение.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">22</div><div class="name-ru">Зависть <span class="name-pali">(Issā)</span></div></div>
+        <div class="factor-desc">Ревность к чужому успеху.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">23</div><div class="name-ru">Скупость <span class="name-pali">(Macchariya)</span></div></div>
+        <div class="factor-desc">Желание скрыть что-то от других, не допустить до других.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">24</div><div class="name-ru">Волнение / Сожаление <span class="name-pali">(Kukkucca)</span></div></div>
+        <div class="factor-desc">Беспокойство о совершенном зле или не сделанном добре.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">25</div><div class="name-ru">Вялость <span class="name-pali">(Thīna)</span></div></div>
+        <div class="factor-desc">Ригидность, тяжесть ментальных факторов.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">26</div><div class="name-ru">Апатия <span class="name-pali">(Middha)</span></div></div>
+        <div class="factor-desc">Сонливость, тупость самого сознания.</div>
+    </div>
+    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">27</div><div class="name-ru">Сомнение <span class="name-pali">(Vicikicchā)</span></div></div>
+        <div class="factor-desc">Скептическое сомнение в Будде, Дхамме и Пути.</div>
+    </div>
+</details>
+
+<details class="sphere-group">
+    <summary class="sphere-summary">Прекрасные факторы (25)</summary>
+    <div class="category-title">Универсальные (19)</div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">28</div><div class="name-ru">Вера <span class="name-pali">(Saddhā)</span></div></div>
+        <div class="factor-desc">Доверие к просветлению и истине.</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">29</div><div class="name-ru">Осознанность <span class="name-pali">(Sati)</span></div></div>
+        <div class="factor-desc">Памятование, неуплывание ума от объекта. Не-колебание (присутствие ума, не-забывание</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">30</div><div class="name-ru">Стыд <span class="name-pali">(Hiri)</span></div></div>
+        <div class="factor-desc">Отвращение к совершению зла.</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">31</div><div class="name-ru">Боязнь зла <span class="name-pali">(Ottappa)</span></div></div>
+        <div class="factor-desc">Моральный страх перед плохими последствиями.</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">32</div><div class="name-ru">Не-жадность <span class="name-pali">(Alobha)</span></div></div>
+        <div class="factor-desc">Щедрость, отсутствие привязанности.</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">33</div><div class="name-ru">Не-злость <span class="name-pali">(Adosa)</span></div></div>
+        <div class="factor-desc">Отсутствие жестокости (не-противление)</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">34</div><div class="name-ru">Нейтральность <span class="name-pali">(Tatramajjhattatā)</span></div></div>
+        <div class="factor-desc">Равностность, баланс ментальных состояний.</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">35-36</div><div class="name-ru">Уравновешенность <span class="name-pali">(Passaddhi)</span></div></div>
+        <div class="factor-desc">Спокойствие ментального тела и сознания.</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">37-38</div><div class="name-ru">Лёгкость <span class="name-pali">(Lahutā)</span></div></div>
+        <div class="factor-desc">Отсутствие тяжести и вялости. Ослабление тяжести в факторах</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">39-40</div><div class="name-ru">Гибкость <span class="name-pali">(Mudutā)</span></div></div>
+        <div class="factor-desc">Пластичность, устранение жесткости в факторах и теле.</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">41-42</div><div class="name-ru">Управляемость <span class="name-pali">(Kammaññatā)</span></div></div>
+        <div class="factor-desc">Работоспособность, пригодность для практики. Устранение неуправляемости в факторах</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">43-44</div><div class="name-ru">Сноровка <span class="name-pali">(Pāguññatā)</span></div></div>
+        <div class="factor-desc">Мастерство, отсутствие ментальной "болезненности".</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">45-46</div><div class="name-ru">Прямота <span class="name-pali">(Ujjukatā)</span></div></div>
+        <div class="factor-desc">Честность и искренность ума.</div>
+    </div>
+
+    <div class="category-title">Воздержания (3)</div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">47</div><div class="name-ru">Прав. речь <span class="name-pali">(Sammā-vācā)</span></div></div>
+        <div class="factor-desc">Воздержание от лжи, клеветы, грубости и пустословия.</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">48</div><div class="name-ru">Прав. действие <span class="name-pali">(Sammā-kammanta)</span></div></div>
+        <div class="factor-desc">Воздержание от убийства, воровства и разврата.</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">49</div><div class="name-ru">Прав. жизнь <span class="name-pali">(Sammā-ājīva)</span></div></div>
+        <div class="factor-desc">Занятие деятельностью, не вредящей существам.</div>
+    </div>
+
+    <div class="category-title">Безграничности (2)</div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">50</div><div class="name-ru">Сострадание <span class="name-pali">(Karuṇā)</span></div></div>
+        <div class="factor-desc">Способствование устранению страдания в других.</div>
+    </div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">51</div><div class="name-ru">Радость <span class="name-pali">(Muditā)</span></div></div>
+        <div class="factor-desc">Сорадование успехам и счастью других.</div>
+    </div>
+
+    <div class="category-title">Мудрость (1)</div>
+    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
+        <div class="factor-header"><div class="num">52</div><div class="name-ru">Мудрость <span class="name-pali">(Paññindriya)</span></div></div>
+        <div class="factor-desc">Проницательное понимание Четырех Благородных Истин.</div>
+    </div>
+</details>
+<br>
+</body>
+</html>

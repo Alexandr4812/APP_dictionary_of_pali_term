@@ -45,13 +45,42 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
+            <TextView
+                android:id="@+id/textViewSankhata"
+                style="@style/textBetweenButtons"
+                android:text="@string/forTextViewAbhidhammaSankhata" />
 
-            <Button
-                android:id="@+id/infoButton1"
-                style="@style/infoButton"
-                android:foreground="@drawable/info7"
-                android:onClick="onButtonClickAbhidhamma1"
-                tools:ignore="UsingOnClickInXml" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                tools:ignore="UselessLeaf" >
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tableButton1"
+                    style="@style/button_table_premium"
+                    android:layout_marginStart="12dp"
+                    android:onClick="tableChittas1"
+                    android:text="@string/text_for_table"
+                    app:icon="@android:drawable/ic_menu_agenda"
+                    app:iconSize="16dp"
+                    app:iconTint="@color/black"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/infoButton1"
+                    style="@style/infoButton"
+                    android:foreground="@drawable/info7"
+                    android:onClick="onButtonClickAbhidhamma1"
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/button_chittas"
@@ -117,12 +146,37 @@
                 android:text=""
                 android:visibility="invisible"/>
 
-            <Button
-                android:id="@+id/infoButton2"
-                style="@style/infoButton"
-                android:onClick="onButtonClickAbhidhamma2"
-                android:foreground="@drawable/info7"
-                tools:ignore="UsingOnClickInXml" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                tools:ignore="UselessLeaf" >
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/tableButton2"
+                    style="@style/button_table_premium"
+                    android:layout_marginStart="12dp"
+                    android:onClick="tableChittas2"
+                    android:text="@string/text_for_table"
+                    app:icon="@android:drawable/ic_menu_agenda"
+                    app:iconSize="16dp"
+                    app:iconTint="@color/black"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/infoButton2"
+                    style="@style/infoButton"
+                    android:onClick="onButtonClickAbhidhamma2"
+                    android:foreground="@drawable/info7"
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/button_mentalnie_faktori"
@@ -141,19 +195,172 @@
                 android:text=""
                 android:visibility="invisible"/>
 
-            <TextView
-                android:id="@+id/textView6"
+            <Button
+                android:id="@+id/infoButton3"
+                style="@style/infoButton"
+                android:foreground="@drawable/info7"
+                android:onClick="onButtonClickAbhidhamma3"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/button_materials"
+                style="@style/button_activity_declomation_main"
+                android:onClick="onButtonClickAbhidhamma3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/inProcess"
-                android:textAlignment="center"
-                android:textColor="#E57373"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:text="@string/textButtonMaterials"
+                tools:ignore="UsingOnClickInXml" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf" >
+
+                <Button
+                    android:id="@+id/button_material_harakteristika"
+                    style="@style/button_activity_chittas"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma3"
+                    android:text="@string/button_kontakt_harakteristika"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_material_function"
+                    style="@style/button_activity_chittas"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma3"
+                    android:text="@string/button_kontakt_function"
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="-5dp"
+                tools:ignore="UselessLeaf" >
+
+                <Button
+                    android:id="@+id/button_material_proyavlenie"
+                    style="@style/button_activity_chittas"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma3"
+                    android:text="@string/button_kontakt_proyavlenie"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_material_prichina"
+                    style="@style/button_activity_chittas"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma3"
+                    android:text="@string/button_kontakt_prichina"
+                    tools:ignore="UsingOnClickInXml" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewAbhidhammaMaterial"
+                style="@style/TextMessageStyleAbhidyamma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/imageVievAbhidhamma2"
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewAsankhata"
+                style="@style/textBetweenButtons"
+                android:text="@string/forTextViewAbhidhammaAsankhata" />
+
+
+            <Button
+                android:id="@+id/button_nibbana"
+                style="@style/button_activity_declomation_main"
+                android:onClick="onButtonClickAbhidhamma4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/textButtonNibbana"
+                tools:ignore="UsingOnClickInXml" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:ignore="UselessLeaf" >
+
+                <Button
+                    android:id="@+id/button_nibbana_harakteristika"
+                    style="@style/button_activity_chittas"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma4"
+                    android:text="@string/button_kontakt_harakteristika"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_nibbana_function"
+                    style="@style/button_activity_chittas"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma4"
+                    android:text="@string/button_kontakt_function"
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="-5dp"
+                tools:ignore="UselessLeaf" >
+
+                <Button
+                    android:id="@+id/button_nibbana_proyavlenie"
+                    style="@style/button_activity_chittas"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma4"
+                    android:text="@string/button_kontakt_proyavlenie"
+                    tools:ignore="UsingOnClickInXml" />
+
+                <Button
+                    android:id="@+id/button_nibbana_prichina"
+                    style="@style/button_activity_chittas"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClickAbhidhamma4"
+                    android:text="@string/button_kontakt_prichina"
+                    tools:ignore="UsingOnClickInXml" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewAbhidhammaNibbana"
+                style="@style/TextMessageStyleAbhidyamma"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="invisible"/>
+
 
         </LinearLayout>
 
-
     </ScrollView>
+
+    <WebView
+        android:id="@+id/webViewAbhidhamma"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        android:scrollbarThumbVertical="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Включаем макет с кнопками -->
+    <include
+        layout="@layout/buttons_layout_for_abhidhamma"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
