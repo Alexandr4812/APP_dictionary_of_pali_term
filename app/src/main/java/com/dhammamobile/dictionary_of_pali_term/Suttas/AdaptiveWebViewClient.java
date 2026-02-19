@@ -34,8 +34,9 @@ public class AdaptiveWebViewClient extends WebViewClient {
     }
     
     private void injectAdaptiveStyles(WebView webView) {
-        // JavaScript код для добавления viewport meta тега и адаптивного CSS
-        // Без фиксированных размеров, чтобы не блокировать жестовое масштабирование
+        // JavaScript код для правильной настройки viewport и адаптивного CSS
+        // Используем фиксированную ширину viewport, чтобы контент отображался в оригинальном размере
+        // и пользователь мог масштабировать его жестами в обе стороны
         String js = "(function() {" +
                 "var viewport = document.querySelector('meta[name=viewport]');" +
                 "if (viewport) {" +
@@ -43,7 +44,14 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "}" +
                 "viewport = document.createElement('meta');" +
                 "viewport.name = 'viewport';" +
-                "viewport.content = 'width=device-width, initial-scale=1.0, minimum-scale=0.3, maximum-scale=5.0, user-scalable=yes';" +
+                // Используем фиксированную ширину вместо device-width, чтобы не блокировать масштабирование
+                // initial-scale будет автоматически рассчитан для адаптации под экран
+                "var screenWidth = window.innerWidth || screen.width;" +
+                "var contentWidth = 1000;" +
+                "var initialScale = screenWidth / contentWidth;" +
+                "if (initialScale > 1) initialScale = 1;" +
+                "if (initialScale < 0.3) initialScale = 0.3;" +
+                "viewport.content = 'width=' + contentWidth + ', initial-scale=' + initialScale + ', minimum-scale=0.25, maximum-scale=5.0, user-scalable=yes';" +
                 "var head = document.getElementsByTagName('head')[0];" +
                 "if (head.firstChild) {" +
                 "  head.insertBefore(viewport, head.firstChild);" +
