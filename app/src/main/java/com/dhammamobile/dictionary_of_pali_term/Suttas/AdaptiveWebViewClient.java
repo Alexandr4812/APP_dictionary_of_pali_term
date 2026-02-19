@@ -35,8 +35,8 @@ public class AdaptiveWebViewClient extends WebViewClient {
     
     private void injectAdaptiveStyles(WebView webView) {
         // JavaScript код для правильной настройки viewport и адаптивного CSS
-        // Используем фиксированную ширину viewport, чтобы контент отображался в оригинальном размере
-        // и пользователь мог масштабировать его жестами в обе стороны
+        // Используем width=device-width с правильным initial-scale для адаптации
+        // Это позволяет тексту масштабироваться при жестах увеличения/уменьшения
         String js = "(function() {" +
                 "var viewport = document.querySelector('meta[name=viewport]');" +
                 "if (viewport) {" +
@@ -44,14 +44,14 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "}" +
                 "viewport = document.createElement('meta');" +
                 "viewport.name = 'viewport';" +
-                // Используем фиксированную ширину вместо device-width, чтобы не блокировать масштабирование
-                // initial-scale будет автоматически рассчитан для адаптации под экран
+                // Используем device-width с правильным initial-scale для адаптации под экран
+                // minimum-scale и maximum-scale позволяют жестовое масштабирование
                 "var screenWidth = window.innerWidth || screen.width;" +
                 "var contentWidth = 1000;" +
                 "var initialScale = screenWidth / contentWidth;" +
                 "if (initialScale > 1) initialScale = 1;" +
                 "if (initialScale < 0.3) initialScale = 0.3;" +
-                "viewport.content = 'width=' + contentWidth + ', initial-scale=' + initialScale + ', minimum-scale=0.25, maximum-scale=5.0, user-scalable=yes';" +
+                "viewport.content = 'width=device-width, initial-scale=' + initialScale + ', minimum-scale=0.25, maximum-scale=5.0, user-scalable=yes';" +
                 "var head = document.getElementsByTagName('head')[0];" +
                 "if (head.firstChild) {" +
                 "  head.insertBefore(viewport, head.firstChild);" +
