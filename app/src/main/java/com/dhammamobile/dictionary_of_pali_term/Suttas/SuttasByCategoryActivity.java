@@ -54,23 +54,15 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
         webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
         webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
         webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
+        webView.getSettings().setLoadWithOverviewMode(true); // Загружать страницу с правильным масштабом
 
-        webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript, если нужно
+        webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript для адаптивного масштабирования
         webView.clearCache(true);
 
         // Загрузка первой страницы
         webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/suttas-themes.html");
-        // Обработка переходов между страницами через ссылки
-        webView.setWebViewClient(new WebViewClient() {
-            @Override
-            public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                if (url.startsWith("file:///android_asset/")) {
-                    view.loadUrl(url);
-                    return true;
-                }
-                return false;
-            }
-        });
+        // Используем AdaptiveWebViewClient для автоматического масштабирования
+        webView.setWebViewClient(new AdaptiveWebViewClient());
 
         buttonBack.setOnClickListener(v -> goBack());
     }

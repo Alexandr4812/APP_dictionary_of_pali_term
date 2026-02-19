@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 
 import androidx.core.graphics.Insets;
@@ -56,8 +55,14 @@ public class SuttasRandomActivity extends BaseActivityClass {
         webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
         webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
         webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
+        webView.getSettings().setLoadWithOverviewMode(true); // Загружать страницу с правильным масштабом
         webView.getSettings().setAllowFileAccess(true);
         webView.getSettings().setAllowContentAccess(true);
+        webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript для адаптивного масштабирования
+        webView.clearCache(true);
+
+        // Используем AdaptiveWebViewClient для автоматического масштабирования
+        webView.setWebViewClient(new AdaptiveWebViewClient());
 
         // Загрузка случайной страницы
         loadRandomPage();
@@ -82,17 +87,7 @@ public class SuttasRandomActivity extends BaseActivityClass {
             if (randomFile != null) {
                 String path = "file:///android_asset/canon/Teaching/Canon/Suttanta/" + randomFolder + "/" + randomFile;
 
-                // Добавляем WebViewClient для обработки событий
-                webView.setWebViewClient(new WebViewClient() {
-                    @Override
-                    public void onPageFinished(WebView view, String url) {
-                        super.onPageFinished(view, url);
-                        // Сохранение выбранной страницы после ее загрузки
-                        saveLastVisitedPage(url);
-                    }
-                });
-
-                // Загрузка данных в WebView
+                // Загрузка данных в WebView (AdaptiveWebViewClient уже установлен в onCreate)
                 webView.loadUrl(path);
             }
         } catch (IOException e) {

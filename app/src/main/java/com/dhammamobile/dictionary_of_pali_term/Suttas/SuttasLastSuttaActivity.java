@@ -50,6 +50,12 @@ public class SuttasLastSuttaActivity extends BaseActivityClass {
         webView.getSettings().setSupportZoom(true); // Разрешить поддержку жестов масштабирования
         webView.getSettings().setDisplayZoomControls(false); // Скрыть контролы масштабирования
         webView.getSettings().setUseWideViewPort(true); // Разрешить широкий видовой порт
+        webView.getSettings().setLoadWithOverviewMode(true); // Загружать страницу с правильным масштабом
+        webView.getSettings().setJavaScriptEnabled(true); // Разрешить JavaScript для адаптивного масштабирования
+        webView.clearCache(true);
+
+        // Используем AdaptiveWebViewClient для автоматического масштабирования
+        webView.setWebViewClient(new AdaptiveWebViewClient());
 
         // Загрузка последней просмотренной страницы, если она существует
         String lastVisitedPage = getLastVisitedPage();
