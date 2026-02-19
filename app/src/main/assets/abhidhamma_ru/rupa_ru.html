@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --bg-color: #161923;
+    --accent-color: #FFE082;
+    --text-main: #E2E8F0;
+    --text-dim: #94A3B8;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border-color: #2D3748;
+    --real: #60A5FA;
+    --indirect: #A78BFA;
+  }
+  body {
+    margin: 0;
+    padding: 15px;
+    font-family: -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.4;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .main-title {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  details.sphere-group {
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-bg);
+    overflow: hidden;
+  }
+  summary.sphere-summary {
+    padding: 16px;
+    list-style: none;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: #161923;
+    font-weight: 800;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; }
+  details[open] > summary::after { transform: rotate(180deg); }
+  .category-title {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 12px 10px 5px 15px;
+    opacity: 0.8;
+  }
+  .factor-card {
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .factor-card:active { background: rgba(255,255,255,0.05); }
+  .factor-header {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 10px;
+    padding: 12px 15px;
+    align-items: center;
+  }
+  .num { color: var(--text-dim); font-family: monospace; font-size: 0.8rem; }
+  .name-ru { font-weight: 500; font-size: 0.9rem; }
+  .name-pali { color: var(--text-dim); font-style: italic; font-size: 0.8rem; margin-left: 5px; }
+  .factor-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: rgba(0,0,0,0.2);
+    font-size: 0.8rem;
+    color: #CBD5E1;
+    padding: 0 15px 0 55px;
+  }
+  .factor-card.open .factor-desc {
+    max-height: 200px;
+    padding: 0 15px 12px 55px;
+  }
+  .b-real { border-left: 3px solid var(--real); }
+  .b-ind  { border-left: 3px solid var(--indirect); }
+</style>
+</head>
+<body>
+<br>
+<div class="main-title">28 Рупа — Материальные явления</div>
+
+<!-- РЕАЛЬНО ПРОИЗВЕДЁННАЯ МАТЕРИЯ -->
+<details class="sphere-group" open>
+  <summary class="sphere-summary">Реально произведённая материя (18)</summary>
+
+  <div class="category-title">I. Великие первоэлементы (4)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">1</div><div class="name-ru">Земля-элемент <span class="name-pali">(Pathavī)</span></div></div>
+    <div class="factor-desc">Элемент твёрдости и расширения; основа для других элементов.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">2</div><div class="name-ru">Вода-элемент <span class="name-pali">(Āpo)</span></div></div>
+    <div class="factor-desc">Элемент текучести и сцепления; связывает другие элементы.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">3</div><div class="name-ru">Огонь-элемент <span class="name-pali">(Tejo)</span></div></div>
+    <div class="factor-desc">Элемент тепла; поддерживает температуру и созревание.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">4</div><div class="name-ru">Воздух-элемент <span class="name-pali">(Vāyo)</span></div></div>
+    <div class="factor-desc">Элемент движения и давления; порождает движение.</div>
+  </div>
+
+  <div class="category-title">II. Сенсорные явления (5)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">5</div><div class="name-ru">Сенсорность глаза <span class="name-pali">(Cakkhu-pasāda)</span></div></div>
+    <div class="factor-desc">Чувствительная материя глаза, воспринимающая видимое.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">6</div><div class="name-ru">Сенсорность уха <span class="name-pali">(Sota-pasāda)</span></div></div>
+    <div class="factor-desc">Чувствительная материя уха, воспринимающая звук.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">7</div><div class="name-ru">Сенсорность носа <span class="name-pali">(Ghāna-pasāda)</span></div></div>
+    <div class="factor-desc">Чувствительная материя носа, воспринимающая запах.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">8</div><div class="name-ru">Сенсорность языка <span class="name-pali">(Jivhā-pasāda)</span></div></div>
+    <div class="factor-desc">Чувствительная материя языка, воспринимающая вкус.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">9</div><div class="name-ru">Сенсорность тела <span class="name-pali">(Kāya-pasāda)</span></div></div>
+    <div class="factor-desc">Чувствительная материя тела, воспринимающая тактильное.</div>
+  </div>
+
+  <div class="category-title">III. Объектные явления (4)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">10</div><div class="name-ru">Видимая форма <span class="name-pali">(Rūpa)</span></div></div>
+    <div class="factor-desc">Объект зрения — цвет и видимая форма.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">11</div><div class="name-ru">Звук <span class="name-pali">(Sadda)</span></div></div>
+    <div class="factor-desc">Объект слуха — звуковые волны.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">12</div><div class="name-ru">Запах <span class="name-pali">(Gandha)</span></div></div>
+    <div class="factor-desc">Объект обоняния — молекулы запаха.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">13</div><div class="name-ru">Вкус <span class="name-pali">(Rasa)</span></div></div>
+    <div class="factor-desc">Объект вкуса. Тактильность (= 3 элемента: земля, огонь, воздух) не считается отдельным явлением.</div>
+  </div>
+
+  <div class="category-title">IV. Явления пола (2)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">14</div><div class="name-ru">Женственность <span class="name-pali">(Itthibhāva)</span></div></div>
+    <div class="factor-desc">Материальное явление, определяющее женскую природу тела.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">15</div><div class="name-ru">Мужественность <span class="name-pali">(Pumbhāva)</span></div></div>
+    <div class="factor-desc">Материальное явление, определяющее мужскую природу тела.</div>
+  </div>
+
+  <div class="category-title">V. Явление сердца (1)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">16</div><div class="name-ru">Сердце-основа <span class="name-pali">(Hadaya-vatthu)</span></div></div>
+    <div class="factor-desc">Материальная основа ума — субстрат для ментального сознания.</div>
+  </div>
+
+  <div class="category-title">VI. Явление жизни (1)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">17</div><div class="name-ru">Управляющая жизнеспособность <span class="name-pali">(Jīvitindriya)</span></div></div>
+    <div class="factor-desc">Поддерживает другие материальные явления в живом состоянии.</div>
+  </div>
+
+  <div class="category-title">VII. Явление питания (1)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">18</div><div class="name-ru">Питание <span class="name-pali">(Āhāra / Ojā)</span></div></div>
+    <div class="factor-desc">Питательная сущность (оджа) в пище, поддерживающая материальное тело.</div>
+  </div>
+</details>
+
+<!-- КОСВЕННО ПРОИЗВЕДЁННАЯ МАТЕРИЯ -->
+<details class="sphere-group">
+  <summary class="sphere-summary">Косвенно произведённая материя (10)</summary>
+
+  <div class="category-title">VIII. Разграничивающее явление (1)</div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">19</div><div class="name-ru">Пространство-элемент <span class="name-pali">(Ākāsa-dhātu)</span></div></div>
+    <div class="factor-desc">Пространство (пустота), разграничивающее и разделяющее группы материи.</div>
+  </div>
+
+  <div class="category-title">IX. Явления коммуникации (2)</div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">20</div><div class="name-ru">Телесная коммуникация <span class="name-pali">(Kāya-viññatti)</span></div></div>
+    <div class="factor-desc">Движение тела, выражающее намерение — жесты и мимика.</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">21</div><div class="name-ru">Вербальная коммуникация <span class="name-pali">(Vacī-viññatti)</span></div></div>
+    <div class="factor-desc">Звук речи, выражающий намерение — слова и язык.</div>
+  </div>
+
+  <div class="category-title">X. Явления переменчивости (3)</div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">22</div><div class="name-ru">Лёгкость <span class="name-pali">(Rūpassa lahutā)</span></div></div>
+    <div class="factor-desc">Лёгкость материи — отсутствие тяжести и вялости. (Включает два типа коммуникации)</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">23</div><div class="name-ru">Гибкость <span class="name-pali">(Rūpassa mudutā)</span></div></div>
+    <div class="factor-desc">Пластичность материи — устранение жёсткости.</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">24</div><div class="name-ru">Управляемость <span class="name-pali">(Rūpassa kammaññatā)</span></div></div>
+    <div class="factor-desc">Пригодность материи к деятельности. (Плюс два типа коммуникации)</div>
+  </div>
+
+  <div class="category-title">XI. Свойства материи (4)</div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">25</div><div class="name-ru">Производство <span class="name-pali">(Upacaya)</span></div></div>
+    <div class="factor-desc">Начальное накопление и развитие материальных явлений.</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">26</div><div class="name-ru">Непрерывность <span class="name-pali">(Santati)</span></div></div>
+    <div class="factor-desc">Продолжение потока материальных явлений без прерыва.</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">27</div><div class="name-ru">Разложение <span class="name-pali">(Jaratā)</span></div></div>
+    <div class="factor-desc">Старение и распад материальных явлений.</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">28</div><div class="name-ru">Временность <span class="name-pali">(Aniccatā)</span></div></div>
+    <div class="factor-desc">Непостоянство — прекращение существования материальных явлений.</div>
+  </div>
+</details>
+<br>
+</body>
+</html>

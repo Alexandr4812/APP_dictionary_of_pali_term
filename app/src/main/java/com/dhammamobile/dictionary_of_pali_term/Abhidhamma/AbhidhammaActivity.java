@@ -40,7 +40,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
 
     private TextView textViewAbhidhammaChitta, textViewAbhidhammaChitasikas, textViewAbhidhammaMaterial, textViewAbhidhammaNibbana;
     private Button button1, button2, button3, button4, infoButton1, infoButton2, infoButton3,
-            tableButton1, tableButton2;
+            tableButton1, tableButton2, tableButton3;
 
     private Button buttonHarakteristika, buttonFunkciya, buttonProyavlenie, buttonPrichina;
     private Button buttonMaterialHarakteristika, buttonMaterialFunkciya, buttonMaterialProyavlenie, buttonMaterialPrichina;
@@ -97,6 +97,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
 
         tableButton1 = findViewById(R.id.tableButton1);
         tableButton2 = findViewById(R.id.tableButton2);
+        tableButton3 = findViewById(R.id.tableButton3);
 
         infoButton1 = findViewById(R.id.infoButton1);
         button1 = findViewById(R.id.button_mentalnie_faktori);
@@ -130,6 +131,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
         infoButton1.setAnimation(slideDown);
         tableButton1.setAnimation(slideFromLeftAnimation);
         tableButton2.setAnimation(slideFromLeftAnimation);
+        tableButton3.setAnimation(slideFromLeftAnimation);
         infoButton2.setAnimation(slideDown);
         infoButton3.setAnimation(slideDown);
         button1.startAnimation(slideFromLeftAnimation);
@@ -163,9 +165,9 @@ public class AbhidhammaActivity extends BaseActivityClass {
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
-            htmlFilePath = "file:///android_asset/abhidhamma_ru/table_chittas_ru1.html";
+            htmlFilePath = "file:///android_asset/abhidhamma_ru/cittas_ru.html";
         } else {
-            htmlFilePath = "file:///android_asset/abhidhamma_en/table_chittas_en1.html";
+            htmlFilePath = "file:///android_asset/abhidhamma_en/cittas_en.html";
         }
         loadHtmlPage(htmlFilePath);
     }
@@ -179,6 +181,19 @@ public class AbhidhammaActivity extends BaseActivityClass {
             htmlFilePath = "file:///android_asset/abhidhamma_ru/table_chetasikas_ru.html";
         } else {
             htmlFilePath = "file:///android_asset/abhidhamma_en/table_chetasikas_en.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void tableChittas3(View view) {
+        buttonAbhidhamma.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/abhidhamma_ru/rupa_ru.html";
+        } else {
+            htmlFilePath = "file:///android_asset/abhidhamma_en/rupa_en.html";
         }
         loadHtmlPage(htmlFilePath);
     }

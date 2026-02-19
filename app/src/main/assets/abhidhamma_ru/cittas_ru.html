@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --bg-color: #161923;
+    --accent-color: #FFE082;
+    --text-main: #E2E8F0;
+    --text-dim: #94A3B8;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border-color: #2D3748;
+    --akusala: #EF4444;
+    --ahetuka: #94A3B8;
+    --sobhana: #10B981;
+    --rupa: #3B82F6;
+    --arupa: #8B5CF6;
+    --lokuttara: #F59E0B;
+  }
+  body {
+    margin: 0;
+    padding: 15px;
+    font-family: -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.4;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .main-title {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  details.sphere-group {
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-bg);
+    overflow: hidden;
+  }
+  summary.sphere-summary {
+    padding: 16px;
+    list-style: none;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: #161923;
+    font-weight: 800;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; }
+  details[open] > summary::after { transform: rotate(180deg); }
+
+  .category-title {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 12px 10px 5px 15px;
+    opacity: 0.8;
+  }
+
+  /* Карточка читты — как в таблицах рупы/четасиков */
+  .factor-card {
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .factor-card:active { background: rgba(255,255,255,0.05); }
+
+  .factor-header {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 10px;
+    padding: 12px 15px;
+    align-items: center;
+  }
+  .num { color: var(--text-dim); font-family: monospace; font-size: 0.8rem; }
+  .name-ru { font-weight: 500; font-size: 0.9rem; }
+  .count-badge {
+    display: inline-block;
+    background: rgba(255,224,130,0.15);
+    color: var(--accent-color);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .factor-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+    background: rgba(0,0,0,0.2);
+    font-size: 0.8rem;
+    color: #CBD5E1;
+    padding: 0 15px 0 61px;
+  }
+  .factor-card.open .factor-desc {
+    max-height: 500px;
+    padding: 0 15px 12px 61px;
+  }
+
+  .factor-desc p { margin: 4px 0; }
+  .factor-desc .line { margin: 3px 0; padding-left: 8px; border-left: 2px solid rgba(255,255,255,0.1); }
+
+  /* Цветные левые полосы */
+  .b-akusala  { border-left: 3px solid var(--akusala); }
+  .b-ahetuka  { border-left: 3px solid var(--ahetuka); }
+  .b-sobhana  { border-left: 3px solid var(--sobhana); }
+  .b-rupa     { border-left: 3px solid var(--rupa); }
+  .b-arupa    { border-left: 3px solid var(--arupa); }
+  .b-lokuttara{ border-left: 3px solid var(--lokuttara); }
+</style>
+</head>
+<body>
+<br>
+<div class="main-title">89 и 121 Читта</div>
+
+<!-- СЕНСОРНАЯ СРЕДА -->
+<details class="sphere-group" open>
+  <summary class="sphere-summary">Сенсорная среда (54)</summary>
+
+  <div class="category-title">Неблаготворные (12)</div>
+
+  <div class="factor-card b-akusala" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">1–8</div>
+      <div class="name-ru">Коренящиеся в жадности <span class="count-badge">8</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">1. С радостью, с ошибочным взглядом, без побуждения.</div>
+      <div class="line">2. С радостью, с ошибочным взглядом, с побуждением.</div>
+      <div class="line">3. С радостью, без ошибочного взгляда, без побуждения.</div>
+      <div class="line">4. С радостью, без ошибочного взгляда, с побуждением.</div>
+      <div class="line">5. Со спокойствием, с ошибочным взглядом, без побуждения.</div>
+      <div class="line">6. Со спокойствием, с ошибочным взглядом, с побуждением.</div>
+      <div class="line">7. Со спокойствием, без ошибочного взгляда, без побуждения.</div>
+      <div class="line">8. Со спокойствием, без ошибочного взгляда, с побуждением.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-akusala" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">9–10</div>
+      <div class="name-ru">Коренящиеся в злости <span class="count-badge">2</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">9. Со спокойствием, с отвращением, без побуждения.</div>
+      <div class="line">10. Со спокойствием, с отвращением, с побуждением.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-akusala" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">11–12</div>
+      <div class="name-ru">Коренящиеся в заблуждении <span class="count-badge">2</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">11. Со спокойствием, с сомнением.</div>
+      <div class="line">12. Со спокойствием, с беспокойством.</div>
+    </div>
+  </div>
+
+  <div class="category-title">Бескоренные (18)</div>
+
+  <div class="factor-card b-ahetuka" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">13–19</div>
+      <div class="name-ru">Неблаготворные результирующие <span class="count-badge">7</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">13. Зрительное сознание (неприятное).</div>
+      <div class="line">14. Слуховое сознание (неприятное).</div>
+      <div class="line">15. Обонятельное сознание (неприятное).</div>
+      <div class="line">16. Вкусовое сознание (неприятное).</div>
+      <div class="line">17. Телесное сознание (боль).</div>
+      <div class="line">18. Получающее сознание (со спокойствием).</div>
+      <div class="line">19. Исследующее сознание (со спокойствием).</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-ahetuka" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">20–27</div>
+      <div class="name-ru">Благотворные результирующие <span class="count-badge">8</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">20. Зрительное сознание (приятное).</div>
+      <div class="line">21. Слуховое сознание (приятное).</div>
+      <div class="line">22. Обонятельное сознание (приятное).</div>
+      <div class="line">23. Вкусовое сознание (приятное).</div>
+      <div class="line">24. Телесное сознание (удовольствие).</div>
+      <div class="line">25. Получающее сознание (со спокойствием).</div>
+      <div class="line">26. Исследующее сознание (с радостью).</div>
+      <div class="line">27. Исследующее сознание (со спокойствием).</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-ahetuka" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">28–30</div>
+      <div class="name-ru">Функциональные бескоренные <span class="count-badge">3</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">28. Направляющее к пяти дверям (пяти-дверное обращение).</div>
+      <div class="line">29. Направляющее к двери ума (ум-дверное обращение).</div>
+      <div class="line">30. Производящее улыбку (у арахантов).</div>
+    </div>
+  </div>
+
+  <div class="category-title">Прекрасные сенсорной среды (24)</div>
+
+  <div class="factor-card b-sobhana" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">31–38</div>
+      <div class="name-ru">Благотворные <span class="count-badge">8</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">31. С радостью, со знанием, без побуждения.</div>
+      <div class="line">32. С радостью, со знанием, с побуждением.</div>
+      <div class="line">33. С радостью, без знания, без побуждения.</div>
+      <div class="line">34. С радостью, без знания, с побуждением.</div>
+      <div class="line">35. Со спокойствием, со знанием, без побуждения.</div>
+      <div class="line">36. Со спокойствием, со знанием, с побуждением.</div>
+      <div class="line">37. Со спокойствием, без знания, без побуждения.</div>
+      <div class="line">38. Со спокойствием, без знания, с побуждением.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-sobhana" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">39–46</div>
+      <div class="name-ru">Результирующие <span class="count-badge">8</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">39–46. По аналогии с благотворными (31–38), но результирующие — плоды прошлой каммы.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-sobhana" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">47–54</div>
+      <div class="name-ru">Функциональные <span class="count-badge">8</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">47–54. По аналогии с благотворными (31–38), но функциональные — у арахантов, без накопления каммы.</div>
+    </div>
+  </div>
+</details>
+
+<!-- ТОНКОМАТЕРИАЛЬНЫЕ -->
+<details class="sphere-group">
+  <summary class="sphere-summary">Тонкоматериальные Джханы (15)</summary>
+
+  <div class="category-title">Благотворные (5)</div>
+  <div class="factor-card b-rupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">55–59</div>
+      <div class="name-ru">Благотворные джханы 1–5 <span class="count-badge">5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">55. 1-я джхана: витакка, вичара, пити, сукха, экаггата.</div>
+      <div class="line">56. 2-я джхана: вичара, пити, сукха, экаггата (без витакка).</div>
+      <div class="line">57. 3-я джхана: пити, сукха, экаггата (без витакка и вичара).</div>
+      <div class="line">58. 4-я джхана: сукха, экаггата (без пити).</div>
+      <div class="line">59. 5-я джхана: упекха, экаггата (без сукха).</div>
+    </div>
+  </div>
+
+  <div class="category-title">Результирующие (5)</div>
+  <div class="factor-card b-rupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">60–64</div>
+      <div class="name-ru">Результирующие джханы 1–5 <span class="count-badge">5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">60–64. Аналогично благотворным (55–59), но результирующие — возникающие как плод практики джхан.</div>
+    </div>
+  </div>
+
+  <div class="category-title">Функциональные (5)</div>
+  <div class="factor-card b-rupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">65–69</div>
+      <div class="name-ru">Функциональные джханы 1–5 <span class="count-badge">5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">65–69. Аналогично благотворным (55–59), но функциональные — у арахантов.</div>
+    </div>
+  </div>
+</details>
+
+<!-- НЕМАТЕРИАЛЬНЫЕ -->
+<details class="sphere-group">
+  <summary class="sphere-summary">Нематериальные Джханы (12)</summary>
+
+  <div class="category-title">Благотворные (4)</div>
+  <div class="factor-card b-arupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">70–73</div>
+      <div class="name-ru">Благотворные арупа-джханы <span class="count-badge">4</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">70. Сфера бесконечного пространства (Ākāsānañcāyatana).</div>
+      <div class="line">71. Сфера бесконечного сознания (Viññāṇañcāyatana).</div>
+      <div class="line">72. Сфера ничто (Ākiñcaññāyatana).</div>
+      <div class="line">73. Сфера ни восприятия, ни не-восприятия (Nevasaññānāsaññāyatana).</div>
+    </div>
+  </div>
+
+  <div class="category-title">Результирующие (4)</div>
+  <div class="factor-card b-arupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">74–77</div>
+      <div class="name-ru">Результирующие арупа-джханы <span class="count-badge">4</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">74–77. Аналогично благотворным (70–73) — возникают как плод в соответствующих нематериальных мирах.</div>
+    </div>
+  </div>
+
+  <div class="category-title">Функциональные (4)</div>
+  <div class="factor-card b-arupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">78–81</div>
+      <div class="name-ru">Функциональные арупа-джханы <span class="count-badge">4</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">78–81. Аналогично благотворным (70–73) — у арахантов, без накопления каммы.</div>
+    </div>
+  </div>
+</details>
+
+<!-- СВЕРХМИРСКИЕ -->
+<details class="sphere-group">
+  <summary class="sphere-summary">Сверхмирские (8 или 40)</summary>
+
+  <div class="category-title">Читты Пути — Магга (4 или 20)</div>
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">82</div>
+      <div class="name-ru">Путь вхождения в поток <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Sotāpatti-magga: устраняет первые три оковы — самаякадиттхи (ошибочный взгляд на самость), вичикиччха (сомнение), сīлаббатапарамāса (привязанность к обрядам).</div>
+      <div class="line">В системе 40 читт — по одной на каждую из 5 джхан.</div>
+    </div>
+  </div>
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">83</div>
+      <div class="name-ru">Путь однократного возвращения <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Sakadāgāmi-magga: ослабляет чувственное желание и злость, но не устраняет полностью.</div>
+      <div class="line">Такое существо вернётся в чувственный мир лишь один раз.</div>
+    </div>
+  </div>
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">84</div>
+      <div class="name-ru">Путь не-возвращения <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Anāgāmi-magga: полностью устраняет чувственное желание и злость.</div>
+      <div class="line">Такое существо не вернётся в чувственный мир.</div>
+    </div>
+  </div>
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">85</div>
+      <div class="name-ru">Путь арахантства <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Arahatta-magga: устраняет оставшиеся пять оков — жажду к тонкоматериальному и нематериальному существованию, тщеславие, беспокойство и невежество.</div>
+    </div>
+  </div>
+
+  <div class="category-title">Читты Плода — Пхала (4 или 20)</div>
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">86</div>
+      <div class="name-ru">Плод вхождения в поток <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Sotāpatti-phala: немедленно следует за магга-читтой; переживание плода вхождения в поток.</div>
+    </div>
+  </div>
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">87</div>
+      <div class="name-ru">Плод однократного возвращения <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Sakadāgāmi-phala: переживание плода ослабления чувственного желания и злости.</div>
+    </div>
+  </div>
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">88</div>
+      <div class="name-ru">Плод не-возвращения <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Anāgāmi-phala: переживание плода полного устранения чувственного желания и злости.</div>
+    </div>
+  </div>
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">89</div>
+      <div class="name-ru">Плод арахантства <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Arahatta-phala: переживание ниббаны с полным освобождением от всех оков. Ниббана как объект.</div>
+    </div>
+  </div>
+</details>
+<br>
+</body>
+</html>

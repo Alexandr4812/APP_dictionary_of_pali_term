@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --bg-color: #161923;
+    --accent-color: #FFE082;
+    --text-main: #E2E8F0;
+    --text-dim: #94A3B8;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border-color: #2D3748;
+    --real: #60A5FA;
+    --indirect: #A78BFA;
+  }
+  body {
+    margin: 0;
+    padding: 15px;
+    font-family: -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.4;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .main-title {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  details.sphere-group {
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-bg);
+    overflow: hidden;
+  }
+  summary.sphere-summary {
+    padding: 16px;
+    list-style: none;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: #161923;
+    font-weight: 800;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; }
+  details[open] > summary::after { transform: rotate(180deg); }
+  .category-title {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 12px 10px 5px 15px;
+    opacity: 0.8;
+  }
+  .factor-card {
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .factor-card:active { background: rgba(255,255,255,0.05); }
+  .factor-header {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 10px;
+    padding: 12px 15px;
+    align-items: center;
+  }
+  .num { color: var(--text-dim); font-family: monospace; font-size: 0.8rem; }
+  .name-ru { font-weight: 500; font-size: 0.9rem; }
+  .name-pali { color: var(--text-dim); font-style: italic; font-size: 0.8rem; margin-left: 5px; }
+  .factor-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: rgba(0,0,0,0.2);
+    font-size: 0.8rem;
+    color: #CBD5E1;
+    padding: 0 15px 0 55px;
+  }
+  .factor-card.open .factor-desc {
+    max-height: 200px;
+    padding: 0 15px 12px 55px;
+  }
+  .b-real { border-left: 3px solid var(--real); }
+  .b-ind  { border-left: 3px solid var(--indirect); }
+</style>
+</head>
+<body>
+<br>
+<div class="main-title">28 Rūpa — Material Phenomena</div>
+
+<!-- CONCRETELY PRODUCED MATTER -->
+<details class="sphere-group" open>
+  <summary class="sphere-summary">Concretely Produced Matter (18)</summary>
+
+  <div class="category-title">I. The Four Great Elements (4)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">1</div><div class="name-ru">Earth Element <span class="name-pali">(Pathavī)</span></div></div>
+    <div class="factor-desc">The element of solidity and extension; the foundation for the other elements.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">2</div><div class="name-ru">Water Element <span class="name-pali">(Āpo)</span></div></div>
+    <div class="factor-desc">The element of fluidity and cohesion; binds the other elements together.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">3</div><div class="name-ru">Fire Element <span class="name-pali">(Tejo)</span></div></div>
+    <div class="factor-desc">The element of heat; maintains temperature and supports maturation.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">4</div><div class="name-ru">Air Element <span class="name-pali">(Vāyo)</span></div></div>
+    <div class="factor-desc">The element of motion and pressure; generates movement.</div>
+  </div>
+
+  <div class="category-title">II. Sense Phenomena (5)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">5</div><div class="name-ru">Eye Sensitivity <span class="name-pali">(Cakkhu-pasāda)</span></div></div>
+    <div class="factor-desc">The sensitive matter of the eye that receives visible objects.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">6</div><div class="name-ru">Ear Sensitivity <span class="name-pali">(Sota-pasāda)</span></div></div>
+    <div class="factor-desc">The sensitive matter of the ear that receives sound.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">7</div><div class="name-ru">Nose Sensitivity <span class="name-pali">(Ghāna-pasāda)</span></div></div>
+    <div class="factor-desc">The sensitive matter of the nose that receives odours.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">8</div><div class="name-ru">Tongue Sensitivity <span class="name-pali">(Jivhā-pasāda)</span></div></div>
+    <div class="factor-desc">The sensitive matter of the tongue that receives tastes.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">9</div><div class="name-ru">Body Sensitivity <span class="name-pali">(Kāya-pasāda)</span></div></div>
+    <div class="factor-desc">The sensitive matter of the body that receives tactile objects.</div>
+  </div>
+
+  <div class="category-title">III. Object Phenomena (4)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">10</div><div class="name-ru">Visible Form <span class="name-pali">(Rūpa)</span></div></div>
+    <div class="factor-desc">The object of sight — colour and visible shape.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">11</div><div class="name-ru">Sound <span class="name-pali">(Sadda)</span></div></div>
+    <div class="factor-desc">The object of hearing — sound waves.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">12</div><div class="name-ru">Odour <span class="name-pali">(Gandha)</span></div></div>
+    <div class="factor-desc">The object of smell — scent molecules.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">13</div><div class="name-ru">Taste <span class="name-pali">(Rasa)</span></div></div>
+    <div class="factor-desc">The object of taste. Tangibility (= 3 elements: earth, fire, air) is not counted as a separate phenomenon.</div>
+  </div>
+
+  <div class="category-title">IV. Sex Phenomena (2)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">14</div><div class="name-ru">Femininity <span class="name-pali">(Itthibhāva)</span></div></div>
+    <div class="factor-desc">The material phenomenon that determines the female nature of the body.</div>
+  </div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">15</div><div class="name-ru">Masculinity <span class="name-pali">(Pumbhāva)</span></div></div>
+    <div class="factor-desc">The material phenomenon that determines the male nature of the body.</div>
+  </div>
+
+  <div class="category-title">V. Heart Phenomenon (1)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">16</div><div class="name-ru">Heart-Base <span class="name-pali">(Hadaya-vatthu)</span></div></div>
+    <div class="factor-desc">The material base of the mind — the physical substrate for mental consciousness.</div>
+  </div>
+
+  <div class="category-title">VI. Life Phenomenon (1)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">17</div><div class="name-ru">Controlling Life-Faculty <span class="name-pali">(Jīvitindriya)</span></div></div>
+    <div class="factor-desc">Maintains the other material phenomena in a living state.</div>
+  </div>
+
+  <div class="category-title">VII. Nutrition Phenomenon (1)</div>
+  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">18</div><div class="name-ru">Nutrition <span class="name-pali">(Āhāra / Ojā)</span></div></div>
+    <div class="factor-desc">The nutritive essence (ojā) in food that sustains the material body.</div>
+  </div>
+</details>
+
+<!-- ABSTRACTLY PRODUCED MATTER -->
+<details class="sphere-group">
+  <summary class="sphere-summary">Abstractly Produced Matter (10)</summary>
+
+  <div class="category-title">VIII. Delimiting Phenomenon (1)</div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">19</div><div class="name-ru">Space Element <span class="name-pali">(Ākāsa-dhātu)</span></div></div>
+    <div class="factor-desc">Space (void) that delimits and separates groups of material phenomena.</div>
+  </div>
+
+  <div class="category-title">IX. Communication Phenomena (2)</div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">20</div><div class="name-ru">Bodily Communication <span class="name-pali">(Kāya-viññatti)</span></div></div>
+    <div class="factor-desc">Bodily movement expressing intention — gestures and facial expressions.</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">21</div><div class="name-ru">Verbal Communication <span class="name-pali">(Vacī-viññatti)</span></div></div>
+    <div class="factor-desc">Speech sound expressing intention — words and language.</div>
+  </div>
+
+  <div class="category-title">X. Mutability Phenomena (3)</div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">22</div><div class="name-ru">Lightness <span class="name-pali">(Rūpassa lahutā)</span></div></div>
+    <div class="factor-desc">Lightness of matter — absence of heaviness and sluggishness. (Includes the two types of communication)</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">23</div><div class="name-ru">Softness <span class="name-pali">(Rūpassa mudutā)</span></div></div>
+    <div class="factor-desc">Pliability of matter — removal of rigidity.</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">24</div><div class="name-ru">Wieldiness <span class="name-pali">(Rūpassa kammaññatā)</span></div></div>
+    <div class="factor-desc">Workability of matter — fitness for activity. (Plus the two types of communication)</div>
+  </div>
+
+  <div class="category-title">XI. Characteristics of Matter (4)</div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">25</div><div class="name-ru">Production <span class="name-pali">(Upacaya)</span></div></div>
+    <div class="factor-desc">Initial accumulation and growth of material phenomena.</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">26</div><div class="name-ru">Continuity <span class="name-pali">(Santati)</span></div></div>
+    <div class="factor-desc">The ongoing stream of material phenomena without interruption.</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">27</div><div class="name-ru">Decay <span class="name-pali">(Jaratā)</span></div></div>
+    <div class="factor-desc">Ageing and deterioration of material phenomena.</div>
+  </div>
+  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
+    <div class="factor-header"><div class="num">28</div><div class="name-ru">Impermanence <span class="name-pali">(Aniccatā)</span></div></div>
+    <div class="factor-desc">Transience — the cessation of material phenomena.</div>
+  </div>
+</details>
+<br>
+</body>
+</html>

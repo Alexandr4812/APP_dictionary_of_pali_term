@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --bg-color: #161923;
+    --accent-color: #FFE082;
+    --text-main: #E2E8F0;
+    --text-dim: #94A3B8;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border-color: #2D3748;
+    --akusala: #EF4444;
+    --ahetuka: #94A3B8;
+    --sobhana: #10B981;
+    --rupa: #3B82F6;
+    --arupa: #8B5CF6;
+    --lokuttara: #F59E0B;
+  }
+  body {
+    margin: 0;
+    padding: 15px;
+    font-family: -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.4;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .main-title {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  details.sphere-group {
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-bg);
+    overflow: hidden;
+  }
+  summary.sphere-summary {
+    padding: 16px;
+    list-style: none;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: #161923;
+    font-weight: 800;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; }
+  details[open] > summary::after { transform: rotate(180deg); }
+
+  .category-title {
+    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    padding: 12px 10px 5px 15px;
+    opacity: 0.8;
+  }
+
+  .factor-card {
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .factor-card:active { background: rgba(255,255,255,0.05); }
+
+  .factor-header {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 10px;
+    padding: 12px 15px;
+    align-items: center;
+  }
+  .num { color: var(--text-dim); font-family: monospace; font-size: 0.8rem; }
+  .name-ru { font-weight: 500; font-size: 0.9rem; }
+  .count-badge {
+    display: inline-block;
+    background: rgba(255,224,130,0.15);
+    color: var(--accent-color);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 1px 6px;
+    border-radius: 10px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .factor-desc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease-out;
+    background: rgba(0,0,0,0.2);
+    font-size: 0.8rem;
+    color: #CBD5E1;
+    padding: 0 15px 0 61px;
+  }
+  .factor-card.open .factor-desc {
+    max-height: 500px;
+    padding: 0 15px 12px 61px;
+  }
+
+  .factor-desc .line { margin: 3px 0; padding-left: 8px; border-left: 2px solid rgba(255,255,255,0.1); }
+
+  .b-akusala   { border-left: 3px solid var(--akusala); }
+  .b-ahetuka   { border-left: 3px solid var(--ahetuka); }
+  .b-sobhana   { border-left: 3px solid var(--sobhana); }
+  .b-rupa      { border-left: 3px solid var(--rupa); }
+  .b-arupa     { border-left: 3px solid var(--arupa); }
+  .b-lokuttara { border-left: 3px solid var(--lokuttara); }
+</style>
+</head>
+<body>
+<br>
+<div class="main-title">89 and 121 Cittas</div>
+
+<!-- SENSE SPHERE -->
+<details class="sphere-group" open>
+  <summary class="sphere-summary">Sense Sphere (54)</summary>
+
+  <div class="category-title">Unwholesome (12)</div>
+
+  <div class="factor-card b-akusala" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">1–8</div>
+      <div class="name-ru">Rooted in Greed <span class="count-badge">8</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">1. With joy, associated with wrong view, unprompted.</div>
+      <div class="line">2. With joy, associated with wrong view, prompted.</div>
+      <div class="line">3. With joy, dissociated from wrong view, unprompted.</div>
+      <div class="line">4. With joy, dissociated from wrong view, prompted.</div>
+      <div class="line">5. With equanimity, associated with wrong view, unprompted.</div>
+      <div class="line">6. With equanimity, associated with wrong view, prompted.</div>
+      <div class="line">7. With equanimity, dissociated from wrong view, unprompted.</div>
+      <div class="line">8. With equanimity, dissociated from wrong view, prompted.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-akusala" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">9–10</div>
+      <div class="name-ru">Rooted in Hatred <span class="count-badge">2</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">9. With displeasure, associated with aversion, unprompted.</div>
+      <div class="line">10. With displeasure, associated with aversion, prompted.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-akusala" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">11–12</div>
+      <div class="name-ru">Rooted in Delusion <span class="count-badge">2</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">11. With equanimity, accompanied by doubt.</div>
+      <div class="line">12. With equanimity, accompanied by restlessness.</div>
+    </div>
+  </div>
+
+  <div class="category-title">Rootless / Ahetuka (18)</div>
+
+  <div class="factor-card b-ahetuka" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">13–19</div>
+      <div class="name-ru">Unwholesome Resultants <span class="count-badge">7</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">13. Eye-consciousness (unpleasant).</div>
+      <div class="line">14. Ear-consciousness (unpleasant).</div>
+      <div class="line">15. Nose-consciousness (unpleasant).</div>
+      <div class="line">16. Tongue-consciousness (unpleasant).</div>
+      <div class="line">17. Body-consciousness (pain).</div>
+      <div class="line">18. Receiving consciousness (with equanimity).</div>
+      <div class="line">19. Investigating consciousness (with equanimity).</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-ahetuka" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">20–27</div>
+      <div class="name-ru">Wholesome Resultants <span class="count-badge">8</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">20. Eye-consciousness (pleasant).</div>
+      <div class="line">21. Ear-consciousness (pleasant).</div>
+      <div class="line">22. Nose-consciousness (pleasant).</div>
+      <div class="line">23. Tongue-consciousness (pleasant).</div>
+      <div class="line">24. Body-consciousness (pleasure).</div>
+      <div class="line">25. Receiving consciousness (with equanimity).</div>
+      <div class="line">26. Investigating consciousness (with joy).</div>
+      <div class="line">27. Investigating consciousness (with equanimity).</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-ahetuka" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">28–30</div>
+      <div class="name-ru">Rootless Functionals <span class="count-badge">3</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">28. Five-door adverting consciousness.</div>
+      <div class="line">29. Mind-door adverting consciousness.</div>
+      <div class="line">30. Smile-producing consciousness (in Arahants).</div>
+    </div>
+  </div>
+
+  <div class="category-title">Beautiful Sense-Sphere Cittas (24)</div>
+
+  <div class="factor-card b-sobhana" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">31–38</div>
+      <div class="name-ru">Wholesome <span class="count-badge">8</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">31. With joy, with knowledge, unprompted.</div>
+      <div class="line">32. With joy, with knowledge, prompted.</div>
+      <div class="line">33. With joy, without knowledge, unprompted.</div>
+      <div class="line">34. With joy, without knowledge, prompted.</div>
+      <div class="line">35. With equanimity, with knowledge, unprompted.</div>
+      <div class="line">36. With equanimity, with knowledge, prompted.</div>
+      <div class="line">37. With equanimity, without knowledge, unprompted.</div>
+      <div class="line">38. With equanimity, without knowledge, prompted.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-sobhana" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">39–46</div>
+      <div class="name-ru">Resultants <span class="count-badge">8</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">39–46. Analogous to the wholesome (31–38), but resultant — arising as the fruit of past kamma.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-sobhana" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">47–54</div>
+      <div class="name-ru">Functionals <span class="count-badge">8</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">47–54. Analogous to the wholesome (31–38), but functional — in Arahants, without accumulating kamma.</div>
+    </div>
+  </div>
+</details>
+
+<!-- FINE-MATERIAL SPHERE -->
+<details class="sphere-group">
+  <summary class="sphere-summary">Fine-Material Jhānas (15)</summary>
+
+  <div class="category-title">Wholesome (5)</div>
+  <div class="factor-card b-rupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">55–59</div>
+      <div class="name-ru">Wholesome Jhānas 1–5 <span class="count-badge">5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">55. 1st Jhāna: vitakka, vicāra, pīti, sukha, ekaggatā.</div>
+      <div class="line">56. 2nd Jhāna: vicāra, pīti, sukha, ekaggatā (without vitakka).</div>
+      <div class="line">57. 3rd Jhāna: pīti, sukha, ekaggatā (without vitakka & vicāra).</div>
+      <div class="line">58. 4th Jhāna: sukha, ekaggatā (without pīti).</div>
+      <div class="line">59. 5th Jhāna: upekkhā, ekaggatā (without sukha).</div>
+    </div>
+  </div>
+
+  <div class="category-title">Resultants (5)</div>
+  <div class="factor-card b-rupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">60–64</div>
+      <div class="name-ru">Resultant Jhānas 1–5 <span class="count-badge">5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">60–64. Analogous to the wholesome (55–59), but resultant — arising as the fruit of jhāna practice.</div>
+    </div>
+  </div>
+
+  <div class="category-title">Functionals (5)</div>
+  <div class="factor-card b-rupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">65–69</div>
+      <div class="name-ru">Functional Jhānas 1–5 <span class="count-badge">5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">65–69. Analogous to the wholesome (55–59), but functional — in Arahants.</div>
+    </div>
+  </div>
+</details>
+
+<!-- IMMATERIAL SPHERE -->
+<details class="sphere-group">
+  <summary class="sphere-summary">Immaterial Jhānas (12)</summary>
+
+  <div class="category-title">Wholesome (4)</div>
+  <div class="factor-card b-arupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">70–73</div>
+      <div class="name-ru">Wholesome Arūpa Jhānas <span class="count-badge">4</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">70. Sphere of Infinite Space (Ākāsānañcāyatana).</div>
+      <div class="line">71. Sphere of Infinite Consciousness (Viññāṇañcāyatana).</div>
+      <div class="line">72. Sphere of Nothingness (Ākiñcaññāyatana).</div>
+      <div class="line">73. Sphere of Neither-Perception-nor-Non-Perception (Nevasaññānāsaññāyatana).</div>
+    </div>
+  </div>
+
+  <div class="category-title">Resultants (4)</div>
+  <div class="factor-card b-arupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">74–77</div>
+      <div class="name-ru">Resultant Arūpa Jhānas <span class="count-badge">4</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">74–77. Analogous to the wholesome (70–73) — arising as fruit in the corresponding immaterial realms.</div>
+    </div>
+  </div>
+
+  <div class="category-title">Functionals (4)</div>
+  <div class="factor-card b-arupa" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">78–81</div>
+      <div class="name-ru">Functional Arūpa Jhānas <span class="count-badge">4</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">78–81. Analogous to the wholesome (70–73) — in Arahants, without accumulating kamma.</div>
+    </div>
+  </div>
+</details>
+
+<!-- SUPRAMUNDANE -->
+<details class="sphere-group">
+  <summary class="sphere-summary">Supramundane (8 or 40)</summary>
+
+  <div class="category-title">Path Cittas — Magga (4 or 20)</div>
+
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">82</div>
+      <div class="name-ru">Path of Stream-Entry <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Sotāpatti-magga: eradicates the first three fetters — personality view (sakkāyadiṭṭhi), doubt (vicikicchā), and clinging to rites and rituals (sīlabbataparāmāsa).</div>
+      <div class="line">In the system of 40 cittas, one citta per each of the 5 jhānas.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">83</div>
+      <div class="name-ru">Path of Once-Returning <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Sakadāgāmi-magga: weakens sensual desire and ill-will, but does not eradicate them completely.</div>
+      <div class="line">Such a being will return to the sensual realm only one more time.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">84</div>
+      <div class="name-ru">Path of Non-Returning <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Anāgāmi-magga: fully eradicates sensual desire and ill-will.</div>
+      <div class="line">Such a being will never return to the sensual realm.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">85</div>
+      <div class="name-ru">Path of Arahantship <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Arahatta-magga: eradicates the remaining five fetters — desire for fine-material existence, desire for immaterial existence, conceit, restlessness, and ignorance.</div>
+    </div>
+  </div>
+
+  <div class="category-title">Fruition Cittas — Phala (4 or 20)</div>
+
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">86</div>
+      <div class="name-ru">Fruition of Stream-Entry <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Sotāpatti-phala: immediately follows the magga-citta; experience of the fruit of stream-entry with Nibbāna as object.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">87</div>
+      <div class="name-ru">Fruition of Once-Returning <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Sakadāgāmi-phala: experience of the fruit of the weakening of sensual desire and ill-will.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">88</div>
+      <div class="name-ru">Fruition of Non-Returning <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Anāgāmi-phala: experience of the fruit of the full eradication of sensual desire and ill-will.</div>
+    </div>
+  </div>
+
+  <div class="factor-card b-lokuttara" onclick="this.classList.toggle('open')">
+    <div class="factor-header">
+      <div class="num">89</div>
+      <div class="name-ru">Fruition of Arahantship <span class="count-badge">1/5</span></div>
+    </div>
+    <div class="factor-desc">
+      <div class="line">Arahatta-phala: experience of Nibbāna with complete liberation from all fetters. Nibbāna as object.</div>
+    </div>
+  </div>
+</details>
+<br>
+</body>
+</html>
