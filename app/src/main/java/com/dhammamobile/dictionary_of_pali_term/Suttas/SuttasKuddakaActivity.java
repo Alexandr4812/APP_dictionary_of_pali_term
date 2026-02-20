@@ -56,9 +56,16 @@ public class SuttasKuddakaActivity extends BaseActivityClass {
         webView.getSettings().setSupportZoom(true); // Разрешить жестовое масштабирование
         webView.getSettings().setBuiltInZoomControls(true); // Включить поддержку масштабирования
         webView.getSettings().setDisplayZoomControls(false); // Скрыть кнопки +/-
-        webView.getSettings().setUseWideViewPort(false); // ОТКЛЮЧАЕМ - это может блокировать масштабирование!
+        /*webView.getSettings().setUseWideViewPort(false);*/ // ОТКЛЮЧАЕМ - это может блокировать масштабирование!
         // Не используем setLoadWithOverviewMode - блокирует уменьшение
         webView.clearCache(true);
+
+        webView.getSettings().setUseWideViewPort(true);
+        webView.getSettings().setLoadWithOverviewMode(true);
+        webView.getSettings().setDomStorageEnabled(true);          // Включаем localStorage
+        webView.getSettings().setAllowFileAccess(true);            // Разрешаем доступ к файлам
+        webView.getSettings().setAllowContentAccess(true);         // Дополнительно, для доступа к контенту
+        webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
 
         // Загрузка первой страницы
         webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/khuddaka.html");

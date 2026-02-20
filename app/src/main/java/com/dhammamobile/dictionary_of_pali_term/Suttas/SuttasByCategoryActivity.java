@@ -1,5 +1,6 @@
 package com.dhammamobile.dictionary_of_pali_term.Suttas;
 
+import android.annotation.SuppressLint;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,7 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
         // Здесь вы можете добавить свои действия при изменении ориентации, если это необходимо
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,9 +57,19 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
         webView.getSettings().setSupportZoom(true); // Разрешить жестовое масштабирование
         webView.getSettings().setBuiltInZoomControls(true); // Включить поддержку масштабирования
         webView.getSettings().setDisplayZoomControls(false); // Скрыть кнопки +/-
-        webView.getSettings().setUseWideViewPort(false); // ОТКЛЮЧАЕМ - это может блокировать масштабирование!
+        /*webView.getSettings().setUseWideViewPort(false);*/ // ОТКЛЮЧАЕМ - это может блокировать масштабирование!
         // Не используем setLoadWithOverviewMode - блокирует уменьшение
         webView.clearCache(true);
+
+        webView.getSettings().setUseWideViewPort(true);
+        webView.getSettings().setLoadWithOverviewMode(true);
+
+        
+        webView.getSettings().setDomStorageEnabled(true);          // Включаем localStorage
+        webView.getSettings().setAllowFileAccess(true);            // Разрешаем доступ к файлам
+        webView.getSettings().setAllowContentAccess(true);         // Дополнительно, для доступа к контенту
+        webView.getSettings().setAllowUniversalAccessFromFileURLs(true); // Для file:// скриптов (может понадобиться)
+
 
         // Загрузка первой страницы
         webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/suttas-themes.html");

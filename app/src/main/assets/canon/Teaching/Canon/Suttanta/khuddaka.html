@@ -1,181 +1,474 @@
-<html>
-
-<!-- Mirrored from theravada.ru/Teaching/Canon/Suttanta/khuddaka.htm by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Aug 2023 11:52:56 GMT -->
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-<title>Кхуддака Никая :: Суттанта :: Палийский Канон :: Учение и практика :: Тхеравада.ру</title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
-<meta name="description" content="Книги Кхуддака Никаи - Палийский Канон - Всероссийский сайт о буддизме - Тхеравада.ру">
-<meta name="keywords" content="кудака никая, кхудака никая, куддака никая, кхуддакха никая, кхуддака никая">
-<link rel="icon" href="../../../favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="../../../favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="../../../css-text.css" type="text/css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>РљС…СѓРґРґР°РєР° РќРёРєР°СЏ</title>
+<style>
+  :root {
+    --bg-color: #161923;
+    --accent-color: #FFE082;
+    --text-main: #E2E8F0;
+    --text-dim: #94A3B8;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-hover: rgba(255, 255, 255, 0.06);
+    --border-color: #2D3748;
+  }
+  * { box-sizing: border-box; }
+  body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    font-family: -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+    padding-bottom: 80px;
+  }
+  .main-title {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .main-subtitle {
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 1rem;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+  /* РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ */
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .control-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .control-btn:hover {
+    background: var(--accent-color);
+    color: #161923;
+    border-color: var(--accent-color);
+  }
+  /* РћСЃРЅРѕРІРЅРѕР№ СЂР°Р·РґРµР» */
+  details.section-group {
+    margin-bottom: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-bg);
+    overflow: hidden;
+  }
+  summary.section-summary {
+    padding: 16px;
+    list-style: none;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: #161923;
+    font-weight: 800;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "в–ј"; font-size: 0.6rem; transition: 0.3s; }
+  details[open] > summary::after { transform: rotate(180deg); }
 
-<script src="../../../Index/Scripts/izbrannoe.js" type="text/javascript"></script>
+  /* Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ Р±Р»РѕРє РґР»СЏ РІРІРµРґРµРЅРёСЏ */
+  details.intro-group {
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-bg);
+    overflow: hidden;
+  }
+  summary.intro-summary {
+    padding: 14px;
+    list-style: none;
+    cursor: pointer;
+    background: rgba(255,224,130,0.08);
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  summary.intro-summary::after { content: "в–ј"; font-size: 0.6rem; transition: 0.3s; }
+  details.intro-group[open] > summary.intro-summary::after { transform: rotate(180deg); }
+  .intro-text {
+    padding: 15px;
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    border-top: 1px solid var(--border-color);
+  }
 
-<script src="../../../Index/Scripts/open_window.js" type="text/javascript"></script>
+  /* РљР°СЂС‚РѕС‡РєР° РєРЅРёРіРё */
+  .sutta-card {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 8px;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid var(--border-color);
+    border-left: 3px solid transparent;
+    transition: background 0.2s, border-left-color 0.2s;
+    align-items: start;
+  }
+  .sutta-card:hover {
+    background: var(--card-hover);
+    border-left-color: var(--accent-color);
+  }
+  .sutta-card:last-child { border-bottom: none; }
+  .sutta-card.no-link:hover {
+    background: transparent;
+    border-left-color: transparent;
+    cursor: default;
+  }
 
-<script src="../../../Index/Scripts/swap.js" type="text/javascript"></script>
+  .num {
+    color: var(--accent-color);
+    font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .sutta-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 2px;
+  }
+  .sutta-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    font-style: italic;
+  }
+  .sutta-note {
+    font-size: 1rem;
+    color: var(--text-dim);
+    margin-top: 2px;
+  }
 
-<script src="../../../Index/Scripts/jquery.js" type="text/javascript"></script>
+  /* РљРЅРѕРїРєР° РЅР°РІРµСЂС… */
+  .go-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    color: #161923;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.2s;
+    opacity: 0.8;
+    z-index: 1000;
+  }
+  .go-top:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  .sutta-card.no-link {
+  opacity: 0.6;
+  cursor: default;
+  border-left-color: transparent !important;
+}
+.sutta-card.no-link:hover {
+  background: transparent;
+  border-left-color: transparent;
+}
+.sutta-card.no-link .sutta-title {
+  color: var(--text-dim);
+}
+  /* РЎС‚РёР»Рё РґР»СЏ РЅРµР°РєС‚РёРІРЅС‹С… РєР°СЂС‚РѕС‡РµРє (Р±РµР· СЃСЃС‹Р»РєРё) */
+.sutta-card.no-link {
+  opacity: 0.55;                /* РџРѕР»СѓРїСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ */
+  cursor: default;              /* РћР±С‹С‡РЅС‹Р№ РєСѓСЂСЃРѕСЂ, РЅРµ СѓРєР°Р·Р°С‚РµР»СЊ */
+  border-left-color: transparent !important; /* РЈР±РёСЂР°РµРј С†РІРµС‚РЅСѓСЋ РїРѕР»РѕСЃРєСѓ СЃР»РµРІР° */
+  transition: none;             /* РћС‚РєР»СЋС‡Р°РµРј Р°РЅРёРјР°С†РёСЋ */
+  pointer-events: none;         /* Р—Р°РїСЂРµС‰Р°РµРј Р»СЋР±С‹Рµ РєР»РёРєРё (РЅР° РІСЃСЏРєРёР№ СЃР»СѓС‡Р°Р№) */
+}
 
-<script src="../../../Index/Scripts/spisok.js" type="text/javascript"></script>
+.sutta-card.no-link:hover {
+  background: transparent;      /* РЈР±РёСЂР°РµРј РїРѕРґСЃРІРµС‚РєСѓ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
+  border-left-color: transparent !important;
+}
 
-<script src="../../../Index/Scripts/moretext.js" type="text/javascript"></script>
+.sutta-card.no-link .sutta-title {
+  color: var(--text-dim);       /* Р”РµР»Р°РµРј Р·Р°РіРѕР»РѕРІРѕРє Р±Р»РµРґРЅС‹Рј */
+}
 
-<script src="../../../Index/Scripts/moretext_2.js" type="text/javascript"></script>
+.sutta-card.no-link .num {
+  color: var(--text-dim);       /* Р РЅРѕРјРµСЂ С‚РѕР¶Рµ Р±Р»РµРґРЅС‹Рј */
+}
+
+/* РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅС‹Р№ РІР°СЂРёР°РЅС‚: РґРѕР±Р°РІРёС‚СЊ РјРµС‚РєСѓ "РЅРµС‚ РїРµСЂРµРІРѕРґР°" */
+.sutta-card.no-link .sutta-title::after {
+  content: " (РЅРµС‚ РїРµСЂРµРІРѕРґР°)";
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-left: 5px;
+  font-weight: normal;
+}
+</style>
 </head>
+<body>
+<br>
+<div class="main-title">РљС…СѓРґРґР°РєР° РќРёРєР°СЏ</div>
+<div class="main-subtitle">
+  В«РњРµРЅСЊС€РµРµ СЃРѕР±СЂР°РЅРёРµВ» вЂ“ РїСЏС‚Р°СЏ Рё РїРѕСЃР»РµРґРЅСЏСЏ РЅРёРєР°СЏ РЎСѓС‚С‚Р°-РџРёС‚Р°РєРё. РЎРѕРґРµСЂР¶РёС‚ РѕС‚ 15 РґРѕ 18 РєРЅРёРі РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЂРµРґР°РєС†РёРё РљР°РЅРѕРЅР°.
+</div>
 
-<body text="#333300" leftmargin="1" topmargin="1" marginwidth="1" marginheight="1" no-repeat link="#996633" vlink="#996633" alink="#996633" onLoad="MM_preloadImages('../../../Index/intext-button-4_press.html','../../../Index/nav1b.html','../../../Index/nav2b.html','../../../Index/nav3b.html','../../../Index/nav4b.html','../../../Gallery/button1-over.gif','../../../Gallery/button2-over.gif','../../../Gallery/button3-over.gif','../../../Life/button1-over.gif','../../../Life/button2-over.gif','../../../Life/button3-over.gif','../../../Life/button4-over.gif','../../../Life/button5-over.gif','../../../Index/Menu/menu5b.gif','../../../Index/Menu/menu6b.gif','../../../Index/Menu/menu7b.gif','../../../Index/Menu/menu8b.gif','../../button2-over.gif','../../button3-over.gif','../../button4-over.gif','../../button5-over.gif','../../../Index/Navigate/nav1b.gif','../../../Index/bottom-but6.gif','../../../Index/bottom-but4.gif','../../../Index/bottom-but2.gif','../../../Index/Menu/menu4b.gif')">
-<table width="1000" border="0" cellspacing="0" cellpadding="0" align="center" style="background:#FFFFCC url(../../../Index/background_strong.jpg) no-repeat;">
-  <tr> 
-    <td>
-      <div align="center">
-<table width="100%" border="0" cellspacing="0" cellpadding="4">
+<!-- РџР°РЅРµР»СЊ СѓРїСЂР°РІР»РµРЅРёСЏ -->
+<div class="controls">
+  <button class="control-btn" id="expandAll">Р Р°Р·РІРµСЂРЅСѓС‚СЊ РІСЃРµ</button>
+  <button class="control-btn" id="collapseAll">РЎРІРµСЂРЅСѓС‚СЊ РІСЃРµ</button>
+</div>
 
-          <tr> 
+<!-- Р’РІРµРґРµРЅРёРµ (СЂР°СЃРєСЂС‹РІР°СЋС‰РёР№СЃСЏ Р±Р»РѕРє) -->
+<details class="intro-group" id="intro">
+  <summary class="intro-summary">РџРѕРґСЂРѕР±РЅРµРµ Рѕ РљС…СѓРґРґР°РєР° РќРёРєР°Рµ</summary>
+  <div class="intro-text">
+    <p>РљС…СѓРґРґР°РєР° РќРёРєР°СЏ (В«РњРµРЅСЊС€РµРµ СЃРѕР±СЂР°РЅРёРµВ») вЂ“ РїСЏС‚Р°СЏ Рё РїРѕСЃР»РµРґРЅСЏСЏ РёР· РЅРёРєР°Р№ СЃСѓС‚С‚Р°-РїРёС‚Р°РєРё. Р’ РЅРµР№ СЃРѕРґРµСЂР¶РёС‚СЃСЏ РѕС‚ 15 РґРѕ 18 РєРЅРёРі РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЂРµРґР°РєС†РёРё РљР°РЅРѕРЅР°, РІ РєРѕС‚РѕСЂС‹Рµ РІРєР»СЋС‡РµРЅС‹ РјРЅРѕРіРѕС‡РёСЃР»РµРЅРЅС‹Рµ СЃСѓС‚С‚С‹ РЅР° СЂР°Р·Р»РёС‡РЅС‹Рµ С‚РµРјС‹, РїСЂРёРїРёСЃС‹РІР°РµРјС‹Рµ Р‘СѓРґРґРµ РёР»Рё РµРіРѕ СѓС‡РµРЅРёРєР°Рј.</p>
+    <p>РџСЂРѕС„РµСЃСЃРѕСЂ РҐРёСЂР°РєР°СЂР° РђРєРёСЂР° СѓС‚РІРµСЂР¶РґР°РµС‚, С‡С‚Рѕ РІ РљС…СѓРґРґР°РєСѓ РёР·РЅР°С‡Р°Р»СЊРЅРѕ Р±С‹Р»Рё РІРєР»СЋС‡РµРЅС‹ С‚РµРєСЃС‚С‹, РєРѕС‚РѕСЂС‹Рµ РЅРµ РІРѕС€Р»Рё РІ С‡РµС‚С‹СЂРµ РѕСЃС‚Р°Р»СЊРЅС‹С… РЅРёРєР°Рё, Р° Р·Р°С‚РµРј СЃСЋРґР° СЃС‚Р°Р»Рё РґРѕР±Р°РІР»СЏС‚СЊ Рё РЅРѕРІС‹Рµ С‚РµРєСЃС‚С‹, СЂР°РЅРµРµ РЅРµ РІС…РѕРґРёРІС€РёРµ РІ РљР°РЅРѕРЅ. РћР»РёРІРµСЂ РћР±РµР№РЅР°СЏРєРµ РіРѕРІРѕСЂРёС‚: В«РљС…СѓРґРґР°РєР° РќРёРєР°СЋ РјРѕР¶РЅРѕ Р»РµРіРєРѕ РїРѕРґРµР»РёС‚СЊ РЅР° РґРІРµ С‡Р°СЃС‚Рё вЂ“ СЂР°РЅРЅСЋСЋ Рё РїРѕР·РґРЅСЋСЋ. Рљ СЂР°РЅРЅРёРј С‚РµРєСЃС‚Р°Рј РѕС‚РЅРѕСЃСЏС‚СЃСЏ РЎСѓС‚С‚Р°РЅРёРїР°С‚Р°, РС‚РёРІСѓС‚С‚Р°РєР°, Р”С…Р°РјРјР°РїР°РґР°, РўС…РµСЂРёРіР°С‚С…Р°, РўС…РµСЂР°РіР°С‚С…Р°, РЈРґР°РЅР° Рё Р”Р¶Р°С‚Р°РєРё. Рђ Рє Р±РѕР»РµРµ РїРѕР·РґРЅРёРј РјРѕР¶РЅРѕ РѕС‚РЅРµСЃС‚Рё РљС…СѓРґРґР°РєР°РїР°С‚С…Сѓ, Р’РёРјР°РЅР°РІР°С‚С‚С…Сѓ, РџРµС‚Р°РІР°С‚С‚С…Сѓ, РќРёРґРµСЃСЃСѓ, РџР°С‚РёСЃР°РјР±РёРґСѓ, РђРїР°РґР°РЅСѓ, Р‘СѓРґРґС…Р°РІР°РјСЃСѓ Рё Р§Р°СЂРёСЏРїРёС‚Р°РєСѓВ».</p>
+  </div>
+</details>
 
-            <td width="87%" valign="top"> 
-              <table width="100%" border="0" cellspacing="0" cellpadding="0" height="1%">
-                <tr> 
-                  <td colspan="2"><img src="../../../Index/line_menu.gif" width="165" height="6"></td>
-                </tr>
-                <tr> 
-                  <td colspan="2" height="2"><img src="../../../Index/line_gradient_1.jpg" width="560" height="2"></td>
-                </tr>
-                <tr> 
-                  <td valign="top" height="100%" width="0%" align="right"> 
-            <p><img src="../../../Index/line_gradient_2.jpg" width="2" height="400"></p>
-                  </td>
-                  <td width="100%" valign="top" height="2%" rowspan="2"> 
+<!-- РљРЅРёРіРё РљС…СѓРґРґР°РєР° РќРёРєР°Рё -->
+<details class="section-group" id="section-1" open>
+  <summary class="section-summary">РљРЅРёРіРё РљС…СѓРґРґР°РєР° РќРёРєР°Рё</summary>
 
-                    <table width="100%" border="0" cellspacing="3" cellpadding="3" height="1%">
-                      <tr> 
-                        <td valign="top" width="1%" height="30%">&nbsp; </td>
-                        <td valign="top" width="670" height="30%" style="text-align:justify;"> 
-                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                            <tr> 
-                              <td width="67%"> 
-                                <h1> 
-                                  <div style="color: #333300; font-size:14pt;  font-family:Times New Roman; text-decoration:none" align="left">Кхуддака 
-                                    Никая</div>
-                                </h1>
-                              </td>
+  <!-- РљС…СѓРґРґР°РєР°РїР°С‚С…Р° (Р±РµР· СЃСЃС‹Р»РєРё) -->
+  <div class="sutta-card no-link">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РљС…СѓРґРґР°РєР°РїР°С‚С…Р°</div>
+    </div>
+  </div>
 
-                              <td width="17%"> 
-                                <div align="right"><font size="2" face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font></font></div>
-                              </td>
-                            </tr>
-                          </table>
-                          <font size="2" face="Arial, Helvetica, sans-serif"><img src="../../../Index/Letters/letter_11.gif" width="28" height="35" alt="К">худдака 
-                          Никая («Меньшее собрание») – пятая и последняя из никай 
-                          сутта-питаки. В ней содержится от 15 до 18 книг в зависимости 
-                          от редакции <a href="../../canon.html">Канона</a>, в 
-                          которые включены многочисленные сутты на различные темы, 
-                          приписываемые Будде или его ученикам. <br>
-                          <br>
-                          Профессор Хиракара Акира утверждает, что в Кхуддаку 
-                          изначально были включены тексты, которые не вошли в 
-                          четыре остальных никаи, а затем сюда стали добавлять 
-                          и новые тексты, ранее не входившие в Канон. Оливер Обейнаяке 
-                          говорит: «Кхуддака Никаю можно легко поделить на две 
-                          части – раннюю и позднюю. К ранним текстам относятся 
-                          Суттанипата, Итивуттака, Дхаммапада, Тхеригатха, Тхерагатха, 
-                          Удана и Джатаки. А к более поздним можно отнести Кхуддакапатху, 
-                          Виманаваттху, Петаваттху, Нидессу, Патисамбиду, Ападану, 
-                          Буддхавамсу и Чарияпитаку».</font><br>
-                          <br>
-                          <font size="2" face="Arial, Helvetica, sans-serif">Разделы 
-                          Кхуддака Никаи:</font><br>
-                          <br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i>Кхуддакапатха</i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font><i><font size="2"><a href="dhammapada.html">Дхаммапада</a></font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font><font face="Arial, Helvetica, sans-serif"><i><font size="2"><a href="udana.html">Удана</a></font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font><i><font size="2"><a href="itivuttaka.html">Итивуттака</a></font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font><i><font size="2"><a href="suttanipata.html">Суттанипата</a></font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font><font face="Arial, Helvetica, sans-serif"><i><font size="2">Виманаваттху</font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font><font face="Arial, Helvetica, sans-serif"><i><font size="2">Петаваттху</font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font><font face="Arial, Helvetica, sans-serif"><i><font size="2"><a href="theragatha.html">Тхерагатха</a></font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font><i><font size="2"><a href="therigatha.html">Тхеригатха</a></font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font><i><font size="2"><a href="jataka.html">Джатака</a></font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font><font face="Arial, Helvetica, sans-serif"><i><font size="2">Нидесса</font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font><font face="Arial, Helvetica, sans-serif"><i><font size="2">Патисамбидамагга</font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font><font face="Arial, Helvetica, sans-serif"><i><font size="2">Ападана</font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font><font face="Arial, Helvetica, sans-serif"><i><font size="2">Буддхавамса</font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font><i><font size="2"><a href="chariyapitaka.html">Чарияпитака</a> 
-                          </font></i></font></b><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font><font face="Arial, Helvetica, sans-serif"><i><font size="2">Неттипакарана</font></i></font></b> 
-                          <font size="2" face="Arial, Helvetica, sans-serif"><i><font color="#999933">(есть 
-                          в бирманском и сингальском каноне, но нет в тайском) 
-                          </font></i></font><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font></font><font size="2" face="Arial, Helvetica, sans-serif"><i></i></font><font face="Arial, Helvetica, sans-serif"><i><font size="2">Петакопадеса</font></i></font></b> 
-                          <font size="2" face="Arial, Helvetica, sans-serif"><i><font color="#999933">(есть 
-                          в бирманском и сингальском каноне, но нет в тайском) 
-                          </font></i></font><br>
-                          <b><font face="Arial, Helvetica, sans-serif"><font size="2" face="Arial, Helvetica, sans-serif"><font face="Arial, Helvetica, sans-serif"><font face="Arial" style="font-size:6pt">&#9679; 
-                          </font></font></font><i><font size="2"><a href="../../Books/Milinda/milinda.pdf">Милиндапаньха</a></font></i></font></b> 
-                          <font size="2" face="Arial, Helvetica, sans-serif"><i><font color="#999933">(есть 
-                          в бирманском каноне, но нет в тайском и сингальском)</font></i></font> 
-                          <p></p>
-                        </td>
+  <!-- Р”С…Р°РјРјР°РїР°РґР° (СЃРѕ СЃСЃС‹Р»РєРѕР№) -->
+  <a class="sutta-card" href="dhammapada.html">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">Р”С…Р°РјРјР°РїР°РґР°</div>
+    </div>
+  </a>
 
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr> 
-                  <td valign="bottom" height="1%" width="0%" align="right"><img src="../../../Index/line_gradient_bottom_1.gif" width="2" height="180"></td>
-                </tr>
-                <tr> 
+  <!-- РЈРґР°РЅР° (СЃРѕ СЃСЃС‹Р»РєРѕР№) -->
+  <a class="sutta-card" href="udana.html">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РЈРґР°РЅР°</div>
+    </div>
+  </a>
 
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-        <table width="100%" border="0" cellspacing="0" cellpadding="2">
-          <tr> 
-            <td colspan="3" valign="middle" height="2"> 
-              <div align="center" style="cursor:default;"><img src="../../../Index/line_bottom.gif" width="100%" height="1" style="cursor:default;"></div>
-            </td>
-          </tr>
-          <tr> 
-            <td width="18%" height="2" valign="middle"2" face="Arial, Helvetica, sans-serif"> 
-              <div align="left"><a href="../../../site-map.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image37','','../../../Index/bottom-but6.gif',1)" style="border:0px solid #FFFFCC;background:none;"><img name="Image37" border="0" src="../../../Index/bottom-but5.gif" width="35" height="22"></a><a href="#" onClick="return add_favorite(this);" title="Добавить сайт в избранные" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image38','','../../../Index/bottom-but4.gif',1)" style="border:0px solid #FFFFCC;background:none;"><img name="Image38" border="0" src="../../../Index/bottom-but3.gif" width="23" height="23"></a><a href="../../../About/contacts.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image39','','../../../Index/bottom-but2.gif',1)" style="border:0px solid #FFFFCC;background:none;"><img name="Image39" border="0" src="../../../Index/bottom-but1.gif" width="33" height="22"></a></div>
-            </td>
-            <td height="2" valign="bottom"2" face="Arial, Helvetica, sans-serif" width="45%"> 
-              <div align="right" style="cursor:default;"><img src="../../../Index/bottom-wheel.jpg" width="340" height="33" style="cursor:default;"></div>
-            </td>
-            <td height="2" valign="middle"2" face="Arial, Helvetica, sans-serif" width="37%"> 
-              <div align="right" style="cursor:default;"><font face="Arial, Helvetica, sans-serif" style="font-size:7pt; font-family: Arial;" color="#C8C16C">&copy; 
-                theravada.ru – при копировании материалов<br>
-                просьба ставить прямую ссылку на наш сайт<br>
-                <a href="../../canon.html" style="border:0px solid #FFFFCC;background:none;font:9" title="Палийский Канон"></a></font></div>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </td>
-  </tr>
-</table>
+  <!-- РС‚РёРІСѓС‚С‚Р°РєР° (СЃРѕ СЃСЃС‹Р»РєРѕР№) -->
+  <a class="sutta-card" href="itivuttaka.html">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РС‚РёРІСѓС‚С‚Р°РєР°</div>
+    </div>
+  </a>
+
+  <!-- РЎСѓС‚С‚Р°РЅРёРїР°С‚Р° (СЃРѕ СЃСЃС‹Р»РєРѕР№) -->
+  <a class="sutta-card" href="suttanipata.html">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РЎСѓС‚С‚Р°РЅРёРїР°С‚Р°</div>
+    </div>
+  </a>
+
+  <!-- Р’РёРјР°РЅР°РІР°С‚С‚С…Сѓ (Р±РµР· СЃСЃС‹Р»РєРё) -->
+  <div class="sutta-card no-link">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">Р’РёРјР°РЅР°РІР°С‚С‚С…Сѓ</div>
+    </div>
+  </div>
+
+  <!-- РџРµС‚Р°РІР°С‚С‚С…Сѓ (Р±РµР· СЃСЃС‹Р»РєРё) -->
+  <div class="sutta-card no-link">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РџРµС‚Р°РІР°С‚С‚С…Сѓ</div>
+    </div>
+  </div>
+
+  <!-- РўС…РµСЂР°РіР°С‚С…Р° (СЃРѕ СЃСЃС‹Р»РєРѕР№) -->
+  <a class="sutta-card" href="theragatha.html">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РўС…РµСЂР°РіР°С‚С…Р°</div>
+    </div>
+  </a>
+
+  <!-- РўС…РµСЂРёРіР°С‚С…Р° (СЃРѕ СЃСЃС‹Р»РєРѕР№) -->
+  <a class="sutta-card" href="therigatha.html">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РўС…РµСЂРёРіР°С‚С…Р°</div>
+    </div>
+  </a>
+
+  <!-- Р”Р¶Р°С‚Р°РєР° (СЃРѕ СЃСЃС‹Р»РєРѕР№) -->
+  <a class="sutta-card" href="jataka.html">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">Р”Р¶Р°С‚Р°РєР°</div>
+    </div>
+  </a>
+
+  <!-- РќРёРґРµСЃСЃР° (Р±РµР· СЃСЃС‹Р»РєРё) -->
+  <div class="sutta-card no-link">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РќРёРґРµСЃСЃР°</div>
+    </div>
+  </div>
+
+  <!-- РџР°С‚РёСЃР°РјР±РёРґР°РјР°РіРіР° (Р±РµР· СЃСЃС‹Р»РєРё) -->
+  <div class="sutta-card no-link">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РџР°С‚РёСЃР°РјР±РёРґР°РјР°РіРіР°</div>
+    </div>
+  </div>
+
+  <!-- РђРїР°РґР°РЅР° (Р±РµР· СЃСЃС‹Р»РєРё) -->
+  <div class="sutta-card no-link">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РђРїР°РґР°РЅР°</div>
+    </div>
+  </div>
+
+  <!-- Р‘СѓРґРґС…Р°РІР°РјСЃР° (Р±РµР· СЃСЃС‹Р»РєРё) -->
+  <div class="sutta-card no-link">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">Р‘СѓРґРґС…Р°РІР°РјСЃР°</div>
+    </div>
+  </div>
+
+  <!-- Р§Р°СЂРёСЏРїРёС‚Р°РєР° (СЃРѕ СЃСЃС‹Р»РєРѕР№) -->
+  <a class="sutta-card" href="chariyapitaka.html">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">Р§Р°СЂРёСЏРїРёС‚Р°РєР°</div>
+    </div>
+  </a>
+
+  <!-- РќРµС‚С‚РёРїР°РєР°СЂР°РЅР° (СЃ РїСЂРёРјРµС‡Р°РЅРёРµРј) -->
+  <div class="sutta-card no-link">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РќРµС‚С‚РёРїР°РєР°СЂР°РЅР°</div>
+      <div class="sutta-note">(РµСЃС‚СЊ РІ Р±РёСЂРјР°РЅСЃРєРѕРј Рё СЃРёРЅРіР°Р»СЊСЃРєРѕРј РєР°РЅРѕРЅРµ, РЅРѕ РЅРµС‚ РІ С‚Р°Р№СЃРєРѕРј)</div>
+    </div>
+  </div>
+
+  <!-- РџРµС‚Р°РєРѕРїР°РґРµСЃР° (СЃ РїСЂРёРјРµС‡Р°РЅРёРµРј) -->
+  <div class="sutta-card no-link">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РџРµС‚Р°РєРѕРїР°РґРµСЃР°</div>
+      <div class="sutta-note">(РµСЃС‚СЊ РІ Р±РёСЂРјР°РЅСЃРєРѕРј Рё СЃРёРЅРіР°Р»СЊСЃРєРѕРј РєР°РЅРѕРЅРµ, РЅРѕ РЅРµС‚ РІ С‚Р°Р№СЃРєРѕРј)</div>
+    </div>
+  </div>
+
+  <!-- РњРёР»РёРЅРґР°РїР°РЅСЊС…Р° (СЃРѕ СЃСЃС‹Р»РєРѕР№ РЅР° PDF) -->
+  <a class="sutta-card" href="../../Books/Milinda/milinda.pdf">
+    <div class="num">в—Џ</div>
+    <div>
+      <div class="sutta-title">РњРёР»РёРЅРґР°РїР°РЅСЊС…Р°</div>
+      <div class="sutta-note">(РµСЃС‚СЊ РІ Р±РёСЂРјР°РЅСЃРєРѕРј РєР°РЅРѕРЅРµ, РЅРѕ РЅРµС‚ РІ С‚Р°Р№СЃРєРѕРј Рё СЃРёРЅРіР°Р»СЊСЃРєРѕРј)</div>
+    </div>
+  </a>
+</details>
+
+<br>
+
+<!-- РљРЅРѕРїРєР° РЅР°РІРµСЂС… -->
+<button class="go-top" id="goTopBtn" title="РќР°РІРµСЂС…">в†‘</button>
+
+<script>
+  (function() {
+    // РЎРѕС…СЂР°РЅРµРЅРёРµ СЃРѕСЃС‚РѕСЏРЅРёСЏ РѕС‚РєСЂС‹С‚С‹С… СЂР°Р·РґРµР»РѕРІ
+    const details = document.querySelectorAll('details.section-group, details.intro-group');
+    const STORAGE_KEY = 'khuddaka-index-state';
+
+    function loadState() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        try {
+          const openIds = JSON.parse(saved);
+          details.forEach(detail => {
+            if (detail.id && openIds.includes(detail.id)) {
+              detail.open = true;
+            } else {
+              detail.open = false;
+            }
+          });
+        } catch (e) {}
+      }
+    }
+
+    function saveState() {
+      const openIds = [];
+      details.forEach(detail => {
+        if (detail.open && detail.id) {
+          openIds.push(detail.id);
+        }
+      });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(openIds));
+    }
+
+    details.forEach(detail => {
+      detail.addEventListener('toggle', saveState);
+    });
+
+    loadState();
+
+    document.getElementById('expandAll').addEventListener('click', () => {
+      details.forEach(d => d.open = true);
+      saveState();
+    });
+
+    document.getElementById('collapseAll').addEventListener('click', () => {
+      details.forEach(d => d.open = false);
+      saveState();
+    });
+
+    document.getElementById('goTopBtn').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
 
 </body>
-
-<!-- Mirrored from theravada.ru/Teaching/Canon/Suttanta/khuddaka.htm by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Aug 2023 11:53:00 GMT -->
 </html>
