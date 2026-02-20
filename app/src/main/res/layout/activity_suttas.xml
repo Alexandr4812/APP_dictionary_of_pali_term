@@ -158,8 +158,8 @@
                 style="@style/button_activity_declomation_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#FFAB91"
-                android:onClick="toSuttasLastSutta"
+                android:backgroundTint="#66BB6A"
+                android:onClick="toBookmarksAct"
                 android:text="@string/buttonLastSuttaText"
                 tools:ignore="UsingOnClickInXml" />
 

@@ -131,8 +131,9 @@ public class SuttasActivity extends BaseActivityClass {
         startIntentActivityAndFinish(SuttasByCategoryActivity.class);
     }
 
-    public void toSuttasLastSutta(View view){
-        startIntentActivityAndFinish(SuttasLastSuttaActivity.class);
+    public void toBookmarksAct(View view) {
+        Intent intent = new Intent(this, BookmarksActivity.class);
+        startActivity(intent);
     }
 
     public void toSuttasRandomSutta(View view){

@@ -16,6 +16,9 @@ import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
 
+import com.dhammamobile.dictionary_of_pali_term.Suttas.BookmarkManager;
+import android.widget.Toast;
+
 
 public class SuttasSanyuttaActivity extends BaseActivityClass {
 
@@ -67,10 +70,52 @@ public class SuttasSanyuttaActivity extends BaseActivityClass {
         webView.getSettings().setAllowUniversalAccessFromFileURLs(true); // Для file:// скриптов (может понадобитьс
 
         // Загрузка первой страницы
-        webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/samyutta.html");
+        String intentFilePath = getIntent().getStringExtra("FILE_PATH");
+        int intentScrollY = getIntent().getIntExtra("SCROLL_Y", 0);
+
+        if (intentFilePath != null && !intentFilePath.isEmpty()) {
+            webView.loadUrl("file:///android_asset/" + intentFilePath);
+        } else {
+            webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/samyutta.html");
+        }
         // Используем AdaptiveWebViewClient для автоматического масштабирования
-        webView.setWebViewClient(new AdaptiveWebViewClient());
+        webView.setWebViewClient(new AdaptiveWebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                if (intentScrollY > 0) {
+                    view.postDelayed(() ->
+                                    view.evaluateJavascript("window.scrollTo(0, " + intentScrollY + ");", null)
+                            , 500);
+                }
+            }
+        });
         buttonBack.setOnClickListener(v -> goBack());
+
+        BookmarkManager bookmarkManager = new BookmarkManager(this);
+
+        findViewById(R.id.btnAddBookmark).setOnClickListener(v -> {
+            webView.evaluateJavascript("window.scrollY", value -> {
+                int scrollY = 0;
+                try { scrollY = (int) Double.parseDouble(value.trim()); }
+                catch (Exception ignored) {}
+
+                final int finalScrollY = scrollY;
+                final String currentUrl = webView.getUrl();
+                final String filePath = currentUrl.replace("file:///android_asset/", "");
+
+                runOnUiThread(() -> {
+                    bookmarkManager.addBookmark(
+                            "СН",
+                            filePath,
+                            "",
+                            filePath,
+                            finalScrollY
+                    );
+                    Toast.makeText(this, "Закладка сохранена 🔖", Toast.LENGTH_SHORT).show();
+                });
+            });
+        });
     }
 
     private void goBack() {

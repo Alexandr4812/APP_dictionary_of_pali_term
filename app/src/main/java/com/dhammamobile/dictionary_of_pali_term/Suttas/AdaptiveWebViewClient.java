@@ -21,13 +21,8 @@ public class AdaptiveWebViewClient extends WebViewClient {
     public void onPageFinished(WebView view, String url) {
         super.onPageFinished(view, url);
 
-        // Небольшая задержка для гарантии полной загрузки DOM
         view.postDelayed(() -> {
-            // Инжектируем CSS и JavaScript для адаптивного масштабирования
             injectAdaptiveStyles(view);
-            
-            // Принудительно разрешаем масштабирование через WebView API
-            // Это гарантирует, что жесты будут работать в обе стороны
             view.getSettings().setSupportZoom(true);
             view.getSettings().setBuiltInZoomControls(true);
         }, 200);

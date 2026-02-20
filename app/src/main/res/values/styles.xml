@@ -141,6 +141,18 @@
         <item name="android:visibility">invisible</item>
     </style>
 
+    <style name="buttonBookmark">
+        <item name="android:layout_width">51dp</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:backgroundTint">@color/my_main_color</item>
+        <item name="android:foregroundGravity">fill</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
     <style name="buttonMinusTextNotImageButton">
         <item name="android:layout_width">51dp</item>
         <item name="android:layout_height">45dp</item>

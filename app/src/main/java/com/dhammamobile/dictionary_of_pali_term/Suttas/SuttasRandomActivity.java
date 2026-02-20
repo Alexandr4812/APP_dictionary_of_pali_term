@@ -18,6 +18,9 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 import java.io.IOException;
 import java.util.Random;
 
+import com.dhammamobile.dictionary_of_pali_term.Suttas.BookmarkManager;
+import android.widget.Toast;
+
 public class SuttasRandomActivity extends BaseActivityClass {
 
     private WebView webView;
@@ -74,6 +77,31 @@ public class SuttasRandomActivity extends BaseActivityClass {
 
         Button buttonLoadRandomPage = findViewById(R.id.buttonNextSutta);
         buttonLoadRandomPage.setOnClickListener(v -> loadRandomPage());
+
+        BookmarkManager bookmarkManager = new BookmarkManager(this);
+
+        findViewById(R.id.btnAddBookmark).setOnClickListener(v -> {
+            webView.evaluateJavascript("window.scrollY", value -> {
+                int scrollY = 0;
+                try { scrollY = (int) Double.parseDouble(value.trim()); }
+                catch (Exception ignored) {}
+
+                final int finalScrollY = scrollY;
+                final String currentUrl = webView.getUrl();
+                final String filePath = currentUrl.replace("file:///android_asset/", "");
+
+                runOnUiThread(() -> {
+                    bookmarkManager.addBookmark(
+                            "Случайная",
+                            filePath,
+                            "",
+                            filePath,
+                            finalScrollY
+                    );
+                    Toast.makeText(this, "Закладка сохранена 🔖", Toast.LENGTH_SHORT).show();
+                });
+            });
+        });
     }
 
     // Загрузка случайной страницы

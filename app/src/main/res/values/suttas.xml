@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="buttonLastSuttaText">Вернуться к последней сутте</string>
+    <string name="buttonLastSuttaText">Закладки</string>
     <string name="buttonRandomSuttaText">рандомная сутта</string>
 </resources>

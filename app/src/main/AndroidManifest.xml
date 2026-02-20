@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -25,6 +27,8 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name=".Suttas.BookmarksActivity" />
+
         <activity
             android:name=".Abhidhamma.AbhidhammaChittasLokutaraResultActivity"
             android:configChanges="orientation|screenSize"
