@@ -40,7 +40,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
 
     private TextView textViewAbhidhammaChitta, textViewAbhidhammaChitasikas, textViewAbhidhammaMaterial, textViewAbhidhammaNibbana;
     private Button button1, button2, button3, button4, infoButton1, infoButton2, infoButton3,
-            tableButton1, tableButton2, tableButton3;
+            tableButton1;
 
     private Button buttonHarakteristika, buttonFunkciya, buttonProyavlenie, buttonPrichina;
     private Button buttonMaterialHarakteristika, buttonMaterialFunkciya, buttonMaterialProyavlenie, buttonMaterialPrichina;
@@ -96,8 +96,8 @@ public class AbhidhammaActivity extends BaseActivityClass {
         textViewAbhidhammaNibbana = findViewById(R.id.textViewAbhidhammaNibbana);
 
         tableButton1 = findViewById(R.id.tableButton1);
-        tableButton2 = findViewById(R.id.tableButton2);
-        tableButton3 = findViewById(R.id.tableButton3);
+
+
 
         infoButton1 = findViewById(R.id.infoButton1);
         button1 = findViewById(R.id.button_mentalnie_faktori);
@@ -130,8 +130,6 @@ public class AbhidhammaActivity extends BaseActivityClass {
 
         infoButton1.setAnimation(slideDown);
         tableButton1.setAnimation(slideFromLeftAnimation);
-        tableButton2.setAnimation(slideFromLeftAnimation);
-        tableButton3.setAnimation(slideFromLeftAnimation);
         infoButton2.setAnimation(slideDown);
         infoButton3.setAnimation(slideDown);
         button1.startAnimation(slideFromLeftAnimation);
@@ -294,10 +292,6 @@ public class AbhidhammaActivity extends BaseActivityClass {
                 textViewAbhidhammaMaterial.setText(R.string.text_for_prichina_materials);
                 textViewAbhidhammaMaterial.setVisibility(View.VISIBLE);
                 animateText(textViewAbhidhammaMaterial, getString(R.string.text_for_prichina_materials));
-            } else if (clickedButton == button3) {
-                textViewAbhidhammaMaterial.setText(R.string.inProcess);
-                textViewAbhidhammaMaterial.setVisibility(View.VISIBLE);
-                animateText(textViewAbhidhammaMaterial, getString(R.string.inProcess));
             }
             lastClickedButton = clickedButton; // Сохраняем последнюю нажатую кнопку
         }
@@ -365,9 +359,6 @@ public class AbhidhammaActivity extends BaseActivityClass {
         }
     }
 
-    public void toChetasikasAct(View view){
-        startIntentActivityAndFinish(AbhidhammaChetasikasActivity.class);
-    }
 
     public void toChittasAct(View view){
         startIntentActivityAndFinish(AbhidhammaChittasActivity.class);

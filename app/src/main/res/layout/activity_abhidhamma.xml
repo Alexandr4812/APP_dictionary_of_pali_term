@@ -150,10 +150,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
+                android:gravity="end"
                 tools:ignore="UselessLeaf" >
 
-                <com.google.android.material.button.MaterialButton
+                <!--<com.google.android.material.button.MaterialButton
                     android:id="@+id/tableButton2"
                     style="@style/button_table_premium"
                     android:layout_marginStart="12dp"
@@ -162,12 +162,12 @@
                     app:icon="@android:drawable/ic_menu_agenda"
                     app:iconSize="16dp"
                     app:iconTint="@color/black"
-                    tools:ignore="UsingOnClickInXml" />
+                    tools:ignore="UsingOnClickInXml" />-->
 
-                <View
+                <!--<View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1" />-->
 
                 <Button
                     android:id="@+id/infoButton2"
@@ -181,7 +181,7 @@
             <Button
                 android:id="@+id/button_mentalnie_faktori"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toChetasikasAct"
+                android:onClick="tableChittas2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/buttonAbhidhammaChetasika"
@@ -199,10 +199,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
+                android:gravity="end"
                 tools:ignore="UselessLeaf" >
 
-                <com.google.android.material.button.MaterialButton
+                <!--<com.google.android.material.button.MaterialButton
                     android:id="@+id/tableButton3"
                     style="@style/button_table_premium"
                     android:layout_marginStart="12dp"
@@ -216,7 +216,7 @@
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1" />-->
 
                 <Button
                     android:id="@+id/infoButton3"
@@ -237,9 +237,9 @@
             <Button
                 android:id="@+id/button_materials"
                 style="@style/button_activity_declomation_main"
-                android:onClick="onButtonClickAbhidhamma3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="tableChittas3"
                 android:text="@string/textButtonMaterials"
                 tools:ignore="UsingOnClickInXml" />
 

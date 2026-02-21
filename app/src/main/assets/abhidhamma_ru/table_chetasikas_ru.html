@@ -14,10 +14,15 @@
             --variable: #94A3B8;
             --unwholesome: #EF4444;
             --beautiful: #10B981;
+            --real: #60A5FA;
+            --indirect: #A78BFA;
         }
 
+        * { box-sizing: border-box; }
+
         body {
-            margin: 0; padding: 15px;
+            margin: 0;
+            padding: 15px;
             font-family: -apple-system, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
@@ -26,10 +31,50 @@
         }
 
         .main-title {
-            text-align: center; color: var(--accent-color);
-            font-size: 1.1rem; font-weight: bold;
-            text-transform: uppercase; letter-spacing: 2px;
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 20px;
+        }
+
+        /* ===== Введение (как в рупе) ===== */
+        .intro-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 0 4px 14px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            user-select: none;
+        }
+        .intro-toggle-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-dim);
+        }
+        .intro-toggle-icon {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            transition: transform 0.3s;
+        }
+        .intro-toggle.open .intro-toggle-icon { transform: rotate(180deg); }
+        .intro-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+            padding: 0 4px;
+        }
+        .intro-body.open {
+            max-height: 800px;
+            padding-bottom: 16px;
         }
 
         details.sphere-group {
@@ -41,10 +86,16 @@
         }
 
         summary.sphere-summary {
-            padding: 16px; list-style: none; cursor: pointer;
+            padding: 16px;
+            list-style: none;
+            cursor: pointer;
             background-color: var(--accent-color);
-            color: #161923; font-weight: 800; font-size: 0.85rem;
-            display: flex; justify-content: space-between; align-items: center;
+            color: #161923;
+            font-weight: 800;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             text-transform: uppercase;
         }
 
@@ -53,24 +104,27 @@
         details[open] > summary::after { transform: rotate(180deg); }
 
         .category-title {
-            font-weight: bold; color: var(--accent-color);
-            font-size: 0.75rem; text-transform: uppercase;
-            padding: 12px 10px 5px 15px; opacity: 0.8;
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            padding: 12px 10px 5px 15px;
+            opacity: 0.8;
         }
 
         .factor-card {
             border-bottom: 1px solid var(--border-color);
-            cursor: pointer;
             transition: background 0.2s;
         }
         .factor-card:active { background: rgba(255,255,255,0.05); }
 
         .factor-header {
             display: grid;
-            grid-template-columns: 30px 1fr;
+            grid-template-columns: 30px 1fr auto;
             gap: 10px;
             padding: 12px 15px;
             align-items: center;
+            cursor: pointer;
         }
 
         .num { color: var(--text-dim); font-family: monospace; font-size: 0.8rem; }
@@ -96,221 +150,1401 @@
         .b-unw { border-left: 3px solid var(--unwholesome); }
         .b-beau { border-left: 3px solid var(--beautiful); }
 
+        /* Стили для drawer и классификации (как в рупе) */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 28px 0 16px;
+            color: #EF9A9A;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .section-divider::before {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to left, #EF9A9A44, transparent);
+        }
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, #EF9A9A44, transparent);
+        }
+
+        .class-group {
+            margin-bottom: 10px;
+            border: 1px solid rgba(239,154,154,0.15);
+            border-radius: 14px;
+            background: rgba(239,154,154,0.03);
+            overflow: hidden;
+        }
+        .class-summary {
+            padding: 14px 16px;
+            list-style: none;
+            cursor: pointer;
+            background: rgba(239,154,154,0.1);
+            color: #EF9A9A;
+            font-weight: 800;
+            font-size: 0.82rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .class-summary::-webkit-details-marker { display: none; }
+        .class-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+        details.class-group[open] > .class-summary::after { transform: rotate(180deg); }
+        .class-body { padding: 4px 0 8px; }
+        .class-subtitle {
+            font-weight: 700;
+            color: #EF9A9A;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 16px 3px;
+            opacity: 0.8;
+        }
+        .class-para {
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            line-height: 1.75;
+            padding: 6px 16px 8px;
+            border-bottom: 1px solid rgba(239,154,154,0.07);
+        }
+        .class-para:last-child { border-bottom: none; }
+        .class-term { font-weight: 600; color: #FFE082; }
+
+        /* зелёная тема (для джханы) */
+        .section-divider.green { color: #81C784; }
+        .section-divider.green::before { background: linear-gradient(to left, rgba(129,199,132,0.27), transparent); }
+        .section-divider.green::after { background: linear-gradient(to right, rgba(129,199,132,0.27), transparent); }
+        .origin-group {
+            margin-bottom: 10px;
+            border: 1px solid rgba(129,199,132,0.15);
+            border-radius: 14px;
+            background: rgba(129,199,132,0.03);
+            overflow: hidden;
+        }
+        .origin-summary {
+            padding: 14px 16px;
+            list-style: none;
+            cursor: pointer;
+            background: rgba(129,199,132,0.1);
+            color: #81C784;
+            font-weight: 800;
+            font-size: 0.82rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .origin-summary::-webkit-details-marker { display: none; }
+        .origin-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+        details.origin-group[open] > .origin-summary::after { transform: rotate(180deg); }
+        .origin-body { padding: 4px 0 8px; }
+        .origin-subtitle {
+            font-weight: 700;
+            color: #81C784;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 16px 3px;
+            opacity: 0.8;
+        }
+        .origin-para {
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            line-height: 1.75;
+            padding: 6px 16px 8px;
+            border-bottom: 1px solid rgba(129,199,132,0.07);
+        }
+        .origin-para:last-child { border-bottom: none; }
+
+        /* бирюзовая тема (для путей) */
+        .section-divider.teal { color: #80DEEA; }
+        .section-divider.teal::before { background: linear-gradient(to left, rgba(128,222,234,0.27), transparent); }
+        .section-divider.teal::after { background: linear-gradient(to right, rgba(128,222,234,0.27), transparent); }
+        .group-group {
+            margin-bottom: 10px;
+            border: 1px solid rgba(128,222,234,0.15);
+            border-radius: 14px;
+            background: rgba(128,222,234,0.03);
+            overflow: hidden;
+        }
+        .group-summary {
+            padding: 14px 16px;
+            list-style: none;
+            cursor: pointer;
+            background: rgba(128,222,234,0.1);
+            color: #80DEEA;
+            font-weight: 800;
+            font-size: 0.82rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .group-summary::-webkit-details-marker { display: none; }
+        .group-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+        details.group-group[open] > .group-summary::after { transform: rotate(180deg); }
+        .group-body { padding: 4px 0 8px; }
+        .group-subtitle {
+            font-weight: 700;
+            color: #80DEEA;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 16px 3px;
+            opacity: 0.8;
+        }
+        .group-para {
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            line-height: 1.75;
+            padding: 6px 16px 8px;
+            border-bottom: 1px solid rgba(128,222,234,0.07);
+        }
+        .group-para:last-child { border-bottom: none; }
+
+        /* Кнопка подробнее */
+        .detail-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-dim);
+            font-size: 0.65rem;
+            padding: 3px 8px;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .detail-btn:hover, .detail-btn:active {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* OVERLAY и DRAWER */
+        .overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .overlay.active { display: block; }
+        .overlay.visible { opacity: 1; }
+
+        .drawer {
+            position: fixed;
+            z-index: 101;
+            background: #1E2533;
+            overflow-y: auto;
+            transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-height: 80vh;
+            border-radius: 20px 20px 0 0;
+            transform: translateY(100%);
+            padding-bottom: env(safe-area-inset-bottom, 0);
+        }
+        .drawer.active { transform: translateY(0); }
+
+        @media (min-width: 640px) {
+            .drawer {
+                bottom: 0;
+                top: 0;
+                left: auto;
+                right: 0;
+                width: 420px;
+                max-height: 100vh;
+                border-radius: 20px 0 0 20px;
+                transform: translateX(110%);
+            }
+            .drawer.active { transform: translateX(0); }
+        }
+
+        .drawer-handle {
+            width: 40px;
+            height: 4px;
+            background: var(--border-color);
+            border-radius: 2px;
+            margin: 14px auto 0;
+        }
+        @media (min-width: 640px) { .drawer-handle { display: none; } }
+
+        .drawer-inner { padding: 16px 22px 32px; }
+
+        .drawer-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+
+        .drawer-label {
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-dim);
+            margin-bottom: 4px;
+        }
+        .drawer-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.3;
+        }
+        .drawer-pali {
+            font-style: italic;
+            color: var(--text-dim);
+            font-size: 0.82rem;
+            margin-top: 2px;
+        }
+        .drawer-close {
+            background: rgba(255,255,255,0.07);
+            border: none;
+            color: var(--text-dim);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-left: 10px;
+            margin-top: 2px;
+        }
+        @media (min-width: 640px) { .drawer-close { display: flex; } }
+
+        .drawer-origin-label {
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-dim);
+            margin-bottom: 6px;
+            margin-top: 14px;
+        }
+        .drawer-short {
+            background: rgba(0,0,0,0.25);
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 0.78rem;
+            color: #94A3B8;
+            margin-bottom: 18px;
+            border-left: 3px solid var(--variable);
+            line-height: 1.65;
+        }
+        .drawer-short.ind { border-left-color: var(--indirect); }
+        .drawer-short.unw { border-left-color: var(--unwholesome); }
+        .drawer-short.beau { border-left-color: var(--beautiful); }
+
+        .drawer-divider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            color: var(--text-dim);
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .drawer-divider::before, .drawer-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        .drawer-long {
+            font-size: 0.83rem;
+            color: #CBD5E1;
+            line-height: 1.8;
+        }
+
+        .flabel {
+            color: #FFE082;
+            font-weight: 600;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-top: 6px;
+        }
+        .flabel:first-child { margin-top: 0; }
+		
+		/* Стили для сворачиваемых комментариев (аналогично введению) */
+.comment-details {
+    border: 1px solid var(--border-color);
+}
+.comment-details summary {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+}
+.comment-details summary::-webkit-details-marker {
+    display: none;
+}
+.comment-details[open] summary span:last-child {
+    transform: rotate(180deg);
+}
     </style>
 </head>
 <body>
 <br>
 <div class="main-title">52 Четасики</div>
 
-<details class="sphere-group" open>
+<!-- Введение (аналогично рупе) -->
+<div class="intro-toggle" id="introToggle" onclick="toggleIntro()">
+    <span class="intro-toggle-label">Введение</span>
+    <span class="intro-toggle-icon">▼</span>
+</div>
+<div class="intro-body" id="introBody">
+    <p><strong>§ 1. Введение</strong></p>
+    <p>Пятьдесят два состояния, ассоциированных с сознанием, которые возникают и исчезают вместе (с сознанием), которые имеют тот же самый объект и основу (что и сознание), известны как ментальные факторы.</p>
+    <p><strong>Которые возникают и исчезают вместе (с сознанием):</strong> Первая строфа определяет ментальные факторы через четыре характеристики, которые являются общими для всех них:</p>
+    <ol style="margin-left: 20px;">
+        <li>возникают вместе с сознанием (екуппāда);</li>
+        <li>исчезают вместе с сознанием (еканиродха);</li>
+        <li>имеют тот же объект, что и сознание (екāламбана);</li>
+        <li>имеют ту же основу, что и сознание (екаваттхука).</li>
+    </ol>
+    <p>Эти четыре характеристики описывают отношение между читтой и сопровождающими её четасиками. Если бы было упомянуто только «возникают вместе», определение (ошибочно) включало бы в качестве четасик материальные явления, произведённые умом и каммой. Однако не все эти материальные явления исчезают в то же самое время, что и возникающая с ними читта, а большинство из них длятся семнадцать моментов ума. Поэтому, чтобы их исключить, была введена характеристика «исчезают вместе».</p>
+    <p>Опять же, существуют два материальных явления — телесная коммуникация и вербальная коммуникация, — которые возникают и исчезают вместе с сознанием. Однако эти материальные явления не берут объект, что и отличает ментальные явления — как читту, так и четасики — от материальных явлений; все ментальные явления переживают объект, возникающие вместе читта и четасики переживают один и тот же объект, в то время как материальные явления не переживают никакого объекта вовсе. Таким образом, третья характеристика говорит о наличии общего объекта.</p>
+    <p>И наконец, в тех измерениях, в которых присутствует скопление материальной формы, а именно в сенсорном мире и тонкоматериальном мире, читта и четасика имеют одну и ту же физическую основу, то есть они возникают с общей поддержкой либо одного из материальных сенсорных органов, либо сердце-основы. Это четвёртое свойство четасик.</p>
+</div>
+
+<!-- Этически вариабельные (13) -->
+<details class="sphere-group">
     <summary class="sphere-summary">Этически вариабельные (13)</summary>
-    
+
+    <!-- Пояснение к этически вариабельным и универсальным факторам -->
+    <div style="background: rgba(255,255,255,0.05); border-left: 3px solid var(--variable); padding: 12px 15px; margin: 10px 15px 15px; border-radius: 8px; font-size: 0.8rem; color: #CBD5E1; line-height: 1.6;">
+        <p style="margin: 0 0 8px;"><strong>Этически вариабельные (аннясамана)</strong> — буквально «общие с другими». Тринадцать факторов первых двух категорий являются общими как для прекрасных, так и для непрекрасных читт. Они принимают этическое качество, переданное читте ассоциированными с ней корнями (хету). В благотворных читтах они становятся благотворными, в неблаготворных — неблаготворными, в каммически неопределённых — неопределёнными.</p>
+        <p style="margin: 0;"><strong>Универсальные (саббачиттасадхарана)</strong> — семь факторов, общие для всех сознаний. Они выполняют самые рудиментарные когнитивные функции, без которых осознание объекта было бы невозможным.</p>
+    </div>
+
     <div class="category-title">Универсальные (7)</div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">1</div><div class="name-ru">Контакт <span class="name-pali">(Phassa)</span></div></div>
-        <div class="factor-desc">Х: касание; Ф: столкновение (объекта с дверью); П: схождение (сознания, объекта и основы); Прич.: объект, вошедший в фокус.</div>
+    <!-- 1. Phassa -->
+    <div class="factor-card b-var" id="card1">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">1</div>
+            <div><div class="name-ru">Контакт <span class="name-pali">(Phassa)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'1')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>касание; <span class="flabel">Функция</span>столкновение (объекта с дверью); <span class="flabel">Проявление</span>схождение (сознания, объекта и основы); <span class="flabel">Причина</span>объект, вошедший в фокус.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">2</div><div class="name-ru">Чувство <span class="name-pali">(Vedanā)</span></div></div>
-        <div class="factor-desc">Х: испытывание (вкушение); Ф: переживание влияния объекта; П: смакование; Прич.: контакт.</div>
+    <!-- 2. Vedanā -->
+    <div class="factor-card b-var" id="card2">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">2</div>
+            <div><div class="name-ru">Чувство <span class="name-pali">(Vedanā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'2')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>испытывание (вкушение); <span class="flabel">Функция</span>переживание влияния объекта; <span class="flabel">Проявление</span>смакование; <span class="flabel">Причина</span>контакт.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">3</div><div class="name-ru">Восприятие <span class="name-pali">(Saññā)</span></div></div>
-        <div class="factor-desc">Х: нотирование (распознавание); Ф: создание знака (метки); П: интерпретация по знаку; Прич.: явленный объект.</div>
+    <!-- 3. Saññā -->
+    <div class="factor-card b-var" id="card3">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">3</div>
+            <div><div class="name-ru">Восприятие <span class="name-pali">(Saññā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'3')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>нотирование (распознавание); <span class="flabel">Функция</span>создание знака (метки); <span class="flabel">Проявление</span>интерпретация по знаку; <span class="flabel">Причина</span>явленный объект.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">4</div><div class="name-ru">Воление <span class="name-pali">(Cetanā)</span></div></div>
-        <div class="factor-desc">Х: состояние воления; Ф: накопление (каммы); П: координация ассоциированных состояний; Прич.: ассоциированные состояния.</div>
+    <!-- 4. Cetanā -->
+    <div class="factor-card b-var" id="card4">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">4</div>
+            <div><div class="name-ru">Воление <span class="name-pali">(Cetanā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'4')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>состояние воления; <span class="flabel">Функция</span>накопление (каммы); <span class="flabel">Проявление</span>координация ассоциированных состояний; <span class="flabel">Причина</span>ассоциированные состояния.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">5</div><div class="name-ru">Однонаправленность <span class="name-pali">(Ekaggatā)</span></div></div>
-        <div class="factor-desc">Х: не-отвлечение; Ф: объединение сопутствующих факторов; П: покой (штиль); Прич.: счастье.</div>
+    <!-- 5. Ekaggatā -->
+    <div class="factor-card b-var" id="card5">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">5</div>
+            <div><div class="name-ru">Однонаправленность <span class="name-pali">(Ekaggatā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'5')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>не-отвлечение; <span class="flabel">Функция</span>объединение сопутствующих факторов; <span class="flabel">Проявление</span>покой (штиль); <span class="flabel">Причина</span>счастье.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">6</div><div class="name-ru">Жизненная сила <span class="name-pali">(Jīvitindriya)</span></div></div>
-        <div class="factor-desc">Х: поддержание ментальных состояний; Ф: заставлять их происходить; П: установление их присутствия; Прич.: состояния, которые нужно поддерживать.</div>
+    <!-- 6. Jīvitindriya -->
+    <div class="factor-card b-var" id="card6">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">6</div>
+            <div><div class="name-ru">Жизненная сила <span class="name-pali">(Jīvitindriya)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'6')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>поддержание ментальных состояний; <span class="flabel">Функция</span>заставлять их происходить; <span class="flabel">Проявление</span>установление их присутствия; <span class="flabel">Причина</span>состояния, которые нужно поддерживать.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">7</div><div class="name-ru">Внимание <span class="name-pali">(Manasikāra)</span></div></div>
-        <div class="factor-desc">Х: ведение (направление) факторов к объекту; Ф: привязывание факторов к объекту; П: конфронтация с объектом; Прич.: объект.</div>
+    <!-- 7. Manasikāra -->
+    <div class="factor-card b-var" id="card7">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">7</div>
+            <div><div class="name-ru">Внимание <span class="name-pali">(Manasikāra)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'7')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>ведение (направление) факторов к объекту; <span class="flabel">Функция</span>привязывание факторов к объекту; <span class="flabel">Проявление</span>конфронтация с объектом; <span class="flabel">Причина</span>объект.</div>
+    </div>
+
+    <!-- Пояснение к группе "Время от времени" -->
+    <div style="background: rgba(255,255,255,0.05); border-left: 3px solid var(--variable); padding: 12px 15px; margin: 10px 15px 15px; border-radius: 8px; font-size: 0.8rem; color: #CBD5E1; line-height: 1.6;">
+        <p style="margin: 0;"><strong>Случающиеся время от времени (пакиṇṇака)</strong> — шесть четасик в этой группе схожи с универсальными в том, что являются этически вариабельными факторами, которые принимают нравственное качество читты, определённое другими сопровождающими её факторами. Отличаются же они от универсальных ментальных факторов тем, что находятся только в некоторых типах сознания, а не во всех.</p>
     </div>
 
     <div class="category-title">Время от времени (6)</div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">8</div><div class="name-ru">Начальное приложение <span class="name-pali">(Vitakka)</span></div></div>
-        <div class="factor-desc">Х: направление ума на объект; Ф: «ударять и молотить» объект; П: ведение ума к объекту; Прич.: объект.</div>
+    <!-- 8. Vitakka -->
+    <div class="factor-card b-var" id="card8">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">8</div>
+            <div><div class="name-ru">Начальное приложение <span class="name-pali">(Vitakka)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'8')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>направление ума на объект; <span class="flabel">Функция</span>«ударять и молотить» объект; <span class="flabel">Проявление</span>ведение ума к объекту; <span class="flabel">Причина</span>объект.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">9</div><div class="name-ru">Устойчивое приложение <span class="name-pali">(Vicāra)</span></div></div>
-        <div class="factor-desc">Х: занятость (удержание) ума на объекте; Ф: «обмолачивание» (якорение); П: закрепление ума на объекте; Прич.: объект.</div>
+    <!-- 9. Vicāra -->
+    <div class="factor-card b-var" id="card9">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">9</div>
+            <div><div class="name-ru">Устойчивое приложение <span class="name-pali">(Vicāra)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'9')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>занятость (удержание) ума на объекте; <span class="flabel">Функция</span>«обмолачивание» (якорение); <span class="flabel">Проявление</span>закрепление ума на объекте; <span class="flabel">Причина</span>объект.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">10</div><div class="name-ru">Решение <span class="name-pali">(Adhimokkha)</span></div></div>
-        <div class="factor-desc">Х: убеждённость; Ф: не-щупание (отсутствие колебаний); П: решимость; Прич.: предмет убеждения.</div>
+    <!-- 10. Adhimokkha -->
+    <div class="factor-card b-var" id="card10">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">10</div>
+            <div><div class="name-ru">Решение <span class="name-pali">(Adhimokkha)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'10')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>убеждённость; <span class="flabel">Функция</span>не-щупание (отсутствие колебаний); <span class="flabel">Проявление</span>решимость; <span class="flabel">Причина</span>предмет убеждения.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">11</div><div class="name-ru">Энергия <span class="name-pali">(Viriya)</span></div></div>
-        <div class="factor-desc">Х: состояние усилия (усердие); Ф: поддержка сопутствующих факторов; П: отсутствие обрушения (стойкость); Прич.: чувство срочности.</div>
+    <!-- 11. Viriya -->
+    <div class="factor-card b-var" id="card11">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">11</div>
+            <div><div class="name-ru">Энергия <span class="name-pali">(Viriya)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'11')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>состояние усилия (усердие); <span class="flabel">Функция</span>поддержка сопутствующих факторов; <span class="flabel">Проявление</span>отсутствие обрушения (стойкость); <span class="flabel">Причина</span>чувство срочности.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">12</div><div class="name-ru">Восторженность <span class="name-pali">(Pīti)</span></div></div>
-        <div class="factor-desc">Х: влюбление (освежение); Ф: пронизывание тела и ума восторгом; П: восторг (энтузиазм); Прич.: ментальное-материальное.</div>
+    <!-- 12. Pīti -->
+    <div class="factor-card b-var" id="card12">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">12</div>
+            <div><div class="name-ru">Восторженность <span class="name-pali">(Pīti)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'12')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>влюбление (освежение); <span class="flabel">Функция</span>пронизывание тела и ума восторгом; <span class="flabel">Проявление</span>восторг (энтузиазм); <span class="flabel">Причина</span>ментальное-материальное.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">13</div><div class="name-ru">Желание <span class="name-pali">(Chanda)</span></div></div>
-        <div class="factor-desc">Х: желание действовать; Ф: поиск объекта; П: нужда в объекте; Прич.: объект.</div>
+    <!-- 13. Chanda -->
+    <div class="factor-card b-var" id="card13">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">13</div>
+            <div><div class="name-ru">Желание <span class="name-pali">(Chanda)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'13')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>желание действовать; <span class="flabel">Функция</span>поиск объекта; <span class="flabel">Проявление</span>нужда в объекте; <span class="flabel">Причина</span>объект.</div>
     </div>
 </details>
 
+<!-- Неблаготворные факторы (14) -->
 <details class="sphere-group">
     <summary class="sphere-summary">Неблаготворные факторы (14)</summary>
     <div class="category-title">Универсальные (4)</div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">14</div><div class="name-ru">Заблуждение <span class="name-pali">(Moha)</span></div></div>
-        <div class="factor-desc">Х: ментальная слепота (незнание); Ф: сокрытие истинной природы объекта; П: отсутствие правильного видения; Прич.: немудрое внимание.</div>
+    <!-- 14. Moha -->
+    <div class="factor-card b-unw" id="card14">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">14</div>
+            <div><div class="name-ru">Заблуждение <span class="name-pali">(Moha)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'14')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>ментальная слепота (незнание); <span class="flabel">Функция</span>сокрытие истинной природы объекта; <span class="flabel">Проявление</span>отсутствие правильного видения; <span class="flabel">Причина</span>немудрое внимание.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">15</div><div class="name-ru">Бесстыдство <span class="name-pali">(Ahirika)</span></div></div>
-        <div class="factor-desc">Х: отсутствие отвращения к злу; Ф: совершение проступков; П: не-уклонение от зла; Прич.: отсутствие самоуважения.</div>
+    <!-- 15. Ahirika -->
+    <div class="factor-card b-unw" id="card15">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">15</div>
+            <div><div class="name-ru">Бесстыдство <span class="name-pali">(Ahirika)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'15')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>отсутствие отвращения к злу; <span class="flabel">Функция</span>совершение проступков; <span class="flabel">Проявление</span>не-уклонение от зла; <span class="flabel">Причина</span>отсутствие самоуважения.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">16</div><div class="name-ru">Безбоязненность <span class="name-pali">(Anottappa)</span></div></div>
-        <div class="factor-desc">Х: отсутствие страха перед последствиями; Ф: совершение проступков; П: не-уклонение от зла; Прич.: отсутствие уважения к другим.</div>
+    <!-- 16. Anottappa -->
+    <div class="factor-card b-unw" id="card16">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">16</div>
+            <div><div class="name-ru">Безбоязненность <span class="name-pali">(Anottappa)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'16')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>отсутствие страха перед последствиями; <span class="flabel">Функция</span>совершение проступков; <span class="flabel">Проявление</span>не-уклонение от зла; <span class="flabel">Причина</span>отсутствие уважения к другим.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">17</div><div class="name-ru">Беспокойство <span class="name-pali">(Uddhacca)</span></div></div>
-        <div class="factor-desc">Х: тревожность (как вода на ветру); Ф: неустойчивость; П: сумятица; Прич.: немудрое внимание к тревоге.</div>
+    <!-- 17. Uddhacca -->
+    <div class="factor-card b-unw" id="card17">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">17</div>
+            <div><div class="name-ru">Беспокойство <span class="name-pali">(Uddhacca)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'17')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>тревожность (как вода на ветру); <span class="flabel">Функция</span>неустойчивость; <span class="flabel">Проявление</span>сумятица; <span class="flabel">Причина</span>немудрое внимание к тревоге.</div>
     </div>
 
     <div class="category-title">Время от времени (10)</div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">18</div><div class="name-ru">Жадность <span class="name-pali">(Lobha)</span></div></div>
-        <div class="factor-desc">Х: хватание объекта; Ф: прилипание (как мясо к сковороде); П: не-отпускание; Прич.: видение наслаждения в вещах.</div>
+    <!-- 18. Lobha -->
+    <div class="factor-card b-unw" id="card18">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">18</div>
+            <div><div class="name-ru">Жадность <span class="name-pali">(Lobha)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'18')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>хватание объекта; <span class="flabel">Функция</span>прилипание (как мясо к сковороде); <span class="flabel">Проявление</span>не-отпускание; <span class="flabel">Причина</span>видение наслаждения в вещах.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">19</div><div class="name-ru">Ошибочный взгляд <span class="name-pali">(Diṭṭhi)</span></div></div>
-        <div class="factor-desc">Х: немудрая интерпретация; Ф: предполагать ложное; П: неправильное верование; Прич.: нежелание видеть благородных.</div>
+    <!-- 19. Diṭṭhi -->
+    <div class="factor-card b-unw" id="card19">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">19</div>
+            <div><div class="name-ru">Ошибочный взгляд <span class="name-pali">(Diṭṭhi)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'19')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>немудрая интерпретация; <span class="flabel">Функция</span>предполагать ложное; <span class="flabel">Проявление</span>неправильное верование; <span class="flabel">Причина</span>нежелание видеть благородных.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">20</div><div class="name-ru">Тщеславие <span class="name-pali">(Māna)</span></div></div>
-        <div class="factor-desc">Х: высокомерие (надменность); Ф: самовозвышение; П: хвастливость; Прич.: жадность без взглядов.</div>
+    <!-- 20. Māna -->
+    <div class="factor-card b-unw" id="card20">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">20</div>
+            <div><div class="name-ru">Тщеславие <span class="name-pali">(Māna)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'20')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>высокомерие (надменность); <span class="flabel">Функция</span>самовозвышение; <span class="flabel">Проявление</span>хвастливость; <span class="flabel">Причина</span>жадность без взглядов.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">21</div><div class="name-ru">Злость <span class="name-pali">(Dosa)</span></div></div>
-        <div class="factor-desc">Х: жестокость (свирепость); Ф: сжигание собственной опоры; П: преследование; Прич.: основание для раздражения.</div>
+    <!-- 21. Dosa -->
+    <div class="factor-card b-unw" id="card21">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">21</div>
+            <div><div class="name-ru">Злость <span class="name-pali">(Dosa)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'21')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>жестокость (свирепость); <span class="flabel">Функция</span>сжигание собственной опоры; <span class="flabel">Проявление</span>преследование; <span class="flabel">Причина</span>основание для раздражения.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">22</div><div class="name-ru">Зависть <span class="name-pali">(Issā)</span></div></div>
-        <div class="factor-desc">Х: ревность к успеху других; Ф: недовольство чужим успехом; П: отвращение к успеху других; Прич.: успех других.</div>
+    <!-- 22. Issā -->
+    <div class="factor-card b-unw" id="card22">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">22</div>
+            <div><div class="name-ru">Зависть <span class="name-pali">(Issā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'22')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>ревность к успеху других; <span class="flabel">Функция</span>недовольство чужим успехом; <span class="flabel">Проявление</span>отвращение к успеху других; <span class="flabel">Причина</span>успех других.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">23</div><div class="name-ru">Скупость <span class="name-pali">(Macchariya)</span></div></div>
-        <div class="factor-desc">Х: сокрытие своего успеха; Ф: непереносимость деления с другими; П: уклонение (низость); Прич.: собственный успех.</div>
+    <!-- 23. Macchariya -->
+    <div class="factor-card b-unw" id="card23">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">23</div>
+            <div><div class="name-ru">Скупость <span class="name-pali">(Macchariya)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'23')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>сокрытие своего успеха; <span class="flabel">Функция</span>непереносимость деления с другими; <span class="flabel">Проявление</span>уклонение (низость); <span class="flabel">Причина</span>собственный успех.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">24</div><div class="name-ru">Волнение / Сожаление <span class="name-pali">(Kukkucca)</span></div></div>
-        <div class="factor-desc">Х: последующее раскаяние; Ф: горевание о сделанном/недоделанном; П: сожаление; Прич.: ошибки свершений и упущений.</div>
+    <!-- 24. Kukkucca -->
+    <div class="factor-card b-unw" id="card24">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">24</div>
+            <div><div class="name-ru">Волнение / Сожаление <span class="name-pali">(Kukkucca)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'24')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>последующее раскаяние; <span class="flabel">Функция</span>горевание о сделанном/недоделанном; <span class="flabel">Проявление</span>сожаление; <span class="flabel">Причина</span>ошибки свершений и упущений.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">25</div><div class="name-ru">Вялость <span class="name-pali">(Thīna)</span></div></div>
-        <div class="factor-desc">Х: отсутствие движущей силы; Ф: рассеивание энергии; П: упадок (тупость) ума; Прич.: немудрое внимание к скуке.</div>
+    <!-- 25. Thīna -->
+    <div class="factor-card b-unw" id="card25">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">25</div>
+            <div><div class="name-ru">Вялость <span class="name-pali">(Thīna)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'25')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>отсутствие движущей силы; <span class="flabel">Функция</span>рассеивание энергии; <span class="flabel">Проявление</span>упадок (тупость) ума; <span class="flabel">Причина</span>немудрое внимание к скуке.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">26</div><div class="name-ru">Апатия <span class="name-pali">(Middha)</span></div></div>
-        <div class="factor-desc">Х: неуправляемость (болезненность факторов); Ф: подавление; П: сонливость («клевание носом»); Прич.: леность.</div>
+    <!-- 26. Middha -->
+    <div class="factor-card b-unw" id="card26">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">26</div>
+            <div><div class="name-ru">Апатия <span class="name-pali">(Middha)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'26')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>неуправляемость (болезненность факторов); <span class="flabel">Функция</span>подавление; <span class="flabel">Проявление</span>сонливость («клевание носом»); <span class="flabel">Причина</span>леность.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">27</div><div class="name-ru">Сомнение <span class="name-pali">(Vicikicchā)</span></div></div>
-        <div class="factor-desc">Х: сомнительность (колебание); Ф: неспособность доверять; П: нерешительность; Прич.: немудрое внимание.</div>
+    <!-- 27. Vicikicchā -->
+    <div class="factor-card b-unw" id="card27">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">27</div>
+            <div><div class="name-ru">Сомнение <span class="name-pali">(Vicikicchā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'27')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>сомнительность (колебание); <span class="flabel">Функция</span>неспособность доверять; <span class="flabel">Проявление</span>нерешительность; <span class="flabel">Причина</span>немудрое внимание.</div>
     </div>
 </details>
 
+<!-- Прекрасные факторы (25) -->
 <details class="sphere-group">
     <summary class="sphere-summary">Прекрасные факторы (25)</summary>
+
+    <!-- Пояснение к универсальным прекрасным факторам -->
+    <div style="background: rgba(255,255,255,0.05); border-left: 3px solid var(--beautiful); padding: 12px 15px; margin: 10px 15px 15px; border-radius: 8px; font-size: 0.8rem; color: #CBD5E1; line-height: 1.6;">
+        <p style="margin: 0;"><strong>Универсальные прекрасные факторы (собханасāдхāрана)</strong> — девятнадцать четасик, которые обязательно присутствуют во всех прекрасных сознаниях. Далее следуют три группы прекрасных четасик, которые являются вариабельными дополнениями и не обязательно содержатся в прекрасном сознании.</p>
+    </div>
+
     <div class="category-title">Универсальные (19)</div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">28</div><div class="name-ru">Вера <span class="name-pali">(Saddhā)</span></div></div>
-        <div class="factor-desc">Х: помещение доверия; Ф: очищение (как камень очищает мутную воду); П: решимость (ясность); Прич.: предмет веры.</div>
+    <!-- 28. Saddhā -->
+    <div class="factor-card b-beau" id="card28">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">28</div>
+            <div><div class="name-ru">Вера <span class="name-pali">(Saddhā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'28')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>помещение доверия; <span class="flabel">Функция</span>очищение (как камень очищает мутную воду); <span class="flabel">Проявление</span>решимость (ясность); <span class="flabel">Причина</span>предмет веры.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">29</div><div class="name-ru">Осознанность <span class="name-pali">(Sati)</span></div></div>
-        <div class="factor-desc">Х: не-колебание (присутствие ума); Ф: отсутствие замешательства; П: охрана (конфронтация с объектом); Прич.: сильное восприятие.</div>
+    <!-- 29. Sati -->
+    <div class="factor-card b-beau" id="card29">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">29</div>
+            <div><div class="name-ru">Осознанность <span class="name-pali">(Sati)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'29')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>не-колебание (присутствие ума); <span class="flabel">Функция</span>отсутствие замешательства; <span class="flabel">Проявление</span>охрана (конфронтация с объектом); <span class="flabel">Причина</span>сильное восприятие.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">30</div><div class="name-ru">Стыд <span class="name-pali">(Hiri)</span></div></div>
-        <div class="factor-desc">Х: отвращение к злу; Ф: не-совершение зла; П: брезгливость к греху; Прич.: самоуважение.</div>
+    <!-- 30. Hiri -->
+    <div class="factor-card b-beau" id="card30">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">30</div>
+            <div><div class="name-ru">Стыд <span class="name-pali">(Hiri)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'30')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>отвращение к злу; <span class="flabel">Функция</span>не-совершение зла; <span class="flabel">Проявление</span>брезгливость к греху; <span class="flabel">Причина</span>самоуважение.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">31</div><div class="name-ru">Боязнь зла <span class="name-pali">(Ottappa)</span></div></div>
-        <div class="factor-desc">Х: страх перед злом; Ф: не-совершение зла; П: боязнь последствий; Прич.: уважение к другим.</div>
+    <!-- 31. Ottappa -->
+    <div class="factor-card b-beau" id="card31">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">31</div>
+            <div><div class="name-ru">Боязнь зла <span class="name-pali">(Ottappa)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'31')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>страх перед злом; <span class="flabel">Функция</span>не-совершение зла; <span class="flabel">Проявление</span>боязнь последствий; <span class="flabel">Причина</span>уважение к другим.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">32</div><div class="name-ru">Не-жадность <span class="name-pali">(Alobha)</span></div></div>
-        <div class="factor-desc">Х: отсутствие привязанности; Ф: не-хватание; П: не-прилипание; Прич.: мудрое внимание.</div>
+    <!-- 32. Alobha -->
+    <div class="factor-card b-beau" id="card32">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">32</div>
+            <div><div class="name-ru">Не-жадность <span class="name-pali">(Alobha)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'32')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>отсутствие привязанности; <span class="flabel">Функция</span>не-хватание; <span class="flabel">Проявление</span>не-прилипание; <span class="flabel">Причина</span>мудрое внимание.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">33</div><div class="name-ru">Не-злость <span class="name-pali">(Adosa)</span></div></div>
-        <div class="factor-desc">Х: отсутствие жестокости (кротость); Ф: устранение враждебности; П: согласие; Прич.: мудрое внимание.</div>
+    <!-- 33. Adosa -->
+    <div class="factor-card b-beau" id="card33">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">33</div>
+            <div><div class="name-ru">Не-злость <span class="name-pali">(Adosa)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'33')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>отсутствие жестокости (кротость); <span class="flabel">Функция</span>устранение враждебности; <span class="flabel">Проявление</span>согласие; <span class="flabel">Причина</span>мудрое внимание.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">34</div><div class="name-ru">Нейтральность <span class="name-pali">(Tatramajjhattatā)</span></div></div>
-        <div class="factor-desc">Х: равновесие; Ф: предотвращение избытка/недостатка; П: беспристрастное созерцание; Прич.: ассоциированные состояния.</div>
+    <!-- 34. Tatramajjhattatā -->
+    <div class="factor-card b-beau" id="card34">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">34</div>
+            <div><div class="name-ru">Нейтральность <span class="name-pali">(Tatramajjhattatā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'34')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>равновесие; <span class="flabel">Функция</span>предотвращение избытка/недостатка; <span class="flabel">Проявление</span>беспристрастное созерцание; <span class="flabel">Причина</span>ассоциированные состояния.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">35-36</div><div class="name-ru">Уравновешенность <span class="name-pali">(Passaddhi)</span></div></div>
-        <div class="factor-desc">Х: успокоение возмущений (факторов/сознания); Ф: уничтожение возмущений; П: умиротворение; Прич.: факторы/сознание.</div>
+    <!-- 35-36. Passaddhi (kāya-citta) -->
+    <div class="factor-card b-beau" id="card35">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">35-36</div>
+            <div><div class="name-ru">Уравновешенность <span class="name-pali">(Passaddhi)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'35')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>успокоение возмущений (факторов/сознания); <span class="flabel">Функция</span>уничтожение возмущений; <span class="flabel">Проявление</span>умиротворение; <span class="flabel">Причина</span>факторы/сознание.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">37-38</div><div class="name-ru">Лёгкость <span class="name-pali">(Lahutā)</span></div></div>
-        <div class="factor-desc">Х: ослабление тяжести; Ф: разгрузка тяжести; П: отсутствие инертности; Прич.: факторы/сознание.</div>
+    <!-- 37-38. Lahutā -->
+    <div class="factor-card b-beau" id="card36">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">37-38</div>
+            <div><div class="name-ru">Лёгкость <span class="name-pali">(Lahutā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'36')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>ослабление тяжести; <span class="flabel">Функция</span>разгрузка тяжести; <span class="flabel">Проявление</span>отсутствие инертности; <span class="flabel">Причина</span>факторы/сознание.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">39-40</div><div class="name-ru">Гибкость <span class="name-pali">(Mudutā)</span></div></div>
-        <div class="factor-desc">Х: устранение жёсткости; Ф: разрушение жёсткости; П: не-противление; Прич.: факторы/сознание.</div>
+    <!-- 39-40. Mudutā -->
+    <div class="factor-card b-beau" id="card37">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">39-40</div>
+            <div><div class="name-ru">Гибкость <span class="name-pali">(Mudutā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'37')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>устранение жёсткости; <span class="flabel">Функция</span>разрушение жёсткости; <span class="flabel">Проявление</span>не-противление; <span class="flabel">Причина</span>факторы/сознание.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">41-42</div><div class="name-ru">Управляемость <span class="name-pali">(Kammaññatā)</span></div></div>
-        <div class="factor-desc">Х: устранение неуправляемости; Ф: разрушение неуправляемости; П: успех в принятии объекта; Прич.: факторы/сознание.</div>
+    <!-- 41-42. Kammaññatā -->
+    <div class="factor-card b-beau" id="card38">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">41-42</div>
+            <div><div class="name-ru">Управляемость <span class="name-pali">(Kammaññatā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'38')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>устранение неуправляемости; <span class="flabel">Функция</span>разрушение неуправляемости; <span class="flabel">Проявление</span>успех в принятии объекта; <span class="flabel">Причина</span>факторы/сознание.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">43-44</div><div class="name-ru">Сноровка <span class="name-pali">(Pāguññatā)</span></div></div>
-        <div class="factor-desc">Х: оздоровление (факторов/сознания); Ф: разрушение нездоровья; П: отсутствие недееспособности; Прич.: факторы/сознание.</div>
+    <!-- 43-44. Pāguññatā -->
+    <div class="factor-card b-beau" id="card39">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">43-44</div>
+            <div><div class="name-ru">Сноровка <span class="name-pali">(Pāguññatā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'39')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>оздоровление (факторов/сознания); <span class="flabel">Функция</span>разрушение нездоровья; <span class="flabel">Проявление</span>отсутствие недееспособности; <span class="flabel">Причина</span>факторы/сознание.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">45-46</div><div class="name-ru">Прямота <span class="name-pali">(Ujjukatā)</span></div></div>
-        <div class="factor-desc">Х: честность (прямолинейность); Ф: разрушение извилистости; П: не-криводушие; Прич.: факторы/сознание.</div>
+    <!-- 45-46. Ujjukatā -->
+    <div class="factor-card b-beau" id="card40">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">45-46</div>
+            <div><div class="name-ru">Прямота <span class="name-pali">(Ujjukatā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'40')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>честность (прямолинейность); <span class="flabel">Функция</span>разрушение извилистости; <span class="flabel">Проявление</span>не-криводушие; <span class="flabel">Причина</span>факторы/сознание.</div>
     </div>
+
+    <!-- Пояснение к воздержаниям (вирати) – сворачиваемое -->
+    <details class="comment-details" style="margin: 10px 15px 15px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--beautiful); border-radius: 8px; overflow: hidden;">
+        <summary class="comment-summary" style="padding: 12px 15px; list-style: none; cursor: pointer; font-weight: bold; color: var(--beautiful); display: flex; justify-content: space-between; align-items: center;">
+            <span>О воздержаниях (вирати) — подробнее</span>
+            <span style="font-size: 0.7rem; transition: transform 0.2s;">▼</span>
+        </summary>
+        <div style="padding: 0 15px 12px 15px; font-size: 0.8rem; color: #CBD5E1; line-height: 1.6;">
+            <p style="margin: 0 0 8px;"><strong>Воздержания (вирати)</strong> — три ментальных фактора, ответственных за намеренное воздержание от неправильного поведения посредством речи, действия и получения средств к существованию.</p>
+            <p style="margin: 0 0 8px;">Комментаторы различают три типа вирати:</p>
+            <ul style="margin: 0 0 8px; padding-left: 20px;">
+                <li><strong>Естественное воздержание (сампаттавирати)</strong> — воздержание от дурных поступков в случае возникновения возможности их совершения; происходит вследствие социальной позиции, возраста, образования и т. д.</li>
+                <li><strong>Воздержание принятием обетов (самāдāнавирати)</strong> — воздержание от дурных поступков по причине взятия обязательств по соблюдению обетов (например, пяти обетов).</li>
+                <li><strong>Воздержание искоренением (самуччхедавирати)</strong> — воздержание, ассоциированное со сверхмирским сознанием пути, которое искореняет предрасположенность к дурным поступкам.</li>
+            </ul>
+            <p style="margin: 0;">Три вирати — это правильная речь, правильное действие и правильный способ получения средств к существованию.</p>
+        </div>
+    </details>
 
     <div class="category-title">Воздержания (3)</div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">47</div><div class="name-ru">Прав. речь <span class="name-pali">(Sammā-vācā)</span></div></div>
-        <div class="factor-desc">Х: намеренное не-нарушение; Ф: отступление (воздержание) от зла; П: не-совершение дурного; Прич.: вера, совесть, стыд.</div>
+    <!-- 47. Sammā-vācā -->
+    <div class="factor-card b-beau" id="card41">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">47</div>
+            <div><div class="name-ru">Прав. речь <span class="name-pali">(Sammā-vācā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'41')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>намеренное не-нарушение; <span class="flabel">Функция</span>отступление (воздержание) от зла; <span class="flabel">Проявление</span>не-совершение дурного; <span class="flabel">Причина</span>вера, совесть, стыд.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">48</div><div class="name-ru">Прав. действие <span class="name-pali">(Sammā-kammanta)</span></div></div>
-        <div class="factor-desc">Х: намеренное не-нарушение; Ф: отступление (воздержание) от зла; П: не-совершение дурного; Прич.: вера, совесть, стыд.</div>
+    <!-- 48. Sammā-kammanta -->
+    <div class="factor-card b-beau" id="card42">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">48</div>
+            <div><div class="name-ru">Прав. действие <span class="name-pali">(Sammā-kammanta)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'42')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>намеренное не-нарушение; <span class="flabel">Функция</span>отступление (воздержание) от зла; <span class="flabel">Проявление</span>не-совершение дурного; <span class="flabel">Причина</span>вера, совесть, стыд.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">49</div><div class="name-ru">Прав. жизнь <span class="name-pali">(Sammā-ājīva)</span></div></div>
-        <div class="factor-desc">Х: намеренное не-нарушение; Ф: отступление (воздержание) от зла; П: не-совершение дурного; Прич.: вера, совесть, стыд.</div>
+    <!-- 49. Sammā-ājīva -->
+    <div class="factor-card b-beau" id="card43">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">49</div>
+            <div><div class="name-ru">Прав. жизнь <span class="name-pali">(Sammā-ājīva)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'43')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>намеренное не-нарушение; <span class="flabel">Функция</span>отступление (воздержание) от зла; <span class="flabel">Проявление</span>не-совершение дурного; <span class="flabel">Причина</span>вера, совесть, стыд.</div>
     </div>
 
+    <!-- Пояснение к безграничностям – сворачиваемое -->
+    <details class="comment-details" style="margin: 10px 15px 15px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--beautiful); border-radius: 8px; overflow: hidden;">
+        <summary class="comment-summary" style="padding: 12px 15px; list-style: none; cursor: pointer; font-weight: bold; color: var(--beautiful); display: flex; justify-content: space-between; align-items: center;">
+            <span>О безграничностях (брахмавихарах) — подробнее</span>
+            <span style="font-size: 0.7rem; transition: transform 0.2s;">▼</span>
+        </summary>
+        <div style="padding: 0 15px 12px 15px; font-size: 0.8rem; color: #CBD5E1; line-height: 1.6;">
+            <p style="margin: 0 0 8px;"><strong>Безграничности (аппаманнья)</strong> — четыре возвышенных состояния ума, развиваемые по отношению ко всем живым существам: любящая доброта (меттā), сострадание (карунā), альтруистическая радость (мудитā) и равностность (упеккхā). Они также называются брахмавихарами, «божественными обителями».</p>
+            <p style="margin: 0 0 8px;">В качестве отдельных ментальных факторов в список четасик включены только сострадание и альтруистическая радость. Любящая доброта является проявлением четасики «не-злость» (адоса), а равностность — проявлением четасики «нейтральность ума» (татрамаджжхаттатā). Эти два фактора (адоса и татрамаджжхаттатā) присутствуют во всех прекрасных сознаниях, тогда как сострадание и сорадость возникают лишь время от времени, когда выполняется именно их функция.</p>
+        </div>
+    </details>
+
     <div class="category-title">Безграничности (2)</div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">50</div><div class="name-ru">Сострадание <span class="name-pali">(Karuṇā)</span></div></div>
-        <div class="factor-desc">Х: содействие устранению страдания других; Ф: неспособность выносить чужое страдание; П: не-жестокость; Прич.: видение беспомощности в страдающих.</div>
+    <!-- 50. Karuṇā -->
+    <div class="factor-card b-beau" id="card44">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">50</div>
+            <div><div class="name-ru">Сострадание <span class="name-pali">(Karuṇā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'44')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>содействие устранению страдания других; <span class="flabel">Функция</span>неспособность выносить чужое страдание; <span class="flabel">Проявление</span>не-жестокость; <span class="flabel">Причина</span>видение беспомощности в страдающих.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">51</div><div class="name-ru">Радость <span class="name-pali">(Muditā)</span></div></div>
-        <div class="factor-desc">Х: радость успеху других; Ф: не-завистливость; П: устранение антипатии (скуки); Прич.: видение успеха других.</div>
+    <!-- 51. Muditā -->
+    <div class="factor-card b-beau" id="card45">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">51</div>
+            <div><div class="name-ru">Радость <span class="name-pali">(Muditā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'45')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>радость успеху других; <span class="flabel">Функция</span>не-завистливость; <span class="flabel">Проявление</span>устранение антипатии (скуки); <span class="flabel">Причина</span>видение успеха других.</div>
     </div>
 
     <div class="category-title">Мудрость (1)</div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">52</div><div class="name-ru">Мудрость <span class="name-pali">(Paññindriya)</span></div></div>
-        <div class="factor-desc">Х: проникновение в реальную природу (знание); Ф: освещение (удаление тьмы неведения); П: отсутствие замешательства; Прич.: сосредоточение.</div>
+    <!-- 52. Paññindriya -->
+    <div class="factor-card b-beau" id="card46">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">52</div>
+            <div><div class="name-ru">Мудрость <span class="name-pali">(Paññindriya)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'46')">подробнее</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Характеристика</span>проникновение в реальную природу (знание); <span class="flabel">Функция</span>освещение (удаление тьмы неведения); <span class="flabel">Проявление</span>отсутствие замешательства; <span class="flabel">Причина</span>сосредоточение.</div>
     </div>
 </details>
 <br>
+
+<!-- Дополнительные разделы классификации (по аналогии с рупой) -->
+
+
+<!-- § Классификация по корням -->
+<details class="class-group">
+    <summary class="class-summary">Классификация по корням</summary>
+    <div class="class-body">
+        <div class="class-para">
+            <span class="class-term">Три корня неблаготворного:</span> жадность (лобха), злость (доса), заблуждение (моха). Они всегда присутствуют в неблаготворных сознаниях.
+        </div>
+        <div class="class-para">
+            <span class="class-term">Три корня благотворного:</span> не-жадность (алобха), не-злость (адоса), не-заблуждение (амомха/паннья). Они присутствуют во всех прекрасных сознаниях.
+        </div>
+        <div class="class-para">
+            Остальные четасики могут быть связаны с этими корнями, быть этически вариабельными.
+        </div>
+    </div>
+</details>
+
+<!-- § Классификация по джхановым факторам (зелёная тема) -->
+
+<details class="origin-group">
+    <summary class="origin-summary">Факторы джханы
+    </summary>
+    <div class="origin-body">
+        <div class="origin-para">
+			<span class="origin-term">Семь факторов джхāны: 1)начальное приложение,
+2)устойчивое приложение, 3)восторженность, 4)однона-
+правленность, 5)радость, 6)недовольство, 7)спокойствие. <br><br>
+            <span class="origin-term">Слово  джхāна в данном случае используется не в его
+обычном значении медитативного погружения, а в более широком смысле близкого созерцания (упаниджжхāйана) объекта. Поэтому состояния, перечисленные здесь, считаются факторами джхāны, даже когда они случаются вне процесса
+медитации. Эти семь четасик называются факторами джхāны, поскольку они дают уму возможность близко созерцать
+объект. Из них недовольство является исключительно неблаготворным и случается только в двух читтах, связанных
+с отвращением. Остальные шесть, в зависимости от читты,
+в которой они возникают, могут быть благотворными, неблаготворными или неопределёнными.
+<br>
+        </div>
+    </div>
+</details>
+
+<!-- § Классификация по факторам пути (бирюзовая тема) -->
+
+<details class="group-group">
+    <summary class="group-summary">Восемь факторов пути</summary>
+    <div class="group-body">
+        <div class="group-para">
+            <span class="group-term">1)правильный взгляд,
+2)правильное намерение,  3)правильная речь,  4)правильное
+действие,  5)правильный способ получения средств к существованию,  6)правильное усилие,  7)правильная осознанность,  8)правильная концентрация.
+<br><br>
+            <span class="group-term">Из восьми факторов Благородного восьмеричного пути
+правильный взгляд (саммāдиттхи) является четасикой мудрости, осуществляющей понимание Четырёх благородных истин.
+Правильное намерение (саммāсанкаппа) является четасикой
+начального приложения (витакка), направленной к отречению, доброжелательности и безвредности. Факторы пути 3–5
+идентичны с тремя типами воздержания. Правильное усилие является тем же самым, что и четыре высших
+усилия. Правильная осознанность является тем же самым, что и четыре основы осознанности. Правильная
+концентрация определяется в терминах четырёх джхāн системы сутт.
+<br>
+
+        </div>
+
+    </div>
+</details>
+
+<br>
+
+<!-- OVERLAY и DRAWER -->
+<div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+    <div class="drawer-handle"></div>
+    <div class="drawer-inner">
+        <div class="drawer-top">
+            <div>
+                <div class="drawer-label" id="drawer-label"></div>
+                <div class="drawer-title" id="drawer-title"></div>
+                <div class="drawer-pali" id="drawer-pali"></div>
+            </div>
+            <button class="drawer-close" onclick="closeDrawer()">✕</button>
+        </div>
+        <div class="drawer-origin-label">Категория</div>
+        <div class="drawer-short" id="drawer-short"></div>
+        <div class="drawer-origin-label" style="margin-top:14px;">Корень</div>
+        <div id="drawer-root" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px;"></div>
+        <div class="drawer-divider">Подробнее</div>
+        <div class="drawer-long" id="drawer-long"></div>
+    </div>
+</div>
+
+<script>
+    // Данные для drawer (полные описания будут добавлены из Сангахи позже)
+    const dataCetasikas = {
+            '1': {
+            label: 'Универсальный · I',
+            title: 'Контакт',
+            pali: 'Phassa',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Универсальный · Вариабельный</span>',
+            long: 'Слово пхасса происходит от глагола пхусати, означающего «касаться», но контакт не должен пониматься как простое физическое воздействие объекта на телесную способность [осязание]. Это, скорее, ментальный фактор, посредством которого сознание ментально «касается» объекта, который только что появился, инициируя тем самым целое когнитивное событие. В терминах четырёхкратного способа определения, используемого в палийских комментариях, контакт имеет характеристику касания. Его функция — столкновение, так как он заставляет столкнуться сознание и объект. Его проявление — совпадение сознания, управляющей сенсорной способности и объекта. Его непосредственная причина — объектное поле, попавшее в фокус.',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+        '2': {
+            label: 'Универсальный · II',
+            title: 'Чувство',
+            pali: 'Vedanā',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Универсальный · Вариабельный</span>',
+            long: 'Чувство — это ментальный фактор, который чувствует объект, это эмоциональная тональность, в которой переживается объект. Палийское слово веданā не означает эмоцию (которая является сложным явлением, включающим набор сопутствующих ментальных факторов), это элементарнейшее эмоциональное качество опыта, которое может быть приятным, болезненным либо нейтральным. О чувстве сказано, что его характеристика — быть чувствуемым (ведайита). Его функция — переживание, или его функция — наслаждение желанным аспектом объекта. Его проявление — смакование ассоциированных ментальных факторов. Его непосредственная причина — уравновешенность. В то время как другие ментальные факторы переживают объект только косвенно, чувство переживает его напрямую и полностью. В связи с этим другие ментальные факторы сравниваются с поваром, который готовит блюдо для короля и только пробует его во время приготовления, в то время как чувство сравнивается с самим королём, который наслаждается этой едой столько, сколько пожелает.',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+        '3': {
+            label: 'Универсальный · III',
+            title: 'Восприятие',
+            pali: 'Saññā',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Универсальный · Вариабельный</span>',
+            long: 'Характеристикой восприятия является различение качеств объекта. Его функция — выделять какой-то знак в качестве условия для повторного восприятия «того же самого», или его функция — распознавание того, что было воспринято ранее. Оно проявляется в виде интерпретации объекта (абхинивеса) через особенности, которые были восприняты. Его непосредственная причина — объект как он предстаёт [восприятию]. Его образ действия сравним с распознаванием столяром определённых видов дерева посредством пометок, поставленных [ранее] на каждом из них.',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+        '4': {
+            label: 'Универсальный · IV',
+            title: 'Воление',
+            pali: 'Cetanā',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Универсальный · Вариабельный</span>',
+            long: 'Четанā — от того же корня, что и читта, — является ментальным фактором, который имеет дело с актуализацией цели, то есть с произвольным или волевым аспектом познания. Поэтому он переведён как «воление». Комментарии объясняют, что четанā организует ассоциированные ментальные факторы в процессе их воздействия на объект. Его характеристикой является состояние воления, его функция — аккумулировать (камму), и его проявление — координация. Его непосредственная причина — ассоциированные состояния. Как главный ученик повторяет свой собственный урок и также заставляет других учеников повторять их уроки, так и воление, начиная работать в отношении своего объекта, также заставляет ассоциированные ментальные состояния выполнять их собственные задачи. Воление является самым важным ментальным фактором в генерировании каммы, поскольку именно воление определяет этическое качество действия.',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+        '5': {
+            label: 'Универсальный · V',
+            title: 'Однонаправленность',
+            pali: 'Ekaggatā',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Универсальный · Вариабельный</span>',
+            long: 'Это объединение ума на объекте. Хотя своей выразительности этот фактор достигает только в джхāнах, где он функционирует как фактор джхāны, Абхидхамма учит, что зародыш этой способности к ментальному объединению присутствует во всех типах сознания, даже в самых рудиментарных. В них он функционирует как фактор, который фиксирует ум на объекте. Характеристика однонаправленности — не-блуждание или неотвлечение. Её функция — собирать, или объединять, ассоциированные состояния. Она проявляется как умиротворённость, а её непосредственная причина — счастье.',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+        '6': {
+            label: 'Универсальный · VI',
+            title: 'Жизненная сила',
+            pali: 'Jīvitindriya',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Универсальный · Вариабельный</span>',
+            long: 'Существует два вида управляющей жизнь-способности: ментальная, которая оживляет ассоциированные ментальные состояния, и физическая, которая оживляет материальные явления. Но в качестве четасики имеется в виду только ментальная управляющая жизнь-способность. Её характеристика — поддержание ассоциированных ментальных состояний; функция — делать так, чтобы они происходили; проявление — установление их присутствия; и непосредственная причина — ментальные состояния, которые необходимо поддерживать.',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+        '7': {
+            label: 'Универсальный · VII',
+            title: 'Внимание',
+            pali: 'Manasikāra',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Универсальный · Вариабельный</span>',
+            long: 'Палийское слово буквально означает «делая в уме». Внимание — это ментальный фактор, ответственный за направление ума к объекту, посредством чего объект становится представленным сознанию. Его характеристика — ведение (сāрана) ассоциированных ментальных состояний по направлению к объекту. Его функция — привязывать ассоциированные состояния к объекту. Оно проявляется как конфронтация с объектом и его непосредственная причина — объект. Внимание — как руль корабля, который направляет его к месту назначения, или как возничий, который посылает хорошо обученных лошадей (то есть ассоциированные состояния) по направлению к их месту назначения (объекту). Ментальный фактор манасикāра необходимо отличать от витакки: в то время как манасикāра направляет сопутствующие ему ментальные факторы к объекту, виттака применяет их к объекту. Манасикāра — обязательный познавательный фактор, присутствующий во всех состояниях сознания; витакка — специализированный фактор, не являющийся обязательным для процесса познания.',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+            '8': {
+            label: 'Время от времени · I',
+            title: 'Начальное приложение',
+            pali: 'Vitakka',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Особый · Вариабельный</span>',
+            long: 'Ментальный фактор витакка уже был представлен в обсуждении джхāн, где он появился как первый из пяти факторов джхāны. Витакка — это приложение ума к объекту. Его характеристика — направление ума на объект. Его функция — ударять и молотить объект. Оно проявляется в ведении ума на объект. Хотя никакой непосредственной причины в комментариях не упомянуто, в качестве его непосредственной причины может быть понят сам объект. Обычно витакка просто прилагает ум к объекту. Но когда этот ментальный фактор культивируется через концентрацию, он становится фактором джхāны. В этом случае он называется аппанā — «погружение ума в объект». Витакка также называется санкаппа — «намерение» — и в таком качестве различается как миччхāсанкаппа, или неправильное намерение, и саммāсанкаппа, или правильное намерение. Последний является вторым фактором Благородного восьмеричного пути.',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+        '9': {
+            label: 'Время от времени · II',
+            title: 'Устойчивое приложение',
+            pali: 'Vicāra',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Особый · Вариабельный</span>',
+            long: 'Вичāра, также являющаяся фактором джхāны, имеет характеристику продолжительного давления на объект в смысле его исследования. Её функция — устойчивое приложение ассоциированных ментальных явлений к объекту. Она проявляется в виде якорения этих явлений на объекте. Объект может пониматься в качестве её непосредственной причины. Разница между витаккой и вичāрой была описана выше (комментарий к §§ 18–20).',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+        '10': {
+            label: 'Время от времени · III',
+            title: 'Решение',
+            pali: 'Adhimokkha',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Особый · Вариабельный</span>',
+            long: 'Слово адхимоккха буквально означает «отпускание ума на объект». Поэтому оно было переведён как «решение» (или «решимость»). Оно имеет характеристику убеждённости, функцию ненащупывания [то есть противоположность блужданию в темноте «на ощупь»] и проявление в виде решимости. Его непосредственная причина — предмет убеждения. Из-за его непоколебимой решимости в отношении объекта оно сравнивается с каменным столбом.',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+        '11': {
+            label: 'Время от времени · IV',
+            title: 'Энергия',
+            pali: 'Viriya',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Особый · Вариабельный</span>',
+            long: 'Вирийа — это состояние или действие того, кто энергичен. Её характеристика — поддержание, усилие и выстраивание. Её функция — поддерживать ассоциированные состояния. Её проявление — отсутствие краха. Её непосредственная причина — чувство срочности (самвега) или какое-либо основание для появления энергии, то есть всё, что побуждает к энергичному действию. Так же как новые брёвна, добавленные к старому дому, не допускают его разрушения, или как сильное подкрепление даёт возможность армии короля победить врага, так и энергия поддерживает и помогает всем ассоциированным состояниям и не позволяет им отступать.',
+            roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+        },
+        '12': {
+            label: 'Время от времени · V',
+            title: 'Восторженность',
+            pali: 'Pīti',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Особый · Вариабельный</span>',
+            long: 'Уже представленная среди факторов джхāны, пити имеет характеристику влюблять (сампийāйана). Её функция — освежать тело и ум, или её функция пронизывать (до восторженного трепета). Она проявляется как восторг [или энтузиазм]. Ментальное-материальное (нāмарупа) является её непосредственной причиной.',
+            roots: ["lobha", "alobha", "adosa", "amoha"]
+        },
+        '13': {
+            label: 'Время от времени · VI',
+            title: 'Желание',
+            pali: 'Chanda',
+            short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Особый · Вариабельный</span>',
+            long: 'Чханда здесь обозначает желание действовать (катту-кāматā), то есть выполнить действие или достичь какого-то результата. Этот тип желания необходимо отличать от желания в предосудительном смысле, то есть от лобхи, жадности, и рāги, страсти. В то время как эти последние термины всегда являются неблаготворными, чханда — этически вариабельный фактор, который, будучи соединён с благотворными сопутствующими факторами, может функционировать в качестве нравственного желания достичь достойной цели. Характеристика чханды — это желание действовать, её функция — поиск объекта, её проявление — нужда в объекте, и этот же самый объект является её непосредственной причиной. Её необходимо рассматривать как вытягивание рук ума по направлению к объекту.',
+            roots: ["lobha", "dosa", "alobha", "adosa", "amoha"]
+        },
+            '14': {
+            label: 'Неблаготворный универсальный · I',
+            title: 'Заблуждение',
+            pali: 'Moha',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный · Корень</span>',
+            long: 'Моха является синонимом термина авиджжā «неведение». Его характеристика — ментальная слепота или незнание (аннāна). Его функция — непроникновение или сокрытие настоящей природы объекта. Оно проявляет себя как отсутствие правильного понимания или как ментальная темнота. Его непосредственная причина — немудрое внимание (айонисо манасикāра). Оно должно рассматриваться как корень всего, что является неблаготворным.',
+            roots: ["lobha", "dosa", "moha"]
+        },
+        '15': {
+            label: 'Неблаготворный универсальный · II',
+            title: 'Бесстыдство',
+            pali: 'Ahirika',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Характеристикой бесстыдства является отсутствие отвращения к телесным и вербальным проступкам. Его функция — совершение дурных дел. Оно проявляется как неуклонение от дурного. Его непосредственная причина — отсутствие уважения к себе.',
+            roots: ["lobha", "dosa", "moha"]
+        },
+        '16': {
+            label: 'Неблаготворный универсальный · III',
+            title: 'Безбоязненность дурных поступков',
+            pali: 'Anottappa',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Характеристикой безбоязненности дурных поступков (или нравственного безрассудства) является отсутствие страха по отношению к таким проступкам. Его функция — совершение дурных дел. Оно проявляется как неуклонение от дурного. Его непосредственная причина — отсутствие уважения к другим.',
+            roots: ["lobha", "dosa", "moha"]
+        },
+        '17': {
+            label: 'Неблаготворный универсальный · IV',
+            title: 'Беспокойство',
+            pali: 'Uddhacca',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Беспокойство (или смятение) имеет своей характеристикой тревожность, подобно воде, взбудораженной ветром. Его функция — делать ум неустойчивым, подобно тому как ветер заставляет колыхаться флаг. Оно проявляется как суматоха. Его непосредственная причина — немудрое внимание к тревожности ума.',
+            roots: ["lobha", "dosa", "moha"]
+        },
+        '18': {
+            label: 'Неблаготворный непостоянный · I',
+            title: 'Жадность',
+            pali: 'Lobha',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный · Корень</span>',
+            long: 'Жадность, первый неблаготворный корень, включает все степени эгоистичного желания, стремления, привязанности и цепляния. Её характеристикой является хватание объекта. Её функция — это приставание, подобно тому как мясо пристаёт к горячей сковороде. Она проявляет себя как неотпускание. Её непосредственная причина — видение наслаждения в вещах, которые ведут к рабству.',
+            roots: ["lobha"]
+        },
+        '19': {
+            label: 'Неблаготворный непостоянный · II',
+            title: 'Ошибочный взгляд',
+            pali: 'Diṭṭhi',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Диṭṭхи здесь обозначает неправильное видение. Его характеристика — немудрая (необоснованная) интерпретация вещей. Его функция — предполагать. Оно проявляется как неправильная интерпретация или неправильное верование. Его непосредственная причина — это нежелание видеть благородных (ариев) и т.д.',
+            roots: ["lobha"]
+        },
+        '20': {
+            label: 'Неблаготворный непостоянный · III',
+            title: 'Тщеславие',
+            pali: 'Māna',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Тщеславие имеет своей характеристикой высокомерие. Его функция — самовозвышение. Его проявление — хвастливость. Его непосредственная причина — жадность, диссоциированная от взглядов. Его следует рассматривать как безумие.',
+            roots: ["lobha"]
+        },
+        '21': {
+            label: 'Неблаготворный непостоянный · IV',
+            title: 'Злость',
+            pali: 'Dosa',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный · Корень</span>',
+            long: 'Доса, второй неблаготворный корень, охватывает все виды и степени отвращения, недоброжелательности, гнева, раздражения, досады и враждебности. Её характеристика — жестокость. Её функция — разносить или сжигать её собственную опору, то есть ментальное и материальное, в которых она возникает. Она проявляется как преследование и её непосредственная причина — основание для раздражения.',
+            roots: ["dosa"]
+        },
+        '22': {
+            label: 'Неблаготворный непостоянный · V',
+            title: 'Зависть',
+            pali: 'Issā',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Характеристика зависти — пребывание в состоянии ревности к успеху других. Её функция — быть недовольным успехом других. Она проявляется в виде отвращения к нему. Её непосредственная причина — успех других.',
+            roots: ["dosa"]
+        },
+        '23': {
+            label: 'Неблаготворный непостоянный · VI',
+            title: 'Скупость',
+            pali: 'Macchariya',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Характеристика маччхарийи — это сокрытие уже обретённого успеха или возможности его обретения. Её функция — непереносимость того, чтобы делиться им с другими. Она проявляется в виде уклонения (от того, чтобы делиться) и в виде низости и угрюмости. Её непосредственная причина — собственный успех.',
+            roots: ["dosa"]
+        },
+        '24': {
+            label: 'Неблаготворный непостоянный · VII',
+            title: 'Волнение / Сожаление',
+            pali: 'Kukkucca',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Куккучча — это волнение или сожаление после совершения неправильного поступка. Его характеристика — последующее раскаяние. Его функция — горевать над тем, что было и чего не было сделано. Оно проявляется как сожаление. Его непосредственная причина — то, что было, и то, чего не было сделано (то есть ошибки свершений и упущений).',
+            roots: ["dosa"]
+        },
+        '25': {
+            label: 'Неблаготворный непостоянный · VIII',
+            title: 'Вялость',
+            pali: 'Thīna',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Вялость — это медлительность или тупость ума. Её характеристика — отсутствие движущей силы. Её функция — рассеивать энергию. Она проявляется как упадок ума. Её непосредственная причина — немудрое внимание к скуке, дремоте и т. д. Вялость и апатия всегда случаются в связке и противодействуют энергии (вирийа). Вялость определяется как болезненность сознания (читта-геланнā).',
+            roots: ["lobha", "dosa"]
+        },
+        '26': {
+            label: 'Неблаготворный непостоянный · IX',
+            title: 'Апатия',
+            pali: 'Middha',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Апатия — это болезненное состояние ментальных факторов. Её характеристика — неуправляемость. Её функция — подавлять. Она проявляется как изнеможение или как «клевание носом» и сонливость. Её непосредственная причина такая же, как у вялости (немудрое внимание к скуке, дремоте). Вместе с вялостью они составляют одну из пяти помех, которая преодолевается начальным приложением (витакка). Апатия определяется как болезнь ментальных факторов (кāйагеланнā).',
+            roots: ["lobha", "dosa"]
+        },
+        '27': {
+            label: 'Неблаготворный непостоянный · X',
+            title: 'Сомнение',
+            pali: 'Vicikicchā',
+            short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Неблаготворный</span>',
+            long: 'Сомнение здесь выражает духовное сомнение с буддийской перспективы — это неспособность поместить своё доверие в Будду, Дхамму, Сангху и тренировку. Его характеристика — сомнительность. Его функция — колебаться. Оно проявляется как нерешительность и как принятие множества сторон. Его непосредственная причина — немудрое внимание.',
+            roots: ["moha"]
+        },
+            '28': {
+            label: 'Прекрасный универсальный · I',
+            title: 'Вера',
+            pali: 'Saddhā',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Первая из прекрасных четасик — вера; её характеристика — помещение [во что-то] веры или доверия. Её функция — очищать, как очищающий воду драгоценный камень делает мутную воду чистой; или её функция — «вхождение в», как отправление [в путь] с целью пересечь поток. Она проявляется как не туманность, то есть как удаление нечистот ума, или как решимость. Её непосредственная причина — что-то, во что помещается вера, или слушание благой Дхаммы, или другие причины, которые являются факторами вхождения в поток.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '29': {
+            label: 'Прекрасный универсальный · II',
+            title: 'Осознанность',
+            pali: 'Sati',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Слово сати происходит от корня, означающего «помнить», но как ментальный фактор оно, скорее, выражает присутствие ума, внимательность к настоящему, чем способность памяти относительно прошлого. Его характеристика — не-колебание, то есть не-уплывание от объекта; функция — отсутствие замешательства или незабывчивость. Оно проявляется как опека или как состояние конфронтации объектного поля. Его непосредственная причина — сильное восприятие (тхирасаннā) или четыре основы осознанности.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '30': {
+            label: 'Прекрасный универсальный · III',
+            title: 'Стыд',
+            pali: 'Hiri',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Характеристика стыда — отвращение к телесным и вербальным проступкам. Его функция — несовершение зла. Оно проявляется как уклонение от дурного. Непосредственная причина — уважение к себе. Стыд и боязнь дурных поступков Будда назвал хранителями мира, потому что они защищают мир от падения в повсеместную аморальность.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '31': {
+            label: 'Прекрасный универсальный · IV',
+            title: 'Боязнь зла',
+            pali: 'Ottappa',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Характеристика боязни дурных поступков — это страх в отношении телесных и вербальных проступков. Её функция — несовершение зла. Она проявляется как уклонение от дурного. Непосредственная причина — уважение к другим.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '32': {
+            label: 'Прекрасный универсальный · V',
+            title: 'Не-жадность',
+            pali: 'Alobha',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный · Корень</span>',
+            long: 'Характеристика не-жадности — отсутствие у ума желания к своему объекту, или не-прилипание к объекту, подобно капле воды на листе лотоса. Её функция — не хватать, и её проявление — непривязанность. Необходимо понять, что не-жадность — это не простое отсутствие жадности, а присутствие позитивных добродетелей, таких как щедрость и самоотречение.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '33': {
+            label: 'Прекрасный универсальный · VI',
+            title: 'Не-злость',
+            pali: 'Adosa',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный · Корень</span>',
+            long: 'Характеристика не-злости — отсутствие свирепости или не-противостояние. Её функция — удалять раздражение, или удалять жар, и её проявление — уступчивость. Не-злость заключает в себе такие позитивные добродетели, как любящая доброта, вежливость, миролюбивость, дружественность и т. д. Когда не-злость проявляется как утончённое качество любящей доброты (меттā), её характеристикой становится продвижение благополучия живых существ. Её функция — предпочитать их благополучие. Её проявление — удаление недоброжелательности. Её непосредственная причина — видение существ в привлекательном свете. Такую любящую доброту следует отличать от эгоистической привязанности, являющейся её «ближним врагом».',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '34': {
+            label: 'Прекрасный универсальный · VII',
+            title: 'Нейтральность ума',
+            pali: 'Tatramajjhattatā',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Палийский термин, которым обозначается данная четасика, буквально означает «там, в срединности». Это синоним спокойствия (упеккхā), но не как нейтрального чувства, а как ментальной позиции уравновешенности, непривязанности и беспристрастности. Её характеристика — равным образом выражать сознание и ментальные факторы. Её функция — предотвращать недостаток и избыток, или предотвращать пристрастие. Она проявляется как нейтральность. Её следует рассматривать как состояние смотрения с беспристрастностью на читты и четасики, подобно возничему, который смотрит с беспристрастностью на ровно идущих по дороге скакунов. Нейтральность ума становится возвышенным качеством беспристрастности по отношению к живым существам. Как таковая она относится к живым существам без дискриминации, предпочтений и предрассудков, воспринимая всех как равных. Эту беспристрастность не следует путать с его «ближним врагом» — мирским безразличием, обусловленным неведением.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '35': {
+            label: 'Прекрасный универсальный · VIII-IX',
+            title: 'Уравновешенность (тела и ума)',
+            pali: 'Passaddhi',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Двусоставная уравновешенность имеет своей характеристикой успокаивание возмущений (даратха) в ментальном теле и сознании соответственно. Её функция — уничтожение таких возмущений. Она проявляется как умиротворённость и хладнокровие. Её непосредственная причина — ментальное тело и сознание. Её необходимо рассматривать как противодействие таким загрязнениям, как беспокойство и волнение, которые создают страдание.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '36': {
+            label: 'Прекрасный универсальный · X-XI',
+            title: 'Лёгкость (тела и ума)',
+            pali: 'Lahutā',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Двусоставная лёгкость имеет своей характеристикой ослабление тяжести (гарубхāва) в ментальном теле и сознании соответственно. Её функция — разгружать тяжесть. Она проявляется как не-инертность. Её непосредственная причина — ментальное тело и сознание. Её необходимо рассматривать как противодействие таким загрязнениям, как вялость и апатия, которые создают тяжесть.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '37': {
+            label: 'Прекрасный универсальный · XII-XIII',
+            title: 'Гибкость (тела и ума)',
+            pali: 'Mudutā',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Двусоставная гибкость имеет своей характеристикой устранение жёсткости (тхамбха) в ментальном теле и сознании соответственно. Её функция — разрушать жёсткость. Она проявляется как несопротивление. Её непосредственная причина — ментальное тело и сознание. Её необходимо рассматривать как противодействие таким загрязнениям, как ошибочные взгляды и тщеславие, которые создают жёсткость.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '38': {
+            label: 'Прекрасный универсальный · XIV-XV',
+            title: 'Управляемость (тела и ума)',
+            pali: 'Kammaññatā',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Двусоставная управляемость имеет характеристику устранения неуправляемости (акамманнāбхāва) в ментальном теле и сознании соответственно. Её функция — разрушать неуправляемость. Она проявляется как успех ментального тела и сознания в принятии чего-либо в качестве своего объекта. Её непосредственная причина — ментальное тело и сознание. Её необходимо рассматривать как противодействие оставшимся помехам, которые создают неуправляемость ментального тела и сознания.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '39': {
+            label: 'Прекрасный универсальный · XVI-XVII',
+            title: 'Сноровка (тела и ума)',
+            pali: 'Pāguññatā',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Двусоставная сноровка имеет характеристику оздоровления ментального тела и сознания соответственно. Её функция — разрушать нездоровье ментального тела и сознания. Она проявляется как отсутствие недееспособности. Её непосредственная причина — ментальное тело и сознание. Её необходимо рассматривать как противодействие отсутствию веры и другим ментальным факторам, которые вызывают нездоровье ментального тела и сознания.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '40': {
+            label: 'Прекрасный универсальный · XVIII-XIX',
+            title: 'Прямота (тела и ума)',
+            pali: 'Ujjukatā',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный</span>',
+            long: 'Прямота — это прямолинейность. Двусоставная прямота имеет своей характеристикой честность ментального тела и сознания соответственно. Её функция — разрушать извилистость ментального тела и сознания, и она проявляется как не-извилистость. Её непосредственная причина — ментальное тело и сознание. Её необходимо рассматривать как противодействие лицемерию, мошенничеству и т. д., которые создают извилистость в ментальном теле и в сознании.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+            '41': {
+            label: 'Воздержания · I',
+            title: 'Правильная речь',
+            pali: 'Sammā-vācā',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный · Воздержание</span>',
+            long: 'Правильная речь — это намеренное воздержание от неправильной речи — лжи, клеветы, грубой речи и пустословия. Её характеристика — ненарушение через неправильную речь. Функция — уклонение от дурных поступков речи. Проявляется как воздержание от таких поступков. Непосредственная причина — особые качества: вера, стыд, боязнь дурных поступков, немногочисленность желаний и т. д. Её следует рассматривать как отвращение ума по отношению к проступкам.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '42': {
+            label: 'Воздержания · II',
+            title: 'Правильное действие',
+            pali: 'Sammā-kammanta',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный · Воздержание</span>',
+            long: 'Правильное действие — это намеренное воздержание от неправильного телесного действия — убийства, воровства и сексуальных проступков. Её характеристика — ненарушение через телесный проступок. Функция — уклонение от дурных поступков тела. Проявляется как воздержание от таких поступков. Непосредственная причина — особые качества: вера, стыд, боязнь дурных поступков, немногочисленность желаний и т. д. Её следует рассматривать как отвращение ума по отношению к проступкам.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '43': {
+            label: 'Воздержания · III',
+            title: 'Правильный образ жизни',
+            pali: 'Sammā-ājīva',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный · Воздержание</span>',
+            long: 'Правильный способ получения средств к существованию — это намеренное воздержание от неправильных способов получения средств к существованию, таких как занятия, связанные с отравляющими веществами, одурманивающими средствами, оружием, рабством или животноводством на убой. Её характеристика — ненарушение через неправильный образ жизни. Функция — уклонение от дурных способов добывания средств. Проявляется как воздержание от таких действий. Непосредственная причина — особые качества: вера, стыд, боязнь дурных поступков, немногочисленность желаний и т. д. Её следует рассматривать как отвращение ума по отношению к проступкам.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '44': {
+            label: 'Безграничности · I',
+            title: 'Сострадание',
+            pali: 'Karuṇā',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный · Безграничность</span>',
+            long: 'Характеристика: содействие устранению страдания других. Функция: неспособность выносить чужое страдание. Проявление: не-жестокость. Непосредственная причина: видение беспомощности в страдающих.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+        '45': {
+            label: 'Безграничности · II',
+            title: 'Со-радость',
+            pali: 'Muditā',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный · Безграничность</span>',
+            long: 'Характеристика: радость успеху других. Функция: не-завистливость. Проявление: устранение антипатии (скуки). Непосредственная причина: видение успеха других.',
+            roots: ["alobha", "adosa", "amoha"]
+        },
+            '46': {
+            label: 'Мудрость',
+            title: 'Мудрость',
+            pali: 'Paññindriya',
+            short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Прекрасный · Корень</span>',
+            long: 'Мудрость (паннā) — это мудрость, или знание вещей такими, какие они есть на самом деле. Здесь она названа способностью, потому что выполняет доминирующую роль в понимании вещей такими, какие они есть. В Абхидхамме три этих термина — мудрость (паннā), знание (нāна) и не-заблуждение (амоха) — используются в качестве синонимов. Мудрость имеет характеристику проникновения в вещи согласно их реальной природе (йатхāсабхāвапативедха). Её функция — освещать объективное поле, словно лампа. Она проявляется как не-замешательство. Её непосредственная причина — мудрое внимание (йонисо манасикāра).',
+            roots: ["amoha"]
+        }
+    };
+
+    function toggleCard(card) {
+        card.classList.toggle('open');
+    }
+
+    function toggleIntro() {
+        const toggle = document.getElementById('introToggle');
+        const body = document.getElementById('introBody');
+        toggle.classList.toggle('open');
+        body.classList.toggle('open');
+    }
+
+    function openDrawer(e, id) {
+        e.stopPropagation();
+        const d = dataCetasikas[id];
+        if (!d) return;
+
+        document.getElementById('drawer-label').textContent = d.label;
+        document.getElementById('drawer-title').textContent = d.title;
+        document.getElementById('drawer-pali').textContent = d.pali;
+        document.getElementById('drawer-short').innerHTML = d.short;
+        document.getElementById('drawer-long').innerHTML = d.long;
+
+        // Render roots
+        const rootEl = document.getElementById('drawer-root');
+        const rootDefs = {
+            lobha:  { label: 'Лобха · жадность',       bg: 'rgba(255,224,130,0.12)', border: '#FFE082', color: '#FFE082' },
+            dosa:   { label: 'Доса · злость',            bg: 'rgba(239,68,68,0.12)',   border: '#EF4444', color: '#EF4444' },
+            moha:   { label: 'Моха · заблуждение',       bg: 'rgba(96,165,250,0.12)',  border: '#60A5FA', color: '#60A5FA' },
+            alobha: { label: 'Алобха · не-жадность',     bg: 'rgba(16,185,129,0.12)',  border: '#10B981', color: '#10B981' },
+            adosa:  { label: 'Адоса · не-злость',         bg: 'rgba(16,185,129,0.12)',  border: '#10B981', color: '#10B981' },
+            amoha:  { label: 'Амоха · мудрость',          bg: 'rgba(16,185,129,0.12)',  border: '#10B981', color: '#10B981' },
+            any:    { label: 'Любой корень',               bg: 'rgba(148,163,184,0.1)',  border: '#94A3B8', color: '#94A3B8' },
+            none:   { label: 'Бескоренной',               bg: 'rgba(148,163,184,0.08)', border: '#64748B', color: '#64748B' },
+        };
+        const roots = d.roots || [];
+        rootEl.innerHTML = roots.length
+            ? roots.map(r => {
+                const def = rootDefs[r] || rootDefs.none;
+                return `<span style="background:${def.bg};border:1px solid ${def.border};color:${def.color};padding:4px 11px;border-radius:20px;font-size:0.78rem;white-space:nowrap;">${def.label}</span>`;
+              }).join('')
+            : `<span style="background:rgba(148,163,184,0.08);border:1px solid #64748B;color:#64748B;padding:4px 11px;border-radius:20px;font-size:0.78rem;">—</span>`;
+
+        const overlay = document.getElementById('overlay');
+        const drawer = document.getElementById('drawer');
+
+        overlay.classList.add('active');
+        requestAnimationFrame(() => {
+            overlay.classList.add('visible');
+            drawer.classList.add('active');
+        });
+    }
+
+    function closeDrawer() {
+        const overlay = document.getElementById('overlay');
+        const drawer = document.getElementById('drawer');
+        overlay.classList.remove('visible');
+        drawer.classList.remove('active');
+        setTimeout(() => overlay.classList.remove('active'), 350);
+    }
+
+    // Свайп вниз для закрытия на мобильном
+    let startY = 0;
+    const drawer = document.getElementById('drawer');
+    drawer.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+    drawer.addEventListener('touchend', e => {
+        if (e.changedTouches[0].clientY - startY > 60) closeDrawer();
+    });
+</script>
 </body>
 </html>

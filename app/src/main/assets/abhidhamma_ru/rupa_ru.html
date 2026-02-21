@@ -14,6 +14,7 @@
     --real: #60A5FA;
     --indirect: #A78BFA;
   }
+  * { box-sizing: border-box; }
   body {
     margin: 0;
     padding: 15px;
@@ -31,6 +32,41 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
+  }
+  .intro-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 4px 14px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    user-select: none;
+  }
+  .intro-toggle-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+  }
+  .intro-toggle-icon {
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    transition: transform 0.3s;
+  }
+  .intro-toggle.open .intro-toggle-icon { transform: rotate(180deg); }
+  .intro-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+    padding: 0 4px;
+  }
+  .intro-body.open {
+    max-height: 800px;
+    padding-bottom: 16px;
   }
   details.sphere-group {
     margin-bottom: 12px;
@@ -65,16 +101,16 @@
   }
   .factor-card {
     border-bottom: 1px solid var(--border-color);
-    cursor: pointer;
     transition: background 0.2s;
   }
   .factor-card:active { background: rgba(255,255,255,0.05); }
   .factor-header {
     display: grid;
-    grid-template-columns: 36px 1fr;
+    grid-template-columns: 36px 1fr auto;
     gap: 10px;
     padding: 12px 15px;
     align-items: center;
+    cursor: pointer;
   }
   .num { color: var(--text-dim); font-family: monospace; font-size: 0.8rem; }
   .name-ru { font-weight: 500; font-size: 0.9rem; }
@@ -89,105 +125,592 @@
     padding: 0 15px 0 55px;
   }
   .factor-card.open .factor-desc {
-    max-height: 200px;
+    max-height: 300px;
     padding: 0 15px 12px 55px;
   }
+  .flabel {
+    color: #FFE082;
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 6px;
+  }
+  .flabel:first-child { margin-top: 0; }
   .b-real { border-left: 3px solid var(--real); }
   .b-ind  { border-left: 3px solid var(--indirect); }
+
+  /* === РАЗДЕЛЫ КЛАССИФИКАЦИИ === */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0 16px;
+    color: #EF9A9A;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+  .section-divider::before {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to left, #EF9A9A44, transparent);
+  }
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, #EF9A9A44, transparent);
+  }
+  .class-group {
+    margin-bottom: 10px;
+    border: 1px solid rgba(239,154,154,0.15);
+    border-radius: 14px;
+    background: rgba(239,154,154,0.03);
+    overflow: hidden;
+  }
+  .class-summary {
+    padding: 14px 16px;
+    list-style: none;
+    cursor: pointer;
+    background: rgba(239,154,154,0.1);
+    color: #EF9A9A;
+    font-weight: 800;
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .class-summary::-webkit-details-marker { display: none; }
+  .class-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+  details.class-group[open] > .class-summary::after { transform: rotate(180deg); }
+  .class-body { padding: 4px 0 8px; }
+  .class-subtitle {
+    font-weight: 700;
+    color: #EF9A9A;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 16px 3px;
+    opacity: 0.8;
+  }
+  .class-para {
+    font-size: 0.82rem;
+    color: #CBD5E1;
+    line-height: 1.75;
+    padding: 6px 16px 8px;
+    border-bottom: 1px solid rgba(239,154,154,0.07);
+  }
+  .class-para:last-child { border-bottom: none; }
+  .class-term { font-weight: 600; color: #FFE082; }
+
+  /* === РАЗДЕЛ ПРОИСХОЖДЕНИЯ (зелёный) === */
+  .origin-group {
+    margin-bottom: 10px;
+    border: 1px solid rgba(129,199,132,0.15);
+    border-radius: 14px;
+    background: rgba(129,199,132,0.03);
+    overflow: hidden;
+  }
+  .origin-summary {
+    padding: 14px 16px;
+    list-style: none;
+    cursor: pointer;
+    background: rgba(129,199,132,0.1);
+    color: #81C784;
+    font-weight: 800;
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .origin-summary::-webkit-details-marker { display: none; }
+  .origin-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+  details.origin-group[open] > .origin-summary::after { transform: rotate(180deg); }
+  .origin-body { padding: 4px 0 8px; }
+  .origin-subtitle {
+    font-weight: 700;
+    color: #81C784;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 16px 3px;
+    opacity: 0.8;
+  }
+  .origin-para {
+    font-size: 0.82rem;
+    color: #CBD5E1;
+    line-height: 1.75;
+    padding: 6px 16px 8px;
+    border-bottom: 1px solid rgba(129,199,132,0.07);
+  }
+  .origin-para:last-child { border-bottom: none; }
+  .origin-term { font-weight: 600; color: #FFE082; }
+  .origin-pali {
+    display: block;
+    font-size: 0.72rem;
+    font-style: italic;
+    color: #81C784;
+    opacity: 0.7;
+    margin-bottom: 2px;
+  }
+  .section-divider.green {
+    color: #81C784;
+  }
+  .section-divider.green::before {
+    background: linear-gradient(to left, rgba(129,199,132,0.27), transparent);
+  }
+  .section-divider.green::after {
+    background: linear-gradient(to right, rgba(129,199,132,0.27), transparent);
+  }
+
+  /* === РАЗДЕЛ ГРУППИРОВАНИЯ (бирюзовый) === */
+  .group-group {
+    margin-bottom: 10px;
+    border: 1px solid rgba(128,222,234,0.15);
+    border-radius: 14px;
+    background: rgba(128,222,234,0.03);
+    overflow: hidden;
+  }
+  .group-summary {
+    padding: 14px 16px;
+    list-style: none;
+    cursor: pointer;
+    background: rgba(128,222,234,0.1);
+    color: #80DEEA;
+    font-weight: 800;
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .group-summary::-webkit-details-marker { display: none; }
+  .group-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+  details.group-group[open] > .group-summary::after { transform: rotate(180deg); }
+  .group-body { padding: 4px 0 8px; }
+  .group-subtitle {
+    font-weight: 700;
+    color: #80DEEA;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 16px 3px;
+    opacity: 0.8;
+  }
+  .group-para {
+    font-size: 0.82rem;
+    color: #CBD5E1;
+    line-height: 1.75;
+    padding: 6px 16px 8px;
+    border-bottom: 1px solid rgba(128,222,234,0.07);
+  }
+  .group-para:last-child { border-bottom: none; }
+  .group-term { font-weight: 600; color: #FFE082; }
+  .section-divider.teal { color: #80DEEA; }
+  .section-divider.teal::before {
+    background: linear-gradient(to left, rgba(128,222,234,0.27), transparent);
+  }
+  .section-divider.teal::after {
+    background: linear-gradient(to right, rgba(128,222,234,0.27), transparent);
+  }
+
+  /* === РАЗДЕЛ ЗАКОНОМЕРНОСТЕЙ (фиолетовый) === */
+  .pattern-group {
+    margin-bottom: 10px;
+    border: 1px solid rgba(206,147,216,0.15);
+    border-radius: 14px;
+    background: rgba(206,147,216,0.03);
+    overflow: hidden;
+  }
+  .pattern-summary {
+    padding: 14px 16px;
+    list-style: none;
+    cursor: pointer;
+    background: rgba(206,147,216,0.1);
+    color: #CE93D8;
+    font-weight: 800;
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .pattern-summary::-webkit-details-marker { display: none; }
+  .pattern-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+  details.pattern-group[open] > .pattern-summary::after { transform: rotate(180deg); }
+  .pattern-body { padding: 4px 0 8px; }
+  .pattern-subtitle {
+    font-weight: 700;
+    color: #CE93D8;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 16px 3px;
+    opacity: 0.8;
+  }
+  .pattern-para {
+    font-size: 0.82rem;
+    color: #CBD5E1;
+    line-height: 1.75;
+    padding: 6px 16px 8px;
+    border-bottom: 1px solid rgba(206,147,216,0.07);
+  }
+  .pattern-para:last-child { border-bottom: none; }
+  .pattern-term { font-weight: 600; color: #FFE082; }
+  .section-divider.purple { color: #CE93D8; }
+  .section-divider.purple::before {
+    background: linear-gradient(to left, rgba(206,147,216,0.27), transparent);
+  }
+  .section-divider.purple::after {
+    background: linear-gradient(to right, rgba(206,147,216,0.27), transparent);
+  }
+
+  /* Кнопка "подробнее" */
+  .detail-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-dim);
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .detail-btn:hover, .detail-btn:active {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+
+  /* === OVERLAY === */
+  .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .overlay.active { display: block; }
+  .overlay.visible { opacity: 1; }
+
+  /* === DRAWER === */
+  .drawer {
+    position: fixed;
+    z-index: 101;
+    background: #1E2533;
+    overflow-y: auto;
+    transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 80vh;
+    border-radius: 20px 20px 0 0;
+    transform: translateY(100%);
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  .drawer.active { transform: translateY(0); }
+
+  @media (min-width: 640px) {
+    .drawer {
+      bottom: 0;
+      top: 0;
+      left: auto;
+      right: 0;
+      width: 420px;
+      max-height: 100vh;
+      border-radius: 20px 0 0 20px;
+      transform: translateX(110%);
+    }
+    .drawer.active { transform: translateX(0); }
+  }
+
+  .drawer-origin-label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+    margin-top: 14px;
+  }
+    width: 40px;
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+    margin: 14px auto 0;
+  }
+  @media (min-width: 640px) { .drawer-handle { display: none; } }
+
+  .drawer-inner { padding: 16px 22px 32px; }
+
+  .drawer-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  .drawer-label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+  }
+  .drawer-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.3;
+  }
+  .drawer-pali {
+    font-style: italic;
+    color: var(--text-dim);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+  .drawer-close {
+    background: rgba(255,255,255,0.07);
+    border: none;
+    color: var(--text-dim);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+  @media (min-width: 640px) { .drawer-close { display: flex; } }
+
+  .drawer-short {
+    background: rgba(0,0,0,0.25);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    color: #94A3B8;
+    margin-bottom: 18px;
+    border-left: 3px solid var(--real);
+    line-height: 1.65;
+  }
+  .drawer-short.ind { border-left-color: var(--indirect); }
+
+  .drawer-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: var(--text-dim);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .drawer-divider::before, .drawer-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+  }
+
+  .drawer-long {
+    font-size: 0.83rem;
+    color: #CBD5E1;
+    line-height: 1.8;
+  }
 </style>
 </head>
 <body>
 <br>
 <div class="main-title">28 Рупа — Материальные явления</div>
 
+<div class="intro-toggle" id="introToggle" onclick="toggleIntro()">
+  <span class="intro-toggle-label">Введение</span>
+  <span class="intro-toggle-icon">▼</span>
+</div>
+<div class="intro-body" id="introBody">
+  Материя бывает двух видов: Абхидхамма перечисляет двадцать восемь типов материальных явлений, которые вкратце заключены в две основные категории: четыре великих первоэлемента и материальные явления, произошедшие от четырёх великих первоэлементов. Четыре великих первоэлемента (махābхута) — основные материальные элементы: земля, вода, огонь и воздух. Это фундаментальные составляющие материи, которые неотделимы и которые в разнообразных комбинациях входят в состав всех материальных субстанций, от мельчайших частиц до самой массивной горы.
+  <br><br>
+  Производные материальные явления (упādāйа рупа) — материальные явления, полученные из или зависимые от четырёх великих первоэлементов. Всего их двадцать четыре. Великие первоэлементы можно сравнить с землёй, а производные явления — с деревьями и кустами, которые растут в зависимости от земли.
+  <br><br>
+  Все эти двадцать восемь типов материальных явлений распределены по одиннадцати основным классам. Семь из них называются реально произведённой материей (ниппханнарупа), так как они обладают реальной природой и поэтому подходят для постижения через прозрение. Остальные четыре класса, будучи более абстрактными по природе, называются косвенно произведённой материей (аниппханнарупа).
+</div>
+
 <!-- РЕАЛЬНО ПРОИЗВЕДЁННАЯ МАТЕРИЯ -->
-<details class="sphere-group" open>
+<details class="sphere-group">
   <summary class="sphere-summary">Реально произведённая материя (18)</summary>
 
   <div class="category-title">I. Великие первоэлементы (4)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">1</div><div class="name-ru">Земля-элемент <span class="name-pali">(Pathavī)</span></div></div>
-    <div class="factor-desc">Х: твёрдость (жёсткость); Ф: выступать основанием для совозникающей материи; П: принятие или приобретение формы; Прич.: три других первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">1</div>
+      <div><div class="name-ru">Земля-элемент <span class="name-pali">(Pathavī)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'1')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>твёрдость (жёсткость)<span class="flabel">Функция</span>выступать основанием для совозникающей материи<span class="flabel">Проявление</span>принятие или приобретение формы<span class="flabel">Причина</span>три других первоэлемента.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">2</div><div class="name-ru">Вода-элемент <span class="name-pali">(Āpo)</span></div></div>
-    <div class="factor-desc">Х: текучесть (просачивание); Ф: сцепление (сплачивание) частиц материи; П: удерживание вместе; Прич.: три других первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">2</div>
+      <div><div class="name-ru">Вода-элемент <span class="name-pali">(Āpo)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'2')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>текучесть (просачивание)<span class="flabel">Функция</span>сцепление (сплачивание) частиц материи<span class="flabel">Проявление</span>удерживание вместе<span class="flabel">Причина</span>три других первоэлемента.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">3</div><div class="name-ru">Огонь-элемент <span class="name-pali">(Tejo)</span></div></div>
-    <div class="factor-desc">Х: жар (тепло) или холод; Ф: созревание (поспевание); П: источник мягкости; Прич.: три других первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">3</div>
+      <div><div class="name-ru">Огонь-элемент <span class="name-pali">(Tejo)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'3')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>жар (тепло) или холод<span class="flabel">Функция</span>созревание (поспевание)<span class="flabel">Проявление</span>источник мягкости<span class="flabel">Причина</span>три других первоэлемента.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">4</div><div class="name-ru">Воздух-элемент <span class="name-pali">(Vāyo)</span></div></div>
-    <div class="factor-desc">Х: расширение (давление); Ф: вызывать движение; П: перенос в другие места; Прич.: три других первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">4</div>
+      <div><div class="name-ru">Воздух-элемент <span class="name-pali">(Vāyo)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'4')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>расширение (давление)<span class="flabel">Функция</span>вызывать движение<span class="flabel">Проявление</span>перенос в другие места<span class="flabel">Причина</span>три других первоэлемента.</div>
   </div>
 
   <div class="category-title">II. Сенсорные явления (5)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">5</div><div class="name-ru">Сенсорность глаза <span class="name-pali">(Cakkhu-pasāda)</span></div></div>
-    <div class="factor-desc">Х: готовность к воздействию видимых данных; Ф: улавливание объекта; П: опора для сознания глаза; Прич.: камма, порождённая желанием видеть.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">5</div>
+      <div><div class="name-ru">Сенсорность глаза <span class="name-pali">(Cakkhu-pasāda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'5')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>готовность к воздействию видимых данных<span class="flabel">Функция</span>улавливание объекта<span class="flabel">Проявление</span>опора для сознания глаза<span class="flabel">Причина</span>камма, порождённая желанием видеть.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">6</div><div class="name-ru">Сенсорность уха <span class="name-pali">(Sota-pasāda)</span></div></div>
-    <div class="factor-desc">Х: готовность к воздействию звуков; Ф: улавливание звука; П: опора для сознания уха; Прич.: камма, порождённая желанием слышать.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">6</div>
+      <div><div class="name-ru">Сенсорность уха <span class="name-pali">(Sota-pasāda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'6')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>готовность к воздействию звуков<span class="flabel">Функция</span>улавливание звука<span class="flabel">Проявление</span>опора для сознания уха<span class="flabel">Причина</span>камма, порождённая желанием слышать.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">7</div><div class="name-ru">Сенсорность носа <span class="name-pali">(Ghāna-pasāda)</span></div></div>
-    <div class="factor-desc">Х: готовность к воздействию запахов; Ф: улавливание запаха; П: опора для сознания носа; Прич.: камма, порождённая желанием обонять.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">7</div>
+      <div><div class="name-ru">Сенсорность носа <span class="name-pali">(Ghāna-pasāda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'7')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>готовность к воздействию запахов<span class="flabel">Функция</span>улавливание запаха<span class="flabel">Проявление</span>опора для сознания носа<span class="flabel">Причина</span>камма, порождённая желанием обонять.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">8</div><div class="name-ru">Сенсорность языка <span class="name-pali">(Jivhā-pasāda)</span></div></div>
-    <div class="factor-desc">Х: готовность к воздействию вкусов; Ф: улавливание вкуса; П: опора для сознания языка; Прич.: камма, порождённая желанием вкушать.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">8</div>
+      <div><div class="name-ru">Сенсорность языка <span class="name-pali">(Jivhā-pasāda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'8')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>готовность к воздействию вкусов<span class="flabel">Функция</span>улавливание вкуса<span class="flabel">Проявление</span>опора для сознания языка<span class="flabel">Причина</span>камма, порождённая желанием вкушать.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">9</div><div class="name-ru">Сенсорность тела <span class="name-pali">(Kāya-pasāda)</span></div></div>
-    <div class="factor-desc">Х: готовность к воздействию осязаемого; Ф: улавливание тактильного; П: опора для сознания тела; Прич.: камма, порождённая желанием осязать.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">9</div>
+      <div><div class="name-ru">Сенсорность тела <span class="name-pali">(Kāya-pasāda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'9')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>готовность к воздействию осязаемого<span class="flabel">Функция</span>улавливание тактильного<span class="flabel">Проявление</span>опора для сознания тела<span class="flabel">Причина</span>камма, порождённая желанием осязать.</div>
   </div>
 
   <div class="category-title">III. Объектные явления (4)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">10</div><div class="name-ru">Видимая форма <span class="name-pali">(Rūpa)</span></div></div>
-    <div class="factor-desc">Х: воздействие на глаз; Ф: быть объектом зрения; П: прибежище для сознания глаза; Прич.: 4 первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">10</div>
+      <div><div class="name-ru">Видимая форма <span class="name-pali">(Rūpa)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'10')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>воздействие на глаз<span class="flabel">Функция</span>быть объектом зрения<span class="flabel">Проявление</span>прибежище для сознания глаза<span class="flabel">Причина</span>4 первоэлемента.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">11</div><div class="name-ru">Звук <span class="name-pali">(Sadda)</span></div></div>
-    <div class="factor-desc">Х: воздействие на ухо; Ф: быть объектом слуха; П: область сознания уха; Прич.: 4 первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">11</div>
+      <div><div class="name-ru">Звук <span class="name-pali">(Sadda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'10')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>воздействие на ухо<span class="flabel">Функция</span>быть объектом слуха<span class="flabel">Проявление</span>область сознания уха<span class="flabel">Причина</span>4 первоэлемента.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">12</div><div class="name-ru">Запах <span class="name-pali">(Gandha)</span></div></div>
-    <div class="factor-desc">Х: воздействие на нос; Ф: быть объектом обоняния; П: область сознания носа; Прич.: 4 первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">12</div>
+      <div><div class="name-ru">Запах <span class="name-pali">(Gandha)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'10')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>воздействие на нос<span class="flabel">Функция</span>быть объектом обоняния<span class="flabel">Проявление</span>область сознания носа<span class="flabel">Причина</span>4 первоэлемента.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">13</div><div class="name-ru">Вкус <span class="name-pali">(Rasa)</span></div></div>
-    <div class="factor-desc">Х: воздействие на язык; Ф: быть объектом вкуса; П: область сознания языка; Прич.: 4 первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">13</div>
+      <div><div class="name-ru">Вкус <span class="name-pali">(Rasa)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'10')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>воздействие на язык<span class="flabel">Функция</span>быть объектом вкуса<span class="flabel">Проявление</span>область сознания языка<span class="flabel">Причина</span>4 первоэлемента.</div>
   </div>
 
   <div class="category-title">IV. Явления пола (2)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">14</div><div class="name-ru">Женственность <span class="name-pali">(Itthibhāva)</span></div></div>
-    <div class="factor-desc">Х: женский пол; Ф: показывать, что «это — женщина»; П: причина для женских признаков и манер; Прич.: 4 первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">14</div>
+      <div><div class="name-ru">Женственность <span class="name-pali">(Itthibhāva)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'14')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>женский пол<span class="flabel">Функция</span>показывать, что «это — женщина»<span class="flabel">Проявление</span>причина для женских признаков и манер<span class="flabel">Причина</span>4 первоэлемента.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">15</div><div class="name-ru">Мужественность <span class="name-pali">(Pumbhāva)</span></div></div>
-    <div class="factor-desc">Х: мужской пол; Ф: показывать, что «это — мужчина»; П: причина для мужских признаков и манер; Прич.: 4 первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">15</div>
+      <div><div class="name-ru">Мужественность <span class="name-pali">(Pumbhāva)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'14')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>мужской пол<span class="flabel">Функция</span>показывать, что «это — мужчина»<span class="flabel">Проявление</span>причина для мужских признаков и манер<span class="flabel">Причина</span>4 первоэлемента.</div>
   </div>
 
   <div class="category-title">V. Явление сердца (1)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">16</div><div class="name-ru">Сердце-основа <span class="name-pali">(Hadaya-vatthu)</span></div></div>
-    <div class="factor-desc">Х: материальная поддержка для ума; Ф: поддерживать ментальные элементы; П: несение (вместилище) этих элементов; Прич.: 4 первоэлемента и кровь.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">16</div>
+      <div><div class="name-ru">Сердце-основа <span class="name-pali">(Hadaya-vatthu)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'16')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>материальная поддержка для ума<span class="flabel">Функция</span>поддерживать ментальные элементы<span class="flabel">Проявление</span>несение (вместилище) этих элементов<span class="flabel">Причина</span>4 первоэлемента и кровь.</div>
   </div>
 
   <div class="category-title">VI. Явление жизни (1)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">17</div><div class="name-ru">Управляющая жизнеспособность <span class="name-pali">(Jīvitindriya)</span></div></div>
-    <div class="factor-desc">Х: поддержание совозникающей материи; Ф: делать так, чтобы она случалась; П: установление присутствия материи; Прич.: 4 первоэлемента.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">17</div>
+      <div><div class="name-ru">Управляющая жизнеспособность <span class="name-pali">(Jīvitindriya)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'17')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>поддержание совозникающей материи<span class="flabel">Функция</span>делать так, чтобы она случалась<span class="flabel">Проявление</span>установление присутствия материи<span class="flabel">Причина</span>4 первоэлемента.</div>
   </div>
 
   <div class="category-title">VII. Явление питания (1)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">18</div><div class="name-ru">Питание <span class="name-pali">(Āhāra / Ojā)</span></div></div>
-    <div class="factor-desc">Х: питательная эссенция; Ф: поддерживать тело; П: укрепление тела; Прич.: съедобная пища.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">18</div>
+      <div><div class="name-ru">Питание <span class="name-pali">(Āhāra / Ojā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'18')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>питательная эссенция<span class="flabel">Функция</span>поддерживать тело<span class="flabel">Проявление</span>укрепление тела<span class="flabel">Причина</span>съедобная пища.</div>
   </div>
 </details>
 
@@ -196,53 +719,464 @@
   <summary class="sphere-summary">Косвенно произведённая материя (10)</summary>
 
   <div class="category-title">VIII. Разграничивающее явление (1)</div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">19</div><div class="name-ru">Пространство-элемент <span class="name-pali">(Ākāsa-dhātu)</span></div></div>
-    <div class="factor-desc">Х: разграничение материи; Ф: показывать границы материальных групп; П: состояние проёмов и промежутков; Прич.: разграниченная материя.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">19</div>
+      <div><div class="name-ru">Пространство-элемент <span class="name-pali">(Ākāsa-dhātu)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'19')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>разграничение материи<span class="flabel">Функция</span>показывать границы материальных групп<span class="flabel">Проявление</span>состояние проёмов и промежутков<span class="flabel">Причина</span>разграниченная материя.</div>
   </div>
 
   <div class="category-title">IX. Явления коммуникации (2)</div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">20</div><div class="name-ru">Телесная коммуникация <span class="name-pali">(Kāya-viññatti)</span></div></div>
-    <div class="factor-desc">Ф: отображение намерения через движения; П: причина движений тела; Прич.: элемент воздуха, порождённый сознанием.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">20</div>
+      <div><div class="name-ru">Телесная коммуникация <span class="name-pali">(Kāya-viññatti)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'20')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Функция</span>отображение намерения через движения<span class="flabel">Проявление</span>причина движений тела<span class="flabel">Причина</span>элемент воздуха, порождённый сознанием.</div>
   </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">21</div><div class="name-ru">Вербальная коммуникация <span class="name-pali">(Vacī-viññatti)</span></div></div>
-    <div class="factor-desc">Ф: отображение намерения через речь; П: причина речевых высказываний; Прич.: элемент земли, порождённый сознанием.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">21</div>
+      <div><div class="name-ru">Вербальная коммуникация <span class="name-pali">(Vacī-viññatti)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'20')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Функция</span>отображение намерения через речь<span class="flabel">Проявление</span>причина речевых высказываний<span class="flabel">Причина</span>элемент земли, порождённый сознанием.</div>
   </div>
 
   <div class="category-title">X. Явления переменчивости (3)</div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">22</div><div class="name-ru">Лёгкость <span class="name-pali">(Rūpassa lahutā)</span></div></div>
-    <div class="factor-desc">Х: отсутствие неповоротливости; Ф: рассеивание тяжести; П: легкая трансформируемость; Прич.: лёгкая материя.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">22</div>
+      <div><div class="name-ru">Лёгкость <span class="name-pali">(Rūpassa lahutā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'22')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>отсутствие неповоротливости<span class="flabel">Функция</span>рассеивание тяжести<span class="flabel">Проявление</span>легкая трансформируемость<span class="flabel">Причина</span>лёгкая материя.</div>
   </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">23</div><div class="name-ru">Гибкость <span class="name-pali">(Rūpassa mudutā)</span></div></div>
-    <div class="factor-desc">Х: отсутствие жёсткости; Ф: рассеивание жёсткости; П: несопротивление действию; Прич.: податливая материя.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">23</div>
+      <div><div class="name-ru">Гибкость <span class="name-pali">(Rūpassa mudutā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'22')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>отсутствие жёсткости<span class="flabel">Функция</span>рассеивание жёсткости<span class="flabel">Проявление</span>несопротивление действию<span class="flabel">Причина</span>податливая материя.</div>
   </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">24</div><div class="name-ru">Управляемость <span class="name-pali">(Rūpassa kammaññatā)</span></div></div>
-    <div class="factor-desc">Х: пригодность для действий; Ф: рассеивание неуправляемости; П: отсутствие слабости; Прич.: поддающаяся управлению материя.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">24</div>
+      <div><div class="name-ru">Управляемость <span class="name-pali">(Rūpassa kammaññatā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'22')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>пригодность для действий<span class="flabel">Функция</span>рассеивание неуправляемости<span class="flabel">Проявление</span>отсутствие слабости<span class="flabel">Причина</span>поддающаяся управлению материя.</div>
   </div>
 
   <div class="category-title">XI. Свойства материи (4)</div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">25</div><div class="name-ru">Производство <span class="name-pali">(Upacaya)</span></div></div>
-    <div class="factor-desc">Х: установление процесса возникновения; Ф: запуск процесса возникновения материальных групп; П: завершённое состояние при первом возникновении; Прич.: произведённая материя.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">25</div>
+      <div><div class="name-ru">Производство <span class="name-pali">(Upacaya)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'25')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>установление процесса возникновения<span class="flabel">Функция</span>запуск процесса возникновения материальных групп<span class="flabel">Проявление</span>завершённое состояние при первом возникновении<span class="flabel">Причина</span>произведённая материя.</div>
   </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">26</div><div class="name-ru">Непрерывность <span class="name-pali">(Santati)</span></div></div>
-    <div class="factor-desc">Х: способность случаться повторно; Ф: закрепление (преемственность); П: непрерываемость процесса; Прич.: материя, подлежащая закреплению.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">26</div>
+      <div><div class="name-ru">Непрерывность <span class="name-pali">(Santati)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'25')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>способность случаться повторно<span class="flabel">Функция</span>закрепление (преемственность)<span class="flabel">Проявление</span>непрерываемость процесса<span class="flabel">Причина</span>материя, подлежащая закреплению.</div>
   </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">27</div><div class="name-ru">Разложение <span class="name-pali">(Jaratā)</span></div></div>
-    <div class="factor-desc">Х: созревание; Ф: ведение явлений к распаду; П: потеря новизны; Прич.: созревающая материя.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">27</div>
+      <div><div class="name-ru">Разложение <span class="name-pali">(Jaratā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'27')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>созревание<span class="flabel">Функция</span>ведение явлений к распаду<span class="flabel">Проявление</span>потеря новизны<span class="flabel">Причина</span>созревающая материя.</div>
   </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">28</div><div class="name-ru">Непостоянство <span class="name-pali">(Aniccatā)</span></div></div>
-    <div class="factor-desc">Х: полный распад; Ф: прекращение явлений; П: разрушение и угасание; Прич.: распавшаяся материя.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">28</div>
+      <div><div class="name-ru">Непостоянство <span class="name-pali">(Aniccatā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'28')">подробнее</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Характеристика</span>полный распад<span class="flabel">Функция</span>прекращение явлений<span class="flabel">Проявление</span>разрушение и угасание<span class="flabel">Причина</span>распавшаяся материя.</div>
   </div>
 </details>
 <br>
+
+<!-- РАЗДЕЛЫ КЛАССИФИКАЦИИ -->
+<div class="section-divider">Классификация материи (Рупавибхāга)</div>
+
+<!-- § 6. Одинарная -->
+<details class="class-group">
+  <summary class="class-summary">§ 6. Одинарная</summary>
+  <div class="class-body">
+    <div class="class-para">Вся эта материя [в отношении её классификации] одинарна в том смысле, что вся она: без корней, с условиями, подвержена порокам, обусловленная, мирская, относящаяся к сенсорной среде, безобъектная, не подлежит отбрасыванию. Но если рассматривается как внутренняя и внешняя и т. д., то материя становится множественной.</div>
+    <div class="class-subtitle">Комментарий к § 6</div>
+    <div class="class-para"><span class="class-term">Вся эта материя одинарна:</span> Вся материя не имеет корней, потому что она не ассоциируется ни с благотворными, ни с неблаготворными, ни с неопределёнными корнями, ассоциация с корнями существует только для ментальных явлений. Вся материя с условиями, потому что она возникает в зависимости от четырёх условий [каммы, температуры, сознания и питания]. Она подвержена порокам (сāсава), потому что может стать объектом четырёх пороков [порока сенсорного желания, привязанности к существованию, ошибочного взгляда и неведения]. Вся она обусловленная и мирская, потому что нет материи, которая превосходит мир пяти скоплений цепляния. Вся материя относится к сенсорной среде: хотя материя существует и в тонкоматериальном мире, она относится по своей природе к сенсорной среде, потому что она является объектом сенсорного страстного желания. Материя безобъектна, потому что, в отличие от ментальных явлений, она не может знать объект; и она не подлежит отбрасыванию, потому что она не может быть отброшена, подобно загрязнениям в четырёх сверхмирских путях.</div>
+  </div>
+</details>
+
+<!-- § 7. Как множественная -->
+<details class="class-group">
+  <summary class="class-summary">§ 7. Как множественная</summary>
+  <div class="class-body">
+    <div class="class-subtitle">Каким образом?</div>
+    <div class="class-para">Пять видов сенсорных материальных явлений являются <span class="class-term">внутренними</span>, остальные — внешними.</div>
+    <div class="class-para">Шесть видов, включая сенсорные органы и сердце, — материальные явления, являющиеся <span class="class-term">основами</span>, остальные — не основы.</div>
+    <div class="class-para">Семь видов, включая сенсорные органы и (два) средства коммуникации, — материальные явления, являющиеся <span class="class-term">дверями</span>; остальные — не двери.</div>
+    <div class="class-para">Восемь видов, включая сенсорные органы, материю, определяющую половую принадлежность и жизнь, — материальные явления, являющиеся <span class="class-term">управляющими способностями</span>, остальные способностями не являются.</div>
+    <div class="class-para">Двенадцать видов, включая пять сенсорных органов и (семь) сенсорных объектов, являются <span class="class-term">грубыми, непосредственными и соударяющимися</span> материальными явлениями; остальные — утончённые, отдалённые и не соударяющиеся.</div>
+    <div class="class-para">Материальные явления, рождённые каммой, являются <span class="class-term">обретёнными вследствие цепляния</span>; остальные — обретёнными не вследствие цепляния.</div>
+    <div class="class-para">Сфера видимых объектов — <span class="class-term">видима</span>, остальные — не видимы.</div>
+    <div class="class-para">Глаз и ухо — <span class="class-term">не достигающие</span> (своих объектов), нос, язык и тело — <span class="class-term">достигающие</span> (своих объектов) — являются пятью видами материальных явлений, которые берут объект; остальные материальные явления не берут объект.</div>
+    <div class="class-para">Цвет, запах, вкус, питательная эссенция и четыре первоэлемента — восемь видов материальных явлений, которые <span class="class-term">неотделимы</span>, остальные — отделимы.</div>
+
+    <div class="class-subtitle">Комментарий к § 7</div>
+    <div class="class-para"><span class="class-term">Внутренние (аджжхаттика):</span> Здесь термин «внутренние» используется в отношении материи в техническом смысле, применительно только к пяти типам сенсорной материи, которые служат дверями для ментальных явлений. Хотя другие типы материальных явлений случаются в пределах физического тела, только эти пять сенсорных факторов обозначаются как «внутренние».</div>
+    <div class="class-para"><span class="class-term">Основы (ваттху):</span> см. главу III, § 20.</div>
+    <div class="class-para"><span class="class-term">Двери (двāра):</span> Пять сенсорных материальных явлений являются дверями для сознания, то есть тем, посредством чего сознание и ментальные факторы встречаются с объектами. Телесная и вербальная коммуникации являются дверями действия, то есть каналами для телесных и вербальных поступков.</div>
+    <div class="class-para"><span class="class-term">Способности (индрийа):</span> Сенсорности названы так потому, что они обладают контролирующей силой (индра) в соответствующих им средах. Каждая из них контролирует совозникающие материальные явления в осуществлении их специфической функции, такой как видение, слышание и т. д. Управляющая способность пола контролирует проявление мужественных и женственных черт и особенностей. Управляющая жизнь-способность контролирует совозникающие типы материи, как капитан управляет судном.</div>
+    <div class="class-para"><span class="class-term">Грубые, непосредственные и соударяющиеся материальные явления:</span> Эти три термина используются здесь в техническом смысле, который не следует путать с их обычным значением. Они применимы только к материальным явлениям, которые играют важную роль в зарождении сенсорного сознания, и ничего не говорят об относительных размерах или удалённости объекта. Таких явлений двенадцать: пять сенсорных органов и семь объектных данных — тактильность считается как три объекта, так как состоит из трёх великих первоэлементов. Те материальные явления, которые не участвуют напрямую в возникновении сенсорного сознания, называются утончёнными, отдалёнными и неударяющимися, опять же независимо от их размера и удалённости.</div>
+    <div class="class-para"><span class="class-term">Обретёнными вследствие цепляния (упāдинна):</span> Восемнадцать видов материи, порождённой каммой, известны как «обретённые вследствие цепляния», потому что они были обретены как плоды каммы, мотивированной страстным желанием и ошибочным взглядом. Материя, произведённая другими, нежели камма, причинами, известна как обретённая не вследствие цепляния. Однако в общем, в менее техническом смысле вся органическая материя в теле считается обретённой вследствие цепляния, в то время как о неорганической материи говорится как об обретённой не вследствие цепляния. Необходимо заметить, что, в отличие от других пар терминов, используемых с целью классификации, пара «обретённые вследствие цепляния» и «обретённые не вследствие цепляния» не устанавливает взаимоисключающей дихотомии, так как девять типов материальных явлений, порождённых каммой, могут также произойти от других причин (смотрите ниже § 17).</div>
+    <div class="class-para"><span class="class-term">Глаз и ухо как не достигающие (своего объекта):</span> Согласно Абхидхамме, глаз и ухо считаются сенсорными органами, которые не достигают или не касаются (асампатта) соответствующих им объектов. Для того чтобы глаз или ухо могли служить основой для сознания, их объекты не должны соприкасаться с ними. И напротив, считается, что остальные три органа напрямую касаются (сампатта) своих объектов.</div>
+    <div class="class-para"><span class="class-term">Материальные явления, берущие объект:</span> Палийское выражение гочараггāхика используется фигурально, чтобы подчеркнуть, что пять сенсорных органов служат основами для сознаний, которые возникают с их поддержкой. Но сенсорные органы, будучи материей, не могут буквально постигать объекты. Скорее, это базирующиеся на них сенсорные сознания являются тем, что на самом деле познаёт объекты.</div>
+    <div class="class-para"><span class="class-term">Материальные явления, являющиеся неотделимыми:</span> Четыре великих первоэлемента и четыре производных — цвет, запах, вкус и питательная эссенция — известны как неотделимая материя (авиниббхогарупа) потому, что они всегда связаны вместе и присутствуют во всех материальных объектах, от самых простых до наисложнейших. Другие типы материальных явлений могут присутствовать или нет и таким образом считаются отделимыми. Материальная группа (калāпа), которая состоит исключительно из этих восьми элементов, известна как «чистая восьмёрка» (суддхатхака) или «группа с питательной эссенцией в качестве восьмой [составляющей]» (оджатхамака).</div>
+  </div>
+</details>
+
+<div class="section-divider green">Происхождение материи (Рупасамуттхāна)</div>
+
+<!-- § 9 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 9. Четыре способа происхождения</summary>
+  <div class="origin-body">
+    <div class="origin-para">
+      <span class="origin-pali">Kammaṃ cittaṃ utu āhāro cāti cattāri rūpasamuṭṭhānāni nāma.</span>
+      Материальные явления возникают четырьмя способами: от <span class="origin-term">каммы</span>, <span class="origin-term">сознания</span>, <span class="origin-term">температуры</span> и <span class="origin-term">питания</span>.
+    </div>
+  </div>
+</details>
+
+<!-- § 10 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 10. Камма как способ возникновения</summary>
+  <div class="origin-body">
+    <div class="origin-para">Двадцать пять типов благотворной и неблаготворной каммы, относящиеся к сенсорной и к тонкоматериальной среде, от момента к моменту, начиная с сознания перерождения, производят во внутреннем континууме существа материальные явления, обусловленные волением, которые происходят от каммы.</div>
+    <div class="origin-subtitle">Комментарий к § 10</div>
+    <div class="origin-para"><span class="origin-term">Материальные явления, происходящие от каммы (каммасамуттхāнарупа):</span> Под каммой здесь имеется в виду воление (четанā) в прошлых благотворных и неблаготворных состояниях сознания. Двадцать пять типов каммы, производящих материальные явления, есть воления двенадцати неблаготворных сознаний, восьми великих благотворных сознаний и пяти тонкоматериальных сознаний. Воления благотворных сознаний нематериальной среды генерируют перерождение в нематериальном мире и поэтому не могут произвести материальные явления, происходящие от каммы.</div>
+    <div class="origin-para">Камма производит материальные явления в каждый из трёх подмоментов сознания — возникновение, присутствие и исчезновение, — начиная с подмомента возникновения в сознании перерождения; она продолжает делать это на протяжении всего существования, вплоть до семнадцатого момента ума, предшествующего сознанию смерти. Восемнадцать типов материальных явлений производятся каммой: восемь неотделимых в девяти группах, произведённых каммой; пять сенсорностей; две управляющие способности пола; управляющая жизнь-способность, сердце-основа и пространство. Среди них девять — восемь управляющих способностей и сердце-основа — возникают исключительно от каммы.</div>
+  </div>
+</details>
+
+<!-- § 11 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 11. Сознание как способ возникновения</summary>
+  <div class="origin-body">
+    <div class="origin-para">Семьдесят пять типов сознания, исключая результирующие нематериальной среды и два набора пятеричных сенсорных сознаний, производят материальные явления, порождённые сознанием, начиная с первого момента жизнь-континуума, но производят они её только в подмомент возникновения. Здесь джаваны погружения также поддерживают позы тела. Но определяющее сознание, джаваны сенсорной среды и сознание прямого знания производят также (телесную и вербальную коммуникации). При этом тринадцать джаван, сопровождающихся радостью, производят также улыбку.</div>
+    <div class="origin-subtitle">Комментарий к § 11</div>
+    <div class="origin-para"><span class="origin-term">Материальные явления, порождённые сознанием (читтасамуттхāна-рупа):</span> Материальные явления, произведённые сознанием, появляются начиная с момента возникновения в первой бхаванга-читте, сразу же после сознания перерождения. Сознание перерождения не производит материи, порождённой сознанием, так как в момент перерождения возникающая материя порождена каммой, а также потому, что сознание перерождения является только что пришедшим в новое существование. Десятеричному сенсорному сознанию не хватает силы для того, чтобы производить материю, а четыре нематериальных результирующих не могут этого делать, так как они возникают только в нематериальных мирах. Согласно комментариям, ментальное явление наиболее сильно в момент возникновения, а материальное — в момент присутствия. Поэтому сознание производит материю только в момент его возникновения, когда оно наиболее сильно, а не в момент присутствия или исчезновения.</div>
+    <div class="origin-para"><span class="origin-term">Джаваны погружения и т. д.:</span> Удержание, или поддержание телесной позы — это функция состояний сознания. Двадцать шесть джаван погружения выполняют эту функцию минимально, поддерживая тело в сидячей, стоячей или лежачей позе. Другие тридцать две читты — определяющее сознание, джавана сенсорной среды и сознание прямого знания — не только поддерживают позы, но также активизируют телесную и вербальную коммуникации.</div>
+    <div class="origin-para"><span class="origin-term">Тринадцать... производят также улыбку:</span> Обычный мирянин может улыбаться или смеяться с любым из четырёх сознаний, коренящихся в жадности, сопровождающихся радостью, или с любым из четырёх великих благотворных сознаний, сопровождающихся радостью. Практикующие улыбаются с шестью из этих сознаний — два ассоциированные с ошибочным взглядом исключены. Араханты могут улыбаться с одним из пяти сознаний — это четыре великих функциональных сознания, ассоциированных с радостью, и бескоренное сознание, производящее улыбку.</div>
+  </div>
+</details>
+
+<!-- § 12 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 12. Температура как способ возникновения</summary>
+  <div class="origin-body">
+    <div class="origin-para">Огонь-элемент, который содержит и холод, и огонь, по достижении стадии присутствия производит, в соответствии с обстоятельствами, и внутренние, и внешние материальные явления, происходящие от температуры.</div>
+    <div class="origin-subtitle">Комментарий к § 12</div>
+    <div class="origin-para"><span class="origin-term">Материальные явления, происходящие от температуры (утусамуттхāнарупа):</span> Начиная со стадии присутствия в момент перерождения, внутренний огонь-элемент, находящийся в материальных группах, порождённых каммой, комбинируется с внешним огонь-элементом и начинает производить органические материальные явления, происходящие от температуры. После этого огонь-элемент в материальных группах, рождённых от всех четырёх причин, производит органические материальные явления, рождённые от температуры, в течение всего существования. Снаружи температура, или огонь-элемент, также производит неорганические материальные явления, такие как климатические и геологические трансформации.</div>
+  </div>
+</details>
+
+<!-- § 13 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 13. Питание как способ возникновения</summary>
+  <div class="origin-body">
+    <div class="origin-para">Питание, известное как питательная эссенция, по достижении стадии присутствия производит материальные явления, происходящие от питания в момент его поглощения.</div>
+    <div class="origin-subtitle">Комментарий к § 13</div>
+    <div class="origin-para"><span class="origin-term">Материальные явления, происходящие от питания (āхāрасамуттхāнарупа):</span> Внутренняя питательная эссенция, поддерживаемая внешней, производит материальные явления в момент присутствия, начиная со времени поглощения. Питательная эссенция, достигшая присутствия в материальных группах, происходящих от питания, производит дальнейшую чистую восьмёрку, а питательная эссенция в этой восьмёрке производит ещё одну восьмёрку; так возникновение восьмёрок идёт одно за другим десять или двенадцать раз. Пища, принятая матерью во время беременности, пронизывает тело зародыша, вызывая возникновение материи в ребёнке. Сказано, что даже пища, размазанная по телу, производит материю. Питательная эссенция во внутренних группах, рождённых по другим трём причинам, также производит несколько чередований чистых восьмёрок в последовательности. Пища, принятая за один день, может поддерживать тело в течение семи дней.</div>
+  </div>
+</details>
+
+<!-- § 14 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 14. Анализ по способу возникновения</summary>
+  <div class="origin-body">
+    <div class="origin-para">Материальное явление сердца и восемь управляющих способностей порождены <span class="origin-term">каммой</span>. Два средства коммуникации порождены исключительно <span class="origin-term">сознанием</span>. Звук порождён <span class="origin-term">сознанием и температурой</span>. Тройка качеств лёгкости, гибкости и управляемости возникает от <span class="origin-term">температуры, сознания и питания</span>. Неотделимые материальные явления и пространство-элемент возникают от <span class="origin-term">всех четырёх причин</span>. Материальные характеристики не возникают ни от каких причин.</div>
+    <div class="origin-subtitle">Комментарий к § 14</div>
+    <div class="origin-para">Членораздельные [осмысленно произнесённые] звуки вызваны сознанием, нечленораздельные [все прочие звуки] — температурой. Тройка качеств лёгкости, гибкости и управляемости возникает от благоприятных климатических условий, бодрого состояния ума и подходящего питания, в то время как неблагоприятный климат подавляет состояния ума, а неподходящее питание вызывает тяжесть, скованность и неуправляемость в физическом теле. Пространство-элемент возникает как промежутки между материальными группами, порождёнными от четырёх причин, и поэтому считается производно рождённым от всех четырёх причин. Причина того, почему материальные характеристики не возникают ни от каких причин, объясняется в следующем разделе.</div>
+  </div>
+</details>
+
+<div class="section-divider teal">Группирование материальных явлений (Калāпайоджана)</div>
+
+<!-- § 16 -->
+<details class="group-group">
+  <summary class="group-summary">§ 16. Вкратце</summary>
+  <div class="group-body">
+    <div class="group-para">Двадцать одна материальная группа существуют ввиду того, что они возникают вместе, угасают вместе, имеют общую основу и случаются вместе.</div>
+    <div class="group-subtitle">Комментарий к § 16</div>
+    <div class="group-para">Материальные явления не случаются по одиночке, но возникают в комбинациях или группах, известных как <span class="group-term">рупакалāпы</span>, которых насчитывается двадцать одна. Как все ментальные факторы обладают четырьмя характеристиками — так же и материальные явления в группе. Все материальные явления в группе возникают вместе и гаснут вместе. У них общая основа, а именно — совместно зарождающиеся великие первоэлементы, которые являются непосредственной причиной как для производных явлений, так и друг для друга. И они все случаются вместе, от возникновения до прекращения.</div>
+  </div>
+</details>
+
+<!-- § 17 -->
+<details class="group-group">
+  <summary class="group-summary">§ 17. Группы, порождённые каммой</summary>
+  <div class="group-body">
+    <div class="group-para">Жизнь и восемь неотделимых материальных явлений вместе с глазом называются <span class="group-term">десяткой глаза</span>. Аналогично (соединяя первые девять) с ухом получается <span class="group-term">десятка уха</span>, и так же — <span class="group-term">десятка носа</span>, <span class="group-term">десятка языка</span>, <span class="group-term">десятка тела</span>, <span class="group-term">десятка женственности</span>, <span class="group-term">десятка мужественности</span>, <span class="group-term">десятка сердце-основы</span> получаются соответствующим образом. Неотделимые материальные явления вместе с жизнью называются <span class="group-term">витальной девяткой</span>. Эти девять групп происходят от каммы.</div>
+  </div>
+</details>
+
+<!-- § 18 -->
+<details class="group-group">
+  <summary class="group-summary">§ 18. Группы, порождённые сознанием</summary>
+  <div class="group-body">
+    <div class="group-para">Неотделимые материальные явления составляют <span class="group-term">«чистую восьмёрку»</span>. Они вместе с телесной коммуникацией составляют <span class="group-term">девятку телесной коммуникации</span>; вместе с вербальной коммуникацией и звуком — <span class="group-term">десятку вербальной коммуникации</span>; вместе с материальными явлениями тройки лёгкости — <span class="group-term">ундекаду [группу из 11] тройки лёгкости</span>; <span class="group-term">додекаду [группу из 12] телесной коммуникации и тройки лёгкости</span>; <span class="group-term">тридекаду [группу из 13] вербальной коммуникации, звука и тройки лёгкости</span>. Эти шесть материальных групп происходят от сознания.</div>
+  </div>
+</details>
+
+<!-- § 19 -->
+<details class="group-group">
+  <summary class="group-summary">§ 19. Группы, порождённые температурой</summary>
+  <div class="group-body">
+    <div class="group-para"><span class="group-term">Чистая восьмёрка</span>, <span class="group-term">девятка звука</span>, <span class="group-term">ундекада тройки лёгкости</span>, <span class="group-term">додекада звука и тройка лёгкости</span> — эти четыре группы происходят от температуры.</div>
+  </div>
+</details>
+
+<!-- § 20 -->
+<details class="group-group">
+  <summary class="group-summary">§ 20. Группы, происходящие от питания</summary>
+  <div class="group-body">
+    <div class="group-para"><span class="group-term">Чистая восьмёрка</span> и <span class="group-term">ундекада тройки лёгкости</span> — две материальных группы, происходящих от питания.</div>
+  </div>
+</details>
+
+<!-- § 21 -->
+<details class="group-group">
+  <summary class="group-summary">§ 21. Внутренние и внешние</summary>
+  <div class="group-body">
+    <div class="group-para">Среди них две материальных группы, произведённых температурой, — <span class="group-term">чистая восьмёрка</span> и <span class="group-term">девятка звука</span> — также могут быть внешними. Все остальные — строго внутренние.</div>
+  </div>
+</details>
+
+<div class="section-divider purple">Закономерности возникновения материальных феноменов (Рупапаваттиккама)</div>
+
+<!-- § 23 -->
+<details class="pattern-group">
+  <summary class="pattern-summary">§ 23. В мире сенсорной среды</summary>
+  <div class="pattern-body">
+    <div class="pattern-para">Все эти материальные феномены присутствуют в необходимом количестве, согласно обстоятельствам, в течение всего существования в мире сенсорной среды. Но при сознании перерождения для <span class="pattern-term">влага-рождённых</span> существ и <span class="pattern-term">спонтанно-рождённых</span> возникает максимум семь десяток — десятки глаза, уха, носа, языка, тела, пола и сердце-основы. Как минимум иногда десятки глаза, уха, носа и пола не обретаются.</div>
+    <div class="pattern-para">Для <span class="pattern-term">внутриутробно-рождённых</span> созданий возникает (в момент перерождения) три десятки — десятки тела, пола и сердце-основы. Хотя иногда десятка пола не обретается. Впоследствии, в ходе существования, постепенно возникает десятка глаза и т. д.</div>
+    <div class="pattern-subtitle">Комментарий к § 23</div>
+    <div class="pattern-para">Согласно буддизму, существует четыре типа рождения: <span class="pattern-term">яйце-рождённые (андаджа)</span> существа, <span class="pattern-term">утробно-рождённые (джалāбуджа)</span>, <span class="pattern-term">влага-рождённые (самседаджа)</span> и <span class="pattern-term">спонтанно-рождённые (опапāтика)</span>. Влага-рождённые существа включают определённые низшие формы животной жизни. Существа спонтанно-рождённые обычно не видны физическому глазу — петы и дэвы обычно принадлежат к этому классу. Под термином «внутриутробно-рождённые» в этом тексте также подразумеваются яйце-рождённые существа.</div>
+  </div>
+</details>
+
+<!-- § 24 -->
+<details class="pattern-group">
+  <summary class="pattern-summary">§ 24. Непрерывность возникновения</summary>
+  <div class="pattern-body">
+    <div class="pattern-para">Так возникновение материальных групп, произведённых четырьмя способами — а именно порождённые каммой с момента сознания перерождения, сознанием со второго момента сознания, температурой со стадии присутствия (первого момента), питанием с момента смешивания питательной эссенции, — непрерывно течёт в сенсорной среде до самого конца жизни, как <span class="pattern-term">пламя лампы или поток реки</span>.</div>
+  </div>
+</details>
+
+<!-- § 25 -->
+<details class="pattern-group">
+  <summary class="pattern-summary">§ 25. Во время смерти</summary>
+  <div class="pattern-body">
+    <div class="pattern-para">Но во время смерти, начиная со стадии присутствия семнадцатого сознания, предшествующего сознанию смерти, порождённые каммой материальные явления более не возникают. Порождённые каммой материальные явления, которые были порождены ранее, случаются до момента смерти и потом угасают. Затем угасают материальные явления, порождённые сознанием и порождённые питанием. После этого материальные качества, произведённые температурой, продолжают существование в виде <span class="pattern-term">трупа</span>.</div>
+    <div class="pattern-para">Так для умерших существ в следующей жизни снова возникают материальные явления, начиная с сознания перерождения, таким же образом.</div>
+  </div>
+</details>
+
+<!-- § 27 -->
+<details class="pattern-group">
+  <summary class="pattern-summary">§ 27. В тонкоматериальном мире</summary>
+  <div class="pattern-body">
+    <div class="pattern-para">В тонкоматериальном мире десятки носа, языка, тела, пола и материальные группы, произведённые питанием, не обнаружены. Потому для этих существ во время сознания перерождения возникают четыре материальных группы, произведённых каммой, — три десятки глаза, уха и сердце-основы и витальная девятка. Материальные явления, произведённые сознанием и температурой, не обнаруживаются в ходе [тонкоматериального] существования.</div>
+    <div class="pattern-subtitle">Комментарий к § 27</div>
+    <div class="pattern-para">Существа в тонкоматериальных мирах, будучи асексуальными, лишены двух десяток пола, и, хотя они и обладают физической формой носа, языка и тела, этим органам недостаёт сенсорной чувствительности.</div>
+  </div>
+</details>
+
+<!-- § 28 -->
+<details class="pattern-group">
+  <summary class="pattern-summary">§ 28. Среди невоспринимающих существ</summary>
+  <div class="pattern-body">
+    <div class="pattern-para">Среди <span class="pattern-term">невоспринимающих существ</span> глаз, ухо, сердце-основа и звук также не найдены. И также не найдено там материальных явлений, порождённых сознанием. Поэтому в момент их перерождения возникает только <span class="pattern-term">витальная девятка</span>. В ходе существования, за исключением звука, продолжают возникать материальные явления, произведённые температурой.</div>
+  </div>
+</details>
+
+<br>
+
+<div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-handle"></div>
+  <div class="drawer-inner">
+    <div class="drawer-top">
+      <div>
+        <div class="drawer-label" id="drawer-label"></div>
+        <div class="drawer-title" id="drawer-title"></div>
+        <div class="drawer-pali" id="drawer-pali"></div>
+      </div>
+      <button class="drawer-close" onclick="closeDrawer()">✕</button>
+    </div>
+    <div class="drawer-origin-label">Способ возникновения</div>
+    <div class="drawer-short" id="drawer-short"></div>
+    <div class="drawer-divider">Подробнее</div>
+    <div class="drawer-long" id="drawer-long"></div>
+  </div>
+</div>
+
+<script>
+const origins = {
+  'kammaOnly':    { text: 'Только камма', color: '#60A5FA' },
+  'kamma':        { text: 'Камма', color: '#60A5FA' },
+  'citta':        { text: 'Только сознание', color: '#A78BFA' },
+  'cittaUtu':     { text: 'Сознание и температура', color: '#A78BFA' },
+  'utoCittaAhara':{ text: 'Температура, сознание, питание', color: '#81C784' },
+  'all4':         { text: 'Все четыре причины: камма, сознание, температура, питание', color: '#FFE082' },
+};
+
+function originTag(key) {
+  const o = origins[key];
+  return `<span style="display:inline-block;background:rgba(255,255,255,0.06);border:1px solid ${o.color}44;color:${o.color};font-size:0.78rem;font-weight:600;padding:4px 12px;border-radius:20px;">${o.text}</span>`;
+}
+
+const data = {
+  '1':  { label:'Великие первоэлементы · I',   title:'Земля-элемент',                  pali:'Pathavī-dhātu',     short: originTag('all4'),
+    long: 'Великие первоэлементы называются элементами (дхāту) в том смысле, что они обладают своей собственной реальной природой. Земля-элемент так назван потому что, как и земля, он служит поддержкой, или основанием, для совозникающих материальных явлений. Слово патхавī происходит от корня, означающего «расширять», «распространять». Таким образом, земля-элемент представляет принцип распространения. Его непосредственная причина — три других великих первоэлемента. Твёрдость и мягкость — модусы, в которых земля-элемент воспринимается осязанием.'
+  },
+  '2':  { label:'Великие первоэлементы · II',  title:'Вода-элемент',                   pali:'Āpo-dhātu',         short: originTag('all4'),
+    long: 'Вода-элемент, или текучесть, является материальным фактором, который заставляет разные частицы материи слепляться, предотвращая таким образом их рассыпание. Его характеристика — сочиться или течь, функция — усиливать, проявлять совозникающие материальные состояния, и проявляется вода-элемент как удерживание вместе, или слепливание, материальных явлений. Абхидхамма утверждает, что, в отличие от других трёх великих первоэлементов, вода-элемент не может быть физически почувствован, а должен быть косвенно познан исходя из слепленности наблюдаемой материи.'
+  },
+  '3':  { label:'Великие первоэлементы · III', title:'Огонь-элемент',                  pali:'Tejo-dhātu',        short: originTag('all4'),
+    long: 'Огонь-элемент имеет характеристику тепла, его функция — способствовать созреванию, или поспеванию, других материальных явлений, и он проявляется как беспрерывный источник мягкости. Тепло и холод — модусы, в которых переживается огонь-элемент. Взятые вместе, четыре великих первоэлемента основаны на земля-элементе, удерживаются вместе вода-элементом, поддерживаются огонь-элементом и наполнены воздух-элементом.'
+  },
+  '4':  { label:'Великие первоэлементы · IV',  title:'Воздух-элемент',                 pali:'Vāyo-dhātu',        short: originTag('all4'),
+    long: 'Воздух-элемент — это принцип движения и давления. Его характеристика — расширение (виттхамбана), его функция — вызывать движение в других материальных явлениях, и проявляется он как перенос в другие места. Его непосредственная причина — три других великих первоэлемента. Он переживается как тактильное давление.'
+  },
+  '5':  { label:'Сенсорные явления · I',        title:'Сенсорность глаза',              pali:'Cakkhu-pasāda',     short: originTag('kamma'),
+    long: 'Сенсорность необходимо отличать от грубых сенсорных органов, которые действуют как её поддержка. То, что конвенционально называется глазом, в Абхидхамме называется составным глазом (сасамбхāра-чаккху) — комплексом различных материальных явлений. Среди них — сенсорность глаза (чаккху-пасāда), сенсорная субстанция в сетчатке, регистрирующая свет и цвет и служащая физической основой и дверью для сознания глаза.'
+  },
+  '6':  { label:'Сенсорные явления · II',       title:'Сенсорность уха',                pali:'Sota-pasāda',       short: originTag('kamma'),
+    long: 'Сенсорность уха (сота-пасāда) находится внутри ушной раковины, в месте, которое по форме похоже на напальчник и окружено тонкими коричневыми волосками. Именно эта сенсорная субстанция регистрирует звуки и служит физической основой и дверью для сознания уха.'
+  },
+  '7':  { label:'Сенсорные явления · III',      title:'Сенсорность носа',               pali:'Ghāna-pasāda',      short: originTag('kamma'),
+    long: 'Сенсорность носа (гхāна-пасāда) находится внутри носовой полости в виде субстанции, регистрирующей запахи. Как и другие виды сенсорности, она служит физической основой и дверью для соответствующего сознания — сознания носа.'
+  },
+  '8':  { label:'Сенсорные явления · IV',       title:'Сенсорность языка',              pali:'Jivhā-pasāda',      short: originTag('kamma'),
+    long: 'Сенсорность языка (дживхā-пасāда) рассеяна по поверхности языка и служит для регистрации вкусов. Она является физической основой и дверью для сознания языка.'
+  },
+  '9':  { label:'Сенсорные явления · V',        title:'Сенсорность тела',               pali:'Kāya-pasāda',       short: originTag('kamma'),
+    long: 'Сенсорность тела (кāйа-пасāда) распространена по всему органическому телу, как жидкость, пропитывающая слой хлопка, и служит для регистрации тактильных ощущений. Она является физической основой и дверью для сознания тела.'
+  },
+  '10': { label:'Объектные явления',             title:'Видимая форма, Звук, Запах, Вкус', pali:'Gocara-rūpa',    short: originTag('all4'),
+    long: 'Объектные материальные явления — пять сенсорных полей, служащих объектной поддержкой для соответствующих сенсорных сознаний. Необходимо заметить, что тактильный объект состоит из трёх великих первоэлементов: земля-элемента, переживаемого как мягкость или твёрдость; огонь-элемента, переживаемого как жар или холод; и воздух-элемента, переживаемого как давление. Вода-элемент, будучи принципом сцепления, не включён, согласно Абхидхамме, в тактильные данные. Остальные четыре сенсорных объекта — видимая форма, звук, запах и вкус — являются типами производной материи.'
+  },
+  '14': { label:'Явления пола',                  title:'Женственность и Мужественность', pali:'Bhāva-rūpa',        short: originTag('kamma'),
+    long: 'Материальные явления пола — это две способности женственности и мужественности. Эти способности имеют соответственно характеристики женского пола и мужского пола. Их функция — показывать женственность и мужественность. Они проявляются в качестве основания для признака, обозначения, деятельности и способов действия женщины и мужчины; то есть для половой структуры тела, для его женских или мужских особенностей, для типичных занятий и манер поведения.'
+  },
+  '16': { label:'Явление сердца',                title:'Сердце-основа',                  pali:'Hadaya-vatthu',     short: originTag('kammaOnly'),
+    long: 'Характеристика сердце-основы — быть материальной поддержкой для ум-элемента и ум-сознание-элемента. Её функция — поддерживать их. Она проявляется в виде несения этих элементов. Она существует, опираясь на кровь внутри сердца, получая содействие от четырёх великих первоэлементов и поддерживаясь управляющей жизнь-способностью. Согласно палийским комментаторам, сердце служит как физическая поддержка всем читтам, кроме пятеричных сенсорных сознаний, которые берут соответствующую им сенсорность за свою основу.'
+  },
+  '17': { label:'Явление жизни',                 title:'Управляющая жизнеспособность',   pali:'Jīvitindriya',      short: originTag('kammaOnly'),
+    long: 'Управляющая жизнь-способность — это материальный двойник ментальной управляющей жизнь-способности, одного из семи универсальных ментальных факторов. Жизнь, или жизненность, названа управляющей способностью, потому что она оказывает доминирующее влияние на своих спутников. Её непосредственная причина — четыре великих первоэлемента, которые нужно поддерживать.'
+  },
+  '18': { label:'Явление питания',               title:'Питание',                        pali:'Āhāra / Ojā',       short: originTag('all4'),
+    long: 'Материальная пища (кабаликāрāхāра) имеет характеристику питательной эссенции (оджā), то есть питательной субстанции, содержащейся в грубой материальной пище. Её функция — поддерживать физическое тело. Она проявляется в укреплении тела. Её непосредственная причина — грубая материальная пища, являющаяся основанием питательной эссенции.'
+  },
+  '19': { label:'Косвенно произведённая материя · VIII', title:'Пространство-элемент',   pali:'Ākāsa-dhātu',       short: originTag('all4'),
+    long: 'Пространство как оно понимается в Абхидхамме — не просто геометрическая протяжённость, а область пустоты, которая определяет границы и отделяет объекты и группы материальных явлений, позволяя им быть воспринятыми как отдельные. Косвенно произведённые явления существуют как модальности или атрибуты реально произведённой материи — они не возникают напрямую из четырёх главных причин (каммы, сознания, температуры и пищи), а потому не включены в первичные реальности (параматтха дхамма).'
+  },
+  '20': { label:'Косвенно произведённая материя · IX',  title:'Телесная и Вербальная коммуникация', pali:'Viññatti-rūpa', short: originTag('citta'),
+    long: 'Виннатти, коммуникация — это то, посредством чего существо сообщает свои идеи, чувства и отношение другому. Телесная коммуникация — это особая модификация в произведённом сознанием воздух-элементе, которая заставляет тело двигаться способом, показывающим намерения существа. Вербальная коммуникация — это особая модификация в произведённом сознанием земля-элементе, проявляющаяся в речи, посредством которой живое существо раскрывает свои намерения. Оба вида имеют своей функцией отображение намерения.'
+  },
+  '22': {
+    label: 'Косвенно произведённая материя · X',
+    title: 'Лёгкость, Гибкость, Управляемость',
+    pali: 'Vikāra-rūpa',
+    short: originTag('utoCittaAhara'),
+    long: 'Лёгкость (лахутā) имеет характеристику, противоположную неповоротливости. Её функция — рассеивать тяжесть в материи. Проявляется как легкотрансформируемость. Непосредственная причина — лёгкая материя. Гибкость (мудутā) имеет характеристику не-жёсткости. Её функция — рассеивать жёсткость в материи. Проявляется как несопротивление любому виду действия. Управляемость (камманнатā) имеет характеристику управляемости, благоприятной для телесного действия. Её функция — рассеивать неуправляемость. Проявляется как не-слабость.'
+  },
+  '25': {
+    label: 'Косвенно произведённая материя · XI',
+    title: 'Производство и Непрерывность',
+    pali: 'Upacaya / Santati',
+    short: originTag('all4'),
+    long: 'Производство — это первое возникновение материального процесса, начальный запуск или установление процесса. Непрерывность — это повторяющееся рождение материального явления в том же материальном процессе. Например, возникновение тела, групп пола и сердца во время зачатия — это производство, в то время как постоянное возникновение тех же самых групп материи в течение жизни — это непрерывность. Производство имеет характеристику установления, а непрерывность — способность случаться.'
+  },
+  '27': {
+    label: 'Косвенно произведённая материя · XI',
+    title: 'Разложение',
+    pali: 'Jaratā',
+    short: originTag('all4'),
+    long: 'Разложение (джаратā) имеет характеристику созревания, или старения, материальных явлений. Его функция — вести их к завершению. Проявляется как потеря новизны без потери самого существа. Непосредственная причина — разлагающаяся материя. Это промежуточная стадия между возникновением и полным прекращением явления.'
+  },
+  '28': {
+    label: 'Косвенно произведённая материя · XI',
+    title: 'Непостоянство',
+    pali: 'Aniccatā',
+    short: originTag('all4'),
+    long: 'Временность (аниччатā) имеет характеристику полного разрушения материальных явлений. Её функция — заставлять их прекращаться. Проявляется как разрушение и исчезновение. Непосредственная причина — полностью разрушающаяся материя. Это конечная стадия материального процесса, неотделимая от самой природы обусловленного существования.'
+  }
+};
+
+function toggleIntro() {
+  const toggle = document.getElementById('introToggle');
+  const body = document.getElementById('introBody');
+  toggle.classList.toggle('open');
+  body.classList.toggle('open');
+}
+
+function toggleCard(card) {
+  card.classList.toggle('open');
+}
+
+function openDrawer(e, id) {
+  e.stopPropagation();
+  const d = data[id];
+  if (!d) return;
+
+  document.getElementById('drawer-label').textContent = d.label;
+  document.getElementById('drawer-title').textContent = d.title;
+  document.getElementById('drawer-pali').textContent = d.pali;
+  document.getElementById('drawer-short').innerHTML = d.short;
+  document.getElementById('drawer-long').textContent = d.long;
+
+  const overlay = document.getElementById('overlay');
+  const drawer = document.getElementById('drawer');
+
+  overlay.classList.add('active');
+  requestAnimationFrame(() => {
+    overlay.classList.add('visible');
+    drawer.classList.add('active');
+  });
+}
+
+function closeDrawer() {
+  const overlay = document.getElementById('overlay');
+  const drawer = document.getElementById('drawer');
+  overlay.classList.remove('visible');
+  drawer.classList.remove('active');
+  setTimeout(() => overlay.classList.remove('active'), 350);
+}
+
+// Свайп вниз для закрытия на мобильном
+let startY = 0;
+const drawer = document.getElementById('drawer');
+drawer.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+drawer.addEventListener('touchend', e => {
+  if (e.changedTouches[0].clientY - startY > 60) closeDrawer();
+});
+</script>
 </body>
 </html>
