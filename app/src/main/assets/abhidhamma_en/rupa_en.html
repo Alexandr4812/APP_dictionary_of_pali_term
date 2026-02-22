@@ -14,6 +14,7 @@
     --real: #60A5FA;
     --indirect: #A78BFA;
   }
+  * { box-sizing: border-box; }
   body {
     margin: 0;
     padding: 15px;
@@ -31,6 +32,41 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 20px;
+  }
+  .intro-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 4px 14px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    user-select: none;
+  }
+  .intro-toggle-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+  }
+  .intro-toggle-icon {
+    font-size: 0.6rem;
+    color: var(--text-dim);
+    transition: transform 0.3s;
+  }
+  .intro-toggle.open .intro-toggle-icon { transform: rotate(180deg); }
+  .intro-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+    padding: 0 4px;
+  }
+  .intro-body.open {
+    max-height: 800px;
+    padding-bottom: 16px;
   }
   details.sphere-group {
     margin-bottom: 12px;
@@ -65,19 +101,19 @@
   }
   .factor-card {
     border-bottom: 1px solid var(--border-color);
-    cursor: pointer;
     transition: background 0.2s;
   }
   .factor-card:active { background: rgba(255,255,255,0.05); }
   .factor-header {
     display: grid;
-    grid-template-columns: 36px 1fr;
+    grid-template-columns: 36px 1fr auto;
     gap: 10px;
     padding: 12px 15px;
     align-items: center;
+    cursor: pointer;
   }
   .num { color: var(--text-dim); font-family: monospace; font-size: 0.8rem; }
-  .name-ru { font-weight: 500; font-size: 0.9rem; }
+  .name-en { font-weight: 500; font-size: 0.9rem; }
   .name-pali { color: var(--text-dim); font-style: italic; font-size: 0.8rem; margin-left: 5px; }
   .factor-desc {
     max-height: 0;
@@ -89,160 +125,1059 @@
     padding: 0 15px 0 55px;
   }
   .factor-card.open .factor-desc {
-    max-height: 200px;
+    max-height: 300px;
     padding: 0 15px 12px 55px;
   }
+  .flabel {
+    color: #FFE082;
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 6px;
+  }
+  .flabel:first-child { margin-top: 0; }
   .b-real { border-left: 3px solid var(--real); }
   .b-ind  { border-left: 3px solid var(--indirect); }
+
+  /* === CLASSIFICATION SECTIONS === */
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 28px 0 16px;
+    color: #EF9A9A;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+  }
+  .section-divider::before {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to left, #EF9A9A44, transparent);
+  }
+  .section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, #EF9A9A44, transparent);
+  }
+  .class-group {
+    margin-bottom: 10px;
+    border: 1px solid rgba(239,154,154,0.15);
+    border-radius: 14px;
+    background: rgba(239,154,154,0.03);
+    overflow: hidden;
+  }
+  .class-summary {
+    padding: 14px 16px;
+    list-style: none;
+    cursor: pointer;
+    background: rgba(239,154,154,0.1);
+    color: #EF9A9A;
+    font-weight: 800;
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .class-summary::-webkit-details-marker { display: none; }
+  .class-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+  details.class-group[open] > .class-summary::after { transform: rotate(180deg); }
+  .class-body { padding: 4px 0 8px; }
+  .class-subtitle {
+    font-weight: 700;
+    color: #EF9A9A;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 16px 3px;
+    opacity: 0.8;
+  }
+  .class-para {
+    font-size: 0.82rem;
+    color: #CBD5E1;
+    line-height: 1.75;
+    padding: 6px 16px 8px;
+    border-bottom: 1px solid rgba(239,154,154,0.07);
+  }
+  .class-para:last-child { border-bottom: none; }
+  .class-term { font-weight: 600; color: #FFE082; }
+
+  /* === ORIGIN SECTION (green) === */
+  .origin-group {
+    margin-bottom: 10px;
+    border: 1px solid rgba(129,199,132,0.15);
+    border-radius: 14px;
+    background: rgba(129,199,132,0.03);
+    overflow: hidden;
+  }
+  .origin-summary {
+    padding: 14px 16px;
+    list-style: none;
+    cursor: pointer;
+    background: rgba(129,199,132,0.1);
+    color: #81C784;
+    font-weight: 800;
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .origin-summary::-webkit-details-marker { display: none; }
+  .origin-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+  details.origin-group[open] > .origin-summary::after { transform: rotate(180deg); }
+  .origin-body { padding: 4px 0 8px; }
+  .origin-subtitle {
+    font-weight: 700;
+    color: #81C784;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 16px 3px;
+    opacity: 0.8;
+  }
+  .origin-para {
+    font-size: 0.82rem;
+    color: #CBD5E1;
+    line-height: 1.75;
+    padding: 6px 16px 8px;
+    border-bottom: 1px solid rgba(129,199,132,0.07);
+  }
+  .origin-para:last-child { border-bottom: none; }
+  .origin-term { font-weight: 600; color: #FFE082; }
+  .origin-pali {
+    display: block;
+    font-size: 0.72rem;
+    font-style: italic;
+    color: #81C784;
+    opacity: 0.7;
+    margin-bottom: 2px;
+  }
+  .section-divider.green {
+    color: #81C784;
+  }
+  .section-divider.green::before {
+    background: linear-gradient(to left, rgba(129,199,132,0.27), transparent);
+  }
+  .section-divider.green::after {
+    background: linear-gradient(to right, rgba(129,199,132,0.27), transparent);
+  }
+
+  /* === GROUPING SECTION (teal) === */
+  .group-group {
+    margin-bottom: 10px;
+    border: 1px solid rgba(128,222,234,0.15);
+    border-radius: 14px;
+    background: rgba(128,222,234,0.03);
+    overflow: hidden;
+  }
+  .group-summary {
+    padding: 14px 16px;
+    list-style: none;
+    cursor: pointer;
+    background: rgba(128,222,234,0.1);
+    color: #80DEEA;
+    font-weight: 800;
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .group-summary::-webkit-details-marker { display: none; }
+  .group-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+  details.group-group[open] > .group-summary::after { transform: rotate(180deg); }
+  .group-body { padding: 4px 0 8px; }
+  .group-subtitle {
+    font-weight: 700;
+    color: #80DEEA;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 16px 3px;
+    opacity: 0.8;
+  }
+  .group-para {
+    font-size: 0.82rem;
+    color: #CBD5E1;
+    line-height: 1.75;
+    padding: 6px 16px 8px;
+    border-bottom: 1px solid rgba(128,222,234,0.07);
+  }
+  .group-para:last-child { border-bottom: none; }
+  .group-term { font-weight: 600; color: #FFE082; }
+  .section-divider.teal { color: #80DEEA; }
+  .section-divider.teal::before {
+    background: linear-gradient(to left, rgba(128,222,234,0.27), transparent);
+  }
+  .section-divider.teal::after {
+    background: linear-gradient(to right, rgba(128,222,234,0.27), transparent);
+  }
+
+  /* === PATTERN SECTION (purple) === */
+  .pattern-group {
+    margin-bottom: 10px;
+    border: 1px solid rgba(206,147,216,0.15);
+    border-radius: 14px;
+    background: rgba(206,147,216,0.03);
+    overflow: hidden;
+  }
+  .pattern-summary {
+    padding: 14px 16px;
+    list-style: none;
+    cursor: pointer;
+    background: rgba(206,147,216,0.1);
+    color: #CE93D8;
+    font-weight: 800;
+    font-size: 0.82rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .pattern-summary::-webkit-details-marker { display: none; }
+  .pattern-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+  details.pattern-group[open] > .pattern-summary::after { transform: rotate(180deg); }
+  .pattern-body { padding: 4px 0 8px; }
+  .pattern-subtitle {
+    font-weight: 700;
+    color: #CE93D8;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 16px 3px;
+    opacity: 0.8;
+  }
+  .pattern-para {
+    font-size: 0.82rem;
+    color: #CBD5E1;
+    line-height: 1.75;
+    padding: 6px 16px 8px;
+    border-bottom: 1px solid rgba(206,147,216,0.07);
+  }
+  .pattern-para:last-child { border-bottom: none; }
+  .pattern-term { font-weight: 600; color: #FFE082; }
+  .section-divider.purple { color: #CE93D8; }
+  .section-divider.purple::before {
+    background: linear-gradient(to left, rgba(206,147,216,0.27), transparent);
+  }
+  .section-divider.purple::after {
+    background: linear-gradient(to right, rgba(206,147,216,0.27), transparent);
+  }
+
+  /* "more" button */
+  .detail-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-dim);
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .detail-btn:hover, .detail-btn:active {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+  }
+
+  /* === OVERLAY === */
+  .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .overlay.active { display: block; }
+  .overlay.visible { opacity: 1; }
+
+  /* === DRAWER === */
+  .drawer {
+    position: fixed;
+    z-index: 101;
+    background: #1E2533;
+    overflow-y: auto;
+    transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 80vh;
+    border-radius: 20px 20px 0 0;
+    transform: translateY(100%);
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+  .drawer.active { transform: translateY(0); }
+
+  @media (min-width: 640px) {
+    .drawer {
+      bottom: 0;
+      top: 0;
+      left: auto;
+      right: 0;
+      width: 420px;
+      max-height: 100vh;
+      border-radius: 20px 0 0 20px;
+      transform: translateX(110%);
+    }
+    .drawer.active { transform: translateX(0); }
+  }
+
+  .drawer-origin-label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+    margin-top: 14px;
+  }
+  .drawer-handle {
+    width: 40px;
+    height: 4px;
+    background: var(--border-color);
+    border-radius: 2px;
+    margin: 14px auto 0;
+  }
+  @media (min-width: 640px) { .drawer-handle { display: none; } }
+
+  .drawer-inner { padding: 16px 22px 32px; }
+
+  .drawer-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  .drawer-label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-dim);
+    margin-bottom: 4px;
+  }
+  .drawer-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1.3;
+  }
+  .drawer-pali {
+    font-style: italic;
+    color: var(--text-dim);
+    font-size: 0.82rem;
+    margin-top: 2px;
+  }
+  .drawer-close {
+    background: rgba(255,255,255,0.07);
+    border: none;
+    color: var(--text-dim);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 10px;
+    margin-top: 2px;
+  }
+  @media (min-width: 640px) { .drawer-close { display: flex; } }
+
+  .drawer-short {
+    background: rgba(0,0,0,0.25);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    color: #94A3B8;
+    margin-bottom: 18px;
+    border-left: 3px solid var(--real);
+    line-height: 1.65;
+  }
+  .drawer-short.ind { border-left-color: var(--indirect); }
+
+  .drawer-divider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    color: var(--text-dim);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .drawer-divider::before, .drawer-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-color);
+  }
+
+  .drawer-long {
+    font-size: 0.83rem;
+    color: #CBD5E1;
+    line-height: 1.8;
+  }
 </style>
 </head>
 <body>
 <br>
 <div class="main-title">28 Rūpa — Material Phenomena</div>
 
-<!-- REALLY PRODUCED MATTER -->
-<details class="sphere-group" open>
-  <summary class="sphere-summary">Really Produced Matter (18)</summary>
+<div class="intro-toggle" id="introToggle" onclick="toggleIntro()">
+  <span class="intro-toggle-label">Introduction</span>
+  <span class="intro-toggle-icon">▼</span>
+</div>
+<div class="intro-body" id="introBody">
+  Matter is of two kinds: the Abhidhamma enumerates twenty‑eight types of material phenomena, which are briefly comprised in two main categories: the four great primaries and the material phenomena derived from the four great primaries. The four great primaries (mahābhūta) are the fundamental material elements: earth, water, fire, and air. They are the inseparable constituents of matter and, in diverse combinations, enter into the composition of all material substances, from the minutest particle to the most massive mountain.
+  <br><br>
+  Derived material phenomena (upādāya rūpa) are material phenomena derived from or dependent on the four great primaries. There are twenty‑four of them. The great primaries may be compared to the earth, and the derived phenomena to the trees and bushes that grow dependent on the earth.
+  <br><br>
+  All these twenty‑eight types of material phenomena are distributed into eleven main classes. Seven of these are called concretely produced matter (nipphanna rūpa) because they possess real nature and are therefore suitable for contemplation through insight. The remaining four classes, being more abstract in nature, are called non‑concretely produced matter (anipphanna rūpa).
+</div>
 
-  <div class="category-title">I. Great Elements (4)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">1</div><div class="name-ru">Earth element <span class="name-pali">(Pathavī)</span></div></div>
-    <div class="factor-desc">Ch: solidity (hardness); F: acting as foundation for co-arising matter; M: assuming or acquiring shape; PC: the other three great elements.</div>
-  </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">2</div><div class="name-ru">Water element <span class="name-pali">(Āpo)</span></div></div>
-    <div class="factor-desc">Ch: fluidity (oozing); F: cohesion (binding) of material particles; M: holding together; PC: the other three great elements.</div>
-  </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">3</div><div class="name-ru">Fire element <span class="name-pali">(Tejo)</span></div></div>
-    <div class="factor-desc">Ch: heat (warmth) or cold; F: maturing (ripening); M: source of softness; PC: the other three great elements.</div>
-  </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">4</div><div class="name-ru">Air element <span class="name-pali">(Vāyo)</span></div></div>
-    <div class="factor-desc">Ch: distension (pressure); F: causing motion; M: conveying to other places; PC: the other three great elements.</div>
-  </div>
+<!-- REALITY PRODUCED MATTER -->
+<details class="sphere-group">
+  <summary class="sphere-summary">Concretely Produced Matter (18)</summary>
 
-  <div class="category-title">II. Sensory Matter (5)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">5</div><div class="name-ru">Eye sensitivity <span class="name-pali">(Cakkhu-pasāda)</span></div></div>
-    <div class="factor-desc">Ch: readiness to be impacted by visible data; F: apprehending the object; M: support for eye-consciousness; PC: kamma born from desire to see.</div>
+  <div class="category-title">I. Primary Elements (4)</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">1</div>
+      <div><div class="name-en">Earth Element <span class="name-pali">(Pathavī)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'1')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>hardness (rigidity)<span class="flabel">Function</span>to act as foundation for coexistent matter<span class="flabel">Manifestation</span>receiving or assuming form<span class="flabel">Proximate Cause</span>the three other primary elements.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">6</div><div class="name-ru">Ear sensitivity <span class="name-pali">(Sota-pasāda)</span></div></div>
-    <div class="factor-desc">Ch: readiness to be impacted by sounds; F: apprehending sound; M: support for ear-consciousness; PC: kamma born from desire to hear.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">2</div>
+      <div><div class="name-en">Water Element <span class="name-pali">(Āpo)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'2')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>fluidity (permeation)<span class="flabel">Function</span>cohesion (integration) of material particles<span class="flabel">Manifestation</span>holding together<span class="flabel">Proximate Cause</span>the three other primary elements.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">7</div><div class="name-ru">Nose sensitivity <span class="name-pali">(Ghāna-pasāda)</span></div></div>
-    <div class="factor-desc">Ch: readiness to be impacted by odours; F: apprehending smell; M: support for nose-consciousness; PC: kamma born from desire to smell.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">3</div>
+      <div><div class="name-en">Fire Element <span class="name-pali">(Tejo)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'3')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>heat (warmth) or cold<span class="flabel">Function</span>maturing (ripening)<span class="flabel">Manifestation</span>source of softness<span class="flabel">Proximate Cause</span>the three other primary elements.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">8</div><div class="name-ru">Tongue sensitivity <span class="name-pali">(Jivhā-pasāda)</span></div></div>
-    <div class="factor-desc">Ch: readiness to be impacted by tastes; F: apprehending taste; M: support for tongue-consciousness; PC: kamma born from desire to taste.</div>
-  </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">9</div><div class="name-ru">Body sensitivity <span class="name-pali">(Kāya-pasāda)</span></div></div>
-    <div class="factor-desc">Ch: readiness to be impacted by tangibles; F: apprehending the tangible; M: support for body-consciousness; PC: kamma born from desire to touch.</div>
-  </div>
-
-  <div class="category-title">III. Objective Matter (4)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">10</div><div class="name-ru">Visible form <span class="name-pali">(Rūpa)</span></div></div>
-    <div class="factor-desc">Ch: impacting the eye; F: being the object of sight; M: refuge for eye-consciousness; PC: 4 great elements.</div>
-  </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">11</div><div class="name-ru">Sound <span class="name-pali">(Sadda)</span></div></div>
-    <div class="factor-desc">Ch: impacting the ear; F: being the object of hearing; M: domain of ear-consciousness; PC: 4 great elements.</div>
-  </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">12</div><div class="name-ru">Smell <span class="name-pali">(Gandha)</span></div></div>
-    <div class="factor-desc">Ch: impacting the nose; F: being the object of smell; M: domain of nose-consciousness; PC: 4 great elements.</div>
-  </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">13</div><div class="name-ru">Taste <span class="name-pali">(Rasa)</span></div></div>
-    <div class="factor-desc">Ch: impacting the tongue; F: being the object of taste; M: domain of tongue-consciousness; PC: 4 great elements.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">4</div>
+      <div><div class="name-en">Air Element <span class="name-pali">(Vāyo)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'4')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>expansion (pressure)<span class="flabel">Function</span>to cause motion<span class="flabel">Manifestation</span>conveying to other places<span class="flabel">Proximate Cause</span>the three other primary elements.</div>
   </div>
 
-  <div class="category-title">IV. Sex Matter (2)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">14</div><div class="name-ru">Femininity <span class="name-pali">(Itthibhāva)</span></div></div>
-    <div class="factor-desc">Ch: female sex; F: showing that "this is a woman"; M: cause for feminine features and manners; PC: 4 great elements.</div>
+  <div class="category-title">II. Sensitive Phenomena (5)</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">5</div>
+      <div><div class="name-en">Eye-sensitivity <span class="name-pali">(Cakkhu-pasāda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'5')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>readiness for the impact of visible data<span class="flabel">Function</span>catching the object<span class="flabel">Manifestation</span>support for eye-consciousness<span class="flabel">Proximate Cause</span>kamma born of desire to see.</div>
   </div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">15</div><div class="name-ru">Masculinity <span class="name-pali">(Pumbhāva)</span></div></div>
-    <div class="factor-desc">Ch: male sex; F: showing that "this is a man"; M: cause for masculine features and manners; PC: 4 great elements.</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">6</div>
+      <div><div class="name-en">Ear-sensitivity <span class="name-pali">(Sota-pasāda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'6')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>readiness for the impact of sounds<span class="flabel">Function</span>catching the sound<span class="flabel">Manifestation</span>support for ear-consciousness<span class="flabel">Proximate Cause</span>kamma born of desire to hear.</div>
+  </div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">7</div>
+      <div><div class="name-en">Nose-sensitivity <span class="name-pali">(Ghāna-pasāda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'7')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>readiness for the impact of odours<span class="flabel">Function</span>catching the odour<span class="flabel">Manifestation</span>support for nose-consciousness<span class="flabel">Proximate Cause</span>kamma born of desire to smell.</div>
+  </div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">8</div>
+      <div><div class="name-en">Tongue-sensitivity <span class="name-pali">(Jivhā-pasāda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'8')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>readiness for the impact of tastes<span class="flabel">Function</span>catching the taste<span class="flabel">Manifestation</span>support for tongue-consciousness<span class="flabel">Proximate Cause</span>kamma born of desire to taste.</div>
+  </div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">9</div>
+      <div><div class="name-en">Body-sensitivity <span class="name-pali">(Kāya-pasāda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'9')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>readiness for the impact of tangible things<span class="flabel">Function</span>catching the tangible<span class="flabel">Manifestation</span>support for body-consciousness<span class="flabel">Proximate Cause</span>kamma born of desire to touch.</div>
   </div>
 
-  <div class="category-title">V. Heart Matter (1)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">16</div><div class="name-ru">Heart-base <span class="name-pali">(Hadaya-vatthu)</span></div></div>
-    <div class="factor-desc">Ch: material support for the mind; F: supporting mental elements; M: carrying (receptacle) of these elements; PC: 4 great elements and blood.</div>
+  <div class="category-title">III. Objective Phenomena (4)</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">10</div>
+      <div><div class="name-en">Visible Form <span class="name-pali">(Rūpa)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'10')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>impacting the eye<span class="flabel">Function</span>to be the object of sight<span class="flabel">Manifestation</span>resort for eye-consciousness<span class="flabel">Proximate Cause</span>4 primary elements.</div>
+  </div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">11</div>
+      <div><div class="name-en">Sound <span class="name-pali">(Sadda)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'10')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>impacting the ear<span class="flabel">Function</span>to be the object of hearing<span class="flabel">Manifestation</span>field of ear-consciousness<span class="flabel">Proximate Cause</span>4 primary elements.</div>
+  </div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">12</div>
+      <div><div class="name-en">Odour <span class="name-pali">(Gandha)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'10')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>impacting the nose<span class="flabel">Function</span>to be the object of smell<span class="flabel">Manifestation</span>field of nose-consciousness<span class="flabel">Proximate Cause</span>4 primary elements.</div>
+  </div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">13</div>
+      <div><div class="name-en">Taste <span class="name-pali">(Rasa)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'10')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>impacting the tongue<span class="flabel">Function</span>to be the object of taste<span class="flabel">Manifestation</span>field of tongue-consciousness<span class="flabel">Proximate Cause</span>4 primary elements.</div>
   </div>
 
-  <div class="category-title">VI. Life Matter (1)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">17</div><div class="name-ru">Life faculty <span class="name-pali">(Jīvitindriya)</span></div></div>
-    <div class="factor-desc">Ch: maintaining co-arisen matter; F: making it occur; M: establishing the presence of matter; PC: 4 great elements.</div>
+  <div class="category-title">IV. Sex Phenomena (2)</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">14</div>
+      <div><div class="name-en">Femininity <span class="name-pali">(Itthibhāva)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'14')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>female sex<span class="flabel">Function</span>to show "this is a woman"<span class="flabel">Manifestation</span>cause of female marks and manners<span class="flabel">Proximate Cause</span>4 primary elements.</div>
+  </div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">15</div>
+      <div><div class="name-en">Masculinity <span class="name-pali">(Pumbhāva)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'14')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>male sex<span class="flabel">Function</span>to show "this is a man"<span class="flabel">Manifestation</span>cause of male marks and manners<span class="flabel">Proximate Cause</span>4 primary elements.</div>
   </div>
 
-  <div class="category-title">VII. Nutriment Matter (1)</div>
-  <div class="factor-card b-real" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">18</div><div class="name-ru">Nutriment <span class="name-pali">(Āhāra / Ojā)</span></div></div>
-    <div class="factor-desc">Ch: nutritive essence; F: sustaining the body; M: strengthening the body; PC: edible food.</div>
+  <div class="category-title">V. Heart-Base (1)</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">16</div>
+      <div><div class="name-en">Heart-Base <span class="name-pali">(Hadaya-vatthu)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'16')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>material support for mind<span class="flabel">Function</span>to support mental elements<span class="flabel">Manifestation</span>bearing (receptacle) those elements<span class="flabel">Proximate Cause</span>4 primary elements and blood.</div>
+  </div>
+
+  <div class="category-title">VI. Life Faculty (1)</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">17</div>
+      <div><div class="name-en">Life Faculty <span class="name-pali">(Jīvitindriya)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'17')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>maintaining coexistent matter<span class="flabel">Function</span>to make it occur<span class="flabel">Manifestation</span>establishing the presence of matter<span class="flabel">Proximate Cause</span>4 primary elements.</div>
+  </div>
+
+  <div class="category-title">VII. Nutriment (1)</div>
+  <div class="factor-card b-real">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">18</div>
+      <div><div class="name-en">Nutriment <span class="name-pali">(Āhāra / Ojā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'18')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>nutritive essence<span class="flabel">Function</span>to sustain the body<span class="flabel">Manifestation</span>strengthening the body<span class="flabel">Proximate Cause</span>edible food.</div>
   </div>
 </details>
 
-<!-- INDIRECTLY PRODUCED MATTER -->
+<!-- NON-CONCRETELY PRODUCED MATTER -->
 <details class="sphere-group">
-  <summary class="sphere-summary">Indirectly Produced Matter (10)</summary>
+  <summary class="sphere-summary">Non-concretely Produced Matter (10)</summary>
 
-  <div class="category-title">VIII. Delimiting Matter (1)</div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">19</div><div class="name-ru">Space element <span class="name-pali">(Ākāsa-dhātu)</span></div></div>
-    <div class="factor-desc">Ch: delimiting matter; F: showing the boundaries of material groups; M: state of openings and intervals; PC: delimited matter.</div>
-  </div>
-
-  <div class="category-title">IX. Communicating Matter (2)</div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">20</div><div class="name-ru">Bodily communication <span class="name-pali">(Kāya-viññatti)</span></div></div>
-    <div class="factor-desc">F: manifesting intention through movements; M: cause of bodily movements; PC: consciousness-born air element.</div>
-  </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">21</div><div class="name-ru">Verbal communication <span class="name-pali">(Vacī-viññatti)</span></div></div>
-    <div class="factor-desc">F: manifesting intention through speech; M: cause of verbal utterances; PC: consciousness-born earth element.</div>
+  <div class="category-title">VIII. Limiting Phenomenon (1)</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">19</div>
+      <div><div class="name-en">Space Element <span class="name-pali">(Ākāsa-dhātu)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'19')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>delimiting matter<span class="flabel">Function</span>to show the boundaries of material groups<span class="flabel">Manifestation</span>the state of openings and gaps<span class="flabel">Proximate Cause</span>the delimiting matter.</div>
   </div>
 
-  <div class="category-title">X. Mutable Matter (3)</div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">22</div><div class="name-ru">Lightness <span class="name-pali">(Rūpassa lahutā)</span></div></div>
-    <div class="factor-desc">Ch: absence of unwieldiness; F: dispelling heaviness; M: easy transformability; PC: light matter.</div>
+  <div class="category-title">IX. Communication Phenomena (2)</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">20</div>
+      <div><div class="name-en">Bodily Communication <span class="name-pali">(Kāya-viññatti)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'20')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Function</span>displaying intention through movements<span class="flabel">Manifestation</span>cause of bodily movements<span class="flabel">Proximate Cause</span>mind-born air element.</div>
   </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">23</div><div class="name-ru">Softness <span class="name-pali">(Rūpassa mudutā)</span></div></div>
-    <div class="factor-desc">Ch: absence of stiffness; F: dispelling rigidity; M: non-resistance to action; PC: pliable matter.</div>
-  </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">24</div><div class="name-ru">Wieldiness <span class="name-pali">(Rūpassa kammaññatā)</span></div></div>
-    <div class="factor-desc">Ch: suitability for action; F: dispelling unwieldiness; M: absence of weakness; PC: manageable matter.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">21</div>
+      <div><div class="name-en">Verbal Communication <span class="name-pali">(Vacī-viññatti)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'20')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Function</span>displaying intention through speech<span class="flabel">Manifestation</span>cause of verbal utterances<span class="flabel">Proximate Cause</span>mind-born earth element.</div>
   </div>
 
-  <div class="category-title">XI. Characteristics of Matter (4)</div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">25</div><div class="name-ru">Production <span class="name-pali">(Upacaya)</span></div></div>
-    <div class="factor-desc">Ch: establishing the process of arising; F: initiating the arising of material groups; M: completed state at first arising; PC: produced matter.</div>
+  <div class="category-title">X. Changeability Phenomena (3)</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">22</div>
+      <div><div class="name-en">Lightness <span class="name-pali">(Rūpassa lahutā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'22')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>absence of sluggishness<span class="flabel">Function</span>dispelling heaviness<span class="flabel">Manifestation</span>easy transformability<span class="flabel">Proximate Cause</span>light matter.</div>
   </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">26</div><div class="name-ru">Continuity <span class="name-pali">(Santati)</span></div></div>
-    <div class="factor-desc">Ch: ability to occur repeatedly; F: consolidation (continuity); M: uninterrupted process; PC: matter subject to consolidation.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">23</div>
+      <div><div class="name-en">Malleability <span class="name-pali">(Rūpassa mudutā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'22')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>absence of rigidity<span class="flabel">Function</span>dispelling rigidity<span class="flabel">Manifestation</span>non‑resistance to action<span class="flabel">Proximate Cause</span>pliable matter.</div>
   </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">27</div><div class="name-ru">Decay <span class="name-pali">(Jaratā)</span></div></div>
-    <div class="factor-desc">Ch: maturing; F: leading phenomena to dissolution; M: loss of newness; PC: maturing matter.</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">24</div>
+      <div><div class="name-en">Wieldiness <span class="name-pali">(Rūpassa kammaññatā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'22')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>fitness for action<span class="flabel">Function</span>dispelling unwieldiness<span class="flabel">Manifestation</span>absence of weakness<span class="flabel">Proximate Cause</span>manageable matter.</div>
   </div>
-  <div class="factor-card b-ind" onclick="this.classList.toggle('open')">
-    <div class="factor-header"><div class="num">28</div><div class="name-ru">Impermanence <span class="name-pali">(Aniccatā)</span></div></div>
-    <div class="factor-desc">Ch: complete dissolution; F: cessation of phenomena; M: destruction and vanishing; PC: dissolved matter.</div>
+
+  <div class="category-title">XI. Material Characteristics (4)</div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">25</div>
+      <div><div class="name-en">Production <span class="name-pali">(Upacaya)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'25')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>establishing the process of arising<span class="flabel">Function</span>to initiate the arising of material groups<span class="flabel">Manifestation</span>the completed state at first arising<span class="flabel">Proximate Cause</span>produced matter.</div>
+  </div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">26</div>
+      <div><div class="name-en">Continuity <span class="name-pali">(Santati)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'25')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>the ability to occur repeatedly<span class="flabel">Function</span>consolidation (succession)<span class="flabel">Manifestation</span>uninterruptedness of the process<span class="flabel">Proximate Cause</span>matter to be consolidated.</div>
+  </div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">27</div>
+      <div><div class="name-en">Decay <span class="name-pali">(Jaratā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'27')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>maturing<span class="flabel">Function</span>to lead phenomena to their end<span class="flabel">Manifestation</span>loss of newness<span class="flabel">Proximate Cause</span>decaying matter.</div>
+  </div>
+  <div class="factor-card b-ind">
+    <div class="factor-header" onclick="toggleCard(this.parentElement)">
+      <div class="num">28</div>
+      <div><div class="name-en">Impermanence <span class="name-pali">(Aniccatā)</span></div></div>
+      <button class="detail-btn" onclick="openDrawer(event,'28')">details</button>
+    </div>
+    <div class="factor-desc"><span class="flabel">Characteristic</span>complete dissolution<span class="flabel">Function</span>to terminate phenomena<span class="flabel">Manifestation</span>destruction and passing away<span class="flabel">Proximate Cause</span>dissolved matter.</div>
   </div>
 </details>
 <br>
+
+<!-- CLASSIFICATION SECTIONS -->
+<div class="section-divider">Classification of Matter (Rūpavibhāga)</div>
+
+<!-- § 6. Singlefold -->
+<details class="class-group">
+  <summary class="class-summary">§ 6. Singlefold</summary>
+  <div class="class-body">
+    <div class="class-para">All this matter [with respect to its classification] is singlefold in the sense that it is all: rootless, with conditions, subject to cankers, conditioned, mundane, belonging to the sense‑sphere, objectless, not to be abandoned. But when considered as internal and external, etc., matter becomes manifold.</div>
+    <div class="class-subtitle">Commentary on § 6</div>
+    <div class="class-para"><span class="class-term">All this matter is singlefold:</span> All matter is rootless because it is not associated with wholesome, unwholesome, or indeterminate roots; association with roots exists only for mental phenomena. All matter is with conditions because it arises dependent on four conditions [kamma, temperature, consciousness, and nutriment]. It is subject to cankers (sāsava) because it can become an object of the four cankers [canker of sense‑desire, attachment to existence, wrong view, and ignorance]. It is all conditioned and mundane because there is no matter that transcends the world of the five aggregates of clinging. All matter belongs to the sense‑sphere: although matter exists also in the fine‑material world, it belongs by its nature to the sense‑sphere because it is the object of sense‑desire. Matter is objectless because, unlike mental phenomena, it cannot know an object; and it is not to be abandoned because it cannot be abandoned like defilements in the four supramundane paths.</div>
+  </div>
+</details>
+
+<!-- § 7. How Manifold -->
+<details class="class-group">
+  <summary class="class-summary">§ 7. How Manifold</summary>
+  <div class="class-body">
+    <div class="class-subtitle">In what way?</div>
+    <div class="class-para">The five kinds of sensory material phenomena are <span class="class-term">internal</span>, the rest are external.</div>
+    <div class="class-para">Six kinds, including the sense organs and the heart, are material phenomena that are <span class="class-term">bases</span>, the rest are not bases.</div>
+    <div class="class-para">Seven kinds, including the sense organs and the (two) means of communication, are material phenomena that are <span class="class-term">doors</span>; the rest are not doors.</div>
+    <div class="class-para">Eight kinds, including the sense organs, the material determining sex, and life, are material phenomena that are <span class="class-term">controlling faculties</span>, the rest are not faculties.</div>
+    <div class="class-para">Twelve kinds, including the five sense organs and (seven) sense objects, are <span class="class-term">coarse, immediate, and impinging</span> material phenomena; the rest are subtle, remote, and non‑impinging.</div>
+    <div class="class-para">Material phenomena born of kamma are <span class="class-term">obtained by clinging</span>; the rest are not obtained by clinging.</div>
+    <div class="class-para">The sphere of visible objects is <span class="class-term">visible</span>, the rest are invisible.</div>
+    <div class="class-para">Eye and ear are <span class="class-term">non‑reaching</span> (their objects), nose, tongue, and body are <span class="class-term">reaching</span> (their objects) — they are the five kinds of material phenomena that take an object; the remaining material phenomena do not take an object.</div>
+    <div class="class-para">Colour, odour, taste, nutritive essence, and the four primary elements are eight kinds of material phenomena that are <span class="class-term">inseparable</span>, the rest are separable.</div>
+
+    <div class="class-subtitle">Commentary on § 7</div>
+    <div class="class-para"><span class="class-term">Internal (ajjhattika):</span> Here the term “internal” is used with reference to matter in a technical sense, applying only to the five types of sensitive matter that serve as doors for mental phenomena. Although other types of material phenomena occur within the physical body, only these five sensitive factors are designated as “internal”.</div>
+    <div class="class-para"><span class="class-term">Bases (vatthu):</span> see Chapter III, § 20.</div>
+    <div class="class-para"><span class="class-term">Doors (dvāra):</span> The five kinds of sensitive matter are doors for consciousness, i.e. that through which consciousness and mental factors meet with objects. Bodily and verbal communication are doors of action, i.e. channels for bodily and verbal deeds.</div>
+    <div class="class-para"><span class="class-term">Faculties (indriya):</span> Sensitives are so called because they exercise controlling power (indra) in their respective spheres. Each of them controls the coexistent material phenomena in the performance of its specific function such as seeing, hearing, etc. The controlling faculty of sex controls the manifestation of masculine and feminine features and characteristics. The life faculty controls the coexistent material types as a captain controls the ship.</div>
+    <div class="class-para"><span class="class-term">Coarse, immediate, and impinging material phenomena:</span> These three terms are used here in a technical sense which should not be confused with their ordinary meaning. They apply only to material phenomena that play an important role in the arising of sense consciousness, and say nothing about relative size or distance. There are twelve such phenomena: five sense organs and seven sense objects — tangibility counts as three objects because it consists of three great primaries. Those material phenomena which do not directly participate in the arising of sense consciousness are called subtle, remote, and non‑impinging, again regardless of their size and distance.</div>
+    <div class="class-para"><span class="class-term">Obtained by clinging (upādinna):</span> The eighteen kinds of matter produced by kamma are known as “obtained by clinging” because they have been obtained as the fruits of kamma motivated by craving and wrong view. Matter produced by other than kamma causes is known as not obtained by clinging. However, in a general, less technical sense, all organic matter in the body is considered obtained by clinging, while inorganic matter is spoken of as not obtained by clinging. It should be noted that, unlike other pairs of terms used for classification, the pair “obtained by clinging” and “not obtained by clinging” does not set up a mutually exclusive dichotomy, since nine types of material phenomena produced by kamma may also originate from other causes (see below, § 17).</div>
+    <div class="class-para"><span class="class-term">Eye and ear as non‑reaching (their object):</span> According to the Abhidhamma, the eye and ear are regarded as sense organs that do not reach or touch (asampatta) their respective objects. In order for the eye or ear to serve as basis for consciousness, their objects must not be in contact with them. Conversely, the remaining three organs are considered to directly touch (sampatta) their objects.</div>
+    <div class="class-para"><span class="class-term">Material phenomena that take an object:</span> The Pāli expression gocaraggāhikā is used figuratively to emphasise that the five sense organs serve as bases for the consciousnesses that arise with their support. But sense organs, being matter, cannot literally apprehend objects. Rather, the sense consciousnesses that depend on them are what actually cognise objects.</div>
+    <div class="class-para"><span class="class-term">Material phenomena that are inseparable:</span> The four great primaries and the four derivatives — colour, odour, taste, and nutritive essence — are known as inseparable matter (avinibbhogarūpa) because they are always bound together and present in all material objects, from the simplest to the most complex. Other types of material phenomena may or may not be present and are thus considered separable. The material group (kalāpa) that consists exclusively of these eight elements is known as the “pure octad” (suddhaṭṭhaka) or “group with nutritive essence as the eighth (constituent)” (ojatthamaka).</div>
+  </div>
+</details>
+
+<div class="section-divider green">Origin of Matter (Rūpasamuṭṭhāna)</div>
+
+<!-- § 9 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 9. Four Ways of Origination</summary>
+  <div class="origin-body">
+    <div class="origin-para">
+      <span class="origin-pali">Kammaṃ cittaṃ utu āhāro cāti cattāri rūpasamuṭṭhānāni nāma.</span>
+      Material phenomena arise in four ways: from <span class="origin-term">kamma</span>, from <span class="origin-term">consciousness</span>, from <span class="origin-term">temperature</span>, and from <span class="origin-term">nutriment</span>.
+    </div>
+  </div>
+</details>
+
+<!-- § 10 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 10. Kamma as a Mode of Origination</summary>
+  <div class="origin-body">
+    <div class="origin-para">Twenty‑five types of wholesome and unwholesome kamma pertaining to the sense‑sphere and the fine‑material sphere produce, from moment to moment, beginning with rebirth‑consciousness, in the internal continuum of a being material phenomena born of volition, which originate from kamma.</div>
+    <div class="origin-subtitle">Commentary on § 10</div>
+    <div class="origin-para"><span class="origin-term">Material phenomena originating from kamma (kammasamuṭṭhānarūpa):</span> By kamma here is meant volition (cetanā) in past wholesome and unwholesome states of consciousness. The twenty‑five types of kamma that produce material phenomena are the volitions of the twelve unwholesome consciousnesses, of the eight great wholesome consciousnesses, and of the five fine‑material wholesome consciousnesses. The volitions of wholesome consciousnesses of the immaterial sphere generate rebirth in the immaterial world and thus cannot produce material phenomena originating from kamma.</div>
+    <div class="origin-para">Kamma produces material phenomena in each of the three submoments of consciousness — arising, presence, and dissolution — starting from the submoment of arising in rebirth‑consciousness; it continues to do so throughout existence, up to the seventeenth mind‑moment preceding death‑consciousness. Eighteen types of material phenomena are produced by kamma: the eight inseparable ones in the nine groups produced by kamma; the five sensitivities; the two controlling faculties of sex; the life‑controlling faculty, the heart‑base, and space. Among these, nine — the eight controlling faculties and the heart‑base — arise exclusively from kamma.</div>
+  </div>
+</details>
+
+<!-- § 11 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 11. Consciousness as a Mode of Origination</summary>
+  <div class="origin-body">
+    <div class="origin-para">Seventy‑five types of consciousness, excluding the resultant immaterial‑sphere consciousnesses and the two sets of five‑fold sense consciousnesses, produce material phenomena originated by consciousness, starting from the first moment of life‑continuum, but they produce them only in the submoment of arising. Here the absorption javanas also maintain bodily postures. But the determining consciousness, sense‑sphere javanas, and direct‑knowledge consciousness also produce (bodily and verbal communication). Moreover, thirteen javanas accompanied by joy also produce a smile.</div>
+    <div class="origin-subtitle">Commentary on § 11</div>
+    <div class="origin-para"><span class="origin-term">Material phenomena originated by consciousness (cittasamuṭṭhānarūpa):</span> Material phenomena produced by consciousness appear from the arising moment of the first life‑continuum citta immediately after rebirth‑consciousness. Rebirth‑consciousness does not produce matter originated by consciousness because at the moment of rebirth the arising matter is produced by kamma, and also because rebirth‑consciousness is just arriving in the new existence. The five‑fold sense consciousnesses lack the power to produce matter, and the four immaterial resultant consciousnesses cannot do so because they arise only in immaterial worlds. According to the commentaries, mental phenomena are strongest at the moment of arising, while material phenomena are strongest at the moment of presence. Therefore consciousness produces matter only at its arising moment, when it is strongest, not at the moments of presence or dissolution.</div>
+    <div class="origin-para"><span class="origin-term">Absorption javanas, etc.:</span> The maintenance of bodily posture is a function of states of consciousness. The twenty‑six absorption javanas perform this function minimally, keeping the body in a sitting, standing, or lying posture. The other thirty‑two cittas — the determining consciousness, sense‑sphere javanas, and direct‑knowledge consciousness — not only sustain postures but also activate bodily and verbal communication.</div>
+    <div class="origin-para"><span class="origin-term">Thirteen ... also produce a smile:</span> An ordinary worldling may smile or laugh with any of the four consciousnesses rooted in greed accompanied by joy, or with any of the four great wholesome consciousnesses accompanied by joy. Practitioners smile with six of these consciousnesses — the two associated with wrong view are excluded. Arahants may smile with one of five consciousnesses — these are the four great functional consciousnesses associated with joy and the rootless consciousness producing a smile.</div>
+  </div>
+</details>
+
+<!-- § 12 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 12. Temperature as a Mode of Origination</summary>
+  <div class="origin-body">
+    <div class="origin-para">The fire element, which comprises both cold and heat, on reaching the stage of presence produces, according to circumstances, both internal and external material phenomena originating from temperature.</div>
+    <div class="origin-subtitle">Commentary on § 12</div>
+    <div class="origin-para"><span class="origin-term">Material phenomena originating from temperature (utusamuṭṭhānarūpa):</span> Beginning with the stage of presence at the moment of rebirth, the internal fire element present in the material groups produced by kamma, combining with the external fire element, starts to produce organic material phenomena originating from temperature. Thereafter, the fire element in material groups born from all four causes produces organic material phenomena born from temperature throughout existence. Externally, temperature, or the fire element, also produces inorganic material phenomena such as climatic and geological transformations.</div>
+  </div>
+</details>
+
+<!-- § 13 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 13. Nutriment as a Mode of Origination</summary>
+  <div class="origin-body">
+    <div class="origin-para">Nutriment, known as nutritive essence, on reaching the stage of presence produces material phenomena originating from nutriment at the time of its ingestion.</div>
+    <div class="origin-subtitle">Commentary on § 13</div>
+    <div class="origin-para"><span class="origin-term">Material phenomena originating from nutriment (āhārasamuṭṭhānarūpa):</span> Internal nutritive essence, supported by external nutriment, produces material phenomena at the moment of presence, starting from the time of ingestion. The nutritive essence that has reached presence in material groups originating from nutriment produces a further pure octad, and the nutritive essence in that octad produces yet another octad; thus the arising of octads continues one after another for ten or twelve times. Food taken by the mother during pregnancy permeates the foetus's body, causing matter to arise in the child. It is said that even food smeared on the body produces matter. The nutritive essence in internal groups born from the other three causes also produces several rounds of pure octads in succession. Food taken in one day can sustain the body for seven days.</div>
+  </div>
+</details>
+
+<!-- § 14 -->
+<details class="origin-group">
+  <summary class="origin-summary">§ 14. Analysis by Way of Origination</summary>
+  <div class="origin-body">
+    <div class="origin-para">The heart‑base and the eight controlling faculties are produced by <span class="origin-term">kamma</span>. The two means of communication are produced exclusively by <span class="origin-term">consciousness</span>. Sound is produced by <span class="origin-term">consciousness and temperature</span>. The triple qualities of lightness, malleability, and wieldiness arise from <span class="origin-term">temperature, consciousness, and nutriment</span>. The inseparable material phenomena and the space‑element arise from <span class="origin-term">all four causes</span>. The material characteristics do not arise from any cause.</div>
+    <div class="origin-subtitle">Commentary on § 14</div>
+    <div class="origin-para">Articulate [intelligently uttered] sounds are caused by consciousness, inarticulate [all other sounds] by temperature. The triple qualities of lightness, malleability, and wieldiness arise from favourable climatic conditions, a brisk state of mind, and suitable nutriment, while unfavourable climate depresses mental states and unsuitable nutriment causes heaviness, stiffness, and unwieldiness in the physical body. The space‑element arises as the intervals between material groups produced by the four causes, and is therefore considered derivatively born from all four causes. The reason why the material characteristics do not arise from any cause is explained in the next section.</div>
+  </div>
+</details>
+
+<div class="section-divider teal">Grouping of Material Phenomena (Kalāpayojanā)</div>
+
+<!-- § 16 -->
+<details class="group-group">
+  <summary class="group-summary">§ 16. In Brief</summary>
+  <div class="group-body">
+    <div class="group-para">Twenty‑one material groups exist because they arise together, cease together, share a common base, and occur together.</div>
+    <div class="group-subtitle">Commentary on § 16</div>
+    <div class="group-para">Material phenomena do not occur singly but arise in combinations or groups known as <span class="group-term">rūpakalāpas</span>, of which there are twenty‑one. Just as all mental factors possess four characteristics, so too do material phenomena in a group. All material phenomena in a group arise together and cease together. They share a common base, namely the coexisting great primaries, which are the direct cause both for the derived phenomena and for each other. And they all occur together, from arising up to cessation.</div>
+  </div>
+</details>
+
+<!-- § 17 -->
+<details class="group-group">
+  <summary class="group-summary">§ 17. Groups Produced by Kamma</summary>
+  <div class="group-body">
+    <div class="group-para">Life and the eight inseparable material phenomena together with the eye are called the <span class="group-term">eye‑decad</span>. Similarly (combining the first nine) with the ear we obtain the <span class="group-term">ear‑decad</span>, and likewise the <span class="group-term">nose‑decad</span>, <span class="group-term">tongue‑decad</span>, <span class="group-term">body‑decad</span>, <span class="group-term">femininity‑decad</span>, <span class="group-term">masculinity‑decad</span>, <span class="group-term">heart‑base‑decad</span> are obtained accordingly. The inseparable material phenomena together with life are called the <span class="group-term">vital nonad</span>. These nine groups originate from kamma.</div>
+  </div>
+</details>
+
+<!-- § 18 -->
+<details class="group-group">
+  <summary class="group-summary">§ 18. Groups Produced by Consciousness</summary>
+  <div class="group-body">
+    <div class="group-para">The inseparable material phenomena constitute the <span class="group-term">pure octad</span>. These together with bodily communication form the <span class="group-term">bodily‑communication nonad</span>; together with verbal communication and sound — the <span class="group-term">verbal‑communication decad</span>; together with the material phenomena of the triple lightness — the <span class="group-term">lightness‑triple undecad [group of 11]</span>; the <span class="group-term">bodily‑communication and lightness‑triple dodecad [group of 12]</span>; the <span class="group-term">verbal‑communication, sound and lightness‑triple tridecad [group of 13]</span>. These six material groups originate from consciousness.</div>
+  </div>
+</details>
+
+<!-- § 19 -->
+<details class="group-group">
+  <summary class="group-summary">§ 19. Groups Produced by Temperature</summary>
+  <div class="group-body">
+    <div class="group-para"><span class="group-term">Pure octad</span>, <span class="group-term">sound‑nonad</span>, <span class="group-term">lightness‑triple undecad</span>, <span class="group-term">sound‑and‑lightness‑triple dodecad</span> — these four groups originate from temperature.</div>
+  </div>
+</details>
+
+<!-- § 20 -->
+<details class="group-group">
+  <summary class="group-summary">§ 20. Groups Originating from Nutriment</summary>
+  <div class="group-body">
+    <div class="group-para"><span class="group-term">Pure octad</span> and <span class="group-term">lightness‑triple undecad</span> — two material groups originate from nutriment.</div>
+  </div>
+</details>
+
+<!-- § 21 -->
+<details class="group-group">
+  <summary class="group-summary">§ 21. Internal and External</summary>
+  <div class="group-body">
+    <div class="group-para">Among them, two material groups produced by temperature — the <span class="group-term">pure octad</span> and the <span class="group-term">sound‑nonad</span> — can also be external. All the others are strictly internal.</div>
+  </div>
+</details>
+
+<div class="section-divider purple">Patterns of Occurrence of Material Phenomena (Rūpappavattikkama)</div>
+
+<!-- § 23 -->
+<details class="pattern-group">
+  <summary class="pattern-summary">§ 23. In the Sense‑Sphere World</summary>
+  <div class="pattern-body">
+    <div class="pattern-para">All these material phenomena are present in the required amount, according to circumstances, throughout existence in the sense‑sphere world. But at rebirth‑consciousness for <span class="pattern-term">moisture‑born</span> beings and <span class="pattern-term">spontaneously‑born</span> beings, a maximum of seven decads arise — the eye‑decad, ear‑decad, nose‑decad, tongue‑decad, body‑decad, sex‑decad, and heart‑base‑decad. At a minimum, sometimes the eye‑decad, ear‑decad, nose‑decad, and sex‑decad are not obtained.</div>
+    <div class="pattern-para">For <span class="pattern-term">womb‑born</span> creatures, three decads arise (at the moment of rebirth) — the body‑decad, sex‑decad, and heart‑base‑decad. However, sometimes the sex‑decad is not obtained. Afterwards, in the course of existence, the eye‑decad, etc., gradually arise.</div>
+    <div class="pattern-subtitle">Commentary on § 23</div>
+    <div class="pattern-para">According to Buddhism, there are four modes of birth: <span class="pattern-term">egg‑born (aṇḍaja)</span> beings, <span class="pattern-term">womb‑born (jalābuja)</span>, <span class="pattern-term">moisture‑born (saṃsedaja)</span>, and <span class="pattern-term">spontaneously‑born (opapātika)</span>. Moisture‑born beings include certain lower forms of animal life. Spontaneously‑born beings are usually not visible to the physical eye — petas and devas generally belong to this class. Under the term “womb‑born” in this text, egg‑born beings are also included.</div>
+  </div>
+</details>
+
+<!-- § 24 -->
+<details class="pattern-group">
+  <summary class="pattern-summary">§ 24. Continuity of Occurrence</summary>
+  <div class="pattern-body">
+    <div class="pattern-para">Thus the arising of material groups produced by the four modes — namely, those born of kamma from the moment of rebirth‑consciousness, those born of consciousness from the second moment of consciousness, those born of temperature from the stage of presence (of the first moment), those born of nutriment from the moment of mixing of nutritive essence — flows on continuously in the sense‑sphere world up to the very end of life, like <span class="pattern-term">the flame of a lamp or the flow of a river</span>.</div>
+  </div>
+</details>
+
+<!-- § 25 -->
+<details class="pattern-group">
+  <summary class="pattern-summary">§ 25. At the Time of Death</summary>
+  <div class="pattern-body">
+    <div class="pattern-para">But at the time of death, starting from the stage of presence of the seventeenth consciousness preceding death‑consciousness, material phenomena born of kamma no longer arise. The material phenomena born of kamma that were produced earlier occur up to the moment of death and then cease. Next, material phenomena born of consciousness and born of nutriment cease. After that, the material qualities produced by temperature continue to exist in the form of a <span class="pattern-term">corpse</span>.</div>
+    <div class="pattern-para">Thus for beings who have died, material phenomena arise again in the next life, beginning with rebirth‑consciousness, in the same way.</div>
+  </div>
+</details>
+
+<!-- § 27 -->
+<details class="pattern-group">
+  <summary class="pattern-summary">§ 27. In the Fine‑Material World</summary>
+  <div class="pattern-body">
+    <div class="pattern-para">In the fine‑material world, the nose‑decad, tongue‑decad, body‑decad, sex‑decad, and material groups produced by nutriment are not found. Therefore for these beings, at the time of rebirth‑consciousness, four material groups produced by kamma arise — the three decads of eye, ear, and heart‑base, and the vital nonad. Material phenomena produced by consciousness and temperature are not found in the course of [fine‑material] existence.</div>
+    <div class="pattern-subtitle">Commentary on § 27</div>
+    <div class="pattern-para">Beings in the fine‑material worlds, being asexual, lack the two sex‑decads, and although they possess the physical forms of nose, tongue, and body, these organs lack sensory sensitivity.</div>
+  </div>
+</details>
+
+<!-- § 28 -->
+<details class="pattern-group">
+  <summary class="pattern-summary">§ 28. Among Non‑Percipient Beings</summary>
+  <div class="pattern-body">
+    <div class="pattern-para">Among <span class="pattern-term">non‑percipient beings</span>, the eye, ear, heart‑base, and sound are also not found. And material phenomena born of consciousness are not found there either. Therefore at their rebirth‑moment only the <span class="pattern-term">vital nonad</span> arises. In the course of existence, with the exception of sound, material phenomena produced by temperature continue to arise.</div>
+  </div>
+</details>
+
+<br>
+
+<div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-handle"></div>
+  <div class="drawer-inner">
+    <div class="drawer-top">
+      <div>
+        <div class="drawer-label" id="drawer-label"></div>
+        <div class="drawer-title" id="drawer-title"></div>
+        <div class="drawer-pali" id="drawer-pali"></div>
+      </div>
+      <button class="drawer-close" onclick="closeDrawer()">✕</button>
+    </div>
+    <div class="drawer-origin-label">Mode of Origination</div>
+    <div class="drawer-short" id="drawer-short"></div>
+    <div class="drawer-divider">Details</div>
+    <div class="drawer-long" id="drawer-long"></div>
+  </div>
+</div>
+
+<script>
+const origins = {
+  'kammaOnly':    { text: 'Only kamma', color: '#60A5FA' },
+  'kamma':        { text: 'Kamma', color: '#60A5FA' },
+  'citta':        { text: 'Only consciousness', color: '#A78BFA' },
+  'cittaUtu':     { text: 'Consciousness and temperature', color: '#A78BFA' },
+  'utoCittaAhara':{ text: 'Temperature, consciousness, nutriment', color: '#81C784' },
+  'all4':         { text: 'All four causes: kamma, consciousness, temperature, nutriment', color: '#FFE082' },
+};
+
+function originTag(key) {
+  const o = origins[key];
+  return `<span style="display:inline-block;background:rgba(255,255,255,0.06);border:1px solid ${o.color}44;color:${o.color};font-size:0.78rem;font-weight:600;padding:4px 12px;border-radius:20px;">${o.text}</span>`;
+}
+
+const data = {
+  '1':  { label:'Great Primaries · I',   title:'Earth Element',                  pali:'Pathavī-dhātu',     short: originTag('all4'),
+    long: 'The great primaries are called elements (dhātu) in the sense that they bear their own real nature. The earth element is so called because, like the earth, it serves as a support or foundation for coexistent material phenomena. The word pathavī is derived from a root meaning “to expand”, “to spread”. Thus the earth element represents the principle of extension. Its proximate cause is the three other great primaries. Hardness and softness are the modes in which the earth element is perceived by touch.'
+  },
+  '2':  { label:'Great Primaries · II',  title:'Water Element',                   pali:'Āpo-dhātu',         short: originTag('all4'),
+    long: 'The water element, or fluidity, is the material factor that causes the different particles of matter to cohere, thus preventing them from being scattered. Its characteristic is trickling or oozing, its function is to intensify, to manifest coexistent material states, and it is manifested as the holding together, or cohesion, of material phenomena. The Abhidhamma states that, unlike the other three great primaries, the water element cannot be physically sensed, but must be inferred from the cohesion of observed matter.'
+  },
+  '3':  { label:'Great Primaries · III', title:'Fire Element',                  pali:'Tejo-dhātu',        short: originTag('all4'),
+    long: 'The fire element has the characteristic of heat, its function is to mature or ripen other material phenomena, and it is manifested as a continuous supply of softness. Heat and cold are the modes in which the fire element is experienced. Taken together, the four great primaries are founded on the earth element, held together by the water element, maintained by the fire element, and distended by the air element.'
+  },
+  '4':  { label:'Great Primaries · IV',  title:'Air Element',                 pali:'Vāyo-dhātu',        short: originTag('all4'),
+    long: 'The air element is the principle of motion and pressure. Its characteristic is distension (vitthambhana), its function is to cause motion in other material phenomena, and it is manifested as conveying to other places. Its proximate cause is the three other great primaries. It is experienced as tactile pressure.'
+  },
+  '5':  { label:'Sensitive Phenomena · I',        title:'Eye-sensitivity',              pali:'Cakkhu-pasāda',     short: originTag('kamma'),
+    long: 'Sensitivity must be distinguished from the gross sense organs that act as its support. What is conventionally called the eye is in the Abhidhamma called the composite eye (sasambhāra-cakkhu) — a complex of various material phenomena. Among them is eye-sensitivity (cakkhu-pasāda), the sensitive substance in the retina that registers light and colour and serves as the physical basis and door for eye-consciousness.'
+  },
+  '6':  { label:'Sensitive Phenomena · II',       title:'Ear-sensitivity',                pali:'Sota-pasāda',       short: originTag('kamma'),
+    long: 'Ear-sensitivity (sota-pasāda) is located inside the ear cavity, in a place shaped like a finger‑stall and surrounded by fine brown hairs. It is this sensitive substance that registers sounds and serves as the physical basis and door for ear-consciousness.'
+  },
+  '7':  { label:'Sensitive Phenomena · III',      title:'Nose-sensitivity',               pali:'Ghāna-pasāda',      short: originTag('kamma'),
+    long: 'Nose-sensitivity (ghāna-pasāda) is located inside the nasal cavity as a substance that registers odours. Like other kinds of sensitivity, it serves as the physical basis and door for the corresponding consciousness — nose-consciousness.'
+  },
+  '8':  { label:'Sensitive Phenomena · IV',       title:'Tongue-sensitivity',              pali:'Jivhā-pasāda',      short: originTag('kamma'),
+    long: 'Tongue-sensitivity (jivhā-pasāda) is spread over the surface of the tongue and serves to register tastes. It is the physical basis and door for tongue-consciousness.'
+  },
+  '9':  { label:'Sensitive Phenomena · V',        title:'Body-sensitivity',               pali:'Kāya-pasāda',       short: originTag('kamma'),
+    long: 'Body-sensitivity (kāya-pasāda) is distributed throughout the organic body, like a liquid soaking a layer of cotton, and serves to register tactile sensations. It is the physical basis and door for body-consciousness.'
+  },
+  '10': { label:'Objective Phenomena',             title:'Visible Form, Sound, Odour, Taste', pali:'Gocara-rūpa',    short: originTag('all4'),
+    long: 'Objective material phenomena are the five sense fields that serve as objective support for the corresponding sense consciousnesses. It should be noted that the tangible object consists of three great primaries: the earth element, experienced as softness or hardness; the fire element, experienced as heat or cold; and the air element, experienced as pressure. The water element, being the principle of cohesion, is not, according to the Abhidhamma, included in tactile data. The other four sense objects — visible form, sound, odour, and taste — are types of derived matter.'
+  },
+  '14': { label:'Sex Phenomena',                  title:'Femininity and Masculinity', pali:'Bhāva-rūpa',        short: originTag('kamma'),
+    long: 'The material phenomena of sex are the two faculties of femininity and masculinity. These faculties have respectively the characteristic of female sex and male sex. Their function is to show femininity and masculinity. They are manifested as the reason for the mark, designation, activity, and mode of behaviour of women and men; that is, for the sexual structure of the body, for its feminine or masculine features, for typical occupations and manners.'
+  },
+  '16': { label:'Heart-Base',                title:'Heart-Base',                  pali:'Hadaya-vatthu',     short: originTag('kammaOnly'),
+    long: 'The characteristic of the heart-base is to be the material support for the mind‑element and the mind‑consciousness‑element. Its function is to support them. It is manifested as the carrying of these elements. It exists depending on the blood inside the heart, receiving assistance from the four great primaries and being sustained by the life faculty. According to the Pāli commentators, the heart serves as the physical support for all cittas except the five‑fold sense consciousnesses, which take the corresponding sensitivity as their basis.'
+  },
+  '17': { label:'Life Faculty',                 title:'Life Faculty',   pali:'Jīvitindriya',      short: originTag('kammaOnly'),
+    long: 'The life faculty is the material counterpart of the mental life faculty, one of the seven universal mental factors. Life, or vitality, is called a controlling faculty because it exercises dominant influence over its associates. Its proximate cause is the four great primaries that need to be sustained.'
+  },
+  '18': { label:'Nutriment',               title:'Nutriment',                        pali:'Āhāra / Ojā',       short: originTag('all4'),
+    long: 'Material food (kabaliṅkārāhāra) has the characteristic of nutritive essence (ojā), i.e. the nutritive substance contained in gross material food. Its function is to sustain the physical body. It is manifested as the strengthening of the body. Its proximate cause is gross material food, which is the basis of the nutritive essence.'
+  },
+  '19': { label:'Non‑concretely Produced Matter · VIII', title:'Space Element',   pali:'Ākāsa-dhātu',       short: originTag('all4'),
+    long: 'Space as understood in the Abhidhamma is not merely geometrical extension, but the region of emptiness that delimits and separates objects and groups of material phenomena, allowing them to be perceived as separate. Non‑concretely produced phenomena exist as modalities or attributes of concretely produced matter — they do not arise directly from the four main causes (kamma, consciousness, temperature, and nutriment), and are therefore not included among the primary realities (paramattha dhammā).'
+  },
+  '20': { label:'Non‑concretely Produced Matter · IX',  title:'Bodily and Verbal Communication', pali:'Viññatti-rūpa', short: originTag('citta'),
+    long: 'Viññatti, communication, is that by means of which a being communicates its ideas, feelings, and attitudes to another. Bodily communication is a particular modification in the mind‑produced air element that causes the body to move in a way that indicates the being’s intention. Verbal communication is a particular modification in the mind‑produced earth element that manifests as speech, by which a living being reveals its intentions. Both have the function of displaying intention.'
+  },
+  '22': {
+    label: 'Non‑concretely Produced Matter · X',
+    title: 'Lightness, Malleability, Wieldiness',
+    pali: 'Vikāra-rūpa',
+    short: originTag('utoCittaAhara'),
+    long: 'Lightness (lahutā) has the characteristic opposite to sluggishness. Its function is to dispel heaviness in matter. It is manifested as easy transformability. Its proximate cause is light matter. Malleability (mudutā) has the characteristic of non‑rigidity. Its function is to dispel rigidity in matter. It is manifested as non‑resistance to any kind of action. Wieldiness (kammaññatā) has the characteristic of wieldiness favourable to bodily action. Its function is to dispel unwieldiness. It is manifested as non‑weakness.'
+  },
+  '25': {
+    label: 'Non‑concretely Produced Matter · XI',
+    title: 'Production and Continuity',
+    pali: 'Upacaya / Santati',
+    short: originTag('all4'),
+    long: 'Production is the first arising of a material process, the initial launching or establishing of the process. Continuity is the repeated arising of a material phenomenon in the same material process. For example, the arising of the body, the sex groups, and the heart at conception is production, while the constant arising of the same groups of matter throughout life is continuity. Production has the characteristic of establishing, and continuity the ability to occur repeatedly.'
+  },
+  '27': {
+    label: 'Non‑concretely Produced Matter · XI',
+    title: 'Decay',
+    pali: 'Jaratā',
+    short: originTag('all4'),
+    long: 'Decay (jaratā) has the characteristic of maturing or aging of material phenomena. Its function is to lead them to their end. It is manifested as the loss of newness without loss of the entity itself. Its proximate cause is decaying matter. It is the intermediate stage between arising and complete cessation of the phenomenon.'
+  },
+  '28': {
+    label: 'Non‑concretely Produced Matter · XI',
+    title: 'Impermanence',
+    pali: 'Aniccatā',
+    short: originTag('all4'),
+    long: 'Impermanence (aniccatā) has the characteristic of the complete dissolution of material phenomena. Its function is to make them cease. It is manifested as destruction and disappearance. Its proximate cause is completely dissolving matter. This is the final stage of the material process, inseparable from the very nature of conditioned existence.'
+  }
+};
+
+function toggleIntro() {
+  const toggle = document.getElementById('introToggle');
+  const body = document.getElementById('introBody');
+  toggle.classList.toggle('open');
+  body.classList.toggle('open');
+}
+
+function toggleCard(card) {
+  card.classList.toggle('open');
+}
+
+function openDrawer(e, id) {
+  e.stopPropagation();
+  const d = data[id];
+  if (!d) return;
+
+  document.getElementById('drawer-label').textContent = d.label;
+  document.getElementById('drawer-title').textContent = d.title;
+  document.getElementById('drawer-pali').textContent = d.pali;
+  document.getElementById('drawer-short').innerHTML = d.short;
+  document.getElementById('drawer-long').textContent = d.long;
+
+  const overlay = document.getElementById('overlay');
+  const drawer = document.getElementById('drawer');
+
+  overlay.classList.add('active');
+  requestAnimationFrame(() => {
+    overlay.classList.add('visible');
+    drawer.classList.add('active');
+  });
+}
+
+function closeDrawer() {
+  const overlay = document.getElementById('overlay');
+  const drawer = document.getElementById('drawer');
+  overlay.classList.remove('visible');
+  drawer.classList.remove('active');
+  setTimeout(() => overlay.classList.remove('active'), 350);
+}
+
+// Swipe down to close on mobile
+let startY = 0;
+const drawer = document.getElementById('drawer');
+drawer.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+drawer.addEventListener('touchend', e => {
+  if (e.changedTouches[0].clientY - startY > 60) closeDrawer();
+});
+</script>
 </body>
 </html>

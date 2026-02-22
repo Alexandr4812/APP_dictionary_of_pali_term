@@ -14,10 +14,15 @@
             --variable: #94A3B8;
             --unwholesome: #EF4444;
             --beautiful: #10B981;
+            --real: #60A5FA;
+            --indirect: #A78BFA;
         }
 
+        * { box-sizing: border-box; }
+
         body {
-            margin: 0; padding: 15px;
+            margin: 0;
+            padding: 15px;
             font-family: -apple-system, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
@@ -26,10 +31,50 @@
         }
 
         .main-title {
-            text-align: center; color: var(--accent-color);
-            font-size: 1.1rem; font-weight: bold;
-            text-transform: uppercase; letter-spacing: 2px;
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 20px;
+        }
+
+        /* ===== Introduction (as in rupa file) ===== */
+        .intro-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 0 4px 14px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 20px;
+            user-select: none;
+        }
+        .intro-toggle-label {
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-dim);
+        }
+        .intro-toggle-icon {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            transition: transform 0.3s;
+        }
+        .intro-toggle.open .intro-toggle-icon { transform: rotate(180deg); }
+        .intro-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            font-size: 0.82rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+            padding: 0 4px;
+        }
+        .intro-body.open {
+            max-height: 800px;
+            padding-bottom: 16px;
         }
 
         details.sphere-group {
@@ -41,10 +86,16 @@
         }
 
         summary.sphere-summary {
-            padding: 16px; list-style: none; cursor: pointer;
+            padding: 16px;
+            list-style: none;
+            cursor: pointer;
             background-color: var(--accent-color);
-            color: #161923; font-weight: 800; font-size: 0.85rem;
-            display: flex; justify-content: space-between; align-items: center;
+            color: #161923;
+            font-weight: 800;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             text-transform: uppercase;
         }
 
@@ -53,28 +104,31 @@
         details[open] > summary::after { transform: rotate(180deg); }
 
         .category-title {
-            font-weight: bold; color: var(--accent-color);
-            font-size: 0.75rem; text-transform: uppercase;
-            padding: 12px 10px 5px 15px; opacity: 0.8;
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            padding: 12px 10px 5px 15px;
+            opacity: 0.8;
         }
 
         .factor-card {
             border-bottom: 1px solid var(--border-color);
-            cursor: pointer;
             transition: background 0.2s;
         }
         .factor-card:active { background: rgba(255,255,255,0.05); }
 
         .factor-header {
             display: grid;
-            grid-template-columns: 30px 1fr;
+            grid-template-columns: 30px 1fr auto;
             gap: 10px;
             padding: 12px 15px;
             align-items: center;
+            cursor: pointer;
         }
 
         .num { color: var(--text-dim); font-family: monospace; font-size: 0.8rem; }
-        .name-ru { font-weight: 500; font-size: 0.9rem; }
+        .name-en { font-weight: 500; font-size: 0.9rem; }
         .name-pali { color: var(--text-dim); font-style: italic; font-size: 0.8rem; margin-left: 5px; }
 
         .factor-desc {
@@ -96,221 +150,1383 @@
         .b-unw { border-left: 3px solid var(--unwholesome); }
         .b-beau { border-left: 3px solid var(--beautiful); }
 
+        /* Styles for drawer and classification (as in rupa) */
+        .section-divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 28px 0 16px;
+            color: #EF9A9A;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+        .section-divider::before {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to left, #EF9A9A44, transparent);
+        }
+        .section-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, #EF9A9A44, transparent);
+        }
+
+        .class-group {
+            margin-bottom: 10px;
+            border: 1px solid rgba(239,154,154,0.15);
+            border-radius: 14px;
+            background: rgba(239,154,154,0.03);
+            overflow: hidden;
+        }
+        .class-summary {
+            padding: 14px 16px;
+            list-style: none;
+            cursor: pointer;
+            background: rgba(239,154,154,0.1);
+            color: #EF9A9A;
+            font-weight: 800;
+            font-size: 0.82rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .class-summary::-webkit-details-marker { display: none; }
+        .class-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+        details.class-group[open] > .class-summary::after { transform: rotate(180deg); }
+        .class-body { padding: 4px 0 8px; }
+        .class-subtitle {
+            font-weight: 700;
+            color: #EF9A9A;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 16px 3px;
+            opacity: 0.8;
+        }
+        .class-para {
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            line-height: 1.75;
+            padding: 6px 16px 8px;
+            border-bottom: 1px solid rgba(239,154,154,0.07);
+        }
+        .class-para:last-child { border-bottom: none; }
+        .class-term { font-weight: 600; color: #FFE082; }
+
+        /* green theme (for jhana) */
+        .section-divider.green { color: #81C784; }
+        .section-divider.green::before { background: linear-gradient(to left, rgba(129,199,132,0.27), transparent); }
+        .section-divider.green::after { background: linear-gradient(to right, rgba(129,199,132,0.27), transparent); }
+        .origin-group {
+            margin-bottom: 10px;
+            border: 1px solid rgba(129,199,132,0.15);
+            border-radius: 14px;
+            background: rgba(129,199,132,0.03);
+            overflow: hidden;
+        }
+        .origin-summary {
+            padding: 14px 16px;
+            list-style: none;
+            cursor: pointer;
+            background: rgba(129,199,132,0.1);
+            color: #81C784;
+            font-weight: 800;
+            font-size: 0.82rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .origin-summary::-webkit-details-marker { display: none; }
+        .origin-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+        details.origin-group[open] > .origin-summary::after { transform: rotate(180deg); }
+        .origin-body { padding: 4px 0 8px; }
+        .origin-subtitle {
+            font-weight: 700;
+            color: #81C784;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 16px 3px;
+            opacity: 0.8;
+        }
+        .origin-para {
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            line-height: 1.75;
+            padding: 6px 16px 8px;
+            border-bottom: 1px solid rgba(129,199,132,0.07);
+        }
+        .origin-para:last-child { border-bottom: none; }
+
+        /* teal theme (for paths) */
+        .section-divider.teal { color: #80DEEA; }
+        .section-divider.teal::before { background: linear-gradient(to left, rgba(128,222,234,0.27), transparent); }
+        .section-divider.teal::after { background: linear-gradient(to right, rgba(128,222,234,0.27), transparent); }
+        .group-group {
+            margin-bottom: 10px;
+            border: 1px solid rgba(128,222,234,0.15);
+            border-radius: 14px;
+            background: rgba(128,222,234,0.03);
+            overflow: hidden;
+        }
+        .group-summary {
+            padding: 14px 16px;
+            list-style: none;
+            cursor: pointer;
+            background: rgba(128,222,234,0.1);
+            color: #80DEEA;
+            font-weight: 800;
+            font-size: 0.82rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .group-summary::-webkit-details-marker { display: none; }
+        .group-summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; opacity: 0.7; }
+        details.group-group[open] > .group-summary::after { transform: rotate(180deg); }
+        .group-body { padding: 4px 0 8px; }
+        .group-subtitle {
+            font-weight: 700;
+            color: #80DEEA;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 16px 3px;
+            opacity: 0.8;
+        }
+        .group-para {
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            line-height: 1.75;
+            padding: 6px 16px 8px;
+            border-bottom: 1px solid rgba(128,222,234,0.07);
+        }
+        .group-para:last-child { border-bottom: none; }
+
+        /* Details button */
+        .detail-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-dim);
+            font-size: 0.65rem;
+            padding: 3px 8px;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .detail-btn:hover, .detail-btn:active {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* OVERLAY and DRAWER */
+        .overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 100;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .overlay.active { display: block; }
+        .overlay.visible { opacity: 1; }
+
+        .drawer {
+            position: fixed;
+            z-index: 101;
+            background: #1E2533;
+            overflow-y: auto;
+            transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-height: 80vh;
+            border-radius: 20px 20px 0 0;
+            transform: translateY(100%);
+            padding-bottom: env(safe-area-inset-bottom, 0);
+        }
+        .drawer.active { transform: translateY(0); }
+
+        @media (min-width: 640px) {
+            .drawer {
+                bottom: 0;
+                top: 0;
+                left: auto;
+                right: 0;
+                width: 420px;
+                max-height: 100vh;
+                border-radius: 20px 0 0 20px;
+                transform: translateX(110%);
+            }
+            .drawer.active { transform: translateX(0); }
+        }
+
+        .drawer-handle {
+            width: 40px;
+            height: 4px;
+            background: var(--border-color);
+            border-radius: 2px;
+            margin: 14px auto 0;
+        }
+        @media (min-width: 640px) { .drawer-handle { display: none; } }
+
+        .drawer-inner { padding: 16px 22px 32px; }
+
+        .drawer-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+
+        .drawer-label {
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-dim);
+            margin-bottom: 4px;
+        }
+        .drawer-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.3;
+        }
+        .drawer-pali {
+            font-style: italic;
+            color: var(--text-dim);
+            font-size: 0.82rem;
+            margin-top: 2px;
+        }
+        .drawer-close {
+            background: rgba(255,255,255,0.07);
+            border: none;
+            color: var(--text-dim);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-left: 10px;
+            margin-top: 2px;
+        }
+        @media (min-width: 640px) { .drawer-close { display: flex; } }
+
+        .drawer-origin-label {
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-dim);
+            margin-bottom: 6px;
+            margin-top: 14px;
+        }
+        .drawer-short {
+            background: rgba(0,0,0,0.25);
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 0.78rem;
+            color: #94A3B8;
+            margin-bottom: 18px;
+            border-left: 3px solid var(--variable);
+            line-height: 1.65;
+        }
+        .drawer-short.ind { border-left-color: var(--indirect); }
+        .drawer-short.unw { border-left-color: var(--unwholesome); }
+        .drawer-short.beau { border-left-color: var(--beautiful); }
+
+        .drawer-divider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            color: var(--text-dim);
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .drawer-divider::before, .drawer-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        .drawer-long {
+            font-size: 0.83rem;
+            color: #CBD5E1;
+            line-height: 1.8;
+        }
+
+        .flabel {
+            color: #FFE082;
+            font-weight: 600;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-top: 6px;
+        }
+        .flabel:first-child { margin-top: 0; }
+		
+		/* Styles for collapsible comments (similar to introduction) */
+.comment-details {
+    border: 1px solid var(--border-color);
+}
+.comment-details summary {
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+}
+.comment-details summary::-webkit-details-marker {
+    display: none;
+}
+.comment-details[open] summary span:last-child {
+    transform: rotate(180deg);
+}
     </style>
 </head>
 <body>
 <br>
 <div class="main-title">52 Cetasikas</div>
 
-<details class="sphere-group" open>
+<!-- Introduction (similar to rupa) -->
+<div class="intro-toggle" id="introToggle" onclick="toggleIntro()">
+    <span class="intro-toggle-label">Introduction</span>
+    <span class="intro-toggle-icon">▼</span>
+</div>
+<div class="intro-body" id="introBody">
+    <p><strong>§ 1. Introduction</strong></p>
+    <p>The fifty-two states associated with consciousness, which arise and cease together (with consciousness), which have the same object and base (as consciousness), are known as mental factors.</p>
+    <p><strong>That arise and cease together (with consciousness):</strong> The first stanza defines mental factors through four characteristics that are common to all of them:</p>
+    <ol style="margin-left: 20px;">
+        <li>arise together with consciousness (ekuppāda);</li>
+        <li>cease together with consciousness (ekanirodha);</li>
+        <li>have the same object as consciousness (ekālambana);</li>
+        <li>have the same base as consciousness (ekavatthuka).</li>
+    </ol>
+    <p>These four characteristics describe the relationship between citta and its accompanying cetasikas. If only "arise together" were mentioned, the definition would (incorrectly) include material phenomena produced by mind and kamma as cetasikas. However, not all such material phenomena cease at the same time as the citta that arises with them, and most of them last for seventeen mind-moments. Therefore, to exclude them, the characteristic "cease together" was introduced.</p>
+    <p>Again, there are two material phenomena — bodily communication and verbal communication — that arise and cease together with consciousness. However, these material phenomena do not take an object, and this distinguishes mental phenomena — both citta and cetasikas — from material phenomena; all mental phenomena experience an object, the coexisting citta and cetasikas experience the same object, while material phenomena do not experience any object at all. Thus the third characteristic indicates the presence of a common object.</p>
+    <p>Finally, in those realms where a material aggregate is present, namely in the sense-sphere and the fine-material sphere, citta and cetasika have the same physical base, that is, they arise with the common support of either one of the material sense organs or the heart-base. This is the fourth property of cetasikas.</p>
+</div>
+<!-- Ethically Variable (13) -->
+<details class="sphere-group">
     <summary class="sphere-summary">Ethically Variable (13)</summary>
-    
-    <div class="category-title">Universals (7)</div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">1</div><div class="name-ru">Contact <span class="name-pali">(Phassa)</span></div></div>
-        <div class="factor-desc">Ch: touching; F: collision (of object with door); M: concurrence (of consciousness, object, and base); PC: object that has come into focus.</div>
-    </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">2</div><div class="name-ru">Feeling <span class="name-pali">(Vedanā)</span></div></div>
-        <div class="factor-desc">Ch: experiencing (tasting); F: experiencing the impact of the object; M: relishing; PC: contact.</div>
-    </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">3</div><div class="name-ru">Perception <span class="name-pali">(Saññā)</span></div></div>
-        <div class="factor-desc">Ch: noting (recognizing); F: creating a sign (mark); M: interpretation by means of the sign; PC: manifested object.</div>
-    </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">4</div><div class="name-ru">Volition <span class="name-pali">(Cetanā)</span></div></div>
-        <div class="factor-desc">Ch: state of willing; F: accumulation (of kamma); M: coordination of associated states; PC: associated states.</div>
-    </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">5</div><div class="name-ru">One-pointedness <span class="name-pali">(Ekaggatā)</span></div></div>
-        <div class="factor-desc">Ch: non-distraction; F: unifying associated states; M: peace (calm); PC: happiness.</div>
-    </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">6</div><div class="name-ru">Life faculty <span class="name-pali">(Jīvitindriya)</span></div></div>
-        <div class="factor-desc">Ch: maintaining mental states; F: causing them to occur; M: establishing their presence; PC: states to be maintained.</div>
-    </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">7</div><div class="name-ru">Attention <span class="name-pali">(Manasikāra)</span></div></div>
-        <div class="factor-desc">Ch: directing (leading) factors to the object; F: attaching factors to the object; M: confrontation with the object; PC: object.</div>
+
+    <!-- Explanation of ethically variable and universal factors -->
+    <div style="background: rgba(255,255,255,0.05); border-left: 3px solid var(--variable); padding: 12px 15px; margin: 10px 15px 15px; border-radius: 8px; font-size: 0.8rem; color: #CBD5E1; line-height: 1.6;">
+        <p style="margin: 0 0 8px;"><strong>Ethically Variable (aññasamāna)</strong> — literally "common with others." The thirteen factors of the first two categories are common to both beautiful and non-beautiful (unwholesome and rootless) consciousnesses. They take on the ethical quality imparted to the citta by its associated roots (hetu). In wholesome cittas they become wholesome, in unwholesome ones — unwholesome, in kammically indeterminate ones — indeterminate.</p>
+        <p style="margin: 0;"><strong>Universal (sabbacittasādhāraṇa)</strong> — seven factors common to all types of consciousness. They perform the most rudimentary cognitive functions, without which awareness of an object would be impossible.</p>
     </div>
 
-    <div class="category-title">Occasionals (6)</div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">8</div><div class="name-ru">Initial application <span class="name-pali">(Vitakka)</span></div></div>
-        <div class="factor-desc">Ch: directing the mind onto the object; F: striking and threshing the object; M: leading the mind to the object; PC: object.</div>
+    <div class="category-title">Universal (7)</div>
+    <!-- 1. Phassa -->
+    <div class="factor-card b-var" id="card1">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">1</div>
+            <div><div class="name-en">Contact <span class="name-pali">(Phassa)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'1')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>touching; <span class="flabel">Function</span>impact (of object with sense door); <span class="flabel">Manifestation</span>convergence (of consciousness, object, and base); <span class="flabel">Proximate Cause</span>the object that has come into range.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">9</div><div class="name-ru">Sustained application <span class="name-pali">(Vicāra)</span></div></div>
-        <div class="factor-desc">Ch: occupancy (keeping) of the mind on the object; F: threshing (anchoring); M: anchoring the mind on the object; PC: object.</div>
+    <!-- 2. Vedanā -->
+    <div class="factor-card b-var" id="card2">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">2</div>
+            <div><div class="name-en">Feeling <span class="name-pali">(Vedanā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'2')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>experiencing (tasting); <span class="flabel">Function</span>experiencing the influence of the object; <span class="flabel">Manifestation</span>savouring; <span class="flabel">Proximate Cause</span>contact.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">10</div><div class="name-ru">Decision <span class="name-pali">(Adhimokkha)</span></div></div>
-        <div class="factor-desc">Ch: conviction; F: non-probing (absence of wavering); M: decisiveness; PC: something to be convinced about.</div>
+    <!-- 3. Saññā -->
+    <div class="factor-card b-var" id="card3">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">3</div>
+            <div><div class="name-en">Perception <span class="name-pali">(Saññā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'3')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>noting (recognizing); <span class="flabel">Function</span>making a sign (mark); <span class="flabel">Manifestation</span>interpreting by the sign; <span class="flabel">Proximate Cause</span>the object as it appears.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">11</div><div class="name-ru">Energy <span class="name-pali">(Viriya)</span></div></div>
-        <div class="factor-desc">Ch: state of exertion (effort); F: supporting associated states; M: non-collapse (steadfastness); PC: sense of urgency.</div>
+    <!-- 4. Cetanā -->
+    <div class="factor-card b-var" id="card4">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">4</div>
+            <div><div class="name-en">Volition <span class="name-pali">(Cetanā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'4')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>state of willing; <span class="flabel">Function</span>accumulating (kamma); <span class="flabel">Manifestation</span>coordinating associated states; <span class="flabel">Proximate Cause</span>associated states.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">12</div><div class="name-ru">Rapture <span class="name-pali">(Pīti)</span></div></div>
-        <div class="factor-desc">Ch: endearing (refreshing); F: pervading body and mind with rapture; M: elation (enthusiasm); PC: mind-matter.</div>
+    <!-- 5. Ekaggatā -->
+    <div class="factor-card b-var" id="card5">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">5</div>
+            <div><div class="name-en">One-pointedness <span class="name-pali">(Ekaggatā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'5')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>non-distraction; <span class="flabel">Function</span>unifying concomitant factors; <span class="flabel">Manifestation</span>serenity (stillness); <span class="flabel">Proximate Cause</span>happiness.</div>
     </div>
-    <div class="factor-card b-var" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">13</div><div class="name-ru">Desire <span class="name-pali">(Chanda)</span></div></div>
-        <div class="factor-desc">Ch: desire to act; F: searching for the object; M: need for the object; PC: object.</div>
+    <!-- 6. Jīvitindriya -->
+    <div class="factor-card b-var" id="card6">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">6</div>
+            <div><div class="name-en">Mental Life Faculty <span class="name-pali">(Jīvitindriya)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'6')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>maintaining mental states; <span class="flabel">Function</span>causing them to occur; <span class="flabel">Manifestation</span>establishing their presence; <span class="flabel">Proximate Cause</span>states that need to be maintained.</div>
+    </div>
+    <!-- 7. Manasikāra -->
+    <div class="factor-card b-var" id="card7">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">7</div>
+            <div><div class="name-en">Attention <span class="name-pali">(Manasikāra)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'7')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>leading (directing) factors toward the object; <span class="flabel">Function</span>binding factors to the object; <span class="flabel">Manifestation</span>confronting the object; <span class="flabel">Proximate Cause</span>the object.</div>
+    </div>
+
+    <!-- Explanation of the "Occasional" group -->
+    <div style="background: rgba(255,255,255,0.05); border-left: 3px solid var(--variable); padding: 12px 15px; margin: 10px 15px 15px; border-radius: 8px; font-size: 0.8rem; color: #CBD5E1; line-height: 1.6;">
+        <p style="margin: 0;"><strong>Occasional (pakiṇṇaka)</strong> — the six cetasikas in this group resemble the universal ones in being ethically variable factors that take on the moral quality of the citta as determined by its other accompanying factors. They differ from the universal mental factors in that they are present only in some types of consciousness, not in all.</p>
+    </div>
+
+    <div class="category-title">Occasional (6)</div>
+    <!-- 8. Vitakka -->
+    <div class="factor-card b-var" id="card8">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">8</div>
+            <div><div class="name-en">Applied Thought <span class="name-pali">(Vitakka)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'8')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>directing the mind to the object; <span class="flabel">Function</span>"striking and threshing" the object; <span class="flabel">Manifestation</span>leading the mind to the object; <span class="flabel">Proximate Cause</span>the object.</div>
+    </div>
+    <!-- 9. Vicāra -->
+    <div class="factor-card b-var" id="card9">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">9</div>
+            <div><div class="name-en">Sustained Thought <span class="name-pali">(Vicāra)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'9')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>engaging (keeping) the mind on the object; <span class="flabel">Function</span>"threshing" (anchoring); <span class="flabel">Manifestation</span>fixing the mind on the object; <span class="flabel">Proximate Cause</span>the object.</div>
+    </div>
+    <!-- 10. Adhimokkha -->
+    <div class="factor-card b-var" id="card10">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">10</div>
+            <div><div class="name-en">Decision <span class="name-pali">(Adhimokkha)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'10')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>conviction; <span class="flabel">Function</span>non-wavering (absence of oscillation); <span class="flabel">Manifestation</span>decisiveness; <span class="flabel">Proximate Cause</span>the thing believed in.</div>
+    </div>
+    <!-- 11. Viriya -->
+    <div class="factor-card b-var" id="card11">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">11</div>
+            <div><div class="name-en">Energy <span class="name-pali">(Viriya)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'11')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>state of striving (diligence); <span class="flabel">Function</span>supporting concomitant factors; <span class="flabel">Manifestation</span>absence of collapse (steadfastness); <span class="flabel">Proximate Cause</span>a sense of urgency.</div>
+    </div>
+    <!-- 12. Pīti -->
+    <div class="factor-card b-var" id="card12">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">12</div>
+            <div><div class="name-en">Rapture <span class="name-pali">(Pīti)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'12')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>enrapturing (refreshing); <span class="flabel">Function</span>pervading body and mind with rapture; <span class="flabel">Manifestation</span>rapture (enthusiasm); <span class="flabel">Proximate Cause</span>mind-and-matter.</div>
+    </div>
+    <!-- 13. Chanda -->
+    <div class="factor-card b-var" id="card13">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">13</div>
+            <div><div class="name-en">Zeal <span class="name-pali">(Chanda)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'13')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>wish to act; <span class="flabel">Function</span>seeking the object; <span class="flabel">Manifestation</span>need for the object; <span class="flabel">Proximate Cause</span>the object.</div>
     </div>
 </details>
-
+<!-- Unwholesome Factors (14) -->
 <details class="sphere-group">
     <summary class="sphere-summary">Unwholesome Factors (14)</summary>
-    <div class="category-title">Universals (4)</div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">14</div><div class="name-ru">Delusion <span class="name-pali">(Moha)</span></div></div>
-        <div class="factor-desc">Ch: mental blindness (ignorance); F: concealing the true nature of the object; M: absence of right seeing; PC: unwise attention.</div>
+    <div class="category-title">Universal (4)</div>
+    <!-- 14. Moha -->
+    <div class="factor-card b-unw" id="card14">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">14</div>
+            <div><div class="name-en">Delusion <span class="name-pali">(Moha)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'14')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>mental blindness (non‑knowing); <span class="flabel">Function</span>concealing the true nature of the object; <span class="flabel">Manifestation</span>absence of right seeing; <span class="flabel">Proximate Cause</span>unwise attention.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">15</div><div class="name-ru">Shamelessness <span class="name-pali">(Ahirika)</span></div></div>
-        <div class="factor-desc">Ch: absence of disgust at evil; F: committing transgressions; M: non-shrinking from evil; PC: lack of self-respect.</div>
+    <!-- 15. Ahirika -->
+    <div class="factor-card b-unw" id="card15">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">15</div>
+            <div><div class="name-en">Shamelessness <span class="name-pali">(Ahirika)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'15')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>absence of disgust at evil; <span class="flabel">Function</span>committing transgressions; <span class="flabel">Manifestation</span>not shrinking from evil; <span class="flabel">Proximate Cause</span>absence of self‑respect.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">16</div><div class="name-ru">Fearlessness of wrong <span class="name-pali">(Anottappa)</span></div></div>
-        <div class="factor-desc">Ch: absence of fear of consequences; F: committing transgressions; M: non-shrinking from evil; PC: lack of respect for others.</div>
+    <!-- 16. Anottappa -->
+    <div class="factor-card b-unw" id="card16">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">16</div>
+            <div><div class="name-en">Fearlessness of Wrongdoing <span class="name-pali">(Anottappa)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'16')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>absence of fear of consequences; <span class="flabel">Function</span>committing transgressions; <span class="flabel">Manifestation</span>not shrinking from evil; <span class="flabel">Proximate Cause</span>absence of regard for others.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">17</div><div class="name-ru">Restlessness <span class="name-pali">(Uddhacca)</span></div></div>
-        <div class="factor-desc">Ch: agitation (like water whipped by wind); F: instability; M: confusion; PC: unwise attention to agitation.</div>
+    <!-- 17. Uddhacca -->
+    <div class="factor-card b-unw" id="card17">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">17</div>
+            <div><div class="name-en">Restlessness <span class="name-pali">(Uddhacca)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'17')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>agitation (like water in the wind); <span class="flabel">Function</span>instability; <span class="flabel">Manifestation</span>turmoil; <span class="flabel">Proximate Cause</span>unwise attention to agitation.</div>
     </div>
 
-    <div class="category-title">Occasionals (10)</div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">18</div><div class="name-ru">Greed <span class="name-pali">(Lobha)</span></div></div>
-        <div class="factor-desc">Ch: grasping the object; F: sticking (like meat to a hot pan); M: non-relinquishing; PC: seeing enjoyment in things.</div>
+    <div class="category-title">Occasional (10)</div>
+    <!-- 18. Lobha -->
+    <div class="factor-card b-unw" id="card18">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">18</div>
+            <div><div class="name-en">Greed <span class="name-pali">(Lobha)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'18')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>grasping at the object; <span class="flabel">Function</span>sticking (like meat to a hot pan); <span class="flabel">Manifestation</span>non‑relinquishing; <span class="flabel">Proximate Cause</span>seeing enjoyment in things.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">19</div><div class="name-ru">Wrong view <span class="name-pali">(Diṭṭhi)</span></div></div>
-        <div class="factor-desc">Ch: unwise interpretation; F: assuming the false; M: wrong conviction; PC: unwillingness to see the noble ones.</div>
+    <!-- 19. Diṭṭhi -->
+    <div class="factor-card b-unw" id="card19">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">19</div>
+            <div><div class="name-en">Wrong View <span class="name-pali">(Diṭṭhi)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'19')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>unwise interpretation; <span class="flabel">Function</span>assuming the wrong; <span class="flabel">Manifestation</span>wrong belief; <span class="flabel">Proximate Cause</span>not wanting to see the noble ones.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">20</div><div class="name-ru">Conceit <span class="name-pali">(Māna)</span></div></div>
-        <div class="factor-desc">Ch: haughtiness (arrogance); F: self-exaltation; M: vainglory; PC: greed without views.</div>
+    <!-- 20. Māna -->
+    <div class="factor-card b-unw" id="card20">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">20</div>
+            <div><div class="name-en">Conceit <span class="name-pali">(Māna)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'20')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>haughtiness (arrogance); <span class="flabel">Function</span>self‑exaltation; <span class="flabel">Manifestation</span>boastfulness; <span class="flabel">Proximate Cause</span>greed dissociated from views.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">21</div><div class="name-ru">Hatred <span class="name-pali">(Dosa)</span></div></div>
-        <div class="factor-desc">Ch: ferocity (fierceness); F: burning one's own support; M: persecuting; PC: basis for irritation.</div>
+    <!-- 21. Dosa -->
+    <div class="factor-card b-unw" id="card21">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">21</div>
+            <div><div class="name-en">Hatred <span class="name-pali">(Dosa)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'21')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>cruelty (ferocity); <span class="flabel">Function</span>burning its own support; <span class="flabel">Manifestation</span>persecution; <span class="flabel">Proximate Cause</span>a basis for annoyance.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">22</div><div class="name-ru">Envy <span class="name-pali">(Issā)</span></div></div>
-        <div class="factor-desc">Ch: jealousy of others' success; F: discontent with others' success; M: aversion to others' success; PC: others' success.</div>
+    <!-- 22. Issā -->
+    <div class="factor-card b-unw" id="card22">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">22</div>
+            <div><div class="name-en">Envy <span class="name-pali">(Issā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'22')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>jealousy at others' success; <span class="flabel">Function</span>being displeased at others' success; <span class="flabel">Manifestation</span>aversion to others' success; <span class="flabel">Proximate Cause</span>others' success.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">23</div><div class="name-ru">Stinginess <span class="name-pali">(Macchariya)</span></div></div>
-        <div class="factor-desc">Ch: concealing one's own success; F: intolerance of sharing with others; M: meanness (baseness); PC: one's own success.</div>
+    <!-- 23. Macchariya -->
+    <div class="factor-card b-unw" id="card23">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">23</div>
+            <div><div class="name-en">Avarice <span class="name-pali">(Macchariya)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'23')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>concealing one's own success; <span class="flabel">Function</span>inability to share with others; <span class="flabel">Manifestation</span>shrinking (meanness); <span class="flabel">Proximate Cause</span>one's own success.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">24</div><div class="name-ru">Worry / Remorse <span class="name-pali">(Kukkucca)</span></div></div>
-        <div class="factor-desc">Ch: subsequent regret; F: grieving over what was done/left undone; M: remorse; PC: errors of commission and omission.</div>
+    <!-- 24. Kukkucca -->
+    <div class="factor-card b-unw" id="card24">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">24</div>
+            <div><div class="name-en">Worry / Regret <span class="name-pali">(Kukkucca)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'24')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>subsequent remorse; <span class="flabel">Function</span>grieving over what was done/left undone; <span class="flabel">Manifestation</span>regret; <span class="flabel">Proximate Cause</span>errors of commission and omission.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">25</div><div class="name-ru">Sloth <span class="name-pali">(Thīna)</span></div></div>
-        <div class="factor-desc">Ch: lack of driving force; F: dispelling energy; M: decline (dullness) of mind; PC: unwise attention to boredom.</div>
+    <!-- 25. Thīna -->
+    <div class="factor-card b-unw" id="card25">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">25</div>
+            <div><div class="name-en">Sloth <span class="name-pali">(Thīna)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'25')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>absence of driving force; <span class="flabel">Function</span>dissipating energy; <span class="flabel">Manifestation</span>drooping (dullness) of the mind; <span class="flabel">Proximate Cause</span>unwise attention to boredom.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">26</div><div class="name-ru">Torpor <span class="name-pali">(Middha)</span></div></div>
-        <div class="factor-desc">Ch: unwieldiness (sickness of factors); F: oppression; M: drowsiness (nodding); PC: laziness.</div>
+    <!-- 26. Middha -->
+    <div class="factor-card b-unw" id="card26">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">26</div>
+            <div><div class="name-en">Torpor <span class="name-pali">(Middha)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'26')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>unwieldiness (sickness of factors); <span class="flabel">Function</span>suppression; <span class="flabel">Manifestation</span>drowsiness ("nodding off"); <span class="flabel">Proximate Cause</span>laziness.</div>
     </div>
-    <div class="factor-card b-unw" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">27</div><div class="name-ru">Doubt <span class="name-pali">(Vicikicchā)</span></div></div>
-        <div class="factor-desc">Ch: doubtfulness (wavering); F: inability to trust; M: indecision; PC: unwise attention.</div>
+    <!-- 27. Vicikicchā -->
+    <div class="factor-card b-unw" id="card27">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">27</div>
+            <div><div class="name-en">Doubt <span class="name-pali">(Vicikicchā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'27')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>doubtfulness (wavering); <span class="flabel">Function</span>inability to commit; <span class="flabel">Manifestation</span>irresoluteness; <span class="flabel">Proximate Cause</span>unwise attention.</div>
     </div>
 </details>
 
+<!-- Beautiful Factors (25) -->
 <details class="sphere-group">
     <summary class="sphere-summary">Beautiful Factors (25)</summary>
-    <div class="category-title">Universals (19)</div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">28</div><div class="name-ru">Faith <span class="name-pali">(Saddhā)</span></div></div>
-        <div class="factor-desc">Ch: placing trust; F: purifying (like a gem clarifies muddy water); M: resolution (clarity); PC: object of faith.</div>
+
+    <!-- Explanation of universal beautiful factors -->
+    <div style="background: rgba(255,255,255,0.05); border-left: 3px solid var(--beautiful); padding: 12px 15px; margin: 10px 15px 15px; border-radius: 8px; font-size: 0.8rem; color: #CBD5E1; line-height: 1.6;">
+        <p style="margin: 0;"><strong>Universal beautiful factors (sobhanasādhāraṇa)</strong> — nineteen cetasikas that are invariably present in all beautiful types of consciousness. The following three groups of beautiful cetasikas are variable additions and are not necessarily present in every beautiful consciousness.</p>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">29</div><div class="name-ru">Mindfulness <span class="name-pali">(Sati)</span></div></div>
-        <div class="factor-desc">Ch: non-wavering (presence of mind); F: absence of confusion; M: guarding (confrontation with object); PC: strong perception.</div>
+
+    <div class="category-title">Universal (19)</div>
+    <!-- 28. Saddhā -->
+    <div class="factor-card b-beau" id="card28">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">28</div>
+            <div><div class="name-en">Faith <span class="name-pali">(Saddhā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'28')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>placing of trust; <span class="flabel">Function</span>clarifying (as a jewel clarifies muddy water); <span class="flabel">Manifestation</span>resolution (clarity); <span class="flabel">Proximate Cause</span>the object of faith.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">30</div><div class="name-ru">Moral shame <span class="name-pali">(Hiri)</span></div></div>
-        <div class="factor-desc">Ch: disgust at evil; F: non-committing of evil; M: shrinking from evil; PC: self-respect.</div>
+    <!-- 29. Sati -->
+    <div class="factor-card b-beau" id="card29">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">29</div>
+            <div><div class="name-en">Mindfulness <span class="name-pali">(Sati)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'29')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>non‑wobbling (presence of mind); <span class="flabel">Function</span>absence of confusion; <span class="flabel">Manifestation</span>guarding (confronting the object); <span class="flabel">Proximate Cause</span>strong perception.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">31</div><div class="name-ru">Moral dread <span class="name-pali">(Ottappa)</span></div></div>
-        <div class="factor-desc">Ch: fear of evil; F: non-committing of evil; M: fear of consequences; PC: respect for others.</div>
+    <!-- 30. Hiri -->
+    <div class="factor-card b-beau" id="card30">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">30</div>
+            <div><div class="name-en">Moral Shame <span class="name-pali">(Hiri)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'30')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>disgust at evil; <span class="flabel">Function</span>not doing evil; <span class="flabel">Manifestation</span>shrinking from sin; <span class="flabel">Proximate Cause</span>self‑respect.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">32</div><div class="name-ru">Non-greed <span class="name-pali">(Alobha)</span></div></div>
-        <div class="factor-desc">Ch: absence of attachment; F: non-grasping; M: non-adherence; PC: wise attention.</div>
+    <!-- 31. Ottappa -->
+    <div class="factor-card b-beau" id="card31">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">31</div>
+            <div><div class="name-en">Moral Dread <span class="name-pali">(Ottappa)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'31')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>fear of evil; <span class="flabel">Function</span>not doing evil; <span class="flabel">Manifestation</span>dread of consequences; <span class="flabel">Proximate Cause</span>respect for others.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">33</div><div class="name-ru">Non-hatred <span class="name-pali">(Adosa)</span></div></div>
-        <div class="factor-desc">Ch: absence of ferocity (meekness); F: removing hostility; M: agreeableness; PC: wise attention.</div>
+    <!-- 32. Alobha -->
+    <div class="factor-card b-beau" id="card32">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">32</div>
+            <div><div class="name-en">Non‑greed <span class="name-pali">(Alobha)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'32')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>absence of clinging; <span class="flabel">Function</span>non‑grasping; <span class="flabel">Manifestation</span>non‑sticking; <span class="flabel">Proximate Cause</span>wise attention.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">34</div><div class="name-ru">Neutrality <span class="name-pali">(Tatramajjhattatā)</span></div></div>
-        <div class="factor-desc">Ch: balance; F: preventing excess/deficiency; M: impartial contemplation; PC: associated states.</div>
+    <!-- 33. Adosa -->
+    <div class="factor-card b-beau" id="card33">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">33</div>
+            <div><div class="name-en">Non‑hatred <span class="name-pali">(Adosa)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'33')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>absence of cruelty (gentleness); <span class="flabel">Function</span>removal of hostility; <span class="flabel">Manifestation</span>accord; <span class="flabel">Proximate Cause</span>wise attention.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">35-36</div><div class="name-ru">Tranquility <span class="name-pali">(Passaddhi)</span></div></div>
-        <div class="factor-desc">Ch: calming of disturbances (of factors/consciousness); F: destroying disturbances; M: peacefulness; PC: factors/consciousness.</div>
+    <!-- 34. Tatramajjhattatā -->
+    <div class="factor-card b-beau" id="card34">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">34</div>
+            <div><div class="name-en">Equanimity <span class="name-pali">(Tatramajjhattatā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'34')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>balance; <span class="flabel">Function</span>preventing excess/deficiency; <span class="flabel">Manifestation</span>impartial observation; <span class="flabel">Proximate Cause</span>associated states.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">37-38</div><div class="name-ru">Lightness <span class="name-pali">(Lahutā)</span></div></div>
-        <div class="factor-desc">Ch: weakening of heaviness; F: unloading heaviness; M: absence of inertia; PC: factors/consciousness.</div>
+    <!-- 35-36. Passaddhi (kāya‑citta) -->
+    <div class="factor-card b-beau" id="card35">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">35-36</div>
+            <div><div class="name-en">Tranquillity <span class="name-pali">(Passaddhi)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'35')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>calming of disturbances (of factors/consciousness); <span class="flabel">Function</span>destruction of disturbances; <span class="flabel">Manifestation</span>peacefulness; <span class="flabel">Proximate Cause</span>factors/consciousness.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">39-40</div><div class="name-ru">Pliancy <span class="name-pali">(Mudutā)</span></div></div>
-        <div class="factor-desc">Ch: removal of stiffness; F: destroying stiffness; M: non-resistance; PC: factors/consciousness.</div>
+    <!-- 37-38. Lahutā -->
+    <div class="factor-card b-beau" id="card36">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">37-38</div>
+            <div><div class="name-en">Lightness <span class="name-pali">(Lahutā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'36')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>lightening of heaviness; <span class="flabel">Function</span>unloading heaviness; <span class="flabel">Manifestation</span>absence of inertia; <span class="flabel">Proximate Cause</span>factors/consciousness.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">41-42</div><div class="name-ru">Wieldiness <span class="name-pali">(Kammaññatā)</span></div></div>
-        <div class="factor-desc">Ch: removal of unwieldiness; F: destroying unwieldiness; M: success in receiving the object; PC: factors/consciousness.</div>
+    <!-- 39-40. Mudutā -->
+    <div class="factor-card b-beau" id="card37">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">39-40</div>
+            <div><div class="name-en">Pliancy <span class="name-pali">(Mudutā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'37')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>removing rigidity; <span class="flabel">Function</span>destroying rigidity; <span class="flabel">Manifestation</span>non‑resistance; <span class="flabel">Proximate Cause</span>factors/consciousness.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">43-44</div><div class="name-ru">Proficiency <span class="name-pali">(Pāguññatā)</span></div></div>
-        <div class="factor-desc">Ch: healthiness (of factors/consciousness); F: destroying unhealthiness; M: absence of disability; PC: factors/consciousness.</div>
+    <!-- 41-42. Kammaññatā -->
+    <div class="factor-card b-beau" id="card38">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">41-42</div>
+            <div><div class="name-en">Wieldiness <span class="name-pali">(Kammaññatā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'38')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>removing unwieldiness; <span class="flabel">Function</span>destroying unwieldiness; <span class="flabel">Manifestation</span>success in taking an object; <span class="flabel">Proximate Cause</span>factors/consciousness.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">45-46</div><div class="name-ru">Uprightness <span class="name-pali">(Ujjukatā)</span></div></div>
-        <div class="factor-desc">Ch: honesty (straightness); F: destroying crookedness; M: non-deviousness; PC: factors/consciousness.</div>
+    <!-- 43-44. Pāguññatā -->
+    <div class="factor-card b-beau" id="card39">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">43-44</div>
+            <div><div class="name-en">Proficiency <span class="name-pali">(Pāguññatā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'39')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>healthiness (of factors/consciousness); <span class="flabel">Function</span>destroying unhealthiness; <span class="flabel">Manifestation</span>absence of inefficiency; <span class="flabel">Proximate Cause</span>factors/consciousness.</div>
     </div>
+    <!-- 45-46. Ujjukatā -->
+    <div class="factor-card b-beau" id="card40">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">45-46</div>
+            <div><div class="name-en">Rectitude <span class="name-pali">(Ujjukatā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'40')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>uprightness (straightforwardness); <span class="flabel">Function</span>destroying crookedness; <span class="flabel">Manifestation</span>non‑deviousness; <span class="flabel">Proximate Cause</span>factors/consciousness.</div>
+    </div>
+
+    <!-- Explanation of the abstinences (virati) – collapsible -->
+    <details class="comment-details" style="margin: 10px 15px 15px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--beautiful); border-radius: 8px; overflow: hidden;">
+        <summary class="comment-summary" style="padding: 12px 15px; list-style: none; cursor: pointer; font-weight: bold; color: var(--beautiful); display: flex; justify-content: space-between; align-items: center;">
+            <span>On the abstinences (virati) — details</span>
+            <span style="font-size: 0.7rem; transition: transform 0.2s;">▼</span>
+        </summary>
+        <div style="padding: 0 15px 12px 15px; font-size: 0.8rem; color: #CBD5E1; line-height: 1.6;">
+            <p style="margin: 0 0 8px;"><strong>Abstinences (virati)</strong> — three mental factors responsible for the intentional abstinence from wrong conduct through speech, action, and livelihood.</p>
+            <p style="margin: 0 0 8px;">Commentators distinguish three types of virati:</p>
+            <ul style="margin: 0 0 8px; padding-left: 20px;">
+                <li><strong>Natural abstinence (sampattavirati)</strong> — abstinence from evil deeds when the opportunity arises; occurs due to social standing, age, education, etc.</li>
+                <li><strong>Abstinence by undertaking precepts (samādānavirati)</strong> — abstinence from evil deeds by virtue of having undertaken a commitment to observe precepts (e.g., the five precepts).</li>
+                <li><strong>Abstinence by eradication (samucchedavirati)</strong> — abstinence associated with the supramundane path‑consciousness, which eradicates the disposition toward evil deeds.</li>
+            </ul>
+            <p style="margin: 0;">The three viratis are right speech, right action, and right livelihood.</p>
+        </div>
+    </details>
 
     <div class="category-title">Abstinences (3)</div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">47</div><div class="name-ru">Right speech <span class="name-pali">(Sammā-vācā)</span></div></div>
-        <div class="factor-desc">Ch: intentional non-violation; F: withdrawing (abstaining) from evil; M: non-commission of wrong; PC: faith, conscience, shame.</div>
+    <!-- 47. Sammā‑vācā -->
+    <div class="factor-card b-beau" id="card41">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">47</div>
+            <div><div class="name-en">Right Speech <span class="name-pali">(Sammā‑vācā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'41')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>intentional non‑transgression; <span class="flabel">Function</span>abstaining (desisting) from evil; <span class="flabel">Manifestation</span>not doing wrong; <span class="flabel">Proximate Cause</span>faith, moral shame, moral dread.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">48</div><div class="name-ru">Right action <span class="name-pali">(Sammā-kammanta)</span></div></div>
-        <div class="factor-desc">Ch: intentional non-violation; F: withdrawing (abstaining) from evil; M: non-commission of wrong; PC: faith, conscience, shame.</div>
+    <!-- 48. Sammā‑kammanta -->
+    <div class="factor-card b-beau" id="card42">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">48</div>
+            <div><div class="name-en">Right Action <span class="name-pali">(Sammā‑kammanta)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'42')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>intentional non‑transgression; <span class="flabel">Function</span>abstaining (desisting) from evil; <span class="flabel">Manifestation</span>not doing wrong; <span class="flabel">Proximate Cause</span>faith, moral shame, moral dread.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">49</div><div class="name-ru">Right livelihood <span class="name-pali">(Sammā-ājīva)</span></div></div>
-        <div class="factor-desc">Ch: intentional non-violation; F: withdrawing (abstaining) from evil; M: non-commission of wrong; PC: faith, conscience, shame.</div>
+    <!-- 49. Sammā‑ājīva -->
+    <div class="factor-card b-beau" id="card43">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">49</div>
+            <div><div class="name-en">Right Livelihood <span class="name-pali">(Sammā‑ājīva)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'43')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>intentional non‑transgression; <span class="flabel">Function</span>abstaining (desisting) from evil; <span class="flabel">Manifestation</span>not doing wrong; <span class="flabel">Proximate Cause</span>faith, moral shame, moral dread.</div>
     </div>
 
+    <!-- Explanation of the illimitables – collapsible -->
+    <details class="comment-details" style="margin: 10px 15px 15px; background: rgba(255,255,255,0.05); border-left: 3px solid var(--beautiful); border-radius: 8px; overflow: hidden;">
+        <summary class="comment-summary" style="padding: 12px 15px; list-style: none; cursor: pointer; font-weight: bold; color: var(--beautiful); display: flex; justify-content: space-between; align-items: center;">
+            <span>On the illimitables (brahmavihāras) — details</span>
+            <span style="font-size: 0.7rem; transition: transform 0.2s;">▼</span>
+        </summary>
+        <div style="padding: 0 15px 12px 15px; font-size: 0.8rem; color: #CBD5E1; line-height: 1.6;">
+            <p style="margin: 0 0 8px;"><strong>Illimitables (appamaññā)</strong> — four sublime states of mind cultivated toward all living beings: loving‑kindness (mettā), compassion (karuṇā), sympathetic joy (muditā), and equanimity (upekkhā). They are also called brahmavihāras, "divine abodes."</p>
+            <p style="margin: 0 0 8px;">As separate mental factors, only compassion and sympathetic joy are included in the cetasika list. Loving‑kindness is a manifestation of the cetasika "non‑hatred" (adosa), and equanimity is a manifestation of "equanimity of mind" (tatramajjhattatā). These two factors (adosa and tatramajjhattatā) are present in all beautiful consciousnesses, whereas compassion and sympathetic joy arise only occasionally, when their specific function is being performed.</p>
+        </div>
+    </details>
+
     <div class="category-title">Illimitables (2)</div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">50</div><div class="name-ru">Compassion <span class="name-pali">(Karuṇā)</span></div></div>
-        <div class="factor-desc">Ch: promoting the removal of suffering in others; F: inability to bear others' suffering; M: non-cruelty; PC: seeing helplessness in those who suffer.</div>
+    <!-- 50. Karuṇā -->
+    <div class="factor-card b-beau" id="card44">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">50</div>
+            <div><div class="name-en">Compassion <span class="name-pali">(Karuṇā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'44')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>promoting the removal of others' suffering; <span class="flabel">Function</span>inability to bear others' suffering; <span class="flabel">Manifestation</span>non‑cruelty; <span class="flabel">Proximate Cause</span>seeing helplessness in those who suffer.</div>
     </div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">51</div><div class="name-ru">Appreciative joy <span class="name-pali">(Muditā)</span></div></div>
-        <div class="factor-desc">Ch: rejoicing in others' success; F: non-enviousness; M: removal of aversion (boredom); PC: seeing others' success.</div>
+    <!-- 51. Muditā -->
+    <div class="factor-card b-beau" id="card45">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">51</div>
+            <div><div class="name-en">Sympathetic Joy <span class="name-pali">(Muditā)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'45')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>gladness at others' success; <span class="flabel">Function</span>non‑envy; <span class="flabel">Manifestation</span>removal of antipathy (boredom); <span class="flabel">Proximate Cause</span>seeing others' success.</div>
     </div>
 
     <div class="category-title">Wisdom (1)</div>
-    <div class="factor-card b-beau" onclick="this.classList.toggle('open')">
-        <div class="factor-header"><div class="num">52</div><div class="name-ru">Wisdom <span class="name-pali">(Paññindriya)</span></div></div>
-        <div class="factor-desc">Ch: penetrating the true nature (knowledge); F: illuminating (removing the darkness of ignorance); M: absence of confusion; PC: concentration.</div>
+    <!-- 52. Paññindriya -->
+    <div class="factor-card b-beau" id="card46">
+        <div class="factor-header" onclick="toggleCard(this.parentElement)">
+            <div class="num">52</div>
+            <div><div class="name-en">Wisdom <span class="name-pali">(Paññindriya)</span></div></div>
+            <button class="detail-btn" onclick="openDrawer(event,'46')">details</button>
+        </div>
+        <div class="factor-desc"><span class="flabel">Characteristic</span>penetrating real nature (knowing); <span class="flabel">Function</span>illuminating (removing the darkness of ignorance); <span class="flabel">Manifestation</span>absence of confusion; <span class="flabel">Proximate Cause</span>concentration.</div>
     </div>
 </details>
 <br>
+<!-- § Classification by Roots -->
+<details class="class-group">
+    <summary class="class-summary">Classification by Roots</summary>
+    <div class="class-body">
+        <div class="class-para">
+            <span class="class-term">Three unwholesome roots:</span> greed (lobha), hatred (dosa), delusion (moha). They are always present in unwholesome consciousnesses.
+        </div>
+        <div class="class-para">
+            <span class="class-term">Three beautiful roots:</span> non‑greed (alobha), non‑hatred (adosa), non‑delusion (amoha/paññā). They are present in all beautiful consciousnesses.
+        </div>
+        <div class="class-para">
+            The remaining cetasikas may be associated with these roots or be ethically variable.
+        </div>
+    </div>
+</details>
+
+<!-- § Classification by Jhāna Factors (green theme) -->
+
+<details class="origin-group">
+    <summary class="origin-summary">Jhāna Factors</summary>
+    <div class="origin-body">
+        <div class="origin-para">
+			<span class="origin-term">Seven jhāna factors:</span> 1) applied thought (vitakka),<br>
+2) sustained thought (vicāra), 3) rapture (pīti), 4) one‑pointedness (ekaggatā),<br>
+5) happiness (sukha), 6) displeasure (domanassa), 7) equanimity (upekkhā).<br><br>
+            <span class="origin-term">The word jhāna is used here not in its ordinary sense of meditative absorption but in the broader sense of close contemplation (upanijjhāyana) of the object. Therefore the states listed here are counted as jhāna‑factors even when they occur outside of meditation. These seven cetasikas are called jhāna‑factors because they enable the mind to closely contemplate the object. Of them, displeasure is exclusively unwholesome and occurs only in the two cittas associated with aversion. The remaining six, depending on the citta in which they arise, may be wholesome, unwholesome, or indeterminate.
+        </div>
+    </div>
+</details>
+
+<!-- § Classification by Path Factors (teal theme) -->
+
+<details class="group-group">
+    <summary class="group-summary">Eight Path Factors</summary>
+    <div class="group-body">
+        <div class="group-para">
+            <span class="group-term">1) right view,<br>
+2) right intention, 3) right speech, 4) right action,<br>
+5) right livelihood, 6) right effort, 7) right mindfulness, 8) right concentration.
+<br><br>
+            <span class="group-term">Of the eight factors of the Noble Eightfold Path,
+right view (sammādiṭṭhi) is the cetasika of wisdom, realising the Four Noble Truths.
+Right intention (sammāsankappa) is the cetasika of
+applied thought (vitakka), directed toward renunciation, goodwill, and harmlessness. Path factors 3–5
+are identical with the three types of abstinence. Right effort is the same as the four right efforts. Right mindfulness is the same as the four foundations of mindfulness. Right
+concentration is defined in terms of the four jhānas of the sutta system.
+        </div>
+    </div>
+</details>
+
+<br>
+
+<!-- OVERLAY and DRAWER -->
+<div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+    <div class="drawer-handle"></div>
+    <div class="drawer-inner">
+        <div class="drawer-top">
+            <div>
+                <div class="drawer-label" id="drawer-label"></div>
+                <div class="drawer-title" id="drawer-title"></div>
+                <div class="drawer-pali" id="drawer-pali"></div>
+            </div>
+            <button class="drawer-close" onclick="closeDrawer()">✕</button>
+        </div>
+        <div class="drawer-origin-label">Category</div>
+        <div class="drawer-short" id="drawer-short"></div>
+        <div class="drawer-origin-label" style="margin-top:14px;">Root</div>
+        <div id="drawer-root" style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:18px;"></div>
+        <div class="drawer-divider">Details</div>
+        <div class="drawer-long" id="drawer-long"></div>
+    </div>
+</div>
+<script>
+// Data for drawer (full descriptions will be added from Saṅgaha later)
+const dataCetasikas = {
+  '1': {
+    label: 'Universal · I',
+    title: 'Contact',
+    pali: 'Phassa',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Universal · Variable</span>',
+    long: 'The word phassa derives from the verb phusati, meaning "to touch", but contact should not be understood as a mere physical impact of an object on a bodily faculty. It is, rather, the mental factor by which consciousness mentally "touches" the object that has just appeared, thereby initiating a whole cognitive event. In terms of the fourfold mode of definition used in the Pāli commentaries, contact has the characteristic of touching. Its function is collision, as it makes consciousness and object meet. Its manifestation is the coincidence of consciousness, the sense faculty and the object. Its proximate cause is the objective field that has come into focus.',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '2': {
+    label: 'Universal · II',
+    title: 'Feeling',
+    pali: 'Vedanā',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Universal · Variable</span>',
+    long: 'Feeling is the mental factor that feels the object; it is the emotional tone of the experience. The Pāli word vedanā does not mean emotion (which is a complex phenomenon comprising several mental factors), but the most basic affective quality of experience, which may be pleasant, painful or neutral. Feeling has the characteristic of being felt (vedayita). Its function is experiencing, or its function is to enjoy the desirable aspect of the object. Its manifestation is the savouring of the associated mental factors. Its proximate cause is tranquillity. While other mental factors experience the object only indirectly, feeling experiences it directly and fully. In this connection the other mental factors are compared to a cook who prepares a meal for the king and only tastes it while cooking, while feeling is compared to the king himself who enjoys the meal as much as he likes.',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '3': {
+    label: 'Universal · III',
+    title: 'Perception',
+    pali: 'Saññā',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Universal · Variable</span>',
+    long: 'The characteristic of perception is the perceiving of the qualities of the object. Its function is to make a sign as a condition for perceiving again that "this is the same", or its function is to recognise what has been previously perceived. It manifests as the interpretation of the object through the features that have been perceived. Its proximate cause is the object as it appears. Its mode is compared to a carpenter’s recognition of certain kinds of wood by the marks he has made on each.',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '4': {
+    label: 'Universal · IV',
+    title: 'Volition',
+    pali: 'Cetanā',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Universal · Variable</span>',
+    long: 'Cetanā — from the same root as citta — is the mental factor that deals with the actualisation of a goal, i.e., the volitional or purposeful aspect of cognition. It is therefore rendered as "volition". The commentaries explain that cetanā organises the associated mental factors in acting upon the object. Its characteristic is the state of willing, its function is to accumulate (kamma), and its manifestation is coordination. Its proximate cause is the associated states. Just as a chief pupil recites his own lesson and also makes the other pupils recite theirs, so volition, while itself working on its own object, also makes the associated mental states perform their own tasks. Volition is the most important mental factor in the generation of kamma, since it is volition that determines the ethical quality of the action.',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '5': {
+    label: 'Universal · V',
+    title: 'One-pointedness',
+    pali: 'Ekaggatā',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Universal · Variable</span>',
+    long: 'This is the unification of the mind on the object. Although this factor reaches its full extent only in the jhānas, where it functions as a jhāna factor, the Abhidhamma teaches that the seed of this ability to focus the mind is present in all types of consciousness, even the most rudimentary. In them it functions as the factor that fixes the mind on the object. The characteristic of one-pointedness is non-wandering or non-distraction. Its function is to collect or unify the associated states. It is manifested as peace, and its proximate cause is happiness.',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '6': {
+    label: 'Universal · VI',
+    title: 'Life Faculty (mental)',
+    pali: 'Jīvitindriya',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Universal · Variable</span>',
+    long: 'There are two kinds of life faculty: the mental, which vitalises the associated mental states, and the physical, which vitalises material phenomena. But here only the mental life faculty is meant as a cetasika. Its characteristic is the maintaining of the associated mental states. Its function is to make them occur. Its manifestation is the establishing of their presence. Its proximate cause is the mental states that are to be maintained.',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '7': {
+    label: 'Universal · VII',
+    title: 'Attention',
+    pali: 'Manasikāra',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Universal · Variable</span>',
+    long: 'The Pāli word literally means "making in the mind". Attention is the mental factor responsible for the mind’s directing towards the object, by which the object becomes presented to consciousness. Its characteristic is the conducting (sāraṇa) of the associated mental states towards the object. Its function is to bind the associated states to the object. It is manifested as confrontation with the object. Its proximate cause is the object. Attention is like the rudder of a ship, which directs it to its destination, or like a charioteer who sends well-trained horses (the associated states) towards their destination (the object). The mental factor manasikāra should be distinguished from vitakka: while manasikāra directs the associated mental factors towards the object, vitakka applies them to the object. Manasikāra is an obligatory cognitive factor present in all states of consciousness; vitakka is a specialised factor not indispensable for cognition.',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '8': {
+    label: 'Occasional · I',
+    title: 'Applied Thought',
+    pali: 'Vitakka',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Occasional · Variable</span>',
+    long: 'The mental factor vitakka has already been introduced in the discussion of the jhānas, where it appeared as the first of the five jhāna factors. Vitakka is the application of the mind to the object. Its characteristic is the directing of the mind onto the object. Its function is to strike and thresh the object. It is manifested as the leading of the mind onto the object. Although no proximate cause is mentioned in the commentaries, the object itself may be understood as its proximate cause. Ordinarily vitakka simply applies the mind to the object. But when this mental factor is cultivated through concentration it becomes a jhāna factor. In that case it is called appanā — "the absorption of the mind onto the object". Vitakka is also called saṅkappa — "intention" — and as such it is distinguished as micchāsaṅkappa, or wrong intention, and sammāsaṅkappa, or right intention. The latter is the second factor of the Noble Eightfold Path.',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '9': {
+    label: 'Occasional · II',
+    title: 'Sustained Thought',
+    pali: 'Vicāra',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Occasional · Variable</span>',
+    long: 'Vicāra, also a jhāna factor, has the characteristic of sustained pressure on the object in the sense of examining it. Its function is the sustained application of the associated mental phenomena to the object. It is manifested as the anchoring of those phenomena on the object. The object may be understood as its proximate cause. The difference between vitakka and vicāra has been described above (commentary to §§ 18–20).',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '10': {
+    label: 'Occasional · III',
+    title: 'Decision',
+    pali: 'Adhimokkha',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Occasional · Variable</span>',
+    long: 'The word adhimokkha literally means "releasing the mind onto the object". Hence it has been rendered as "decision" (or "resolution"). It has the characteristic of conviction, the function of non‑wavering (the opposite of groping in the dark), and manifestation as decisiveness. Its proximate cause is the thing to be convinced about. Because of its unwavering decision regarding the object it is compared to a stone pillar.',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '11': {
+    label: 'Occasional · IV',
+    title: 'Energy',
+    pali: 'Viriya',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Occasional · Variable</span>',
+    long: 'Viriya is the state or action of one who is energetic. Its characteristic is supporting, striving and marshalling. Its function is to sustain the associated states. Its manifestation is the absence of collapse. Its proximate cause is a sense of urgency (saṃvega) or any ground for the arousing of energy, i.e., anything that stirs to energetic action. Just as new beams added to an old house prevent its collapse, or as a strong reinforcement gives the king’s army the ability to defeat the enemy, so energy supports and assists all the associated states and does not let them backslide.',
+    roots: ["lobha", "dosa", "moha", "alobha", "adosa", "amoha"]
+  },
+  '12': {
+    label: 'Occasional · V',
+    title: 'Rapture',
+    pali: 'Pīti',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Occasional · Variable</span>',
+    long: 'Already introduced among the jhāna factors, pīti has the characteristic of enrapturing (sampiyāyana). Its function is to refresh the body and mind, or its function is to pervade (with thrilling zest). It is manifested as elation [or enthusiasm]. Mental-material phenomena (nāmarūpa) is its proximate cause.',
+    roots: ["lobha", "alobha", "adosa", "amoha"]
+  },
+  '13': {
+    label: 'Occasional · VI',
+    title: 'Zeal',
+    pali: 'Chanda',
+    short: '<span style="background:rgba(148,163,184,0.1); border:1px solid #94A3B844; color:#94A3B8; padding:4px 12px; border-radius:20px;">Occasional · Variable</span>',
+    long: 'Chanda here denotes desire to act (kattukāmatā), i.e., to perform an action or achieve some result. This type of desire must be distinguished from desire in the reprehensible sense, i.e., from lobha, greed, and rāga, lust. While these last are always unwholesome, chanda is an ethically variable factor which, when conjoined with wholesome concomitants, can function as a virtuous desire to achieve a worthy goal. The characteristic of chanda is desire to act, its function is searching for the object, its manifestation is need for the object, and that same object is its proximate cause. It should be regarded as the stretching out of the mind’s hand towards the object.',
+    roots: ["lobha", "dosa", "alobha", "adosa", "amoha"]
+  },
+  '14': {
+    label: 'Unwholesome Universal · I',
+    title: 'Delusion',
+    pali: 'Moha',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome · Root</span>',
+    long: 'Moha is a synonym for avijjā, "ignorance". Its characteristic is mental blindness or unknowing (aññāṇa). Its function is non‑penetration, or concealing the real nature of the object. It is manifested as the absence of right understanding or as mental darkness. Its proximate cause is unwise attention (ayoniso manasikāra). It should be regarded as the root of all that is unwholesome.',
+    roots: ["lobha", "dosa", "moha"]
+  },
+  '15': {
+    label: 'Unwholesome Universal · II',
+    title: 'Shamelessness',
+    pali: 'Ahirika',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'The characteristic of shamelessness is absence of disgust at bodily and verbal misconduct. Its function is to do evil deeds. It is manifested as not shrinking from evil. Its proximate cause is lack of respect for oneself.',
+    roots: ["lobha", "dosa", "moha"]
+  },
+  '16': {
+    label: 'Unwholesome Universal · III',
+    title: 'Fearlessness of Wrongdoing',
+    pali: 'Anottappa',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'The characteristic of fearlessness of wrongdoing (or moral recklessness) is absence of fear in regard to such deeds. Its function is to do evil deeds. It is manifested as not shrinking from evil. Its proximate cause is lack of respect for others.',
+    roots: ["lobha", "dosa", "moha"]
+  },
+  '17': {
+    label: 'Unwholesome Universal · IV',
+    title: 'Restlessness',
+    pali: 'Uddhacca',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'Restlessness (or agitation) has the characteristic of disquiet, like water whipped up by the wind. Its function is to make the mind unsteady, as wind makes a flag flutter. It is manifested as turmoil. Its proximate cause is unwise attention to mental agitation.',
+    roots: ["lobha", "dosa", "moha"]
+  },
+  '18': {
+    label: 'Unwholesome Occasional · I',
+    title: 'Greed',
+    pali: 'Lobha',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome · Root</span>',
+    long: 'Greed, the first unwholesome root, includes all degrees of selfish desire, longing, attachment, and clinging. Its characteristic is grasping the object. Its function is sticking, like meat stuck to a hot pan. It is manifested as not letting go. Its proximate cause is seeing enjoyment in things that lead to bondage.',
+    roots: ["lobha"]
+  },
+  '19': {
+    label: 'Unwholesome Occasional · II',
+    title: 'Wrong View',
+    pali: 'Diṭṭhi',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'Diṭṭhi here denotes wrong view. Its characteristic is unwise (unjustified) interpretation of things. Its function is to presume. It is manifested as wrong interpretation or wrong belief. Its proximate cause is unwillingness to see the noble ones (ariyas), etc.',
+    roots: ["lobha"]
+  },
+  '20': {
+    label: 'Unwholesome Occasional · III',
+    title: 'Conceit',
+    pali: 'Māna',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'Conceit has the characteristic of haughtiness. Its function is self‑exaltation. It is manifested as boastfulness. Its proximate cause is greed dissociated from views. It should be regarded as madness.',
+    roots: ["lobha"]
+  },
+  '21': {
+    label: 'Unwholesome Occasional · IV',
+    title: 'Hatred',
+    pali: 'Dosa',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome · Root</span>',
+    long: 'Dosa, the second unwholesome root, covers all kinds and degrees of aversion, ill will, anger, irritation, annoyance, and hostility. Its characteristic is ferocity. Its function is to spread or burn up its own support, i.e., the mind and body in which it arises. It is manifested as persecuting, and its proximate cause is a ground for annoyance.',
+    roots: ["dosa"]
+  },
+  '22': {
+    label: 'Unwholesome Occasional · V',
+    title: 'Envy',
+    pali: 'Issā',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'The characteristic of envy is being jealous of others’ success. Its function is to be dissatisfied with others’ success. It is manifested as aversion towards that success. Its proximate cause is others’ success.',
+    roots: ["dosa"]
+  },
+  '23': {
+    label: 'Unwholesome Occasional · VI',
+    title: 'Avarice',
+    pali: 'Macchariya',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'The characteristic of avarice is concealing one’s own success when it has been obtained or when it is about to be obtained. Its function is not being able to bear sharing it with others. It is manifested as shrinking (from sharing) and as meanness and sourness. Its proximate cause is one’s own success.',
+    roots: ["dosa"]
+  },
+  '24': {
+    label: 'Unwholesome Occasional · VII',
+    title: 'Worry / Regret',
+    pali: 'Kukkucca',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'Kukkucca is worry or remorse after having done wrong. Its characteristic is subsequent regret. Its function is to sorrow over what has been done and what has not been done. It is manifested as remorse. Its proximate cause is what has been done and what has not been done (i.e., errors of commission and omission).',
+    roots: ["dosa"]
+  },
+  '25': {
+    label: 'Unwholesome Occasional · VIII',
+    title: 'Sloth',
+    pali: 'Thīna',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'Sloth is sluggishness or dullness of mind. Its characteristic is lack of driving power. Its function is to dispel energy. It is manifested as the collapse of the mind. Its proximate cause is unwise attention to boredom, drowsiness, etc. Sloth and torpor always occur in conjunction and are opposed to energy (viriya). Sloth is defined as sickness of consciousness (citta-gelañña), torpor as sickness of the mental factors (kāyagelañña). As a pair they constitute one of the five hindrances, which is overcome by applied thought (vitakka).',
+    roots: ["lobha", "dosa"]
+  },
+  '26': {
+    label: 'Unwholesome Occasional · IX',
+    title: 'Torpor',
+    pali: 'Middha',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'Torpor is the morbid state of the mental factors. Its characteristic is unwieldiness. Its function is to suppress. It is manifested as drooping, or as nodding and sleepiness. Its proximate cause is the same as for sloth (unwise attention to boredom, drowsiness, etc.). Together with sloth they make up one of the five hindrances, which is overcome by applied thought (vitakka). Torpor is defined as sickness of the mental factors (kāyagelañña).',
+    roots: ["lobha", "dosa"]
+  },
+  '27': {
+    label: 'Unwholesome Occasional · X',
+    title: 'Doubt',
+    pali: 'Vicikicchā',
+    short: '<span style="background:rgba(239,68,68,0.1); border:1px solid #EF4444; color:#EF4444; padding:4px 12px; border-radius:20px;">Unwholesome</span>',
+    long: 'Doubt here means spiritual doubt, from a Buddhist perspective – it is the inability to place confidence in the Buddha, Dhamma, Saṅgha and the training. Its characteristic is dubiety. Its function is to waver. It is manifested as indecisiveness and as taking various sides. Its proximate cause is unwise attention.',
+    roots: ["moha"]
+  },
+  '28': {
+    label: 'Beautiful Universal · I',
+    title: 'Faith',
+    pali: 'Saddhā',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'The first of the beautiful cetasikas is faith; its characteristic is placing faith or trust in something. Its function is to clarify, as a water‑clearing gem makes muddy water clear; or its function is to "enter into", like setting out to cross a flood. It is manifested as non‑fogginess, i.e., the removal of mental impurities, or as resolution. Its proximate cause is something to place faith in, or the hearing of the Good Dhamma, or other causes that are factors of stream‑entry.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '29': {
+    label: 'Beautiful Universal · II',
+    title: 'Mindfulness',
+    pali: 'Sati',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'The word sati derives from a root meaning "to remember", but as a mental factor it signifies presence of mind, attentiveness to the present, rather than the faculty of memory regarding the past. Its characteristic is non‑wobbling, i.e., not floating away from the object. Its function is absence of confusion or non‑forgetfulness. It is manifested as guarding, or as the state of confronting an objective field. Its proximate cause is strong perception (thirasaññā) or the four foundations of mindfulness.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '30': {
+    label: 'Beautiful Universal · III',
+    title: 'Moral Shame',
+    pali: 'Hiri',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'The characteristic of moral shame is disgust at bodily and verbal misconduct. Its function is not to do evil. It is manifested as shrinking from evil. Its proximate cause is respect for oneself. Moral shame and moral dread are called by the Buddha the guardians of the world, because they protect the world from falling into widespread immorality.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '31': {
+    label: 'Beautiful Universal · IV',
+    title: 'Moral Dread',
+    pali: 'Ottappa',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'The characteristic of moral dread is fear in regard to bodily and verbal misconduct. Its function is not to do evil. It is manifested as shrinking from evil. Its proximate cause is respect for others.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '32': {
+    label: 'Beautiful Universal · V',
+    title: 'Non‑greed',
+    pali: 'Alobha',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful · Root</span>',
+    long: 'The characteristic of non‑greed is the mind’s lack of desire for its object, or non‑adherence to the object, like a drop of water on a lotus leaf. Its function is not to grasp. It is manifested as non‑attachment. It should be understood that non‑greed is not merely the absence of greed, but the presence of positive virtues such as generosity and renunciation.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '33': {
+    label: 'Beautiful Universal · VI',
+    title: 'Non‑hatred',
+    pali: 'Adosa',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful · Root</span>',
+    long: 'The characteristic of non‑hatred is absence of ferocity or non‑opposition. Its function is to remove irritation, or to remove fever. It is manifested as agreeableness. Non‑hatred comprises such positive virtues as loving‑kindness, gentleness, amity, friendliness, etc. When non‑hatred manifests as the refined quality of loving‑kindness (mettā), its characteristic becomes promoting the welfare of living beings. Its function is to prefer their welfare. It is manifested as the removal of ill‑will. Its proximate cause is seeing beings in an agreeable light. Such loving‑kindness should be distinguished from selfish affection, which is its "near enemy".',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '34': {
+    label: 'Beautiful Universal · VII',
+    title: 'Equanimity of Mind',
+    pali: 'Tatramajjhattatā',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'The Pāli term by which this cetasika is designated literally means "there in the middle". It is a synonym for equanimity (upekkhā), not as neutral feeling, but as a mental attitude of balance, detachment, and impartiality. Its characteristic is the even‑handed treatment of consciousness and the mental factors. Its function is to prevent deficiency and excess, or to prevent partiality. It is manifested as neutrality. It should be regarded as looking on with equanimity at the citta and cetasikas, like a charioteer looking with equanimity at the well‑trained horses trotting along the road. Equanimity of mind becomes the sublime quality of impartiality towards living beings. As such it regards living beings without discrimination, preferences and prejudices, seeing them all as equal. This impartiality should not be confused with its "near enemy" — worldly indifference due to ignorance.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '35': {
+    label: 'Beautiful Universal · VIII‑IX',
+    title: 'Tranquillity (of mental body and consciousness)',
+    pali: 'Passaddhi',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'The twofold tranquillity has the characteristic of calming the disturbances (daratha) in the mental body and consciousness respectively. Its function is to crush those disturbances. It is manifested as peacefulness and coolness. Its proximate cause is the mental body and consciousness. It should be regarded as opposed to such defilements as restlessness and worry, which create distress.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '36': {
+    label: 'Beautiful Universal · X‑XI',
+    title: 'Lightness (of mental body and consciousness)',
+    pali: 'Lahutā',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'The twofold lightness has the characteristic of quieting heaviness (garubhāva) in the mental body and consciousness respectively. Its function is to remove heaviness. It is manifested as non‑sluggishness. Its proximate cause is the mental body and consciousness. It should be regarded as opposed to such defilements as sloth and torpor, which create heaviness.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '37': {
+    label: 'Beautiful Universal · XII‑XIII',
+    title: 'Pliancy (of mental body and consciousness)',
+    pali: 'Mudutā',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'The twofold pliancy has the characteristic of removing rigidity (thambha) in the mental body and consciousness respectively. Its function is to crush rigidity. It is manifested as non‑resistance. Its proximate cause is the mental body and consciousness. It should be regarded as opposed to such defilements as wrong views and conceit, which create rigidity.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '38': {
+    label: 'Beautiful Universal · XIV‑XV',
+    title: 'Wieldiness (of mental body and consciousness)',
+    pali: 'Kammaññatā',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'The twofold wieldiness has the characteristic of removing unwieldiness (akammaññabhāva) in the mental body and consciousness respectively. Its function is to crush unwieldiness. It is manifested as the success of the mental body and consciousness in taking up an object. Its proximate cause is the mental body and consciousness. It should be regarded as opposed to the remaining hindrances, which create unwieldiness of the mental body and consciousness.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '39': {
+    label: 'Beautiful Universal · XVI‑XVII',
+    title: 'Proficiency (of mental body and consciousness)',
+    pali: 'Pāguññatā',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'The twofold proficiency has the characteristic of healthiness of the mental body and consciousness respectively. Its function is to crush the unhealthiness of the mental body and consciousness. It is manifested as the absence of disability. Its proximate cause is the mental body and consciousness. It should be regarded as opposed to lack of faith and other mental factors that cause the unhealthiness of the mental body and consciousness.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '40': {
+    label: 'Beautiful Universal · XVIII‑XIX',
+    title: 'Rectitude (of mental body and consciousness)',
+    pali: 'Ujjukatā',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful</span>',
+    long: 'Rectitude is straightness. The twofold rectitude has the characteristic of honesty of the mental body and consciousness respectively. Its function is to crush the crookedness of the mental body and consciousness, and it is manifested as non‑crookedness. Its proximate cause is the mental body and consciousness. It should be regarded as opposed to hypocrisy, fraudulence, etc., which create crookedness in the mental body and in consciousness.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '41': {
+    label: 'Abstinences · I',
+    title: 'Right Speech',
+    pali: 'Sammā‑vācā',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful · Abstinence</span>',
+    long: 'Right speech is the intentional abstention from wrong speech — lying, slandering, harsh speech, and idle chatter. Its characteristic is non‑transgression by way of speech. Its function is to shrink from verbal misconduct. It is manifested as the abstinence from such deeds. Its proximate cause is special qualities: faith, moral shame, moral dread, fewness of wishes, etc. It should be regarded as the mind’s turning away from offences.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '42': {
+    label: 'Abstinences · II',
+    title: 'Right Action',
+    pali: 'Sammā‑kammanta',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful · Abstinence</span>',
+    long: 'Right action is the intentional abstention from wrong bodily action — killing, stealing, and sexual misconduct. Its characteristic is non‑transgression by way of bodily deeds. Its function is to shrink from bodily wrongdoing. It is manifested as the abstinence from such deeds. Its proximate cause is special qualities: faith, moral shame, moral dread, fewness of wishes, etc. It should be regarded as the mind’s turning away from offences.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '43': {
+    label: 'Abstinences · III',
+    title: 'Right Livelihood',
+    pali: 'Sammā‑ājīva',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful · Abstinence</span>',
+    long: 'Right livelihood is the intentional abstention from wrong livelihood — such trades as dealing in poisons, intoxicants, weapons, slaves, or breeding animals for slaughter. Its characteristic is non‑transgression by way of livelihood. Its function is to shrink from wrong livelihood. It is manifested as the abstinence from such means of living. Its proximate cause is special qualities: faith, moral shame, moral dread, fewness of wishes, etc. It should be regarded as the mind’s turning away from offences.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '44': {
+    label: 'Illimitables · I',
+    title: 'Compassion',
+    pali: 'Karuṇā',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful · Illimitable</span>',
+    long: 'Characteristic: promoting the removal of suffering in others. Function: not being able to bear others’ suffering. Manifestation: non‑cruelty. Proximate cause: seeing helplessness in those overwhelmed by suffering.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '45': {
+    label: 'Illimitables · II',
+    title: 'Sympathetic Joy',
+    pali: 'Muditā',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful · Illimitable</span>',
+    long: 'Characteristic: joy at the success of others. Function: being unenvious at others’ success. Manifestation: the removal of aversion (boredom). Proximate cause: seeing the success of others.',
+    roots: ["alobha", "adosa", "amoha"]
+  },
+  '46': {
+    label: 'Wisdom',
+    title: 'Wisdom',
+    pali: 'Paññindriya',
+    short: '<span style="background:rgba(16,185,129,0.1); border:1px solid #10B981; color:#10B981; padding:4px 12px; border-radius:20px;">Beautiful · Root</span>',
+    long: 'Paññā — wisdom, or knowledge of things as they really are. Here it is called a faculty because it exercises a dominant function in understanding things as they really are. In the Abhidhamma the three terms — paññā (wisdom), ñāṇa (knowledge), and amoha (non‑delusion) — are used as synonyms. Wisdom has the characteristic of penetrating things according to their real nature (yathāsabhāvapaṭivedha). Its function is to illuminate the objective field, like a lamp. It is manifested as non‑confusion. Its proximate cause is wise attention (yoniso manasikāra).',
+    roots: ["amoha"]
+  }
+};
+
+function toggleCard(card) {
+  card.classList.toggle('open');
+}
+
+function toggleIntro() {
+  const toggle = document.getElementById('introToggle');
+  const body = document.getElementById('introBody');
+  toggle.classList.toggle('open');
+  body.classList.toggle('open');
+}
+
+function openDrawer(e, id) {
+  e.stopPropagation();
+  const d = dataCetasikas[id];
+  if (!d) return;
+
+  document.getElementById('drawer-label').textContent = d.label;
+  document.getElementById('drawer-title').textContent = d.title;
+  document.getElementById('drawer-pali').textContent = d.pali;
+  document.getElementById('drawer-short').innerHTML = d.short;
+  document.getElementById('drawer-long').innerHTML = d.long;
+
+  // Render roots
+  const rootEl = document.getElementById('drawer-root');
+  const rootDefs = {
+    lobha:  { label: 'Lobha · greed',       bg: 'rgba(255,224,130,0.12)', border: '#FFE082', color: '#FFE082' },
+    dosa:   { label: 'Dosa · hatred',        bg: 'rgba(239,68,68,0.12)',   border: '#EF4444', color: '#EF4444' },
+    moha:   { label: 'Moha · delusion',      bg: 'rgba(96,165,250,0.12)',  border: '#60A5FA', color: '#60A5FA' },
+    alobha: { label: 'Alobha · non‑greed',   bg: 'rgba(16,185,129,0.12)',  border: '#10B981', color: '#10B981' },
+    adosa:  { label: 'Adosa · non‑hatred',   bg: 'rgba(16,185,129,0.12)',  border: '#10B981', color: '#10B981' },
+    amoha:  { label: 'Amoha · wisdom',       bg: 'rgba(16,185,129,0.12)',  border: '#10B981', color: '#10B981' },
+    any:    { label: 'Any root',             bg: 'rgba(148,163,184,0.1)',  border: '#94A3B8', color: '#94A3B8' },
+    none:   { label: 'Rootless',             bg: 'rgba(148,163,184,0.08)', border: '#64748B', color: '#64748B' },
+  };
+  const roots = d.roots || [];
+  rootEl.innerHTML = roots.length
+    ? roots.map(r => {
+        const def = rootDefs[r] || rootDefs.none;
+        return `<span style="background:${def.bg};border:1px solid ${def.border};color:${def.color};padding:4px 11px;border-radius:20px;font-size:0.78rem;white-space:nowrap;">${def.label}</span>`;
+      }).join('')
+    : `<span style="background:rgba(148,163,184,0.08);border:1px solid #64748B;color:#64748B;padding:4px 11px;border-radius:20px;font-size:0.78rem;">—</span>`;
+
+  const overlay = document.getElementById('overlay');
+  const drawer = document.getElementById('drawer');
+
+  overlay.classList.add('active');
+  requestAnimationFrame(() => {
+    overlay.classList.add('visible');
+    drawer.classList.add('active');
+  });
+}
+
+function closeDrawer() {
+  const overlay = document.getElementById('overlay');
+  const drawer = document.getElementById('drawer');
+  overlay.classList.remove('visible');
+  drawer.classList.remove('active');
+  setTimeout(() => overlay.classList.remove('active'), 350);
+}
+
+// Swipe down to close on mobile
+let startY = 0;
+const drawer = document.getElementById('drawer');
+drawer.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+drawer.addEventListener('touchend', e => {
+  if (e.changedTouches[0].clientY - startY > 60) closeDrawer();
+});
+</script>
 </body>
 </html>
