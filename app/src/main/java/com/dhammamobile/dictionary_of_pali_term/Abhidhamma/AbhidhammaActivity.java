@@ -163,7 +163,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
         if (currentLanguage.equals("ru")) {
             htmlFilePath = "file:///android_asset/abhidhamma_ru/cittas_ru.html";
         } else {
-            htmlFilePath = "file:///android_asset/abhidhamma_ru/cittas_ru.html";
+            htmlFilePath = "file:///android_asset/abhidhamma_en/cittas_en.html";
         }
         loadHtmlPage(htmlFilePath);
     }
