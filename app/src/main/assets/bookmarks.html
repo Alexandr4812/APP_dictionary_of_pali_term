@@ -1,287 +1,311 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Закладки</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;600;800&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Закладки</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;600;800&display=swap');
 
-  :root {
-    --bg-color: #161923;
-    --accent-color: #FFE082;
-    --text-main: #E2E8F0;
-    --text-dim: #94A3B8;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --card-hover: rgba(255, 255, 255, 0.07);
-    --border-color: #2D3748;
-  }
+    :root {
+      --bg-color: #161923;
+      --accent-color: #FFE082;
+      --text-main: #E2E8F0;
+      --text-dim: #94A3B8;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-hover: rgba(255, 255, 255, 0.07);
+      --border-color: #2D3748;
+    }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 15px 100px;
-    font-family: 'Raleway', -apple-system, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    line-height: 1.5;
-    -webkit-tap-highlight-color: transparent;
-  }
+    body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px 15px 100px;
+      font-family: 'Raleway', -apple-system, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.5;
+      -webkit-tap-highlight-color: transparent;
+    }
 
-  .header {
-    text-align: center;
-    margin-bottom: 28px;
-    padding-top: 10px;
-  }
+    .header {
+      text-align: center;
+      margin-bottom: 28px;
+      padding-top: 10px;
+    }
 
-  .header-icon {
-    font-size: 2.2rem;
-    margin-bottom: 8px;
-    display: block;
-    filter: drop-shadow(0 0 12px rgba(255,224,130,0.4));
-  }
+    .header-icon {
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+      display: block;
+      filter: drop-shadow(0 0 12px rgba(255,224,130,0.4));
+    }
 
-  .main-title {
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 6px;
-  }
+    .main-title {
+      color: var(--accent-color);
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 6px;
+    }
 
-  .main-subtitle {
-    color: var(--text-dim);
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-  }
+    .main-subtitle {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      letter-spacing: 0.5px;
+    }
 
-  /* Divider */
-  .divider {
-    width: 60px;
-    height: 2px;
-    background: var(--accent-color);
-    margin: 16px auto;
-    border-radius: 2px;
-    opacity: 0.5;
-  }
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: var(--accent-color);
+      margin: 16px auto;
+      border-radius: 2px;
+      opacity: 0.5;
+    }
 
-  /* Empty state */
-  .empty-state {
-    text-align: center;
-    padding: 50px 20px;
-    color: var(--text-dim);
-    display: none;
-  }
-  .empty-state.visible { display: block; }
-  .empty-icon { font-size: 3rem; margin-bottom: 12px; display: block; opacity: 0.4; }
-  .empty-text { font-size: 0.95rem; font-family: 'Noto Serif', serif; font-style: italic; }
+    .empty-state {
+      text-align: center;
+      padding: 50px 20px;
+      color: var(--text-dim);
+      display: none;
+    }
+    .empty-state.visible { display: block; }
+    .empty-icon { font-size: 3rem; margin-bottom: 12px; display: block; opacity: 0.4; }
+    .empty-text { font-size: 0.95rem; font-family: 'Noto Serif', serif; font-style: italic; }
 
-  /* Bookmark list */
-  .bookmarks-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 24px;
-  }
+    .bookmarks-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
 
-  .bookmark-card {
-    display: flex;
-    align-items: stretch;
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-left: 3px solid var(--accent-color);
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-    text-decoration: none;
-    color: inherit;
-    position: relative;
-  }
+    .bookmark-card {
+      display: flex;
+      align-items: stretch;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--accent-color);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+      position: relative;
+    }
 
-  .bookmark-card:active {
-    transform: scale(0.98);
-    background: var(--card-hover);
-  }
+    .bookmark-card:active {
+      transform: scale(0.98);
+      background: var(--card-hover);
+    }
 
-  .bookmark-card-body {
-    flex: 1;
-    padding: 14px 16px;
-    min-width: 0;
-  }
+    .bookmark-card-body {
+      flex: 1;
+      padding: 14px 16px;
+      min-width: 0;
+    }
 
-  .bookmark-num {
-    font-size: 0.72rem;
-    color: var(--accent-color);
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-    opacity: 0.8;
-  }
+    /* Кликабельная верхняя зона (открыть сутту) */
+    .bookmark-open-area {
+      cursor: pointer;
+    }
 
-  .bookmark-title {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--text-main);
-    margin-bottom: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
+    .bookmark-num {
+      font-size: 0.72rem;
+      color: var(--accent-color);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      opacity: 0.8;
+    }
 
-  .bookmark-meta {
-    font-size: 0.8rem;
-    color: var(--text-dim);
-    font-family: 'Noto Serif', serif;
-    font-style: italic;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+    /* ── Заголовок — отображение ── */
+    .bookmark-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      word-break: break-word;
+      white-space: normal;
+      line-height: 1.4;
+    }
 
-  .bookmark-date {
-    font-size: 0.72rem;
-    color: var(--text-dim);
-    opacity: 0.6;
-    font-style: normal;
-    font-family: 'Raleway', sans-serif;
-  }
+    /* ── Заголовок — редактирование (textarea) ── */
+    .bookmark-title-input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--accent-color);
+      color: var(--text-main);
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: 'Raleway', sans-serif;
+      width: 100%;
+      outline: none;
+      padding: 2px 0;
+      resize: none;
+      overflow: hidden;
+      line-height: 1.4;
+      min-height: 24px;
+      word-break: break-word;
+      display: block;
+    }
 
-  .bookmark-delete {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    background: transparent;
-    border: none;
-    color: var(--text-dim);
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: color 0.2s, background 0.2s;
-    border-left: 1px solid var(--border-color);
-    flex-shrink: 0;
-  }
+    .bookmark-meta {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-family: 'Noto Serif', serif;
+      font-style: italic;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
 
-  .bookmark-delete:active {
-    background: rgba(255, 100, 100, 0.1);
-    color: #FC8181;
-  }
+    .bookmark-date {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      opacity: 0.6;
+      font-style: normal;
+      font-family: 'Raleway', sans-serif;
+    }
 
-  /* Count badge */
-  .count-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: rgba(255,224,130,0.1);
-    border: 1px solid rgba(255,224,130,0.25);
-    border-radius: 20px;
-    padding: 4px 12px;
-    font-size: 0.78rem;
-    color: var(--accent-color);
-    font-weight: 600;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
-  }
+    /* ── Поле заметки ── */
+    .bookmark-note {
+      width: 100%;
+      margin-top: 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 7px 10px;
+      color: var(--text-main);
+      font-family: 'Noto Serif', serif;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      resize: none;
+      overflow: hidden;
+      min-height: 34px;
+      outline: none;
+      word-break: break-word;
+      white-space: pre-wrap;
+      transition: border-color 0.2s;
+      display: block;
+    }
+    .bookmark-note::placeholder {
+      color: var(--text-dim);
+      opacity: 0.4;
+      font-style: italic;
+    }
+    .bookmark-note:focus {
+      border-color: rgba(255,224,130,0.4);
+    }
 
-  /* Clear button */
-  .btn-clear {
-    width: 100%;
-    padding: 14px;
-    background: transparent;
-    border: 1px solid var(--border-color);
-    border-radius: 30px;
-    color: var(--text-dim);
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    transition: all 0.2s;
-    display: none;
-  }
+    .bookmark-edit-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 0 4px;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+      flex-shrink: 0;
+    }
+    .bookmark-edit-btn:active {
+      opacity: 1;
+      color: var(--accent-color);
+    }
 
-  .btn-clear.visible {
-    display: block;
-  }
+    .bookmark-delete {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: color 0.2s, background 0.2s;
+      border-left: 1px solid var(--border-color);
+      flex-shrink: 0;
+    }
 
-  .btn-clear:active {
-    background: rgba(252, 129, 129, 0.1);
-    border-color: #FC8181;
-    color: #FC8181;
-  }
+    .bookmark-delete:active {
+      background: rgba(255, 100, 100, 0.1);
+      color: #FC8181;
+    }
 
-  /* Scroll hint */
-  .scroll-hint {
-    text-align: center;
-    font-size: 0.72rem;
-    color: var(--text-dim);
-    opacity: 0.4;
-    margin-top: 10px;
-    letter-spacing: 0.5px;
-  }
+    .count-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,224,130,0.1);
+      border: 1px solid rgba(255,224,130,0.25);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 0.78rem;
+      color: var(--accent-color);
+      font-weight: 600;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
 
-  /* Animation */
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+    .btn-clear {
+      width: 100%;
+      padding: 14px;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: 30px;
+      color: var(--text-dim);
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      transition: all 0.2s;
+      display: none;
+    }
 
-  .bookmark-card {
-    animation: fadeInUp 0.3s ease both;
-  }
+    .btn-clear.visible { display: block; }
 
-  .bookmark-title-input {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--accent-color);
-  color: var(--text-main);
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: 'Raleway', sans-serif;
-  width: 100%;
-  outline: none;
-  padding: 2px 0;
-}
+    .btn-clear:active {
+      background: rgba(252, 129, 129, 0.1);
+      border-color: #FC8181;
+      color: #FC8181;
+    }
 
-  .bookmark-edit-btn {
-  background: transparent;
-  border: none;
-  color: var(--text-dim);
-  font-size: 0.85rem;
-  cursor: pointer;
-  padding: 0 4px;
-  opacity: 0.5;
-  transition: opacity 0.2s;
-  flex-shrink: 0;
-}
-.bookmark-edit-btn:active {
-  opacity: 1;
-  color: var(--accent-color);
-}
-  .btn-back {
-  width: 100%;
-  padding: 14px;
-  background: transparent;
-  border: 1px solid var(--border-color);
-  border-radius: 30px;
-  color: var(--accent-color);
-  font-family: 'Raleway', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  letter-spacing: 0.5px;
-  margin-top: 10px;
-  transition: all 0.2s;
-}
-.btn-back:active {
-  background: rgba(255, 224, 130, 0.1);
-  border-color: var(--accent-color);
-}
-</style>
+    .btn-back {
+      width: 100%;
+      padding: 14px;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: 30px;
+      color: var(--accent-color);
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      margin-top: 10px;
+      transition: all 0.2s;
+    }
+    .btn-back:active {
+      background: rgba(255, 224, 130, 0.1);
+      border-color: var(--accent-color);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .bookmark-card {
+      animation: fadeInUp 0.3s ease both;
+    }
+  </style>
 </head>
 <body>
 
@@ -293,7 +317,7 @@
 </div>
 
 <div style="text-align:center;">
-  <div class="count-badge" id="countBadge">0 / 10 закладок</div>
+  <div class="count-badge" id="countBadge">0 / 100 закладок</div>
 </div>
 
 <div class="empty-state visible" id="emptyState">
@@ -308,7 +332,8 @@
 <button class="btn-back" onclick="goBack()">← Назад</button>
 
 <script>
-  let bookmarks = [];
+  var MAX_BOOKMARKS = 100;
+  var bookmarks = [];
 
   function loadBookmarks(jsonString) {
     try {
@@ -320,18 +345,18 @@
   }
 
   function goBack() {
-  if (typeof Android !== 'undefined') {
-    Android.goBack();
+    if (typeof Android !== 'undefined') {
+      Android.goBack();
+    }
   }
-}
 
   function render() {
-    const list = document.getElementById('bookmarksList');
-    const empty = document.getElementById('emptyState');
-    const btnClear = document.getElementById('btnClear');
-    const badge = document.getElementById('countBadge');
+    var list = document.getElementById('bookmarksList');
+    var empty = document.getElementById('emptyState');
+    var btnClear = document.getElementById('btnClear');
+    var badge = document.getElementById('countBadge');
     list.innerHTML = '';
-    badge.textContent = bookmarks.length + ' / 10 закладок';
+    badge.textContent = bookmarks.length + ' / ' + MAX_BOOKMARKS + ' закладок';
 
     if (bookmarks.length === 0) {
       empty.classList.add('visible');
@@ -348,62 +373,147 @@
       card.style.animationDelay = (index * 0.05) + 's';
 
       var isLatest = (index === 0);
-      var dateStr = bm.date ? new Date(bm.date).toLocaleDateString('ru-RU', { day:'numeric', month:'short', year:'numeric'}) : '';
+      var dateStr = bm.date
+        ? new Date(bm.date).toLocaleDateString('ru-RU', { day:'numeric', month:'short', year:'numeric' })
+        : '';
 
-      card.innerHTML =
-        '<div class="bookmark-card-body" onclick="openBookmark(\'' + esc(bm.filePath) + '\',' + (bm.scrollY||0) + ')">' +
-          '<div class="bookmark-num">' + esc(bm.suttaRef) +
-            (isLatest ? ' <span style="background:#FFE082;color:#161923;font-size:0.65rem;padding:2px 7px;border-radius:10px;font-weight:800;letter-spacing:1px;vertical-align:middle;">НОВАЯ</span>' : '') +
-          '</div>' +
-          '<div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">' +
-            '<div class="bookmark-title" id="title-' + esc(bm.id) + '">' + esc(bm.title) + '</div>' +
-            '<button class="bookmark-edit-btn" onclick="event.stopPropagation();editTitle(\'title-' + esc(bm.id) + '\', \'' + esc(bm.id) + '\')">✏️</button>' +
-          '</div>' +
-          '<div class="bookmark-meta">' +
-            '<span>' + esc(bm.subtitle || '') + '</span>' +
-            (dateStr ? '<span class="bookmark-date">· ' + dateStr + '</span>' : '') +
-          '</div>' +
-        '</div>' +
-        '<button class="bookmark-delete" onclick="deleteBookmark(\'' + esc(bm.id) + '\')">✕</button>';
+      // ── Левая часть карточки ──────────────────────────────
+      var body = document.createElement('div');
+      body.className = 'bookmark-card-body';
 
+      // Кликабельная зона (открыть сутту)
+      var openArea = document.createElement('div');
+      openArea.className = 'bookmark-open-area';
+      openArea.onclick = function() { openBookmark(bm.filePath, bm.scrollY || 0); };
+
+      // Номер / метка НОВАЯ
+      var numEl = document.createElement('div');
+      numEl.className = 'bookmark-num';
+      numEl.innerHTML = esc(bm.suttaRef || '') +
+        (isLatest ? ' <span style="background:#FFE082;color:#161923;font-size:0.65rem;padding:2px 7px;border-radius:10px;font-weight:800;letter-spacing:1px;vertical-align:middle;">НОВАЯ</span>' : '');
+
+      // Строка с заголовком и кнопкой редактирования
+      var titleRow = document.createElement('div');
+      titleRow.style.cssText = 'display:flex;align-items:flex-start;gap:6px;margin-bottom:5px;';
+
+      var titleEl = document.createElement('div');
+      titleEl.className = 'bookmark-title';
+      titleEl.id = 'title-' + bm.id;
+      titleEl.textContent = bm.title || '';
+
+      var editBtn = document.createElement('button');
+      editBtn.className = 'bookmark-edit-btn';
+      editBtn.textContent = '✏️';
+      editBtn.title = 'Редактировать название';
+      editBtn.onclick = function(e) {
+        e.stopPropagation();
+        editTitle('title-' + bm.id, bm.id);
+      };
+
+      titleRow.appendChild(titleEl);
+      titleRow.appendChild(editBtn);
+
+      // Мета: subtitle + дата
+      var meta = document.createElement('div');
+      meta.className = 'bookmark-meta';
+      if (bm.subtitle) {
+        var subEl = document.createElement('span');
+        subEl.textContent = bm.subtitle;
+        meta.appendChild(subEl);
+      }
+      if (dateStr) {
+        var dateEl = document.createElement('span');
+        dateEl.className = 'bookmark-date';
+        dateEl.textContent = '· ' + dateStr;
+        meta.appendChild(dateEl);
+      }
+
+      openArea.appendChild(numEl);
+      openArea.appendChild(titleRow);
+      openArea.appendChild(meta);
+
+      // ── Поле заметки (вне openArea, чтобы клик не открывал сутту) ──
+      var noteArea = document.createElement('textarea');
+      noteArea.className = 'bookmark-note';
+      noteArea.placeholder = 'Добавить заметку…';
+      noteArea.value = bm.note || '';
+      noteArea.rows = 1;
+
+      // Автовысота
+      autoResize(noteArea);
+      noteArea.addEventListener('input', function() { autoResize(noteArea); });
+
+      // Остановить всплытие, чтобы не открывать сутту при тапе на заметку
+      noteArea.addEventListener('click', function(e) { e.stopPropagation(); });
+
+      noteArea.addEventListener('blur', function() {
+        var newNote = noteArea.value;
+        // Обновляем локально
+        for (var i = 0; i < bookmarks.length; i++) {
+          if (bookmarks[i].id === bm.id) { bookmarks[i].note = newNote; break; }
+        }
+        if (typeof Android !== 'undefined') {
+          Android.updateBookmarkNote(bm.id, newNote);
+        }
+      });
+
+      body.appendChild(openArea);
+      body.appendChild(noteArea);
+
+      // ── Кнопка удаления ──────────────────────────────────
+      var delBtn = document.createElement('button');
+      delBtn.className = 'bookmark-delete';
+      delBtn.textContent = '✕';
+      delBtn.onclick = function() { deleteBookmark(bm.id); };
+
+      card.appendChild(body);
+      card.appendChild(delBtn);
       list.appendChild(card);
     });
   }
 
+  /** Автовысота textarea */
+  function autoResize(el) {
+    el.style.height = 'auto';
+    el.style.height = el.scrollHeight + 'px';
+  }
+
   function editTitle(elId, id) {
     var el = document.getElementById(elId);
+    if (!el) return;
     var current = el.textContent;
-    var input = document.createElement('input');
-    input.className = 'bookmark-title-input';
-    input.value = current;
-    el.replaceWith(input);
-    input.focus();
-    input.select();
+
+    // Заменяем div на textarea для поддержки переноса строк
+    var textarea = document.createElement('textarea');
+    textarea.className = 'bookmark-title-input';
+    textarea.value = current;
+    textarea.rows = 1;
+    el.replaceWith(textarea);
+    autoResize(textarea);
+    textarea.focus();
+    textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+    textarea.addEventListener('input', function() { autoResize(textarea); });
 
     function save() {
-      var newTitle = input.value.trim() || current;
+      var newTitle = textarea.value.trim() || current;
       var div = document.createElement('div');
       div.className = 'bookmark-title';
       div.id = elId;
       div.textContent = newTitle;
-      input.replaceWith(div);
+      textarea.replaceWith(div);
 
-      bookmarks = bookmarks.map(function(b) {
-        if (b.id === id) b.title = newTitle;
-        return b;
-      });
+      for (var i = 0; i < bookmarks.length; i++) {
+        if (bookmarks[i].id === id) { bookmarks[i].title = newTitle; break; }
+      }
       if (typeof Android !== 'undefined') {
         Android.updateBookmarkTitle(id, newTitle);
       }
     }
 
-    input.addEventListener('blur', save);
-    input.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') input.blur();
-      if (e.key === 'Escape') {
-        input.value = current;
-        input.blur();
-      }
+    textarea.addEventListener('blur', save);
+    textarea.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); textarea.blur(); }
+      if (e.key === 'Escape') { textarea.value = current; textarea.blur(); }
     });
   }
 

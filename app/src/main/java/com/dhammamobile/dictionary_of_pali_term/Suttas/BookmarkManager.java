@@ -10,7 +10,7 @@ import java.util.Locale;
 import java.util.UUID;
 
 /**
- * Менеджер закладок. Хранит до 10 закладок в SharedPreferences.
+ * Менеджер закладок. Хранит до 100 закладок в SharedPreferences.
  * Каждая закладка содержит:
  *   - id         : уникальный ID
  *   - suttaRef   : номер сутты, например "СН 5.2"
@@ -18,13 +18,14 @@ import java.util.UUID;
  *   - subtitle   : подзаголовок/описание (краткое)
  *   - filePath   : путь к HTML-файлу в assets, например "SN/Texts/sn5_2-soma-sutta-sv.html"
  *   - scrollY    : позиция скролла (пиксели)
+ *   - note       : произвольное описание/заметка пользователя
  *   - date       : ISO дата сохранения
  */
 public class BookmarkManager {
 
-    private static final String PREFS_NAME  = "bookmarks_prefs";
-    private static final String KEY_DATA    = "bookmarks_json";
-    private static final int    MAX_BOOKMARKS = 10;
+    private static final String PREFS_NAME    = "bookmarks_prefs";
+    private static final String KEY_DATA      = "bookmarks_json";
+    private static final int    MAX_BOOKMARKS = 100;
 
     private final SharedPreferences prefs;
 
@@ -32,13 +33,60 @@ public class BookmarkManager {
         prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
     }
 
-    /** Добавить или обновить закладку. Если для этого filePath уже есть закладка — обновляет scrollY.
-     *  Если закладок >= 10 — удаляет самую старую (последнюю в массиве). */
+    /**
+     * Извлекает читаемое название из пути к файлу.
+     * Например: "SN/Texts/sn5_2-soma-sutta-sv.html" → "SN 5.2 Soma Sutta"
+     */
+    public static String extractTitleFromPath(String filePath) {
+        if (filePath == null || filePath.isEmpty()) return filePath;
+
+        // Берём имя файла без папок
+        String name = filePath;
+        int slash = name.lastIndexOf('/');
+        if (slash >= 0) name = name.substring(slash + 1);
+
+        // Убираем расширение
+        int dot = name.lastIndexOf('.');
+        if (dot >= 0) name = name.substring(0, dot);
+
+        // Убираем суффиксы переводчиков в конце: -sv, -bh, -tb, -nm и т.п.
+        name = name.replaceAll("-[a-z]{2,3}$", "");
+
+        // Парсим номер: sn5_2-..., an1_1-..., mn10-..., dn2-... → "SN 5.2 ...", "MN 10 ..."
+        name = name.replaceAll("^([a-zA-Z]{2})(\\d+)_(\\d+)-?(.*)", "$1 $2.$3 $4");
+        name = name.replaceAll("^([a-zA-Z]{2})(\\d+)-?(.*)",         "$1 $2 $3");
+
+        // Заменяем дефисы/подчёркивания на пробелы и капитализируем каждое слово
+        String[] parts = name.trim().split("[-_\\s]+");
+        StringBuilder sb = new StringBuilder();
+        for (String part : parts) {
+            if (part.isEmpty()) continue;
+            if (sb.length() > 0) sb.append(" ");
+            // Не трогаем уже заглавные аббревиатуры вроде SN, AN, MN
+            if (part.matches("[A-Z]{1,3}\\s*\\d.*")) {
+                sb.append(part);
+            } else {
+                sb.append(Character.toUpperCase(part.charAt(0)));
+                sb.append(part.substring(1).toLowerCase());
+            }
+        }
+        return sb.toString().trim();
+    }
+
+    /**
+     * Добавить или обновить закладку. Если для этого filePath уже есть закладка — обновляет scrollY.
+     * Если закладок >= MAX_BOOKMARKS — удаляет самую старую (последнюю в массиве).
+     */
     public void addBookmark(String suttaRef, String title, String subtitle,
                             String filePath, int scrollY) {
+        // Если title пустой или совпадает с filePath — генерируем красивое имя из пути
+        if (title == null || title.isEmpty() || title.equals(filePath)) {
+            title = extractTitleFromPath(filePath);
+        }
+
         JSONArray arr = getAll();
 
-        // Ищем существующую с таким же filePath — обновляем
+        // Ищем существующую с таким же filePath — обновляем позицию и дату
         for (int i = 0; i < arr.length(); i++) {
             try {
                 JSONObject bm = arr.getJSONObject(i);
@@ -63,6 +111,7 @@ public class BookmarkManager {
             bm.put("subtitle", subtitle);
             bm.put("filePath", filePath);
             bm.put("scrollY",  scrollY);
+            bm.put("note",     "");      // поле для произвольной заметки пользователя
             bm.put("date",     nowIso());
 
             arr = prependTo(arr, bm);
@@ -76,6 +125,7 @@ public class BookmarkManager {
         } catch (Exception ignored) {}
     }
 
+    /** Обновить заголовок закладки */
     public void updateTitle(String id, String newTitle) {
         JSONArray arr = getAll();
         for (int i = 0; i < arr.length(); i++) {
@@ -83,6 +133,21 @@ public class BookmarkManager {
                 JSONObject bm = arr.getJSONObject(i);
                 if (id.equals(bm.optString("id"))) {
                     bm.put("title", newTitle);
+                    break;
+                }
+            } catch (Exception ignored) {}
+        }
+        save(arr);
+    }
+
+    /** Обновить заметку (note) закладки */
+    public void updateNote(String id, String newNote) {
+        JSONArray arr = getAll();
+        for (int i = 0; i < arr.length(); i++) {
+            try {
+                JSONObject bm = arr.getJSONObject(i);
+                if (id.equals(bm.optString("id"))) {
+                    bm.put("note", newNote);
                     break;
                 }
             } catch (Exception ignored) {}

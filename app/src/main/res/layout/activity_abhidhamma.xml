@@ -54,24 +54,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:gravity="center_vertical"
+                android:gravity="end"
                 tools:ignore="UselessLeaf" >
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/tableButton1"
-                    style="@style/button_table_premium"
-                    android:layout_marginStart="12dp"
-                    android:onClick="tableChittas1"
-                    android:text="@string/text_for_table"
-                    app:icon="@android:drawable/ic_menu_agenda"
-                    app:iconSize="16dp"
-                    app:iconTint="@color/black"
-                    tools:ignore="UsingOnClickInXml" />
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
 
                 <Button
                     android:id="@+id/infoButton1"
@@ -85,7 +69,7 @@
             <Button
                 android:id="@+id/button_chittas"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toChittasAct"
+                android:onClick="tableChittas1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/textButtonChittas"

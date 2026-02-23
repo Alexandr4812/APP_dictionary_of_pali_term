@@ -13,6 +13,8 @@ import android.content.Context;
  *   Android.openBookmark(filePath, scrollY)
  *   Android.deleteBookmark(id)
  *   Android.clearBookmarks()
+ *   Android.updateBookmarkTitle(id, newTitle)
+ *   Android.updateBookmarkNote(id, newNote)
  */
 public class BookmarkJsInterface {
 
@@ -56,9 +58,19 @@ public class BookmarkJsInterface {
         });
     }
 
+    /** Обновить заголовок закладки */
     @JavascriptInterface
     public void updateBookmarkTitle(String id, String newTitle) {
         manager.updateTitle(id, newTitle);
+    }
+
+    /**
+     * Обновить заметку (note) закладки.
+     * Вызывается из bookmarks.html когда пользователь редактирует описание.
+     */
+    @JavascriptInterface
+    public void updateBookmarkNote(String id, String newNote) {
+        manager.updateNote(id, newNote);
     }
 
     @JavascriptInterface
@@ -78,8 +90,6 @@ public class BookmarkJsInterface {
     @JavascriptInterface
     public void deleteBookmark(String id) {
         manager.deleteById(id);
-        // Данные уже обновлены в JS-стороне через render(),
-        // но можно синхронизировать из Java на всякий случай
     }
 
     /**

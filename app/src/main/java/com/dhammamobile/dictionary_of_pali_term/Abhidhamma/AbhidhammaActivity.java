@@ -95,7 +95,6 @@ public class AbhidhammaActivity extends BaseActivityClass {
         textViewAbhidhammaMaterial = findViewById(R.id.textViewAbhidhammaMaterial);
         textViewAbhidhammaNibbana = findViewById(R.id.textViewAbhidhammaNibbana);
 
-        tableButton1 = findViewById(R.id.tableButton1);
 
 
 
@@ -129,7 +128,6 @@ public class AbhidhammaActivity extends BaseActivityClass {
         Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
 
         infoButton1.setAnimation(slideDown);
-        tableButton1.setAnimation(slideFromLeftAnimation);
         infoButton2.setAnimation(slideDown);
         infoButton3.setAnimation(slideDown);
         button1.startAnimation(slideFromLeftAnimation);
@@ -165,7 +163,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
         if (currentLanguage.equals("ru")) {
             htmlFilePath = "file:///android_asset/abhidhamma_ru/cittas_ru.html";
         } else {
-            htmlFilePath = "file:///android_asset/abhidhamma_en/cittas_en.html";
+            htmlFilePath = "file:///android_asset/abhidhamma_ru/cittas_ru.html";
         }
         loadHtmlPage(htmlFilePath);
     }
