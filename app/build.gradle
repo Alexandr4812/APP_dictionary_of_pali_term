@@ -10,8 +10,8 @@ android {
         applicationId "com.dhammamobile.dictionary_of_pali_term"
         minSdk 21
         targetSdk 36
-        versionCode 25
-        versionName '10.0'
+        versionCode 28
+        versionName '11.1'
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
