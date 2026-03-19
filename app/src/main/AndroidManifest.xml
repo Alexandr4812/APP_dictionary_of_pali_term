@@ -17,6 +17,8 @@
         android:theme="@style/Theme.Dictionary_of_pali_term"
         android:versionCode="3"
         android:versionName="3.1"
+        android:usesCleartextTraffic="false"
+        android:forceDarkAllowed="false"
         tools:targetApi="33">
 
         <meta-data

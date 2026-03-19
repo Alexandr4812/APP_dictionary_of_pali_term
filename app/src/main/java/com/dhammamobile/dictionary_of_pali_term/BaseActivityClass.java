@@ -19,6 +19,7 @@ import androidx.core.view.WindowInsetsControllerCompat;
 
 import java.util.Locale;
 
+
 public abstract class BaseActivityClass extends AppCompatActivity {
     protected static final String LANGUAGE_PREF_KEY = "LANGUAGE_PREF_KEY";
     private MediaPlayer mediaPlayer;
@@ -39,24 +40,42 @@ public abstract class BaseActivityClass extends AppCompatActivity {
     }
 
     @Override
+    protected void attachBaseContext(Context newBase) {
+        // Получаем сохраненный язык через ваш метод
+        SharedPreferences preferences = newBase.getSharedPreferences("locale", Context.MODE_PRIVATE);
+        String savedLanguage = preferences.getString(LANGUAGE_PREF_KEY, "ru"); // "ru" по умолчанию
+
+        Locale locale = new Locale(savedLanguage);
+        Locale.setDefault(locale);
+
+        Configuration config = newBase.getResources().getConfiguration();
+        config.setLocale(locale);
+
+        // Создаем контекст с выбранным языком
+        Context context = newBase.createConfigurationContext(config);
+        super.attachBaseContext(context);
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
         updateLocale();
     }
 
     protected void updateLocale() {
-        // Получаем сохраненный язык, если он есть, иначе устанавливаем русский язык по умолчанию
         String savedLanguage = getSavedLanguage();
-        Locale locale;
-        if (!TextUtils.isEmpty(savedLanguage)) {
-            locale = new Locale(savedLanguage);
-        } else {
-            locale = new Locale("ru");
+        // Если в настройках пусто, берем "ru"
+        if (TextUtils.isEmpty(savedLanguage)) {
+            savedLanguage = "ru";
         }
 
+        Locale locale = new Locale(savedLanguage);
         Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
+
+        Configuration config = getResources().getConfiguration();
+        config.setLocale(locale);
+
+        // Обновляем ресурсы текущей активити
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
     }
 
