@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+
 
 
 
@@ -18,6 +18,17 @@
         android:versionCode="3"
         android:versionName="3.1"
         tools:targetApi="33">
+
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="false" />
+
+        <!-- Запрещаем использование HTTP/2 (снижает сетевую активность движка) -->
+        <meta-data
+            android:name="android.net.http.EnableHttp2"
+            android:value="false" />
+
+
         <activity
             android:name=".Abhidhamma.AbhidhammaChetasikasEtichVerUniversSometimeActivity"
             android:configChanges="orientation|screenSize"
