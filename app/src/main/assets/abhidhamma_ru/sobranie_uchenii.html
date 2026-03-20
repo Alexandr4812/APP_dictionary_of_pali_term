@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg-color: #161923;
+            --accent-color: #FFE082;
+            --text-main: #E2E8F0;
+            --text-dim: #94A3B8;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-color: #2D3748;
+            --green: #81C784;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 15px 15px 80px;
+            font-family: -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* ── Заголовок ── */
+        .main-title {
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 4px;
+        }
+        .main-chapter {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.78rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* ── Вводный стих (сворачивается) ── */
+        .intro-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 10px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            margin-bottom: 16px;
+            user-select: none;
+            background: var(--card-bg);
+        }
+        .intro-toggle-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-dim);
+        }
+        .intro-toggle-icon {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            transition: transform 0.3s;
+        }
+        .intro-toggle.open .intro-toggle-icon { transform: rotate(180deg); }
+        .intro-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            font-size: 0.83rem;
+            color: var(--text-dim);
+            line-height: 1.7;
+            font-style: italic;
+            padding: 0 4px;
+        }
+        .intro-body.open {
+            max-height: 1200px;
+            padding-bottom: 12px;
+        }
+
+        /* ── Группа раздела (details) ── */
+        details.section-group {
+            margin-bottom: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            background: var(--card-bg);
+            overflow: hidden;
+        }
+
+        summary.section-summary {
+            padding: 14px 16px;
+            list-style: none;
+            cursor: pointer;
+            background-color: var(--accent-color);
+            color: #161923;
+            font-weight: 800;
+            font-size: 0.82rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: "▼"; font-size: 0.6rem; transition: transform 0.3s; margin-left: auto; }
+        details[open] > summary::after { transform: rotate(180deg); }
+
+        .section-para-num {
+            font-size: 0.72rem;
+            font-weight: 800;
+            opacity: 0.65;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+            font-style: italic;
+        }
+
+        /* ── Кнопка параграфа ── */
+        .para-btn {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 13px 16px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-size: 0.88rem;
+            font-family: -apple-system, sans-serif;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.15s;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .para-btn:last-child { border-bottom: none; }
+        .para-btn:active { background: rgba(255,255,255,0.05); }
+
+        .para-num {
+            font-size: 0.7rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-right: 10px;
+            flex-shrink: 0;
+            opacity: 0.8;
+        }
+        .para-title { flex: 1; }
+        .para-arrow {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            margin-left: 8px;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        /* ── Тело параграфа (разворачивается внутри) ── */
+        .para-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            background: rgba(0,0,0,0.18);
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            line-height: 1.75;
+            padding: 0 16px 0 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .para-body.open {
+            max-height: 2000px;
+            padding: 14px 16px;
+        }
+        .para-body:last-child { border-bottom: none; }
+
+        /* Пустой placeholder */
+        .placeholder {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dim);
+            font-style: italic;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+        .placeholder::before {
+            content: "✎";
+            font-size: 1rem;
+        }
+
+        /* Когда кнопка открыта */
+        .para-btn.open .para-arrow { transform: rotate(90deg); }
+        .para-btn.open { background: rgba(255,224,130,0.04); }
+
+        /* ── Карточки чувств (§ 2) ── */
+        .feeling-cards { padding: 0; }
+
+        .feeling-card {
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+        .feeling-card:last-child { border-bottom: none; }
+        .feeling-card:active { background: rgba(255,255,255,0.05); }
+
+        .feeling-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 16px;
+            cursor: pointer;
+        }
+        .feeling-header .feeling-name { flex-basis: 100%; }
+        .feeling-header .feeling-info-btn,
+        .feeling-header .feeling-tag,
+        .feeling-header .feeling-arrow { flex-shrink: 0; }
+        .feeling-name {
+            flex: 1;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .feeling-pali {
+            color: var(--text-dim);
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+        .feeling-arrow {
+            font-size: 0.55rem;
+            color: var(--text-dim);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        .feeling-card.open .feeling-arrow { transform: rotate(90deg); }
+        .feeling-card.open { background: rgba(255,255,255,0.02); }
+
+        .feeling-desc {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+            background: rgba(0,0,0,0.18);
+            font-size: 0.82rem;
+            color: #CBD5E1;
+            line-height: 1.7;
+            padding: 0 16px 0 16px;
+        }
+        .feeling-card.open .feeling-desc {
+            max-height: 400px;
+            padding: 12px 16px;
+        }
+
+        /* Цветовые акценты по типу чувства */
+        .f-pleasant  { border-left: 3px solid #81C784; }
+        .f-painful   { border-left: 3px solid #EF9A9A; }
+        .f-joy       { border-left: 3px solid var(--accent-color); }
+        .f-displeas  { border-left: 3px solid #90CAF9; }
+        .f-equanim   { border-left: 3px solid #B0BEC5; }
+
+        .feeling-tag {
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 10px;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+        }
+        .tag-pleasant { background: rgba(129,199,132,0.15); color: #81C784; border: 1px solid rgba(129,199,132,0.4); }
+        .tag-painful  { background: rgba(239,154,154,0.15); color: #EF9A9A; border: 1px solid rgba(239,154,154,0.4); }
+        .tag-joy      { background: rgba(255,224,130,0.15); color: var(--accent-color); border: 1px solid rgba(255,224,130,0.4); }
+        .tag-displeas { background: rgba(144,202,249,0.12); color: #90CAF9; border: 1px solid rgba(144,202,249,0.4); }
+        .tag-equanim  { background: rgba(176,190,197,0.12); color: #B0BEC5; border: 1px solid rgba(176,190,197,0.4); }
+
+        .feeling-prop { margin-bottom: 5px; }
+        .feeling-prop-label { color: var(--accent-color); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px; }
+
+        /* ── Боковая панель (drawer) ── */
+        .overlay {
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 100;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .overlay.active { display: block; }
+        .overlay.visible { opacity: 1; }
+
+        .drawer {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: #1E2736;
+            border-radius: 20px 20px 0 0;
+            z-index: 101;
+            padding: 0 0 30px;
+            transform: translateY(100%);
+            transition: transform 0.35s cubic-bezier(.4,0,.2,1);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .drawer.active { transform: translateY(0); }
+
+        .drawer-handle {
+            width: 36px; height: 4px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 2px;
+            margin: 12px auto 0;
+        }
+
+        .drawer-header {
+            padding: 16px 20px 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .drawer-type {
+            font-size: 0.7rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 4px;
+        }
+        .drawer-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text-main);
+        }
+        .drawer-pali {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            font-style: italic;
+            margin-left: 6px;
+        }
+        .drawer-body { padding: 16px 20px; font-size: 0.83rem; color: #CBD5E1; line-height: 1.75; }
+        .drawer-body p { margin: 0 0 10px; }
+        .drawer-body ul { margin: 6px 0 10px; padding-left: 18px; }
+        .drawer-body li { margin-bottom: 4px; }
+        .drawer-count {
+            display: inline-block;
+            background: rgba(255,224,130,0.12);
+            border: 1px solid rgba(255,224,130,0.3);
+            color: var(--accent-color);
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
+
+        /* Кнопка инфо на карточке */
+        .feeling-info-btn {
+            background: rgba(255,224,130,0.1);
+            border: 1px solid rgba(255,224,130,0.3);
+            color: var(--accent-color);
+            font-size: 0.72rem;
+            font-weight: 600;
+            border-radius: 20px;
+            padding: 4px 11px;
+            cursor: pointer;
+            flex-shrink: 0;
+            letter-spacing: 0.5px;
+            transition: background 0.15s;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .feeling-info-btn:active { background: rgba(255,255,255,0.15); }
+    </style>
+</head>
+<body>
+
+<div class="main-title">Собрание учений о разном</div>
+<div class="main-chapter">Глава III · Абхидхаммасангаха</div>
+
+<!-- Вводный стих § 1 -->
+<div class="intro-toggle" id="introToggle" onclick="toggleIntro()">
+    <span class="intro-toggle-label">§ 1 · Вводный стих</span>
+    <span class="intro-toggle-icon">▼</span>
+</div>
+<div class="intro-body" id="introBody">
+    <p>В собрании учений о чувствах, по первой классификации, выделяется три типа чувства, а именно: приятное, болезненное и то, что не является ни болезненным, ни приятным. Также чувство анализируется как пятеричное: удовольствие, боль, радость, недовольство и спокойствие.</p>
+    <p>Чувство <em>(веданā)</em> является универсальным ментальным фактором, четасикой с функцией переживания «вкуса» объекта. Поскольку тот или иной тип чувства сопровождает каждую читту, чувство выполняет роль важной переменной, в терминах которой может быть классифицировано сознание. В этом разделе главной задачей автора является классификация всей совокупности читт по типу сопровождающего их чувства.</p>
+    <p><strong style="color:var(--accent-color);">Три типа чувств:</strong> Чувство может быть проанализировано либо как троичное, либо как пятеричное. Если анализ проводится просто с точки зрения его эмоционального качества, то оно троично: приятное, болезненное и ни болезненное, ни приятное. В этой троичной классификации приятное чувство включает как телесное удовольствие, так и ментальные удовольствие или радость, а болезненное чувство включает как телесную боль, так и ментальные боль или недовольство.</p>
+    <p><strong style="color:var(--accent-color);">Чувство анализируется как пятеричное:</strong> Когда чувство анализируется по типу управляющей способности <em>(индрийа)</em>, оно становится пятеричным. Эти пять типов чувств называются способностями потому, что они осуществляют власть или контроль <em>(индра)</em> над их ассоциированными состояниями в отношении эмоциональной стороны переживания объекта.</p>
+    <p>Когда рассматривается пятеричный анализ чувства, приятное чувство троичной схемы делится на удовольствие и радость, где первое телесное, а последнее ментальное; болезненное чувство троичной схемы делится на боль и недовольство — опять же, первое телесное, а последнее ментальное; и ни болезненное, ни приятное чувство тождественно беспристрастности, или нейтральному чувству.</p>
+    <p>В Суттах Будда иногда также говорит о чувстве как о двоичном — удовольствие <em>(сукха)</em> и боль <em>(дуккха)</em>. Это нестрогий, или метафорический, метод анализа, полученный слиянием безупречного нейтрального чувства с удовольствием, а заслуживающего порицания нейтрального чувства с болью. Далее Будда объявляет, что всё, что чувствуется, включено в страдание <em>(йам кинчи ведайитам там дуккхасмим [Самйутта-никāйа, 36:11/iv, 216])</em>. В этом утверждении слово дуккха несёт не узкий смысл болезненного чувства, а более широкий смысл страдания, заключённого во всех обусловленных вещах, по причине их временности.</p>
+</div>
+
+<!-- ══════════════════════════════════════
+     О ЧУВСТВАХ §§ 2–4
+══════════════════════════════════════ -->
+<details class="section-group">
+    <summary class="section-summary">
+        <span class="section-para-num">§§ 2–4</span>
+        <span>О чувствах · <span style="font-style:italic;font-weight:600;opacity:0.85;">Веданāсангаха</span></span>
+    </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 2</span>
+        <span class="para-title">Анализ чувства</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="feeling-cards">
+
+            <div class="feeling-card f-pleasant" data-key="sukha">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-name">Удовольствие <span class="feeling-pali">сукха</span></div>
+                    <span class="feeling-tag tag-pleasant">👆 Телесное · Приятное</span>
+                    <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
+                    <span class="feeling-arrow">▶</span>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание желанного тактильного объекта.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>усиление ассоциированных состояний.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>телесное наслаждение.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>телесная управляющая способность.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card f-painful" data-key="dukkha">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-name">Боль <span class="feeling-pali">дуккха</span></div>
+                    <span class="feeling-tag tag-painful">👆 Телесное · Болезненное</span>
+                    <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
+                    <span class="feeling-arrow">▶</span>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание нежеланного тактильного объекта.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>иссушение ассоциированных состояний.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>телесное страдание.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>телесная управляющая способность.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card f-joy" data-key="somanassa">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-name">Радость <span class="feeling-pali">соманасса</span></div>
+                    <span class="feeling-tag tag-joy">👆 Ментальное · Приятное</span>
+                    <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
+                    <span class="feeling-arrow">▶</span>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание желанного объекта.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>вкушение желанного аспекта объекта.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>ментальное наслаждение.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>уравновешенность.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card f-displeas" data-key="domanassa">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-name">Недовольство <span class="feeling-pali">доманасса</span></div>
+                    <span class="feeling-tag tag-displeas">👆 Ментальное · Болезненное</span>
+                    <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
+                    <span class="feeling-arrow">▶</span>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание нежеланного объекта.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>вкушение нежеланного аспекта объекта.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>ментальная болезнь.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>сердце-основа.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card f-equanim" data-key="upekkha">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-name">Спокойствие <span class="feeling-pali">упеккха̄</span></div>
+                    <span class="feeling-tag tag-equanim">👆 Нейтральное</span>
+                    <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
+                    <span class="feeling-arrow">▶</span>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>чувствоваться как нейтральное.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>ни усиление, ни ослабление ассоциированных состояний.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>умиротворённость.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>сознание без восторженности.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</details>
+
+<!-- ══════════════════════════════════════
+     О КОРНЯХ §§ 5–7
+══════════════════════════════════════ -->
+<details class="section-group">
+    <summary class="section-summary">
+        <span class="section-para-num">§§ 5–7</span>
+        <span>О корнях · <span style="font-style:italic;font-weight:600;opacity:0.85;">Хетусангаха</span></span>
+    </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 5</span>
+        <span class="para-title">Анализ корней</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 6</span>
+        <span class="para-title">Классификация по типу сознания</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 7</span>
+        <span class="para-title">Итог</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+</details>
+
+<!-- ══════════════════════════════════════
+     О ФУНКЦИЯХ §§ 8–11
+══════════════════════════════════════ -->
+<details class="section-group">
+    <summary class="section-summary">
+        <span class="section-para-num">§§ 8–11</span>
+        <span>О функциях · <span style="font-style:italic;font-weight:600;opacity:0.85;">Киччасангаха</span></span>
+    </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 8</span>
+        <span class="para-title">Анализ функций</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 9</span>
+        <span class="para-title">Классификация по типам сознания</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 10</span>
+        <span class="para-title">Классификация по количеству функций</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 11</span>
+        <span class="para-title">Итог</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+</details>
+
+<!-- ══════════════════════════════════════
+     О ДВЕРЯХ §§ 12–15
+══════════════════════════════════════ -->
+<details class="section-group">
+    <summary class="section-summary">
+        <span class="section-para-num">§§ 12–15</span>
+        <span>О дверях · <span style="font-style:italic;font-weight:600;opacity:0.85;">Двāрасангаха</span></span>
+    </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 12</span>
+        <span class="para-title">Анализ дверей</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 13</span>
+        <span class="para-title">Классификация по типу сознания</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 14</span>
+        <span class="para-title">Классификация по количеству дверей</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 15</span>
+        <span class="para-title">Итог</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+</details>
+
+<!-- ══════════════════════════════════════
+     ОБ ОБЪЕКТАХ §§ 16–19
+══════════════════════════════════════ -->
+<details class="section-group">
+    <summary class="section-summary">
+        <span class="section-para-num">§§ 16–19</span>
+        <span>Об объектах · <span style="font-style:italic;font-weight:600;opacity:0.85;">Āламбанасангаха</span></span>
+    </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 16</span>
+        <span class="para-title">Анализ объектов</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 17</span>
+        <span class="para-title">Классификация по типам дверей</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 18</span>
+        <span class="para-title">Классификация по типам сознания</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 19</span>
+        <span class="para-title">Итог</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+</details>
+
+<!-- ══════════════════════════════════════
+     ОБ ОСНОВАХ §§ 20–22
+══════════════════════════════════════ -->
+<details class="section-group">
+    <summary class="section-summary">
+        <span class="section-para-num">§§ 20–22</span>
+        <span>Об основах · <span style="font-style:italic;font-weight:600;opacity:0.85;">Ваттхусангаха</span></span>
+    </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 20</span>
+        <span class="para-title">Анализ основ</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 21</span>
+        <span class="para-title">Классификация по типу сознания</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">§ 22</span>
+        <span class="para-title">Итог</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="placeholder">Текст будет добавлен</div>
+    </div>
+</details>
+
+<script>
+    function toggleIntro() {
+        var toggle = document.getElementById('introToggle');
+        var body   = document.getElementById('introBody');
+        toggle.classList.toggle('open');
+        body.classList.toggle('open');
+    }
+
+    function togglePara(btn) {
+        var body = btn.nextElementSibling;
+        var isOpen = body.classList.contains('open');
+
+        // Закрываем все открытые параграфы внутри того же details
+        var parent = btn.closest('details');
+        if (parent) {
+            parent.querySelectorAll('.para-body.open').forEach(function(b) {
+                b.classList.remove('open');
+            });
+            parent.querySelectorAll('.para-btn.open').forEach(function(b) {
+                b.classList.remove('open');
+            });
+        }
+
+        // Если не был открыт — открываем
+        if (!isOpen) {
+            body.classList.add('open');
+            btn.classList.add('open');
+        }
+    }
+</script>
+
+<!-- ── Боковая панель ── -->
+<div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+    <div class="drawer-handle"></div>
+    <div class="drawer-header">
+        <div class="drawer-type" id="d-type"></div>
+        <div><span class="drawer-title" id="d-title"></span><span class="drawer-pali" id="d-pali"></span></div>
+    </div>
+    <div class="drawer-body" id="d-body"></div>
+</div>
+
+<script>
+    var feelingData = {
+        sukha: {
+            type: 'Телесное · Приятное',
+            title: 'Удовольствие',
+            pali: 'сукха',
+            count: '1 тип сознания',
+            countColor: '#81C784',
+            body: '<p>Только <strong style="color:var(--accent-color)">одно сознание</strong> сопровождается удовольствием:</p><ul><li>Благотворное результирующее сознание тела — возникает при контакте с желанным тактильным объектом.</li></ul>'
+        },
+        dukkha: {
+            type: 'Телесное · Болезненное',
+            title: 'Боль',
+            pali: 'дуккха',
+            count: '1 тип сознания',
+            countColor: '#EF9A9A',
+            body: '<p>Только <strong style="color:var(--accent-color)">одно сознание</strong> сопровождается болью:</p><ul><li>Неблаготворное результирующее сознание тела — возникает при контакте с нежеланным тактильным объектом.</li></ul>'
+        },
+        somanassa: {
+            type: 'Ментальное · Приятное',
+            title: 'Радость',
+            pali: 'соманасса',
+            count: '62 типа сознания',
+            countColor: '#FFE082',
+            body: '<p><strong style="color:var(--accent-color)">Шестьдесят два типа</strong> сознания сопровождаются радостью:</p><p><em>Сознания сенсорной среды (18):</em></p><ul><li>4 — коренящихся в жадности</li><li>12 — прекрасных сознаний сенсорной среды</li><li>2 — бескоренных: радостное исследующее и производящее улыбку</li></ul><p><em>Возвышенные и сверхмирские сознания (44):</em></p><ul><li>12 — относящихся к первой, второй, третьей и четвёртой джхāнам</li><li>32 — сверхмирских сознаний</li></ul>'
+        },
+        domanassa: {
+            type: 'Ментальное · Болезненное',
+            title: 'Недовольство',
+            pali: 'доманасса',
+            count: '2 типа сознания',
+            countColor: '#90CAF9',
+            body: '<p><strong style="color:var(--accent-color)">Два типа</strong> сознания сопровождаются недовольством:</p><ul><li>Два сознания, связанные с отвращением <em>(доса)</em> — неблаготворные сознания с корнем злобы.</li></ul>'
+        },
+        upekkha: {
+            type: 'Нейтральное',
+            title: 'Спокойствие',
+            pali: 'упеккха̄',
+            count: '55 типов сознания',
+            countColor: '#B0BEC5',
+            body: '<p><strong style="color:var(--accent-color)">Пятьдесят пять типов</strong> сознания сопровождаются спокойствием:</p><ul><li>6 неблаготворных читт (4 — в жадности, 2 — в заблуждении)</li><li>14 бескоренных читт</li><li>12 прекрасных читт сенсорной среды (по 4 в благотворных, результирующих и функциональных)</li><li>3 читты пятой джхāны</li><li>12 читт нематериальных джхāн</li><li>8 сверхмирских читт пятой джхāны (пути и плоды)</li></ul>'
+        }
+    };
+
+    function openFeelingDrawer(key) {
+        var d = feelingData[key];
+        if (!d) return;
+        document.getElementById('d-type').textContent  = d.type;
+        document.getElementById('d-title').textContent = d.title;
+        document.getElementById('d-pali').textContent  = ' · ' + d.pali;
+        document.getElementById('d-body').innerHTML =
+            '<span class="drawer-count" style="border-color:' + d.countColor + ';color:' + d.countColor + ';background:rgba(0,0,0,0.2);">' + d.count + '</span>' + d.body;
+        var overlay = document.getElementById('overlay');
+        var drawer  = document.getElementById('drawer');
+        overlay.classList.add('active');
+        requestAnimationFrame(function() {
+            overlay.classList.add('visible');
+            drawer.classList.add('active');
+        });
+    }
+
+    function closeDrawer() {
+        var overlay = document.getElementById('overlay');
+        var drawer  = document.getElementById('drawer');
+        overlay.classList.remove('visible');
+        drawer.classList.remove('active');
+        setTimeout(function() { overlay.classList.remove('active'); }, 350);
+    }
+
+    var startY = 0;
+    document.getElementById('drawer').addEventListener('touchstart', function(e) { startY = e.touches[0].clientY; }, { passive: true });
+    document.getElementById('drawer').addEventListener('touchend', function(e) { if (e.changedTouches[0].clientY - startY > 60) closeDrawer(); });
+</script>
+
+</body>
+</html>
