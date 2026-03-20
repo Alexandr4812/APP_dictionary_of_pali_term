@@ -107,7 +107,6 @@
       min-width: 0;
     }
 
-    /* Кликабельная верхняя зона (открыть сутту) */
     .bookmark-open-area {
       cursor: pointer;
     }
@@ -122,7 +121,6 @@
       opacity: 0.8;
     }
 
-    /* ── Заголовок — отображение ── */
     .bookmark-title {
       font-size: 1rem;
       font-weight: 700;
@@ -133,7 +131,6 @@
       line-height: 1.4;
     }
 
-    /* ── Заголовок — редактирование (textarea) ── */
     .bookmark-title-input {
       background: transparent;
       border: none;
@@ -185,6 +182,7 @@
       font-size: 0.85rem;
       line-height: 1.5;
       resize: none;
+      /* ИСПРАВЛЕНИЕ: убираем ограничение высоты, overflow:hidden нужен для autoResize */
       overflow: hidden;
       min-height: 34px;
       outline: none;
@@ -192,6 +190,8 @@
       white-space: pre-wrap;
       transition: border-color 0.2s;
       display: block;
+      /* Показываем весь текст — высота подстраивается под содержимое */
+      box-sizing: border-box;
     }
     .bookmark-note::placeholder {
       color: var(--text-dim);
@@ -350,6 +350,12 @@
     }
   }
 
+  /** Автовысота textarea — вызывать только когда элемент уже в DOM */
+  function autoResize(el) {
+    el.style.height = 'auto';
+    el.style.height = el.scrollHeight + 'px';
+  }
+
   function render() {
     var list = document.getElementById('bookmarksList');
     var empty = document.getElementById('emptyState');
@@ -367,6 +373,9 @@
     empty.classList.remove('visible');
     btnClear.classList.add('visible');
 
+    // Собираем все noteArea для пересчёта высоты после добавления в DOM
+    var noteAreas = [];
+
     bookmarks.forEach(function(bm, index) {
       var card = document.createElement('div');
       card.className = 'bookmark-card';
@@ -377,22 +386,18 @@
         ? new Date(bm.date).toLocaleDateString('ru-RU', { day:'numeric', month:'short', year:'numeric' })
         : '';
 
-      // ── Левая часть карточки ──────────────────────────────
       var body = document.createElement('div');
       body.className = 'bookmark-card-body';
 
-      // Кликабельная зона (открыть сутту)
       var openArea = document.createElement('div');
       openArea.className = 'bookmark-open-area';
       openArea.onclick = function() { openBookmark(bm.filePath, bm.scrollY || 0); };
 
-      // Номер / метка НОВАЯ
       var numEl = document.createElement('div');
       numEl.className = 'bookmark-num';
       numEl.innerHTML = esc(bm.suttaRef || '') +
         (isLatest ? ' <span style="background:#FFE082;color:#161923;font-size:0.65rem;padding:2px 7px;border-radius:10px;font-weight:800;letter-spacing:1px;vertical-align:middle;">НОВАЯ</span>' : '');
 
-      // Строка с заголовком и кнопкой редактирования
       var titleRow = document.createElement('div');
       titleRow.style.cssText = 'display:flex;align-items:flex-start;gap:6px;margin-bottom:5px;';
 
@@ -413,7 +418,6 @@
       titleRow.appendChild(titleEl);
       titleRow.appendChild(editBtn);
 
-      // Мета: subtitle + дата
       var meta = document.createElement('div');
       meta.className = 'bookmark-meta';
       if (bm.subtitle) {
@@ -432,23 +436,17 @@
       openArea.appendChild(titleRow);
       openArea.appendChild(meta);
 
-      // ── Поле заметки (вне openArea, чтобы клик не открывал сутту) ──
+      // ── Поле заметки ──
       var noteArea = document.createElement('textarea');
       noteArea.className = 'bookmark-note';
       noteArea.placeholder = 'Добавить заметку…';
       noteArea.value = bm.note || '';
       noteArea.rows = 1;
 
-      // Автовысота
-      autoResize(noteArea);
       noteArea.addEventListener('input', function() { autoResize(noteArea); });
-
-      // Остановить всплытие, чтобы не открывать сутту при тапе на заметку
       noteArea.addEventListener('click', function(e) { e.stopPropagation(); });
-
       noteArea.addEventListener('blur', function() {
         var newNote = noteArea.value;
-        // Обновляем локально
         for (var i = 0; i < bookmarks.length; i++) {
           if (bookmarks[i].id === bm.id) { bookmarks[i].note = newNote; break; }
         }
@@ -460,7 +458,6 @@
       body.appendChild(openArea);
       body.appendChild(noteArea);
 
-      // ── Кнопка удаления ──────────────────────────────────
       var delBtn = document.createElement('button');
       delBtn.className = 'bookmark-delete';
       delBtn.textContent = '✕';
@@ -469,13 +466,16 @@
       card.appendChild(body);
       card.appendChild(delBtn);
       list.appendChild(card);
-    });
-  }
 
-  /** Автовысота textarea */
-  function autoResize(el) {
-    el.style.height = 'auto';
-    el.style.height = el.scrollHeight + 'px';
+      // Запоминаем для пересчёта высоты — теперь элемент уже в DOM
+      noteAreas.push(noteArea);
+    });
+
+    // ИСПРАВЛЕНИЕ: пересчитываем высоту всех заметок после добавления в DOM
+    // requestAnimationFrame гарантирует, что браузер уже отрисовал элементы
+    requestAnimationFrame(function() {
+      noteAreas.forEach(function(ta) { autoResize(ta); });
+    });
   }
 
   function editTitle(elId, id) {
@@ -483,13 +483,15 @@
     if (!el) return;
     var current = el.textContent;
 
-    // Заменяем div на textarea для поддержки переноса строк
     var textarea = document.createElement('textarea');
     textarea.className = 'bookmark-title-input';
     textarea.value = current;
     textarea.rows = 1;
     el.replaceWith(textarea);
-    autoResize(textarea);
+
+    // Пересчитываем высоту после вставки в DOM
+    requestAnimationFrame(function() { autoResize(textarea); });
+
     textarea.focus();
     textarea.setSelectionRange(textarea.value.length, textarea.value.length);
     textarea.addEventListener('input', function() { autoResize(textarea); });

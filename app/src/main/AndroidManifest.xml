@@ -21,6 +21,15 @@
         android:forceDarkAllowed="false"
         tools:targetApi="33">
 
+        <activity
+            android:name=".Suttas.BookmarksActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:screenOrientation="fullSensor">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <meta-data
             android:name="android.webkit.WebView.EnableSafeBrowsing"
             android:value="false" />
