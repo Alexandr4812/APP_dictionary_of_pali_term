@@ -10,28 +10,101 @@ import java.util.Locale;
 import java.util.UUID;
 
 /**
- * Менеджер закладок. Хранит до 100 закладок в SharedPreferences.
- * Каждая закладка содержит:
- *   - id         : уникальный ID
- *   - suttaRef   : номер сутты, например "СН 5.2"
- *   - title      : название сутты, например "Сома сутта — Сома"
- *   - subtitle   : подзаголовок/описание (краткое)
- *   - filePath   : путь к HTML-файлу в assets, например "SN/Texts/sn5_2-soma-sutta-sv.html"
- *   - scrollY    : позиция скролла (пиксели)
- *   - note       : произвольное описание/заметка пользователя
- *   - date       : ISO дата сохранения
+ * Менеджер закладок + история недавних сутт.
+ * Закладки: до 100, хранятся в "bookmarks_json".
+ * Недавние: до 5, хранятся в "recents_json", старые вытесняются новыми.
  */
 public class BookmarkManager {
 
     private static final String PREFS_NAME    = "bookmarks_prefs";
     private static final String KEY_DATA      = "bookmarks_json";
+    private static final String KEY_RECENTS   = "recents_json";
     private static final int    MAX_BOOKMARKS = 100;
+    private static final int    MAX_RECENTS   = 10;
 
     private final SharedPreferences prefs;
 
     public BookmarkManager(Context context) {
         prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
     }
+
+    // ─────────────────────────────────────────────────────────────
+    //  НЕДАВНИЕ СУТТЫ
+    // ─────────────────────────────────────────────────────────────
+
+    /**
+     * Добавить сутту в историю недавних просмотров.
+     * Если такой filePath уже есть — обновляет запись и поднимает наверх.
+     * Если записей >= MAX_RECENTS — удаляет самую старую (последнюю).
+     * Вызывать из SuttasActivity при загрузке каждой сутты.
+     */
+    public void addRecent(String suttaRef, String title, String subtitle,
+                          String filePath, int scrollY) {
+        if (title == null || title.isEmpty() || title.equals(filePath)) {
+            title = extractTitleFromPath(filePath);
+        }
+
+        JSONArray arr = getRecents();
+
+        // Ищем существующую запись с таким же filePath
+        for (int i = 0; i < arr.length(); i++) {
+            try {
+                JSONObject item = arr.getJSONObject(i);
+                if (filePath.equals(item.optString("filePath"))) {
+                    item.put("scrollY", scrollY);
+                    item.put("date", nowIso());
+                    arr.remove(i);
+                    arr = prependTo(arr, item);
+                    saveRecents(arr);
+                    return;
+                }
+            } catch (Exception ignored) {}
+        }
+
+        // Новая запись
+        try {
+            JSONObject item = new JSONObject();
+            item.put("id",       UUID.randomUUID().toString());
+            item.put("suttaRef", suttaRef  != null ? suttaRef  : "");
+            item.put("title",    title);
+            item.put("subtitle", subtitle  != null ? subtitle  : "");
+            item.put("filePath", filePath);
+            item.put("scrollY",  scrollY);
+            item.put("date",     nowIso());
+
+            arr = prependTo(arr, item);
+
+            // Обрезаем до MAX_RECENTS — старая запись вытесняется автоматически
+            while (arr.length() > MAX_RECENTS) {
+                arr.remove(arr.length() - 1);
+            }
+
+            saveRecents(arr);
+        } catch (Exception ignored) {}
+    }
+
+    /** Получить историю просмотров как JSON-строку (для передачи в WebView) */
+    public String getRecentsAsJsonString() {
+        return prefs.getString(KEY_RECENTS, "[]");
+    }
+
+    /** Получить JSONArray истории просмотров */
+    public JSONArray getRecents() {
+        try {
+            return new JSONArray(prefs.getString(KEY_RECENTS, "[]"));
+        } catch (Exception e) {
+            return new JSONArray();
+        }
+    }
+
+    /** Очистить историю просмотров */
+    public void clearRecents() {
+        prefs.edit().putString(KEY_RECENTS, "[]").apply();
+    }
+
+    // ─────────────────────────────────────────────────────────────
+    //  ЗАКЛАДКИ
+    // ─────────────────────────────────────────────────────────────
 
     /**
      * Извлекает читаемое название из пути к файлу.
@@ -40,29 +113,22 @@ public class BookmarkManager {
     public static String extractTitleFromPath(String filePath) {
         if (filePath == null || filePath.isEmpty()) return filePath;
 
-        // Берём имя файла без папок
         String name = filePath;
         int slash = name.lastIndexOf('/');
         if (slash >= 0) name = name.substring(slash + 1);
 
-        // Убираем расширение
         int dot = name.lastIndexOf('.');
         if (dot >= 0) name = name.substring(0, dot);
 
-        // Убираем суффиксы переводчиков в конце: -sv, -bh, -tb, -nm и т.п.
         name = name.replaceAll("-[a-z]{2,3}$", "");
-
-        // Парсим номер: sn5_2-..., an1_1-..., mn10-..., dn2-... → "SN 5.2 ...", "MN 10 ..."
         name = name.replaceAll("^([a-zA-Z]{2})(\\d+)_(\\d+)-?(.*)", "$1 $2.$3 $4");
         name = name.replaceAll("^([a-zA-Z]{2})(\\d+)-?(.*)",         "$1 $2 $3");
 
-        // Заменяем дефисы/подчёркивания на пробелы и капитализируем каждое слово
         String[] parts = name.trim().split("[-_\\s]+");
         StringBuilder sb = new StringBuilder();
         for (String part : parts) {
             if (part.isEmpty()) continue;
             if (sb.length() > 0) sb.append(" ");
-            // Не трогаем уже заглавные аббревиатуры вроде SN, AN, MN
             if (part.matches("[A-Z]{1,3}\\s*\\d.*")) {
                 sb.append(part);
             } else {
@@ -75,25 +141,21 @@ public class BookmarkManager {
 
     /**
      * Добавить или обновить закладку. Если для этого filePath уже есть закладка — обновляет scrollY.
-     * Если закладок >= MAX_BOOKMARKS — удаляет самую старую (последнюю в массиве).
      */
     public void addBookmark(String suttaRef, String title, String subtitle,
                             String filePath, int scrollY) {
-        // Если title пустой или совпадает с filePath — генерируем красивое имя из пути
         if (title == null || title.isEmpty() || title.equals(filePath)) {
             title = extractTitleFromPath(filePath);
         }
 
         JSONArray arr = getAll();
 
-        // Ищем существующую с таким же filePath — обновляем позицию и дату
         for (int i = 0; i < arr.length(); i++) {
             try {
                 JSONObject bm = arr.getJSONObject(i);
                 if (filePath.equals(bm.optString("filePath"))) {
                     bm.put("scrollY", scrollY);
                     bm.put("date", nowIso());
-                    // перемещаем на начало (самая свежая)
                     arr.remove(i);
                     arr = prependTo(arr, bm);
                     save(arr);
@@ -102,7 +164,6 @@ public class BookmarkManager {
             } catch (Exception ignored) {}
         }
 
-        // Новая закладка
         try {
             JSONObject bm = new JSONObject();
             bm.put("id",       UUID.randomUUID().toString());
@@ -111,12 +172,11 @@ public class BookmarkManager {
             bm.put("subtitle", subtitle);
             bm.put("filePath", filePath);
             bm.put("scrollY",  scrollY);
-            bm.put("note",     "");      // поле для произвольной заметки пользователя
+            bm.put("note",     "");
             bm.put("date",     nowIso());
 
             arr = prependTo(arr, bm);
 
-            // Обрезаем до MAX_BOOKMARKS
             while (arr.length() > MAX_BOOKMARKS) {
                 arr.remove(arr.length() - 1);
             }
@@ -125,7 +185,6 @@ public class BookmarkManager {
         } catch (Exception ignored) {}
     }
 
-    /** Обновить заголовок закладки */
     public void updateTitle(String id, String newTitle) {
         JSONArray arr = getAll();
         for (int i = 0; i < arr.length(); i++) {
@@ -140,7 +199,6 @@ public class BookmarkManager {
         save(arr);
     }
 
-    /** Обновить заметку (note) закладки */
     public void updateNote(String id, String newNote) {
         JSONArray arr = getAll();
         for (int i = 0; i < arr.length(); i++) {
@@ -155,7 +213,6 @@ public class BookmarkManager {
         save(arr);
     }
 
-    /** Удалить закладку по id */
     public void deleteById(String id) {
         JSONArray arr = getAll();
         JSONArray result = new JSONArray();
@@ -170,17 +227,14 @@ public class BookmarkManager {
         save(result);
     }
 
-    /** Очистить все закладки */
     public void clearAll() {
         save(new JSONArray());
     }
 
-    /** Получить все закладки как JSON-строку (для передачи в WebView) */
     public String getAllAsJsonString() {
         return prefs.getString(KEY_DATA, "[]");
     }
 
-    /** Получить JSONArray всех закладок */
     public JSONArray getAll() {
         try {
             return new JSONArray(prefs.getString(KEY_DATA, "[]"));
@@ -193,6 +247,10 @@ public class BookmarkManager {
 
     private void save(JSONArray arr) {
         prefs.edit().putString(KEY_DATA, arr.toString()).apply();
+    }
+
+    private void saveRecents(JSONArray arr) {
+        prefs.edit().putString(KEY_RECENTS, arr.toString()).apply();
     }
 
     private JSONArray prependTo(JSONArray arr, JSONObject item) {

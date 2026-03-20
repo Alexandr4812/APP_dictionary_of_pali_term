@@ -26,6 +26,8 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
 
     private WebView webView;
 
+    private static final String INDEX_PAGE = "canon/Teaching/Canon/Suttanta/suttas-themes.html";
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -82,8 +84,10 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
         if (intentFilePath != null && !intentFilePath.isEmpty()) {
             webView.loadUrl("file:///android_asset/" + intentFilePath);
         } else {
-            webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/suttas-themes.html");
+            webView.loadUrl("file:///android_asset/" + INDEX_PAGE);
         }
+
+        BookmarkManager bookmarkManager = new BookmarkManager(this);
         // Используем AdaptiveWebViewClient для автоматического масштабирования
         webView.setWebViewClient(new AdaptiveWebViewClient() {
             @Override
@@ -94,12 +98,46 @@ public class SuttasByCategoryActivity extends BaseActivityClass {
                                     view.evaluateJavascript("window.scrollTo(0, " + intentScrollY + ");", null)
                             , 500);
                 }
+
+                // Записываем в историю недавних — пропускаем индексную страницу
+                String filePath = url.replace("file:///android_asset/", "");
+                if (!filePath.equals(INDEX_PAGE) && filePath.endsWith(".html")) {
+                    // Читаем заголовок страницы и scrollY, затем сохраняем
+                    view.evaluateJavascript(
+                            "(function(){ return JSON.stringify({ title: document.title, scrollY: window.scrollY }); })()",
+                            result -> {
+                                String title   = "";
+                                int    scrollY = 0;
+                                try {
+                                    // result приходит как строка вида "\"{ ... }\""
+                                    String json = result.replaceAll("^\"|\"$", "")
+                                            .replace("\\\"", "\"");
+                                    org.json.JSONObject obj = new org.json.JSONObject(json);
+                                    title   = obj.optString("title", "");
+                                    scrollY = obj.optInt("scrollY", 0);
+                                } catch (Exception ignored) {}
+
+                                final String finalTitle   = title;
+                                final int    finalScrollY = scrollY;
+
+                                runOnUiThread(() ->
+                                        bookmarkManager.addRecent(
+                                                "ПО ТЕМАМ",        // suttaRef — префикс никаи
+                                                finalTitle,  // берём из <title> страницы
+                                                "",          // subtitle — можно заполнить позже
+                                                filePath,    // путь к файлу в assets
+                                                finalScrollY
+                                        )
+                                );
+                            }
+                    );
+                }
             }
         });
 
         buttonBack.setOnClickListener(v -> goBack());
 
-        BookmarkManager bookmarkManager = new BookmarkManager(this);
+
 
         findViewById(R.id.btnAddBookmark).setOnClickListener(v -> {
             webView.evaluateJavascript("window.scrollY", value -> {

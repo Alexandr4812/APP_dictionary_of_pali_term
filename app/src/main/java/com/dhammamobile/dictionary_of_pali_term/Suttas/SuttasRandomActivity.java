@@ -3,7 +3,6 @@ package com.dhammamobile.dictionary_of_pali_term.Suttas;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.Button;
 
@@ -38,48 +37,76 @@ public class SuttasRandomActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_random);
 
-       // setWindowFlagsFullscreenAndNoLimits();
-
-        // Скрытие панели навигации и панели состояния
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         enableEdgeToEdgeMode();
 
-        // Скрытие панели навигации и панели состояния
         View rootView = findViewById(android.R.id.content);
         ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
             Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
-            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            v.setPadding(0, 0, 0, navInsets.bottom);
             return insets;
         });
 
         webView = findViewById(R.id.webViewRandomSutta);
 
-        // Настройки масштабирования - порядок важен!
-        webView.getSettings().setJavaScriptEnabled(true); // Сначала включаем JavaScript
-        webView.getSettings().setSupportZoom(true); // Разрешить жестовое масштабирование
-        webView.getSettings().setBuiltInZoomControls(true); // Включить поддержку масштабирования
-        webView.getSettings().setDisplayZoomControls(false); // Скрыть кнопки +/-
-        /*webView.getSettings().setUseWideViewPort(false);*/ // ОТКЛЮЧАЕМ - это может блокировать масштабирование!
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
         webView.getSettings().setAllowFileAccess(true);
-        // Не используем setLoadWithOverviewMode - блокирует уменьшение
         webView.getSettings().setAllowContentAccess(true);
-
-        webView.clearCache(true);
-
         webView.getSettings().setUseWideViewPort(true);
         webView.getSettings().setLoadWithOverviewMode(true);
+        webView.clearCache(true);
 
-        // Используем AdaptiveWebViewClient для автоматического масштабирования
-        webView.setWebViewClient(new AdaptiveWebViewClient());
+        BookmarkManager bookmarkManager = new BookmarkManager(this);
 
-        // Загрузка случайной страницы
+        webView.setWebViewClient(new AdaptiveWebViewClient() {
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+
+                // Записываем каждую случайную сутту в историю недавних
+                String filePath = url.replace("file:///android_asset/", "");
+                if (filePath.endsWith(".html")) {
+                    view.evaluateJavascript(
+                            "(function(){ return JSON.stringify({ title: document.title, scrollY: window.scrollY }); })()",
+                            result -> {
+                                String title   = "";
+                                int    scrollY = 0;
+                                try {
+                                    String json = result.replaceAll("^\"|\"$", "")
+                                            .replace("\\\"", "\"");
+                                    org.json.JSONObject obj = new org.json.JSONObject(json);
+                                    title   = obj.optString("title", "");
+                                    scrollY = obj.optInt("scrollY", 0);
+                                } catch (Exception ignored) {}
+
+                                final String finalTitle   = title;
+                                final int    finalScrollY = scrollY;
+
+                                // Определяем никаю из пути к файлу для suttaRef
+                                final String suttaRef = detectNikaya(filePath);
+
+                                runOnUiThread(() ->
+                                        bookmarkManager.addRecent(
+                                                suttaRef,
+                                                finalTitle,
+                                                "",
+                                                filePath,
+                                                finalScrollY
+                                        )
+                                );
+                            }
+                    );
+                }
+            }
+        });
+
+        // Загрузка первой случайной страницы
         loadRandomPage();
 
         Button buttonLoadRandomPage = findViewById(R.id.buttonNextSutta);
         buttonLoadRandomPage.setOnClickListener(v -> loadRandomPage());
-
-        BookmarkManager bookmarkManager = new BookmarkManager(this);
 
         findViewById(R.id.btnAddBookmark).setOnClickListener(v -> {
             webView.evaluateJavascript("window.scrollY", value -> {
@@ -87,13 +114,13 @@ public class SuttasRandomActivity extends BaseActivityClass {
                 try { scrollY = (int) Double.parseDouble(value.trim()); }
                 catch (Exception ignored) {}
 
-                final int finalScrollY = scrollY;
-                final String currentUrl = webView.getUrl();
-                final String filePath = currentUrl.replace("file:///android_asset/", "");
+                final int    finalScrollY = scrollY;
+                final String currentUrl   = webView.getUrl();
+                final String filePath     = currentUrl.replace("file:///android_asset/", "");
 
                 runOnUiThread(() -> {
                     bookmarkManager.addBookmark(
-                            "Случайная",
+                            detectNikaya(filePath),
                             filePath,
                             "",
                             filePath,
@@ -107,7 +134,6 @@ public class SuttasRandomActivity extends BaseActivityClass {
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                // Вместо закрытия — переходим на главную
                 String currentUrl = webView.getUrl();
                 saveLastVisitedPage(currentUrl);
                 startIntentActivityAndFinish(SuttasActivity.class);
@@ -115,23 +141,30 @@ public class SuttasRandomActivity extends BaseActivityClass {
         });
     }
 
-    // Загрузка случайной страницы
+    /**
+     * Определяет префикс никаи по пути к файлу.
+     * Например: "AN/Texts/an1_1-..." → "АН"
+     */
+    private String detectNikaya(String filePath) {
+        String lp = filePath.toLowerCase();
+        if (lp.contains("anguttara") || lp.contains("/an/") || lp.contains("an/")) return "АН";
+        if (lp.contains("majjhima")  || lp.contains("/mn/") || lp.contains("mn/")) return "МН";
+        if (lp.contains("sanyutta")  || lp.contains("samyutta") ||
+                lp.contains("/sn/")      || lp.contains("sn/"))      return "СН";
+        if (lp.contains("digha")     || lp.contains("/dn/") || lp.contains("dn/")) return "ДН";
+        if (lp.contains("khuddaka")  || lp.contains("/kn/") || lp.contains("kn/")) return "КН";
+        return "СН"; // fallback для папки Texts без явного указания никаи
+    }
+
     private void loadRandomPage() {
-        // Выбор случайной папки из списка
         String randomFolder = getRandomFolder();
-
-        // Получение списка файлов в выбранной папке
         try {
-            String[] filesInFolder = getAssets().list("canon/Teaching/Canon/Suttanta/" + randomFolder);
-
-            // Выбор случайного файла из списка
+            String[] filesInFolder = getAssets().list(
+                    "canon/Teaching/Canon/Suttanta/" + randomFolder);
             String randomFile = getRandomFile(filesInFolder);
-
-            // Загрузка выбранной страницы в веб-вью
             if (randomFile != null) {
-                String path = "file:///android_asset/canon/Teaching/Canon/Suttanta/" + randomFolder + "/" + randomFile;
-
-                // Загрузка данных в WebView (AdaptiveWebViewClient уже установлен в onCreate)
+                String path = "file:///android_asset/canon/Teaching/Canon/Suttanta/"
+                        + randomFolder + "/" + randomFile;
                 webView.loadUrl(path);
             }
         } catch (IOException e) {
@@ -164,17 +197,15 @@ public class SuttasRandomActivity extends BaseActivityClass {
         webView.destroy();
     }
 
-    public void toMainAct(View view){
+    public void toMainAct(View view) {
         String currentUrl = webView.getUrl();
         saveLastVisitedPage(currentUrl);
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    public void toSuttasAct(View view){
+    public void toSuttasAct(View view) {
         String currentUrl = webView.getUrl();
         saveLastVisitedPage(currentUrl);
         startIntentActivityAndFinish(SuttasActivity.class);
     }
-
-
 }

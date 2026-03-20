@@ -3,9 +3,7 @@ package com.dhammamobile.dictionary_of_pali_term.Suttas;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 
 import androidx.activity.OnBackPressedCallback;
@@ -25,10 +23,12 @@ public class SuttasAnguttaraActivity extends BaseActivityClass {
 
     private WebView webView;
 
+    // Стартовая страница раздела — её не записываем в историю
+    private static final String INDEX_PAGE = "canon/Teaching/Canon/Suttanta/anguttara.html";
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        // Здесь вы можете добавить свои действия при изменении ориентации, если это необходимо
     }
 
     @Override
@@ -36,75 +36,102 @@ public class SuttasAnguttaraActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_anguttara);
 
-       // setWindowFlagsFullscreenAndNoLimits();
-
-        // Скрытие панели навигации и панели состояния
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         enableEdgeToEdgeMode();
 
-        // Скрытие панели навигации и панели состояния
         View rootView = findViewById(android.R.id.content);
         ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
             Insets navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars());
-            v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
+            v.setPadding(0, 0, 0, navInsets.bottom);
             return insets;
         });
 
         Button buttonBack = findViewById(R.id.buttonliveToBeforePageAnguttara);
         webView = findViewById(R.id.webViewAnguttara);
 
-        // Настройки масштабирования - порядок важен!
-        webView.getSettings().setJavaScriptEnabled(true); // Сначала включаем JavaScript
-        webView.getSettings().setSupportZoom(true); // Разрешить жестовое масштабирование
-        webView.getSettings().setBuiltInZoomControls(true); // Включить поддержку масштабирования
-        webView.getSettings().setDisplayZoomControls(false); // Скрыть кнопки +/-
-        /*webView.getSettings().setUseWideViewPort(false);*/ // ОТКЛЮЧАЕМ - это может блокировать масштабирование!
-        // Не используем setLoadWithOverviewMode - блокирует уменьшение
-        webView.clearCache(true);
-
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setSupportZoom(true);
+        webView.getSettings().setBuiltInZoomControls(true);
+        webView.getSettings().setDisplayZoomControls(false);
         webView.getSettings().setUseWideViewPort(true);
         webView.getSettings().setLoadWithOverviewMode(true);
-        webView.getSettings().setDomStorageEnabled(true);          // Включаем localStorage
-        webView.getSettings().setAllowFileAccess(true);            // Разрешаем доступ к файлам
-        webView.getSettings().setAllowContentAccess(true);         // Дополнительно, для доступа к контенту
+        webView.getSettings().setDomStorageEnabled(true);
+        webView.getSettings().setAllowFileAccess(true);
+        webView.getSettings().setAllowContentAccess(true);
         webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
+        webView.clearCache(true);
 
-        // Загрузка первой страницы
         String intentFilePath = getIntent().getStringExtra("FILE_PATH");
         int intentScrollY = getIntent().getIntExtra("SCROLL_Y", 0);
 
         if (intentFilePath != null && !intentFilePath.isEmpty()) {
             webView.loadUrl("file:///android_asset/" + intentFilePath);
         } else {
-            webView.loadUrl("file:///android_asset/canon/Teaching/Canon/Suttanta/anguttara.html");
+            webView.loadUrl("file:///android_asset/" + INDEX_PAGE);
         }
-        // Используем AdaptiveWebViewClient для автоматического масштабирования
+
+        BookmarkManager bookmarkManager = new BookmarkManager(this);
+
         webView.setWebViewClient(new AdaptiveWebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
+
+                // Восстанавливаем позицию прокрутки (только при открытии по Intent)
                 if (intentScrollY > 0) {
                     view.postDelayed(() ->
-                                    view.evaluateJavascript("window.scrollTo(0, " + intentScrollY + ");", null)
-                            , 500);
+                                    view.evaluateJavascript(
+                                            "window.scrollTo(0, " + intentScrollY + ");", null),
+                            500);
+                }
+
+                // Записываем в историю недавних — пропускаем индексную страницу
+                String filePath = url.replace("file:///android_asset/", "");
+                if (!filePath.equals(INDEX_PAGE) && filePath.endsWith(".html")) {
+                    // Читаем заголовок страницы и scrollY, затем сохраняем
+                    view.evaluateJavascript(
+                            "(function(){ return JSON.stringify({ title: document.title, scrollY: window.scrollY }); })()",
+                            result -> {
+                                String title   = "";
+                                int    scrollY = 0;
+                                try {
+                                    // result приходит как строка вида "\"{ ... }\""
+                                    String json = result.replaceAll("^\"|\"$", "")
+                                            .replace("\\\"", "\"");
+                                    org.json.JSONObject obj = new org.json.JSONObject(json);
+                                    title   = obj.optString("title", "");
+                                    scrollY = obj.optInt("scrollY", 0);
+                                } catch (Exception ignored) {}
+
+                                final String finalTitle   = title;
+                                final int    finalScrollY = scrollY;
+
+                                runOnUiThread(() ->
+                                        bookmarkManager.addRecent(
+                                                "АН",        // suttaRef — префикс никаи
+                                                finalTitle,  // берём из <title> страницы
+                                                "",          // subtitle — можно заполнить позже
+                                                filePath,    // путь к файлу в assets
+                                                finalScrollY
+                                        )
+                                );
+                            }
+                    );
                 }
             }
         });
+
         buttonBack.setOnClickListener(v -> goBack());
 
-        BookmarkManager bookmarkManager = new BookmarkManager(this);
-
+        // Кнопка добавления закладки
         findViewById(R.id.btnAddBookmark).setOnClickListener(v -> {
             webView.evaluateJavascript("window.scrollY", value -> {
                 int scrollY = 0;
                 try { scrollY = (int) Double.parseDouble(value.trim()); }
                 catch (Exception ignored) {}
 
-                final int finalScrollY = scrollY;
-                final String currentUrl = webView.getUrl();
-                final String filePath = currentUrl.replace("file:///android_asset/", "");
+                final int    finalScrollY = scrollY;
+                final String currentUrl   = webView.getUrl();
+                final String filePath     = currentUrl.replace("file:///android_asset/", "");
 
                 runOnUiThread(() -> {
                     bookmarkManager.addBookmark(
@@ -122,7 +149,6 @@ public class SuttasAnguttaraActivity extends BaseActivityClass {
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
-                // Вместо закрытия — переходим на главную
                 String currentUrl = webView.getUrl();
                 saveLastVisitedPage(currentUrl);
                 startIntentActivityAndFinish(SuttasActivity.class);
@@ -150,16 +176,15 @@ public class SuttasAnguttaraActivity extends BaseActivityClass {
         webView.destroy();
     }
 
-    public void toMainAct(View view){
+    public void toMainAct(View view) {
         String currentUrl = webView.getUrl();
         saveLastVisitedPage(currentUrl);
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    public void toSuttasAct(View view){
+    public void toSuttasAct(View view) {
         String currentUrl = webView.getUrl();
         saveLastVisitedPage(currentUrl);
         startIntentActivityAndFinish(SuttasActivity.class);
     }
-
 }

@@ -13,6 +13,7 @@ import android.content.Context;
  *   Android.openBookmark(filePath, scrollY)
  *   Android.deleteBookmark(id)
  *   Android.clearBookmarks()
+ *   Android.clearRecents()
  *   Android.updateBookmarkTitle(id, newTitle)
  *   Android.updateBookmarkNote(id, newNote)
  */
@@ -30,13 +31,12 @@ public class BookmarkJsInterface {
 
     /**
      * Открыть сутту по filePath и прокрутить до scrollY.
-     * Вызывается из bookmarks.html при нажатии на закладку.
+     * Вызывается из bookmarks.html при нажатии на закладку или недавнюю сутту.
      */
     @JavascriptInterface
     public void openBookmark(String filePath, int scrollY) {
         android.os.Handler handler = new android.os.Handler(android.os.Looper.getMainLooper());
         handler.post(() -> {
-            // Открываем нужную Activity в зависимости от раздела
             Class<?> targetClass;
             if (filePath.contains("anguttara") || filePath.contains("AN")) {
                 targetClass = SuttasAnguttaraActivity.class;
@@ -47,7 +47,7 @@ public class BookmarkJsInterface {
             } else if (filePath.contains("digha") || filePath.contains("DN")) {
                 targetClass = SuttasDighaActivity.class;
             } else {
-                targetClass = SuttasAnguttaraActivity.class; // по умолчанию
+                targetClass = SuttasAnguttaraActivity.class;
             }
 
             Intent intent = new Intent(context, targetClass);
@@ -58,16 +58,11 @@ public class BookmarkJsInterface {
         });
     }
 
-    /** Обновить заголовок закладки */
     @JavascriptInterface
     public void updateBookmarkTitle(String id, String newTitle) {
         manager.updateTitle(id, newTitle);
     }
 
-    /**
-     * Обновить заметку (note) закладки.
-     * Вызывается из bookmarks.html когда пользователь редактирует описание.
-     */
     @JavascriptInterface
     public void updateBookmarkNote(String id, String newNote) {
         manager.updateNote(id, newNote);
@@ -83,21 +78,22 @@ public class BookmarkJsInterface {
         });
     }
 
-    /**
-     * Удалить закладку по id.
-     * Вызывается из bookmarks.html при нажатии ✕ у закладки.
-     */
     @JavascriptInterface
     public void deleteBookmark(String id) {
         manager.deleteById(id);
     }
 
-    /**
-     * Очистить все закладки.
-     * Вызывается из bookmarks.html при нажатии "Очистить все".
-     */
     @JavascriptInterface
     public void clearBookmarks() {
         manager.clearAll();
+    }
+
+    /**
+     * Очистить историю недавних просмотров.
+     * Вызывается из bookmarks.html при нажатии "Очистить историю".
+     */
+    @JavascriptInterface
+    public void clearRecents() {
+        manager.clearRecents();
     }
 }

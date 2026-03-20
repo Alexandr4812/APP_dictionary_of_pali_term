@@ -7,10 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Activity для экрана закладок.
- * Загружает bookmarks.html из assets и передаёт данные закладок.
- *
- * В AndroidManifest.xml добавь:
- *   <activity android:name=".BookmarksActivity" />
+ * Загружает bookmarks.html из assets и передаёт данные закладок + историю.
  */
 public class BookmarksActivity extends AppCompatActivity {
 
@@ -26,33 +23,37 @@ public class BookmarksActivity extends AppCompatActivity {
 
         bookmarkManager = new BookmarkManager(this);
 
-        // Настройки WebView
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);
 
-        // Подключаем JS-интерфейс
         BookmarkJsInterface jsInterface = new BookmarkJsInterface(this, bookmarkManager, webView);
         webView.addJavascriptInterface(jsInterface, "Android");
 
-        // Загружаем страницу закладок из assets
         webView.loadUrl("file:///android_asset/bookmarks.html");
 
-        // После загрузки страницы передаём данные закладок в JS
         webView.setWebViewClient(new android.webkit.WebViewClient() {
             @Override
             public void onPageFinished(WebView view, String url) {
-                loadBookmarksIntoPage();
+                loadDataIntoPage();
             }
         });
     }
 
-    /** Передаёт JSON закладок в JavaScript на странице */
-    private void loadBookmarksIntoPage() {
-        String json = bookmarkManager.getAllAsJsonString();
-        // Экранируем одинарные кавычки для безопасной вставки в JS
-        String escaped = json.replace("\\", "\\\\").replace("'", "\\'");
-        webView.evaluateJavascript("loadBookmarks('" + escaped + "');", null);
+    /**
+     * Передаёт JSON закладок и JSON истории просмотров в JavaScript.
+     */
+    private void loadDataIntoPage() {
+        String bmJson      = bookmarkManager.getAllAsJsonString();
+        String recentsJson = bookmarkManager.getRecentsAsJsonString();
+
+        String escapedBm      = bmJson.replace("\\", "\\\\").replace("'", "\\'");
+        String escapedRecents = recentsJson.replace("\\", "\\\\").replace("'", "\\'");
+
+        webView.evaluateJavascript(
+                "loadData('" + escapedBm + "', '" + escapedRecents + "');",
+                null
+        );
     }
 
     @Override

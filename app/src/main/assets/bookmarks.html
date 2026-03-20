@@ -32,17 +32,15 @@
 
     .header {
       text-align: center;
-      margin-bottom: 28px;
+      margin-bottom: 20px;
       padding-top: 10px;
     }
-
     .header-icon {
       font-size: 2.2rem;
       margin-bottom: 8px;
       display: block;
       filter: drop-shadow(0 0 12px rgba(255,224,130,0.4));
     }
-
     .main-title {
       color: var(--accent-color);
       font-size: 1.5rem;
@@ -51,39 +49,91 @@
       letter-spacing: 3px;
       margin-bottom: 6px;
     }
-
     .main-subtitle {
       color: var(--text-dim);
       font-size: 0.85rem;
       letter-spacing: 0.5px;
     }
-
     .divider {
       width: 60px;
       height: 2px;
       background: var(--accent-color);
-      margin: 16px auto;
+      margin: 14px auto 0;
       border-radius: 2px;
       opacity: 0.5;
     }
 
+    /* ── Вкладки ── */
+    .tabs {
+      display: flex;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--border-color);
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 11px 8px;
+      background: transparent;
+      border: none;
+      color: var(--text-dim);
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      position: relative;
+      transition: color 0.2s;
+    }
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0;
+      height: 2px;
+      background: var(--accent-color);
+      border-radius: 2px 2px 0 0;
+      transform: scaleX(0);
+      transition: transform 0.2s;
+    }
+    .tab-btn.active { color: var(--accent-color); }
+    .tab-btn.active::after { transform: scaleX(1); }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── Счётчик ── */
+    .count-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255,224,130,0.1);
+      border: 1px solid rgba(255,224,130,0.25);
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 0.78rem;
+      color: var(--accent-color);
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── Пустое состояние ── */
     .empty-state {
       text-align: center;
-      padding: 50px 20px;
+      padding: 40px 20px;
       color: var(--text-dim);
       display: none;
     }
     .empty-state.visible { display: block; }
-    .empty-icon { font-size: 3rem; margin-bottom: 12px; display: block; opacity: 0.4; }
+    .empty-icon { font-size: 2.8rem; margin-bottom: 12px; display: block; opacity: 0.4; }
     .empty-text { font-size: 0.95rem; font-family: 'Noto Serif', serif; font-style: italic; }
 
+    /* ── Список ── */
     .bookmarks-list {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
+    /* ── Карточка ── */
     .bookmark-card {
       display: flex;
       align-items: stretch;
@@ -92,24 +142,23 @@
       border-left: 3px solid var(--accent-color);
       border-radius: 12px;
       overflow: hidden;
-      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-      position: relative;
+      transition: background 0.2s, transform 0.15s;
+      animation: fadeInUp 0.3s ease both;
     }
-
     .bookmark-card:active {
       transform: scale(0.98);
       background: var(--card-hover);
     }
+    /* Карточка недавних — голубой акцент */
+    .recent-card { border-left-color: #81C9E8; }
 
     .bookmark-card-body {
       flex: 1;
-      padding: 14px 16px;
+      padding: 13px 15px;
       min-width: 0;
     }
 
-    .bookmark-open-area {
-      cursor: pointer;
-    }
+    .bookmark-open-area { cursor: pointer; }
 
     .bookmark-num {
       font-size: 0.72rem;
@@ -120,6 +169,7 @@
       margin-bottom: 4px;
       opacity: 0.8;
     }
+    .recent-card .bookmark-num { color: #81C9E8; }
 
     .bookmark-title {
       font-size: 1rem;
@@ -127,7 +177,6 @@
       color: var(--text-main);
       margin-bottom: 5px;
       word-break: break-word;
-      white-space: normal;
       line-height: 1.4;
     }
 
@@ -146,7 +195,6 @@
       overflow: hidden;
       line-height: 1.4;
       min-height: 24px;
-      word-break: break-word;
       display: block;
     }
 
@@ -169,7 +217,7 @@
       font-family: 'Raleway', sans-serif;
     }
 
-    /* ── Поле заметки ── */
+    /* ── Заметка ── */
     .bookmark-note {
       width: 100%;
       margin-top: 8px;
@@ -182,7 +230,6 @@
       font-size: 0.85rem;
       line-height: 1.5;
       resize: none;
-      /* ИСПРАВЛЕНИЕ: убираем ограничение высоты, overflow:hidden нужен для autoResize */
       overflow: hidden;
       min-height: 34px;
       outline: none;
@@ -190,17 +237,9 @@
       white-space: pre-wrap;
       transition: border-color 0.2s;
       display: block;
-      /* Показываем весь текст — высота подстраивается под содержимое */
-      box-sizing: border-box;
     }
-    .bookmark-note::placeholder {
-      color: var(--text-dim);
-      opacity: 0.4;
-      font-style: italic;
-    }
-    .bookmark-note:focus {
-      border-color: rgba(255,224,130,0.4);
-    }
+    .bookmark-note::placeholder { color: var(--text-dim); opacity: 0.4; font-style: italic; }
+    .bookmark-note:focus { border-color: rgba(255,224,130,0.4); }
 
     .bookmark-edit-btn {
       background: transparent;
@@ -213,10 +252,7 @@
       transition: opacity 0.2s;
       flex-shrink: 0;
     }
-    .bookmark-edit-btn:active {
-      opacity: 1;
-      color: var(--accent-color);
-    }
+    .bookmark-edit-btn:active { opacity: 1; color: var(--accent-color); }
 
     .bookmark-delete {
       display: flex;
@@ -232,78 +268,68 @@
       border-left: 1px solid var(--border-color);
       flex-shrink: 0;
     }
-
     .bookmark-delete:active {
       background: rgba(255, 100, 100, 0.1);
       color: #FC8181;
     }
 
-    .count-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,224,130,0.1);
-      border: 1px solid rgba(255,224,130,0.25);
-      border-radius: 20px;
-      padding: 4px 12px;
-      font-size: 0.78rem;
-      color: var(--accent-color);
-      font-weight: 600;
-      margin-bottom: 20px;
-      letter-spacing: 0.5px;
-    }
-
-    .btn-clear {
+    /* ── Кнопки ── */
+    .btn-action {
       width: 100%;
-      padding: 14px;
+      padding: 13px;
       background: transparent;
       border: 1px solid var(--border-color);
       border-radius: 30px;
       color: var(--text-dim);
       font-family: 'Raleway', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       cursor: pointer;
       letter-spacing: 0.5px;
       transition: all 0.2s;
       display: none;
+      margin-bottom: 8px;
     }
-
-    .btn-clear.visible { display: block; }
-
-    .btn-clear:active {
-      background: rgba(252, 129, 129, 0.1);
+    .btn-action.visible { display: block; }
+    .btn-action:active {
+      background: rgba(252,129,129,0.1);
       border-color: #FC8181;
       color: #FC8181;
     }
 
     .btn-back {
       width: 100%;
-      padding: 14px;
+      padding: 13px;
       background: transparent;
       border: 1px solid var(--border-color);
       border-radius: 30px;
       color: var(--accent-color);
       font-family: 'Raleway', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       cursor: pointer;
       letter-spacing: 0.5px;
-      margin-top: 10px;
+      margin-top: 4px;
       transition: all 0.2s;
     }
     .btn-back:active {
-      background: rgba(255, 224, 130, 0.1);
+      background: rgba(255,224,130,0.1);
       border-color: var(--accent-color);
     }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
+    .recent-hint {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      opacity: 0.6;
+      margin-bottom: 14px;
+      font-family: 'Noto Serif', serif;
+      font-style: italic;
     }
 
-    .bookmark-card {
-      animation: fadeInUp 0.3s ease both;
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -316,182 +342,287 @@
   <div class="divider"></div>
 </div>
 
-<div style="text-align:center;">
-  <div class="count-badge" id="countBadge">0 / 100 закладок</div>
+<div class="tabs">
+  <button class="tab-btn active" id="tabBtnBookmarks" onclick="switchTab('bookmarks')">🔖 Закладки</button>
+  <button class="tab-btn"        id="tabBtnRecents"   onclick="switchTab('recents')">🕐 Недавние</button>
 </div>
 
-<div class="empty-state visible" id="emptyState">
-  <span class="empty-icon">📜</span>
-  <div class="empty-text">Пока нет сохранённых закладок.<br>Читайте сутты и нажимайте «Добавить закладку».</div>
+<!-- ПАНЕЛЬ ЗАКЛАДОК -->
+<div class="tab-panel active" id="panelBookmarks">
+  <div style="text-align:center;">
+    <div class="count-badge" id="countBadge">0 / 100 закладок</div>
+  </div>
+  <div class="empty-state" id="emptyBookmarks">
+    <span class="empty-icon">📜</span>
+    <div class="empty-text">Пока нет сохранённых закладок.<br>Нажмите «Добавить закладку» при чтении сутты.</div>
+  </div>
+  <div class="bookmarks-list" id="bookmarksList"></div>
+  <button class="btn-action" id="btnClear" onclick="clearAll()">✕ &nbsp;Очистить все закладки</button>
 </div>
 
-<div class="bookmarks-list" id="bookmarksList"></div>
-
-<button class="btn-clear" id="btnClear" onclick="clearAll()">✕ &nbsp; Очистить все закладки</button>
+<!-- ПАНЕЛЬ НЕДАВНИХ -->
+<div class="tab-panel" id="panelRecents">
+  <div class="empty-state" id="emptyRecents">
+    <span class="empty-icon">🕐</span>
+    <div class="empty-text">История пуста.<br>Открытые сутты будут появляться здесь.</div>
+  </div>
+  <div class="recent-hint" id="recentHint" style="display:none;">Последние 10 просмотренных сутт</div>
+  <div class="bookmarks-list" id="recentsList"></div>
+  <button class="btn-action" id="btnClearRecents" onclick="clearRecents()">✕ &nbsp;Очистить историю</button>
+</div>
 
 <button class="btn-back" onclick="goBack()">← Назад</button>
 
 <script>
   var MAX_BOOKMARKS = 100;
   var bookmarks = [];
+  var recents   = [];
 
-  function loadBookmarks(jsonString) {
-    try {
-      bookmarks = JSON.parse(jsonString) || [];
-    } catch(e) {
-      bookmarks = [];
-    }
-    render();
+  /* ── Переключение вкладок ── */
+  function switchTab(name) {
+    document.getElementById('tabBtnBookmarks').classList.toggle('active', name === 'bookmarks');
+    document.getElementById('tabBtnRecents').classList.toggle('active',   name === 'recents');
+    document.getElementById('panelBookmarks').classList.toggle('active',  name === 'bookmarks');
+    document.getElementById('panelRecents').classList.toggle('active',    name === 'recents');
   }
+
+  /* ── Точка входа из Android ── */
+  function loadData(bmJson, recentsJson) {
+    try { bookmarks = JSON.parse(bmJson)      || []; } catch(e) { bookmarks = []; }
+    try { recents   = JSON.parse(recentsJson) || []; } catch(e) { recents   = []; }
+    renderBookmarks();
+    renderRecents();
+  }
+
+  /* Совместимость со старым вызовом */
+  function loadBookmarks(bmJson) { loadData(bmJson, '[]'); }
 
   function goBack() {
-    if (typeof Android !== 'undefined') {
-      Android.goBack();
-    }
+    if (typeof Android !== 'undefined') Android.goBack();
   }
 
-  /** Автовысота textarea — вызывать только когда элемент уже в DOM */
   function autoResize(el) {
     el.style.height = 'auto';
     el.style.height = el.scrollHeight + 'px';
   }
 
-  function render() {
-    var list = document.getElementById('bookmarksList');
-    var empty = document.getElementById('emptyState');
-    var btnClear = document.getElementById('btnClear');
+  /* ══ РЕНДЕР ЗАКЛАДОК ══ */
+  function renderBookmarks() {
+    var list  = document.getElementById('bookmarksList');
+    var empty = document.getElementById('emptyBookmarks');
+    var btn   = document.getElementById('btnClear');
     var badge = document.getElementById('countBadge');
+
     list.innerHTML = '';
     badge.textContent = bookmarks.length + ' / ' + MAX_BOOKMARKS + ' закладок';
 
     if (bookmarks.length === 0) {
       empty.classList.add('visible');
-      btnClear.classList.remove('visible');
+      btn.classList.remove('visible');
       return;
     }
-
     empty.classList.remove('visible');
-    btnClear.classList.add('visible');
+    btn.classList.add('visible');
 
-    // Собираем все noteArea для пересчёта высоты после добавления в DOM
     var noteAreas = [];
-
     bookmarks.forEach(function(bm, index) {
-      var card = document.createElement('div');
-      card.className = 'bookmark-card';
-      card.style.animationDelay = (index * 0.05) + 's';
-
-      var isLatest = (index === 0);
-      var dateStr = bm.date
-        ? new Date(bm.date).toLocaleDateString('ru-RU', { day:'numeric', month:'short', year:'numeric' })
-        : '';
-
-      var body = document.createElement('div');
-      body.className = 'bookmark-card-body';
-
-      var openArea = document.createElement('div');
-      openArea.className = 'bookmark-open-area';
-      openArea.onclick = function() { openBookmark(bm.filePath, bm.scrollY || 0); };
-
-      var numEl = document.createElement('div');
-      numEl.className = 'bookmark-num';
-      numEl.innerHTML = esc(bm.suttaRef || '') +
-        (isLatest ? ' <span style="background:#FFE082;color:#161923;font-size:0.65rem;padding:2px 7px;border-radius:10px;font-weight:800;letter-spacing:1px;vertical-align:middle;">НОВАЯ</span>' : '');
-
-      var titleRow = document.createElement('div');
-      titleRow.style.cssText = 'display:flex;align-items:flex-start;gap:6px;margin-bottom:5px;';
-
-      var titleEl = document.createElement('div');
-      titleEl.className = 'bookmark-title';
-      titleEl.id = 'title-' + bm.id;
-      titleEl.textContent = bm.title || '';
-
-      var editBtn = document.createElement('button');
-      editBtn.className = 'bookmark-edit-btn';
-      editBtn.textContent = '✏️';
-      editBtn.title = 'Редактировать название';
-      editBtn.onclick = function(e) {
-        e.stopPropagation();
-        editTitle('title-' + bm.id, bm.id);
-      };
-
-      titleRow.appendChild(titleEl);
-      titleRow.appendChild(editBtn);
-
-      var meta = document.createElement('div');
-      meta.className = 'bookmark-meta';
-      if (bm.subtitle) {
-        var subEl = document.createElement('span');
-        subEl.textContent = bm.subtitle;
-        meta.appendChild(subEl);
-      }
-      if (dateStr) {
-        var dateEl = document.createElement('span');
-        dateEl.className = 'bookmark-date';
-        dateEl.textContent = '· ' + dateStr;
-        meta.appendChild(dateEl);
-      }
-
-      openArea.appendChild(numEl);
-      openArea.appendChild(titleRow);
-      openArea.appendChild(meta);
-
-      // ── Поле заметки ──
-      var noteArea = document.createElement('textarea');
-      noteArea.className = 'bookmark-note';
-      noteArea.placeholder = 'Добавить заметку…';
-      noteArea.value = bm.note || '';
-      noteArea.rows = 1;
-
-      noteArea.addEventListener('input', function() { autoResize(noteArea); });
-      noteArea.addEventListener('click', function(e) { e.stopPropagation(); });
-      noteArea.addEventListener('blur', function() {
-        var newNote = noteArea.value;
-        for (var i = 0; i < bookmarks.length; i++) {
-          if (bookmarks[i].id === bm.id) { bookmarks[i].note = newNote; break; }
-        }
-        if (typeof Android !== 'undefined') {
-          Android.updateBookmarkNote(bm.id, newNote);
-        }
-      });
-
-      body.appendChild(openArea);
-      body.appendChild(noteArea);
-
-      var delBtn = document.createElement('button');
-      delBtn.className = 'bookmark-delete';
-      delBtn.textContent = '✕';
-      delBtn.onclick = function() { deleteBookmark(bm.id); };
-
-      card.appendChild(body);
-      card.appendChild(delBtn);
-      list.appendChild(card);
-
-      // Запоминаем для пересчёта высоты — теперь элемент уже в DOM
-      noteAreas.push(noteArea);
+      list.appendChild(buildBookmarkCard(bm, index, noteAreas));
     });
 
-    // ИСПРАВЛЕНИЕ: пересчитываем высоту всех заметок после добавления в DOM
-    // requestAnimationFrame гарантирует, что браузер уже отрисовал элементы
     requestAnimationFrame(function() {
       noteAreas.forEach(function(ta) { autoResize(ta); });
     });
+  }
+
+  function buildBookmarkCard(bm, index, noteAreas) {
+    var card = document.createElement('div');
+    card.className = 'bookmark-card';
+    card.style.animationDelay = (index * 0.05) + 's';
+
+    var isLatest = (index === 0);
+    var dateStr  = bm.date
+      ? new Date(bm.date).toLocaleDateString('ru-RU', {day:'numeric',month:'short',year:'numeric'})
+      : '';
+
+    var body = document.createElement('div');
+    body.className = 'bookmark-card-body';
+
+    var openArea = document.createElement('div');
+    openArea.className = 'bookmark-open-area';
+    openArea.onclick = function() { openBookmark(bm.filePath, bm.scrollY || 0); };
+
+    var numEl = document.createElement('div');
+    numEl.className = 'bookmark-num';
+    numEl.innerHTML = esc(bm.suttaRef || '') +
+      (isLatest ? ' <span style="background:#FFE082;color:#161923;font-size:0.65rem;padding:2px 7px;border-radius:10px;font-weight:800;letter-spacing:1px;vertical-align:middle;">НОВАЯ</span>' : '');
+
+    var titleRow = document.createElement('div');
+    titleRow.style.cssText = 'display:flex;align-items:flex-start;gap:6px;margin-bottom:5px;';
+
+    var titleEl = document.createElement('div');
+    titleEl.className = 'bookmark-title';
+    titleEl.id = 'title-' + bm.id;
+    titleEl.textContent = bm.title || '';
+
+    var editBtn = document.createElement('button');
+    editBtn.className = 'bookmark-edit-btn';
+    editBtn.textContent = '✏️';
+    editBtn.onclick = function(e) { e.stopPropagation(); editTitle('title-' + bm.id, bm.id); };
+    titleRow.appendChild(titleEl);
+    titleRow.appendChild(editBtn);
+
+    var meta = document.createElement('div');
+    meta.className = 'bookmark-meta';
+    if (bm.subtitle) {
+      var subEl = document.createElement('span');
+      subEl.textContent = bm.subtitle;
+      meta.appendChild(subEl);
+    }
+    if (dateStr) {
+      var dateEl = document.createElement('span');
+      dateEl.className = 'bookmark-date';
+      dateEl.textContent = '· ' + dateStr;
+      meta.appendChild(dateEl);
+    }
+
+    openArea.appendChild(numEl);
+    openArea.appendChild(titleRow);
+    openArea.appendChild(meta);
+
+    var noteArea = document.createElement('textarea');
+    noteArea.className = 'bookmark-note';
+    noteArea.placeholder = 'Добавить заметку…';
+    noteArea.value = bm.note || '';
+    noteArea.rows = 1;
+    noteArea.addEventListener('input', function() { autoResize(noteArea); });
+    noteArea.addEventListener('click', function(e) { e.stopPropagation(); });
+    noteArea.addEventListener('blur', function() {
+      var newNote = noteArea.value;
+      for (var i = 0; i < bookmarks.length; i++) {
+        if (bookmarks[i].id === bm.id) { bookmarks[i].note = newNote; break; }
+      }
+      if (typeof Android !== 'undefined') Android.updateBookmarkNote(bm.id, newNote);
+    });
+
+    body.appendChild(openArea);
+    body.appendChild(noteArea);
+    noteAreas.push(noteArea);
+
+    var delBtn = document.createElement('button');
+    delBtn.className = 'bookmark-delete';
+    delBtn.textContent = '✕';
+    delBtn.onclick = function() { deleteBookmark(bm.id); };
+
+    card.appendChild(body);
+    card.appendChild(delBtn);
+    return card;
+  }
+
+  /* ══ РЕНДЕР НЕДАВНИХ ══ */
+  function renderRecents() {
+    var list  = document.getElementById('recentsList');
+    var empty = document.getElementById('emptyRecents');
+    var btn   = document.getElementById('btnClearRecents');
+    var hint  = document.getElementById('recentHint');
+
+    list.innerHTML = '';
+
+    if (recents.length === 0) {
+      empty.classList.add('visible');
+      btn.classList.remove('visible');
+      hint.style.display = 'none';
+      return;
+    }
+    empty.classList.remove('visible');
+    btn.classList.add('visible');
+    hint.style.display = 'block';
+
+    recents.forEach(function(item, index) {
+      list.appendChild(buildRecentCard(item, index));
+    });
+  }
+
+  function buildRecentCard(item, index) {
+    var card = document.createElement('div');
+    card.className = 'bookmark-card recent-card';
+    card.style.animationDelay = (index * 0.06) + 's';
+
+    var dateStr = item.date
+      ? new Date(item.date).toLocaleDateString('ru-RU', {day:'numeric',month:'short',year:'numeric'})
+      : '';
+    var timeStr = item.date
+      ? new Date(item.date).toLocaleTimeString('ru-RU', {hour:'2-digit',minute:'2-digit'})
+      : '';
+
+    var body = document.createElement('div');
+    body.className = 'bookmark-card-body';
+    body.style.cursor = 'pointer';
+    body.onclick = function() { openBookmark(item.filePath, item.scrollY || 0); };
+
+    var numEl = document.createElement('div');
+    numEl.className = 'bookmark-num';
+    var pos = ['1-я','2-я','3-я','4-я','5-я'][index] || (index+1)+'-я';
+    numEl.innerHTML = (item.suttaRef ? esc(item.suttaRef) + ' &nbsp;·&nbsp; ' : '') +
+      '<span style="opacity:0.7;font-size:0.68rem;">' + pos + '</span>';
+
+    var titleEl = document.createElement('div');
+    titleEl.className = 'bookmark-title';
+    titleEl.textContent = item.title || '';
+
+    var meta = document.createElement('div');
+    meta.className = 'bookmark-meta';
+    if (item.subtitle) {
+      var subEl = document.createElement('span');
+      subEl.textContent = item.subtitle;
+      meta.appendChild(subEl);
+    }
+    if (dateStr) {
+      var dateEl = document.createElement('span');
+      dateEl.className = 'bookmark-date';
+      dateEl.textContent = '· ' + dateStr + (timeStr ? ' ' + timeStr : '');
+      meta.appendChild(dateEl);
+    }
+
+    body.appendChild(numEl);
+    body.appendChild(titleEl);
+    body.appendChild(meta);
+    card.appendChild(body);
+    return card;
+  }
+
+  /* ══ ДЕЙСТВИЯ ══ */
+  function openBookmark(filePath, scrollY) {
+    if (typeof Android !== 'undefined') Android.openBookmark(filePath, scrollY);
+  }
+
+  function deleteBookmark(id) {
+    if (typeof Android !== 'undefined') Android.deleteBookmark(id);
+    bookmarks = bookmarks.filter(function(b) { return b.id !== id; });
+    renderBookmarks();
+  }
+
+  function clearAll() {
+    if (typeof Android !== 'undefined') Android.clearBookmarks();
+    bookmarks = [];
+    renderBookmarks();
+  }
+
+  function clearRecents() {
+    if (typeof Android !== 'undefined') Android.clearRecents();
+    recents = [];
+    renderRecents();
   }
 
   function editTitle(elId, id) {
     var el = document.getElementById(elId);
     if (!el) return;
     var current = el.textContent;
-
     var textarea = document.createElement('textarea');
     textarea.className = 'bookmark-title-input';
     textarea.value = current;
     textarea.rows = 1;
     el.replaceWith(textarea);
-
-    // Пересчитываем высоту после вставки в DOM
     requestAnimationFrame(function() { autoResize(textarea); });
-
     textarea.focus();
     textarea.setSelectionRange(textarea.value.length, textarea.value.length);
     textarea.addEventListener('input', function() { autoResize(textarea); });
@@ -503,13 +634,10 @@
       div.id = elId;
       div.textContent = newTitle;
       textarea.replaceWith(div);
-
       for (var i = 0; i < bookmarks.length; i++) {
         if (bookmarks[i].id === id) { bookmarks[i].title = newTitle; break; }
       }
-      if (typeof Android !== 'undefined') {
-        Android.updateBookmarkTitle(id, newTitle);
-      }
+      if (typeof Android !== 'undefined') Android.updateBookmarkTitle(id, newTitle);
     }
 
     textarea.addEventListener('blur', save);
@@ -522,33 +650,9 @@
   function esc(s) {
     if (!s) return '';
     return String(s)
-      .replace(/&/g,'&amp;')
-      .replace(/</g,'&lt;')
-      .replace(/>/g,'&gt;')
-      .replace(/"/g,'&quot;')
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;').replace(/"/g,'&quot;')
       .replace(/'/g,'&#39;');
-  }
-
-  function openBookmark(filePath, scrollY) {
-    if (typeof Android !== 'undefined') {
-      Android.openBookmark(filePath, scrollY);
-    }
-  }
-
-  function deleteBookmark(id) {
-    if (typeof Android !== 'undefined') {
-      Android.deleteBookmark(id);
-    }
-    bookmarks = bookmarks.filter(function(b){ return b.id !== id; });
-    render();
-  }
-
-  function clearAll() {
-    if (typeof Android !== 'undefined') {
-      Android.clearBookmarks();
-    }
-    bookmarks = [];
-    render();
   }
 </script>
 </body>
