@@ -1,5 +1,6 @@
 package com.dhammamobile.dictionary_of_pali_term.Rules;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -108,6 +109,14 @@ public class RulesBhikkhuAboutOffencesPacittiyaActivity extends BaseActivityClas
         this.scrollTextOffencesPacittiya30 = findViewById(R.id.viewScrollTextRulesBhikkhuOffencesPacittiya30);
 
         animateText(textViewLink, getString(R.string.textOffencesPacittiyaAbout));
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesBhikkhuAboutActivity.class);
+            }
+        });
     }
 
     public void toRlesBhikkhuOffencesPacittiya1(View view){
@@ -282,8 +291,5 @@ public class RulesBhikkhuAboutOffencesPacittiyaActivity extends BaseActivityClas
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(RulesBhikkhuAboutOffencesActivity.class);
-    }
+
 }

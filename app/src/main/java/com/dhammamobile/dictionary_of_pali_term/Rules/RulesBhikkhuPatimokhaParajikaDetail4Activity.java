@@ -1,5 +1,6 @@
 package com.dhammamobile.dictionary_of_pali_term.Rules;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -75,6 +76,15 @@ public class RulesBhikkhuPatimokhaParajikaDetail4Activity extends BaseActivityCl
 
         webView.loadUrl(htmlFilePath);
         loadHtmlPage(htmlFilePath);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                saveScrollPosition();
+                startIntentActivityAndFinish(RulesBhikkhuPatimokhaParajikaActivity.class);
+            }
+        });
     }
     private void saveScrollPosition() {
         if (currentHtmlFilePath == null) return;
@@ -138,10 +148,4 @@ public class RulesBhikkhuPatimokhaParajikaDetail4Activity extends BaseActivityCl
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        saveScrollPosition();
-        super.onBackPressed();
-        startIntentActivityAndFinish(RulesBhikkhuPatimokhaParajikaActivity.class);
-    }
 }

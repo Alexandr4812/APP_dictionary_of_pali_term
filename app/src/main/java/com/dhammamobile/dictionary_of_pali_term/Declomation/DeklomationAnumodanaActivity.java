@@ -11,6 +11,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -68,6 +69,14 @@ public class DeklomationAnumodanaActivity extends BaseActivityClass {
 
         minusText.setOnClickListener(v -> {
             webView.evaluateJavascript("javascript:decreaseFontSize();", null);
+        });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(DeklomationMainActivity.class);
+            }
         });
 
     }
@@ -152,9 +161,4 @@ public class DeklomationAnumodanaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startIntentActivityAndFinish(DeklomationMainActivity.class);
-    }
 }

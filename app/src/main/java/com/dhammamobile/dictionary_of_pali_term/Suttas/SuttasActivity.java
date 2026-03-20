@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -75,6 +76,14 @@ public class SuttasActivity extends BaseActivityClass {
         im1.startAnimation(slideDown);
         im2.startAnimation(slideFromLeftAnimation);
         animateText(textViewLink, getString(R.string.theravada_ru));
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(MainActivity.class);
+            }
+        });
     }
 
     private void animateText(TextView targetTextView, String textToAnimate) {
@@ -140,9 +149,4 @@ public class SuttasActivity extends BaseActivityClass {
         startIntentActivityAndFinish(SuttasRandomActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startIntentActivityAndFinish(MainActivity.class);
-    }
 }

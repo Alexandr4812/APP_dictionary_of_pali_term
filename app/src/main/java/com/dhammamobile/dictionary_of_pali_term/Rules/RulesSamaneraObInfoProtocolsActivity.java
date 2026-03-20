@@ -6,6 +6,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -57,6 +58,14 @@ public class RulesSamaneraObInfoProtocolsActivity extends BaseActivityClass {
         this.scrollTextProtocols10 = findViewById(R.id.viewScrollTextRulesSamaneraObInfoProtocols10);
         this.scrollTextProtocols11 = findViewById(R.id.viewScrollTextRulesSamaneraObInfoProtocols11);
         this.scrollTextProtocols12 = findViewById(R.id.viewScrollTextRulesSamaneraObInfoProtocols12);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesSamaneraActivity.class);
+            }
+        });
     }
 
     public void toMainAct(View view){
@@ -67,11 +76,6 @@ public class RulesSamaneraObInfoProtocolsActivity extends BaseActivityClass {
         startIntentActivityAndFinish(RulesSamaneraObInfoActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startIntentActivityAndFinish(RulesSamaneraObInfoActivity.class);
-    }
 
     public  void toText1(View view) {
         scrollTextProtocols.setVisibility(View.VISIBLE);

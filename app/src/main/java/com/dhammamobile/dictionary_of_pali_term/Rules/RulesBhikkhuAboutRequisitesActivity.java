@@ -1,5 +1,6 @@
 package com.dhammamobile.dictionary_of_pali_term.Rules;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -62,6 +63,14 @@ public class RulesBhikkhuAboutRequisitesActivity extends BaseActivityClass {
         this.scrollTextRequisites3 = findViewById(R.id.viewScrollTextRulesBhikkhuRequisites3);
         this.scrollTextRequisites4 = findViewById(R.id.viewScrollTextRulesBhikkhuRequisites4);
         this.scrollTextRequisites5 = findViewById(R.id.viewScrollTextRulesBhikkhuRequisites5);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesBhikkhuAboutActivity.class);
+            }
+        });
     }
 
     public void toRlesBhikkhuRequisites1(View view) {
@@ -117,8 +126,4 @@ public class RulesBhikkhuAboutRequisitesActivity extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(RulesBhikkhuAboutActivity.class);
-    }
 }

@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.widget.TextView;
 
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -133,6 +134,15 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
 
         this.buttonRewind.setOnClickListener(v -> doRewind( ));
         this.buttonFastForward .setOnClickListener(v -> doFastForward( ));
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(DeklomationMainActivity.class);
+                mediaPlayer.pause();
+            }
+        });
     }
 
 
@@ -288,10 +298,5 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
         }
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(DeklomationMainActivity.class);
-        this.mediaPlayer.pause();
-    }
 
 }

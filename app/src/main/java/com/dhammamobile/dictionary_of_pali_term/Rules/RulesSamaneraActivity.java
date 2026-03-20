@@ -6,6 +6,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -44,6 +45,14 @@ public class RulesSamaneraActivity extends BaseActivityClass {
         this.buttonHome = findViewById(R.id.buttonRulesSamaneraHome);
         this.buttonLiveToRulesSamanera = findViewById(R.id.buttonliveToRulesSamanera);
         this.scrollTextNissaya = findViewById(R.id.viewScrollRulesSamaneraNissaya);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesActivity.class);
+            }
+        });
     }
 
     public void toRulesSekhiyaAct(View view){
@@ -58,11 +67,7 @@ public class RulesSamaneraActivity extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startIntentActivityAndFinish(RulesActivity.class);
-    }
+
 
     public void toBecomingSamaneraPabajaAct(View view){
         startIntentActivityAndFinish(RulesSamaneraPabbajjaActivity.class);

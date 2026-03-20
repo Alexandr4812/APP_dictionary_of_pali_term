@@ -1,5 +1,6 @@
 package com.dhammamobile.dictionary_of_pali_term.Rules;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -78,6 +79,15 @@ public class RulesLayActivity extends BaseActivityClass {
 
         minusText.setOnClickListener(v -> {
             webView.evaluateJavascript("javascript:decreaseFontSize();", null);
+        });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                saveScrollPosition();
+                startIntentActivityAndFinish(RulesActivity.class);
+            }
         });
 
     }
@@ -182,13 +192,9 @@ public class RulesLayActivity extends BaseActivityClass {
     }
 
     public void toMainAct(View view){
+
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        saveScrollPosition();
-        super.onBackPressed();
-        startIntentActivityAndFinish(RulesActivity.class);
-    }
+
 }

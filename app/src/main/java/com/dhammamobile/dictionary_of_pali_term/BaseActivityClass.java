@@ -23,6 +23,18 @@ import java.util.Locale;
 public abstract class BaseActivityClass extends AppCompatActivity {
     protected static final String LANGUAGE_PREF_KEY = "LANGUAGE_PREF_KEY";
     private MediaPlayer mediaPlayer;
+
+    @Override
+    protected void onCreate(android.os.Bundle savedInstanceState) {
+        // Устанавливаем флаг, чтобы экран не гас
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        super.onCreate(savedInstanceState);
+
+        // Принудительно отключаем темную тему (чтобы не было багов на Xiaomi)
+        androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO);
+    }
+
     protected void setWindowFlagsFullscreenAndNoLimits() {
         // Убрать строку состояния
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);

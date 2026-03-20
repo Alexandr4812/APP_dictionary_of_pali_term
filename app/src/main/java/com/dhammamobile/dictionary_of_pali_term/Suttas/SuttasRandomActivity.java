@@ -7,6 +7,7 @@ import android.view.WindowManager;
 import android.webkit.WebView;
 import android.widget.Button;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -102,6 +103,16 @@ public class SuttasRandomActivity extends BaseActivityClass {
                 });
             });
         });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                String currentUrl = webView.getUrl();
+                saveLastVisitedPage(currentUrl);
+                startIntentActivityAndFinish(SuttasActivity.class);
+            }
+        });
     }
 
     // Загрузка случайной страницы
@@ -165,11 +176,5 @@ public class SuttasRandomActivity extends BaseActivityClass {
         startIntentActivityAndFinish(SuttasActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        String currentUrl = webView.getUrl();
-        saveLastVisitedPage(currentUrl);
-        startIntentActivityAndFinish(SuttasActivity.class);
-    }
+
 }

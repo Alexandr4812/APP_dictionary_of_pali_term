@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -45,6 +46,14 @@ public class RulesBhikkhuActivity extends BaseActivityClass {
         this.buttonLiveToBhikhu = findViewById(R.id.buttonliveToBhikhuFromUps);
 
         this.textViewUpasampada = findViewById(R.id.textViewUpasampada);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesActivity.class);
+            }
+        });
     }
 
     public void toRulesAct(View view){
@@ -63,10 +72,7 @@ public class RulesBhikkhuActivity extends BaseActivityClass {
         startIntentActivityAndFinish(RulesBhikkhuPatimokhaActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(RulesActivity.class);
-    }
+
 
     public void tobackBhikhuUps(View view) {
         ScrollView scrollTextUpasampada = findViewById(R.id.overScrollTextUpasampada);

@@ -8,6 +8,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -118,6 +119,16 @@ public class SuttasKuddakaActivity extends BaseActivityClass {
                 });
             });
         });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                String currentUrl = webView.getUrl();
+                saveLastVisitedPage(currentUrl);
+                startIntentActivityAndFinish(SuttasActivity.class);
+            }
+        });
     }
     private void goBack() {
         if (webView.canGoBack()) {
@@ -152,12 +163,5 @@ public class SuttasKuddakaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(SuttasActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        String currentUrl = webView.getUrl();
-        saveLastVisitedPage(currentUrl);
-        startIntentActivityAndFinish(SuttasActivity.class);
-    }
 
 }

@@ -14,6 +14,7 @@ import android.os.Handler;
 import android.widget.TextView;
 
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -144,6 +145,15 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
 
         this.buttonRewindParajika.setOnClickListener(v -> doRewind( ));
         this.buttonFastForwardParajika.setOnClickListener(v -> doFastForward( ));
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesBhikkhuActivity.class);
+                mediaPlayer.pause();
+            }
+        });
     }
 
     protected void onResume() {
@@ -331,10 +341,7 @@ public class RulesBhikkhuPatimokhaParajikaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(RulesBhikkhuPatimokhaActivity.class);
-    }
+
 
     public void toRulesPatimokhaAct(View view){
         startIntentActivityAndFinish(RulesBhikkhuPatimokhaActivity.class);

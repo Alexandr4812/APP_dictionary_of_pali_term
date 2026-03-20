@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -23,6 +24,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
+import com.dhammamobile.dictionary_of_pali_term.Rules.RulesActivity;
 
 import java.util.Locale;
 
@@ -136,6 +138,14 @@ public class AbhidhammaActivity extends BaseActivityClass {
         button4.startAnimation(slideFromRightAnimation);
         ImageView im1 = findViewById(R.id.imageVievAbhidhamma1);
         im1.startAnimation(slideDown);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(MainActivity.class);
+            }
+        });
     }
 
     private void loadHtmlPage(String htmlFilePath) {
@@ -358,9 +368,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
     }
 
 
-    public void toChittasAct(View view){
-        startIntentActivityAndFinish(AbhidhammaChittasActivity.class);
-    }
+
 
     public void toAbhidhammaBack(View view){
         webView.setVisibility(View.INVISIBLE);
@@ -371,8 +379,4 @@ public class AbhidhammaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
 }

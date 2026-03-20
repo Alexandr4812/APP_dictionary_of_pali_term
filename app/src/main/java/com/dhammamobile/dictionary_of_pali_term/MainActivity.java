@@ -23,6 +23,7 @@ import com.dhammamobile.dictionary_of_pali_term.LiveBuddha.LiveBuddhaActivity;
 import com.dhammamobile.dictionary_of_pali_term.Rules.RulesActivity;
 import com.dhammamobile.dictionary_of_pali_term.Suttas.SuttasActivity;
 import com.dhammamobile.dictionary_of_pali_term.Teacher.TeacherActivity;
+import androidx.activity.OnBackPressedCallback;
 
 import java.util.Locale;
 
@@ -71,6 +72,24 @@ public class MainActivity extends BaseActivityClass {
 
         toBackFromInfo = findViewById(R.id.buttonToBackFromInfo);
         webViewMainInfo =findViewById(R.id.webViewMainInfo);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // 1. Если открыто инфо (WebView) - закрываем его
+                if (webViewMainInfo.getVisibility() == View.VISIBLE) {
+                    toBackFromInfo(null);
+                }
+                // 2. Если открыто выпадающее меню - закрываем его
+                else if (findViewById(R.id.popupMenuSV).getVisibility() == View.VISIBLE) {
+                    toPopupMenuExit(null);
+                }
+                // 3. В остальных случаях - диалог подтверждения выхода
+                else {
+                    showConfirmationDialog();
+                }
+            }
+        });
     }
 
     @Override
@@ -190,12 +209,6 @@ public class MainActivity extends BaseActivityClass {
         webViewMainInfo.setVisibility(View.INVISIBLE);
     }
 
-    @Override
-    public void onBackPressed() {
-        showConfirmationDialog();
-        super.onBackPressed();
-
-    }
 
 
     public void toPopupMenuExit(View view) {

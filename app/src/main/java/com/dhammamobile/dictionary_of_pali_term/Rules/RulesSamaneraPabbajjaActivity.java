@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -31,17 +32,20 @@ public class RulesSamaneraPabbajjaActivity extends BaseActivityClass {
             v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
             return insets;
         });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesSamaneraActivity.class);
+            }
+        });
     }
 
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startIntentActivityAndFinish(RulesSamaneraActivity.class);
-    }
 
     public void toRulesSamaneraAct(View view){
         startIntentActivityAndFinish(RulesSamaneraActivity.class);

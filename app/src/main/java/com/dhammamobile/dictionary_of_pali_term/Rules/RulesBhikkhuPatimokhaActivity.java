@@ -6,6 +6,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -38,16 +39,20 @@ public class RulesBhikkhuPatimokhaActivity extends BaseActivityClass {
 
         this.buttonBack = findViewById(R.id.buttonliveToBhikkhu);
         this.buttonHome = findViewById(R.id.buttonliveHomeFromUpasampada);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesBhikkhuActivity.class);
+            }
+        });
     }
 
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
-    }
 
 
     public void toRulesBhikkhuAct(View view){

@@ -1,5 +1,6 @@
 package com.dhammamobile.dictionary_of_pali_term.Teacher;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
+import com.dhammamobile.dictionary_of_pali_term.Suttas.SuttasActivity;
 
 public class TeacherAboutActivity extends BaseActivityClass {
 
@@ -41,6 +43,14 @@ public class TeacherAboutActivity extends BaseActivityClass {
         });
 
         animateText(textViewLink, getString(R.string.teacherAboutText));
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(TeacherActivity.class);
+            }
+        });
     }
 
     private void animateText(TextView targetTextView, String textToAnimate) {
@@ -72,9 +82,5 @@ public class TeacherAboutActivity extends BaseActivityClass {
         startIntentActivityAndFinish(TeacherActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startIntentActivityAndFinish(TeacherActivity.class);
-    }
+
 }

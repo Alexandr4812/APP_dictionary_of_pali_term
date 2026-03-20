@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -117,6 +118,14 @@ public class TeacherActivity extends BaseActivityClass {
         minusText.setOnClickListener(v -> {
             webView.evaluateJavascript("javascript:decreaseFontSize();", null);
         });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(MainActivity.class);
+            }
+        });
     }
 
     private void saveScrollPosition() {
@@ -198,18 +207,7 @@ public class TeacherActivity extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    public void toBack(View view){
-        saveScrollPosition();
-        webView.setVisibility(View.INVISIBLE);
-        buttonTeacher.setVisibility(View.INVISIBLE);
-    }
 
 
 
-    @Override
-    public void onBackPressed() {
-        saveScrollPosition();
-        super.onBackPressed();
-        startIntentActivityAndFinish(MainActivity.class);
-    }
 }

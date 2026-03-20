@@ -8,11 +8,13 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
+import com.dhammamobile.dictionary_of_pali_term.Declomation.DeklomationMainActivity;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
 
@@ -50,6 +52,14 @@ public class RulesActivity extends BaseActivityClass {
         button1.startAnimation(slideFromRightAnimation);
         button2.startAnimation(slideFromLeftAnimation);
         im1.startAnimation(slideDown);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(MainActivity.class);
+            }
+        });
     }
 
     public void toRulesSamaneraAct(View view){
@@ -67,8 +77,4 @@ public class RulesActivity extends BaseActivityClass {
         startIntentActivityAndFinish(RulesLayActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
 }

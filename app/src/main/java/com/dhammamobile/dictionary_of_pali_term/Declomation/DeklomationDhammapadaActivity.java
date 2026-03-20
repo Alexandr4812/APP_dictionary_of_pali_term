@@ -6,6 +6,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ScrollView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -39,6 +40,14 @@ public class DeklomationDhammapadaActivity extends BaseActivityClass {
 
         this.buttonHome = findViewById(R.id.buttonDhammapadaHome);
         this.buttonLiveToDhammapada = findViewById(R.id.buttonliveToDhammapada);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(DeklomationMainActivity.class);
+            }
+        });
     }
 
     public void toDeclomation(View view){
@@ -49,10 +58,6 @@ public class DeklomationDhammapadaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(DeklomationMainActivity.class);
-    }
 
     public void toTextabout1Dhammapada(View view) {
         ScrollView scrollText = findViewById(R.id.dhammapadaScrollTextAbout1Dhammapada);

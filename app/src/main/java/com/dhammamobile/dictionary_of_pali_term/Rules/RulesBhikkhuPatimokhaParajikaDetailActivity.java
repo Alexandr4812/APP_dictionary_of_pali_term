@@ -9,6 +9,7 @@ import android.view.WindowManager;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -76,6 +77,15 @@ public class RulesBhikkhuPatimokhaParajikaDetailActivity extends BaseActivityCla
 
         webView.loadUrl(htmlFilePath);
         loadHtmlPage(htmlFilePath);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                saveScrollPosition();
+                startIntentActivityAndFinish(RulesBhikkhuPatimokhaParajikaActivity.class);
+            }
+        });
     }
 
     private void saveScrollPosition() {
@@ -140,10 +150,4 @@ public class RulesBhikkhuPatimokhaParajikaDetailActivity extends BaseActivityCla
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        saveScrollPosition();
-        super.onBackPressed();
-        startIntentActivityAndFinish(RulesBhikkhuPatimokhaParajikaActivity.class);
-    }
 }

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.webkit.WebView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -65,6 +66,14 @@ public class RulesBhikkhuPatimokhaSanghadisesaDetail10Activity extends BaseActiv
         }
 
         webView.loadUrl(htmlFilePath);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesBhikkhuPatimokhaSanghadisesaActivity.class);
+            }
+        });
     }
 
     @Override
@@ -81,9 +90,4 @@ public class RulesBhikkhuPatimokhaSanghadisesaDetail10Activity extends BaseActiv
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startIntentActivityAndFinish(RulesBhikkhuPatimokhaSanghadisesaActivity.class);
-    }
 }

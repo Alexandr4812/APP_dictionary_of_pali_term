@@ -1,5 +1,6 @@
 package com.dhammamobile.dictionary_of_pali_term.Declomation;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -70,6 +71,14 @@ public class DeklomationGatha extends BaseActivityClass {
             webView.evaluateJavascript("javascript:decreaseFontSize();", null);
         });
 
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(DeklomationMainActivity.class);
+            }
+        });
+
     }
     private void loadHtmlPage(String htmlFilePath) {
         webView.loadUrl(htmlFilePath);
@@ -114,9 +123,4 @@ public class DeklomationGatha extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startIntentActivityAndFinish(DeklomationMainActivity.class);
-    }
 }

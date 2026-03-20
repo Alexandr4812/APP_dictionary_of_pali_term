@@ -13,6 +13,7 @@ import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -172,6 +173,15 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
 
         this.buttonRewindSanghadisesa.setOnClickListener(v -> doRewind( ));
         this.buttonFastForwardSanghadisesa.setOnClickListener(v -> doFastForward( ));
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesBhikkhuActivity.class);
+                mediaPlayer.pause();
+            }
+        });
     }
 
     protected void onResume() {
@@ -200,12 +210,6 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
-        this.mediaPlayer.pause();
-    }
 
     public void toRulesPatimokhaAct(View view){
         startIntentActivityAndFinish(RulesBhikkhuPatimokhaActivity.class);

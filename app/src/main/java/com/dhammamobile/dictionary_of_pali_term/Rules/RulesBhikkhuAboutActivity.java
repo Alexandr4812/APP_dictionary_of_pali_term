@@ -1,5 +1,6 @@
 package com.dhammamobile.dictionary_of_pali_term.Rules;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -70,6 +71,14 @@ public class RulesBhikkhuAboutActivity extends BaseActivityClass {
             webView.evaluateJavascript("javascript:decreaseFontSize();", null);
         });
 
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesBhikkhuActivity.class);
+            }
+        });
+
     }
 
     private void loadHtmlPage(String htmlFilePath) {
@@ -98,10 +107,6 @@ public class RulesBhikkhuAboutActivity extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(RulesBhikkhuActivity.class);
-    }
 
 
     public void toRulesBhikkhuAct(View view){

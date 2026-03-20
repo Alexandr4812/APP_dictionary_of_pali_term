@@ -452,16 +452,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".Suttas.SuttasLastSuttaActivity"
-            android:configChanges="orientation|screenSize"
-            android:exported="false"
-            android:label="Last Visited Page"
-            android:screenOrientation="fullSensor">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".Rules.RulesSamaneraObInfoProtocolsActivity"
             android:configChanges="orientation|screenSize"

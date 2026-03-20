@@ -8,6 +8,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
 import androidx.core.os.LocaleListCompat;
@@ -60,6 +61,14 @@ public class DeklomationMainActivity extends BaseActivityClass {
         button4.startAnimation(slideFromLeftAnimation);
         button5.startAnimation(slideFromRightAnimation);
         im1.startAnimation(slideDown);
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(MainActivity.class);
+            }
+        });
     }
 
     public void toMainAct(View view){
@@ -93,10 +102,7 @@ public class DeklomationMainActivity extends BaseActivityClass {
         startIntentActivityAndFinish(DeklomationDhammapadaActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(MainActivity.class);
-    }
+
 
 
 

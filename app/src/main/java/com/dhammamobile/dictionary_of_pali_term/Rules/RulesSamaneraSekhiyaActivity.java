@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ScrollView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -32,6 +33,14 @@ public class RulesSamaneraSekhiyaActivity extends BaseActivityClass {
             v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
             return insets;
         });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Вместо закрытия — переходим на главную
+                startIntentActivityAndFinish(RulesSamaneraActivity.class);
+            }
+        });
     }
 
     public void toRulesSamaneraAct(View view){
@@ -42,10 +51,6 @@ public class RulesSamaneraSekhiyaActivity extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
-    @Override
-    public void onBackPressed(){
-        startIntentActivityAndFinish(RulesSamaneraActivity.class);
-    }
 
     public void toComm1(View view) {
         ScrollView scrollText = findViewById(R.id.viewScrollSekhiyaComm1);
