@@ -60,7 +60,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
         updateLocale(); // Установка языка
         setContentView(R.layout.activity_abhidhamma);
 
-       // setWindowFlagsFullscreenAndNoLimits();
+        // setWindowFlagsFullscreenAndNoLimits();
         enableEdgeToEdgeMode();
 
         // Скрытие панели навигации и панели состояния
@@ -155,6 +155,8 @@ public class AbhidhammaActivity extends BaseActivityClass {
     public void nibbanaAbhidhammaText(View view) {
         buttonAbhidhamma.setVisibility(View.VISIBLE);
         webView.setVisibility(View.VISIBLE);
+        plusText.setVisibility(View.VISIBLE);
+        minusText.setVisibility(View.VISIBLE);
         String htmlFilePath;
         String currentLanguage = Locale.getDefault().getLanguage();
         if (currentLanguage.equals("ru")) {
@@ -373,10 +375,57 @@ public class AbhidhammaActivity extends BaseActivityClass {
     public void toAbhidhammaBack(View view){
         webView.setVisibility(View.INVISIBLE);
         buttonAbhidhamma.setVisibility(View.INVISIBLE);
+        // Восстанавливаем +/- для следующего открытия основного раздела
+        plusText.setVisibility(View.VISIBLE);
+        minusText.setVisibility(View.VISIBLE);
     }
 
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);
+    }
+
+    // ══ Дополнительные разделы ══
+    // Пути к HTML-файлам — замени на свои когда добавишь содержимое
+
+    public void openExtraSobranie(View view) {
+        openExtraSection("file:///android_asset/abhidhamma_ru/sobranie_uchenii.html");
+    }
+
+    public void openExtraMentalProcess(View view) {
+        openExtraSection("file:///android_asset/abhidhamma_ru/mental_process.html");
+    }
+
+    public void openExtraOutsideProcess(View view) {
+        openExtraSection("file:///android_asset/abhidhamma_ru/outside_process.html");
+    }
+
+    public void openExtraKategorii(View view) {
+        openExtraSection("file:///android_asset/abhidhamma_ru/kategorii.html");
+    }
+
+    public void openExtraObuslovlennost(View view) {
+        openExtraSection("file:///android_asset/abhidhamma_ru/obuslovlennost.html");
+    }
+
+    public void openExtraMeditaciya(View view) {
+        openExtraSection("file:///android_asset/abhidhamma_ru/meditaciya.html");
+    }
+
+    public void openExtraProznie(View view) {
+        openExtraSection("file:///android_asset/abhidhamma_ru/prozrenie.html");
+    }
+
+    /**
+     * Общий метод открытия дополнительного раздела в WebView.
+     * Показывает WebView и панель кнопок (назад, домой, +/-), как в основных разделах.
+     */
+    private void openExtraSection(String htmlFilePath) {
+        buttonAbhidhamma.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        // Скрываем +/- — в дополнительных разделах они не нужны
+        plusText.setVisibility(View.GONE);
+        minusText.setVisibility(View.GONE);
+        loadHtmlPage(htmlFilePath);
     }
 
 }

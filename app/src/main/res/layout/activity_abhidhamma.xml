@@ -207,12 +207,12 @@
 
             </LinearLayout>
 
-<!--            <Button-->
-<!--                android:id="@+id/infoButton3"-->
-<!--                style="@style/infoButton"-->
-<!--                android:foreground="@drawable/info7"-->
-<!--                android:onClick="onButtonClickAbhidhamma3"-->
-<!--                tools:ignore="UsingOnClickInXml" />-->
+            <!--            <Button-->
+            <!--                android:id="@+id/infoButton3"-->
+            <!--                style="@style/infoButton"-->
+            <!--                android:foreground="@drawable/info7"-->
+            <!--                android:onClick="onButtonClickAbhidhamma3"-->
+            <!--                tools:ignore="UsingOnClickInXml" />-->
 
             <Button
                 android:id="@+id/button_materials"
@@ -353,6 +353,87 @@
                 android:text=""
                 android:visibility="invisible"/>
 
+            <!-- ══ ДОПОЛНИТЕЛЬНЫЕ РАЗДЕЛЫ ══ -->
+
+            <ImageView
+                android:id="@+id/imageViewDividerExtra"
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewDopolnitelnye"
+                style="@style/textBetweenButtons"
+                android:text="Дополнительные разделы" />
+
+            <Button
+                android:id="@+id/btn_extra_sobranie"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#66BB6A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Собрание учений о разном"
+                android:onClick="openExtraSobranie"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/btn_extra_mental_process"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#66BB6A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="О ментальном процессе"
+                android:onClick="openExtraMentalProcess"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/btn_extra_outside_process"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#66BB6A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="О том что находится вне ментального процесса"
+                android:onClick="openExtraOutsideProcess"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/btn_extra_kategorii"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#66BB6A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="О категориях"
+                android:onClick="openExtraKategorii"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/btn_extra_obuslovlennost"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#66BB6A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Об обусловленности"
+                android:onClick="openExtraObuslovlennost"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/btn_extra_meditaciya"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#66BB6A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Об объектах медитации"
+                android:onClick="openExtraMeditaciya"
+                tools:ignore="UsingOnClickInXml" />
+
+            <Button
+                android:id="@+id/btn_extra_prozrenie"
+                style="@style/button_activity_declomation_main"
+                android:backgroundTint="#66BB6A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="О прозрении"
+                android:onClick="openExtraProznie"
+                tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>
 
