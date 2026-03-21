@@ -375,7 +375,7 @@
                 android:onClick="openExtraSobranie"
                 tools:ignore="UsingOnClickInXml" />
 
-            <Button
+            <!--<Button
                 android:id="@+id/btn_extra_mental_process"
                 style="@style/button_activity_declomation_main"
                 android:backgroundTint="#66BB6A"
@@ -383,9 +383,9 @@
                 android:layout_height="wrap_content"
                 android:text="О ментальном процессе"
                 android:onClick="openExtraMentalProcess"
-                tools:ignore="UsingOnClickInXml" />
+                tools:ignore="UsingOnClickInXml" />-->
 
-            <Button
+            <!--<Button
                 android:id="@+id/btn_extra_outside_process"
                 style="@style/button_activity_declomation_main"
                 android:backgroundTint="#66BB6A"
@@ -433,7 +433,7 @@
                 android:layout_height="wrap_content"
                 android:text="О прозрении"
                 android:onClick="openExtraProznie"
-                tools:ignore="UsingOnClickInXml" />
+                tools:ignore="UsingOnClickInXml" />-->
 
         </LinearLayout>
 

@@ -208,16 +208,22 @@
 
         .feeling-header {
             display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 8px;
+            flex-direction: column;
+            gap: 6px;
             padding: 13px 16px;
             cursor: pointer;
         }
-        .feeling-header .feeling-name { flex-basis: 100%; }
-        .feeling-header .feeling-info-btn,
-        .feeling-header .feeling-tag,
-        .feeling-header .feeling-arrow { flex-shrink: 0; }
+        .feeling-header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .feeling-header-bottom {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6px;
+        }
         .feeling-name {
             flex: 1;
             font-weight: 600;
@@ -255,8 +261,8 @@
         /* Цветовые акценты по типу чувства */
         .f-pleasant  { border-left: 3px solid #81C784; }
         .f-painful   { border-left: 3px solid #EF9A9A; }
-        .f-joy       { border-left: 3px solid var(--accent-color); }
-        .f-displeas  { border-left: 3px solid #90CAF9; }
+        .f-joy       { border-left: 3px solid #81C784; }
+        .f-displeas  { border-left: 3px solid #EF9A9A; }
         .f-equanim   { border-left: 3px solid #B0BEC5; }
 
         .feeling-tag {
@@ -269,8 +275,8 @@
         }
         .tag-pleasant { background: rgba(129,199,132,0.15); color: #81C784; border: 1px solid rgba(129,199,132,0.4); }
         .tag-painful  { background: rgba(239,154,154,0.15); color: #EF9A9A; border: 1px solid rgba(239,154,154,0.4); }
-        .tag-joy      { background: rgba(255,224,130,0.15); color: var(--accent-color); border: 1px solid rgba(255,224,130,0.4); }
-        .tag-displeas { background: rgba(144,202,249,0.12); color: #90CAF9; border: 1px solid rgba(144,202,249,0.4); }
+        .tag-joy      { background: rgba(129,199,132,0.15); color: #81C784; border: 1px solid rgba(129,199,132,0.4); }
+        .tag-displeas { background: rgba(239,154,154,0.15); color: #EF9A9A; border: 1px solid rgba(239,154,154,0.4); }
         .tag-equanim  { background: rgba(176,190,197,0.12); color: #B0BEC5; border: 1px solid rgba(176,190,197,0.4); }
 
         .feeling-prop { margin-bottom: 5px; }
@@ -363,6 +369,44 @@
             -webkit-tap-highlight-color: transparent;
         }
         .feeling-info-btn:active { background: rgba(255,255,255,0.15); }
+
+        /* ── Изучение ── */
+        .key-block {
+            border-left: 3px solid var(--accent-color);
+            background: rgba(255,224,130,0.06);
+            padding: 10px 14px;
+            border-radius: 0 8px 8px 0;
+            margin: 10px 0;
+            font-size: 0.85rem;
+            line-height: 1.75;
+            color: var(--text-main);
+        }
+        .key-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 4px;
+            display: block;
+            opacity: 0.8;
+        }
+        .num-hl {
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+        .pali-hl {
+            color: #B0BEC5;
+            font-style: italic;
+            font-size: 0.92em;
+        }
+
+        /* Палийские термины в текстах введений */
+        .para-body em {
+            color: #CFD8DC;
+            font-style: italic;
+            font-size: 0.95em;
+        }
     </style>
 </head>
 <body>
@@ -376,7 +420,7 @@
     <span class="intro-toggle-icon">▼</span>
 </div>
 <div class="intro-body" id="introBody">
-    <p>В собрании учений о чувствах, по первой классификации, выделяется три типа чувства, а именно: приятное, болезненное и то, что не является ни болезненным, ни приятным. Также чувство анализируется как пятеричное: удовольствие, боль, радость, недовольство и спокойствие.</p>
+    <div class="key-block"><span class="key-label">🔑 Ключевое определение</span><p>В собрании учений о чувствах, по первой классификации, выделяется три типа чувства, <strong style="color:var(--accent-color);">а именно:</strong> приятное, болезненное и то, что не является ни болезненным, ни приятным. Также чувство анализируется как пятеричное: удовольствие, боль, радость, недовольство и спокойствие.</p></div>
     <p>Чувство <em>(веданā)</em> является универсальным ментальным фактором, четасикой с функцией переживания «вкуса» объекта. Поскольку тот или иной тип чувства сопровождает каждую читту, чувство выполняет роль важной переменной, в терминах которой может быть классифицировано сознание. В этом разделе главной задачей автора является классификация всей совокупности читт по типу сопровождающего их чувства.</p>
     <p><strong style="color:var(--accent-color);">Три типа чувств:</strong> Чувство может быть проанализировано либо как троичное, либо как пятеричное. Если анализ проводится просто с точки зрения его эмоционального качества, то оно троично: приятное, болезненное и ни болезненное, ни приятное. В этой троичной классификации приятное чувство включает как телесное удовольствие, так и ментальные удовольствие или радость, а болезненное чувство включает как телесную боль, так и ментальные боль или недовольство.</p>
     <p><strong style="color:var(--accent-color);">Чувство анализируется как пятеричное:</strong> Когда чувство анализируется по типу управляющей способности <em>(индрийа)</em>, оно становится пятеричным. Эти пять типов чувств называются способностями потому, что они осуществляют власть или контроль <em>(индра)</em> над их ассоциированными состояниями в отношении эмоциональной стороны переживания объекта.</p>
@@ -390,93 +434,107 @@
 <details class="section-group">
     <summary class="section-summary">
         <span class="section-para-num">§§ 2–4</span>
-        <span>О чувствах · <span style="font-style:italic;font-weight:600;opacity:0.85;">Веданāсангаха</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span>О чувствах</span><span style="font-style:italic;font-weight:600;opacity:0.85;">Веданāсангаха</span></span>
     </summary>
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 2</span>
-        <span class="para-title">Анализ чувства</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="feeling-cards">
+    <div class="feeling-cards">
 
-            <div class="feeling-card f-pleasant" data-key="sukha">
-                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+        <div class="feeling-card f-pleasant" data-key="sukha">
+            <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                <div class="feeling-header-top">
                     <div class="feeling-name">Удовольствие <span class="feeling-pali">сукха</span></div>
+                    <span class="feeling-arrow">▶</span>
+                </div>
+                <div class="feeling-header-bottom">
                     <span class="feeling-tag tag-pleasant">👆 Телесное · Приятное</span>
                     <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
-                    <span class="feeling-arrow">▶</span>
-                </div>
-                <div class="feeling-desc">
-                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание желанного тактильного объекта.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>усиление ассоциированных состояний.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>телесное наслаждение.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>телесная управляющая способность.</p>
                 </div>
             </div>
+            <div class="feeling-desc">
+                <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание желанного тактильного объекта.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>усиление ассоциированных состояний.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>телесное наслаждение.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>телесная управляющая способность.</p>
+            </div>
+        </div>
 
-            <div class="feeling-card f-painful" data-key="dukkha">
-                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+        <div class="feeling-card f-painful" data-key="dukkha">
+            <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                <div class="feeling-header-top">
                     <div class="feeling-name">Боль <span class="feeling-pali">дуккха</span></div>
+                    <span class="feeling-arrow">▶</span>
+                </div>
+                <div class="feeling-header-bottom">
                     <span class="feeling-tag tag-painful">👆 Телесное · Болезненное</span>
                     <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
-                    <span class="feeling-arrow">▶</span>
-                </div>
-                <div class="feeling-desc">
-                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание нежеланного тактильного объекта.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>иссушение ассоциированных состояний.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>телесное страдание.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>телесная управляющая способность.</p>
                 </div>
             </div>
+            <div class="feeling-desc">
+                <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание нежеланного тактильного объекта.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>иссушение ассоциированных состояний.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>телесное страдание.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>телесная управляющая способность.</p>
+            </div>
+        </div>
 
-            <div class="feeling-card f-joy" data-key="somanassa">
-                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+        <div class="feeling-card f-joy" style="border-left:3px solid #81C784;" data-key="somanassa">
+            <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                <div class="feeling-header-top">
                     <div class="feeling-name">Радость <span class="feeling-pali">соманасса</span></div>
-                    <span class="feeling-tag tag-joy">👆 Ментальное · Приятное</span>
-                    <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
                     <span class="feeling-arrow">▶</span>
                 </div>
-                <div class="feeling-desc">
-                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание желанного объекта.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>вкушение желанного аспекта объекта.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>ментальное наслаждение.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>уравновешенность.</p>
+                <div class="feeling-header-bottom">
+                    <span class="feeling-tag tag-joy" style="background:rgba(129,199,132,0.15);color:#81C784;border:1px solid rgba(129,199,132,0.4);">👆 Ментальное · Приятное</span>
+                    <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
                 </div>
             </div>
+            <div class="feeling-desc">
+                <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание желанного объекта.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>вкушение желанного аспекта объекта.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>ментальное наслаждение.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>уравновешенность.</p>
+            </div>
+        </div>
 
-            <div class="feeling-card f-displeas" data-key="domanassa">
-                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+        <div class="feeling-card f-displeas" style="border-left:3px solid #EF9A9A;" data-key="domanassa">
+            <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                <div class="feeling-header-top">
                     <div class="feeling-name">Недовольство <span class="feeling-pali">доманасса</span></div>
-                    <span class="feeling-tag tag-displeas">👆 Ментальное · Болезненное</span>
-                    <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
                     <span class="feeling-arrow">▶</span>
                 </div>
-                <div class="feeling-desc">
-                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание нежеланного объекта.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>вкушение нежеланного аспекта объекта.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>ментальная болезнь.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>сердце-основа.</p>
+                <div class="feeling-header-bottom">
+                    <span class="feeling-tag tag-displeas" style="background:rgba(239,154,154,0.15);color:#EF9A9A;border:1px solid rgba(239,154,154,0.4);">👆 Ментальное · Болезненное</span>
+                    <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
                 </div>
             </div>
+            <div class="feeling-desc">
+                <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>переживание нежеланного объекта.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>вкушение нежеланного аспекта объекта.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>ментальная болезнь.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>сердце-основа.</p>
+            </div>
+        </div>
 
-            <div class="feeling-card f-equanim" data-key="upekkha">
-                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+        <div class="feeling-card f-equanim" data-key="upekkha">
+            <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                <div class="feeling-header-top">
                     <div class="feeling-name">Спокойствие <span class="feeling-pali">упеккха̄</span></div>
+                    <span class="feeling-arrow">▶</span>
+                </div>
+                <div class="feeling-header-bottom">
                     <span class="feeling-tag tag-equanim">👆 Нейтральное</span>
                     <button class="feeling-info-btn" onclick="event.stopPropagation();openFeelingDrawer(this.closest('.feeling-card').dataset.key)">👆 по сознаниям</button>
-                    <span class="feeling-arrow">▶</span>
-                </div>
-                <div class="feeling-desc">
-                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>чувствоваться как нейтральное.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>ни усиление, ни ослабление ассоциированных состояний.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>умиротворённость.</p>
-                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>сознание без восторженности.</p>
                 </div>
             </div>
-
+            <div class="feeling-desc">
+                <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>чувствоваться как нейтральное.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>ни усиление, ни ослабление ассоциированных состояний.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>умиротворённость.</p>
+                <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>сознание без восторженности.</p>
+            </div>
         </div>
+
+    </div>
     </div>
 </details>
 
@@ -486,8 +544,18 @@
 <details class="section-group">
     <summary class="section-summary">
         <span class="section-para-num">§§ 5–7</span>
-        <span>О корнях · <span style="font-style:italic;font-weight:600;opacity:0.85;">Хетусангаха</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span>О корнях</span><span style="font-style:italic;font-weight:600;opacity:0.85;">Хетусангаха</span></span>
     </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">Введение</span>
+        <span class="para-title">Общее введение</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="key-block"><span class="key-label">🔑 Ключевое определение</span><p>В собрании учений о корнях представлены шесть корней, <strong style="color:var(--accent-color);">а именно:</strong> жадность, злость, заблуждение, не-жадность, не-злость и не-заблуждение. В этом разделе все типы сознания классифицированы по типу сопровождающих их хету, или «корней». В Суттах слово хету используется в обобщённом смысле в качестве причины или мотива <em>(кāрана)</em>. Там оно является синонимом слова паччайа «условие», с которым оно часто соединено, и применяется оно к любому явлению, функционирующему как причина или мотив для других вещей. В Абхидхамме, однако, термин хету используется исключительно в специфическом смысле корня <em>(мула)</em>, применение которого строго ограничено шестью ментальными факторами, представляющими этически значимые качества.</p></div>
+        <div class="key-block"><span class="key-label">🔑 Определение корня</span><p>Формально корень — это ментальный фактор, который устанавливает твёрдость и стабильность в читтах и четасиках, с которыми он ассоциирован. Ибо сказано, что те читты, которые обладают корнями, являются твёрдыми и устойчивыми, как деревья, в то время как те, что не имеют корней, — слабы и неустойчивы, как мох.</p></div>
+    </div>
 
     <button class="para-btn" onclick="togglePara(this)">
         <span class="para-num">§ 5</span>
@@ -495,26 +563,128 @@
         <span class="para-arrow">▶</span>
     </button>
     <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+        <div class="feeling-cards">
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 6</span>
-        <span class="para-title">Классификация по типу сознания</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+            <div style="padding:8px 16px 4px;font-size:0.68rem;color:#EF9A9A;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;opacity:0.8;">Неблаготворные корни</div>
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 7</span>
-        <span class="para-title">Итог</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
+            <div class="feeling-card" data-key="lobha" style="border-left:3px solid #EF9A9A;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Жадность <span class="feeling-pali">лобха</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(239,154,154,0.12);color:#EF9A9A;border:1px solid rgba(239,154,154,0.35);">👆 Неблаготворный</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openRootDrawer('lobha')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>Хватание объекта <em>(подобно клейкой ловушке для птиц)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>Прилипание <em>(подобно тому, как мясо пристаёт к горячей сковороде)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>Неотпускание.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>Видение наслаждения в вещах, ведущих к рабству.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="dosa" style="border-left:3px solid #EF9A9A;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Злость / Отвращение <span class="feeling-pali">доса</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(239,154,154,0.12);color:#EF9A9A;border:1px solid rgba(239,154,154,0.35);">👆 Неблаготворный</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openRootDrawer('dosa')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>Жестокость <em>(подобно взбешённой змее)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>Сжигать собственную опору — ментальные и материальные явления, в которых она возникает.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>Преследование <em>(подобно врагу, получившему шанс)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>Основания для раздражения.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="moha" style="border-left:3px solid #EF9A9A;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Заблуждение <span class="feeling-pali">моха</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(239,154,154,0.12);color:#EF9A9A;border:1px solid rgba(239,154,154,0.35);">👆 Неблаготворный</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openRootDrawer('moha')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>Ментальная слепота или незнание <em>(аннана)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>Сокрытие настоящей природы объекта, непроникновение.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>Отсутствие правильного понимания или ментальная темнота.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>Немудрое внимание <em>(айонисо манасикара)</em>.</p>
+                </div>
+            </div>
+
+            <div style="padding:8px 16px 4px;font-size:0.68rem;color:#81C784;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;opacity:0.8;">Благотворные корни</div>
+
+            <div class="feeling-card" data-key="alobha" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Не-жадность <span class="feeling-pali">алобха</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid rgba(129,199,132,0.35);">👆 Благотворный</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openRootDrawer('alobha')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>Отсутствие желания к своему объекту или неприлипание <em>(подобно капле воды на листе лотоса)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>Не хватать, не удерживать <em>(подобно освобождённому монаху)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>Непривязанность.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="adosa" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Не-злоба <span class="feeling-pali">адоса</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid rgba(129,199,132,0.35);">👆 Благотворный</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openRootDrawer('adosa')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>Отсутствие свирепости или не-противление <em>(подобно кроткому другу)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>Удалять раздражение или жар <em>(подобно сандаловому дереву)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>Уступчивость или согласие <em>(подобно полной луне)</em>.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="amoha" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Не-заблуждение <span class="feeling-pali">амоха</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid rgba(129,199,132,0.35);">👆 Благотворный</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openRootDrawer('amoha')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p class="feeling-prop"><span class="feeling-prop-label">Характеристика: </span>Проникновение в вещи согласно их реальной природе.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Функция: </span>Освещать объектное поле <em>(подобно лампе)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Проявление: </span>Не-замешательство <em>(подобно проводнику в лесной чаще)</em>.</p>
+                    <p class="feeling-prop"><span class="feeling-prop-label">Непосредственная причина: </span>Мудрое внимание <em>(йонисо манасикара)</em>.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
+</details>
+
 </details>
 
 <!-- ══════════════════════════════════════
@@ -523,8 +693,19 @@
 <details class="section-group">
     <summary class="section-summary">
         <span class="section-para-num">§§ 8–11</span>
-        <span>О функциях · <span style="font-style:italic;font-weight:600;opacity:0.85;">Киччасангаха</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span>О функциях</span><span style="font-style:italic;font-weight:600;opacity:0.85;">Киччасангаха</span></span>
     </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">Введение</span>
+        <span class="para-title">Общее введение</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="key-block"><span class="key-label">🔑 Ключевое определение</span><p>В собрании учений о функциях представлены четырнадцать функций, <strong style="color:var(--accent-color);">а именно:</strong> 1) перерождение, <span class="num-hl">2</span>) жизнь-континуум, <span class="num-hl">3</span>) направление, 4) видение, <span class="num-hl">5</span>) слышание, <span class="num-hl">6</span>) обоняние, 7) воспринимание вкуса, <span class="num-hl">8</span>) осязание, <span class="num-hl">9</span>) получение, 10) исследование, <span class="num-hl">11</span>) определение, <span class="num-hl">12</span>) джавана, 13) регистрация и <span class="num-hl">14</span>) смерть.</p></div>
+        <p>Их дальнейшая классификация должна быть понята по стадиям как десятеричная, <strong style="color:var(--accent-color);">а именно:</strong> 1) стадия перерождения, <span class="num-hl">2</span>) стадия жизнь-континуума, <span class="num-hl">3</span>) стадия направления, 4) стадия пятеричного сенсорного сознания и т. д.</p>
+        <p>В этом разделе восемьдесят девять типов сознания классифицируются по типу функций. Функции выполняются либо в отдельных фазах внутри ментального процесса (<span class="num-hl">3</span>–<span class="num-hl">13</span>), либо в случаях, когда сознание возникает вне ментального процесса — в сознаниях вне процесса <em>(витхимутта)</em> (1, <span class="num-hl">2</span>, <span class="num-hl">14</span>).</p>
+    </div>
 
     <button class="para-btn" onclick="togglePara(this)">
         <span class="para-num">§ 8</span>
@@ -532,34 +713,247 @@
         <span class="para-arrow">▶</span>
     </button>
     <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+        <div class="feeling-cards">
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 9</span>
-        <span class="para-title">Классификация по типам сознания</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+            <div class="feeling-card" data-key="patisandhi" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">1. Перерождение <span class="feeling-pali">патисандхи</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Вне процесса</span>
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 10</span>
-        <span class="para-title">Классификация по количеству функций</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('patisandhi')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Эта функция выполняется при зачатии. Сознание перерождения <em>(патисандхичитта)</em> называется так, потому что соединяет новое существование с предыдущим. Оно возникает только единожды в любом индивидуальном существовании — в момент перерождения.</p>
+                </div>
+            </div>
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 11</span>
-        <span class="para-title">Итог</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
+            <div class="feeling-card" data-key="bhavanga" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">2. Жизнь-континуум <span class="feeling-pali">бхаванга</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Вне процесса</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('bhavanga')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Слово бхаванга означает «фактор» <em>(анга)</em> «существования» <em>(бхава)</em> — необходимое условие существования. Посредством этой функции непрерывность индивидуума сохраняется от зачатия до смерти. Бхавангачитты возникают и исчезают каждый момент, всегда когда нет активного ментального процесса. Когда объект ударяет в сенсорную дверь, бхаванга прерывается. После завершения ментального процесса она возобновляется, течёт как поток, не оставаясь статичной даже на два последовательных момента.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="avajjhana" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">3. Направление <span class="feeling-pali">āваджжана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid #81C78466;">👆 В процессе</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('avajjhana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Когда объект ударяет в сенсорную или ум-дверь, поток бхаванги вибрирует <em>(бхаванга-чалана)</em>, затем прерывается <em>(бхаванга-упаччхеда)</em>. Сразу же после этого возникает читта, направляющая к объекту — к одной из пяти сенсорных дверей или к ум-двери.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="dassana" style="border-left:3px solid #FFE082;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">4. Видение <span class="feeling-pali">дассана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(255,224,130,0.12);color:#FFE082;border:1px solid #FFE08266;">👆 В процессе · пятеричное</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('dassana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>В ментальном процессе у сенсорных дверей после направления возникает читта, напрямую осознающая ударивший объект. Эти функции обозначают элементарные мгновенные возникновения сознания, посредством которых сенсорные данные переживаются в их чистой непосредственности, предшествуя каким-либо идентификационным ментальным операциям.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="savana" style="border-left:3px solid #FFE082;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">5. Слышание <span class="feeling-pali">савана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(255,224,130,0.12);color:#FFE082;border:1px solid #FFE08266;">👆 В процессе · пятеричное</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('savana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Возникает при ударе звукового объекта в дверь уха. Элементарное мгновенное возникновение сознания, в котором звук переживается в чистой непосредственности — до какой-либо идентификации.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="ghayyana" style="border-left:3px solid #FFE082;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">6. Обоняние <span class="feeling-pali">гхāяна</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(255,224,130,0.12);color:#FFE082;border:1px solid #FFE08266;">👆 В процессе · пятеричное</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('ghayyana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Возникает при ударе запахового объекта в дверь носа. Относится к пятеричному сенсорному сознанию, занимающему одну стадию с видением и слышанием — между направлением и получением.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="sayyana" style="border-left:3px solid #FFE082;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">7. Воспринимание вкуса <span class="feeling-pali">сāяна</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(255,224,130,0.12);color:#FFE082;border:1px solid #FFE08266;">👆 В процессе · пятеричное</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('sayyana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Возникает при контакте вкусового объекта с дверью языка. Относится к пятеричному сенсорному сознанию.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="phusana" style="border-left:3px solid #FFE082;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">8. Осязание <span class="feeling-pali">пхусана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(255,224,130,0.12);color:#FFE082;border:1px solid #FFE08266;">👆 В процессе · пятеричное</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('phusana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Возникает при контакте тактильного объекта с дверью тела. Пять сенсорных функций — видение, слышание, обоняние, воспринимание вкуса и осязание — занимают одну стадию в ментальном процессе, поэтому четырнадцать функций сжимаются в десять стадий.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="sampaticchana" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">9. Получение <span class="feeling-pali">сампатиччхана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid #81C78466;">👆 В процессе</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('sampaticchana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Следует непосредственно за одной из пяти сенсорных читт и принимает объект, воспринятый ими. Вместе с исследованием и определением — три промежуточные функции, возникающие только в ментальных процессах у пяти сенсорных дверей. При ментальном процессе у ум-двери эти три функции не возникают.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="santirana" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">10. Исследование <span class="feeling-pali">сантирана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid #81C78466;">👆 В процессе</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('santirana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Следует за получением и исследует принятый объект. В ментальном процессе у ум-двери эта функция не возникает — за прерыванием бхаванги сразу следует направляющая к ум-двери, без промежуточных функций.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="vottapana" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">11. Определение <span class="feeling-pali">воттхапана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid #81C78466;">👆 В процессе</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('vottapana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Следует за исследованием и определяет объект, открывая путь для фазы джаваны. Это последняя из трёх промежуточных функций в сенсорном процессе. После определения возникает серия джаван.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="javana" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">12. Джавана <span class="feeling-pali">джавана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid #81C78466;">👆 В процессе</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('javana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Технический термин Абхидхаммы, лучше оставить непереведённым. Буквальный смысл — «бежать быстро». Это стадия ментального процесса, следующая за определением: серия читт (обычно семь, все идентичны по типу), которые «бегут быстро» над объектом в акте его познания. Стадия джаваны является самой важной с этической точки зрения — именно здесь возникают благотворные или неблаготворные читты.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="tadarammana" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">13. Регистрация <span class="feeling-pali">тадāрамма̄на</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid #81C78466;">👆 В процессе</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('tadarammana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Буквально — «иметь тот объект». Эта функция принимает в качестве объекта тот же объект, который был понят джаванами. Выполняется в течение двух моментов ума после джаваны — только когда объект является очень большим для чувств или ясным для ума. Если объект лишён значимости или ясности, регистрация не происходит, и поток сознания сразу впадает в бхавангу.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="cuti" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">14. Смерть <span class="feeling-pali">чути</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Вне процесса</span>
+
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openFuncDrawer('cuti')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Последняя читта, случающаяся в индивидуальном существовании. Обозначает выход из конкретной жизни. Эта читта того же типа, что и сознание перерождения и бхаванга, и относится к стороне существования вне процесса. Отличается от них выполняемой функцией — функцией ухода.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </details>
 
@@ -569,8 +963,19 @@
 <details class="section-group">
     <summary class="section-summary">
         <span class="section-para-num">§§ 12–15</span>
-        <span>О дверях · <span style="font-style:italic;font-weight:600;opacity:0.85;">Двāрасангаха</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span>О дверях</span><span style="font-style:italic;font-weight:600;opacity:0.85;">Двāрасангаха</span></span>
     </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">Введение</span>
+        <span class="para-title">Общее введение</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="key-block"><span class="key-label">🔑 Ключевое определение</span><p>В «Собрании учений о дверях» представлены шесть дверей, <strong style="color:var(--accent-color);">а именно:</strong> глаз-дверь, ухо-дверь, нос-дверь, язык-дверь, тело-дверь и ум-дверь.</p></div>
+        <p>Здесь сам глаз и есть глаз-дверь, то же для уха-двери и остальных. Но ум-дверью называется жизнь-континуум.</p>
+        <p>Термин «дверь» <em>(двāра)</em> в Абхидхамме используется метафорически для обозначения средства, через которое ум взаимодействует с миром объектов. Есть шесть дверей познания — шесть сенсорных дверей, посредством которых сознание и ментальные факторы выходят наружу для встречи с объектами и посредством которых объекты входят в поле сознания.</p>
+    </div>
 
     <button class="para-btn" onclick="togglePara(this)">
         <span class="para-num">§ 12</span>
@@ -578,34 +983,105 @@
         <span class="para-arrow">▶</span>
     </button>
     <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+        <div class="feeling-cards">
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 13</span>
-        <span class="para-title">Классификация по типу сознания</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+            <div class="feeling-card" data-key="door_cakkhu" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Глаз-дверь <span class="feeling-pali">чаккху-двāра</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Материальная · Сенсорная</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openDoorDrawer('cakkhu')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Сенсорность глаза — пасāдарупа — является дверью для читт, принадлежащих процессу глаз-двери, позволяя им познавать видимые формы. Пять дверей являются материальными явлениями <em>(рупа)</em>, а именно сенсорной материей <em>(пасāдарупа)</em> в каждом из пяти сенсорных органов.</p>
+                </div>
+            </div>
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 14</span>
-        <span class="para-title">Классификация по количеству дверей</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+            <div class="feeling-card" data-key="door_sota" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Ухо-дверь <span class="feeling-pali">сота-двāра</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Материальная · Сенсорная</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openDoorDrawer('sota')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Сенсорность уха служит дверью для процесса уха-двери, позволяя познавать звуки. Каждая из пяти материальных дверей позволяет читтам и ментальным факторам получать доступ к своим объектам и делает объекты доступными для сознания.</p>
+                </div>
+            </div>
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 15</span>
-        <span class="para-title">Итог</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
+            <div class="feeling-card" data-key="door_ghana" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Нос-дверь <span class="feeling-pali">гхāна-двāра</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Материальная · Сенсорная</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openDoorDrawer('ghana')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Сенсорность носа служит дверью для процесса носа-двери, позволяя познавать запахи.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="door_jivha" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Язык-дверь <span class="feeling-pali">дживхā-двāра</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Материальная · Сенсорная</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openDoorDrawer('jivha')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Сенсорность языка служит дверью для процесса языка-двери, позволяя познавать вкусы.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="door_kaya" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Тело-дверь <span class="feeling-pali">кāйа-двāра</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Материальная · Сенсорная</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openDoorDrawer('kaya')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Сенсорность тела служит дверью для процесса тела-двери, позволяя познавать тактильные объекты.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="door_mano" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Ум-дверь <span class="feeling-pali">манодвāра</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid #81C78466;">👆 Ментальная · Бхаванга</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openDoorDrawer('mano')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>В отличие от пяти материальных дверей, ум-дверь <em>(манодвāра)</em> не материальная, а ментальная <em>(нāма)</em> — ею является бхаванга-сознание <em>(жизнь-континуум)</em>. Когда объект познаётся процессом ум-двери, читта получает доступ к объекту исключительно через ум-дверь, без зависимости от какой-либо материальной управляющей сенсорной способности.<br><br>Разные комментаторы расходятся во мнении: <em>Вибхавини-тикā</em> утверждает, что ум-дверь — это прерывание бхаванги <em>(бхаванга-упаччхеда)</em>; другие — бхаванга-читта вместе с направляющей к ум-двери; Леди Саядо и комментарий к «Вибханге» — вся бхаванга. Āчарья Анурудха просто говорит: бхаванга называется ум-дверью.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </details>
 
@@ -615,8 +1091,21 @@
 <details class="section-group">
     <summary class="section-summary">
         <span class="section-para-num">§§ 16–19</span>
-        <span>Об объектах · <span style="font-style:italic;font-weight:600;opacity:0.85;">Āламбанасангаха</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span>Об объектах</span><span style="font-style:italic;font-weight:600;opacity:0.85;">Āламбанасангаха</span></span>
     </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">Введение</span>
+        <span class="para-title">Общее введение</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="key-block"><span class="key-label">🔑 Ключевое определение</span><p>В «Собрании учений об объектах» представлено шесть типов объектов, <strong style="color:var(--accent-color);">а именно:</strong> видимая форма-объект, звук-объект, запах-объект, вкус-объект, тактильный объект и ментальный объект.</p></div>
+        <p>Таким образом, видимая форма сама по себе и есть видимая форма-объект. Так же и звук является звук-объектом и т. д. Но ментальный объект шестеричен: сенсорная материя, тонкая материя, сознание, ментальные факторы, Ниббāна и концепции.</p>
+        <p>Каждое сознание вместе с сопутствующими ментальными факторами обязательно берёт объект, так как сознание по своей сути представляет собой активность по осознанию объекта. В пали используются два основных слова для обозначения объекта. Одно — <em>āраммана</em>, произведённое от корня, означающего «получать удовольствие в». Другое — <em>āламбана</em>, происходящее от совсем другого корня, означающего «то, за что можно уцепиться». Таким образом, объект — это то, в чём сознание и его спутники черпают удовлетворение, или то, за что они цепляются.</p>
+        <p>В Абхидхамме распознаются шесть типов объектов, соответствующих шести органам чувств. Первые пять все включены в категорию материальности. Четыре из них — видимая форма, звук, запах и вкус — считаются видами производной материи <em>(упāдāрупа)</em>, то есть вторичными материальными явлениями по отношению к основным элементам материи.</p>
+        <p>Каждый из первых пяти объектов может быть познан любым из следующих способов: 1) через соответствующий ему процесс сенсорной двери; <span class="num-hl">2</span>) через процесс ум-двери; <span class="num-hl">3</span>) через читты вне процесса, возникающие в роли перерождения, бхаванги и смерти. Ментальные объекты не могут быть познаны через процессы сенсорных дверей вовсе — только через процесс ум-двери или читтами вне процесса.</p>
+    </div>
 
     <button class="para-btn" onclick="togglePara(this)">
         <span class="para-num">§ 16</span>
@@ -624,34 +1113,105 @@
         <span class="para-arrow">▶</span>
     </button>
     <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+        <div class="feeling-cards">
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 17</span>
-        <span class="para-title">Классификация по типам дверей</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+            <div class="feeling-card" data-key="obj_rupa" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Видимая форма-объект <span class="feeling-pali">рупāраммана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Производная материя</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openObjDrawer('rupa')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Видимая форма сама по себе и есть видимая форма-объект. Она относится к категории производной материи <em>(упāдāрупа)</em> — вторичного материального явления по отношению к основным элементам материи. Познаётся через глаз-дверь, а также через процесс ум-двери и читтами вне процесса.</p>
+                </div>
+            </div>
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 18</span>
-        <span class="para-title">Классификация по типам сознания</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+            <div class="feeling-card" data-key="obj_sadda" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Звук-объект <span class="feeling-pali">саддāраммана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Производная материя</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openObjDrawer('sadda')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Звук является звук-объектом. Он относится к категории производной материи <em>(упāдāрупа)</em>. Познаётся через ухо-дверь, а также через процесс ум-двери и читтами вне процесса.</p>
+                </div>
+            </div>
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 19</span>
-        <span class="para-title">Итог</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
+            <div class="feeling-card" data-key="obj_gandha" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Запах-объект <span class="feeling-pali">гандхāраммана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Производная материя</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openObjDrawer('gandha')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Запах относится к категории производной материи <em>(упāдāрупа)</em>. Познаётся через нос-дверь, а также через процесс ум-двери и читтами вне процесса.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="obj_rasa" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Вкус-объект <span class="feeling-pali">расāраммана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Производная материя</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openObjDrawer('rasa')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Вкус относится к категории производной материи <em>(упāдāрупа)</em>. Познаётся через язык-дверь, а также через процесс ум-двери и читтами вне процесса.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="obj_photthabba" style="border-left:3px solid #FFE082;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Тактильный объект <span class="feeling-pali">пхоттхаббāраммана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(255,224,130,0.12);color:#FFE082;border:1px solid #FFE08266;">👆 Три первоэлемента</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openObjDrawer('photthabba')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Тактильный объект идентифицируется с тремя из четырёх первоэлементов: с <em>земля-элементом</em> (твёрдость или мягкость), с <em>огонь-элементом</em> (тепло или холод) и с <em>воздух-элементом</em> (расширение или давление). Четвёртый первоэлемент — вода-элемент, имеющий характеристику сцепления, — не может переживаться тактильностью и познаётся только через ум-дверь.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="obj_dhamma" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Ментальный объект <span class="feeling-pali">дхаммāраммана</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid #81C78466;">👆 Шестеричный · Только ум-дверь</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openObjDrawer('dhamma')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Ментальный объект шестеричен: <strong style="color:var(--accent-color)">1) сенсорная материя</strong> <em>(пасāдарупа)</em> — сенсорная воспринимающая субстанция в пяти сенсорных органах; <strong style="color:var(--accent-color)">2) тонкая материя</strong> <em>(сукхумарупа)</em> — шестнадцать видов материальных явлений, включая воду-элемент; <strong style="color:var(--accent-color)">3) сознание</strong> <em>(читта)</em> — может стать объектом, хотя читта не может познать саму себя, но может переживать прошлые читты в том же потоке ума или читты других существ; <strong style="color:var(--accent-color)">4) ментальные факторы</strong> <em>(четасики)</em> — пятьдесят два ментальных фактора могут стать объектами, например, когда человек осознаёт свои собственные чувства, воления или эмоции; <strong style="color:var(--accent-color)">5) Ниббāна</strong> — становится объектом читты в ментальном процессе благородных индивидуумов; <strong style="color:var(--accent-color)">6) концепции</strong> — конвенциональные реальности, вещи, не существующие в абсолютном смысле. Ментальные объекты не могут быть познаны через процессы сенсорных дверей — только через процесс ум-двери или читтами вне процесса.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </details>
 
@@ -661,8 +1221,20 @@
 <details class="section-group">
     <summary class="section-summary">
         <span class="section-para-num">§§ 20–22</span>
-        <span>Об основах · <span style="font-style:italic;font-weight:600;opacity:0.85;">Ваттхусангаха</span></span>
+        <span style="display:flex;flex-direction:column;gap:2px;"><span>Об основах</span><span style="font-style:italic;font-weight:600;opacity:0.85;">Ваттхусангаха</span></span>
     </summary>
+
+    <button class="para-btn" onclick="togglePara(this)">
+        <span class="para-num">Введение</span>
+        <span class="para-title">Общее введение</span>
+        <span class="para-arrow">▶</span>
+    </button>
+    <div class="para-body">
+        <div class="key-block"><span class="key-label">🔑 Ключевое определение</span><p>В сумме существует шесть основ, <strong style="color:var(--accent-color);">а именно:</strong> глаз-основа, ухо-, нос-, язык-, тело- и сердце-основа.</p></div>
+        <p>Все они также находятся в сенсорном мире. Но в тонкоматериальном мире есть только три основы; нос, язык и тело не найдены. В нематериальном мире не существует основ вообще.</p>
+        <div class="key-block"><span class="key-label">🔑 Ключевое различие</span><p>В тех мирах, где обретается материя, читты и ментальные факторы возникают в зависимости от условия, называемого основой <em>(ваттху)</em>. Основа — это физическая опора для возникновения сознания. Хотя первые пять основ совпадают с первыми пятью дверями — с сенсорной материей пяти управляющих сенсорных способностей, всё же основа не идентична двери, так как в порождении сознания основа играет другую роль. Дверь — это канал, через который читты и четасики ментального процесса получают доступ к объекту; основа — это физическая опора для возникновения читт и ментальных факторов.</p></div>
+        <p>Эта разница в функциях подразумевает важные последствия. Помимо сознания глаза в процессе у глаз-двери возникают и множество других типов читт, имеющих сенсорность глаза в качестве двери; но основой сенсорность глаза является исключительно для сознания глаза, а не для других читт, использующих глаз-дверь. В отношении к дверям читты, функционирующие как перерождение, бхаванга и сознание смерти, считаются «вне дверей». Но в мирах, которые включают и ментальное, и материальное, без основы не возникает ни одна читта.</p>
+    </div>
 
     <button class="para-btn" onclick="togglePara(this)">
         <span class="para-num">§ 20</span>
@@ -670,25 +1242,105 @@
         <span class="para-arrow">▶</span>
     </button>
     <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+        <div class="feeling-cards">
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 21</span>
-        <span class="para-title">Классификация по типу сознания</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
-    </div>
+            <div class="feeling-card" data-key="base_cakkhu_v" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Глаз-основа <span class="feeling-pali">чаккху-ваттху</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Сенсорная · Сенсорный мир</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openBaseDrawer('cakkhu_v')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Сенсорность глаза служит физической опорой исключительно для сознания глаза. Хотя в процессе у глаз-двери возникают многие другие типы читт, основой для них сенсорность глаза не является — эту роль она выполняет только для сознания глаза. В тонкоматериальном мире отсутствует.</p>
+                </div>
+            </div>
 
-    <button class="para-btn" onclick="togglePara(this)">
-        <span class="para-num">§ 22</span>
-        <span class="para-title">Итог</span>
-        <span class="para-arrow">▶</span>
-    </button>
-    <div class="para-body">
-        <div class="placeholder">Текст будет добавлен</div>
+            <div class="feeling-card" data-key="base_sota_v" style="border-left:3px solid #90CAF9;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Ухо-основа <span class="feeling-pali">сота-ваттху</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(144,202,249,0.12);color:#90CAF9;border:1px solid #90CAF966;">👆 Сенсорная · Сенсорный мир</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openBaseDrawer('sota_v')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Сенсорность уха служит физической опорой исключительно для сознания уха. Принцип тот же, что и для глаз-основы. В тонкоматериальном мире присутствует.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="base_ghana_v" style="border-left:3px solid #EF9A9A;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Нос-основа <span class="feeling-pali">гхāна-ваттху</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(239,154,154,0.12);color:#EF9A9A;border:1px solid #EF9A9A66;">👆 Сенсорная · Только сенсорный мир</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openBaseDrawer('ghana_v')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Сенсорность носа служит физической опорой для сознания носа. Не найдена в тонкоматериальном мире: опыт запаха грубее, чем зрение и слух, и поэтому исключён из возвышенного мира. Комментаторы говорят, что существа там обладают физической формой органа носа, но у него нет сенсорной материи.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="base_jivha_v" style="border-left:3px solid #EF9A9A;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Язык-основа <span class="feeling-pali">дживхā-ваттху</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(239,154,154,0.12);color:#EF9A9A;border:1px solid #EF9A9A66;">👆 Сенсорная · Только сенсорный мир</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openBaseDrawer('jivha_v')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Сенсорность языка служит физической опорой для сознания языка. Также отсутствует в тонкоматериальном мире по той же причине — воспринимание вкуса относится к более грубому типу опыта. Органы присутствуют, но без сенсорной материи.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="base_kaya_v" style="border-left:3px solid #EF9A9A;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Тело-основа <span class="feeling-pali">кāйа-ваттху</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(239,154,154,0.12);color:#EF9A9A;border:1px solid #EF9A9A66;">👆 Сенсорная · Только сенсорный мир</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openBaseDrawer('kaya_v')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Сенсорность тела служит физической опорой для сознания тела. Также отсутствует в тонкоматериальном мире — осязание относится к более грубому типу опыта. В нематериальном мире основ не существует вообще, так как все основы сделаны из материи.</p>
+                </div>
+            </div>
+
+            <div class="feeling-card" data-key="base_hadaya_v" style="border-left:3px solid #81C784;">
+                <div class="feeling-header" onclick="this.closest('.feeling-card').classList.toggle('open')">
+                    <div class="feeling-header-top">
+                        <div class="feeling-name">Сердце-основа <span class="feeling-pali">хадайа-ваттху</span></div>
+                        <span class="feeling-arrow">▶</span>
+                    </div>
+                    <div class="feeling-header-bottom">
+                        <span class="feeling-tag" style="background:rgba(129,199,132,0.12);color:#81C784;border:1px solid #81C78466;">👆 Ментальная · Все миры с материей</span>
+                        <button class="feeling-info-btn" onclick="event.stopPropagation();openBaseDrawer('hadaya_v')">👆 по сознаниям</button>
+                    </div>
+                </div>
+                <div class="feeling-desc">
+                    <p>Согласно палийским комментаторам, сердце служит физической поддержкой всем читтам, кроме двух наборов пятеричных сенсорных сознаний, которые берут соответствующую им сенсорность в качестве своей основы. В канонической Абхидхамме сердце-основа специально не выделена. «Паттхāна» просто говорит: «та материя, в зависимости от которой возникают ум-элемент и ум-сознание-элемент». Комментарии уточняют, что «та материя» — это сердце-основа, полость, расположенная в физическом сердце.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </details>
 
@@ -742,7 +1394,7 @@
             pali: 'сукха',
             count: '1 тип сознания',
             countColor: '#81C784',
-            body: '<p>Только <strong style="color:var(--accent-color)">одно сознание</strong> сопровождается удовольствием:</p><ul><li>Благотворное результирующее сознание тела — возникает при контакте с желанным тактильным объектом.</li></ul>'
+            body: '<p>Только <strong style="color:var(--accent-color)">одно сознание</strong> сопровождается удовольствием:</p><ul><li>Благотворное результирующее сознание тела — возникает при контакте с желанным тактильным объектом.</li></ul><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Комментарий</p><p>В случае четырёх дверей — глаза, уха, носа и языка — воздействие несильное, <em>подобно тому как ватные шары ударяют по ватным шарам</em> — результирующее чувство нейтральное. Но тело воспринимает объект через три первоэлемента — землю, огонь и воздух — воздействие сильное, <em>подобно удару молота</em>. При желанном объекте возникает благотворное результирующее сознание тела с удовольствием.</p>'
         },
         dukkha: {
             type: 'Телесное · Болезненное',
@@ -750,7 +1402,7 @@
             pali: 'дуккха',
             count: '1 тип сознания',
             countColor: '#EF9A9A',
-            body: '<p>Только <strong style="color:var(--accent-color)">одно сознание</strong> сопровождается болью:</p><ul><li>Неблаготворное результирующее сознание тела — возникает при контакте с нежеланным тактильным объектом.</li></ul>'
+            body: '<p>Только <strong style="color:var(--accent-color)">одно сознание</strong> сопровождается болью:</p><ul><li>Неблаготворное результирующее сознание тела — возникает при контакте с нежеланным тактильным объектом.</li></ul><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Комментарий</p><p>При нежеланном тактильном объекте воздействие сильное — <em>молот пробивает вату и ударяет о наковальню</em>. Другие четыре пары сенсорного сознания (глаз, ухо, нос, язык) всегда сопровождаются нейтральным чувством — боль возникает только при телесном контакте.</p>'
         },
         somanassa: {
             type: 'Ментальное · Приятное',
@@ -758,7 +1410,7 @@
             pali: 'соманасса',
             count: '62 типа сознания',
             countColor: '#FFE082',
-            body: '<p><strong style="color:var(--accent-color)">Шестьдесят два типа</strong> сознания сопровождаются радостью:</p><p><em>Сознания сенсорной среды (18):</em></p><ul><li>4 — коренящихся в жадности</li><li>12 — прекрасных сознаний сенсорной среды</li><li>2 — бескоренных: радостное исследующее и производящее улыбку</li></ul><p><em>Возвышенные и сверхмирские сознания (44):</em></p><ul><li>12 — относящихся к первой, второй, третьей и четвёртой джхāнам</li><li>32 — сверхмирских сознаний</li></ul>'
+            body: '<p><strong style="color:var(--accent-color)">Шестьдесят два типа</strong> сознания сопровождаются радостью:</p><p><em>Сознания сенсорной среды (18):</em></p><ul><li>4 — коренящихся в жадности</li><li>12 — прекрасных сознаний сенсорной среды</li><li>2 — бескоренных: радостное исследующее и производящее улыбку</li></ul><p><em>Возвышенные и сверхмирские сознания (44):</em></p><ul><li>12 — относящихся к первой, второй, третьей и четвёртой джхāнам</li><li>32 — сверхмирских сознаний</li></ul><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Комментарий</p><p>Непосредственный момент сенсорного сознания всегда сопровождается нейтральным чувством. Радость <em>(соманасса)</em> возникает лишь в <strong style="color:var(--accent-color)">фазе джаваны</strong> того же ментального процесса — при приятном виде, звуке, запахе или вкусе. У арахантов эта радость ассоциируется с функциональным сознанием.</p>'
         },
         domanassa: {
             type: 'Ментальное · Болезненное',
@@ -766,7 +1418,7 @@
             pali: 'доманасса',
             count: '2 типа сознания',
             countColor: '#90CAF9',
-            body: '<p><strong style="color:var(--accent-color)">Два типа</strong> сознания сопровождаются недовольством:</p><ul><li>Два сознания, связанные с отвращением <em>(доса)</em> — неблаготворные сознания с корнем злобы.</li></ul>'
+            body: '<p><strong style="color:var(--accent-color)">Два типа</strong> сознания сопровождаются недовольством:</p><ul><li>Два сознания, связанные с отвращением <em>(доса)</em> — неблаготворные сознания с корнем злобы.</li></ul><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Комментарий</p><p>Недовольство <em>(доманасса)</em> — ментальное чувство, возникает в <strong style="color:var(--accent-color)">фазе джаваны</strong> по отношению к неприятному объекту у ум-двери. Это не то же самое, что физическая боль при телесном контакте — оно возникает вслед за моментом простого сенсорного сознания, а не в прямой связи с ним.</p>'
         },
         upekkha: {
             type: 'Нейтральное',
@@ -774,7 +1426,7 @@
             pali: 'упеккха̄',
             count: '55 типов сознания',
             countColor: '#B0BEC5',
-            body: '<p><strong style="color:var(--accent-color)">Пятьдесят пять типов</strong> сознания сопровождаются спокойствием:</p><ul><li>6 неблаготворных читт (4 — в жадности, 2 — в заблуждении)</li><li>14 бескоренных читт</li><li>12 прекрасных читт сенсорной среды (по 4 в благотворных, результирующих и функциональных)</li><li>3 читты пятой джхāны</li><li>12 читт нематериальных джхāн</li><li>8 сверхмирских читт пятой джхāны (пути и плоды)</li></ul>'
+            body: '<p><strong style="color:var(--accent-color)">Пятьдесят пять типов</strong> сознания сопровождаются спокойствием:</p><ul><li>6 неблаготворных читт (4 — в жадности, 2 — в заблуждении)</li><li>14 бескоренных читт</li><li>12 прекрасных читт сенсорной среды (по 4 в благотворных, результирующих и функциональных)</li><li>3 читты пятой джхāны</li><li>12 читт нематериальных джхāн</li><li>8 сверхмирских читт пятой джхāны (пути и плоды)</li></ul><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Комментарий</p><p>Спокойствие <em>(упеккха̄)</em> возникает в фазе джаваны по отношению к объекту, рассматриваемому с <strong style="color:var(--accent-color)">безразличием или отрешённостью</strong>. Четыре пары сенсорного сознания (глаз, ухо, нос, язык) <em>всегда</em> сопровождаются спокойным чувством — в отличие от сознания тела, которое связано либо с удовольствием, либо с болью.</p>'
         }
     };
 
@@ -806,6 +1458,257 @@
     var startY = 0;
     document.getElementById('drawer').addEventListener('touchstart', function(e) { startY = e.touches[0].clientY; }, { passive: true });
     document.getElementById('drawer').addEventListener('touchend', function(e) { if (e.changedTouches[0].clientY - startY > 60) closeDrawer(); });
+</script>
+
+
+<script>
+    var rootData = {
+        lobha: {
+            type: 'Неблаготворный корень',
+            title: 'Жадность',
+            pali: 'лобха',
+            count: '8 типов сознания',
+            countColor: '#EF4444',
+            body: '<p><strong style="color:var(--accent-color)">Восемь читт</strong>, сопровождающихся жадностью, имеют жадность и заблуждение в качестве корней.</p><p>Из шести корней три — жадность, злость и заблуждение — являются исключительно неблаготворными. Три — не-жадность, не-злость и не-заблуждение — могут быть либо благотворными, либо неопределёнными, и являются прекрасными <em>(собхана)</em> четасиками.</p><hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\"><p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Комментарий · Висуддхимагга</p><p>Жадность — это условие корня <em>(хету-паччайа)</em>: прочно укрепившись в объекте посредством вожделения, она вбирает сок привлекательного и приятного объекта и разносит его по сопряжённым феноменам, пока не возникнут проступки на уровне тела и речи. Подобно корням дерева, которые вбирают сок почвы и разносят его вплоть до самой кроны — так жадность питает сопряжённые феномены, делая их «радостными» в отношении приятных объектов.</p>'
+        },
+        dosa: {
+            type: 'Неблаготворный корень',
+            title: 'Злость',
+            pali: 'доса',
+            count: '2 типа сознания',
+            countColor: '#EF9A9A',
+            body: '<p><strong style="color:var(--accent-color)">Две читты</strong>, сопровождающиеся отвращением, имеют злость и заблуждение в качестве корней.</p><hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\"><p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Комментарий · Висуддхимагга</p><p>Злоба посредством враждебности вбирает сок непривлекательного и неприятного объекта и разносит его по сопряжённым феноменам. Она возникает из-за враждебности по отношению к нежелаемым объектам. Если жадность — корень нечистоты по отношению к желаемому, то злоба — корень злодеяния, проистекающего из жадности.</p>'
+        },
+        moha: {
+            type: 'Неблаготворный корень',
+            title: 'Заблуждение',
+            pali: 'моха',
+            count: '12 типов сознания',
+            countColor: '#60A5FA',
+            body: '<p>Заблуждение присутствует во всех неблаготворных сознаниях:</p><ul><li>2 читты с одним корнем — только заблуждение</li><li>8 читт с жадностью — заблуждение + жадность</li><li>2 читты с злостью — заблуждение + злость</li></ul><p>Два типа сознания, ассоциированных с <strong style="color:var(--accent-color)">полным заблуждением</strong>, имеют только по одному корню — моха.</p><hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\"><p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Комментарий · Висуддхимагга</p><p>Заблуждение возникает из-за притуплённости ума по отношению к объектам и посредством этой притуплённости увеличивает сок бесцельного размышления. В методе Суттанты заблуждение называется <em>неведением (авидджа)</em> и вместе с жаждой является корнем всех страданий круга перерождений.</p>'
+        },
+        alobha: {
+            type: 'Благотворный корень',
+            title: 'Не-жадность',
+            pali: 'алобха',
+            count: '59 типов сознания',
+            countColor: '#81C784',
+            body: '<p>Не-жадность присутствует во всех прекрасных <em>(собхана)</em> читтах:</p><ul><li>12 прекрасных читт сенсорной среды, <strong style="color:var(--accent-color)">диссоциированных от знания</strong> — не-жадность + не-злость (2 корня)</li><li>12 прекрасных читт сенсорной среды, ассоциированных с знанием, + 35 возвышенных и сверхмирских — <strong style="color:var(--accent-color)">три корня</strong></li></ul><p>Не-жадность является благотворной в благотворных читтах и неопределённой в результирующих и функциональных.</p><hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\"><p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Комментарий · Висуддхимагга</p><p>Не-жадность устраняет жадность по отношению к желаемым объектам и увеличивает сок удовольствия, происходящего из отделённости от жадности. Когда человек видит опасность в чувственных удовольствиях и очищает ум — вместо нечистых поступков, укоренённых в жадности, появляются чистые поступки, слова и мысли. Не-жадность способствует возвышению сопряжённых феноменов вплоть до удовольствия достижения джхāны или удовольствия Пути и Плода. В методе Суттанты называется <em>элементом отречения (нэккхаммадхату)</em>.</p>'
+        },
+        adosa: {
+            type: 'Благотворный корень',
+            title: 'Не-злость',
+            pali: 'адоса',
+            count: '59 типов сознания',
+            countColor: '#A5D6A7',
+            body: '<p>Не-злость присутствует во всех прекрасных <em>(собхана)</em> читтах совместно с не-жадностью:</p><ul><li>12 прекрасных читт сенсорной среды, диссоциированных от знания — не-жадность + не-злость (2 корня)</li><li>47 читт с тремя корнями — не-жадность + не-злость + не-заблуждение</li></ul><hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\"><p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Комментарий · Висуддхимагга</p><p>Не-злоба увеличивает сок удовольствия, происходящего из отделённости от злобы к нежелаемым объектам. Подобно не-жадности и не-заблуждению, она в течение долгого времени продолжает определять сопряжённые феномены, словно делая их «радостными» в отношении благих дхамм. Не-злоба, проистекая из не-жадности, является корнем добродетели.</p>'
+        },
+        amoha: {
+            type: 'Благотворный корень',
+            title: 'Не-заблуждение',
+            pali: 'амоха',
+            count: '47 типов сознания',
+            countColor: '#FFE082',
+            body: '<p>Не-заблуждение присутствует только в сознаниях с тремя корнями:</p><ul><li>12 прекрасных читт сенсорной среды, <strong style="color:var(--accent-color)">ассоциированных с знанием</strong></li><li>35 возвышенных и сверхмирских типов сознания</li></ul><p>Двенадцать прекрасных читт сенсорной среды, <em>диссоциированных от знания</em>, не имеют не-заблуждения в качестве корня.</p><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Итог по корням</p><p>18 — без корней · 2 — с одним корнем · 22 — с двумя корнями · 47 — с тремя корнями</p><hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\"><p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Комментарий · Висуддхимагга</p><p>Не-заблуждение увеличивает сок удовольствия, происходящего из отделённости от заблуждения в отношении тусклых объектов. В методе Суттанты называется <em>знанием (виджджа)</em> и вместе с не-жадностью является корнем дхамм, ведущих к выходу из круга перерождений. Три благих корня — не-жадность, не-злоба и не-заблуждение — являются причинами всех ментальных и материальных феноменов, возникающих совместно с ними.</p>'
+        }
+    };
+
+    function openRootDrawer(key) {
+        var d = rootData[key];
+        if (!d) return;
+        document.getElementById('d-type').textContent  = d.type;
+        document.getElementById('d-title').textContent = d.title;
+        document.getElementById('d-pali').textContent  = ' · ' + d.pali;
+        document.getElementById('d-body').innerHTML =
+            '<span class="drawer-count" style="border-color:' + d.countColor + ';color:' + d.countColor + ';background:rgba(0,0,0,0.2);">' + d.count + '</span>' + d.body;
+        var overlay = document.getElementById('overlay');
+        var drawer  = document.getElementById('drawer');
+        overlay.classList.add('active');
+        requestAnimationFrame(function() {
+            overlay.classList.add('visible');
+            drawer.classList.add('active');
+        });
+    }
+</script>
+
+
+<script>
+    var funcData = {
+        patisandhi: {
+            count: '19 типов сознания',
+            countColor: '#90CAF9',
+            body: '<p><strong style="color:var(--accent-color)">Девятнадцать типов</strong> выполняют функции перерождения, жизнь-континуума и смерти:</p><ul><li>2 — исследующих, сопровождаемых спокойствием</li><li>8 — великих результирующих</li><li>9 — результирующих тонкоматериальной и нематериальной среды</li></ul><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Комментарий</p><p>Один и тот же тип сознания выполняет три функции — перерождения, жизнь-континуума и смерти. В момент зачатия он связывает новое существование со старым; в течение жизни возникает бесчисленно в пассивном потоке бхаванги; в момент смерти случается как уход из существования.</p><p>Неблаготворное результирующее исследующее сознание — для перерождения в горестных мирах. Благотворное результирующее исследующее с спокойствием — для человеческого перерождения с врождёнными дефектами. Восемь великих результирующих — для удачного перерождения в сенсорных измерениях.</p>'
+        },
+        bhavanga: {
+            count: '19 типов сознания',
+            countColor: '#90CAF9',
+            body: '<p>Те же <strong style="color:var(--accent-color)">девятнадцать типов</strong>, что и для перерождения и смерти. Один и тот же тип сознания выполняет все три функции в пределах одного существования.</p><p>Это тот же тип сознания, что и патисандхичитта, но выполняющий другую функцию — сохранение непрерывности существования между активными ментальными процессами.</p>'
+        },
+        avajjhana: {
+            count: '2 типа сознания',
+            countColor: '#81C784',
+            body: '<p><strong style="color:var(--accent-color)">Два типа</strong> выполняют функцию направления:</p><ul><li>Сознание, направляющее к пяти сенсорным дверям <em>(панчадвāрāваджжана)</em> — при ударе сенсорного объекта в одну из пяти дверей</li><li>Сознание, направляющее к ум-двери <em>(манодвāрāваджжана)</em> — при возникновении объекта у ум-двери</li></ul><p>Обе читты являются <strong style="color:var(--accent-color)">бескоренными функциональными</strong> <em>(ахетукакирийа)</em>.</p>'
+        },
+        dassana: {
+            count: '2 типа сознания',
+            countColor: '#FFE082',
+            body: '<p><strong style="color:var(--accent-color)">Два типа</strong> выполняют функцию видения:</p><ul><li>Благотворное результирующее сознание глаза</li><li>Неблаготворное результирующее сознание глаза</li></ul>'
+        },
+        savana: {
+            count: '2 типа сознания',
+            countColor: '#FFE082',
+            body: '<p><strong style="color:var(--accent-color)">Два типа</strong> выполняют функцию слышания:</p><ul><li>Благотворное результирующее сознание уха</li><li>Неблаготворное результирующее сознание уха</li></ul>'
+        },
+        ghayyana: {
+            count: '2 типа сознания',
+            countColor: '#FFE082',
+            body: '<p><strong style="color:var(--accent-color)">Два типа</strong> выполняют функцию обоняния:</p><ul><li>Благотворное результирующее сознание носа</li><li>Неблаготворное результирующее сознание носа</li></ul>'
+        },
+        sayyana: {
+            count: '2 типа сознания',
+            countColor: '#FFE082',
+            body: '<p><strong style="color:var(--accent-color)">Два типа</strong> выполняют функцию воспринимания вкуса:</p><ul><li>Благотворное результирующее сознание языка</li><li>Неблаготворное результирующее сознание языка</li></ul>'
+        },
+        phusana: {
+            count: '2 типа сознания',
+            countColor: '#FFE082',
+            body: '<p><strong style="color:var(--accent-color)">Два типа</strong> выполняют функцию осязания:</p><ul><li>Благотворное результирующее сознание тела</li><li>Неблаготворное результирующее сознание тела</li></ul>'
+        },
+        sampaticchana: {
+            count: '2 типа сознания',
+            countColor: '#81C784',
+            body: '<p><strong style="color:var(--accent-color)">Два типа</strong> получающего сознания <em>(сампатиччханачитта)</em> выполняют эту функцию.</p>'
+        },
+        santirana: {
+            count: '3 типа сознания',
+            countColor: '#81C784',
+            body: '<p><strong style="color:var(--accent-color)">Три типа</strong> выполняют функцию исследования:</p><ul><li>Бескоренная неблаготворная результирующая, сопровождаемая спокойствием</li><li>Бескоренная благотворная результирующая, сопровождаемая спокойствием</li><li>Бескоренная благотворная результирующая, сопровождаемая радостью</li></ul><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Примечание</p><p>Когда эти три сознания выполняют функцию регистрации, они не выполняют в тот же самый момент функцию исследования.</p>'
+        },
+        vottapana: {
+            count: '1 тип сознания',
+            countColor: '#81C784',
+            body: '<p><strong style="color:var(--accent-color)">Один тип</strong> выполняет функцию определения — бескоренная функциональная, сопровождаемая спокойствием.</p><p>Это та же читта, что выполняет функцию направления к ум-двери в процессе у ум-двери. Таким образом, одна и та же читта выполняет две разные функции в зависимости от контекста.</p>'
+        },
+        javana: {
+            count: '55 типов сознания',
+            countColor: '#81C784',
+            body: '<p><strong style="color:var(--accent-color)">Пятьдесят пять типов</strong> выполняют функцию джаваны:</p><ul><li>12 — неблаготворных читт</li><li>21 — благотворная читта</li><li>4 — результирующих (сверхмирские плоды)</li><li>18 — функциональных (кроме двух направляющих)</li></ul><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Примечание</p><p>Два типа направляющего сознания исключены. Стадия джаваны — самая важная этически, так как именно здесь возникают благотворные или неблаготворные читты.</p>'
+        },
+        tadarammana: {
+            count: '11 типов сознания',
+            countColor: '#81C784',
+            body: '<p><strong style="color:var(--accent-color)">Одиннадцать типов</strong> выполняют функцию регистрации:</p><ul><li>8 — великих результирующих</li><li>3 — исследующих сознания</li></ul><p>Все они являются результирующими читтами.</p>'
+        },
+        cuti: {
+            count: '19 типов сознания',
+            countColor: '#90CAF9',
+            body: '<p>Те же <strong style="color:var(--accent-color)">девятнадцать типов</strong>, что и для перерождения и жизнь-континуума. Один и тот же тип сознания выполняет все три функции в пределах одного существования.</p><p>Сознание смерти отличается от патисандхи и бхаванги лишь тем, что выполняет функцию ухода из конкретной жизни.</p>'
+        }
+    };
+
+    function openFuncDrawer(key) {
+        var d = funcData[key];
+        if (!d) return;
+        document.getElementById('d-type').textContent  = 'Функция · классификация по сознаниям';
+        document.getElementById('d-title').textContent = '';
+        document.getElementById('d-pali').textContent  = '';
+        document.getElementById('d-body').innerHTML =
+            '<span class="drawer-count" style="border-color:' + d.countColor + ';color:' + d.countColor + ';background:rgba(0,0,0,0.2);">' + d.count + '</span>' + d.body;
+        var overlay = document.getElementById('overlay');
+        var drawer  = document.getElementById('drawer');
+        overlay.classList.add('active');
+        requestAnimationFrame(function() {
+            overlay.classList.add('visible');
+            drawer.classList.add('active');
+        });
+    }
+</script>
+
+
+<script>
+    var doorData = {
+        cakkhu: { count: '46 типов сознания', countColor: '#90CAF9', body: '<p>Так, согласно обстоятельствам, в глаз-двери возникают <strong style="color:var(--accent-color)">сорок шесть типов сознания</strong>: направляющее к пяти дверям, сознания глаза, получающие, исследующие, определяющее, джаваны сенсорной среды и регистрирующие.</p><ul><li>1 — сознание, направляющее к пяти дверям</li><li>2 — сознания глаза</li><li>2 — получающих сознания</li><li>3 — исследующих сознания</li><li>1 — определяющее сознание</li><li>29 — джаван сенсорной среды (12 неблаготворных, 8 благотворных, 8 прекрасных функциональных, 1 функциональная, производящая улыбку)</li><li>8 — регистрирующих (прекрасные результирующие сенсорной среды)</li></ul><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Согласно обстоятельствам (йатхāраха̄м)</p><p>Хотя всего сорок шесть читт возникают в глаз-двери, они не могут возникнуть все вместе в одном процессе, но только так, как определено условиями. Леди Саядо выделяет следующие обстоятельства:</p><p><strong style="color:var(--accent-color)">1. Объект:</strong> если нежеланный — сознание глаза, получающее, исследующее и регистрирующее являются неблаготворными результирующими; если желанный — благотворными результирующими. Если объект исключительно желанный — исследующее и регистрирующее сопровождаются радостью, если умеренно желанный — спокойствием.</p><p><strong style="color:var(--accent-color)">2. Уровень:</strong> в сенсорном мире <em>(кāмабхуми)</em> могут возникнуть все сорок шесть; в тонкоматериальном мире <em>(рупабхуми)</em> регистрирующее сознание не возникает.</p><p><strong style="color:var(--accent-color)">3. Индивидуальность:</strong> у мирянина или практикующего джаваны будут благотворными или неблаготворными; у арахантa — функциональными.</p><p><strong style="color:var(--accent-color)">4. Внимание:</strong> при мудром внимании <em>(йонисо манасикāра)</em> возникнут благотворные джаваны, при немудром — неблаготворные.</p>' },
+        sota:   { count: '46 типов сознания', countColor: '#90CAF9', body: '' },
+        ghana:  { count: '46 типов сознания', countColor: '#90CAF9', body: '<p>Подобным же образом в нос-двери возникают <strong style="color:var(--accent-color)">сорок шесть типов сознания</strong> — направляющее к пяти дверям, сознания носа, получающие, исследующие, определяющее, джаваны сенсорной среды и регистрирующие.</p><p>Те же самые типы сознания, что и в глаз-двери, с заменой пары сознаний глаза на пару сознаний носа.</p>' },
+        jivha:  { count: '46 типов сознания', countColor: '#90CAF9', body: '<p>Подобным же образом в язык-двери возникают <strong style="color:var(--accent-color)">сорок шесть типов сознания</strong> — направляющее к пяти дверям, сознания языка, получающие, исследующие, определяющее, джаваны сенсорной среды и регистрирующие.</p><p>Те же самые типы сознания, что и в глаз-двери, с заменой пары сознаний глаза на пару сознаний языка.</p>' },
+        kaya:   { count: '46 типов сознания', countColor: '#90CAF9', body: '<p>Подобным же образом в тело-двери возникают <strong style="color:var(--accent-color)">сорок шесть типов сознания</strong> — направляющее к пяти дверям, сознания тела, получающие, исследующие, определяющее, джаваны сенсорной среды и регистрирующие.</p><p>Те же самые типы сознания, что и в глаз-двери, с заменой пары сознаний глаза на пару сознаний тела.</p>' },
+        mano:   { count: '46 типов сознания', countColor: '#81C784', body: '<p>В ум-двери возникают <strong style="color:var(--accent-color)">шестьдесят семь типов сознания</strong>: направляющее к ум-двери, пятьдесят пять джаван и регистрирующие.</p><p>Только двадцать две читты не возникают в ум-двери: направляющая к пяти дверям, два набора пятеричных сенсорных сознаний, два типа получающих сознаний, пять тонкоматериальных результирующих и четыре нематериальных результирующих.</p><hr style="border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0"><p style="font-size:0.78rem;color:#94A3B8;font-style:italic;">Классификация по количеству дверей</p><p><strong style="color:var(--accent-color)">Одна дверь:</strong> 36 типов. <strong style="color:var(--accent-color)">Пять дверей:</strong> три ум-элемента. <strong style="color:var(--accent-color)">Шесть дверей:</strong> радостное исследующее, определяющее и джаваны сенсорной среды. <strong style="color:var(--accent-color)">Шесть дверей или вне дверей:</strong> исследующие со спокойствием и великие результирующие. <strong style="color:var(--accent-color)">Исключительно вне дверей:</strong> возвышенные результирующие (9 читт) — только в соответствующих мирах в качестве сознания перерождения, бхаванги и смерти.</p><p>Итог: 36 — через одну дверь · 3 — через пять дверей · 31 — через шесть дверей · 10 — через шесть дверей или вне дверей · 9 — исключительно вне дверей.</p>' }
+    };
+
+    function openDoorDrawer(key) {
+        var d = doorData[key];
+        if (!d) return;
+        document.getElementById('d-type').textContent  = 'Дверь · классификация по сознаниям';
+        document.getElementById('d-title').textContent = '';
+        document.getElementById('d-pali').textContent  = '';
+        document.getElementById('d-body').innerHTML =
+            '<span class="drawer-count" style="border-color:' + d.countColor + ';color:' + d.countColor + ';background:rgba(0,0,0,0.2);">' + d.count + '</span>' + d.body;
+        var overlay = document.getElementById('overlay');
+        var drawer  = document.getElementById('drawer');
+        overlay.classList.add('active');
+        requestAnimationFrame(function() {
+            overlay.classList.add('visible');
+            drawer.classList.add('active');
+        });
+    }
+</script>
+
+
+<script>
+    var objData = {
+        rupa:        { count: "Один объект · только настоящее", countColor: '#90CAF9', body: "<p>Для всех типов сознания глаз-двери видимая форма является единственным объектом, и она относится только к настоящему (времени).</p><p>В ментальном процессе в глаз-двери все читты берут видимую форму в качестве своего объекта. Видимая форма является объектом не только исключительно для сознания глаза — сознание, направляющее к пяти дверям, получающие, исследующие, определяющее, джаваны и регистрирующие читты также возникают с той же видимой формой. Внутри этого процесса они не могут познать какой-либо другой объект.</p><p>Слово «настоящее» используется здесь в смысле «настоящее данного момента» <em>(кханикапаччуппанна)</em>. Так как материальные явления имеют более медленную скорость изменения, чем ментальные, одна и та же видимая форма может оставаться настоящей для всех читт в процессе у глаз-двери.</p><hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\"><p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Классификация по типам сознания</p><p>Сознание глаза берёт один объект — видимую форму. Тройной ум-элемент <em>(направляющее к пяти дверям и два вида получающего сознания)</em> берёт все пять типов сенсорных объектов, так как возникает во всех пяти дверях. Оставшиеся результирующие сенсорной среды — три исследующих и восемь великих результирующих — берут все виды объектов сенсорной среды в шести дверях.</p>" },
+        sadda:       { count: "Один объект · только настоящее", countColor: '#90CAF9', body: "<p>Так же, как и звуки являются объектами сознаний ухо-двери, и они относятся только к настоящему.</p><p>В ментальном процессе в ухо-двери все читты берут звук в качестве своего объекта. Принцип тот же, что и для глаз-двери: сознание, направляющее к пяти дверям, получающие, исследующие, определяющее, джаваны и регистрирующие читты возникают с тем же звуком. Внутри этого процесса они не могут познать какой-либо другой объект.</p>" },
+        gandha:      { count: "Один объект · только настоящее", countColor: '#90CAF9', body: "<p>Запахи являются объектами сознаний нос-двери, и они относятся только к настоящему. Принцип тот же, что и для глаз-двери.</p>" },
+        rasa:        { count: "Один объект · только настоящее", countColor: '#90CAF9', body: "<p>Вкусы являются объектами сознаний язык-двери, и они относятся только к настоящему. Принцип тот же, что и для глаз-двери.</p>" },
+        photthabba:  { count: "Один объект · только настоящее", countColor: '#FFE082', body: "<p>Тактильные объекты являются объектами сознаний тело-двери, и они относятся только к настоящему. Принцип тот же, что и для глаз-двери.</p><p>Следует помнить, что тактильный объект идентифицируется с тремя из четырёх первоэлементов: земля-элемент, огонь-элемент и воздух-элемент. Четвёртый первоэлемент — вода-элемент — имеет характеристику сцепления, и его не может переживать тактильность; он познаётся только через ум-дверь.</p>" },
+        dhamma:      { count: "Шесть типов · прошлое/настоящее/будущее/вневременное", countColor: '#81C784', body: "<p>Объект сознаний ум-двери бывает шести типов, и этот объект может быть настоящим, прошлым, будущим или независимым от времени, согласно обстоятельствам.</p><p>Читты, возникающие в процессе ум-двери, могут познавать любой из пяти физических сенсорных объектов, также как и все типы ментальных объектов, недоступных читтам сенсорных дверей. Читты ум-двери могут познавать объект, принадлежащий к любому из трёх периодов, или к периоду, не зависящему от времени <em>(кāлавимутта)</em>. Это применяется к Ниббāне и концепциям. Ниббāна вневременна, потому что её реальная природа не содержит возникновения, изменения и исчезновения; концепции вневременные, потому что они лишены внутренней сущностной природы.</p><p>Джаваны сенсорной среды, кроме сознания, производящего улыбку, берут объекты трёх времён и вневременные объекты. Сознание, производящее улыбку, берёт только объекты трёх времён. Возвышенные джаваны берут вневременные объекты <em>(концепции)</em>, кроме второй и четвёртой нематериальных джхāн, которые берут прошлые читты как объекты. Сверхмирские джаваны берут вневременной объект — Ниббāну.</p><hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\"><p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Сознания вне дверей</p><p>В случае сознаний вне дверей — перерождения, жизнь-континуума и смерти — объект шестеричен. Этим объектом является тот, который был воспринимаем в непосредственно предшествующем существовании одним из трёх способов. Он известен как <strong style=\"color:var(--accent-color)\">камма</strong>, <strong style=\"color:var(--accent-color)\">знак каммы</strong> или <strong style=\"color:var(--accent-color)\">знак судьбы</strong>.</p><p>Во всех трёх функциях — перерождения, бхаванги и смерти — читта удерживает тот же самый объект от момента перерождения до момента кончины.</p><p><strong style=\"color:var(--accent-color)\">1. Камма</strong> — хороший или плохой поступок, совершённый ранее в течение этой же жизни.</p><p><strong style=\"color:var(--accent-color)\">2. Знак каммы</strong> <em>(камманимитта)</em> — объект или изображение, ассоциирующиеся с поступком, определяющим перерождение. Например, верующий может видеть изображение монаха или храма, врач — изображение пациентов, мясник — рёв забиваемого стада или изображение ножа.</p><p><strong style=\"color:var(--accent-color)\">3. Знак судьбы</strong> <em>(гатинимитта)</em> — символ плана существования, на котором личность переродится. Личность, движущаяся к небесному перерождению, может видеть небесные храмы; к животному перерождению — леса или поля; к перерождению в аду — адские огни.</p><hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\"><p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Классификация по типам сознания</p><p><strong style=\"color:var(--accent-color)\">Неблаготворные и джаваны, диссоциированные от знания</strong> — берут все объекты, кроме сверхмирских. Девять сверхмирских состояний — четыре пути, их плоды и Ниббāна — из-за их сверхчистоты не могут быть восприняты неблаготворными читтами, а также читтами, лишёнными знания.</p><p><strong style=\"color:var(--accent-color)\">Благотворные сенсорной среды, ассоциированные с знанием, и благотворная читта прямого знания</strong> — берут все объекты, кроме пути и плода арахантства. Миряне и практикующие не могут знать сознание пути и плода арахантa. Читты пути и плода на более высокой стадии недоступны читтам практикующих на более низкой стадии.</p><p><strong style=\"color:var(--accent-color)\">Функциональные, ассоциированные с знанием, функциональная читта прямого знания и определяющая читта</strong> — могут брать объекты всех типов. Посредством функциональных читт арахант может знать свои собственные читты пути и плода, а функциональной читтой прямого знания — читты пути и плода других благородных учеников.</p><p><strong style=\"color:var(--accent-color)\">Нематериальные:</strong> второе и четвёртое нематериальные сознания берут возвышенные объекты. Остальные возвышенные — концепции. Сверхмирские — Ниббāну.</p><hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\"><p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Итог · семь групп</p><p>25 типов — с низшими объектами · 6 — с возвышенными · 21 — с концепциями · 8 — с Ниббāной · 20 — со всеми, кроме сверхмирских · 5 — со всеми, кроме высших пути и плода · 6 — со всеми объектами. Таким образом, их группирование семерично.</p>" }
+    };
+
+    function openObjDrawer(key) {
+        var d = objData[key];
+        if (!d || !d.body) return;
+        document.getElementById('d-type').textContent  = 'Объект · классификация по сознаниям';
+        document.getElementById('d-title').textContent = '';
+        document.getElementById('d-pali').textContent  = '';
+        document.getElementById('d-body').innerHTML =
+            (d.count ? '<span class="drawer-count" style="border-color:' + d.countColor + ';color:' + d.countColor + ';background:rgba(0,0,0,0.2);">' + d.count + '</span>' : '') + d.body;
+        var overlay = document.getElementById('overlay');
+        var drawer  = document.getElementById('drawer');
+        overlay.classList.add('active');
+        requestAnimationFrame(function() {
+            overlay.classList.add('visible');
+            drawer.classList.add('active');
+        });
+    }
+</script>
+
+
+<script>
+    var baseData = {
+        cakkhu_v: { count: "2 типа сознания", countColor: '#90CAF9', body: "<p>Пять элементов сенсорного сознания возникают полностью в зависимости от пяти чувствительных элементов как их соответствующих основ (2 × 5 = 10).</p>\n<p>Сознания глаза — благотворное результирующее и неблаготворное результирующее — возникают в зависимости от глаз-основы. Основой для них является исключительно сенсорность глаза; другие читты процесса у глаз-двери (направляющее, получающие, исследующие, джаваны, регистрирующие) берут сердце-основу.</p>\n<hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\">\n<p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Комментарий</p>\n<p>Пять элементов сенсорного сознания немного сильнее, чем ум-элемент, потому что они напрямую видят, слышат, обоняют, чувствуют вкус, осязают объект. Но они всё ещё сравнительно слабы, потому что идут между двумя читтами с основами, отличными от их собственных.</p>\n<p>В сенсорном мире семь элементов зависят от шести основ. В тонкоматериальном мире четыре зависят от трёх основ. В нематериальном мире один-единственный элемент ни от чего не зависит.</p>" },
+        sota_v:   { count: "2 типа сознания", countColor: '#90CAF9', body: "<p>Пять элементов сенсорного сознания возникают полностью в зависимости от пяти чувствительных элементов как их соответствующих основ (2 × 5 = 10).</p><p>Сознания уха — благотворное результирующее и неблаготворное результирующее — возникают в зависимости от ухо-основы. Принцип тот же, что и для глаз-основы.</p><p>Ухо-основа присутствует в тонкоматериальном мире — слух относится к более тонкому типу опыта. Первое сознание пути <em>(вхождение в поток)</em> не может случиться на нематериальных уровнях именно потому, что зависит от слушания Дхаммы, что предполагает управляющую способность уха.</p>" },
+        ghana_v:  { count: "2 типа сознания", countColor: '#EF9A9A', body: "<p>Сознания носа — благотворное результирующее и неблаготворное результирующее — возникают в зависимости от нос-основы.</p><p>Нос-основа отсутствует в тонкоматериальном мире. Опыт обоняния грубее, чем зрение и слух, и поэтому исключён из возвышенного мира. Комментаторы говорят, что существа там обладают физической формой органа носа, но у него нет сенсорной материи и поэтому он не может служить основой для обоняния. В сенсорном мире — 2 читты; в тонкоматериальном и нематериальном — не возникают.</p>" },
+        jivha_v:  { count: "2 типа сознания", countColor: '#EF9A9A', body: "<p>Сознания языка — благотворное результирующее и неблаготворное результирующее — возникают в зависимости от язык-основы.</p><p>Язык-основа отсутствует в тонкоматериальном мире по той же причине, что и нос-основа: воспринимание вкуса относится к более грубому типу опыта. Органы присутствуют, но без сенсорной материи. В сенсорном мире — 2 читты; в тонкоматериальном и нематериальном — не возникают.</p>" },
+        kaya_v:   { count: "2 типа сознания", countColor: '#EF9A9A', body: "<p>Сознания тела — благотворное результирующее и неблаготворное результирующее — возникают в зависимости от тело-основы.</p><p>Тело-основа отсутствует в тонкоматериальном мире. Осязание относится к более грубому типу опыта. Сознания, сопровождающиеся отвращением, не возникают в тонкоматериальных и нематериальных мирах, потому что отвращение уже было тщательно подавлено на этапе подготовки к джхāне.</p><p>В нематериальном мире основ не существует вообще, так как все основы сделаны из материи.</p>" },
+        hadaya_v: { count: "43 типа · всегда + 42 типа · иногда", countColor: '#81C784', body: "<p>Ум-элемент <em>(манодхāту)</em> — сознание, направляющее к пяти дверям, и два типа получающего сознания — возникает в зависимости от сердца. Также ум-сознание-элемент <em>(мановиннāнадхāту)</em> — включающий исследующие (3), великие результирующие (8), два сопровождающихся отвращением, первое сознание пути, сознание, производящее улыбку, и сознания тонкоматериальной среды (15) — случается в зависимости от сердца (3 + 3 + 8 + 2 + 1 + 1 + 15 = 33).</p>\n<p><strong style=\"color:var(--accent-color)\">43 типа сознания</strong> возникают всегда в зависимости от сердце-основы: они не возникают в нематериальном мире, только в мирах, где существует материя.</p>\n<p><strong style=\"color:var(--accent-color)\">42 типа</strong> — оставшиеся классы сознания (благотворные, неблаготворные, функциональные, сверхмирские) — могут быть либо зависимы, либо независимы от сердце-основы. Они зависимы, когда возникают в сенсорном и тонкоматериальном мирах, и независимы, когда случаются в нематериальном мире.</p>\n<p><strong style=\"color:var(--accent-color)\">4 результирующих нематериальной среды</strong> возникают только в нематериальных мирах и поэтому не зависят ни от какой основы.</p>\n<hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\">\n<p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Комментарий</p>\n<p>Три читты ум-элемента осуществляют очень слабое схватывание объекта: сознание, направляющее к пяти дверям, сталкивается с абсолютно новым объектом, за ним следует читта с другой основой; двоичное получающее сознание следует за читтой с другой основой. Читты ум-сознание-элемента, имея перед собой и после себя читты с той же основой, способны на более полный и более чистый когнитивный захват объекта.</p>\n<p>Сознание, производящее улыбку, всегда зависит от сердца, так как требует тела, чтобы произвести улыбку. Первое сознание пути не может случиться на нематериальных уровнях, потому что зависит от слушания Дхаммы, что предполагает управляющую способность уха.</p>\n<hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\">\n<p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;\">Итог · три мира</p>\n<p>В сенсорном мире: семь элементов зависят от шести основ. В тонкоматериальном мире: четыре зависят от трёх основ. В нематериальном мире: один-единственный элемент ни от чего не зависит.</p>\n<p>43 типа сознания возникают в зависимости от основы · 42 — с основой или без · 4 нематериальных результирующих — без всякой основы.</p>\n<hr style=\"border:none;border-top:1px solid rgba(255,255,255,0.08);margin:12px 0\">\n<p style=\"font-size:0.78rem;color:#94A3B8;font-style:italic;text-align:center;\">Iti Абхидхамматтхасангахе · Пакиннакасангахавибхāго нāма · татийо париччхедо</p>\n<p style=\"text-align:center;color:var(--text-dim);font-size:0.82rem;\">На этом заканчивается третья глава «Руководства по Абхидхамме», озаглавленная «Собрание учений о разном».</p>" }
+    };
+
+    function openBaseDrawer(key) {
+        var d = baseData[key];
+        if (!d || !d.body) return;
+        document.getElementById('d-type').textContent  = 'Основа · классификация по сознаниям';
+        document.getElementById('d-title').textContent = '';
+        document.getElementById('d-pali').textContent  = '';
+        document.getElementById('d-body').innerHTML =
+            (d.count ? '<span class="drawer-count" style="border-color:' + d.countColor + ';color:' + d.countColor + ';background:rgba(0,0,0,0.2);">' + d.count + '</span>' : '') + d.body;
+        var overlay = document.getElementById('overlay');
+        var drawer  = document.getElementById('drawer');
+        overlay.classList.add('active');
+        requestAnimationFrame(function() {
+            overlay.classList.add('visible');
+            drawer.classList.add('active');
+        });
+    }
 </script>
 
 </body>
