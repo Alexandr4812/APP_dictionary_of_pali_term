@@ -4,10 +4,8 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.media.MediaPlayer;
-import android.text.TextUtils;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -21,7 +19,7 @@ import java.util.Locale;
 
 
 public abstract class BaseActivityClass extends AppCompatActivity {
-    protected static final String LANGUAGE_PREF_KEY = "LANGUAGE_PREF_KEY";
+    private static final Locale APP_LOCALE = new Locale("ru");
     private MediaPlayer mediaPlayer;
 
     @Override
@@ -53,17 +51,9 @@ public abstract class BaseActivityClass extends AppCompatActivity {
 
     @Override
     protected void attachBaseContext(Context newBase) {
-        // Получаем сохраненный язык через ваш метод
-        SharedPreferences preferences = newBase.getSharedPreferences("locale", Context.MODE_PRIVATE);
-        String savedLanguage = preferences.getString(LANGUAGE_PREF_KEY, "ru"); // "ru" по умолчанию
-
-        Locale locale = new Locale(savedLanguage);
-        Locale.setDefault(locale);
-
+        Locale.setDefault(APP_LOCALE);
         Configuration config = newBase.getResources().getConfiguration();
-        config.setLocale(locale);
-
-        // Создаем контекст с выбранным языком
+        config.setLocale(APP_LOCALE);
         Context context = newBase.createConfigurationContext(config);
         super.attachBaseContext(context);
     }
@@ -75,32 +65,10 @@ public abstract class BaseActivityClass extends AppCompatActivity {
     }
 
     protected void updateLocale() {
-        String savedLanguage = getSavedLanguage();
-        // Если в настройках пусто, берем "ru"
-        if (TextUtils.isEmpty(savedLanguage)) {
-            savedLanguage = "ru";
-        }
-
-        Locale locale = new Locale(savedLanguage);
-        Locale.setDefault(locale);
-
+        Locale.setDefault(APP_LOCALE);
         Configuration config = getResources().getConfiguration();
-        config.setLocale(locale);
-
-        // Обновляем ресурсы текущей активити
+        config.setLocale(APP_LOCALE);
         getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-    }
-
-    protected String getSavedLanguage() {
-        SharedPreferences preferences = getSharedPreferences("locale", Context.MODE_PRIVATE);
-        return preferences.getString(LANGUAGE_PREF_KEY, "");
-    }
-
-    protected void saveLanguage(String language) {
-        SharedPreferences preferences = getSharedPreferences("locale", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(LANGUAGE_PREF_KEY, language);
-        editor.apply();
     }
 
     protected void startIntentActivityAndFinish(Class<?> cls) {
@@ -145,8 +113,6 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
-
 
 
 }

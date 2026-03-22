@@ -9,9 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.OnBackPressedCallback;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.graphics.Insets;
-import androidx.core.os.LocaleListCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
@@ -24,9 +22,6 @@ public class DeklomationMainActivity extends BaseActivityClass {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Принудительно устанавливаем русскую локаль для всего приложения
-        LocaleListCompat appLocales = LocaleListCompat.forLanguageTags("ru");
-        AppCompatDelegate.setApplicationLocales(appLocales);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deklomation_main);
 
