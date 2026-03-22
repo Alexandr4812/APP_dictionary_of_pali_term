@@ -189,42 +189,38 @@
 
             <ImageButton
                 android:id="@+id/buttonOrientationPortrait"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:background="@color/my_main_color"
                 android:contentDescription="@string/orientation_portrait"
                 android:onClick="setOrientationPortrait"
-                android:padding="10dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_orientation_portrait"
+                android:src="@drawable/portrait"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/buttonOrientationLandscape"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:background="@color/my_main_color"
                 android:contentDescription="@string/orientation_landscape"
                 android:onClick="setOrientationLandscape"
-                android:padding="10dp"
                 android:scaleType="fitCenter"
-                android:src="@drawable/ic_orientation_landscape"
+                android:src="@drawable/landscape"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/buttonOrientationSensor"
-                android:layout_width="52dp"
-                android:layout_height="52dp"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
                 android:layout_gravity="center"
                 android:background="@color/my_main_color"
                 android:contentDescription="@string/orientation_sensor"
                 android:onClick="setOrientationSensor"
-                android:padding="10dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_orientation_auto"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                android:scaleType="centerInside"
+                android:src="@drawable/auto_rotate" />
 
             <ImageButton
                 android:id="@+id/imageButtonInfoMain"
