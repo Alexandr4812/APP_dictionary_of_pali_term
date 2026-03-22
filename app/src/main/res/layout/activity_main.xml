@@ -168,8 +168,9 @@
 
     <ScrollView
         android:id="@+id/popupMenuSV"
-        android:layout_width="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minWidth="120dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -182,7 +183,46 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="4dp"
+                android:paddingBottom="2dp"
+                android:text="@string/orientation_menu_title"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/buttonOrientationPortrait"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:onClick="setOrientationPortrait"
+                android:text="@string/orientation_portrait"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/buttonOrientationLandscape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:onClick="setOrientationLandscape"
+                android:text="@string/orientation_landscape"
+                android:textSize="11sp" />
+
+            <Button
+                android:id="@+id/buttonOrientationSensor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:onClick="setOrientationSensor"
+                android:text="@string/orientation_sensor"
+                android:textSize="11sp" />
 
             <ImageButton
                 android:id="@+id/imageButtonInfoMain"

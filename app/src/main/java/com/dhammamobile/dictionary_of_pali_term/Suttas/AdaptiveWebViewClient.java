@@ -1,5 +1,6 @@
 package com.dhammamobile.dictionary_of_pali_term.Suttas;
 
+import android.graphics.Bitmap;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -7,6 +8,12 @@ import android.webkit.WebViewClient;
  * WebViewClient с поддержкой автоматического адаптивного масштабирования для HTML файлов сутт
  */
 public class AdaptiveWebViewClient extends WebViewClient {
+
+    @Override
+    public void onPageStarted(WebView view, String url, Bitmap favicon) {
+        super.onPageStarted(view, url, favicon);
+        WebViewLightHelper.apply(view);
+    }
 
     @Override
     public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -46,10 +53,15 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "} else {" +
                 "  head.appendChild(viewport);" +
                 "}" +
+                "var metaScheme = document.createElement('meta');" +
+                "metaScheme.name = 'color-scheme';" +
+                "metaScheme.content = 'light';" +
+                "head.appendChild(metaScheme);" +
                 "var style = document.createElement('style');" +
                 "style.type = 'text/css';" +
                 "style.textContent = " +
-                "'body { word-wrap: break-word; overflow-wrap: break-word; }' +" +
+                "'html { color-scheme: light !important; }' +" +
+                "'body { background-color: #ffffff !important; color: #000000 !important; word-wrap: break-word; overflow-wrap: break-word; }' +" +
                 "'table { max-width: 100%; table-layout: auto; }' +" +
                 "'td, th { word-wrap: break-word; overflow-wrap: break-word; }';" +
                 "document.getElementsByTagName('head')[0].appendChild(style);" +

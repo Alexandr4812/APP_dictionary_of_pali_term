@@ -73,6 +73,8 @@ public class SuttasDighaActivity extends BaseActivityClass {
         webView.getSettings().setAllowContentAccess(true);         // Дополнительно, для доступа к контенту
         webView.getSettings().setAllowUniversalAccessFromFileURLs(true); // Для file:// скриптов (может понадобиться)
 
+        WebViewLightHelper.apply(webView);
+
         // Загрузка первой страницы
         String intentFilePath = getIntent().getStringExtra("FILE_PATH");
         int intentScrollY = getIntent().getIntExtra("SCROLL_Y", 0);

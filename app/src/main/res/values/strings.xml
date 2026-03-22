@@ -10,6 +10,10 @@
     <string name="mainButtonShortSuttas">ПАЛИЙСКИЙ КАНОН</string>
     <string name="mainButtonMonksRules">МОНАХАМ И МИРЯНАМ</string>
     <string name="todo" translatable="false">TODO</string>
+    <string name="orientation_menu_title">Ориентация экрана</string>
+    <string name="orientation_portrait">Вертикально</string>
+    <string name="orientation_landscape">Горизонтально</string>
+    <string name="orientation_sensor">Автоповорот</string>
     <string name="namerenie_sumedhi">1. Намерение Сумедхи</string>
     <string name="son_mahamayi">2. Сон Махамайи</string>
     <string name="rogdenie_sidharthi">3. Рождение Сидхартхи</string>

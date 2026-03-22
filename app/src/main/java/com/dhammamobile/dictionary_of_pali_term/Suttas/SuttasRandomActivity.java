@@ -58,6 +58,8 @@ public class SuttasRandomActivity extends BaseActivityClass {
         webView.getSettings().setLoadWithOverviewMode(true);
         webView.clearCache(true);
 
+        WebViewLightHelper.apply(webView);
+
         BookmarkManager bookmarkManager = new BookmarkManager(this);
 
         webView.setWebViewClient(new AdaptiveWebViewClient() {

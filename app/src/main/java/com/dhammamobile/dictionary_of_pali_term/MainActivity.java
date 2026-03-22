@@ -9,7 +9,6 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -28,9 +27,6 @@ public class MainActivity extends BaseActivityClass {
 
     Button toBackFromInfo;
     WebView webViewMainInfo;
-
-    private TextView textView;
-    private String textToAnimate;
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -102,11 +98,26 @@ public class MainActivity extends BaseActivityClass {
         startIntentActivityAndFinish(MainActivity.class);
     }
 
+    public void setOrientationPortrait(View view) {
+        OrientationPreferenceHelper.saveAndApply(this, OrientationPreferenceHelper.MODE_PORTRAIT);
+    }
+
+    public void setOrientationLandscape(View view) {
+        OrientationPreferenceHelper.saveAndApply(this, OrientationPreferenceHelper.MODE_LANDSCAPE);
+    }
+
+    public void setOrientationSensor(View view) {
+        OrientationPreferenceHelper.saveAndApply(this, OrientationPreferenceHelper.MODE_SENSOR);
+    }
+
     public void toPopupMenu(View view) {
         ScrollView scrollText = findViewById(R.id.popupMenuSV);
 
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
         imageButtonInfo.startAnimation(slideDown);
+        findViewById(R.id.buttonOrientationPortrait).startAnimation(slideDown);
+        findViewById(R.id.buttonOrientationLandscape).startAnimation(slideDown);
+        findViewById(R.id.buttonOrientationSensor).startAnimation(slideDown);
 
         ImageButton imageButtonEx = findViewById(R.id.button_menu_exit);
         ImageButton imageButtonM = findViewById(R.id.button_menu);

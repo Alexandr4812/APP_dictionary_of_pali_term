@@ -60,6 +60,8 @@ public class SuttasAnguttaraActivity extends BaseActivityClass {
         webView.getSettings().setAllowUniversalAccessFromFileURLs(true);
         webView.clearCache(true);
 
+        WebViewLightHelper.apply(webView);
+
         String intentFilePath = getIntent().getStringExtra("FILE_PATH");
         int intentScrollY = getIntent().getIntExtra("SCROLL_Y", 0);
 

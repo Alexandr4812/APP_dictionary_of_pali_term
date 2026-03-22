@@ -3,13 +3,14 @@ package com.dhammamobile.dictionary_of_pali_term.Suttas; // <-- замени н�
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
-import androidx.appcompat.app.AppCompatActivity;
+
+import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 
 /**
  * Activity для экрана закладок.
  * Загружает bookmarks.html из assets и передаёт данные закладок + историю.
  */
-public class BookmarksActivity extends AppCompatActivity {
+public class BookmarksActivity extends BaseActivityClass {
 
     private WebView         webView;
     private BookmarkManager bookmarkManager;
@@ -19,6 +20,7 @@ public class BookmarksActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         webView = new WebView(this);
+        WebViewLightHelper.apply(webView);
         setContentView(webView);
 
         bookmarkManager = new BookmarkManager(this);

@@ -14,6 +14,7 @@ public class DhammaApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags("ru"));
         SharedPreferences p = getSharedPreferences(LOCALE_PREFS, MODE_PRIVATE);
         if (p.contains(LEGACY_LANGUAGE_PREF_KEY)) {

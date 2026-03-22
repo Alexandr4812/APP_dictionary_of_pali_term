@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.media.MediaPlayer;
+import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
@@ -23,11 +24,13 @@ public abstract class BaseActivityClass extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
 
     @Override
-    protected void onCreate(android.os.Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         // Устанавливаем флаг, чтобы экран не гас
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         super.onCreate(savedInstanceState);
+
+        OrientationPreferenceHelper.apply(this);
 
         // Принудительно отключаем темную тему (чтобы не было багов на Xiaomi)
         androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO);
