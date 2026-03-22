@@ -187,42 +187,44 @@
             android:paddingStart="4dp"
             android:paddingEnd="4dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingTop="4dp"
-                android:paddingBottom="2dp"
-                android:text="@string/orientation_menu_title"
-                android:textColor="@color/white"
-                android:textSize="10sp" />
-
-            <Button
+            <ImageButton
                 android:id="@+id/buttonOrientationPortrait"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="40dp"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:background="@color/my_main_color"
+                android:contentDescription="@string/orientation_portrait"
                 android:onClick="setOrientationPortrait"
-                android:text="@string/orientation_portrait"
-                android:textSize="11sp" />
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_orientation_portrait"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/buttonOrientationLandscape"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="40dp"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:background="@color/my_main_color"
+                android:contentDescription="@string/orientation_landscape"
                 android:onClick="setOrientationLandscape"
-                android:text="@string/orientation_landscape"
-                android:textSize="11sp" />
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_orientation_landscape"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
-            <Button
+            <ImageButton
                 android:id="@+id/buttonOrientationSensor"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:minHeight="40dp"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:background="@color/my_main_color"
+                android:contentDescription="@string/orientation_sensor"
                 android:onClick="setOrientationSensor"
-                android:text="@string/orientation_sensor"
-                android:textSize="11sp" />
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_orientation_auto"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/imageButtonInfoMain"

@@ -20,7 +20,7 @@ public final class WebViewLightHelper {
         if (webView == null) {
             return;
         }
-        webView.setBackgroundColor(Color.WHITE);
+        webView.setBackgroundColor(Color.TRANSPARENT);
         WebSettings settings = webView.getSettings();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             settings.setForceDark(WebSettings.FORCE_DARK_OFF);

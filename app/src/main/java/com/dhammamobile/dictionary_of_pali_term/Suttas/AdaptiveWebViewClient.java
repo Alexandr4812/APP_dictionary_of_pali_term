@@ -53,15 +53,10 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "} else {" +
                 "  head.appendChild(viewport);" +
                 "}" +
-                "var metaScheme = document.createElement('meta');" +
-                "metaScheme.name = 'color-scheme';" +
-                "metaScheme.content = 'light';" +
-                "head.appendChild(metaScheme);" +
                 "var style = document.createElement('style');" +
                 "style.type = 'text/css';" +
                 "style.textContent = " +
-                "'html { color-scheme: light !important; }' +" +
-                "'body { background-color: #ffffff !important; color: #000000 !important; word-wrap: break-word; overflow-wrap: break-word; }' +" +
+                "'body { word-wrap: break-word; overflow-wrap: break-word; }' +" +
                 "'table { max-width: 100%; table-layout: auto; }' +" +
                 "'td, th { word-wrap: break-word; overflow-wrap: break-word; }';" +
                 "document.getElementsByTagName('head')[0].appendChild(style);" +
