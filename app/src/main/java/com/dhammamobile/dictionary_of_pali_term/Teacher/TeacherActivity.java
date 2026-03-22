@@ -23,6 +23,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
+import com.dhammamobile.dictionary_of_pali_term.Rules.RulesBhikkhuPatimokhaParajikaActivity;
 
 import java.util.Locale;
 
@@ -195,6 +196,11 @@ public class TeacherActivity extends BaseActivityClass {
 
     protected void onResume() {
         super.onResume();
+    }
+
+    public void toBack(View view){
+        saveScrollPosition();
+        startIntentActivityAndFinish(TeacherActivity.class);
     }
 
     public void toTeacherAboutAct(View view){
