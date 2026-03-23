@@ -86,7 +86,9 @@ public class MainActivity extends BaseActivityClass {
         super.onSaveInstanceState(outState);
         if (webViewMainInfo != null) {
             outState.putInt(KEY_INFO_WEBVIEW_VISIBILITY, webViewMainInfo.getVisibility());
-            outState.putBundle(KEY_INFO_WEBVIEW_STATE, webViewMainInfo.saveState());
+            Bundle webViewBundle = new Bundle();
+webViewMainInfo.saveState(webViewBundle);
+outState.putBundle(KEY_INFO_WEBVIEW_STATE, webViewBundle);
         }
         if (toBackFromInfo != null) {
             outState.putInt(KEY_INFO_BACK_VISIBILITY, toBackFromInfo.getVisibility());
