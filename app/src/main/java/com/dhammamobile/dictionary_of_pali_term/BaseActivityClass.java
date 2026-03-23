@@ -12,6 +12,7 @@ import android.view.WindowManager;
 
 import androidx.annotation.IdRes;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
@@ -25,15 +26,15 @@ public abstract class BaseActivityClass extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // До super.onCreate: иначе DayNight/системная ночь успевают подмешать ресурсы (заметно на MIUI)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
         // Устанавливаем флаг, чтобы экран не гас
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
         super.onCreate(savedInstanceState);
 
         OrientationPreferenceHelper.apply(this);
-
-        // Принудительно отключаем темную тему (чтобы не было багов на Xiaomi)
-        androidx.appcompat.app.AppCompatDelegate.setDefaultNightMode(androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO);
     }
 
     protected void setWindowFlagsFullscreenAndNoLimits() {
