@@ -65,6 +65,17 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "var style = document.createElement('style');" +
                 "style.type = 'text/css';" +
                 "style.textContent = " +
+                // Блокируем тёмную тему MIUI — она инжектирует dark-стили через prefers-color-scheme
+                // и через filter: invert(). Принудительно возвращаем светлые цвета.
+                "'@media (prefers-color-scheme: dark) {' +" +
+                "'  html, body, * {' +" +
+                "'    background-color: unset !important;' +" +
+                "'    color: unset !important;' +" +
+                "'    filter: none !important;' +" +
+                "'  }' +" +
+                "'}' +" +
+                // Запрещаем автоматическое инвертирование цветов движком WebView (MIUI-специфично)
+                "'html { color-scheme: light only !important; }' +" +
                 "'body { word-wrap: break-word; overflow-wrap: break-word; }' +" +
                 "'table { max-width: 100%; table-layout: auto; }' +" +
                 "'td, th { word-wrap: break-word; overflow-wrap: break-word; }';" +
