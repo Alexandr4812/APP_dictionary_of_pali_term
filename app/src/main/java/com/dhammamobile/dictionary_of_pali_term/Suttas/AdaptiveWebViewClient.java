@@ -28,10 +28,19 @@ public class AdaptiveWebViewClient extends WebViewClient {
     public void onPageFinished(WebView view, String url) {
         super.onPageFinished(view, url);
 
+        // На некоторых устройствах при быстрой смене ориентации Activity может быть
+        // пересоздана, а WebView уничтожен. Защитимся от отложенной работы после destroy().
         view.postDelayed(() -> {
-            injectAdaptiveStyles(view);
-            view.getSettings().setSupportZoom(true);
-            view.getSettings().setBuiltInZoomControls(true);
+            try {
+                if (view == null || !view.isAttachedToWindow()) return;
+                injectAdaptiveStyles(view);
+                if (view.getSettings() != null) {
+                    view.getSettings().setSupportZoom(true);
+                    view.getSettings().setBuiltInZoomControls(true);
+                }
+            } catch (Throwable ignored) {
+                // Цель - не падать при ротации/закрытии.
+            }
         }, 200);
     }
 
@@ -78,6 +87,10 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "makeTablesResponsive();" +
                 "})();";
 
-        webView.evaluateJavascript(js, null);
+        try {
+            webView.evaluateJavascript(js, null);
+        } catch (Throwable ignored) {
+            // Могут быть исключения при разрушенных/отключенных WebView.
+        }
     }
 }
