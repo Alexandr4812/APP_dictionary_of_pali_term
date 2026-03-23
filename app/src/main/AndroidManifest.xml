@@ -25,6 +25,7 @@
         <activity
             android:name=".Suttas.BookmarksActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -49,6 +50,7 @@
         <activity
             android:name=".Rules.RulesLaySilaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -57,6 +59,7 @@
         <activity
             android:name=".Rules.RulesLayActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -66,6 +69,7 @@
         <activity
             android:name=".Declomation.DeklomationAnumodanaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -74,6 +78,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuAboutKathinaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -82,6 +87,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuAboutUposathaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -90,6 +96,7 @@
         <activity
             android:name=".Declomation.DeklomationGatha"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -98,6 +105,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuAboutOffencesPacittiyaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -106,6 +114,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuAboutOffencesActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -114,6 +123,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuAboutRequisitesActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -122,6 +132,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuAboutGeneralInfoActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -131,6 +142,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuAboutActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -139,6 +151,7 @@
         <activity
             android:name=".Teacher.TeacherAboutActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -147,6 +160,7 @@
         <activity
             android:name=".Teacher.TeacherActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -155,6 +169,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail10Activity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -163,6 +178,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail8Activity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -171,6 +187,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail4Activity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -179,6 +196,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail3Activity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -187,6 +205,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail2Activity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -195,6 +214,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaDetail1Activity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -202,6 +222,7 @@
         </activity>
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaDetail4Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -210,6 +231,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaDetail3Activity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -218,6 +240,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaDetail2Activity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -226,6 +249,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaDetailActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -235,6 +259,7 @@
         <activity
             android:name=".Suttas.SuttasRandomActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="Random Sutta"
             android:screenOrientation="fullSensor">
             <meta-data
@@ -245,6 +270,7 @@
         <activity
             android:name=".Rules.RulesSamaneraObInfoProtocolsActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -253,6 +279,7 @@
         <activity
             android:name=".Rules.RulesSamaneraObInfoActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -262,6 +289,7 @@
         <activity
             android:name=".Abhidhamma.AbhidhammaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -270,6 +298,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaSanghadisesaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -278,6 +307,7 @@
         <activity
             android:name=".Suttas.SuttasByCategoryActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -286,6 +316,7 @@
         <activity
             android:name=".Suttas.SuttasKuddakaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -294,6 +325,7 @@
         <activity
             android:name=".Suttas.SuttasAnguttaraActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:hardwareAccelerated="true"
             android:screenOrientation="fullSensor">
             <meta-data
@@ -303,6 +335,7 @@
         <activity
             android:name=".Suttas.SuttasSanyuttaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -311,6 +344,7 @@
         <activity
             android:name=".Suttas.SuttasMajjhimaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -319,6 +353,7 @@
         <activity
             android:name=".Suttas.SuttasDighaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -327,6 +362,7 @@
         <activity
             android:name=".Declomation.DeklomationDhammapadaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -335,6 +371,7 @@
         <activity
             android:name=".Declomation.DeclomationParittaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -343,6 +380,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaParajikaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -351,6 +389,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuPatimokhaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -359,6 +398,7 @@
         <activity
             android:name=".Rules.RulesBhikkhuActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -367,6 +407,7 @@
         <activity
             android:name=".Rules.RulesSamaneraPabbajjaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -375,6 +416,7 @@
         <activity
             android:name=".Rules.RulesSamaneraActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -383,6 +425,7 @@
         <activity
             android:name=".Rules.RulesSamaneraSekhiyaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -391,6 +434,7 @@
         <activity
             android:name=".Declomation.DeclomationOverActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -399,6 +443,7 @@
         <activity
             android:name=".Declomation.DeclomationSuttaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -407,6 +452,7 @@
         <activity
             android:name=".Declomation.DeclomationPujaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -415,6 +461,7 @@
         <activity
             android:name=".Rules.RulesActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -423,6 +470,7 @@
         <activity
             android:name=".Suttas.SuttasActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -431,6 +479,7 @@
         <activity
             android:name=".Declomation.DeklomationMainActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -439,6 +488,7 @@
         <activity
             android:name=".LiveBuddha.LiveBuddhaActivity"
             android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor">
             <meta-data
                 android:name="android.app.lib_name"
@@ -447,6 +497,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
