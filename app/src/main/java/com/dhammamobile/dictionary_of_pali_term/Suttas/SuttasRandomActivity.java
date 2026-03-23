@@ -26,6 +26,7 @@ public class SuttasRandomActivity extends BaseActivityClass {
     private WebView webView;
     private String[] validFolders = {"Texts"};
     private Random random = new Random();
+    private static final String KEY_WEBVIEW_STATE = "suttas_webview_state";
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -59,6 +60,17 @@ public class SuttasRandomActivity extends BaseActivityClass {
         webView.clearCache(true);
 
         WebViewLightHelper.apply(webView);
+
+        // Восстанавливаем состояние WebView после ротации.
+        final Bundle webViewBundle;
+        final boolean restoredFromState;
+        if (savedInstanceState != null) {
+            webViewBundle = savedInstanceState.getBundle(KEY_WEBVIEW_STATE);
+            restoredFromState = webViewBundle != null;
+        } else {
+            webViewBundle = null;
+            restoredFromState = false;
+        }
 
         BookmarkManager bookmarkManager = new BookmarkManager(this);
 
@@ -104,8 +116,13 @@ public class SuttasRandomActivity extends BaseActivityClass {
             }
         });
 
-        // Загрузка первой случайной страницы
-        loadRandomPage();
+        // Если WebView уже был открыт — восстановим его.
+        // Иначе грузим случайную страницу.
+        if (restoredFromState) {
+            webView.restoreState(webViewBundle);
+        } else {
+            loadRandomPage();
+        }
 
         Button buttonLoadRandomPage = findViewById(R.id.buttonNextSutta);
         buttonLoadRandomPage.setOnClickListener(v -> loadRandomPage());
@@ -141,6 +158,14 @@ public class SuttasRandomActivity extends BaseActivityClass {
                 startIntentActivityAndFinish(SuttasActivity.class);
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (webView != null) {
+            outState.putBundle(KEY_WEBVIEW_STATE, webView.saveState());
+        }
     }
 
     /**

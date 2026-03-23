@@ -28,6 +28,10 @@ public class MainActivity extends BaseActivityClass {
     Button toBackFromInfo;
     WebView webViewMainInfo;
 
+    private static final String KEY_INFO_WEBVIEW_STATE = "info_webview_state";
+    private static final String KEY_INFO_WEBVIEW_VISIBILITY = "info_webview_visibility";
+    private static final String KEY_INFO_BACK_VISIBILITY = "info_back_visibility";
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,19 @@ public class MainActivity extends BaseActivityClass {
         toBackFromInfo = findViewById(R.id.buttonToBackFromInfo);
         webViewMainInfo =findViewById(R.id.webViewMainInfo);
 
+        // Восстанавливаем состояние WebView и видимость кнопок после ротации экрана.
+        if (savedInstanceState != null) {
+            int infoVisibility = savedInstanceState.getInt(KEY_INFO_WEBVIEW_VISIBILITY, View.INVISIBLE);
+            int backVisibility = savedInstanceState.getInt(KEY_INFO_BACK_VISIBILITY, View.INVISIBLE);
+            webViewMainInfo.setVisibility(infoVisibility);
+            toBackFromInfo.setVisibility(backVisibility);
+
+            Bundle webViewBundle = savedInstanceState.getBundle(KEY_INFO_WEBVIEW_STATE);
+            if (webViewBundle != null) {
+                webViewMainInfo.restoreState(webViewBundle);
+            }
+        }
+
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
             public void handleOnBackPressed() {
@@ -62,6 +79,18 @@ public class MainActivity extends BaseActivityClass {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (webViewMainInfo != null) {
+            outState.putInt(KEY_INFO_WEBVIEW_VISIBILITY, webViewMainInfo.getVisibility());
+            outState.putBundle(KEY_INFO_WEBVIEW_STATE, webViewMainInfo.saveState());
+        }
+        if (toBackFromInfo != null) {
+            outState.putInt(KEY_INFO_BACK_VISIBILITY, toBackFromInfo.getVisibility());
+        }
     }
 
     @Override

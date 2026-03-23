@@ -24,6 +24,7 @@ public class SuttasSanyuttaActivity extends BaseActivityClass {
     private WebView webView;
 
     private static final String INDEX_PAGE = "canon/Teaching/Canon/Suttanta/samyutta.html";
+    private static final String KEY_WEBVIEW_STATE = "suttas_webview_state";
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -61,13 +62,28 @@ public class SuttasSanyuttaActivity extends BaseActivityClass {
 
         WebViewLightHelper.apply(webView);
 
+        // Пытаемся восстановить состояние WebView после ротации.
+        final Bundle webViewBundle;
+        final boolean restoredFromState;
+        if (savedInstanceState != null) {
+            webViewBundle = savedInstanceState.getBundle(KEY_WEBVIEW_STATE);
+            restoredFromState = webViewBundle != null;
+        } else {
+            webViewBundle = null;
+            restoredFromState = false;
+        }
+
         String intentFilePath = getIntent().getStringExtra("FILE_PATH");
         int intentScrollY = getIntent().getIntExtra("SCROLL_Y", 0);
 
-        if (intentFilePath != null && !intentFilePath.isEmpty()) {
-            webView.loadUrl("file:///android_asset/" + intentFilePath);
+        if (restoredFromState) {
+            webView.restoreState(webViewBundle);
         } else {
-            webView.loadUrl("file:///android_asset/" + INDEX_PAGE);
+            if (intentFilePath != null && !intentFilePath.isEmpty()) {
+                webView.loadUrl("file:///android_asset/" + intentFilePath);
+            } else {
+                webView.loadUrl("file:///android_asset/" + INDEX_PAGE);
+            }
         }
 
         BookmarkManager bookmarkManager = new BookmarkManager(this);
@@ -77,7 +93,7 @@ public class SuttasSanyuttaActivity extends BaseActivityClass {
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
 
-                if (intentScrollY > 0) {
+                if (!restoredFromState && intentScrollY > 0) {
                     view.postDelayed(() ->
                                     view.evaluateJavascript(
                                             "window.scrollTo(0, " + intentScrollY + ");", null),
@@ -150,6 +166,14 @@ public class SuttasSanyuttaActivity extends BaseActivityClass {
                 startIntentActivityAndFinish(SuttasActivity.class);
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if (webView != null) {
+            outState.putBundle(KEY_WEBVIEW_STATE, webView.saveState());
+        }
     }
 
     private void goBack() {
