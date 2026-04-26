@@ -45,8 +45,8 @@ public class AdaptiveWebViewClient extends WebViewClient {
     }
 
     private void injectAdaptiveStyles(WebView webView) {
-        // Фиксируем светлую схему и оставляем масштабирование управляемым пользователем.
-        // На MIUI тёмная тема может инвертировать страницу WebView, поэтому задаём явные light-ограничения.
+        // Оставляем масштабирование управляемым пользователем.
+        // Анти-dark фиксы применяем только когда система в тёмной теме, чтобы не портить цвета в обычном режиме.
         String js = "(function() {" +
                 "var viewport = document.querySelector('meta[name=viewport]');" +
                 "if (viewport) {" +
@@ -62,34 +62,33 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "} else {" +
                 "  head.appendChild(viewport);" +
                 "}" +
-                "var colorSchemeMeta = document.querySelector('meta[name=color-scheme]');" +
-                "if (!colorSchemeMeta) {" +
-                "  colorSchemeMeta = document.createElement('meta');" +
-                "  colorSchemeMeta.name = 'color-scheme';" +
-                "  head.appendChild(colorSchemeMeta);" +
-                "}" +
-                "colorSchemeMeta.content = 'light only';" +
-                "document.documentElement.style.setProperty('color-scheme', 'light', 'important');" +
-                "if (document.body) {" +
-                "  document.body.style.setProperty('color-scheme', 'light', 'important');" +
-                "}" +
-                "var style = document.createElement('style');" +
-                "style.type = 'text/css';" +
-                "style.textContent = " +
-                // Не используем unset для всех элементов — это и давало «почернение» на части устройств.
-                "'html, body {' +" +
-                "'  color-scheme: light !important;' +" +
-                "'  background-color: #f2f0cc !important;' +" +
-                "'  color: #222222 !important;' +" +
-                "'}' +" +
-                "'img, picture, video, canvas, svg {' +" +
-                "'  filter: none !important;' +" +
-                "'  mix-blend-mode: normal !important;' +" +
-                "'}' +" +
+                "var commonStyle = document.createElement('style');" +
+                "commonStyle.type = 'text/css';" +
+                "commonStyle.textContent = " +
                 "'body { word-wrap: break-word; overflow-wrap: break-word; }' +" +
                 "'table { max-width: 100%; table-layout: auto; }' +" +
                 "'td, th { word-wrap: break-word; overflow-wrap: break-word; }';" +
-                "document.getElementsByTagName('head')[0].appendChild(style);" +
+                "head.appendChild(commonStyle);" +
+                "var isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;" +
+                "if (isDarkMode) {" +
+                "  var colorSchemeMeta = document.querySelector('meta[name=color-scheme]');" +
+                "  if (!colorSchemeMeta) {" +
+                "    colorSchemeMeta = document.createElement('meta');" +
+                "    colorSchemeMeta.name = 'color-scheme';" +
+                "    head.appendChild(colorSchemeMeta);" +
+                "  }" +
+                "  colorSchemeMeta.content = 'light only';" +
+                "  document.documentElement.style.setProperty('color-scheme', 'light', 'important');" +
+                "  if (document.body) {" +
+                "    document.body.style.setProperty('color-scheme', 'light', 'important');" +
+                "  }" +
+                "  var darkFixStyle = document.createElement('style');" +
+                "  darkFixStyle.type = 'text/css';" +
+                "  darkFixStyle.textContent = " +
+                "    'html, body { filter: none !important; -webkit-filter: none !important; }' +" +
+                "    'img, picture, video, canvas, svg { filter: none !important; mix-blend-mode: normal !important; }';" +
+                "  head.appendChild(darkFixStyle);" +
+                "}" +
                 "function makeTablesResponsive() {" +
                 "  var tables = document.querySelectorAll('table[width]');" +
                 "  tables.forEach(function(table) {" +
