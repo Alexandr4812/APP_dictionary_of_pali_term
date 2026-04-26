@@ -77,6 +77,20 @@
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
+            <Button
+                android:id="@+id/button_patimokha_razdel_patimokha"
+                style="@style/button_activity_patimokha_patimokha"
+                android:onClick="openExtraPatimokha"
+                android:text="@string/buttonPatimokhaRazdelPatimokha"
+                tools:ignore="UsingOnClickInXml" />
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewDopolnitelnye"
+                style="@style/textBetweenButtons"
+                android:text="@string/textFrameToPatimokha" />
 
             <Button
                 android:id="@+id/button_patimokha_razdelitel2"
@@ -189,5 +203,22 @@
             />
 
     </LinearLayout>
+
+    <WebView
+        android:id="@+id/webViewPatimokha"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        android:scrollbarThumbVertical="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Включаем макет с кнопками -->
+    <include
+        layout="@layout/buttons_layout_for_patimokha"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -363,7 +363,7 @@
             <TextView
                 android:id="@+id/textViewDopolnitelnye"
                 style="@style/textBetweenButtons"
-                android:text="Дополнительные разделы" />
+                android:text="ДОПОЛНИТЕЛЬНЫЕ РАЗДЕЛЫ" />
 
             <Button
                 android:id="@+id/btn_extra_sobranie"

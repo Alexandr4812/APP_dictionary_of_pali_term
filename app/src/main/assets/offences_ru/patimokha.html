@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Бхиккху Патимоккха</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital@0;1&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #FFE082;
+            --sidebar-bg: #161923;
+            --sidebar-text: #E2E8F0;
+            --sidebar-hover: rgba(255, 224, 130, 0.1);
+            --text-pali: #4E342E;
+            --text-russian: #5D4037;
+            --btn-bg: #161923;
+            --btn-hover: #1E2736;
+            --accent-border: #8D6E63;
+            --card-bg: rgba(255, 255, 255, 0.25);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scrollbar-width: none; -ms-overflow-style: none; }
+        *::-webkit-scrollbar { display: none; }
+        html { scroll-behavior: smooth; }
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+        body {
+            background-color: var(--bg-main);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: var(--text-pali);
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .layout { display: flex; flex: 1; overflow: hidden; }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            padding: 20px 0;
+            position: fixed;
+            top: 0; left: 0;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 100;
+            transition: transform 0.3s ease;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 10px;
+        }
+        .sidebar-header h2 {
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #FFE082;
+        }
+        .menu-toggle-inner {
+            background: transparent;
+            border: none;
+            color: #FFE082;
+            font-size: 22px;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            flex-shrink: 0;
+        }
+        .menu-toggle {
+            display: none;
+        }
+
+        .sidebar nav { padding: 0 10px; }
+        .sidebar nav a {
+            display: block;
+            padding: 9px 14px;
+            color: var(--sidebar-text);
+            text-decoration: none;
+            font-size: 13px;
+            border-radius: 6px;
+            transition: all 0.2s;
+            margin-bottom: 2px;
+        }
+        .sidebar nav a:hover {
+            background-color: var(--sidebar-hover);
+            color: #FFE082;
+            transform: translateX(3px);
+        }
+        .sidebar nav a.sub { padding-left: 26px; font-size: 12px; opacity: 0.85; }
+        .sidebar nav .section-label {
+            padding: 14px 14px 5px;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #94A3B8;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: 0;
+            flex: 1;
+            padding: 30px 40px 100px;
+            max-width: 950px;
+            overflow-y: auto;
+            height: 100%;
+        }
+
+        .section { margin-bottom: 35px; scroll-margin-top: 20px; }
+        .section-title {
+            font-family: 'Gentium Plus', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-pali);
+            margin-bottom: 15px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--accent-border);
+            letter-spacing: 0.5px;
+        }
+        .section-subtitle {
+            font-family: 'Gentium Plus', serif;
+            font-size: 17px;
+            font-weight: 600;
+            color: #5D4037;
+            margin-bottom: 12px;
+            margin-top: 20px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid rgba(93, 64, 55, 0.2);
+        }
+
+        .pali-text {
+            font-family: 'Gentium Plus', serif;
+            font-size: 18px;
+            color: var(--text-pali);
+            font-weight: 400;
+            margin-bottom: 4px;
+            line-height: 1.9;
+        }
+        .pali-block { margin-bottom: 6px; }
+        .verse-line {
+            font-family: 'Gentium Plus', serif;
+            font-size: 18px;
+            color: var(--text-pali);
+            font-weight: 400;
+            line-height: 1.9;
+        }
+
+        .translation {
+            display: none;
+            font-size: 14.5px;
+            color: var(--text-russian);
+            font-style: italic;
+            margin-top: 6px;
+            margin-bottom: 12px;
+            padding: 10px 14px;
+            background-color: var(--card-bg);
+            border-left: 3px solid var(--accent-border);
+            border-radius: 0 8px 8px 0;
+            line-height: 1.65;
+        }
+        .translation.visible { display: block; }
+
+        .toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--btn-bg);
+            color: #FFF8E1;
+            border: none;
+            padding: 4px 12px;
+            font-size: 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-left: 6px;
+            margin-bottom: 8px;
+            transition: background-color 0.2s;
+            font-weight: 500;
+        }
+        .toggle-btn:hover { background-color: var(--btn-hover); }
+        .toggle-btn.active { background-color: #0d1017; }
+
+        .rule-block {
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            padding: 15px 18px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(141, 110, 99, 0.15);
+        }
+        .rule-number { font-weight: 700; color: #3E2723; font-size: 15px; margin-bottom: 4px; }
+
+        .closing-block {
+            background-color: rgba(255,255,255,0.25);
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(141, 110, 99, 0.1);
+        }
+        .divider { height: 1px; background: rgba(93, 64, 55, 0.2); margin: 25px 0; }
+
+        /* Sidebar always hidden by default */
+        .sidebar { transform: translateX(-100%); }
+        .sidebar.open { transform: translateX(0); }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            z-index: 90;
+        }
+        .top-bar {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 10px 20px;
+            background-color: var(--bg-main);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            z-index: 80;
+        }
+        .open-sidebar-btn {
+            background-color: var(--btn-bg);
+            color: #FFF8E1;
+            border: none;
+            width: 44px; height: 44px;
+            border-radius: 10px;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            flex-shrink: 0;
+        }
+        .show-all-btn {
+            background-color: var(--btn-bg);
+            color: #FFE082;
+            border: 1px solid rgba(255,224,130,0.3);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .show-all-btn:hover { background-color: var(--btn-hover); }
+
+        @media (max-width: 900px) {
+            .main-content { padding: 30px 20px 100px; }
+            .overlay.open { display: block; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<div class="top-bar">
+    <button class="open-sidebar-btn" onclick="toggleSidebar()" aria-label="Открыть меню">☰</button>
+    <button class="show-all-btn" id="globalToggleBtn" onclick="toggleAll()">Показать все переводы</button>
+</div>
+
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="menu-toggle-inner" onclick="toggleSidebar()" aria-label="Закрыть меню">☰</button>
+            <h2>Навигация</h2>
+        </div>
+        <nav>
+            <div class="section-label">Начало</div>
+            <a href="#namo">Namo Tassa</a>
+            <a href="#dvematika">Dvemātikāpāḷi</a>
+            <a href="#bhikkhu-patimokkha">Bhikkhupātimokkhapāḷi</a>
+
+            <div class="section-label">Предварительные</div>
+            <a href="#pubbakaranam">Pubbakaraṇaṃ — 4</a>
+            <a href="#pubbakiccam">Pubbakiccaṃ — 5</a>
+            <a href="#pattakallanga">Pattakallaṅgā — 4</a>
+            <a href="#pubbakarana-pubbakicca">Завершение предварительных</a>
+
+            <div class="section-label">Уддеса</div>
+            <a href="#nidana">Nidānuddeso</a>
+            <a href="#nidana-text">Провозглашение Введения</a>
+
+            <div class="section-label">Параджика</div>
+            <a href="#parajika">Pārājikuddeso</a>
+            <a href="#methuna" class="sub">1. Methunadhamma</a>
+            <a href="#adinna" class="sub">2. Adinnādāna</a>
+            <a href="#manussa" class="sub">3. Manussaviggaha</a>
+            <a href="#uttari" class="sub">4. Uttarimanussa</a>
+            <a href="#parajika-closing" class="sub">Заключение Pārājika</a>
+
+            <div class="section-label">Сангхадисеса</div>
+            <a href="#sanghadisesa">Saṅghādisesuddeso</a>
+            <a href="#sukkavissatthi" class="sub">1. Sukkavissaṭṭhi</a>
+            <a href="#kayasamsagga" class="sub">2. Kāyasaṃsagga</a>
+            <a href="#dutthullavaca" class="sub">3. Duṭṭhullavācā</a>
+            <a href="#attakamaparicari" class="sub">4. Attakāmapāricari</a>
+            <a href="#sancarittа" class="sub">5. Sañcaritta</a>
+            <a href="#kutikara" class="sub">6. Kuṭikāra</a>
+            <a href="#viharakara" class="sub">7. Vihārakāra</a>
+            <a href="#dutthadosa" class="sub">8. Duṭṭhadosa</a>
+            <a href="#annabhagiya" class="sub">9. Aññabhāgiya</a>
+            <a href="#sanghabhedа" class="sub">10. Saṅghabheda</a>
+            <a href="#bhedanuvattaka" class="sub">11. Bhedānuvattaka</a>
+            <a href="#dubbaca" class="sub">12. Dubbaca</a>
+            <a href="#kuladusaka" class="sub">13. Kuladūsaka</a>
+            <a href="#sanghadisesa-closing" class="sub">Заключение Saṅghādisesa</a>
+
+            <div class="section-label">Анийята</div>
+            <a href="#aniyata">Aniyatuddeso</a>
+            <a href="#pathama-aniyata" class="sub">1. Paṭhama aniyata</a>
+            <a href="#dutiya-aniyata" class="sub">2. Dutiyā aniyata</a>
+
+            <div class="section-label">Ниссаггия Пачития</div>
+            <a href="#nissaggiya">Nissaggiyapācittiyā</a>
+            <div class="section-label" style="padding-left:18px; font-size:9px;">Vagga I — Катхина</div>
+            <a href="#kathina" class="sub">1. Kathina</a>
+            <a href="#udosita" class="sub">2. Udosita</a>
+            <a href="#akalacivara" class="sub">3. Akālacīvara</a>
+            <a href="#puranacivara" class="sub">4. Purāṇacīvara</a>
+            <a href="#civarapatigahana" class="sub">5. Cīvarapaṭiggahaṇa</a>
+            <a href="#annatakaviññatti" class="sub">6. Aññātakaviññatti</a>
+            <a href="#tatuttari" class="sub">7. Tatuttari</a>
+            <a href="#pathama-upakkhata" class="sub">8. Paṭhama upakkhaṭa</a>
+            <a href="#dutiya-upakkhata" class="sub">9. Dutiya upakkhaṭa</a>
+            <a href="#raja" class="sub">10. Rāja</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <div class="section" id="namo">
+            <div class="pali-text">namo tassa bhagavato arahato sammāsambuddhassa</div>
+
+            <div class="translation">Поклон тому Благословенному, Араханту, Совершенно Само-Пробуждённому.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="dvematika">
+            <div class="section-title">dvemātikāpāḷi</div>
+
+            <div class="translation">ТЕКСТ ДВУХ МАТИК</div>
+        </div>
+
+        <div class="section" id="bhikkhu-patimokkha">
+            <div class="section-title">bhikkhupātimokkhapāḷi</div>
+
+            <div class="translation">ТЕКСТ БХИККХУ ПАТИМОККХИ</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="pubbakaranam">
+            <div class="section-subtitle">pubbakaraṇaṃ — 4</div>
+
+            <div class="translation">Предварительные обязанности — 4</div>
+            <div class="pali-block">
+                <div class="verse-line">sammajjanī padīpo ca, udakaṃ āsanena ca;</div>
+                <div class="verse-line">uposathassa etāni, "pubbakaraṇa"nti vuccati.</div>
+            </div>
+
+            <div class="translation">Подметание, свет, вода, сидение —
+Всё это зовётся „предварительной подготовкой" упосатхи.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="pubbakiccam">
+            <div class="section-subtitle">pubbakiccaṃ — 5</div>
+
+            <div class="translation">Предварительные задачи — 5</div>
+            <div class="pali-block">
+                <div class="verse-line">chanda, pārisuddhi, utukkhānaṃ, bhikkhugaṇanā ca ovādo;</div>
+                <div class="verse-line">uposathassa etāni, "pubbakicca"nti vuccati.</div>
+            </div>
+
+            <div class="translation">Согласие, чистота, провозглашение сезона, подсчёт монахов, наставление —
+Всё это зовётся „предварительными задачами" упосатхи.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="pattakallanga">
+            <div class="section-subtitle">pattakallaṅgā — 4</div>
+
+            <div class="translation">Подходящее состояние — 4</div>
+            <div class="pali-block">
+                <div class="verse-line">uposatho, yāvatikā ca bhikkhū kammappattā;</div>
+                <div class="verse-line">sabhāgāpattiyo ca na vijjanti;</div>
+                <div class="verse-line">vajjanīyā ca puggalā tasmiṃ na honti, "pattakalla"nti vuccati.</div>
+            </div>
+
+            <div class="translation">Сколько есть монахов для проведения этой каммы —
+Общего проступка у них нет,
+Недопустимых личностей в собрании нет, и зовётся это „подходящим состоянием".</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="pubbakarana-pubbakicca">
+            <div class="pali-block">
+                <div class="pali-text">pubbakaraṇapubbakiccāni samāpetvā desitāpattikassa samaggassa bhikkhusaṅghassa anumatiyā pātimokkhaṃ uddisituṃ ārādhanaṃ karoma.</div>
+            </div>
+
+            <div class="translation">Достигнув всего этого, с согласия очищенной от проступков и единой общины монахов — давайте рецитировать Патимоккху.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="nidana">
+            <div class="section-title">nidānuddeso</div>
+        </div>
+
+        <div class="section" id="nidana-text">
+            <div class="section-subtitle">Провозглашение Введения</div>
+
+            <div class="pali-block">
+                <div class="verse-line">suṇātu me bhante saṅgho?</div>
+                <div class="verse-line">ajjuposatho pannaraso, yadi saṅghassa pattakallaṃ, saṅgho uposathaṃ kareyya, pātimokkhaṃ uddiseyya.</div>
+            </div>
+
+            <div class="translation">Пусть досточтимая Община внемлет: сегодня пятнадцатый лунный день — Упосатха; если Община в подходящем состоянии, то ей следует провести Упосатху и рецитировать Патимоккху.</div>
+
+            <div class="pali-block">
+                <div class="verse-line">kiṃ saṅghassa pubbakiccaṃ?</div>
+                <div class="verse-line">pārisuddhiṃ āyasmanto ārocetha, pātimokkhaṃ uddisissāmi, taṃ sabbeva santā sādhukaṃ suṇoma manasi karoma.</div>
+            </div>
+
+            <div class="translation">Каковы предварительные задачи Общины? Уважаемые, утвердите свою чистоту — я буду рецитировать Патимоккху; все присутствующие — тщательно слушаем и внимаем.</div>
+
+            <div class="pali-block">
+                <div class="verse-line">yassa siyā āpatti, so āvikareyya, asantiyā āpattiyā tuṇhī bhavitabbaṃ, tuṇhībhāvena kho panāyasmante "parisuddhā"ti vedissāmi.</div>
+            </div>
+
+            <div class="translation">Если у кого есть проступок — признайтесь, у кого нет — ничего не говорите, и, по вашему молчанию, я отмечу для себя вашу чистоту.</div>
+
+            <div class="pali-block">
+                <div class="verse-line">yathā kho pana paccekapuṭṭhassa veyyākaraṇaṃ hoti, evamevaṃ evarūpāya parisāya yāvatatiyaṃ anusāvitaṃ hoti.</div>
+            </div>
+
+            <div class="translation">Подобно тому, как для заданного лично вопроса надлежит ответить, так и для этого собрания есть трёхчастное провозглашение.</div>
+
+            <div class="pali-block">
+                <div class="verse-line">yo pana bhikkhu yāvatatiyaṃ anusāviyamāne saramāno santiṃ āpattiṃ nāvikareyya, sampajānamusāvādassa hoti.</div>
+            </div>
+
+            <div class="translation">Тот монах, что, во время слушания этого провозглашения, на третий раз не раскроет свой проступок, тот суть осознанно соврёт.</div>
+
+            <div class="pali-block">
+                <div class="verse-line">sampajānamusāvādo kho panāyasmanto antarāyiko dhammo vutto bhagavatā, tasmā saramānena bhikkhunā āpannena visuddhāpekkhena santī āpatti āvikātabbā, āvikatā hissa phāsu hoti.</div>
+            </div>
+
+            <div class="translation">Осознанная ложь, как то сказано Благословенным, — это препятствие; поэтому, тому монаху, что сейчас слушает и желает очиститься, ему следует раскрыть свои проступки — от этого будет легко.</div>
+
+            <div class="pali-block">
+                <div class="verse-line">uddiṭṭhaṃ kho āyasmanto nidānaṃ.</div>
+                <div class="verse-line">tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṃ dhārayāmīti.</div>
+            </div>
+
+            <div class="translation">Уважаемые, вступительная часть подошла к концу. Я спрашиваю уважаемых: все ли чисты? Я спрашиваю второй раз: все ли чисты? Я спрашиваю третий раз: все ли чисты? Уважаемые чисты, потому и молчат — так я запомню.</div>
+
+            <div class="pali-block">
+                <div class="verse-line">nidānaṃ niṭṭhitaṃ.</div>
+            </div>
+
+            <div class="translation">Вступительная часть окончена.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="parajika">
+            <div class="section-title">pārājikuddeso</div>
+
+            <div class="translation">ПРОВОЗГЛАШЕНИЕ ПРАВИЛ, ВЛЕКУЩИХ ПОРАЖЕНИЕ</div>
+
+            <div class="pali-block">
+                <div class="pali-text">tatrime cattāro pārājikā dhammā uddesaṃ āgacchanti.</div>
+            </div>
+
+            <div class="translation">Сейчас будут изложены четыре правила тренировки, влекущие за собой поражение.</div>
+        </div>
+
+        <div class="section" id="methuna">
+            <div class="section-subtitle">METHUNADHAMMA SIKKHĀPADAṂ</div>
+            <div class="rule-block">
+                <div class="rule-number">1.</div>
+                <div class="pali-text">yo pana bhikkhu bhikkhūnaṃ sikkhāsājīvasamāpanno sikkhaṃ appaccakkhāya dubbalyaṃ anāvikatvā methunaṃ dhammaṃ paṭiseveyya, antamaso tiracchānagatāyapi, pārājiko hoti asaṃvāso.</div>
+            </div>
+
+            <div class="translation">1. Правило тренировки о половом сношении<br><br>Монаху, который имеет принятые монашеские правила тренировки, который, не оставив эту тренировку, не объявив о своей слабости, вступает в половое сношение, даже если с животным, — поражение, он более не часть Общины.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="adinna">
+            <div class="section-subtitle">ADINNĀDĀNASIKKHĀPADAṂ</div>
+            <div class="rule-block">
+                <div class="rule-number">2.</div>
+                <div class="pali-text">yo pana bhikkhu gāmā vā araññā vā adinnaṃ theyyasaṅkhātaṃ ādiyeyya, yathārūpe adinnādāne rājāno coraṃ gahetvā haneyyuṃ vā bandheyyuṃ vā pabbājeyyuṃ vā corosi bālosi mūḷhosi thenosīti, tathārūpaṃ bhikkhu adinnaṃ ādiyamāno ayampi pārājiko hoti asaṃvāso.</div>
+            </div>
+
+            <div class="translation">2. Правило тренировки о не-данном<br><br>Монаху, который, с намерением украсть, в деревне или в глуши берёт не-данное ему, такое не-данное, что цари, схватив вора, могут убить его, пленить его, сослать его [так:] „Ты вор, ты глупец, ты съехал с катушек, ты грабитель", монаху, берущему не-данное такого рода, — тоже поражение, он более не часть Общины.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="manussa">
+            <div class="section-subtitle">MANUSSAVIGGAHASIKKHĀPADAṂ</div>
+            <div class="rule-block">
+                <div class="rule-number">3.</div>
+                <div class="pali-text">yo pana bhikkhu sañcicca manussaviggahaṃ jīvitā voropeyya, satthahārakaṃ vāssa pariyeseyya, maraṇavaṇṇaṃ vā saṃvaṇṇeyya, maraṇāya vā samādapeyya "ambho purisa kiṃ tuyhiminā pāpakena dujjīvitena, mataṃ te jīvitā seyyo"ti, iti cittamano cittasaṅkappo anekapariyāyena maraṇavaṇṇaṃ vā saṃvaṇṇeyya, maraṇāya vā samādapeyya, ayampi pārājiko hoti asaṃvāso.</div>
+            </div>
+
+            <div class="translation">3. Правило тренировки о человеческом индивиде<br><br>Монаху, который, восприняв человеческого индивида, лишает того жизни, или нанимает для него убийцу, или говорит о преимуществе смерти, или подстрекает того к смерти: „Уважаемый, что тебе эта дрянная жизнь, умереть будет лучше" — с такими мыслями, с таким намерением, следует ему различными способами говорить о преимуществе смерти, или подстрекать к смерти, — тоже поражение, он более не часть Общины.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="uttari">
+            <div class="section-subtitle">UTTARIMANUSSADHAMMASIKKHĀPADAṂ</div>
+            <div class="rule-block">
+                <div class="rule-number">4.</div>
+                <div class="pali-text">yo pana bhikkhu anabhijānaṃ uttarimanussadhammaṃ attupanāyikaṃ alamariyañāṇadassanaṃ samudācareyya "iti jānāmi, iti passāmī"ti, tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā āpanno visuddhāpekkho evaṃ vadeyya "ajānamevaṃ āvuso avacaṃ jānāmi, apassaṃ passāmi, tucchaṃ musā vilapi"nti, aññatra adhimānā, ayampi pārājiko hoti asaṃvāso.</div>
+            </div>
+
+            <div class="translation">4. Правило тренировки о сверхчеловеческом состоянии<br><br>Монаху, который, не постигнув сверхчеловеческого состояния, следует ему заявить о достойном Благородных знании как о своём: „Так знаю, так вижу", и затем, будучи расспрошенным или же не будучи расспрошенным, или от желания очиститься, он говорит так: „Не зная, я говорил что знаю, не видя, что вижу; я лопотал попусту, лживо", то, если это не от переоценки себя — тоже поражение, он более не часть Общины.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="parajika-closing">
+            <div class="closing-block">
+                <div class="pali-block">
+                    <div class="verse-line">uddiṭṭhā kho āyasmanto cattāro pārājikā dhammā.</div>
+                    <div class="verse-line">yesaṃ bhikkhu aññataraṃ vā aññataraṃ vā āpajjitvā na labhati bhikkhūhi saddhiṃ saṃvāsaṃ yathā pure, tathā pacchā, pārājiko hoti asaṃvāso.</div>
+                </div>
+            </div>
+
+            <div class="translation">Уважаемые, изложены четыре правила тренировки, влекущие за собой поражение: если монах совершил то или иное, то он более не имеет общего с Общиной монахов — как он был до [монашества], так он и станет после [этих проступков]; он поражён, не часть Общины.</div>
+
+            <div class="closing-block" style="margin-top: 15px;">
+                <div class="pali-block">
+                    <div class="verse-line">tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṃ dhārayāmīti.</div>
+                </div>
+            </div>
+
+            <div class="translation">Я спрашиваю уважаемых: все ли чисты? Я спрашиваю второй раз: все ли чисты? Я спрашиваю третий раз: все ли чисты? Уважаемые чисты, потому и молчат — так я запомню.</div>
+
+            <div class="closing-block" style="margin-top: 15px;">
+                <div class="pali-block">
+                    <div class="verse-line">pārājikaṃ niṭṭhitaṃ.</div>
+                </div>
+            </div>
+
+            <div class="translation">Окончено изложение правил тренировки, влекущих за собой поражение.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="sanghadisesa">
+            <div class="section-title">saṅghādisesuddeso</div>
+            <div class="translation">Собрание Общины и последующие процедуры</div>
+        </div>
+
+        <div class="section" id="sanghadisesa-intro">
+            <div class="pali-block">
+                <div class="verse-line">ime kho panāyasmanto terasa saṅghādisesā</div>
+                <div class="verse-line">dhammā uddesaṃ āgacchanti.</div>
+            </div>
+            <div class="translation">Уважаемые, сейчас будут изложены тринадцать правил тренировки,<br>влекущих за собой собрание Общины и последующие процедуры.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="sukkavissatthi">
+            <div class="section-subtitle">1. sukkavissaṭṭhisikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">sañcetanikā sukkavissaṭṭhi aññatra supinantā saṅghādiseso.</div>
+            </div>
+            <div class="translation">1. Правило тренировки о семяизвержении<br><br>Осознанное семяизвержение, кроме как во сне — собрание Общины и последующие процедуры.</div>
+        </div>
+
+        <div class="section" id="kayasamsagga">
+            <div class="section-subtitle">2. kāyasaṃsaggasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmena saddhiṃ kāyasaṃsaggaṃ samāpajjeyya hatthaggāhaṃ vā veṇiggāhaṃ vā aññatarassa vā aññatarassa vā aṅgassa parāmasanaṃ, saṅghādiseso.</div>
+            </div>
+            <div class="translation">2. Правило тренировки о телесном контакте<br><br>Монаху, который, имея искажённый похотью ум, следует ему вступить в физический контакт с женщиной, будь то держание руки или локона волос, или трение о ту или иную часть тела — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="dutthullavaca">
+            <div class="section-subtitle">3. duṭṭhullavācāsikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmaṃ duṭṭhullāhi vācāhi obhāseyya yathā taṃ yuvā yuvatiṃ methunupasaṃhitāhi, saṅghādiseso.</div>
+            </div>
+            <div class="translation">3. Правило тренировки о развратных разговорах<br><br>Монаху, который, имея искажённый похотью ум, следует ему говорить в адрес женщины развратные слова, связанные с половым сношением, которые обычно говорит молодой парень молодой девушке — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="attakamaparicari">
+            <div class="section-subtitle">4. attakāmapāricariyasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu otiṇṇo vipariṇatena cittena mātugāmassa santike attakāmapāricariyāya vaṇṇaṃ bhāseyya "etadaggaṃ bhagini pāricariyānaṃ yā mādisaṃ sīlavantaṃ kalyāṇadhammaṃ brahmacāriṃ etena dhammena paricareyyā"ti methunupasaṃhitena, saṅghādiseso.</div>
+            </div>
+            <div class="translation">4. Правило тренировки об удовлетворении своих чувственных желаний<br><br>Монаху, который, имея искажённый похотью ум, следует ему ратовать за половое сношение с собой в присутствии женщины: „Сестра, это высшее служение — услужить этим такому ведущему целомудренную жизнь, добродетельному и нравственному, как я" — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="sancarittа">
+            <div class="section-subtitle">5. sañcarittasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu sañcarittaṃ samāpajjeyya itthiyā vā purisamatiṃ purisassa vā itthimatiṃ, jāyattane vā jārattane vā, antamaso taṅkhaṇikāyapi, saṅghādiseso.</div>
+            </div>
+            <div class="translation">5. Правило тренировки о случке<br><br>Монаху, следует ему совершить случку мужчины и женщины, или женщины и мужчины, чтобы те поженились или образовали пару, даже если лишь на короткий промежуток — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="kutikara">
+            <div class="section-subtitle">6. kuṭikārasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">saññācikāya pana bhikkhunā kuṭiṃ kārayamānena assāmikaṃ attuddesaṃ pamāṇikā kāretabbā, tatridaṃ pamāṇaṃ, dīghaso dvādasa vidatthiyo sugatavidatthiyā, tiriyaṃ sattantarā, bhikkhū abhinetabbā vatthudesanāya, tehi bhikkhūhi vatthu desetabbaṃ anārambhaṃ saparikkamanaṃ. sārambhe ce bhikkhu vatthusmiṃ aparikkamane saññācikāya kuṭiṃ kāreyya, bhikkhū vā anabhineyya vatthudesanāya, pamāṇaṃ vā atikkāmeyya, saṅghādiseso.</div>
+            </div>
+            <div class="translation">6. Правило тренировки о строительстве кути<br><br>Кути, которое строится монахом для себя, без покровителя, на средства которые он выпросил, должно быть определённого размера: в длину двенадцать ладоней — ладоней по мере Сугаты, в ширину семь. Нужно привести других монахов чтобы они разметили участок, и они должны разметить его так, чтобы он был не опасным для живых существ и с пространством вокруг. Следует монаху, на выпрошенные средства, построить кути на опасном для живых существ участке без пространства вокруг, или если он не пригласит других монахов для разметки участка, или если он выйдет за установленный размер — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="viharakara">
+            <div class="section-subtitle">7. vihārakārasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">mahallakaṃ pana bhikkhunā vihāraṃ kārayamānena sassāmikaṃ attuddesaṃ bhikkhū abhinetabbā vatthudesanāya, tehi bhikkhūhi vatthu desetabbaṃ anārambhaṃ saparikkamanaṃ. sārambhe ce bhikkhu vatthusmiṃ aparikkamane mahallakaṃ vihāraṃ kāreyya, bhikkhū vā anabhineyya vatthudesanāya, saṅghādiseso.</div>
+            </div>
+            <div class="translation">7. Правило тренировки о строительстве вихары<br><br>Если монахом для себя строится большая вихара, с покровителем, то нужно привести других монахов для разметки участка; следует монаху построить большую вихару на опасном для живых существ участке без пространства вокруг, или если он не пригласит других монахов для разметки участка — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="dutthadosa">
+            <div class="section-subtitle">8. duṭṭhadosasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu bhikkhuṃ duṭṭho doso appatīto amūlakena pārājikena dhammena anuddhaṃseyya "appeva nāma naṃ imamhā brahmacariyā cāveyya"nti, tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā amūlakañceva taṃ adhikaraṇaṃ hoti, bhikkhu ca dosaṃ patiṭṭhāti, saṅghādiseso.</div>
+            </div>
+            <div class="translation">8. Правило тренировки о злобе и враждебности<br><br>Следует монаху, из враждебности, злобы и недовольства, беспочвенно обвинить другого монаха в поражении (параджике) [в следующем ключе]: „Надеюсь, так он отпадёт от этой жизни в чистоте", и потом, будучи расспрошенным или не будучи расспрошенным, эта дисциплинарная процедура оказывается беспочвенной, и он признаёт свою злобу — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="annabhagiya">
+            <div class="section-subtitle">9. aññabhāgiyasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu bhikkhuṃ duṭṭho doso appatīto aññabhāgiyassa adhikaraṇassa kiñcidesaṃ lesamattaṃ upādāya pārājikena dhammena anuddhaṃseyya "appeva nāma naṃ imamhā brahmacariyā cāveyya"nti, tato aparena samayena samanuggāhīyamāno vā asamanuggāhīyamāno vā aññabhāgiyañceva taṃ adhikaraṇaṃ hoti kocideso lesamatto upādinno, bhikkhu ca dosaṃ patiṭṭhāti, saṅghādiseso.</div>
+            </div>
+            <div class="translation">9. Правило тренировки об относящемся к другому классу<br><br>Следует монаху, из враждебности, злобы и недовольства, используя некий предлог дисциплинарной процедуры другого класса в качестве уловки, беспочвенно обвинить другого монаха в поражении [в следующем ключе]: „Надеюсь, так он отпадёт от этой жизни в чистоте", и потом, будучи расспрошенным или не будучи расспрошенным, этот случай оказывается принадлежащим к другому классу дисциплинарной процедуры, и это был лишь предлог в качестве уловки, и он признаёт свою злобу — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="sanghabhedа">
+            <div class="section-subtitle">10. saṅghabhedasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu samaggassa saṅghassa bhedāya parakkameyya, bhedanasaṃvattanikaṃ vā adhikaraṇaṃ samādāya paggayha tiṭṭheyya, so bhikkhu bhikkhūhi evamassa vacanīyo "māyasmā samaggassa saṅghassa bhedāya parakkami, bhedanasaṃvattanikaṃ vā adhikaraṇaṃ samādāya paggayha aṭṭhāsi, sametāyasmā saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī"ti, evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṃ samanubhāsitabbo tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamāno taṃ paṭinissajjeyya, iccetaṃ kusalaṃ, no ce paṭinissajjeyya, saṅghādiseso.</div>
+            </div>
+            <div class="translation">10. Правило тренировки о расколе Общины<br><br>Следует монаху стремиться к расколу единой Общины, или, инициировав ведущую к расколу процедуру, упорствовать в ней, то другие монахи должны сказать такому монаху так: „Уважаемый, не надо стремиться к расколу единой Общины, не надо упорствовать в ведущей к расколу процедуре, пусть уважаемый остановится, ведь Община едина, дружна, без ссор, рецитирует Патимоккху вместе, пребывает в комфорте"; если он, когда ему говорят так, продолжает упорствовать, то на него следует надавить трижды, чтобы он оставил это, и если на третий раз он отступит, то это хорошо, если же нет — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="bhedanuvattaka">
+            <div class="section-subtitle">11. bhedānuvattakasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">tasseva kho pana bhikkhussa bhikkhū honti anuvattakā vaggavādakā eko vā dve vā tayo vā, te evaṃ vadeyyuṃ "māyasmanto etaṃ bhikkhuṃ kiñci avacuttha, dhammavādī ceso bhikkhu, vinayavādī ceso bhikkhu, amhākañceso bhikkhu chandañca ruciñca ādāya voharati, jānāti, no bhāsati, amhākampetaṃ khamatī"ti, te bhikkhū bhikkhūhi evamassu vacanīyā "māyasmanto evaṃ avacuttha, na ceso bhikkhu dhammavādī, na ceso bhikkhu vinayavādī, māyasmantānampi saṅghabhedo ruccittha, sametāyasmantānaṃ saṅghena, samaggo hi saṅgho sammodamāno avivadamāno ekuddeso phāsu viharatī"ti, evañca te bhikkhū bhikkhūhi vuccamānā tatheva paggaṇheyyuṃ, te bhikkhū bhikkhūhi yāvatatiyaṃ samanubhāsitabbā tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamānā taṃ paṭinissajjeyyuṃ, iccetaṃ kusalaṃ, no ce paṭinissajjeyyuṃ, saṅghādiseso.</div>
+            </div>
+            <div class="translation">11. Правило тренировки о стремящихся к расколу<br><br>И если у монаха [из правила выше] есть те монахи, кто его последователи и приспешники: один, два или три, то, если те скажут — „Уважаемые, не говорите этому монаху ничего, ведь он говорит по Дхамме, говорит по Винае; он излагает, получив согласие и одобрение от нас, он говорит от нас, и мы этим довольны", им нужно сказать так: „Уважаемые, не говорите так, ведь этот монах говорит не по Дхамме и не по Винае, не потакайте расколу, встаньте на линию Общины, ведь она едина, дружна, без ссор, рецитирует Патимоккху вместе, пребывает в комфорте"; если они, когда им говорят так, продолжают упорствовать, то на них следует надавить трижды, чтобы они оставили это, и если на третий раз они отступят, то это хорошо, если же нет — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="dubbaca">
+            <div class="section-subtitle">12. dubbacasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">bhikkhu paneva dubbacajātiko hoti uddesapariyāpannesu sikkhāpadesu bhikkhūhi sahadhammikaṃ vuccamāno attānaṃ avacanīyaṃ karoti "mā maṃ āyasmanto kiñci avacuttha kalyāṇaṃ vā pāpakaṃ vā, ahampāyasmante na kiñci vakkhāmi kalyāṇaṃ vā pāpakaṃ vā, viramathāyasmanto mama vacanāyā"ti, so bhikkhu bhikkhūhi evamassa vacanīyo "māyasmā attānaṃ avacanīyaṃ akāsi, vacanīyamevāyasmā attānaṃ karotu, āyasmāpi bhikkhū vadatu sahadhammena, bhikkhūpi āyasmantaṃ vakkhanti sahadhammena, evaṃ saṃvaddhā hi tassa bhagavato parisā yadidaṃ aññamaññavacanena aññamaññavuṭṭhāpanenā"ti, evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṃ samanubhāsitabbo tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamāno taṃ paṭinissajjeyya, iccetaṃ kusalaṃ, no ce paṭinissajjeyya, saṅghādiseso.</div>
+            </div>
+            <div class="translation">12. Правило тренировки о сложности принимать наставления<br><br>Если монах упрямый по характеру, когда другие монахи ему справедливо говорят об установленных правилах тренировки, отказывается от наставлений [так:] „Уважаемые, не говорите мне ничего: ни хорошего, ни плохого, и я вам тоже ничего не буду говорить — ни хорошего, ни плохого; воздержитесь от речей в мой адрес", то такому следует сказать: „Уважаемый, не надо отвергать наставления, примите их, и вы сами тоже справедливо их давайте; монахи будут говорить уважаемому по справедливости, ведь так укрепляется собрание Благословенного, что каждый говорит другому и помогает в исправлении"; если он, когда ему говорят так, продолжает упорствовать, то на него следует надавить трижды, чтобы он оставил это, и если на третий раз он отступит, то это хорошо, если же нет — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="section" id="kuladusaka">
+            <div class="section-subtitle">13. kuladūsakasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">bhikkhu paneva aññataraṃ gāmaṃ vā nigamaṃ vā upanissāya viharati kuladūsako pāpasamācāro, tassa kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni ca tena duṭṭhāni dissanti ceva suyyanti ca, so bhikkhu bhikkhūhi evamassa vacanīyo "āyasmā kho kuladūsako pāpasamācāro, āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyasmā imamhā āvāsā, alaṃ te idha vāsenā"ti, evañca so bhikkhu bhikkhūhi vuccamāno te bhikkhū evaṃ vadeyya "chandagāmino ca bhikkhū, dosagāmino ca bhikkhū, mohagāmino ca bhikkhū, bhayagāmino ca bhikkhū tādisikāya āpattiyā ekaccaṃ pabbājenti, ekaccaṃ na pabbājentī"ti, so bhikkhu bhikkhūhi evamassa vacanīyo "māyasmā evaṃ avaca, na ca bhikkhū chandagāmino, na ca bhikkhū dosagāmino, na ca bhikkhū mohagāmino, na ca bhikkhū bhayagāmino, āyasmā kho kuladūsako pāpasamācāro, āyasmato kho pāpakā samācārā dissanti ceva suyyanti ca, kulāni cāyasmatā duṭṭhāni dissanti ceva suyyanti ca, pakkamatāyasmā imamhā āvāsā, alaṃ te idha vāsenā"ti, evañca so bhikkhu bhikkhūhi vuccamāno tatheva paggaṇheyya, so bhikkhu bhikkhūhi yāvatatiyaṃ samanubhāsitabbo tassa paṭinissaggāya, yāvatatiyañce samanubhāsiyamāno taṃ paṭinissajjeyya, iccetaṃ kusalaṃ, no ce paṭinissajjeyya, saṅghādiseso.</div>
+            </div>
+            <div class="translation">13. Правило тренировки о развращающем семьи<br><br>Если монах живёт в зависимости от некой деревни или города, и он развращает семьи и имеет плохое поведение, и об этом поведении ходят слухи и его даже видно, и от этого есть развращённость семей, о которой ходят слухи, и даже которую видно, то такому монаху надлежит сказать [так:] „Уважаемый, вы развратитель семей и имеете плохое поведение о котором не только идёт слух, но и которое видно, и ходит слух о развращённости семей, которую даже видно; уходите из этого места, уважаемый, хватит вам жить здесь"; когда ему говорят так, если он говорит: „Монахи имеют личный интерес, держат злобу, находятся в заблуждении, находятся под воздействием страха: одного выгоняют из-за такого проступка, другого нет", то нужно ответить так: „Уважаемый, не говорите так, монахи не имеют личного интереса, не держат злобу, не находятся в заблуждении, не находятся под воздействием страха; это вы, уважаемый, развратитель семей с плохим поведением о котором не только ходит слух, но и которое видно, и слух ходит о развращённости семей, что также видно; уходите из этого места, уважаемый, хватит вам жить здесь"; если он, когда ему говорят так, продолжает упорствовать, то на него следует надавить трижды, чтобы он оставил это, и если на третий раз он отступит, то это хорошо, если же нет — собрание Общины и последующая процедура.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="sanghadisesa-closing">
+            <div class="pali-block">
+                <div class="pali-text">uddiṭṭhā kho āyasmanto terasa saṅghādisesā dhammā nava paṭhamāpattikā, cattāro yāvatatiyakā. yesaṃ bhikkhu aññataraṃ vā aññataraṃ vā āpajjitvā yāvatīhaṃ jānaṃ paṭicchādeti, tāvatīhaṃ tena bhikkhunā akāmā parivatthabbaṃ. parivutthaparivāsena bhikkhunā uttari chārattaṃ bhikkhumānattāya paṭipajjitabbaṃ, ciṇṇamānatto bhikkhu yattha siyā vīsatigaṇo bhikkhusaṅgho, tattha so bhikkhu abbhetabbo. ekenapi ce ūno vīsatigaṇo bhikkhusaṅgho taṃ bhikkhuṃ abbheyya, so ca bhikkhu anabbhito, te ca bhikkhū gārayhā, ayaṃ tattha sāmīci. tatthāyasmante pucchāmi, kaccittha parisuddhā, dutiyampi pucchāmi, kaccittha parisuddhā, tatiyampi pucchāmi, kaccittha parisuddhā, parisuddhetthāyasmanto, tasmā tuṇhī, evametaṃ dhārayāmīti.</div>
+            </div>
+            <div class="translation">Уважаемые, изложены тринадцать правил тренировки, влекущие за собой собрание Общины и последующие процедуры: девять вступают в силу сразу же, четыре после третьего раза. Если монах совершил то или иное, и он скрывал это определённое количество дней, то на такое количество дней он должен быть помещён на испытательный период. После этого он должен выказывать уважение всем монахам в течении шести дней. Затем, если собирается двадцать монахов, то они могут его восстановить. Если из двадцати нет хотя бы одного, то восстановление недействительно, а остальным монахам выговор. Я спрашиваю уважаемых: все ли чисты? Я спрашиваю второй раз: все ли чисты? Я спрашиваю третий раз: все ли чисты? Уважаемые чисты, потому и молчат — так я запомню.</div>
+
+            <div class="pali-block" style="margin-top: 12px;">
+                <div class="pali-text">saṅghādiseso niṭṭhito.</div>
+            </div>
+            <div class="translation">Окончено изложение правил тренировки, влекущих за собой собрание Общины и последующие процедуры.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="aniyata">
+            <div class="section-title">aniyatuddeso</div>
+            <div class="translation">Неопределённое</div>
+        </div>
+
+        <div class="section" id="aniyata-intro">
+            <div class="pali-block">
+                <div class="verse-line">ime kho panāyasmanto dve aniyatā dhammā</div>
+                <div class="verse-line">uddesaṃ āgacchanti.</div>
+            </div>
+            <div class="translation">Уважаемые, сейчас будут изложены<br>два неопределённых правила тренировки.</div>
+        </div>
+
+        <div class="section" id="pathama-aniyata">
+            <div class="section-subtitle">1. paṭhamaaniyatasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu mātugāmena saddhiṃ eko ekāya raho paṭicchanne āsane alaṃkammaniye nisajjaṃ kappeyya, tamenaṃ saddheyyavacasā upāsikā disvā tiṇṇaṃ dhammānaṃ aññatarena vadeyya pārājikena vā saṅghādisesena vā pācittiyena vā, nisajjaṃ bhikkhu paṭijānamāno tiṇṇaṃ dhammānaṃ aññatarena kāretabbo pārājikena vā saṅghādisesena vā pācittiyena vā, yena vā sā saddheyyavacasā upāsikā vadeyya, tena so bhikkhu kāretabbo, ayaṃ dhammo aniyato.</div>
+            </div>
+            <div class="translation">1. Первое правило тренировки из категории неопределённых<br><br>Если монах садится один на один с женщиной в приватном месте, которое подходит для [сексуального] действия, и, увидев это, некая мирская последовательница, чьим словам можно верить, говорит об одном из трёх [классов проступков]: о поражении, или о собрании Общины и последующих процедурах, или о признании проступка, и этот монах подтверждает, что садился, то с ним нужно иметь дело посредством одного из этих трёх, или в соответствии с тем, о чём говорит мирская последовательница, чьим словам можно верить; это неопределённая категория.</div>
+        </div>
+
+        <div class="section" id="dutiya-aniyata">
+            <div class="section-subtitle">2. dutiyāniyatasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">na heva kho pana paṭicchannaṃ āsanaṃ hoti nālaṃkammaniyaṃ, alañca kho hoti mātugāmaṃ duṭṭhullāhi vācāhi obhāsituṃ, yo pana bhikkhu tathārūpe āsane mātugāmena saddhiṃ eko ekāya raho nisajjaṃ kappeyya, tamenaṃ saddheyyavacasā upāsikā disvā dvinnaṃ dhammānaṃ aññatarena vadeyya saṅghādisesena vā pācittiyena vā, nisajjaṃ bhikkhu paṭijānamāno dvinnaṃ dhammānaṃ aññatarena kāretabbo saṅghādisesena vā pācittiyena vā, yena vā sā saddheyyavacasā upāsikā vadeyya, tena so bhikkhu kāretabbo, ayampi dhammo aniyato.</div>
+            </div>
+            <div class="translation">2. Второе правило тренировки из категории неопределённых<br><br>Но если сидение не укрыто, и не подходит для такого действия, но его достаточно чтобы говорить женщине развратные слова, и, увидев это, некая мирская последовательница, чьим словам можно верить, говорит об одном из двух [классов проступков]: о собрании Общины и последующих процедурах, или о признании проступка, и этот монах подтверждает, что садился, то с ним нужно иметь дело посредством одного из этих двух, или в соответствии с тем, о чём говорит мирская последовательница, чьим словам можно верить; это неопределённая категория.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="nissaggiya">
+            <div class="section-title">nissaggiyapācittiyā</div>
+            <div class="translation">Требующее отказа от предмета и признания проступка</div>
+        </div>
+
+        <div class="section" id="nissaggiya-intro">
+            <div class="pali-block">
+                <div class="verse-line">ime kho panāyasmanto tiṃsa nissaggiyā pācittiyā</div>
+                <div class="verse-line">dhammā uddesaṃ āgacchanti.</div>
+            </div>
+            <div class="translation">Уважаемые, сейчас будут изложены тридцать правил тренировки,<br>влекущих за собой отказ от предмета и признание проступка.</div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section" id="kathinavagga">
+            <div class="section-title">i. kathinavaggo paṭhamo</div>
+            <div class="translation">I. Раздел первый — о катхине и далее</div>
+        </div>
+
+        <div class="section" id="kathina">
+            <div class="section-subtitle">1. kathinasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">niṭṭhitacīvarasmiṃ bhikkhunā ubbhatasmiṃ kathine dasāhaparamaṃ atirekacīvaraṃ dhāretabbaṃ, taṃ atikkāmayato nissaggiyaṃ pācittiyaṃ.</div>
+            </div>
+            <div class="translation">1. Правило тренировки о катхине<br><br>Когда катхина проведена монахом, и его чивара готова, избыток чивар он может хранить только в течении десяти дней; если больше — отказ от предмета и признание проступка.</div>
+        </div>
+
+        <div class="section" id="udosita">
+            <div class="section-subtitle">2. udositasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">niṭṭhitacīvarasmiṃ bhikkhunā ubbhatasmiṃ kathine ekarattampi ce bhikkhu ticīvarena vippavaseyya, aññatra bhikkhusammutiyā nissaggiyaṃ pācittiyaṃ.</div>
+            </div>
+            <div class="translation">2. Правило тренировки о хранении<br><br>Когда катхина проведена монахом, и его чивара готова, следует ему провести без трёх чивар хотя бы одну ночь, то, за исключением общего соглашения монахов — отказ от предмета и признание проступка.</div>
+        </div>
+
+        <div class="section" id="akalacivara">
+            <div class="section-subtitle">3. akālacīvarasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">niṭṭhitacīvarasmiṃ bhikkhunā ubbhatasmiṃ kathine bhikkhuno paneva akālacīvaraṃ uppajjeyya, ākaṅkhamānena bhikkhunā paṭiggahetabbaṃ, paṭiggahetvā khippameva kāretabbaṃ, no cassa pāripūri, māsaparamaṃ tena bhikkhunā taṃ cīvaraṃ nikkhipitabbaṃ ūnassa pāripūriyā satiyā paccāsāya. tato ce uttari nikkhipeyya satiyāpi paccāsāya, nissaggiyaṃ pācittiyaṃ.</div>
+            </div>
+            <div class="translation">3. Правило тренировки о ткани вне положенного времени<br><br>Когда катхина проведена монахом, и его чивара готова, если этому монаху предлагается чивара вне положенного сезона, то, если он желает, он может её принять, но скроить [из неё чивару] нужно быстро; если ему недостаточно [для этого] чивар, уже полученную чивару он может хранить максимум месяц в ожидании нужного количества чивар для восполнения нехватки. Если он хранит чивары больше этого срока в ожидании большего её количества — отказ от предмета и признание проступка.</div>
+        </div>
+
+        <div class="section" id="puranacivara">
+            <div class="section-subtitle">4. purāṇacīvarasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu aññātikāya bhikkhuniyā purāṇacīvaraṃ dhovāpeyya vā rajāpeyya vā ākoṭāpeyya vā, nissaggiyaṃ pācittiyaṃ.</div>
+            </div>
+            <div class="translation">4. Правило тренировки о старых одеяниях<br><br>Если монах даст монахине, что не находится с ним в родстве, постирать, покрасить или выбить его старую чивару — отказ от предмета и признание проступка.</div>
+        </div>
+
+        <div class="section" id="civarapatigahana">
+            <div class="section-subtitle">5. cīvarapaṭiggahaṇasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu aññātikāya bhikkhuniyā hatthato cīvaraṃ paṭiggaṇheyya aññatra pārivattakā, nissaggiyaṃ pācittiyaṃ.</div>
+            </div>
+            <div class="translation">5. Правило тренировки о получении чивары<br><br>Если монах, от монахини, что не находится с ним в родстве, примет из её рук чивару, то, за исключением ситуации обмена — отказ от предмета и признание проступка.</div>
+        </div>
+
+        <div class="section" id="annatakaviññatti">
+            <div class="section-subtitle">6. aññātakaviññattisikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">yo pana bhikkhu aññātakaṃ gahapatiṃ vā gahapatāniṃ vā cīvaraṃ viññāpeyya aññatra samayā, nissaggiyaṃ pācittiyaṃ. tatthāyaṃ samayo, acchinnacīvaro vā hoti bhikkhu, naṭṭhacīvaro vā, ayaṃ tattha samayo.</div>
+            </div>
+            <div class="translation">6. Правило тренировки о намёке тем, кто не в родстве<br><br>Если монах, у мирянина или мирянки, что не находятся с ним в родстве, попросит чивару, то, за исключением подобающего случая — отказ от предмета и признание проступка. Подобающий случай здесь таков: чивару украли, или она уничтожена [потерялась].</div>
+        </div>
+
+        <div class="section" id="tatuttari">
+            <div class="section-subtitle">7. tatuttarisikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">tañce aññātako gahapati vā gahapatānī vā bahūhi cīvarehi abhihaṭṭhuṃ pavāreyya, santaruttaraparamaṃ tena bhikkhunā tato cīvaraṃ sāditabbaṃ. tato ce uttari sādiyeyya, nissaggiyaṃ pācittiyaṃ.</div>
+            </div>
+            <div class="translation">7. Правило тренировки о большем<br><br>И если тот неродственный мирянин или мирянка приглашают получить много чивар, то монаху дозволено принять нижнюю и верхнюю как большее; если он принимает больше — отказ от предмета и признание проступка.</div>
+        </div>
+
+        <div class="section" id="pathama-upakkhata">
+            <div class="section-subtitle">8. paṭhamaupakkhaṭasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">bhikkhuṃ paneva uddissa aññātakassa gahapatissa vā gahapatāniyā vā cīvaracetāpannaṃ upakkhaṭaṃ hoti ''iminā cīvaracetāpannena cīvaraṃ cetāpetvā itthannāmaṃ bhikkhuṃ cīvarena acchādessāmī''ti, tatra ce so bhikkhu pubbe appavārito upasaṅkamitvā cīvare vikappaṃ āpajjeyya ''sādhu vata maṃ āyasmā iminā cīvaracetāpannena evarūpaṃ vā evarūpaṃ vā cīvaraṃ cetāpetvā acchādehī''ti kalyāṇakamyataṃ upādāya, nissaggiyaṃ pācittiyaṃ.</div>
+            </div>
+            <div class="translation">8. Первое правило тренировки о подготовленном<br><br>Если неродственный мирянин или мирянка подготовил мену на чивару для монаха [так:] „Дав эту мену за чивару, обеспечу такого-то монаха ею", и если этот монах, без приглашения, из желания лучшего, придёт и будет раздавать указания насчёт чивары [так:] „Уважаемый, на эту мену сделайте мне такую-то и такую-то чивару" — отказ от предмета и признание проступка.</div>
+        </div>
+
+        <div class="section" id="dutiya-upakkhata">
+            <div class="section-subtitle">9. dutiyaupakkhaṭasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">bhikkhuṃ paneva uddissa ubhinnaṃ aññātakānaṃ gahapatīnaṃ vā gahapatānīnaṃ vā paccekacīvaracetāpannāni upakkhaṭāni honti ''imehi mayaṃ paccekacīvaracetāpannehi paccekacīvarāni cetāpetvā itthannāmaṃ bhikkhuṃ cīvarehi acchādessāmā''ti, tatra ce so bhikkhu pubbe appavārito upasaṅkamitvā cīvare vikappaṃ āpajjeyya ''sādhu vata maṃ āyasmanto imehi paccekacīvaracetāpannehi evarūpaṃ vā evarūpaṃ vā cīvaraṃ cetāpetvā acchādetha ubhova santā ekenā''ti kalyāṇakamyataṃ upādāya, nissaggiyaṃ pācittiyaṃ.</div>
+            </div>
+            <div class="translation">9. Второе правило тренировки о подготовленном<br><br>Если два неродственных мирских последователя — миряне или мирянки — подготовили каждый свою отдельную мену на отдельную чивару для монаха [так:] „Дав каждый свою отдельную мену за отдельную чивару, обеспечим такого-то монаха ими", и если этот монах, без приглашения, из желания лучшего, придёт и будет раздавать указания насчёт чивары [так:] „Уважаемые, объединив свои мены в одну, сделайте мне такую-то и такую-то чивару" — отказ от предмета и признание проступка.</div>
+        </div>
+
+        <div class="section" id="raja">
+            <div class="section-subtitle">10. rājasikkhāpadaṃ</div>
+            <div class="rule-block">
+                <div class="pali-text">bhikkhuṃ paneva uddissa rājā vā rājabhoggo vā brāhmaṇo vā gahapatiko vā dūtena cīvaracetāpannaṃ pahiṇeyya ''iminā cīvaracetāpannena cīvaraṃ cetāpetvā itthannāmaṃ bhikkhuṃ cīvarena acchādehī''ti. so ce dūto taṃ bhikkhuṃ upasaṅkamitvā evaṃ vadeyya ''idaṃ kho, bhante, āyasmantaṃ uddissa cīvaracetāpannaṃ ābhataṃ, paṭiggaṇhātu āyasmā cīvaracetāpanna''nti. tena bhikkhunā so dūto evamassa vacanīyo ''na kho mayaṃ, āvuso, cīvaracetāpannaṃ paṭiggaṇhāma, cīvarañca kho mayaṃ paṭiggaṇhāma kālena kappiya''nti. so ce dūto taṃ bhikkhuṃ evaṃ vadeyya ''atthi panāyasmato koci veyyāvaccakaro''ti. cīvaratthikena, bhikkhave, bhikkhunā veyyāvaccakaro niddisitabbo ārāmiko vā upāsako vā ''eso kho, āvuso, bhikkhūnaṃ veyyāvaccakaro''ti. so ce dūto taṃ veyyāvaccakaraṃ saññāpetvā taṃ bhikkhuṃ upasaṅkamitvā evaṃ vadeyya ''yaṃ kho, bhante, āyasmā veyyāvaccakaraṃ niddisi, saññatto so mayā, upasaṅkamatāyasmā kālena, cīvarena taṃ acchādessatī''ti. cīvaratthikena, bhikkhave, bhikkhunā veyyāvaccakaro upasaṅkamitvā dvattikkhattuṃ codetabbo sāretabbo ''attho me, āvuso, cīvarenā''ti, dvattikkhattuṃ codayamāno sārayamāno taṃ cīvaraṃ abhinipphādeyya, iccetaṃ kusalaṃ, no ce abhinipphādeyya, catukkhattuṃ pañcakkhattuṃ chakkhattuparamaṃ tuṇhībhūtena uddissa ṭhātabbaṃ, catukkhattuṃ pañcakkhattuṃ chakkhattuparamaṃ tuṇhībhūto uddissa tiṭṭhamāno taṃ cīvaraṃ abhinipphādeyya, iccetaṃ kusalaṃ, tato ce uttari vāyamamāno taṃ cīvaraṃ abhinipphādeyya, nissaggiyaṃ pācittiyaṃ. no ce abhinipphādeyya, yatassa cīvaracetāpannaṃ ābhataṃ, tattha sāmaṃ vā gantabbaṃ, dūto vā pāhetabbo ''yaṃ kho tumhe āyasmanto bhikkhuṃ uddissa cīvaracetāpannaṃ pahiṇittha, na taṃ tassa bhikkhuno kiñci atthaṃ anubhoti, yuñjantāyasmanto sakaṃ, mā vo sakaṃ vinassā''ti, ayaṃ tattha sāmīci.</div>
+            </div>
+            <div class="translation">10. Правило тренировки о царях<br><br>Бывает такое, что царь, царское лицо, брахман или домохозяин посыльным отправляют мену для чивары монаху: „Дав эту мену за чивару, обеспечь ею такого-то монаха". Если этот посыльный направится к этому монаху и скажет: „Досточтимый, вот мена для чивары для вас, примите её", то ответить ему надлежит так: „Мы не принимаем мены, мы принимаем чивары как то надлежит по времени". Если посыльный скажет: „Есть ли у вас помощник?", то желающему чивару монаху следует указать на помощника: работника при монастыре, мирянина — „Вот, друг, помощник монахов". Если посыльный, пообщавшись с помощником, скажет этому монаху: „Кого вы указали помощником, тому я всё объяснил; пусть уважаемый обратиться к нему в надлежащее время чтобы получить чивару", то, желающему чивару монаху надлежит обратиться и напомнить этому помощнику дважды: „Нужна чивара, друг"; если после этого он получит чивару, то хорошо, если нет, то, четыре, пять, шесть раз — как большее — надлежит молча постоять, намекая; если после этого он получает чивару — хорошо, если нет, то, следует ему упорствовать больше этого чтобы получить чивару — отказ от предмета и признание проступка. Если не упорствовать, то, туда, откуда ему принесли чивару, следует пойти самому или отправить посыльного [с таким сообщением:] „Кому вы отправили мену на чивару, тот ничего не получил; заберите своё, пусть не пропадает" — вот как стоит поступить.</div>
+        </div>
+
+        <div class="section" id="kathinavagga-closing">
+            <div class="pali-block">
+                <div class="pali-text">kathinavaggo paṭhamo nitthito.</div>
+            </div>
+            <div class="translation">Окончен первый раздел — о катхине и далее.</div>
+        </div>
+    </main>
+</div>
+
+
+
+<script>
+    let allExpanded = false;
+    function toggleAll() {
+        allExpanded = !allExpanded;
+        document.querySelectorAll('.translation').forEach(t => {
+            allExpanded ? t.classList.add('visible') : t.classList.remove('visible');
+        });
+        document.getElementById('globalToggleBtn').textContent = allExpanded ? 'Скрыть все переводы' : 'Показать все переводы';
+    }
+
+    function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('open');
+        document.getElementById('overlay').classList.toggle('open');
+    }
+
+    document.querySelectorAll('.sidebar nav a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            toggleSidebar();
+            const targetId = link.getAttribute('href').slice(1);
+            const target = document.getElementById(targetId);
+            const container = document.querySelector('.main-content');
+            if (target && container) {
+                container.scrollTo({ top: target.offsetTop - 20, behavior: 'smooth' });
+            }
+        });
+    });
+</script>
+</body>
+</html>
