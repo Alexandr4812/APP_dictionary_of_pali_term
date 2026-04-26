@@ -172,7 +172,9 @@ public class SuttasSanyuttaActivity extends BaseActivityClass {
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         if (webView != null) {
-            outState.putBundle(KEY_WEBVIEW_STATE, webView.saveState());
+            Bundle webViewBundle = new Bundle();
+            webView.saveState(webViewBundle);
+            outState.putBundle(KEY_WEBVIEW_STATE, webViewBundle);
         }
     }
 

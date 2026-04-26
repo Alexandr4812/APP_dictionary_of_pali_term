@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -26,9 +27,13 @@ public abstract class BaseActivityClass extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // До super.onCreate: иначе DayNight/системная ночь успевают подмешать ресурсы (заметно на MIUI)
+        // До super.onCreate: иначе DayNight/системная ночь успевают подмешать ресурсы (заметно на MIUI).
+        // Основной вызов теперь в DhammaApplication.onCreate(), но дублируем для надёжности.
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
+        // Принудительно белый фон окна ДО super.onCreate() —
+        // убирает чёрный экран/мерцание при переходах между Activity на MIUI тёмной теме.
+        getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Color.WHITE));
         // Устанавливаем флаг, чтобы экран не гас
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
@@ -78,6 +83,8 @@ public abstract class BaseActivityClass extends AppCompatActivity {
     protected void startIntentActivityAndFinish(Class<?> cls) {
         Intent intent = new Intent(this, cls);
         startActivity(intent);
+        // Отключаем анимацию перехода — убирает чёрный экран/мерцание между Activity на MIUI.
+        overridePendingTransition(0, 0);
         finish();
         if (this.mediaPlayer != null) this.mediaPlayer.stop();
     }
@@ -117,6 +124,4 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
-
 }

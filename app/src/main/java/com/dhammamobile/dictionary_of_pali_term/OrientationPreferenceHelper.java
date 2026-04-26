@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.pm.ActivityInfo;
 
 /**
- * Сохраняет и применяет режим ориентации экрана для всего приложения.
+ * Сохраняет и применяет режим ориентации экрана для приложения.
  */
 public final class OrientationPreferenceHelper {
 
