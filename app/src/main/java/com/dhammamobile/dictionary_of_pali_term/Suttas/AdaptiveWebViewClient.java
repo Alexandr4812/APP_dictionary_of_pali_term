@@ -45,8 +45,8 @@ public class AdaptiveWebViewClient extends WebViewClient {
     }
 
     private void injectAdaptiveStyles(WebView webView) {
-        // Финальный простой подход: минимальный viewport, который не блокирует жестовое масштабирование
-        // Убираем все автоматические расчеты - пусть WebView сам управляет масштабированием
+        // Фиксируем светлую схему и оставляем масштабирование управляемым пользователем.
+        // На MIUI тёмная тема может инвертировать страницу WebView, поэтому задаём явные light-ограничения.
         String js = "(function() {" +
                 "var viewport = document.querySelector('meta[name=viewport]');" +
                 "if (viewport) {" +
@@ -62,20 +62,30 @@ public class AdaptiveWebViewClient extends WebViewClient {
                 "} else {" +
                 "  head.appendChild(viewport);" +
                 "}" +
+                "var colorSchemeMeta = document.querySelector('meta[name=color-scheme]');" +
+                "if (!colorSchemeMeta) {" +
+                "  colorSchemeMeta = document.createElement('meta');" +
+                "  colorSchemeMeta.name = 'color-scheme';" +
+                "  head.appendChild(colorSchemeMeta);" +
+                "}" +
+                "colorSchemeMeta.content = 'light only';" +
+                "document.documentElement.style.setProperty('color-scheme', 'light', 'important');" +
+                "if (document.body) {" +
+                "  document.body.style.setProperty('color-scheme', 'light', 'important');" +
+                "}" +
                 "var style = document.createElement('style');" +
                 "style.type = 'text/css';" +
                 "style.textContent = " +
-                // Блокируем тёмную тему MIUI — она инжектирует dark-стили через prefers-color-scheme
-                // и через filter: invert(). Принудительно возвращаем светлые цвета.
-                "'@media (prefers-color-scheme: dark) {' +" +
-                "'  html, body, * {' +" +
-                "'    background-color: unset !important;' +" +
-                "'    color: unset !important;' +" +
-                "'    filter: none !important;' +" +
-                "'  }' +" +
+                // Не используем unset для всех элементов — это и давало «почернение» на части устройств.
+                "'html, body {' +" +
+                "'  color-scheme: light !important;' +" +
+                "'  background-color: #f2f0cc !important;' +" +
+                "'  color: #222222 !important;' +" +
                 "'}' +" +
-                // Запрещаем автоматическое инвертирование цветов движком WebView (MIUI-специфично)
-                "'html { color-scheme: light only !important; }' +" +
+                "'img, picture, video, canvas, svg {' +" +
+                "'  filter: none !important;' +" +
+                "'  mix-blend-mode: normal !important;' +" +
+                "'}' +" +
                 "'body { word-wrap: break-word; overflow-wrap: break-word; }' +" +
                 "'table { max-width: 100%; table-layout: auto; }' +" +
                 "'td, th { word-wrap: break-word; overflow-wrap: break-word; }';" +
