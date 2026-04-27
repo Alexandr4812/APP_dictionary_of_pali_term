@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <string name="buttonTextMorningPuja"> \n <b>Утренняя пуджа</b> \n</string>
+    <string name="buttonTextMorningPuja"> \n <b>Утренняя пуджа в монастыре Читтавивека</b> \n</string>
 
     <string name="buttonTextVandanaAmbokote">\n <b>Утренняя и вечерняя вандана в монастыре амбокотэ</b> \n</string>
     <string name="textAmbokoteVandana">\n НАЧАЛО: ВЫРАЖЕНИЕ ПОЧТЕНИЯ БУДДЕ \n BEGINNING:

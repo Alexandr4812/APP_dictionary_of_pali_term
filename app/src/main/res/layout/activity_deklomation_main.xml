@@ -45,16 +45,34 @@
                 tools:ignore="ContentDescription" />
 
             <Button
+                android:id="@+id/button_puja"
+                style="@style/button_activity_declomation_main_grin"
+                android:onClick="toMorningPuja"
+                android:text="@string/pudja" />
+
+            <Button
                 android:id="@+id/button_sutta"
-                style="@style/button_activity_declomation_main"
+                style="@style/button_activity_declomation_main_grin"
                 android:onClick="toDeclomationSutta"
                 android:text="@string/sutta" />
+
+            <Button
+                android:id="@+id/button_over_declamation"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomationOver"
+                android:text="@string/drugie_declomacii" />
 
             <Button
                 android:id="@+id/button_paritta"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomationParitta"
                 android:text="@string/button_paritta" />
+
+            <Button
+                android:id="@+id/button_anumodana"
+                style="@style/button_activity_declomation_main"
+                android:onClick="toDeclomationAnumodana"
+                android:text="@string/buttonTextAnumodana" />
 
             <Button
                 android:id="@+id/button_gatha"
@@ -68,28 +86,6 @@
                 android:onClick="toDeclomationDhammapada"
                 android:text="@string/button_dhammapada" />
 
-            <ImageView
-                android:id="@+id/imageViewRazdelitelDeklomationMain2"
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
-
-            <Button
-                android:id="@+id/button_puja"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toMorningPuja"
-                android:text="@string/pudja" />
-
-            <Button
-                android:id="@+id/button_anumodana"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomationAnumodana"
-                android:text="@string/buttonTextAnumodana" />
-
-            <Button
-                android:id="@+id/button_over_declamation"
-                style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomationOver"
-                android:text="@string/drugie_declomacii" />
 
         </LinearLayout>
 

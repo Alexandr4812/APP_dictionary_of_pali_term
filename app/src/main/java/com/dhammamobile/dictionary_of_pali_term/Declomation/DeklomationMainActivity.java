@@ -43,19 +43,22 @@ public class DeklomationMainActivity extends BaseActivityClass {
         Button button3 = findViewById(R.id.button_dhammapada);
         Button button4 = findViewById(R.id.button_puja);
         Button button5 = findViewById(R.id.button_over_declamation);
+        Button button6 = findViewById(R.id.button_anumodana);
         ImageView im1 =findViewById(R.id.imageViewRazdelitelDeklomationMain);
 
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
         Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
         Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
+        Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
 
-        button1.startAnimation(slideFromLeftAnimation);
-        button2.startAnimation(slideFromRightAnimation);
-        buttonG.startAnimation(slideFromLeftAnimation);
-        button3.startAnimation(slideFromRightAnimation);
-        button4.startAnimation(slideFromLeftAnimation);
-        button5.startAnimation(slideFromRightAnimation);
-        im1.startAnimation(slideDown);
+        button1.startAnimation(appearFast);
+        button2.startAnimation(appearFast);
+        buttonG.startAnimation(appearFast);
+        button3.startAnimation(appearFast);
+        button4.startAnimation(appearFast);
+        button5.startAnimation(appearFast);
+        button6.startAnimation(appearFast);
+        im1.startAnimation(appearFast);
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override

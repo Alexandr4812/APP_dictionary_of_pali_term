@@ -51,7 +51,7 @@
     <string name="button_sutta_girimananda">гиримананда сутта</string>
     <string name="button_paritta">\n <b>паритта</b> \n защитные строфы \n</string>
     <string name="button_mora_paritta">\n<b>Мора паритта</b>\n</string>
-    <string name="button_dhammapada">\n<b>дхаммапада</b>\n</string>
+    <string name="button_dhammapada">\n<b>дхаммапада \n (дополняется)</b>\n</string>
     <string name="textViewParnieStrofy">ПАРНЫЕ СТРОФЫ</string>
     <string name="buttonDigha">\n <b>Дигха Никая</b> \n</string>
     <string name="buttonSuttasForMajhima">\n <b>мадджхима никая</b> \n</string>

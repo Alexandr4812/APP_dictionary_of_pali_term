@@ -89,22 +89,23 @@ public class TeacherActivity extends BaseActivityClass {
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
         Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
         Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
+        Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
 
-        im1.startAnimation(slideDown);
-        button1.startAnimation(slideFromLeftAnimation);
-        im2.startAnimation(slideFromRightAnimation);
-        button1_12.startAnimation(slideFromLeftAnimation);
-        button8.startAnimation(slideFromRightAnimation);
-        button9.startAnimation(slideFromLeftAnimation);
-        button10.startAnimation(slideFromRightAnimation);
-        button11.startAnimation(slideFromLeftAnimation);
-        button2.startAnimation(slideFromRightAnimation);
-        button3.startAnimation(slideFromLeftAnimation);
-        button4.startAnimation(slideFromRightAnimation);
-        button5.startAnimation(slideFromLeftAnimation);
-        button6.startAnimation(slideFromRightAnimation);
-        button7.startAnimation(slideFromLeftAnimation);
-        button12.startAnimation(slideFromRightAnimation);
+        im1.startAnimation(appearFast);
+        button1.startAnimation(appearFast);
+        im2.startAnimation(appearFast);
+        button1_12.startAnimation(appearFast);
+        button8.startAnimation(appearFast);
+        button9.startAnimation(appearFast);
+        button10.startAnimation(appearFast);
+        button11.startAnimation(appearFast);
+        button2.startAnimation(appearFast);
+        button3.startAnimation(appearFast);
+        button4.startAnimation(appearFast);
+        button5.startAnimation(appearFast);
+        button6.startAnimation(appearFast);
+        button7.startAnimation(appearFast);
+        button12.startAnimation(appearFast);
 
         // Настройки WebView
         WebSettings webSettings = webView.getSettings();

@@ -63,21 +63,17 @@
 
             <Button
                 android:id="@+id/button_before_evening_meditation"
-                style="@style/button_activity_declomation_main"
+                style="@style/button_activity_declomation_main_chittaviveka"
                 android:onClick="toDeclamaciyaBeforeEveningMeditation"
                 android:text="@string/button_text_declamation_before_evening_meditation"
                 tools:ignore="UsingOnClickInXml" />
 
             <Button
                 android:id="@+id/button_after_evening_meditation"
-                style="@style/button_activity_declomation_main"
+                style="@style/button_activity_declomation_main_chittaviveka"
                 android:onClick="toDeclomaciyaOftereveningMeditation"
                 android:text="@string/deklomation_after_evening_meditation"
                 tools:ignore="UsingOnClickInXml" />
-
-            <ImageView
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
 
             <Button
                 android:id="@+id/button_morning_short_puja"
@@ -85,11 +81,6 @@
                 android:onClick="toDeclomaciyaMorningPuja"
                 android:text="@string/buttonTextMorningPuja"
                 tools:ignore="UsingOnClickInXml" />
-
-
-            <ImageView
-                style="@style/imageViewRazdelitelKnopok"
-                tools:ignore="ContentDescription" />
 
             <Button
                 android:id="@+id/button_vandana_with_laymans"
@@ -104,6 +95,12 @@
                 android:onClick="toDeclomaciyaVandanaWithLayman2"
                 android:text="@string/button_morning_vandana_with_laymans2"
                 tools:ignore="UsingOnClickInXml" />
+
+
+            <ImageView
+                style="@style/imageViewRazdelitelKnopok"
+                tools:ignore="ContentDescription" />
+
 
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
