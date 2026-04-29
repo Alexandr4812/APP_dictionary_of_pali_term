@@ -47,11 +47,12 @@ public class RulesActivity extends BaseActivityClass {
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
         Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
         Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
+        Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
 
-        button0.startAnimation(slideFromLeftAnimation);
-        button1.startAnimation(slideFromRightAnimation);
-        button2.startAnimation(slideFromLeftAnimation);
-        im1.startAnimation(slideDown);
+        button0.startAnimation(appearFast);
+        button1.startAnimation(appearFast);
+        button2.startAnimation(appearFast);
+        im1.startAnimation(appearFast);
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override

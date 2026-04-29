@@ -64,17 +64,18 @@ public class SuttasActivity extends BaseActivityClass {
         Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
         Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
         Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
+        Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
 
-        button1.startAnimation(slideFromLeftAnimation);
-        button2.startAnimation(slideFromRightAnimation);
-        button3.startAnimation(slideFromLeftAnimation);
-        button4.startAnimation(slideFromRightAnimation);
-        button5.startAnimation(slideFromLeftAnimation);
-        button6.startAnimation(slideFromRightAnimation);
-        button8.startAnimation(slideFromLeftAnimation);
-        button7.startAnimation(slideFromRightAnimation);
-        im1.startAnimation(slideDown);
-        im2.startAnimation(slideFromLeftAnimation);
+        button1.startAnimation(appearFast);
+        button2.startAnimation(appearFast);
+        button3.startAnimation(appearFast);
+        button4.startAnimation(appearFast);
+        button5.startAnimation(appearFast);
+        button6.startAnimation(appearFast);
+        button8.startAnimation(appearFast);
+        button7.startAnimation(appearFast);
+        im1.startAnimation(appearFast);
+        im2.startAnimation(appearFast);
         animateText(textViewLink, getString(R.string.theravada_ru));
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {

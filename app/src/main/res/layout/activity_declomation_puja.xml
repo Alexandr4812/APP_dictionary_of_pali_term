@@ -101,6 +101,11 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
+            <Button
+                android:id="@+id/button_puja_woman_tample"
+                style="@style/button_activity_declomation_main"
+                android:text="@string/buttonTextVandanaWomanTample"
+                tools:ignore="UsingOnClickInXml" />
 
             <ImageView
                 style="@style/imageViewRazdelitelKnopok"
