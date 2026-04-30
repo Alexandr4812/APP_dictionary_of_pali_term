@@ -102,9 +102,10 @@
                 tools:ignore="ContentDescription" />
 
             <Button
-                android:id="@+id/button_puja_woman_tample"
+                android:id="@+id/button_puja_inambokote"
                 style="@style/button_activity_declomation_main"
-                android:text="@string/buttonTextVandanaWomanTample"
+                android:onClick="toDeclomaciyaVandanaAmbokote"
+                android:text="@string/buttonTextVandanaAmbokote"
                 tools:ignore="UsingOnClickInXml" />
 
             <ImageView
@@ -112,10 +113,10 @@
                 tools:ignore="ContentDescription" />
 
             <Button
-                android:id="@+id/button_puja_inambokote"
+                android:id="@+id/button_puja_woman_tample"
                 style="@style/button_activity_declomation_main"
-                android:onClick="toDeclomaciyaVandanaAmbokote"
-                android:text="@string/buttonTextVandanaAmbokote"
+                android:onClick="toDeclomaciyaVandanaNun1"
+                android:text="@string/buttonTextVandanaWomanTample"
                 tools:ignore="UsingOnClickInXml" />
 
         </LinearLayout>

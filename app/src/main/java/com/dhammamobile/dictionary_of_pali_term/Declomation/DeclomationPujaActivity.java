@@ -173,6 +173,19 @@ public class DeclomationPujaActivity extends BaseActivityClass {
         loadHtmlPage(htmlFilePath);
     }
 
+    public void toDeclomaciyaVandanaNun1(View view) {
+        buttonVandana.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/vandana_ru/NunVandana1.html";
+        } else {
+            htmlFilePath = "file:///android_asset/vandana_ru/NunVandana1.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
     public void tobackOver(View view) {
         ScrollView scrollText = findViewById(R.id.overScrollTextMorningPuja);
         ScrollView scrollTextVandanaAmbokote = findViewById(R.id.overScrollTextVandanaAmbokote);
