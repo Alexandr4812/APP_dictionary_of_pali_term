@@ -30,7 +30,6 @@ public class RulesBhikkhuPatimokhaSanghadisesaDetail10Activity extends BaseActiv
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLocale(); // Установка языка
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_sanghadisesa_detail10);
 
         enableEdgeToEdgeMode();

@@ -41,7 +41,6 @@ public class RulesBhikkhuPatimokhaParajikaDetail2Activity extends BaseActivityCl
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLocale(); // Установка языка
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_parajika_detail2);
 
         enableEdgeToEdgeMode();

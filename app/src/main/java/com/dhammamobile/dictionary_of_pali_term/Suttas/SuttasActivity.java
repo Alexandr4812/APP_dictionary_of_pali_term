@@ -61,7 +61,7 @@ public class SuttasActivity extends BaseActivityClass {
         ImageView im1 = findViewById(R.id.im1);
         ImageView im2 = findViewById(R.id.im2);
 
-        if (!shouldDisableEntryAnimations()) {
+
             Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
             button1.startAnimation(appearFast);
             button2.startAnimation(appearFast);
@@ -74,9 +74,9 @@ public class SuttasActivity extends BaseActivityClass {
             im1.startAnimation(appearFast);
             im2.startAnimation(appearFast);
             animateText(textViewLink, getString(R.string.theravada_ru));
-        } else {
+
             textViewLink.setText(R.string.theravada_ru);
-        }
+
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
@@ -88,10 +88,6 @@ public class SuttasActivity extends BaseActivityClass {
     }
 
     private void animateText(TextView targetTextView, String textToAnimate) {
-        if (shouldDisableEntryAnimations()) {
-            targetTextView.setText(textToAnimate);
-            return;
-        }
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(2000); // Продолжительность анимации в миллисекундах
         animator.addUpdateListener(animation -> {

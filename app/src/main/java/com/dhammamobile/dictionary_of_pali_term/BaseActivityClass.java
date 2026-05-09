@@ -65,10 +65,7 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         }
     }
 
-    protected boolean shouldDisableEntryAnimations() {
-        // Временный глобальный safe mode: отключаем анимации на всех устройствах.
-        return true;
-    }
+
 
     private boolean shouldAvoidImmersiveSystemBars() {
         String manufacturer = Build.MANUFACTURER == null ? "" : Build.MANUFACTURER.toLowerCase(Locale.ROOT);
@@ -112,18 +109,7 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         super.attachBaseContext(context);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        updateLocale();
-    }
 
-    protected void updateLocale() {
-        Locale.setDefault(APP_LOCALE);
-        Configuration config = getResources().getConfiguration();
-        config.setLocale(APP_LOCALE);
-        getResources().updateConfiguration(config, getResources().getDisplayMetrics());
-    }
 
     protected void startIntentActivityAndFinish(Class<?> cls) {
         Intent intent = new Intent(this, cls);

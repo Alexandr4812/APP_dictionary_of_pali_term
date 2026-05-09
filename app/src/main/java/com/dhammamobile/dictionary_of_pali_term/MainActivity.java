@@ -36,7 +36,6 @@ public class MainActivity extends BaseActivityClass {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLocale();
 
         setContentView(R.layout.activity_main);
 
@@ -98,7 +97,6 @@ public class MainActivity extends BaseActivityClass {
     @Override
     protected void onResume() {
         super.onResume();
-        updateLocale();
     }
 
     public void toLiveBu(View view){

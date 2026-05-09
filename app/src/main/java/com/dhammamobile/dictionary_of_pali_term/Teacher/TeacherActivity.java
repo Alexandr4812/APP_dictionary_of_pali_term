@@ -49,7 +49,7 @@ public class TeacherActivity extends BaseActivityClass {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLocale(); // Установка языка
+
         setContentView(R.layout.activity_teacher);
 
 
@@ -86,7 +86,7 @@ public class TeacherActivity extends BaseActivityClass {
         Button button7 = findViewById(R.id.button_lecture6);
         Button button12 = findViewById(R.id.button_lecture11);
 
-        if (!shouldDisableEntryAnimations()) {
+
             Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
             im1.startAnimation(appearFast);
             button1.startAnimation(appearFast);
@@ -103,7 +103,7 @@ public class TeacherActivity extends BaseActivityClass {
             button6.startAnimation(appearFast);
             button7.startAnimation(appearFast);
             button12.startAnimation(appearFast);
-        }
+
 
         // Настройки WebView
         WebSettings webSettings = webView.getSettings();

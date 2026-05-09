@@ -266,10 +266,7 @@ public class RulesBhikkhuAboutOffencesPacittiyaActivity extends BaseActivityClas
     }
 
     private void animateText(TextView targetTextView, String textToAnimate) {
-        if (shouldDisableEntryAnimations()) {
-            targetTextView.setText(textToAnimate);
-            return;
-        }
+
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(2000); // Продолжительность анимации в миллисекундах
         animator.addUpdateListener(animation -> {

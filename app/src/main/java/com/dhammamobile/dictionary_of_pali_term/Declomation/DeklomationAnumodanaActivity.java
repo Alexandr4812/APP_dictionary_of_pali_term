@@ -37,7 +37,6 @@ public class DeklomationAnumodanaActivity extends BaseActivityClass {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLocale(); // Установка языка
         setContentView(R.layout.activity_deklomation_anumodana);
 
         enableEdgeToEdgeMode();

@@ -24,7 +24,6 @@ public class TeacherAboutActivity extends BaseActivityClass {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLocale(); // Установка языка
         setContentView(R.layout.activity_teacher_about);
 
         TextView textViewLink = findViewById(R.id.textViewTeachrAbout);
@@ -54,10 +53,7 @@ public class TeacherAboutActivity extends BaseActivityClass {
     }
 
     private void animateText(TextView targetTextView, String textToAnimate) {
-        if (shouldDisableEntryAnimations()) {
-            targetTextView.setText(textToAnimate);
-            return;
-        }
+
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(4000); // Продолжительность анимации в миллисекундах
         animator.addUpdateListener(animation -> {

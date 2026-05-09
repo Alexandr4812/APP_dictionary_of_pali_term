@@ -76,7 +76,6 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLocale(); // Установка языка
         setContentView(R.layout.activity_rules_bhikkhu_patimokha_sanghadisesa);
 
        // setWindowFlagsFullscreenAndNoLimits();
@@ -189,10 +188,6 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     }
 
     private void animateText() {
-        if (shouldDisableEntryAnimations()) {
-            textView.setText(textToAnimate);
-            return;
-        }
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(2000); // Продолжительность анимации в миллисекундах
         animator.addUpdateListener(animation -> {

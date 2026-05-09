@@ -34,7 +34,7 @@ public class RulesBhikkhuAboutOffencesActivity extends BaseActivityClass {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_bhikkhu_about_offences);
-        updateLocale(); // Установка языка
+
 
         enableEdgeToEdgeMode();
 

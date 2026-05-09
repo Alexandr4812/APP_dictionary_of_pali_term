@@ -57,7 +57,6 @@ public class AbhidhammaActivity extends BaseActivityClass {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLocale(); // Установка языка
         setContentView(R.layout.activity_abhidhamma);
 
         // setWindowFlagsFullscreenAndNoLimits();
@@ -126,7 +125,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
 
 
         ImageView im1 = findViewById(R.id.imageVievAbhidhamma1);
-        if (!shouldDisableEntryAnimations()) {
+
             Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
             infoButton1.setAnimation(appearFast);
             infoButton2.setAnimation(appearFast);
@@ -151,7 +150,7 @@ public class AbhidhammaActivity extends BaseActivityClass {
             buttonNibbanaFunkciya.startAnimation(appearFast);
             buttonNibbanaProyavlenie.startAnimation(appearFast);
             buttonNibbanaPrichina.startAnimation(appearFast);
-        }
+
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
@@ -359,10 +358,6 @@ public class AbhidhammaActivity extends BaseActivityClass {
     }
 
     private void animateText(TextView targetTextView, String textToAnimate) {
-        if (shouldDisableEntryAnimations()) {
-            targetTextView.setText(textToAnimate);
-            return;
-        }
         animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(1000); // Продолжительность анимации в миллисекундах
         animator.addUpdateListener(animation -> {

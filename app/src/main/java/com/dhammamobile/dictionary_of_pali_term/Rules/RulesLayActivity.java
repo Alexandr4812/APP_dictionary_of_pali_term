@@ -47,7 +47,6 @@ public class RulesLayActivity extends BaseActivityClass {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLocale(); // Установка языка
         setContentView(R.layout.activity_rules_lay);
 
         enableEdgeToEdgeMode();

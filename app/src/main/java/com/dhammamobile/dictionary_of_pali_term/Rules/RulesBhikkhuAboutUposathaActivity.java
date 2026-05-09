@@ -37,7 +37,7 @@ public class RulesBhikkhuAboutUposathaActivity extends BaseActivityClass {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        updateLocale(); // Установка языка
+
         setContentView(R.layout.activity_rules_bhikkhu_about_uposatha);
 
         enableEdgeToEdgeMode();

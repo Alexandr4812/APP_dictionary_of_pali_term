@@ -44,13 +44,13 @@ public class RulesActivity extends BaseActivityClass {
         Button button2 = findViewById(R.id.button_rules_for_bhikkhu);
         ImageView im1 =findViewById(R.id.imageVievRules1);
 
-        if (!shouldDisableEntryAnimations()) {
+
             Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
             button0.startAnimation(appearFast);
             button1.startAnimation(appearFast);
             button2.startAnimation(appearFast);
             im1.startAnimation(appearFast);
-        }
+
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
