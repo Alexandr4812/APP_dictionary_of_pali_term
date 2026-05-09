@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -54,8 +55,28 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         WindowCompat.setDecorFitsSystemWindows(getWindow(), false); // Важно!
 
         WindowInsetsControllerCompat controller = new WindowInsetsControllerCompat(getWindow(), decorView);
-        controller.hide(WindowInsetsCompat.Type.systemBars()); // Скрыть навигацию + статус
-        controller.setSystemBarsBehavior(WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+        if (shouldAvoidImmersiveSystemBars()) {
+            // На MIUI/части Samsung и старых Android полный immersive иногда даёт
+            // чёрный экран и мерцание системных кнопок.
+            controller.show(WindowInsetsCompat.Type.systemBars());
+            controller.setSystemBarsBehavior(WindowInsetsControllerCompat.BEHAVIOR_DEFAULT);
+        } else {
+            controller.hide(WindowInsetsCompat.Type.systemBars()); // Скрыть навигацию + статус
+            controller.setSystemBarsBehavior(WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+        }
+    }
+
+    private boolean shouldAvoidImmersiveSystemBars() {
+        String manufacturer = Build.MANUFACTURER == null ? "" : Build.MANUFACTURER.toLowerCase(Locale.ROOT);
+        boolean problematicVendor =
+                manufacturer.contains("xiaomi")
+                        || manufacturer.contains("redmi")
+                        || manufacturer.contains("poco")
+                        || manufacturer.contains("samsung");
+
+        // Android 10 (SDK 29) чаще проявляет проблемы с immersive + edge-to-edge.
+        boolean oldSystem = Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q;
+        return problematicVendor || oldSystem;
     }
 
     @Override
@@ -102,7 +123,9 @@ public abstract class BaseActivityClass extends AppCompatActivity {
     @Override
     public <T extends View> T findViewById(@IdRes int id) {
         T view = super.findViewById(id);
-        view.setOnDragListener(null);
+        if (view != null) {
+            view.setOnDragListener(null);
+        }
         return view;
     }
 
