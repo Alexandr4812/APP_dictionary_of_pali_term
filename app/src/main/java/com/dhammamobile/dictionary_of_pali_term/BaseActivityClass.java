@@ -55,14 +55,53 @@ public abstract class BaseActivityClass extends AppCompatActivity {
         WindowCompat.setDecorFitsSystemWindows(getWindow(), false); // Важно!
 
         WindowInsetsControllerCompat controller = new WindowInsetsControllerCompat(getWindow(), decorView);
-        controller.hide(WindowInsetsCompat.Type.systemBars()); // Скрыть навигацию + статус
-        controller.setSystemBarsBehavior(WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+        if (shouldAvoidImmersiveSystemBars()) {
+            // Эмуляторы и некоторые прошивки могут нестабильно вести себя в immersive.
+            controller.show(WindowInsetsCompat.Type.systemBars());
+            controller.setSystemBarsBehavior(WindowInsetsControllerCompat.BEHAVIOR_DEFAULT);
+        } else {
+            controller.hide(WindowInsetsCompat.Type.systemBars()); // Скрыть навигацию + статус
+            controller.setSystemBarsBehavior(WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+        }
     }
 
     protected boolean shouldDisableEntryAnimations() {
         // На слабых/старых устройствах (Android 10 и ниже) отключаем входные анимации:
         // это уменьшает лаги и снижает риск визуальных артефактов.
         return Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q;
+    }
+
+    private boolean shouldAvoidImmersiveSystemBars() {
+        String manufacturer = Build.MANUFACTURER == null ? "" : Build.MANUFACTURER.toLowerCase(Locale.ROOT);
+        String brand = Build.BRAND == null ? "" : Build.BRAND.toLowerCase(Locale.ROOT);
+
+        boolean isXiaomiFamily =
+                manufacturer.contains("xiaomi")
+                        || manufacturer.contains("redmi")
+                        || manufacturer.contains("poco")
+                        || brand.contains("xiaomi")
+                        || brand.contains("redmi")
+                        || brand.contains("poco");
+
+        // На Samsung с Android 10 и ниже чаще встречаются артефакты immersive.
+        boolean isOldSamsung =
+                (manufacturer.contains("samsung") || brand.contains("samsung"))
+                        && Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q;
+
+        // BlueStacks/другие эмуляторы.
+        boolean isEmulator =
+                (Build.FINGERPRINT != null && (Build.FINGERPRINT.contains("generic")
+                        || Build.FINGERPRINT.contains("unknown")
+                        || Build.FINGERPRINT.contains("emulator")))
+                        || (Build.MODEL != null && (Build.MODEL.contains("Emulator")
+                        || Build.MODEL.contains("Android SDK built for x86")
+                        || Build.MODEL.toLowerCase(Locale.ROOT).contains("bluestacks")))
+                        || (Build.MANUFACTURER != null && Build.MANUFACTURER.toLowerCase(Locale.ROOT).contains("genymotion"))
+                        || (Build.BRAND != null && Build.DEVICE != null
+                        && Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic"))
+                        || "google_sdk".equals(Build.PRODUCT);
+
+        return isEmulator || isXiaomiFamily || isOldSamsung;
     }
 
     @Override
