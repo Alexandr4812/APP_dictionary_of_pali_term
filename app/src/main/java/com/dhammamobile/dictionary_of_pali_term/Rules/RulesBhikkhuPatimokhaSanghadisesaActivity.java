@@ -189,6 +189,10 @@ public class RulesBhikkhuPatimokhaSanghadisesaActivity extends BaseActivityClass
     }
 
     private void animateText() {
+        if (shouldDisableEntryAnimations()) {
+            textView.setText(textToAnimate);
+            return;
+        }
         ValueAnimator animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(2000); // Продолжительность анимации в миллисекундах
         animator.addUpdateListener(animation -> {

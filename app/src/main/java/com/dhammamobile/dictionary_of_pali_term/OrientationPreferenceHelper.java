@@ -25,13 +25,15 @@ public final class OrientationPreferenceHelper {
         }
         String mode = activity.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
                 .getString(KEY_ORIENTATION, MODE_SENSOR);
-        int orientation = ActivityInfo.SCREEN_ORIENTATION_FULL_SENSOR;
+        int orientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR;
         if (MODE_PORTRAIT.equals(mode)) {
             orientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
         } else if (MODE_LANDSCAPE.equals(mode)) {
             orientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
         }
-        activity.setRequestedOrientation(orientation);
+        if (activity.getRequestedOrientation() != orientation) {
+            activity.setRequestedOrientation(orientation);
+        }
     }
 
     public static void saveAndApply(Activity activity, String mode) {

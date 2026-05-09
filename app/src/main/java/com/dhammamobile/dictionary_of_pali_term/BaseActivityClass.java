@@ -66,9 +66,8 @@ public abstract class BaseActivityClass extends AppCompatActivity {
     }
 
     protected boolean shouldDisableEntryAnimations() {
-        // На слабых/старых устройствах (Android 10 и ниже) отключаем входные анимации:
-        // это уменьшает лаги и снижает риск визуальных артефактов.
-        return Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q;
+        // Временный глобальный safe mode: отключаем анимации на всех устройствах.
+        return true;
     }
 
     private boolean shouldAvoidImmersiveSystemBars() {
@@ -128,6 +127,11 @@ public abstract class BaseActivityClass extends AppCompatActivity {
 
     protected void startIntentActivityAndFinish(Class<?> cls) {
         Intent intent = new Intent(this, cls);
+        if (MainActivity.class.equals(cls)) {
+            // Возвращаемся в уже существующий MainActivity, если он есть в стеке.
+            // Это уменьшает риск подвисаний/чёрного экрана на слабых устройствах.
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        }
         startActivity(intent);
         // Отключаем анимацию перехода — убирает чёрный экран/мерцание между Activity на MIUI.
         overridePendingTransition(0, 0);

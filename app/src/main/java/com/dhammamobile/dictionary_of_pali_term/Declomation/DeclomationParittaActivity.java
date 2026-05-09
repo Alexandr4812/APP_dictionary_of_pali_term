@@ -198,6 +198,10 @@ public class DeclomationParittaActivity extends BaseActivityClass {
     }
 
     private void animateText(TextView targetTextView, String textToAnimate) {
+        if (shouldDisableEntryAnimations()) {
+            targetTextView.setText(textToAnimate);
+            return;
+        }
         animator = ValueAnimator.ofInt(0, textToAnimate.length());
         animator.setDuration(1000); // Продолжительность анимации в миллисекундах
         animator.addUpdateListener(animation -> {
