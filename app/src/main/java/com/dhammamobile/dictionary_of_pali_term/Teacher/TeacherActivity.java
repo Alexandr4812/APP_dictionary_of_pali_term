@@ -86,26 +86,24 @@ public class TeacherActivity extends BaseActivityClass {
         Button button7 = findViewById(R.id.button_lecture6);
         Button button12 = findViewById(R.id.button_lecture11);
 
-        Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
-        Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
-        Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
-        Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
-
-        im1.startAnimation(appearFast);
-        button1.startAnimation(appearFast);
-        im2.startAnimation(appearFast);
-        button1_12.startAnimation(appearFast);
-        button8.startAnimation(appearFast);
-        button9.startAnimation(appearFast);
-        button10.startAnimation(appearFast);
-        button11.startAnimation(appearFast);
-        button2.startAnimation(appearFast);
-        button3.startAnimation(appearFast);
-        button4.startAnimation(appearFast);
-        button5.startAnimation(appearFast);
-        button6.startAnimation(appearFast);
-        button7.startAnimation(appearFast);
-        button12.startAnimation(appearFast);
+        if (!shouldDisableEntryAnimations()) {
+            Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
+            im1.startAnimation(appearFast);
+            button1.startAnimation(appearFast);
+            im2.startAnimation(appearFast);
+            button1_12.startAnimation(appearFast);
+            button8.startAnimation(appearFast);
+            button9.startAnimation(appearFast);
+            button10.startAnimation(appearFast);
+            button11.startAnimation(appearFast);
+            button2.startAnimation(appearFast);
+            button3.startAnimation(appearFast);
+            button4.startAnimation(appearFast);
+            button5.startAnimation(appearFast);
+            button6.startAnimation(appearFast);
+            button7.startAnimation(appearFast);
+            button12.startAnimation(appearFast);
+        }
 
         // Настройки WebView
         WebSettings webSettings = webView.getSettings();

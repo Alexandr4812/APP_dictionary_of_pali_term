@@ -46,19 +46,17 @@ public class DeklomationMainActivity extends BaseActivityClass {
         Button button6 = findViewById(R.id.button_anumodana);
         ImageView im1 =findViewById(R.id.imageViewRazdelitelDeklomationMain);
 
-        Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
-        Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
-        Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
-        Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
-
-        button1.startAnimation(appearFast);
-        button2.startAnimation(appearFast);
-        buttonG.startAnimation(appearFast);
-        button3.startAnimation(appearFast);
-        button4.startAnimation(appearFast);
-        button5.startAnimation(appearFast);
-        button6.startAnimation(appearFast);
-        im1.startAnimation(appearFast);
+        if (!shouldDisableEntryAnimations()) {
+            Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
+            button1.startAnimation(appearFast);
+            button2.startAnimation(appearFast);
+            buttonG.startAnimation(appearFast);
+            button3.startAnimation(appearFast);
+            button4.startAnimation(appearFast);
+            button5.startAnimation(appearFast);
+            button6.startAnimation(appearFast);
+            im1.startAnimation(appearFast);
+        }
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override

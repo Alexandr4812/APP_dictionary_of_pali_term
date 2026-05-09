@@ -125,35 +125,33 @@ public class AbhidhammaActivity extends BaseActivityClass {
 
 
 
-        Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
-        Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
-        Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
-        Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
-
-        infoButton1.setAnimation(appearFast);
-        infoButton2.setAnimation(appearFast);
-        infoButton3.setAnimation(appearFast);
-        button1.startAnimation(appearFast);
-        button2.startAnimation(appearFast);
-        button3.startAnimation(appearFast);
-        button4.startAnimation(appearFast);
         ImageView im1 = findViewById(R.id.imageVievAbhidhamma1);
-        im1.startAnimation(appearFast);
+        if (!shouldDisableEntryAnimations()) {
+            Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
+            infoButton1.setAnimation(appearFast);
+            infoButton2.setAnimation(appearFast);
+            infoButton3.setAnimation(appearFast);
+            button1.startAnimation(appearFast);
+            button2.startAnimation(appearFast);
+            button3.startAnimation(appearFast);
+            button4.startAnimation(appearFast);
+            im1.startAnimation(appearFast);
 
-        buttonHarakteristika.startAnimation(appearFast);
-        buttonFunkciya.startAnimation(appearFast);
-        buttonProyavlenie.startAnimation(appearFast);
-        buttonPrichina.startAnimation(appearFast);
+            buttonHarakteristika.startAnimation(appearFast);
+            buttonFunkciya.startAnimation(appearFast);
+            buttonProyavlenie.startAnimation(appearFast);
+            buttonPrichina.startAnimation(appearFast);
 
-        buttonMaterialHarakteristika.startAnimation(appearFast);
-        buttonMaterialFunkciya.startAnimation(appearFast);
-        buttonMaterialProyavlenie.startAnimation(appearFast);
-        buttonMaterialPrichina.startAnimation(appearFast);
+            buttonMaterialHarakteristika.startAnimation(appearFast);
+            buttonMaterialFunkciya.startAnimation(appearFast);
+            buttonMaterialProyavlenie.startAnimation(appearFast);
+            buttonMaterialPrichina.startAnimation(appearFast);
 
-        buttonNibbanaHarakteristika.startAnimation(appearFast);
-        buttonNibbanaFunkciya.startAnimation(appearFast);
-        buttonNibbanaProyavlenie.startAnimation(appearFast);
-        buttonNibbanaPrichina.startAnimation(appearFast);
+            buttonNibbanaHarakteristika.startAnimation(appearFast);
+            buttonNibbanaFunkciya.startAnimation(appearFast);
+            buttonNibbanaProyavlenie.startAnimation(appearFast);
+            buttonNibbanaPrichina.startAnimation(appearFast);
+        }
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override

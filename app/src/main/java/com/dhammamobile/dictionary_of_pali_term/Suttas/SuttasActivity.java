@@ -61,22 +61,22 @@ public class SuttasActivity extends BaseActivityClass {
         ImageView im1 = findViewById(R.id.im1);
         ImageView im2 = findViewById(R.id.im2);
 
-        Animation slideDown = AnimationUtils.loadAnimation(this, R.anim.slide_down);
-        Animation slideFromLeftAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_left);
-        Animation slideFromRightAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_from_right);
-        Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
-
-        button1.startAnimation(appearFast);
-        button2.startAnimation(appearFast);
-        button3.startAnimation(appearFast);
-        button4.startAnimation(appearFast);
-        button5.startAnimation(appearFast);
-        button6.startAnimation(appearFast);
-        button8.startAnimation(appearFast);
-        button7.startAnimation(appearFast);
-        im1.startAnimation(appearFast);
-        im2.startAnimation(appearFast);
-        animateText(textViewLink, getString(R.string.theravada_ru));
+        if (!shouldDisableEntryAnimations()) {
+            Animation appearFast = AnimationUtils.loadAnimation(this, R.anim.appear_fast);
+            button1.startAnimation(appearFast);
+            button2.startAnimation(appearFast);
+            button3.startAnimation(appearFast);
+            button4.startAnimation(appearFast);
+            button5.startAnimation(appearFast);
+            button6.startAnimation(appearFast);
+            button8.startAnimation(appearFast);
+            button7.startAnimation(appearFast);
+            im1.startAnimation(appearFast);
+            im2.startAnimation(appearFast);
+            animateText(textViewLink, getString(R.string.theravada_ru));
+        } else {
+            textViewLink.setText(R.string.theravada_ru);
+        }
 
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override
