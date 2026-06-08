@@ -30,12 +30,44 @@
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                tools:ignore="UselessLeaf" >
+
+                <Button
+                    android:id="@+id/infoButtonSutta1"
+                    style="@style/infoButton"
+                    android:onClick="karaniyaSuttasInfoText"
+                    android:foreground="@drawable/info7"
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
+
             <Button
                 android:id="@+id/button_puja_sutta_karaniya"
                 style="@style/button_activity_declomation_main"
                 android:onClick="toDeclomaciyaSuttaMetta"
                 android:text="@string/button_karaniya_metta"
                 tools:ignore="UsingOnClickInXml" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                tools:ignore="UselessLeaf" >
+
+                <Button
+                    android:id="@+id/infoButtonSutta2"
+                    style="@style/infoButton"
+                    android:foreground="@drawable/info7"
+
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/button_puja_sutta_mahamangala"
@@ -45,6 +77,22 @@
                 android:onClick="toDeclomaciyaSuttaMangala"
                 android:text="@string/button_sutta_mangala"
                 tools:ignore="UsingOnClickInXml" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                tools:ignore="UselessLeaf" >
+
+                <Button
+                    android:id="@+id/infoButtonSutta3"
+                    style="@style/infoButton"
+                    android:foreground="@drawable/info7"
+
+                    tools:ignore="UsingOnClickInXml" />
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/button_puja_sutta_ratana"
@@ -325,5 +373,22 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonStopMettaSutta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <WebView
+        android:id="@+id/webViewDeclomationSuttas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        android:scrollbarThumbVertical="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Включаем макет с кнопками -->
+    <include
+        layout="@layout/buttons_layout_for_declomation_suttas"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

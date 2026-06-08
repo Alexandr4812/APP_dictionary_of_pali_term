@@ -1,10 +1,15 @@
 package com.dhammamobile.dictionary_of_pali_term.Declomation;
 
+import android.annotation.SuppressLint;
+import android.content.res.Configuration;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.SeekBar;
 import android.os.Handler;
@@ -20,9 +25,22 @@ import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
 
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class DeclomationSuttaActivity extends BaseActivityClass {
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        // Здесь вы можете добавить свои действия при изменении ориентации, если это необходимо
+    }
+
+    LinearLayout buttonSuttas;
+    Button plusText, minusText;
+    WebView webView; // Declare WebView as a class member for easy access
+
+    private Button infoButton1, infoButton2, infoButton3;
 
     private TextView textMaxTime;
     private TextView textCurrentPosition;
@@ -49,6 +67,7 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
     private int flagRatanaSutta;
 
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +84,31 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
             v.setPadding(0, 0, 0, navInsets.bottom); // Учитываем панель навигации
             return insets;
         });
+
+        plusText = findViewById(R.id.buttonPlusSuttas);
+        minusText = findViewById(R.id.buttonMinusSuttas);
+
+        webView = findViewById(R.id.webViewDeclomationSuttas);
+
+        buttonSuttas = findViewById(R.id.button_layout_for_declomation_suttas);
+
+        // Обработчики нажатий кнопок для увеличения/уменьшения шрифта
+        plusText.setOnClickListener(v -> {
+            webView.evaluateJavascript("javascript:increaseFontSize();", null);
+        });
+
+        minusText.setOnClickListener(v -> {
+            webView.evaluateJavascript("javascript:decreaseFontSize();", null);
+        });
+
+        // Настройки WebView
+        WebSettings webSettings = webView.getSettings();
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.clearCache(true);
+
+        infoButton1 = findViewById(R.id.infoButtonSutta1);
+        infoButton2 = findViewById(R.id.infoButtonSutta2);
+        infoButton3 = findViewById(R.id.infoButtonSutta3);
 
         this.textMaxTime = findViewById(R.id.textMaxTime);
         this.textCurrentPosition = findViewById(R.id.textCurrentPosition);
@@ -145,6 +189,32 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
         });
     }
 
+    private void loadHtmlPage(String htmlFilePath) {
+        webView.loadUrl(htmlFilePath);
+    }
+
+    public void karaniyaSuttasInfoText(View view) {
+        buttonSuttas.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        plusText.setVisibility(View.VISIBLE);
+        minusText.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/declomationSuttas/MettaInfo.html";
+        } else {
+            htmlFilePath = "file:///android_asset/declomationSuttas/MettaInfo.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void toSuttasInfoBack(View view){
+        webView.setVisibility(View.INVISIBLE);
+        buttonSuttas.setVisibility(View.INVISIBLE);
+        // Восстанавливаем +/- для следующего открытия основного раздела
+        plusText.setVisibility(View.VISIBLE);
+        minusText.setVisibility(View.VISIBLE);
+    }
 
     public void toMainAct(View view){
         startIntentActivityAndFinish(MainActivity.class);

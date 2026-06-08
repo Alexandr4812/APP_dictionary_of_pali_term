@@ -38,7 +38,7 @@
                 android:layout_marginTop="20dp"
                 android:contentDescription="@string/mainButtonMonksRules"
                 android:onClick="toAbhidhammaAct"
-                android:src="@drawable/button_abhidhamma"
+                android:src="@drawable/abhidhamma_color"
                 tools:ignore="UsingOnClickInXml,DuplicateSpeakableTextCheck" />
 
             <TextView
