@@ -208,6 +208,36 @@ public class DeclomationSuttaActivity extends BaseActivityClass {
         loadHtmlPage(htmlFilePath);
     }
 
+    public void mangalaSuttasInfoText(View view) {
+        buttonSuttas.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        plusText.setVisibility(View.VISIBLE);
+        minusText.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/declomationSuttas/mangalaInfo.html";
+        } else {
+            htmlFilePath = "file:///android_asset/declomationSuttas/mangalaInfo.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
+    public void ratanaSuttasInfoText(View view) {
+        buttonSuttas.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        plusText.setVisibility(View.VISIBLE);
+        minusText.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/declomationSuttas/ratanaInfo.html";
+        } else {
+            htmlFilePath = "file:///android_asset/declomationSuttas/ratanaInfo.html";
+        }
+        loadHtmlPage(htmlFilePath);
+    }
+
     public void toSuttasInfoBack(View view){
         webView.setVisibility(View.INVISIBLE);
         buttonSuttas.setVisibility(View.INVISIBLE);

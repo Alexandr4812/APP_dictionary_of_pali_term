@@ -64,7 +64,7 @@
                     android:id="@+id/infoButtonSutta2"
                     style="@style/infoButton"
                     android:foreground="@drawable/info7"
-
+                    android:onClick="mangalaSuttasInfoText"
                     tools:ignore="UsingOnClickInXml" />
 
             </LinearLayout>
@@ -89,7 +89,7 @@
                     android:id="@+id/infoButtonSutta3"
                     style="@style/infoButton"
                     android:foreground="@drawable/info7"
-
+                    android:onClick="ratanaSuttasInfoText"
                     tools:ignore="UsingOnClickInXml" />
 
             </LinearLayout>

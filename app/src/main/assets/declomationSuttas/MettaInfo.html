@@ -759,7 +759,28 @@ img {
         .overlay.open { display: block; }
         @media (max-width: 900px) { .main-content { padding: 16px 16px 80px; } }
 
-    </style>
+    
+        /* Кастомный скроллбар */
+        .scrollbar-track {
+            position: fixed;
+            right: 0; top: 0; bottom: 0;
+            width: 4px;
+            background: rgba(0,0,0,0.08);
+            z-index: 200;
+            pointer-events: none;
+        }
+        .scrollbar-thumb {
+            position: absolute;
+            width: 4px;
+            background: #CC0000;
+            border-radius: 2px;
+            transition: opacity 0.3s;
+            opacity: 0;
+            min-height: 30px;
+        }
+        .scrollbar-thumb.visible { opacity: 1; }
+
+        </style>
 </head>
 <body>
 
@@ -835,6 +856,11 @@ img {
 </div>
 
 <div class="layout">
+
+<div class="scrollbar-track">
+    <div class="scrollbar-thumb" id="scrollThumb"></div>
+</div>
+
 <div class="main-content">
 <p class="a______"><strong><span class="tm10">&#160;</span></strong></p>
 <p class="tm12"><strong><span class="tm13"></span><span class="tm10">&#1054;&#1073;&#1079;&#1086;&#1088; &#1052;&#1077;&#1090;&#1090;&#1072;-&#1089;&#1091;&#1090;&#1090;&#1099;</span><span
@@ -2642,6 +2668,24 @@ document.querySelectorAll('.sidebar nav a').forEach(link => {
         }
     });
 });
+
+    // Кастомный скроллбар
+    const _container = document.querySelector('.main-content');
+    const _thumb = document.getElementById('scrollThumb');
+    const _track = document.querySelector('.scrollbar-track');
+    let _hideTimer;
+
+    _container.addEventListener('scroll', () => {
+        const ratio = _container.scrollTop / (_container.scrollHeight - _container.clientHeight);
+        const trackH = _track.clientHeight;
+        const thumbH = Math.max(30, (_container.clientHeight / _container.scrollHeight) * trackH);
+        _thumb.style.height = thumbH + 'px';
+        _thumb.style.top = ratio * (trackH - thumbH) + 'px';
+        _thumb.classList.add('visible');
+        clearTimeout(_hideTimer);
+        _hideTimer = setTimeout(() => _thumb.classList.remove('visible'), 1200);
+    });
+
 </script>
 </body>
 </html>

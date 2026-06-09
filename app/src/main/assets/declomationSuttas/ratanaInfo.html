@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Комментарий к Ратана сутте</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scrollbar-width: none; -ms-overflow-style: none; }
+    *::-webkit-scrollbar { display: none; }
+    html, body { height: 100%; overflow: hidden; display: flex; flex-direction: column; background-color: #FFE082; font-family: Arial, sans-serif; }
+
+    .top-bar {
+        flex-shrink: 0; display: flex; align-items: center;
+        padding: 10px 20px; background-color: #FFE082;
+        border-bottom: 1px solid rgba(0,0,0,0.08); z-index: 80;
+    }
+    .open-sidebar-btn {
+        background-color: #161923; color: #FFF8E1; border: none;
+        width: 44px; height: 44px; border-radius: 10px;
+        font-size: 22px; cursor: pointer;
+    }
+    .layout { display: flex; flex: 1; overflow: hidden; }
+    .main-content {
+        flex: 1; overflow-y: auto;
+        display: flex; align-items: center; justify-content: center;
+        padding: 40px 30px;
+    }
+
+    .placeholder-box {
+        text-align: center;
+        max-width: 400px;
+    }
+    .placeholder-icon {
+        font-size: 56px;
+        margin-bottom: 24px;
+        opacity: 0.6;
+    }
+    .placeholder-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #4E342E;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+    .placeholder-sub {
+        font-size: 15px;
+        color: #8D6E63;
+        line-height: 1.6;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 280px; background-color: #161923; color: #E2E8F0;
+        position: fixed; top: 0; left: 0; height: 100vh;
+        overflow-y: auto; z-index: 100;
+        transform: translateX(-100%); transition: transform 0.3s ease;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    }
+    .sidebar.open { transform: translateX(0); }
+    .sidebar-header {
+        display: flex; align-items: center; gap: 12px;
+        padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,0.08);
+        margin-bottom: 10px;
+    }
+    .sidebar-header h2 {
+        font-size: 14px; font-weight: 600; text-transform: uppercase;
+        letter-spacing: 1.5px; color: #FFE082; margin: 0;
+    }
+    .menu-toggle-inner {
+        background: transparent; border: none; color: #FFE082;
+        font-size: 22px; cursor: pointer; padding: 0; flex-shrink: 0;
+    }
+    .sidebar nav { padding: 0 10px; }
+    .sidebar nav a {
+        display: block; padding: 8px 14px; color: #E2E8F0;
+        text-decoration: none; font-size: 13px; border-radius: 6px;
+        transition: all 0.2s; margin-bottom: 2px; line-height: 1.4;
+    }
+    .sidebar nav a:hover { background-color: rgba(255,224,130,0.1); color: #FFE082; transform: translateX(3px); }
+    .sidebar nav .section-label {
+        padding: 14px 14px 5px; font-size: 10px; text-transform: uppercase;
+        color: #94A3B8; font-weight: 700; letter-spacing: 1px;
+    }
+    .overlay {
+        display: none; position: fixed; top: 0; left: 0;
+        width: 100%; height: 100%; background: rgba(0,0,0,0.4); z-index: 90;
+    }
+    .overlay.open { display: block; }
+
+    /* Кастомный скроллбар */
+    .scrollbar-track {
+        position: fixed; right: 0; top: 0; bottom: 0;
+        width: 4px; background: rgba(0,0,0,0.08); z-index: 200; pointer-events: none;
+    }
+    .scrollbar-thumb {
+        position: absolute; width: 4px; background: #CC0000;
+        border-radius: 2px; transition: opacity 0.3s; opacity: 0; min-height: 30px;
+    }
+    .scrollbar-thumb.visible { opacity: 1; }
+</style>
+</head>
+<body>
+
+<div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <button class="menu-toggle-inner" onclick="toggleSidebar()">☰</button>
+        <h2>Навигация</h2>
+    </div>
+    <nav>
+        <div class="section-label">Ратана сутта</div>
+        <a href="#">В разработке...</a>
+    </nav>
+</aside>
+
+<div class="top-bar">
+    <button class="open-sidebar-btn" onclick="toggleSidebar()">☰</button>
+</div>
+
+<div class="layout">
+<div class="scrollbar-track">
+    <div class="scrollbar-thumb" id="scrollThumb"></div>
+</div>
+
+<div class="main-content">
+    <div class="placeholder-box">
+        <div class="placeholder-icon">📜</div>
+        <div class="placeholder-title">Комментарий к Ратана сутте<br>находится в процессе разработки</div>
+        <div class="placeholder-sub">Материал будет добавлен в ближайшее время</div>
+    </div>
+</div>
+</div>
+
+<script>
+function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.getElementById('overlay').classList.toggle('open');
+}
+
+const _container = document.querySelector('.main-content');
+const _thumb = document.getElementById('scrollThumb');
+const _track = document.querySelector('.scrollbar-track');
+let _hideTimer;
+
+_container.addEventListener('scroll', () => {
+    const ratio = _container.scrollTop / (_container.scrollHeight - _container.clientHeight);
+    const trackH = _track.clientHeight;
+    const thumbH = Math.max(30, (_container.clientHeight / _container.scrollHeight) * trackH);
+    _thumb.style.height = thumbH + 'px';
+    _thumb.style.top = ratio * (trackH - thumbH) + 'px';
+    _thumb.classList.add('visible');
+    clearTimeout(_hideTimer);
+    _hideTimer = setTimeout(() => _thumb.classList.remove('visible'), 1200);
+});
+</script>
+</body>
+</html>
