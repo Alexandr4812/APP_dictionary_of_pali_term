@@ -139,10 +139,16 @@ public class DeclomationPujaActivity extends BaseActivityClass {
     }
 
     public void toDeclomaciyaVandanaAmbokote(View view) {
-        ScrollView scrollText = findViewById(R.id.overScrollTextVandanaAmbokote);
-        scrollText.setVisibility(View.VISIBLE);
-        buttonHome.setVisibility(View.VISIBLE);
-        buttonLiveToPuja.setVisibility(View.VISIBLE);
+        buttonVandana.setVisibility(View.VISIBLE);
+        webView.setVisibility(View.VISIBLE);
+        String htmlFilePath;
+        String currentLanguage = Locale.getDefault().getLanguage();
+        if (currentLanguage.equals("ru")) {
+            htmlFilePath = "file:///android_asset/vandana_ru/ambokoteVandana.html";
+        } else {
+            htmlFilePath = "file:///android_asset/vandana_ru/ambokoteVandana.html";
+        }
+        loadHtmlPage(htmlFilePath);
     }
 
     public void toDeclomaciyaVandanaWithLayman(View view) {
