@@ -1,129 +1,162 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Мадджхима Никая</title>
-<style>
-  :root {
-    --bg-color: #161923;
-    --accent-color: #FFE082;
-    --text-main: #E2E8F0;
-    --text-dim: #94A3B8;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --card-hover: rgba(255, 255, 255, 0.06);
-    --border-color: #2D3748;
-  }
-  * { box-sizing: border-box; }
-  body {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 15px;
-    font-family: -apple-system, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-main);
-    line-height: 1.5;
-    -webkit-tap-highlight-color: transparent;
-  }
-  .main-title {
-    text-align: center;
-    color: var(--accent-color);
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 6px;
-  }
-  .main-subtitle {
-    text-align: center;
-    color: var(--text-dim);
-    font-size: 1.2;
-    margin-bottom: 24px;
-    line-height: 1.6;
-  }
-  details.section-group {
-    margin-bottom: 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 14px;
-    background: var(--card-bg);
-    overflow: hidden;
-  }
-  summary.section-summary {
-    padding: 16px;
-    list-style: none;
-    cursor: pointer;
-    background-color: var(--accent-color);
-    color: #161923;
-    font-weight: 800;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-transform: uppercase;
-  }
-  summary::-webkit-details-marker { display: none; }
-  summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; }
-  details[open] > summary::after { transform: rotate(180deg); }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мадджхима Никая</title>
+    <style>
+        :root {
+          --bg-color: #161923;
+          --accent-color: #FFE082;
+          --text-main: #E2E8F0;
+          --text-dim: #94A3B8;
+          --card-bg: rgba(255, 255, 255, 0.03);
+          --card-hover: rgba(255, 255, 255, 0.06);
+          --border-color: #2D3748;
+        }
+        * { box-sizing: border-box; }
+        body {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 15px;
+          font-family: -apple-system, sans-serif;
+          background-color: var(--bg-color);
+          color: var(--text-main);
+          line-height: 1.5;
+          -webkit-tap-highlight-color: transparent;
+        }
+        .main-title {
+          text-align: center;
+          color: var(--accent-color);
+          font-size: 1.5rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-bottom: 6px;
+        }
+        .main-subtitle {
+          text-align: center;
+          color: var(--text-dim);
+          font-size: 1.2;
+          margin-bottom: 24px;
+          line-height: 1.6;
+        }
+        details.section-group {
+          margin-bottom: 12px;
+          border: 1px solid var(--border-color);
+          border-radius: 14px;
+          background: var(--card-bg);
+          overflow: hidden;
+        }
+        summary.section-summary {
+          padding: 16px;
+          list-style: none;
+          cursor: pointer;
+          background-color: var(--accent-color);
+          color: #161923;
+          font-weight: 800;
+          font-size: 1.2rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          text-transform: uppercase;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: "▼"; font-size: 0.6rem; transition: 0.3s; }
+        details[open] > summary::after { transform: rotate(180deg); }
 
-  details.chapter-group {
-    margin: 8px 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  summary.chapter-summary {
-    padding: 10px 14px;
-    list-style: none;
-    cursor: pointer;
-    background: rgba(255,224,130,0.08);
-    color: var(--accent-color);
-    font-weight: 700;
-    font-size: 1rem;
-    text-transform: uppercase;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    letter-spacing: 0.5px;
-  }
-  summary.chapter-summary::after { content: "▼"; font-size: 0.55rem; transition: 0.3s; }
-  details.chapter-group[open] > summary.chapter-summary::after { transform: rotate(180deg); }
+        details.chapter-group {
+          margin: 8px 10px;
+          border: 1px solid var(--border-color);
+          border-radius: 10px;
+          overflow: hidden;
+        }
+        summary.chapter-summary {
+          padding: 10px 14px;
+          list-style: none;
+          cursor: pointer;
+          background: rgba(255,224,130,0.08);
+          color: var(--accent-color);
+          font-weight: 700;
+          font-size: 1rem;
+          text-transform: uppercase;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          letter-spacing: 0.5px;
+        }
+        summary.chapter-summary::after { content: "▼"; font-size: 0.55rem; transition: 0.3s; }
+        details.chapter-group[open] > summary.chapter-summary::after { transform: rotate(180deg); }
 
-  .sutta-card {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    gap: 10px;
-    padding: 12px 14px;
-    text-decoration: none;
-    color: inherit;
-    border-bottom: 1px solid var(--border-color);
-    border-left: 3px solid transparent;
-    transition: background 0.2s, border-left-color 0.2s;
-    align-items: start;
-  }
-  .sutta-card:hover {
-    background: var(--card-hover);
-    border-left-color: var(--accent-color);
-  }
-  .sutta-card:last-child { border-bottom: none; }
+        .sutta-card {
+          display: grid;
+          grid-template-columns: 48px 1fr;
+          gap: 10px;
+          padding: 12px 14px;
+          text-decoration: none;
+          color: inherit;
+          border-bottom: 1px solid var(--border-color);
+          border-left: 3px solid transparent;
+          transition: background 0.2s, border-left-color 0.2s;
+          align-items: start;
+        }
+        .sutta-card:hover {
+          background: var(--card-hover);
+          border-left-color: var(--accent-color);
+        }
+        .sutta-card:last-child { border-bottom: none; }
 
-  .sutta-num { color: var(--text-dim); font-family: monospace; font-size: 1.5rem; font-weight: bold; padding-top: 2px; }
-  .sutta-title { font-weight: 700; font-size: 1.5rem; color: var(--accent-color); margin-bottom: 2px; }
-  .sutta-subtitle { font-size: 1.2rem; color: var(--text-main); margin-bottom: 3px; }
-  .sutta-desc { font-size: 1rem; color: var(--text-dim); line-height: 1.5; }
+        .sutta-num { color: var(--text-dim); font-family: monospace; font-size: 1.5rem; font-weight: bold; padding-top: 2px; }
+        .sutta-title { font-weight: 700; font-size: 1.5rem; color: var(--accent-color); margin-bottom: 2px; }
+        .sutta-subtitle { font-size: 1.2rem; color: var(--text-main); margin-bottom: 3px; }
+        .sutta-desc { font-size: 1rem; color: var(--text-dim); line-height: 1.5; }
 
-  .alt-link {
-    display: inline-block;
-    font-size: 0.72rem;
-    color: var(--text-dim);
-    background: rgba(255,255,255,0.05);
-    border-radius: 4px;
-    padding: 1px 6px;
-    margin-top: 3px;
-    text-decoration: none;
-    border: 1px solid var(--border-color);
-  }
-  .alt-link:hover { color: var(--accent-color); border-color: var(--accent-color); }
-</style>
+        .alt-link {
+          display: inline-block;
+          font-size: 0.72rem;
+          color: var(--text-dim);
+          background: rgba(255,255,255,0.05);
+          border-radius: 4px;
+          padding: 1px 6px;
+          margin-top: 3px;
+          text-decoration: none;
+          border: 1px solid var(--border-color);
+        }
+        .alt-link:hover { color: var(--accent-color); border-color: var(--accent-color); }
+
+        /* Секция Атхакатха/Тика */
+        summary.attha-summary {
+          background-color: #52B788;
+          color: #0f2117;
+        }
+        .attha-num { color: #3d8b67; font-family: monospace; font-size: 1.5rem; font-weight: bold; padding-top: 2px; }
+        .attha-badge {
+          display: inline-block;
+          font-size: 0.68rem;
+          background: rgba(82, 183, 136, 0.15);
+          color: #52B788;
+          border: 1px solid rgba(82, 183, 136, 0.35);
+          border-radius: 4px;
+          padding: 1px 7px;
+          margin-top: 3px;
+          letter-spacing: 0.3px;
+        }
+
+      .attha-disclaimer {
+        font-size: 0.78rem;
+        color: #3d5a47;
+        background: rgba(82, 183, 136, 0.1);
+        border-left: 3px solid #52B788;
+        padding: 8px 14px;
+        margin: 10px 12px 4px;
+        border-radius: 0 6px 6px 0;
+        font-style: italic;
+        letter-spacing: 0.2px;
+      }
+      .sutta-card.attha-card:hover {
+          border-left-color: #52B788;
+        }
+    </style>
 </head>
 <body>
 <br>
@@ -133,733 +166,789 @@
 
 <!-- КОРЕННОЙ РАЗДЕЛ -->
 <details class="section-group" id="section-1">
-  <summary class="section-summary">Коренной раздел (МН 1–50)</summary>
+    <summary class="section-summary">Коренной раздел (МН 1–50)</summary>
 
-  <details class="chapter-group" id="chapter-1-1">
-    <summary class="chapter-summary">I. Корень (МН 1–10)</summary>
-    <a class="sutta-card" href="Texts/mn1-mulapariyyaya-sutta-sv.html">
-      <div class="sutta-num">МН 1</div>
-      <div><div class="sutta-title">Мулапариййяя сутта</div><div class="sutta-subtitle">Корень всех вещей (пер. SV)</div><div class="sutta-desc">Будда даёт глубокую лекцию о непривязанности ко всем феноменам, в том числе и к ниббане.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn2-sabbasava-sutta-sv.html">
-      <div class="sutta-num">МН 2</div>
-      <div><div class="sutta-title">Саббасава сутта</div><div class="sutta-subtitle">Все пятна загрязнений ума (пер. SV)</div><div class="sutta-desc">Нужны разные подходы и методы в зависимости от видов загрязнений и жизненных ситуаций.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn3-dhammadayada-sutta-sv.html">
-      <div class="sutta-num">МН 3</div>
-      <div><div class="sutta-title">Дхаммадайяда сутта</div><div class="sutta-subtitle">Наследники в Дхамме (пер. SV)</div><div class="sutta-desc">Будда призывает монахов довольствоваться малым. Сарипутта говорит о негативных качествах, которые требуется отбрасывать.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn4-bhayabherava-sutta-sv.html">
-      <div class="sutta-num">МН 4</div>
-      <div><div class="sutta-title">Бхайя бхерава сутта</div><div class="sutta-subtitle">Страх и ужас</div><div class="sutta-desc">Будда вспоминает о трудностях аскетической практики проживания в лесу.<br><a class="alt-link" href="Texts/mn4-bhaya-bherava-sutta-sb.html">пер. Сугата Бхиккху</a></div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn5-anangana-sutta-sv.html">
-      <div class="sutta-num">МН 5</div>
-      <div><div class="sutta-title">Анангана сутта</div><div class="sutta-subtitle">Без изъянов (пер. SV)</div><div class="sutta-desc">Достопочтенный Сарипутта описывает изъяны, которые могут быть у монаха.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn6-akankheya-sutta-sv.html">
-      <div class="sutta-num">МН 6</div>
-      <div><div class="sutta-title">Аканкхейя сутта</div><div class="sutta-subtitle">Если монах желает (пер. SV)</div><div class="sutta-desc">Будда призывает монахов к практике и описывает различные плоды, которые она может принести.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn7-vatthupama-sutta-sv.html">
-      <div class="sutta-num">МН 7</div>
-      <div><div class="sutta-title">Ваттхупама сутта</div><div class="sutta-subtitle">Пример с тканью (пер. SV)</div><div class="sutta-desc">Каким образом понимание и отбрасывание неблагих качеств может привести к вступлению в поток.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn8-sallekha-sutta-sv.html">
-      <div class="sutta-num">МН 8</div>
-      <div><div class="sutta-title">Саллекха сутта</div><div class="sutta-subtitle">Стирание (пер. SV)</div><div class="sutta-desc">Будда излагает обширный список загрязнений ума, которые требуется устранять.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn9-sammaditthi-sutta-sv.html">
-      <div class="sutta-num">МН 9</div>
-      <div><div class="sutta-title">Саммадиттхи сутта</div><div class="sutta-subtitle">Правильные воззрения (пер. SV)</div><div class="sutta-desc">Почтенный Сарипутта объясняет, в каком случае о человеке можно сказать, что он достиг правильных воззрений.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn10-satipatthana-sutta-sv.html">
-      <div class="sutta-num">МН 10</div>
-      <div><div class="sutta-title">Сатипаттхана сутта</div><div class="sutta-subtitle">Основы осознанности (пер. SV)</div><div class="sutta-desc">Будда разъясняет многочисленные созерцательные аспекты, которые относятся к практике сатипаттханы.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-1-1">
+        <summary class="chapter-summary">I. Корень (МН 1–10)</summary>
+        <a class="sutta-card" href="Texts/mn1-mulapariyyaya-sutta-sv.html">
+            <div class="sutta-num">МН 1</div>
+            <div><div class="sutta-title">Мулапариййяя сутта</div><div class="sutta-subtitle">Корень всех вещей (пер. SV)</div><div class="sutta-desc">Будда даёт глубокую лекцию о непривязанности ко всем феноменам, в том числе и к ниббане.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn2-sabbasava-sutta-sv.html">
+            <div class="sutta-num">МН 2</div>
+            <div><div class="sutta-title">Саббасава сутта</div><div class="sutta-subtitle">Все пятна загрязнений ума (пер. SV)</div><div class="sutta-desc">Нужны разные подходы и методы в зависимости от видов загрязнений и жизненных ситуаций.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn3-dhammadayada-sutta-sv.html">
+            <div class="sutta-num">МН 3</div>
+            <div><div class="sutta-title">Дхаммадайяда сутта</div><div class="sutta-subtitle">Наследники в Дхамме (пер. SV)</div><div class="sutta-desc">Будда призывает монахов довольствоваться малым. Сарипутта говорит о негативных качествах, которые требуется отбрасывать.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn4-bhayabherava-sutta-sv.html">
+            <div class="sutta-num">МН 4</div>
+            <div><div class="sutta-title">Бхайя бхерава сутта</div><div class="sutta-subtitle">Страх и ужас</div><div class="sutta-desc">Будда вспоминает о трудностях аскетической практики проживания в лесу.<br><a class="alt-link" href="Texts/mn4-bhaya-bherava-sutta-sb.html">пер. Сугата Бхиккху</a></div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn5-anangana-sutta-sv.html">
+            <div class="sutta-num">МН 5</div>
+            <div><div class="sutta-title">Анангана сутта</div><div class="sutta-subtitle">Без изъянов (пер. SV)</div><div class="sutta-desc">Достопочтенный Сарипутта описывает изъяны, которые могут быть у монаха.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn6-akankheya-sutta-sv.html">
+            <div class="sutta-num">МН 6</div>
+            <div><div class="sutta-title">Аканкхейя сутта</div><div class="sutta-subtitle">Если монах желает (пер. SV)</div><div class="sutta-desc">Будда призывает монахов к практике и описывает различные плоды, которые она может принести.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn7-vatthupama-sutta-sv.html">
+            <div class="sutta-num">МН 7</div>
+            <div><div class="sutta-title">Ваттхупама сутта</div><div class="sutta-subtitle">Пример с тканью (пер. SV)</div><div class="sutta-desc">Каким образом понимание и отбрасывание неблагих качеств может привести к вступлению в поток.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn8-sallekha-sutta-sv.html">
+            <div class="sutta-num">МН 8</div>
+            <div><div class="sutta-title">Саллекха сутта</div><div class="sutta-subtitle">Стирание (пер. SV)</div><div class="sutta-desc">Будда излагает обширный список загрязнений ума, которые требуется устранять.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn9-sammaditthi-sutta-sv.html">
+            <div class="sutta-num">МН 9</div>
+            <div><div class="sutta-title">Саммадиттхи сутта</div><div class="sutta-subtitle">Правильные воззрения (пер. SV)</div><div class="sutta-desc">Почтенный Сарипутта объясняет, в каком случае о человеке можно сказать, что он достиг правильных воззрений.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn10-satipatthana-sutta-sv.html">
+            <div class="sutta-num">МН 10</div>
+            <div><div class="sutta-title">Сатипаттхана сутта</div><div class="sutta-subtitle">Основы осознанности (пер. SV)</div><div class="sutta-desc">Будда разъясняет многочисленные созерцательные аспекты, которые относятся к практике сатипаттханы.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-1-2">
-    <summary class="chapter-summary">II. Львиный рык (МН 11–20)</summary>
-    <a class="sutta-card" href="Texts/mn11-cula-sihanada-sutta-sv.html">
-      <div class="sutta-num">МН 11</div>
-      <div><div class="sutta-title">Чула сиханада сутта</div><div class="sutta-subtitle">Малая лекция о львином рыке (пер. SV)</div><div class="sutta-desc">Будда объясняет, в чём заключается принципиальное отличие его учения от других религиозных и философских систем.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn12-mahasihanada-sutta-sv.html">
-      <div class="sutta-num">МН 12</div>
-      <div><div class="sutta-title">Маха сиханада сутта</div><div class="sutta-subtitle">Большая лекция о львином рыке (пер. SV)</div><div class="sutta-desc">Будда громогласно заявляет о своём просветлении, перечисляет уникальные способности и знания, а также упоминает аскетические практики, которые осуществлял в поисках пути к просветлению.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn13-maha-dukkha-kkhandha-sutta-sv.html">
-      <div class="sutta-num">МН 13</div>
-      <div><div class="sutta-title">Маха дуккхаккхандха сутта</div><div class="sutta-subtitle">Большая лекция о груде страданий (пер. SV)</div><div class="sutta-desc">Будда объясняет три аспекта чувственных удовольствий, формы и чувств: привлекательность, опасность и путь спасения от них.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn14-cula-dukkha-kkhandha-sutta-sv.html">
-      <div class="sutta-num">МН 14</div>
-      <div><div class="sutta-title">Чула дуккхаккхандха сутта</div><div class="sutta-subtitle">Малая лекция о груде страданий (пер. SV)</div><div class="sutta-desc">Ум ученика Благородных всё ещё склоняется к чувственным удовольствиям, пока он не достиг джханы.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn15-anumana-sutta-sv.html">
-      <div class="sutta-num">МН 15</div>
-      <div><div class="sutta-title">Анумана сутта</div><div class="sutta-subtitle">Умозаключение (пер. SV)</div><div class="sutta-desc">Практика самонаблюдения, которую нужно постоянно осуществлять любому буддисту.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn16-cetokhila-sutta-sv.html">
-      <div class="sutta-num">МН 16</div>
-      <div><div class="sutta-title">Четокхила сутта</div><div class="sutta-subtitle">Умственное бесплодие (пер. SV)</div><div class="sutta-desc">Препятствия, мешающие монаху продвигаться на буддийском пути.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn17-vanapattha-sutta-sv.html">
-      <div class="sutta-num">МН 17</div>
-      <div><div class="sutta-title">Ванапаттха сутта</div><div class="sutta-subtitle">Лесная чаща (пер. SV)</div><div class="sutta-desc">О том, почему древние монахи много странствовали.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn18-madhupindika-sutta-sv.html">
-      <div class="sutta-num">МН 18</div>
-      <div><div class="sutta-title">Мадхупиндика сутта</div><div class="sutta-subtitle">Медовик (пер. SV)</div><div class="sutta-desc">Рассматривается частный случай зависимого возникновения.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn19-dvedha-vitakka-sutta-sv.html">
-      <div class="sutta-num">МН 19</div>
-      <div><div class="sutta-title">Дведха витакка сутта</div><div class="sutta-subtitle">Два типа мыслей (пер. SV)</div><div class="sutta-desc">Какие мысли часто обдумываются, к тому в итоге и склоняется ум.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn20-vitakkasanthana-sutta-sv.html">
-      <div class="sutta-num">МН 20</div>
-      <div><div class="sutta-title">Витаккасантхана сутта</div><div class="sutta-subtitle">Ослабление мыслей (пер. SV)</div><div class="sutta-desc">Будда предлагает пять практических методов, как справляться с неблагими мыслями.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-1-2">
+        <summary class="chapter-summary">II. Львиный рык (МН 11–20)</summary>
+        <a class="sutta-card" href="Texts/mn11-cula-sihanada-sutta-sv.html">
+            <div class="sutta-num">МН 11</div>
+            <div><div class="sutta-title">Чула сиханада сутта</div><div class="sutta-subtitle">Малая лекция о львином рыке (пер. SV)</div><div class="sutta-desc">Будда объясняет, в чём заключается принципиальное отличие его учения от других религиозных и философских систем.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn12-mahasihanada-sutta-sv.html">
+            <div class="sutta-num">МН 12</div>
+            <div><div class="sutta-title">Маха сиханада сутта</div><div class="sutta-subtitle">Большая лекция о львином рыке (пер. SV)</div><div class="sutta-desc">Будда громогласно заявляет о своём просветлении, перечисляет уникальные способности и знания, а также упоминает аскетические практики, которые осуществлял в поисках пути к просветлению.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn13-maha-dukkha-kkhandha-sutta-sv.html">
+            <div class="sutta-num">МН 13</div>
+            <div><div class="sutta-title">Маха дуккхаккхандха сутта</div><div class="sutta-subtitle">Большая лекция о груде страданий (пер. SV)</div><div class="sutta-desc">Будда объясняет три аспекта чувственных удовольствий, формы и чувств: привлекательность, опасность и путь спасения от них.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn14-cula-dukkha-kkhandha-sutta-sv.html">
+            <div class="sutta-num">МН 14</div>
+            <div><div class="sutta-title">Чула дуккхаккхандха сутта</div><div class="sutta-subtitle">Малая лекция о груде страданий (пер. SV)</div><div class="sutta-desc">Ум ученика Благородных всё ещё склоняется к чувственным удовольствиям, пока он не достиг джханы.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn15-anumana-sutta-sv.html">
+            <div class="sutta-num">МН 15</div>
+            <div><div class="sutta-title">Анумана сутта</div><div class="sutta-subtitle">Умозаключение (пер. SV)</div><div class="sutta-desc">Практика самонаблюдения, которую нужно постоянно осуществлять любому буддисту.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn16-cetokhila-sutta-sv.html">
+            <div class="sutta-num">МН 16</div>
+            <div><div class="sutta-title">Четокхила сутта</div><div class="sutta-subtitle">Умственное бесплодие (пер. SV)</div><div class="sutta-desc">Препятствия, мешающие монаху продвигаться на буддийском пути.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn17-vanapattha-sutta-sv.html">
+            <div class="sutta-num">МН 17</div>
+            <div><div class="sutta-title">Ванапаттха сутта</div><div class="sutta-subtitle">Лесная чаща (пер. SV)</div><div class="sutta-desc">О том, почему древние монахи много странствовали.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn18-madhupindika-sutta-sv.html">
+            <div class="sutta-num">МН 18</div>
+            <div><div class="sutta-title">Мадхупиндика сутта</div><div class="sutta-subtitle">Медовик (пер. SV)</div><div class="sutta-desc">Рассматривается частный случай зависимого возникновения.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn19-dvedha-vitakka-sutta-sv.html">
+            <div class="sutta-num">МН 19</div>
+            <div><div class="sutta-title">Дведха витакка сутта</div><div class="sutta-subtitle">Два типа мыслей (пер. SV)</div><div class="sutta-desc">Какие мысли часто обдумываются, к тому в итоге и склоняется ум.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn20-vitakkasanthana-sutta-sv.html">
+            <div class="sutta-num">МН 20</div>
+            <div><div class="sutta-title">Витаккасантхана сутта</div><div class="sutta-subtitle">Ослабление мыслей (пер. SV)</div><div class="sutta-desc">Будда предлагает пять практических методов, как справляться с неблагими мыслями.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-1-3">
-    <summary class="chapter-summary">III. Третий раздел (МН 21–30)</summary>
-    <a class="sutta-card" href="Texts/mn21-kakacupama-sutta-sv.html">
-      <div class="sutta-num">МН 21</div>
-      <div><div class="sutta-title">Какачупама сутта</div><div class="sutta-subtitle">Пример с пилой (пер. SV)</div><div class="sutta-desc">Будда объясняет, как нужно практиковать развитие доброжелательности, и приводит притчу о том, что доброта может быть напускной.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn22-alagaddupama-sutta-sv.html">
-      <div class="sutta-num">МН 22</div>
-      <div><div class="sutta-title">Алагаддупама сутта</div><div class="sutta-subtitle">Пример с водяной змеёй (пер. SV)</div><div class="sutta-desc">Об опасности неправильного ухватывания сути Дхаммы, о безличности и практике, ведущей к постижению безличности.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn23-vammika-sutta-sv.html">
-      <div class="sutta-num">МН 23</div>
-      <div><div class="sutta-title">Ваммика сутта</div><div class="sutta-subtitle">Муравейник (пер. SV)</div><div class="sutta-desc">Божество загадывает монаху загадку. Будда даёт разъяснения.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn24-rathavinita-sutta-sv.html">
-      <div class="sutta-num">МН 24</div>
-      <div><div class="sutta-title">Ратхавинита сутта</div><div class="sutta-subtitle">Перекладные колесницы (пер. SV)</div><div class="sutta-desc">Дост. Сарипутта и Мантанипутта беседуют на тему этапов пути.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn25-nivapa-sutta-sv.html">
-      <div class="sutta-num">МН 25</div>
-      <div><div class="sutta-title">Нивапа сутта</div><div class="sutta-subtitle">Наживка (пер. SV)</div><div class="sutta-desc">Будда приводит метафору с оленями, чтобы показать отличие буддийских монахов от других отшельников.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn26-ariya-pariyesana-sutta-sv.html">
-      <div class="sutta-num">МН 26</div>
-      <div><div class="sutta-title">Арияпарийесана сутта</div><div class="sutta-subtitle">Благородный поиск (пер. SV)</div><div class="sutta-desc">Будда рассказывает подробную историю о своих поисках просветления.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn27-cula-hatthipadopama-sutta-sv.html">
-      <div class="sutta-num">МН 27</div>
-      <div><div class="sutta-title">Чула хаттхипадопама сутта</div><div class="sutta-subtitle">Малый пример со следами слона (пер. SV)</div><div class="sutta-desc">На каком этапе последователь Будды становится окончательно убеждённым в совершенстве Трёх Драгоценностей?</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn28-maha-hatthipadopama-sutta-sv.html">
-      <div class="sutta-num">МН 28</div>
-      <div><div class="sutta-title">Маха хаттхипадопама сутта</div><div class="sutta-subtitle">Большой пример со следами слона (пер. SV)</div><div class="sutta-desc">Дост. Сарипутта даёт наставления об элементах материи, о взаимозависимом возникновении пяти совокупностей тела-ума.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn29-maha-saropama-sutta-sv.html">
-      <div class="sutta-num">МН 29</div>
-      <div><div class="sutta-title">Маха саропама сутта</div><div class="sutta-subtitle">Большая лекция с примером о сердцевине (пер. SV)</div><div class="sutta-desc">Из-за горделивости монах может остановиться на определённом этапе духовных достижений и не суметь продвинуться далее.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn30-cula-saropama-sutta-sv.html">
-      <div class="sutta-num">МН 30</div>
-      <div><div class="sutta-title">Чула саропама сутта</div><div class="sutta-subtitle">Малая лекция с примером о сердцевине (пер. SV)</div><div class="sutta-desc">Схожая сутта с предыдущей.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-1-3">
+        <summary class="chapter-summary">III. Третий раздел (МН 21–30)</summary>
+        <a class="sutta-card" href="Texts/mn21-kakacupama-sutta-sv.html">
+            <div class="sutta-num">МН 21</div>
+            <div><div class="sutta-title">Какачупама сутта</div><div class="sutta-subtitle">Пример с пилой (пер. SV)</div><div class="sutta-desc">Будда объясняет, как нужно практиковать развитие доброжелательности, и приводит притчу о том, что доброта может быть напускной.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn22-alagaddupama-sutta-sv.html">
+            <div class="sutta-num">МН 22</div>
+            <div><div class="sutta-title">Алагаддупама сутта</div><div class="sutta-subtitle">Пример с водяной змеёй (пер. SV)</div><div class="sutta-desc">Об опасности неправильного ухватывания сути Дхаммы, о безличности и практике, ведущей к постижению безличности.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn23-vammika-sutta-sv.html">
+            <div class="sutta-num">МН 23</div>
+            <div><div class="sutta-title">Ваммика сутта</div><div class="sutta-subtitle">Муравейник (пер. SV)</div><div class="sutta-desc">Божество загадывает монаху загадку. Будда даёт разъяснения.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn24-rathavinita-sutta-sv.html">
+            <div class="sutta-num">МН 24</div>
+            <div><div class="sutta-title">Ратхавинита сутта</div><div class="sutta-subtitle">Перекладные колесницы (пер. SV)</div><div class="sutta-desc">Дост. Сарипутта и Мантанипутта беседуют на тему этапов пути.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn25-nivapa-sutta-sv.html">
+            <div class="sutta-num">МН 25</div>
+            <div><div class="sutta-title">Нивапа сутта</div><div class="sutta-subtitle">Наживка (пер. SV)</div><div class="sutta-desc">Будда приводит метафору с оленями, чтобы показать отличие буддийских монахов от других отшельников.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn26-ariya-pariyesana-sutta-sv.html">
+            <div class="sutta-num">МН 26</div>
+            <div><div class="sutta-title">Арияпарийесана сутта</div><div class="sutta-subtitle">Благородный поиск (пер. SV)</div><div class="sutta-desc">Будда рассказывает подробную историю о своих поисках просветления.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn27-cula-hatthipadopama-sutta-sv.html">
+            <div class="sutta-num">МН 27</div>
+            <div><div class="sutta-title">Чула хаттхипадопама сутта</div><div class="sutta-subtitle">Малый пример со следами слона (пер. SV)</div><div class="sutta-desc">На каком этапе последователь Будды становится окончательно убеждённым в совершенстве Трёх Драгоценностей?</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn28-maha-hatthipadopama-sutta-sv.html">
+            <div class="sutta-num">МН 28</div>
+            <div><div class="sutta-title">Маха хаттхипадопама сутта</div><div class="sutta-subtitle">Большой пример со следами слона (пер. SV)</div><div class="sutta-desc">Дост. Сарипутта даёт наставления об элементах материи, о взаимозависимом возникновении пяти совокупностей тела-ума.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn29-maha-saropama-sutta-sv.html">
+            <div class="sutta-num">МН 29</div>
+            <div><div class="sutta-title">Маха саропама сутта</div><div class="sutta-subtitle">Большая лекция с примером о сердцевине (пер. SV)</div><div class="sutta-desc">Из-за горделивости монах может остановиться на определённом этапе духовных достижений и не суметь продвинуться далее.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn30-cula-saropama-sutta-sv.html">
+            <div class="sutta-num">МН 30</div>
+            <div><div class="sutta-title">Чула саропама сутта</div><div class="sutta-subtitle">Малая лекция с примером о сердцевине (пер. SV)</div><div class="sutta-desc">Схожая сутта с предыдущей.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-1-4">
-    <summary class="chapter-summary">IV. Большие двойки (МН 31–40)</summary>
-    <a class="sutta-card" href="Texts/mn31-culagosinga-sutta-sv.html">
-      <div class="sutta-num">МН 31</div>
-      <div><div class="sutta-title">Чула госинга сутта</div><div class="sutta-subtitle">Малая беседа в Госинге (пер. SV)</div><div class="sutta-desc">Описывается идеальное монашеское житие, максимальное достижение в плане сверхчеловеческих состояний — джхан.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn32-maha-gosinga-sutta-sv.html">
-      <div class="sutta-num">МН 32</div>
-      <div><div class="sutta-title">Маха госинга сутта</div><div class="sutta-subtitle">Большая беседа в Госинге (пер. SV)</div><div class="sutta-desc">Описываются склонности в практике у ряда старших учеников.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn33-maha-gopalaka-sutta-sv.html">
-      <div class="sutta-num">МН 33</div>
-      <div><div class="sutta-title">Маха гопалака сутта</div><div class="sutta-subtitle">Большая лекция о пастухе (пер. SV)</div><div class="sutta-desc">Метафора, сравнивающая умелого и неумелого пастуха с монахом.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn34-cula-gopalaka-sutta-sv.html">
-      <div class="sutta-num">МН 34</div>
-      <div><div class="sutta-title">Чула гопалака сутта</div><div class="sutta-subtitle">Малая лекция о пастухе (пер. SV)</div><div class="sutta-desc">Метафора, сравнивающая особей в коровьем стаде с различными уровнями благородных учеников.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn35-cula-saccaka-sutta-sv.html">
-      <div class="sutta-num">МН 35</div>
-      <div><div class="sutta-title">Чула саччака сутта</div><div class="sutta-subtitle">Малая беседа с Саччакой (пер. SV)</div><div class="sutta-desc">Дебаты аскета Саччаки с Буддой на тему безличностности.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn36-mahasaccaka-sutta-sv.html">
-      <div class="sutta-num">МН 36</div>
-      <div><div class="sutta-title">Маха саччака сутта</div><div class="sutta-subtitle">Длинная беседа с Саччакой (пер. SV)</div><div class="sutta-desc">Будда описывает собственную борьбу за просветление, а также объясняет аскету Саччаке ряд иных вопросов.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn37-cula-tanha-sankhaya-sutta-sv.html">
-      <div class="sutta-num">МН 37</div>
-      <div><div class="sutta-title">Чула танха санкхая сутта</div><div class="sutta-subtitle">Малая лекция об уничтожении жажды (пер. SV)</div><div class="sutta-desc">Один из учеников Будды отправляется к небесному царю Сакке в мир Таватимсы.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn38-maha-tanha-sankhaya-sutta-sv.html">
-      <div class="sutta-num">МН 38</div>
-      <div><div class="sutta-title">Маха танха санкхая сутта</div><div class="sutta-subtitle">Большая лекция об уничтожении жажды (пер. SV)</div><div class="sutta-desc">Будда критикует монаха за этерналистическое воззрение и детально объясняет аспекты схемы зависимого возникновения сознания.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn39-maha-assapura-sutta-sv.html">
-      <div class="sutta-num">МН 39</div>
-      <div><div class="sutta-title">Маха ассапура сутта</div><div class="sutta-subtitle">Большая лекция в Ассапуре (пер. SV)</div><div class="sutta-desc">Стандартное изложение последовательных этапов практики буддийского пути с подробными описаниями джхан и сверхспособностей.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn40-cula-assapura-sutta-sv.html">
-      <div class="sutta-num">МН 40</div>
-      <div><div class="sutta-title">Чула ассапура сутта</div><div class="sutta-subtitle">Малая лекция в Ассапуре (пер. SV)</div><div class="sutta-desc">Будда раскрывает негативные качества, которые отбрасываются по мере развития пути, и позитивные, которые обретаются.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-1-4">
+        <summary class="chapter-summary">IV. Большие двойки (МН 31–40)</summary>
+        <a class="sutta-card" href="Texts/mn31-culagosinga-sutta-sv.html">
+            <div class="sutta-num">МН 31</div>
+            <div><div class="sutta-title">Чула госинга сутта</div><div class="sutta-subtitle">Малая беседа в Госинге (пер. SV)</div><div class="sutta-desc">Описывается идеальное монашеское житие, максимальное достижение в плане сверхчеловеческих состояний — джхан.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn32-maha-gosinga-sutta-sv.html">
+            <div class="sutta-num">МН 32</div>
+            <div><div class="sutta-title">Маха госинга сутта</div><div class="sutta-subtitle">Большая беседа в Госинге (пер. SV)</div><div class="sutta-desc">Описываются склонности в практике у ряда старших учеников.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn33-maha-gopalaka-sutta-sv.html">
+            <div class="sutta-num">МН 33</div>
+            <div><div class="sutta-title">Маха гопалака сутта</div><div class="sutta-subtitle">Большая лекция о пастухе (пер. SV)</div><div class="sutta-desc">Метафора, сравнивающая умелого и неумелого пастуха с монахом.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn34-cula-gopalaka-sutta-sv.html">
+            <div class="sutta-num">МН 34</div>
+            <div><div class="sutta-title">Чула гопалака сутта</div><div class="sutta-subtitle">Малая лекция о пастухе (пер. SV)</div><div class="sutta-desc">Метафора, сравнивающая особей в коровьем стаде с различными уровнями благородных учеников.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn35-cula-saccaka-sutta-sv.html">
+            <div class="sutta-num">МН 35</div>
+            <div><div class="sutta-title">Чула саччака сутта</div><div class="sutta-subtitle">Малая беседа с Саччакой (пер. SV)</div><div class="sutta-desc">Дебаты аскета Саччаки с Буддой на тему безличностности.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn36-mahasaccaka-sutta-sv.html">
+            <div class="sutta-num">МН 36</div>
+            <div><div class="sutta-title">Маха саччака сутта</div><div class="sutta-subtitle">Длинная беседа с Саччакой (пер. SV)</div><div class="sutta-desc">Будда описывает собственную борьбу за просветление, а также объясняет аскету Саччаке ряд иных вопросов.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn37-cula-tanha-sankhaya-sutta-sv.html">
+            <div class="sutta-num">МН 37</div>
+            <div><div class="sutta-title">Чула танха санкхая сутта</div><div class="sutta-subtitle">Малая лекция об уничтожении жажды (пер. SV)</div><div class="sutta-desc">Один из учеников Будды отправляется к небесному царю Сакке в мир Таватимсы.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn38-maha-tanha-sankhaya-sutta-sv.html">
+            <div class="sutta-num">МН 38</div>
+            <div><div class="sutta-title">Маха танха санкхая сутта</div><div class="sutta-subtitle">Большая лекция об уничтожении жажды (пер. SV)</div><div class="sutta-desc">Будда критикует монаха за этерналистическое воззрение и детально объясняет аспекты схемы зависимого возникновения сознания.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn39-maha-assapura-sutta-sv.html">
+            <div class="sutta-num">МН 39</div>
+            <div><div class="sutta-title">Маха ассапура сутта</div><div class="sutta-subtitle">Большая лекция в Ассапуре (пер. SV)</div><div class="sutta-desc">Стандартное изложение последовательных этапов практики буддийского пути с подробными описаниями джхан и сверхспособностей.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn40-cula-assapura-sutta-sv.html">
+            <div class="sutta-num">МН 40</div>
+            <div><div class="sutta-title">Чула ассапура сутта</div><div class="sutta-subtitle">Малая лекция в Ассапуре (пер. SV)</div><div class="sutta-desc">Будда раскрывает негативные качества, которые отбрасываются по мере развития пути, и позитивные, которые обретаются.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-1-5">
-    <summary class="chapter-summary">V. Малые двойки (МН 41–50)</summary>
-    <a class="sutta-card" href="Texts/mn41-saleyyaka-sutta-sv.html">
-      <div class="sutta-num">МН 41</div>
-      <div><div class="sutta-title">Салеййяка сутта</div><div class="sutta-subtitle">Брахманы из Салы (пер. SV)</div><div class="sutta-desc">О благом и неблагом поведении.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn42-veranjaka-sutta-sv.html">
-      <div class="sutta-num">МН 42</div>
-      <div><div class="sutta-title">Вераньджака сутта</div><div class="sutta-subtitle">Брахманы из Вераньджи</div><div class="sutta-desc">Схожая сутта с предыдущей.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn43-mahavedalla-sutta-sv.html">
-      <div class="sutta-num">МН 43</div>
-      <div><div class="sutta-title">Махаведалла сутта</div><div class="sutta-subtitle">Большое собрание вопросов и ответов (пер. SV)</div><div class="sutta-desc">Достопочтенный Сарипутта подробно отвечает на вопросы по теме мудрости, правильных взглядов и высших медитативных достижений.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn44-culavedala-sutta-sv.html">
-      <div class="sutta-num">МН 44</div>
-      <div><div class="sutta-title">Чулаведалла сутта</div><div class="sutta-subtitle">Малое собрание вопросов и ответов (пер. SV)</div><div class="sutta-desc">Монахиня Дхаммадинна отвечает на ряд достаточно глубоких вопросов по Дхамме.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn45-cula-dhamma-sadhana-sutta-sv.html">
-      <div class="sutta-num">МН 45</div>
-      <div><div class="sutta-title">Чула дхаммасамадана сутта</div><div class="sutta-subtitle">Малая лекция об осуществлении вещей (пер. SV)</div><div class="sutta-desc">Четыре типа практики аскетов и монашествующих. Некоторые создают плохую камму, другие — хорошую.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn46-maha-dhamma-sadhana-sutta-sv.html">
-      <div class="sutta-num">МН 46</div>
-      <div><div class="sutta-title">Маха дхаммасамадана сутта</div><div class="sutta-subtitle">Большая лекция об осуществлении вещей (пер. SV)</div><div class="sutta-desc">Невежественные люди отбрасывают правильный путь и выбирают неправильный, что приводит к длительным страданиям.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn47-vimansaka-sutta-sv.html">
-      <div class="sutta-num">МН 47</div>
-      <div><div class="sutta-title">Вимансака сутта</div><div class="sutta-subtitle">Вопрошающий (пер. SV)</div><div class="sutta-desc">О том, каким образом древние монахи развивали и утверждали веру в Будду и его учение.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn48-kosambiya-sutta-sv.html">
-      <div class="sutta-num">МН 48</div>
-      <div><div class="sutta-title">Косамбия сутта</div><div class="sutta-subtitle">Монахи из Косамби (пер. SV)</div><div class="sutta-desc">История о ссоре монахов из Косамби. Перечисляются качества, ведущие к дружбе и согласию в Сангхе.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn49-brahma-nimantanika-sutta-sv.html">
-      <div class="sutta-num">МН 49</div>
-      <div><div class="sutta-title">Брахма нимантаника сутта</div><div class="sutta-subtitle">Приглашение Брахмы (пер. SV)</div><div class="sutta-desc">Будда беседует с Брахмой, который мнил себя творцом мира.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn50-mara-tajjaniya-sutta-sv.html">
-      <div class="sutta-num">МН 50</div>
-      <div><div class="sutta-title">Мара тадджания сутта</div><div class="sutta-subtitle">Выговор Маре (пер. SV)</div><div class="sutta-desc">Махамоггаллана делает Маре предупреждение и рассказывает историю о своей прошлой жизни, когда он сам был Марой.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-1-5">
+        <summary class="chapter-summary">V. Малые двойки (МН 41–50)</summary>
+        <a class="sutta-card" href="Texts/mn41-saleyyaka-sutta-sv.html">
+            <div class="sutta-num">МН 41</div>
+            <div><div class="sutta-title">Салеййяка сутта</div><div class="sutta-subtitle">Брахманы из Салы (пер. SV)</div><div class="sutta-desc">О благом и неблагом поведении.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn42-veranjaka-sutta-sv.html">
+            <div class="sutta-num">МН 42</div>
+            <div><div class="sutta-title">Вераньджака сутта</div><div class="sutta-subtitle">Брахманы из Вераньджи</div><div class="sutta-desc">Схожая сутта с предыдущей.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn43-mahavedalla-sutta-sv.html">
+            <div class="sutta-num">МН 43</div>
+            <div><div class="sutta-title">Махаведалла сутта</div><div class="sutta-subtitle">Большое собрание вопросов и ответов (пер. SV)</div><div class="sutta-desc">Достопочтенный Сарипутта подробно отвечает на вопросы по теме мудрости, правильных взглядов и высших медитативных достижений.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn44-culavedala-sutta-sv.html">
+            <div class="sutta-num">МН 44</div>
+            <div><div class="sutta-title">Чулаведалла сутта</div><div class="sutta-subtitle">Малое собрание вопросов и ответов (пер. SV)</div><div class="sutta-desc">Монахиня Дхаммадинна отвечает на ряд достаточно глубоких вопросов по Дхамме.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn45-cula-dhamma-sadhana-sutta-sv.html">
+            <div class="sutta-num">МН 45</div>
+            <div><div class="sutta-title">Чула дхаммасамадана сутта</div><div class="sutta-subtitle">Малая лекция об осуществлении вещей (пер. SV)</div><div class="sutta-desc">Четыре типа практики аскетов и монашествующих. Некоторые создают плохую камму, другие — хорошую.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn46-maha-dhamma-sadhana-sutta-sv.html">
+            <div class="sutta-num">МН 46</div>
+            <div><div class="sutta-title">Маха дхаммасамадана сутта</div><div class="sutta-subtitle">Большая лекция об осуществлении вещей (пер. SV)</div><div class="sutta-desc">Невежественные люди отбрасывают правильный путь и выбирают неправильный, что приводит к длительным страданиям.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn47-vimansaka-sutta-sv.html">
+            <div class="sutta-num">МН 47</div>
+            <div><div class="sutta-title">Вимансака сутта</div><div class="sutta-subtitle">Вопрошающий (пер. SV)</div><div class="sutta-desc">О том, каким образом древние монахи развивали и утверждали веру в Будду и его учение.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn48-kosambiya-sutta-sv.html">
+            <div class="sutta-num">МН 48</div>
+            <div><div class="sutta-title">Косамбия сутта</div><div class="sutta-subtitle">Монахи из Косамби (пер. SV)</div><div class="sutta-desc">История о ссоре монахов из Косамби. Перечисляются качества, ведущие к дружбе и согласию в Сангхе.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn49-brahma-nimantanika-sutta-sv.html">
+            <div class="sutta-num">МН 49</div>
+            <div><div class="sutta-title">Брахма нимантаника сутта</div><div class="sutta-subtitle">Приглашение Брахмы (пер. SV)</div><div class="sutta-desc">Будда беседует с Брахмой, который мнил себя творцом мира.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn50-mara-tajjaniya-sutta-sv.html">
+            <div class="sutta-num">МН 50</div>
+            <div><div class="sutta-title">Мара тадджания сутта</div><div class="sutta-subtitle">Выговор Маре (пер. SV)</div><div class="sutta-desc">Махамоггаллана делает Маре предупреждение и рассказывает историю о своей прошлой жизни, когда он сам был Марой.</div></div>
+        </a>
+    </details>
 </details>
 
 <!-- СРЕДИННЫЙ РАЗДЕЛ -->
 <details class="section-group" id="section-2">
-  <summary class="section-summary">Срединный раздел (МН 51–100)</summary>
+    <summary class="section-summary">Срединный раздел (МН 51–100)</summary>
 
-  <details class="chapter-group" id="chapter-2-1">
-    <summary class="chapter-summary">I. Домохозяева (МН 51–60)</summary>
-    <a class="sutta-card" href="Texts/mn51-kandaraka-sutta-sv.html">
-      <div class="sutta-num">МН 51</div>
-      <div><div class="sutta-title">Кандарака сутта</div><div class="sutta-subtitle">К Кандараке (пер. SV)</div><div class="sutta-desc">Разъяснение четырёх типов личности, трое из которых живут во вред себе или другим.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn52-atthakanagara-sutta-sv.html">
-      <div class="sutta-num">МН 52</div>
-      <div><div class="sutta-title">Аттхаканагара сутта</div><div class="sutta-subtitle">Человек из Аттхаканагары (пер. SV)</div><div class="sutta-desc">Дост. Ананда объясняет, что достичь прозрения можно на основе любых медитативных достижений с восприятием.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn53-sekha-sutta-sv.html">
-      <div class="sutta-num">МН 53</div>
-      <div><div class="sutta-title">Секха сутта</div><div class="sutta-subtitle">Ученик (пер. SV)</div><div class="sutta-desc">Достопочтенный Ананда описывает практику, которая приводит к арахантству через достижение 4 джхан и трёх высших знаний.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn54-potaliya-sutta-sv.html">
-      <div class="sutta-num">МН 54</div>
-      <div><div class="sutta-title">Поталия сутта</div><div class="sutta-subtitle">К Поталии (пер. SV)</div><div class="sutta-desc">Будда беседует с мирянином, который стал считать себя отшельником. Интересны метафоры опасностей чувственных удовольствий.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn55-jivaka-sutta-sv.html">
-      <div class="sutta-num">МН 55</div>
-      <div><div class="sutta-title">Дживака сутта</div><div class="sutta-subtitle">Дживака</div><div class="sutta-desc">Будда объясняет, в каком случае монаху разрешено принимать и есть мясо, а в каком запрещено.<br><a class="alt-link" href="Texts/mn55-jivaka-sutta-ed.html">пер. Евгений Д.</a></div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn56-upali-sutta-sv.html">
-      <div class="sutta-num">МН 56</div>
-      <div><div class="sutta-title">Упали сутта</div><div class="sutta-subtitle">Упали (пер. SV)</div><div class="sutta-desc">Будда обращает одного из сторонников древних джайнов, который пытался поспорить с ним.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn57-kukkuravatika-sutta-sv.html">
-      <div class="sutta-num">МН 57</div>
-      <div><div class="sutta-title">Куккураватика сутта</div><div class="sutta-subtitle">Практик собачьей аскезы (пер. SV)</div><div class="sutta-desc">О том, куда приводят извращённые манеры поведения, которые практикуются постоянно и намеренно.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn58-abhaya-sutta-sv.html">
-      <div class="sutta-num">МН 58</div>
-      <div><div class="sutta-title">Абхая сутта</div><div class="sutta-subtitle">К принцу Абхае (пер. SV)</div><div class="sutta-desc">Глава джайнов Нигантха Натапутта собирался доказать, что Будда не является просветлённым. Будда подробно объясняет, в каких случаях произносит приятные или неприятные слова.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn59-bahuvedaniya-sutta-sv.html">
-      <div class="sutta-num">МН 59</div>
-      <div><div class="sutta-title">Бахуведания сутта</div><div class="sutta-subtitle">Много видов чувств (пер. SV)</div><div class="sutta-desc">В ниббане нет ощущений, но всё же она является приятной.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn60-apannaka-sutta-sv.html">
-      <div class="sutta-num">МН 60</div>
-      <div><div class="sutta-title">Апаннака сутта</div><div class="sutta-subtitle">Безопасный выбор (пер. SV)</div><div class="sutta-desc">Почему Будде лучше верить, нежели не верить?</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-2-1">
+        <summary class="chapter-summary">I. Домохозяева (МН 51–60)</summary>
+        <a class="sutta-card" href="Texts/mn51-kandaraka-sutta-sv.html">
+            <div class="sutta-num">МН 51</div>
+            <div><div class="sutta-title">Кандарака сутта</div><div class="sutta-subtitle">К Кандараке (пер. SV)</div><div class="sutta-desc">Разъяснение четырёх типов личности, трое из которых живут во вред себе или другим.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn52-atthakanagara-sutta-sv.html">
+            <div class="sutta-num">МН 52</div>
+            <div><div class="sutta-title">Аттхаканагара сутта</div><div class="sutta-subtitle">Человек из Аттхаканагары (пер. SV)</div><div class="sutta-desc">Дост. Ананда объясняет, что достичь прозрения можно на основе любых медитативных достижений с восприятием.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn53-sekha-sutta-sv.html">
+            <div class="sutta-num">МН 53</div>
+            <div><div class="sutta-title">Секха сутта</div><div class="sutta-subtitle">Ученик (пер. SV)</div><div class="sutta-desc">Достопочтенный Ананда описывает практику, которая приводит к арахантству через достижение 4 джхан и трёх высших знаний.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn54-potaliya-sutta-sv.html">
+            <div class="sutta-num">МН 54</div>
+            <div><div class="sutta-title">Поталия сутта</div><div class="sutta-subtitle">К Поталии (пер. SV)</div><div class="sutta-desc">Будда беседует с мирянином, который стал считать себя отшельником. Интересны метафоры опасностей чувственных удовольствий.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn55-jivaka-sutta-sv.html">
+            <div class="sutta-num">МН 55</div>
+            <div><div class="sutta-title">Дживака сутта</div><div class="sutta-subtitle">Дживака</div><div class="sutta-desc">Будда объясняет, в каком случае монаху разрешено принимать и есть мясо, а в каком запрещено.<br><a class="alt-link" href="Texts/mn55-jivaka-sutta-ed.html">пер. Евгений Д.</a></div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn56-upali-sutta-sv.html">
+            <div class="sutta-num">МН 56</div>
+            <div><div class="sutta-title">Упали сутта</div><div class="sutta-subtitle">Упали (пер. SV)</div><div class="sutta-desc">Будда обращает одного из сторонников древних джайнов, который пытался поспорить с ним.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn57-kukkuravatika-sutta-sv.html">
+            <div class="sutta-num">МН 57</div>
+            <div><div class="sutta-title">Куккураватика сутта</div><div class="sutta-subtitle">Практик собачьей аскезы (пер. SV)</div><div class="sutta-desc">О том, куда приводят извращённые манеры поведения, которые практикуются постоянно и намеренно.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn58-abhaya-sutta-sv.html">
+            <div class="sutta-num">МН 58</div>
+            <div><div class="sutta-title">Абхая сутта</div><div class="sutta-subtitle">К принцу Абхае (пер. SV)</div><div class="sutta-desc">Глава джайнов Нигантха Натапутта собирался доказать, что Будда не является просветлённым. Будда подробно объясняет, в каких случаях произносит приятные или неприятные слова.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn59-bahuvedaniya-sutta-sv.html">
+            <div class="sutta-num">МН 59</div>
+            <div><div class="sutta-title">Бахуведания сутта</div><div class="sutta-subtitle">Много видов чувств (пер. SV)</div><div class="sutta-desc">В ниббане нет ощущений, но всё же она является приятной.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn60-apannaka-sutta-sv.html">
+            <div class="sutta-num">МН 60</div>
+            <div><div class="sutta-title">Апаннака сутта</div><div class="sutta-subtitle">Безопасный выбор (пер. SV)</div><div class="sutta-desc">Почему Будде лучше верить, нежели не верить?</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-2-2">
-    <summary class="chapter-summary">II. Монахи (МН 61–70)</summary>
-    <a class="sutta-card" href="Texts/mn61-ambalatthika-rahulovada-sutta-sv.html">
-      <div class="sutta-num">МН 61</div>
-      <div><div class="sutta-title">Амбалаттхика рахуловада сутта</div><div class="sutta-subtitle">Совет Рахуле у Амбалаттхики (пер. SV)</div><div class="sutta-desc">Будда наставляет своего сына саманеру Рахулу на предмет нравственного поведения и воздержания от лжи.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn62-maha-rahulovada-sutta-sv.html">
-      <div class="sutta-num">МН 62</div>
-      <div><div class="sutta-title">Маха рахуловада сутта</div><div class="sutta-subtitle">Большая лекция для Рахулы (пер. SV)</div><div class="sutta-desc">Будда даёт Рахуле рекомендации заниматься различными видами медитативных созерцаний.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn63-cula-malunkya-sutta-sv.html">
-      <div class="sutta-num">МН 63</div>
-      <div><div class="sutta-title">Чула малункья сутта</div><div class="sutta-subtitle">Малая лекция для Малункьяпутты (пер. SV)</div><div class="sutta-desc">Будда объясняет одному из монахов, почему он отказывается разъяснять ряд философских вопросов.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn64-mahamalunkya-sutta-sv.html">
-      <div class="sutta-num">МН 64</div>
-      <div><div class="sutta-title">Махамалункья сутта</div><div class="sutta-subtitle">Большая беседа с Малункьяпуттой (пер. SV)</div><div class="sutta-desc">Чтобы отбросить хотя бы пять из десяти сансарных пут, требуется джхана. Раскрывается и сама природа сансарных пут.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn65-bhaddali-sutta-sv.html">
-      <div class="sutta-num">МН 65</div>
-      <div><div class="sutta-title">Бхаддали сутта</div><div class="sutta-subtitle">К Бхаддали (пер. SV)</div><div class="sutta-desc">Монах отказывался принимать установленное правило монашеской тренировки, за что получил выговор от Будды.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn66-latukikopama-sutta-sv.html">
-      <div class="sutta-num">МН 66</div>
-      <div><div class="sutta-title">Латукикопама сутта</div><div class="sutta-subtitle">Пример с перепёлкой (пер. SV)</div><div class="sutta-desc">Беседа монаха с Буддой на несколько тем. Упоминается история установления правила кушать один раз в день и разъяснения о джханах.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn67-catuma-sutta-sv.html">
-      <div class="sutta-num">МН 67</div>
-      <div><div class="sutta-title">Чатума сутта</div><div class="sutta-subtitle">В Чатуме (пер. SV)</div><div class="sutta-desc">История о том, как Будда распустил Сангху слишком шумных монахов, затем всё же дал лекцию о четырёх опасностях для новопострижённых.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn68-nalakapana-sutta-sv.html">
-      <div class="sutta-num">МН 68</div>
-      <div><div class="sutta-title">Налакапана сутта</div><div class="sutta-subtitle">В Налакапане (пер. SV)</div><div class="sutta-desc">Будда беседует с новопосвящёнными монахами о том, зачем объявляет о послесмертной участи своих учеников.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn69-gulissani-sutta-sv.html">
-      <div class="sutta-num">МН 69</div>
-      <div><div class="sutta-title">Гулиссани сутта</div><div class="sutta-subtitle">Гулиссани (пер. SV)</div><div class="sutta-desc">Дост. Сарипутта даёт наставление Сангхе на тему монашеской обязанности развивать нравственность, сосредоточение, мудрость.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn70-kitagiri-sutta-sv.html">
-      <div class="sutta-num">МН 70</div>
-      <div><div class="sutta-title">Китагири сутта</div><div class="sutta-subtitle">В Китагири (пер. SV)</div><div class="sutta-desc">О семи типах благородных учеников. Кратко затрагиваются некоторые другие аспекты Дхаммы, как, например, вера или поэтапность пути.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-2-2">
+        <summary class="chapter-summary">II. Монахи (МН 61–70)</summary>
+        <a class="sutta-card" href="Texts/mn61-ambalatthika-rahulovada-sutta-sv.html">
+            <div class="sutta-num">МН 61</div>
+            <div><div class="sutta-title">Амбалаттхика рахуловада сутта</div><div class="sutta-subtitle">Совет Рахуле у Амбалаттхики (пер. SV)</div><div class="sutta-desc">Будда наставляет своего сына саманеру Рахулу на предмет нравственного поведения и воздержания от лжи.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn62-maha-rahulovada-sutta-sv.html">
+            <div class="sutta-num">МН 62</div>
+            <div><div class="sutta-title">Маха рахуловада сутта</div><div class="sutta-subtitle">Большая лекция для Рахулы (пер. SV)</div><div class="sutta-desc">Будда даёт Рахуле рекомендации заниматься различными видами медитативных созерцаний.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn63-cula-malunkya-sutta-sv.html">
+            <div class="sutta-num">МН 63</div>
+            <div><div class="sutta-title">Чула малункья сутта</div><div class="sutta-subtitle">Малая лекция для Малункьяпутты (пер. SV)</div><div class="sutta-desc">Будда объясняет одному из монахов, почему он отказывается разъяснять ряд философских вопросов.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn64-mahamalunkya-sutta-sv.html">
+            <div class="sutta-num">МН 64</div>
+            <div><div class="sutta-title">Махамалункья сутта</div><div class="sutta-subtitle">Большая беседа с Малункьяпуттой (пер. SV)</div><div class="sutta-desc">Чтобы отбросить хотя бы пять из десяти сансарных пут, требуется джхана. Раскрывается и сама природа сансарных пут.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn65-bhaddali-sutta-sv.html">
+            <div class="sutta-num">МН 65</div>
+            <div><div class="sutta-title">Бхаддали сутта</div><div class="sutta-subtitle">К Бхаддали (пер. SV)</div><div class="sutta-desc">Монах отказывался принимать установленное правило монашеской тренировки, за что получил выговор от Будды.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn66-latukikopama-sutta-sv.html">
+            <div class="sutta-num">МН 66</div>
+            <div><div class="sutta-title">Латукикопама сутта</div><div class="sutta-subtitle">Пример с перепёлкой (пер. SV)</div><div class="sutta-desc">Беседа монаха с Буддой на несколько тем. Упоминается история установления правила кушать один раз в день и разъяснения о джханах.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn67-catuma-sutta-sv.html">
+            <div class="sutta-num">МН 67</div>
+            <div><div class="sutta-title">Чатума сутта</div><div class="sutta-subtitle">В Чатуме (пер. SV)</div><div class="sutta-desc">История о том, как Будда распустил Сангху слишком шумных монахов, затем всё же дал лекцию о четырёх опасностях для новопострижённых.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn68-nalakapana-sutta-sv.html">
+            <div class="sutta-num">МН 68</div>
+            <div><div class="sutta-title">Налакапана сутта</div><div class="sutta-subtitle">В Налакапане (пер. SV)</div><div class="sutta-desc">Будда беседует с новопосвящёнными монахами о том, зачем объявляет о послесмертной участи своих учеников.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn69-gulissani-sutta-sv.html">
+            <div class="sutta-num">МН 69</div>
+            <div><div class="sutta-title">Гулиссани сутта</div><div class="sutta-subtitle">Гулиссани (пер. SV)</div><div class="sutta-desc">Дост. Сарипутта даёт наставление Сангхе на тему монашеской обязанности развивать нравственность, сосредоточение, мудрость.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn70-kitagiri-sutta-sv.html">
+            <div class="sutta-num">МН 70</div>
+            <div><div class="sutta-title">Китагири сутта</div><div class="sutta-subtitle">В Китагири (пер. SV)</div><div class="sutta-desc">О семи типах благородных учеников. Кратко затрагиваются некоторые другие аспекты Дхаммы, как, например, вера или поэтапность пути.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-2-3">
-    <summary class="chapter-summary">III. Странники (МН 71–80)</summary>
-    <a class="sutta-card" href="Texts/mn71-tevijja-vacchagotta-sutta.html">
-      <div class="sutta-num">МН 71</div>
-      <div><div class="sutta-title">Тевидджа ваччхаготта сутта</div><div class="sutta-subtitle">К Ваччхаготте о трёх знаниях (пер. SV)</div><div class="sutta-desc">Небольшая беседа со странником Ваччаготтой на тему сверхчеловеческих знаний и послесмертной участи мирян.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn72-aggi-vacchagotta-sutta-sv.html">
-      <div class="sutta-num">МН 72</div>
-      <div><div class="sutta-title">Агги ваччхаготта сутта</div><div class="sutta-subtitle">К Ваччхаготте об огне (пер. SV)</div><div class="sutta-desc">Беседа на тему спекулятивных воззрений и статуса Татхагаты.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn73-maha-vacchagotta-sutta.html">
-      <div class="sutta-num">МН 73</div>
-      <div><div class="sutta-title">Маха ваччхаготта сутта</div><div class="sutta-subtitle">Большая лекция для Ваччхаготты (пер. SV)</div><div class="sutta-desc">Странник Ваччхаготта становится монахом и достигает сверхспособностей и главной цели буддийского пути.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn74-dighanakha-sutta.html">
-      <div class="sutta-num">МН 74</div>
-      <div><div class="sutta-title">Дигханакха сутта</div><div class="sutta-subtitle">К Дигханакхе (пер. SV)</div><div class="sutta-desc">Небольшая беседа со странником на тему воззрений и видов чувств. Упоминается достижение арахантства Дост. Сарипуттой.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn75-magandiya-sutta-sv.html">
-      <div class="sutta-num">МН 75</div>
-      <div><div class="sutta-title">Магандия сутта</div><div class="sutta-subtitle">К Магандии (пер. SV)</div><div class="sutta-desc">Детальная и довольно длительная беседа странника Магандии с Буддой на тему чувственных удовольствий.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn76-sandaka-sutta-sv.html">
-      <div class="sutta-num">МН 76</div>
-      <div><div class="sutta-title">Сандака сутта</div><div class="sutta-subtitle">К Сандаке (пер. SV)</div><div class="sutta-desc">О том, в каких случаях нет смысла следовать тому или иному религиозному движению или учителю.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn77-maha-sakuludayi-sutta-sv.html">
-      <div class="sutta-num">МН 77</div>
-      <div><div class="sutta-title">Маха сакулудайи сутта</div><div class="sutta-subtitle">Большая лекция для Сакулудайина (пер. SV)</div><div class="sutta-desc">О том, почему ученики Будды уважают его как учителя.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn78-samanamandikaputta-sutta-sv.html">
-      <div class="sutta-num">МН 78</div>
-      <div><div class="sutta-title">Саманамандикапутта сутта</div><div class="sutta-subtitle">Саманамандикапутта (пер. SV)</div><div class="sutta-desc">О нравственности, привычках, устремлениях и духовном совершенстве.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn79-cula-sakuludayi-sutta-sv.html">
-      <div class="sutta-num">МН 79</div>
-      <div><div class="sutta-title">Чула сакулудайи сутта</div><div class="sutta-subtitle">Малая лекция для Сакулудайина (пер. SV)</div><div class="sutta-desc">Будда выясняет доктрину одного известного странника-учителя, чтобы постараться обратить его в своё Учение.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn80-vekhanassa-sutta-sv.html">
-      <div class="sutta-num">МН 80</div>
-      <div><div class="sutta-title">Векханасса сутта</div><div class="sutta-subtitle">К Векханассе (пер. SV)</div><div class="sutta-desc">Схожая беседа с предыдущей суттой. Небольшое пояснение о том, что является чувственными удовольствиями.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-2-3">
+        <summary class="chapter-summary">III. Странники (МН 71–80)</summary>
+        <a class="sutta-card" href="Texts/mn71-tevijja-vacchagotta-sutta.html">
+            <div class="sutta-num">МН 71</div>
+            <div><div class="sutta-title">Тевидджа ваччхаготта сутта</div><div class="sutta-subtitle">К Ваччхаготте о трёх знаниях (пер. SV)</div><div class="sutta-desc">Небольшая беседа со странником Ваччаготтой на тему сверхчеловеческих знаний и послесмертной участи мирян.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn72-aggi-vacchagotta-sutta-sv.html">
+            <div class="sutta-num">МН 72</div>
+            <div><div class="sutta-title">Агги ваччхаготта сутта</div><div class="sutta-subtitle">К Ваччхаготте об огне (пер. SV)</div><div class="sutta-desc">Беседа на тему спекулятивных воззрений и статуса Татхагаты.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn73-maha-vacchagotta-sutta.html">
+            <div class="sutta-num">МН 73</div>
+            <div><div class="sutta-title">Маха ваччхаготта сутта</div><div class="sutta-subtitle">Большая лекция для Ваччхаготты (пер. SV)</div><div class="sutta-desc">Странник Ваччхаготта становится монахом и достигает сверхспособностей и главной цели буддийского пути.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn74-dighanakha-sutta.html">
+            <div class="sutta-num">МН 74</div>
+            <div><div class="sutta-title">Дигханакха сутта</div><div class="sutta-subtitle">К Дигханакхе (пер. SV)</div><div class="sutta-desc">Небольшая беседа со странником на тему воззрений и видов чувств. Упоминается достижение арахантства Дост. Сарипуттой.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn75-magandiya-sutta-sv.html">
+            <div class="sutta-num">МН 75</div>
+            <div><div class="sutta-title">Магандия сутта</div><div class="sutta-subtitle">К Магандии (пер. SV)</div><div class="sutta-desc">Детальная и довольно длительная беседа странника Магандии с Буддой на тему чувственных удовольствий.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn76-sandaka-sutta-sv.html">
+            <div class="sutta-num">МН 76</div>
+            <div><div class="sutta-title">Сандака сутта</div><div class="sutta-subtitle">К Сандаке (пер. SV)</div><div class="sutta-desc">О том, в каких случаях нет смысла следовать тому или иному религиозному движению или учителю.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn77-maha-sakuludayi-sutta-sv.html">
+            <div class="sutta-num">МН 77</div>
+            <div><div class="sutta-title">Маха сакулудайи сутта</div><div class="sutta-subtitle">Большая лекция для Сакулудайина (пер. SV)</div><div class="sutta-desc">О том, почему ученики Будды уважают его как учителя.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn78-samanamandikaputta-sutta-sv.html">
+            <div class="sutta-num">МН 78</div>
+            <div><div class="sutta-title">Саманамандикапутта сутта</div><div class="sutta-subtitle">Саманамандикапутта (пер. SV)</div><div class="sutta-desc">О нравственности, привычках, устремлениях и духовном совершенстве.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn79-cula-sakuludayi-sutta-sv.html">
+            <div class="sutta-num">МН 79</div>
+            <div><div class="sutta-title">Чула сакулудайи сутта</div><div class="sutta-subtitle">Малая лекция для Сакулудайина (пер. SV)</div><div class="sutta-desc">Будда выясняет доктрину одного известного странника-учителя, чтобы постараться обратить его в своё Учение.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn80-vekhanassa-sutta-sv.html">
+            <div class="sutta-num">МН 80</div>
+            <div><div class="sutta-title">Векханасса сутта</div><div class="sutta-subtitle">К Векханассе (пер. SV)</div><div class="sutta-desc">Схожая беседа с предыдущей суттой. Небольшое пояснение о том, что является чувственными удовольствиями.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-2-4">
-    <summary class="chapter-summary">IV. Цари (МН 81–90)</summary>
-    <a class="sutta-card" href="Texts/mn81-ghatikara-sutta-sv.html">
-      <div class="sutta-num">МН 81</div>
-      <div><div class="sutta-title">Гхатикара сутта</div><div class="sutta-subtitle">Гончар Гхатикара</div><div class="sutta-desc">История о гончаре Гхатикаре, жившем во времена Будды Кассапы.<br><a class="alt-link" href="Texts/mn81-ghatikara-sutta-yu-kan.html">пер. Yu Kan</a></div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn82-ratthapala-sutta-sv.html">
-      <div class="sutta-num">МН 82</div>
-      <div><div class="sutta-title">Раттхапала сутта</div><div class="sutta-subtitle">О Раттхапале (пер. SV)</div><div class="sutta-desc">Юный брахман Раттхапала уходит в монахи, становится арахантом и объясняет четыре причины, из-за которых оставил мирскую жизнь.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn83-makhadeva-sutta-sv.html">
-      <div class="sutta-num">МН 83</div>
-      <div><div class="sutta-title">Макхадэва сутта</div><div class="sutta-subtitle">Царь Макхадэва (пер. SV)</div><div class="sutta-desc">История о царе Макхадэве, положившем начало благому царствованию в соответствии с Дхаммой.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn84-madhura-sutta-sv.html">
-      <div class="sutta-num">МН 84</div>
-      <div><div class="sutta-title">Мадхура сутта</div><div class="sutta-subtitle">В Мадхуре (пер. SV)</div><div class="sutta-desc">Беседа царя и одного из учеников Будды на тему классового неравенства древнеиндийского общества.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn85-bodhi-rajakumara-sutta-sv.html">
-      <div class="sutta-num">МН 85</div>
-      <div><div class="sutta-title">Бодхи раджакумара сутта</div><div class="sutta-subtitle">К принцу Бодхи (пер. SV)</div><div class="sutta-desc">Беседа принца с Буддой на тему пяти факторов, которые влияют на успешность буддийской практики.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn86-angulimala-sutta-sv.html">
-      <div class="sutta-num">МН 86</div>
-      <div><div class="sutta-title">Ангулимала сутта</div><div class="sutta-subtitle">Ангулимала</div><div class="sutta-desc">Сутта о разбойнике, который благодаря умелому руководству Будды смог стать Арахантом.<br><a class="alt-link" href="Texts/mn86-angulimala-sutta-paribok.html">пер. А.В.Парибок</a></div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn87-piyajatika-sutta-sv.html">
-      <div class="sutta-num">МН 87</div>
-      <div><div class="sutta-title">Пийяджатика сутта</div><div class="sutta-subtitle">Рождено теми, кто дорог (пер. SV)</div><div class="sutta-desc">Будда рассказывает о том, как привязанность к близким людям создаёт страдание.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn88-bahitika-sutta-sv.html">
-      <div class="sutta-num">МН 88</div>
-      <div><div class="sutta-title">Бахитика сутта</div><div class="sutta-subtitle">Плащ (пер. SV)</div><div class="sutta-desc">Краткая серия вопросов царя Достопочтенному Ананде на тему нравственности.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn89-dhammacetiya-sutta-sv.html">
-      <div class="sutta-num">МН 89</div>
-      <div><div class="sutta-title">Дхаммачетия сутта</div><div class="sutta-subtitle">Монументы в честь Дхаммы (пер. SV)</div><div class="sutta-desc">Царь Пасенади выражает глубочайшее почтение Будде, объясняя это своим восхищением учениками Будды.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn90-kannakatthala-sutta-sv.html">
-      <div class="sutta-num">МН 90</div>
-      <div><div class="sutta-title">Каннакаттхала сутта</div><div class="sutta-subtitle">В Каннакаттхале (пер. SV)</div><div class="sutta-desc">Царь задаёт Будде несколько любопытных вопросов о варнах, божествах, всеведении.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-2-4">
+        <summary class="chapter-summary">IV. Цари (МН 81–90)</summary>
+        <a class="sutta-card" href="Texts/mn81-ghatikara-sutta-sv.html">
+            <div class="sutta-num">МН 81</div>
+            <div><div class="sutta-title">Гхатикара сутта</div><div class="sutta-subtitle">Гончар Гхатикара</div><div class="sutta-desc">История о гончаре Гхатикаре, жившем во времена Будды Кассапы.<br><a class="alt-link" href="Texts/mn81-ghatikara-sutta-yu-kan.html">пер. Yu Kan</a></div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn82-ratthapala-sutta-sv.html">
+            <div class="sutta-num">МН 82</div>
+            <div><div class="sutta-title">Раттхапала сутта</div><div class="sutta-subtitle">О Раттхапале (пер. SV)</div><div class="sutta-desc">Юный брахман Раттхапала уходит в монахи, становится арахантом и объясняет четыре причины, из-за которых оставил мирскую жизнь.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn83-makhadeva-sutta-sv.html">
+            <div class="sutta-num">МН 83</div>
+            <div><div class="sutta-title">Макхадэва сутта</div><div class="sutta-subtitle">Царь Макхадэва (пер. SV)</div><div class="sutta-desc">История о царе Макхадэве, положившем начало благому царствованию в соответствии с Дхаммой.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn84-madhura-sutta-sv.html">
+            <div class="sutta-num">МН 84</div>
+            <div><div class="sutta-title">Мадхура сутта</div><div class="sutta-subtitle">В Мадхуре (пер. SV)</div><div class="sutta-desc">Беседа царя и одного из учеников Будды на тему классового неравенства древнеиндийского общества.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn85-bodhi-rajakumara-sutta-sv.html">
+            <div class="sutta-num">МН 85</div>
+            <div><div class="sutta-title">Бодхи раджакумара сутта</div><div class="sutta-subtitle">К принцу Бодхи (пер. SV)</div><div class="sutta-desc">Беседа принца с Буддой на тему пяти факторов, которые влияют на успешность буддийской практики.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn86-angulimala-sutta-sv.html">
+            <div class="sutta-num">МН 86</div>
+            <div><div class="sutta-title">Ангулимала сутта</div><div class="sutta-subtitle">Ангулимала</div><div class="sutta-desc">Сутта о разбойнике, который благодаря умелому руководству Будды смог стать Арахантом.<br><a class="alt-link" href="Texts/mn86-angulimala-sutta-paribok.html">пер. А.В.Парибок</a></div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn87-piyajatika-sutta-sv.html">
+            <div class="sutta-num">МН 87</div>
+            <div><div class="sutta-title">Пийяджатика сутта</div><div class="sutta-subtitle">Рождено теми, кто дорог (пер. SV)</div><div class="sutta-desc">Будда рассказывает о том, как привязанность к близким людям создаёт страдание.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn88-bahitika-sutta-sv.html">
+            <div class="sutta-num">МН 88</div>
+            <div><div class="sutta-title">Бахитика сутта</div><div class="sutta-subtitle">Плащ (пер. SV)</div><div class="sutta-desc">Краткая серия вопросов царя Достопочтенному Ананде на тему нравственности.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn89-dhammacetiya-sutta-sv.html">
+            <div class="sutta-num">МН 89</div>
+            <div><div class="sutta-title">Дхаммачетия сутта</div><div class="sutta-subtitle">Монументы в честь Дхаммы (пер. SV)</div><div class="sutta-desc">Царь Пасенади выражает глубочайшее почтение Будде, объясняя это своим восхищением учениками Будды.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn90-kannakatthala-sutta-sv.html">
+            <div class="sutta-num">МН 90</div>
+            <div><div class="sutta-title">Каннакаттхала сутта</div><div class="sutta-subtitle">В Каннакаттхале (пер. SV)</div><div class="sutta-desc">Царь задаёт Будде несколько любопытных вопросов о варнах, божествах, всеведении.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-2-5">
-    <summary class="chapter-summary">V. Брахманы (МН 91–100)</summary>
-    <a class="sutta-card" href="Texts/mn91-brahmayu-sutta-sv.html">
-      <div class="sutta-num">МН 91</div>
-      <div><div class="sutta-title">Брахмайю сутта</div><div class="sutta-subtitle">Брахман Брахмайю (пер. SV)</div><div class="sutta-desc">Наиболее подробное описание внешности и манер поведения Будды.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn92-sela-sutta-sv.html">
-      <div class="sutta-num">МН 92</div>
-      <div><div class="sutta-title">Села сутта</div><div class="sutta-subtitle">К Селе (пер. SV)</div><div class="sutta-desc">История о том, как один из учёных брахманов стал последователем Будды.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn93-assalayana-sutta-sv.html">
-      <div class="sutta-num">МН 93</div>
-      <div><div class="sutta-title">Ассалаяна сутта</div><div class="sutta-subtitle">К Ассалаяне (пер. SV)</div><div class="sutta-desc">Будда опровергает мнение о том, что брахманы — высшая варна.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn94-ghotamukha-sutta-sv.html">
-      <div class="sutta-num">МН 94</div>
-      <div><div class="sutta-title">Гхотамукха сутта</div><div class="sutta-subtitle">К Гхотамукхе (пер. SV)</div><div class="sutta-desc">Брахман слушает лекцию о типах личностей и принимает буддизм.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn95-canki-sutta-sv.html">
-      <div class="sutta-num">МН 95</div>
-      <div><div class="sutta-title">Чанки сутта</div><div class="sutta-subtitle">К Чанки (пер. SV)</div><div class="sutta-desc">Будда разъясняет, каким образом верующий человек должен относиться к истине. Также содержится восхваление Будды.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn96-ekusari-sutta-sv.html">
-      <div class="sutta-num">МН 96</div>
-      <div><div class="sutta-title">Есукари сутта</div><div class="sutta-subtitle">К Есукари (пер. SV)</div><div class="sutta-desc">Будда объявляет несостоятельными утверждения брахманов об исключительности их варны и поясняет, что духовных плодов может достигать представитель любой варны.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn97-dhananjani-sutta-sv.html">
-      <div class="sutta-num">МН 97</div>
-      <div><div class="sutta-title">Дхананьджани сутта</div><div class="sutta-subtitle">К Дхананьджани (пер. SV)</div><div class="sutta-desc">Дост. Сарипутта порицает безнравственного брахмана, затем проводит с ним предсмертную беседу и тот перерождается в мире Брахмы.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn98-vasettha-sutta-sv.html">
-      <div class="sutta-num">МН 98</div>
-      <div><div class="sutta-title">Васеттха сутта</div><div class="sutta-subtitle">К Васеттхе (пер. SV)</div><div class="sutta-desc">Будда разрешает спор двух юных брахманских учеников о брахманизме и рождении. Стихотворное описание и восхваление араханта.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn99-subha-sutta-sv.html">
-      <div class="sutta-num">МН 99</div>
-      <div><div class="sutta-title">Субха сутта</div><div class="sutta-subtitle">К Субхе (пер. SV)</div><div class="sutta-desc">Весьма содержательная беседа между брахманским учеником и Буддой, охватывающая брахманизм, практику домохозяев и монахов, медитацию.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn100-sangarava-sutta-sv.html">
-      <div class="sutta-num">МН 100</div>
-      <div><div class="sutta-title">Сангарава сутта</div><div class="sutta-subtitle">К Сангараве (пер. SV)</div><div class="sutta-desc">Будда рассказывает брахману о видах духовных учителей. Брахман также спрашивает о том, реальны ли божества.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-2-5">
+        <summary class="chapter-summary">V. Брахманы (МН 91–100)</summary>
+        <a class="sutta-card" href="Texts/mn91-brahmayu-sutta-sv.html">
+            <div class="sutta-num">МН 91</div>
+            <div><div class="sutta-title">Брахмайю сутта</div><div class="sutta-subtitle">Брахман Брахмайю (пер. SV)</div><div class="sutta-desc">Наиболее подробное описание внешности и манер поведения Будды.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn92-sela-sutta-sv.html">
+            <div class="sutta-num">МН 92</div>
+            <div><div class="sutta-title">Села сутта</div><div class="sutta-subtitle">К Селе (пер. SV)</div><div class="sutta-desc">История о том, как один из учёных брахманов стал последователем Будды.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn93-assalayana-sutta-sv.html">
+            <div class="sutta-num">МН 93</div>
+            <div><div class="sutta-title">Ассалаяна сутта</div><div class="sutta-subtitle">К Ассалаяне (пер. SV)</div><div class="sutta-desc">Будда опровергает мнение о том, что брахманы — высшая варна.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn94-ghotamukha-sutta-sv.html">
+            <div class="sutta-num">МН 94</div>
+            <div><div class="sutta-title">Гхотамукха сутта</div><div class="sutta-subtitle">К Гхотамукхе (пер. SV)</div><div class="sutta-desc">Брахман слушает лекцию о типах личностей и принимает буддизм.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn95-canki-sutta-sv.html">
+            <div class="sutta-num">МН 95</div>
+            <div><div class="sutta-title">Чанки сутта</div><div class="sutta-subtitle">К Чанки (пер. SV)</div><div class="sutta-desc">Будда разъясняет, каким образом верующий человек должен относиться к истине. Также содержится восхваление Будды.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn96-ekusari-sutta-sv.html">
+            <div class="sutta-num">МН 96</div>
+            <div><div class="sutta-title">Есукари сутта</div><div class="sutta-subtitle">К Есукари (пер. SV)</div><div class="sutta-desc">Будда объявляет несостоятельными утверждения брахманов об исключительности их варны и поясняет, что духовных плодов может достигать представитель любой варны.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn97-dhananjani-sutta-sv.html">
+            <div class="sutta-num">МН 97</div>
+            <div><div class="sutta-title">Дхананьджани сутта</div><div class="sutta-subtitle">К Дхананьджани (пер. SV)</div><div class="sutta-desc">Дост. Сарипутта порицает безнравственного брахмана, затем проводит с ним предсмертную беседу и тот перерождается в мире Брахмы.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn98-vasettha-sutta-sv.html">
+            <div class="sutta-num">МН 98</div>
+            <div><div class="sutta-title">Васеттха сутта</div><div class="sutta-subtitle">К Васеттхе (пер. SV)</div><div class="sutta-desc">Будда разрешает спор двух юных брахманских учеников о брахманизме и рождении. Стихотворное описание и восхваление араханта.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn99-subha-sutta-sv.html">
+            <div class="sutta-num">МН 99</div>
+            <div><div class="sutta-title">Субха сутта</div><div class="sutta-subtitle">К Субхе (пер. SV)</div><div class="sutta-desc">Весьма содержательная беседа между брахманским учеником и Буддой, охватывающая брахманизм, практику домохозяев и монахов, медитацию.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn100-sangarava-sutta-sv.html">
+            <div class="sutta-num">МН 100</div>
+            <div><div class="sutta-title">Сангарава сутта</div><div class="sutta-subtitle">К Сангараве (пер. SV)</div><div class="sutta-desc">Будда рассказывает брахману о видах духовных учителей. Брахман также спрашивает о том, реальны ли божества.</div></div>
+        </a>
+    </details>
 </details>
 
 <!-- ПОСЛЕДНИЙ РАЗДЕЛ -->
 <details class="section-group" id="section-3">
-  <summary class="section-summary">Последний раздел (МН 101–152)</summary>
+    <summary class="section-summary">Последний раздел (МН 101–152)</summary>
 
-  <details class="chapter-group" id="chapter-3-1">
-    <summary class="chapter-summary">I. Девадаха (МН 101–110)</summary>
-    <a class="sutta-card" href="Texts/mn101-devadaha-sutta-sv.html">
-      <div class="sutta-num">МН 101</div>
-      <div><div class="sutta-title">Девадаха сутта</div><div class="sutta-subtitle">У Девадахи (пер. SV)</div><div class="sutta-desc">Будда опровергает доктрину нигантхов о том, что всё обусловлено прошлой каммой, и объясняет правильный путь к прекращению страданий.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn102-pancattaya-sutta-sv.html">
-      <div class="sutta-num">МН 102</div>
-      <div><div class="sutta-title">Панчаттая сутта</div><div class="sutta-subtitle">Пять и три (пер. SV)</div><div class="sutta-desc">Будда разъясняет воззрения различных аскетов и утверждает, что все они базируются на цеплянии, которое он сам преодолел.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn103-kinti-sutta-sv.html">
-      <div class="sutta-num">МН 103</div>
-      <div><div class="sutta-title">Кинти сутта</div><div class="sutta-subtitle">Что вы думаете обо мне? (пер. SV)</div><div class="sutta-desc">Будда рассказывает монахам, как улаживать в Сангхе разногласия из-за Учения после того, как он покинет этот мир.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn104-samagama-sutta-sv.html">
-      <div class="sutta-num">МН 104</div>
-      <div><div class="sutta-title">Самагама сутта</div><div class="sutta-subtitle">В Самагаме (пер. SV)</div><div class="sutta-desc">Ещё советы монахам о недопущении разногласий в Сангхе. Краткое упоминание о смерти предводителя джайнов Нигантхи Натапутты.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn105-sunakkhatta-sutta-sv.html">
-      <div class="sutta-num">МН 105</div>
-      <div><div class="sutta-title">Сунаккхатта сутта</div><div class="sutta-subtitle">К Сунаккхатте (пер. SV)</div><div class="sutta-desc">О переоценке монахом собственных духовных достижений и важных нюансах практики продвижения по медитативным уровням.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn106-anenjasappaya-sutta-sv.html">
-      <div class="sutta-num">МН 106</div>
-      <div><div class="sutta-title">Аненьджасаппая сутта</div><div class="sutta-subtitle">Путь к непоколебимому (пер. SV)</div><div class="sutta-desc">Сжатые, но ёмкие наставления на тему высочайших медитативных достижений.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn107-ganakamoggallana-sutta-sv.html">
-      <div class="sutta-num">МН 107</div>
-      <div><div class="sutta-title">Ганакамоггаллана сутта</div><div class="sutta-subtitle">К Ганаке Моггаллане (пер. SV)</div><div class="sutta-desc">Будда поясняет, что буддийская практика должна осуществляться поэтапно.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn108-gopakamoggallana-sutta-sv.html">
-      <div class="sutta-num">МН 108</div>
-      <div><div class="sutta-title">Гопакамоггаллана сутта</div><div class="sutta-subtitle">К Гопака Моггаллане (пер. SV)</div><div class="sutta-desc">Брахман интересуется у Ананды о том, как живёт Сангха после кончины Будды.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn109-mahapunnama-sutta-sv.html">
-      <div class="sutta-num">МН 109</div>
-      <div><div class="sutta-title">Махапуннама сутта</div><div class="sutta-subtitle">Большая беседа в ночь полнолуния (пер. SV)</div><div class="sutta-desc">Монах задаёт Будде ряд вопросов в отношении пяти совокупностей и безличностности.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn110-culapunnama-sutta-sv.html">
-      <div class="sutta-num">МН 110</div>
-      <div><div class="sutta-title">Чулапуннама сутта</div><div class="sutta-subtitle">Малая лекция в ночь полной луны (пер. SV)</div><div class="sutta-desc">О хороших и плохих людях и их послесмертной участи.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-3-1">
+        <summary class="chapter-summary">I. Девадаха (МН 101–110)</summary>
+        <a class="sutta-card" href="Texts/mn101-devadaha-sutta-sv.html">
+            <div class="sutta-num">МН 101</div>
+            <div><div class="sutta-title">Девадаха сутта</div><div class="sutta-subtitle">У Девадахи (пер. SV)</div><div class="sutta-desc">Будда опровергает доктрину нигантхов о том, что всё обусловлено прошлой каммой, и объясняет правильный путь к прекращению страданий.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn102-pancattaya-sutta-sv.html">
+            <div class="sutta-num">МН 102</div>
+            <div><div class="sutta-title">Панчаттая сутта</div><div class="sutta-subtitle">Пять и три (пер. SV)</div><div class="sutta-desc">Будда разъясняет воззрения различных аскетов и утверждает, что все они базируются на цеплянии, которое он сам преодолел.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn103-kinti-sutta-sv.html">
+            <div class="sutta-num">МН 103</div>
+            <div><div class="sutta-title">Кинти сутта</div><div class="sutta-subtitle">Что вы думаете обо мне? (пер. SV)</div><div class="sutta-desc">Будда рассказывает монахам, как улаживать в Сангхе разногласия из-за Учения после того, как он покинет этот мир.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn104-samagama-sutta-sv.html">
+            <div class="sutta-num">МН 104</div>
+            <div><div class="sutta-title">Самагама сутта</div><div class="sutta-subtitle">В Самагаме (пер. SV)</div><div class="sutta-desc">Ещё советы монахам о недопущении разногласий в Сангхе. Краткое упоминание о смерти предводителя джайнов Нигантхи Натапутты.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn105-sunakkhatta-sutta-sv.html">
+            <div class="sutta-num">МН 105</div>
+            <div><div class="sutta-title">Сунаккхатта сутта</div><div class="sutta-subtitle">К Сунаккхатте (пер. SV)</div><div class="sutta-desc">О переоценке монахом собственных духовных достижений и важных нюансах практики продвижения по медитативным уровням.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn106-anenjasappaya-sutta-sv.html">
+            <div class="sutta-num">МН 106</div>
+            <div><div class="sutta-title">Аненьджасаппая сутта</div><div class="sutta-subtitle">Путь к непоколебимому (пер. SV)</div><div class="sutta-desc">Сжатые, но ёмкие наставления на тему высочайших медитативных достижений.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn107-ganakamoggallana-sutta-sv.html">
+            <div class="sutta-num">МН 107</div>
+            <div><div class="sutta-title">Ганакамоггаллана сутта</div><div class="sutta-subtitle">К Ганаке Моггаллане (пер. SV)</div><div class="sutta-desc">Будда поясняет, что буддийская практика должна осуществляться поэтапно.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn108-gopakamoggallana-sutta-sv.html">
+            <div class="sutta-num">МН 108</div>
+            <div><div class="sutta-title">Гопакамоггаллана сутта</div><div class="sutta-subtitle">К Гопака Моггаллане (пер. SV)</div><div class="sutta-desc">Брахман интересуется у Ананды о том, как живёт Сангха после кончины Будды.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn109-mahapunnama-sutta-sv.html">
+            <div class="sutta-num">МН 109</div>
+            <div><div class="sutta-title">Махапуннама сутта</div><div class="sutta-subtitle">Большая беседа в ночь полнолуния (пер. SV)</div><div class="sutta-desc">Монах задаёт Будде ряд вопросов в отношении пяти совокупностей и безличностности.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn110-culapunnama-sutta-sv.html">
+            <div class="sutta-num">МН 110</div>
+            <div><div class="sutta-title">Чулапуннама сутта</div><div class="sutta-subtitle">Малая лекция в ночь полной луны (пер. SV)</div><div class="sutta-desc">О хороших и плохих людях и их послесмертной участи.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-3-2">
-    <summary class="chapter-summary">II. Одно за другим (МН 111–120)</summary>
-    <a class="sutta-card" href="Texts/mn111-anupada-sutta-sv.html">
-      <div class="sutta-num">МН 111</div>
-      <div><div class="sutta-title">Анупада сутта</div><div class="sutta-subtitle">Одно за другим по мере происхождения (пер. SV)</div><div class="sutta-desc">Пояснение медитативных прозрений Дост. Сарипутты.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn112-chabbisodhana-sutta-sv.html">
-      <div class="sutta-num">МН 112</div>
-      <div><div class="sutta-title">Чаббхисодхана сутта</div><div class="sutta-subtitle">Чистота в шести аспектах (пер. SV)</div><div class="sutta-desc">Если человек заявляет о достижении полного просветления, его нужно проверить этими вопросами.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn113-sappurisa-sutta-sv.html">
-      <div class="sutta-num">МН 113</div>
-      <div><div class="sutta-title">Саппуриса сутта</div><div class="sutta-subtitle">Чистый человек (пер. SV)</div><div class="sutta-desc">О чистом и нечистом человеке.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn114-setitabba-sevitabba-sutta-sv.html">
-      <div class="sutta-num">МН 114</div>
-      <div><div class="sutta-title">Сетитабба севитабба сутта</div><div class="sutta-subtitle">Стоит взращивать и не стоит (пер. SV)</div><div class="sutta-desc">Благие и неблагие деяния, а также вещи, которых стоит избегать или которым стоит потакать.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn115-bahudhatuka-sutta-sv.html">
-      <div class="sutta-num">МН 115</div>
-      <div><div class="sutta-title">Бахудхатука сутта</div><div class="sutta-subtitle">Многие виды элементов (пер. SV)</div><div class="sutta-desc">Будда разъясняет предметы для созерцания, анализа и понимания.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn116-isigili-sutta-sv.html">
-      <div class="sutta-num">МН 116</div>
-      <div><div class="sutta-title">Исигили сутта</div><div class="sutta-subtitle">Глотающая провидцев (пер. SV)</div><div class="sutta-desc">Будда перечисляет имена паччека-будд, живших на горе Исигили в прошлые времена.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn117-mahacattarisaka-sutta-sv.html">
-      <div class="sutta-num">МН 117</div>
-      <div><div class="sutta-title">Махачаттарисака сутта</div><div class="sutta-subtitle">Великие сорок (пер. SV)</div><div class="sutta-desc">О том, как воззрение влияет на остальные факторы пути.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn118-anapanasati-sutta-sv.html">
-      <div class="sutta-num">МН 118</div>
-      <div><div class="sutta-title">Анапанасати сутта</div><div class="sutta-subtitle">Осознанность к дыханию (пер. SV)</div><div class="sutta-desc">Самое полное наставление по медитации осознанности к дыханию. Также объясняется, почему дар Сангхе приносит огромные неизмеримые заслуги.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn119-kayagatasati-sutta-sv.html">
-      <div class="sutta-num">МН 119</div>
-      <div><div class="sutta-title">Кайягатасати сутта</div><div class="sutta-subtitle">Осознанность к телу (пер. SV)</div><div class="sutta-desc">Полный список созерцательных упражнений, связанных с физическим телом. Примечательна расширенными описаниями джхановых состояний.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn120-sankharupapatti-sutta-sv.html">
-      <div class="sutta-num">МН 120</div>
-      <div><div class="sutta-title">Санкхарупапатти сутта</div><div class="sutta-subtitle">Рождение через намерение (пер. SV)</div><div class="sutta-desc">Если человек имеет должные благие качества ума, то при сильном желании он может выбрать тот мир, где хочет родиться.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-3-2">
+        <summary class="chapter-summary">II. Одно за другим (МН 111–120)</summary>
+        <a class="sutta-card" href="Texts/mn111-anupada-sutta-sv.html">
+            <div class="sutta-num">МН 111</div>
+            <div><div class="sutta-title">Анупада сутта</div><div class="sutta-subtitle">Одно за другим по мере происхождения (пер. SV)</div><div class="sutta-desc">Пояснение медитативных прозрений Дост. Сарипутты.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn112-chabbisodhana-sutta-sv.html">
+            <div class="sutta-num">МН 112</div>
+            <div><div class="sutta-title">Чаббхисодхана сутта</div><div class="sutta-subtitle">Чистота в шести аспектах (пер. SV)</div><div class="sutta-desc">Если человек заявляет о достижении полного просветления, его нужно проверить этими вопросами.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn113-sappurisa-sutta-sv.html">
+            <div class="sutta-num">МН 113</div>
+            <div><div class="sutta-title">Саппуриса сутта</div><div class="sutta-subtitle">Чистый человек (пер. SV)</div><div class="sutta-desc">О чистом и нечистом человеке.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn114-setitabba-sevitabba-sutta-sv.html">
+            <div class="sutta-num">МН 114</div>
+            <div><div class="sutta-title">Сетитабба севитабба сутта</div><div class="sutta-subtitle">Стоит взращивать и не стоит (пер. SV)</div><div class="sutta-desc">Благие и неблагие деяния, а также вещи, которых стоит избегать или которым стоит потакать.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn115-bahudhatuka-sutta-sv.html">
+            <div class="sutta-num">МН 115</div>
+            <div><div class="sutta-title">Бахудхатука сутта</div><div class="sutta-subtitle">Многие виды элементов (пер. SV)</div><div class="sutta-desc">Будда разъясняет предметы для созерцания, анализа и понимания.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn116-isigili-sutta-sv.html">
+            <div class="sutta-num">МН 116</div>
+            <div><div class="sutta-title">Исигили сутта</div><div class="sutta-subtitle">Глотающая провидцев (пер. SV)</div><div class="sutta-desc">Будда перечисляет имена паччека-будд, живших на горе Исигили в прошлые времена.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn117-mahacattarisaka-sutta-sv.html">
+            <div class="sutta-num">МН 117</div>
+            <div><div class="sutta-title">Махачаттарисака сутта</div><div class="sutta-subtitle">Великие сорок (пер. SV)</div><div class="sutta-desc">О том, как воззрение влияет на остальные факторы пути.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn118-anapanasati-sutta-sv.html">
+            <div class="sutta-num">МН 118</div>
+            <div><div class="sutta-title">Анапанасати сутта</div><div class="sutta-subtitle">Осознанность к дыханию (пер. SV)</div><div class="sutta-desc">Самое полное наставление по медитации осознанности к дыханию. Также объясняется, почему дар Сангхе приносит огромные неизмеримые заслуги.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn119-kayagatasati-sutta-sv.html">
+            <div class="sutta-num">МН 119</div>
+            <div><div class="sutta-title">Кайягатасати сутта</div><div class="sutta-subtitle">Осознанность к телу (пер. SV)</div><div class="sutta-desc">Полный список созерцательных упражнений, связанных с физическим телом. Примечательна расширенными описаниями джхановых состояний.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn120-sankharupapatti-sutta-sv.html">
+            <div class="sutta-num">МН 120</div>
+            <div><div class="sutta-title">Санкхарупапатти сутта</div><div class="sutta-subtitle">Рождение через намерение (пер. SV)</div><div class="sutta-desc">Если человек имеет должные благие качества ума, то при сильном желании он может выбрать тот мир, где хочет родиться.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-3-3">
-    <summary class="chapter-summary">III. Пустотность (МН 121–130)</summary>
-    <a class="sutta-card" href="Texts/mn121-culasunnyata-sutta-sv.html">
-      <div class="sutta-num">МН 121</div>
-      <div><div class="sutta-title">Чуласунньята сутта</div><div class="sutta-subtitle">Малая лекция о пустотности (пер. SV)</div><div class="sutta-desc">Будда говорит, что все медитативные достижения могут называться пребыванием в пустотности, и объясняет, от чего именно они пусты.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn122-mahasunnyata-sutta-sv.html">
-      <div class="sutta-num">МН 122</div>
-      <div><div class="sutta-title">Махасунньята сутта</div><div class="sutta-subtitle">Большая лекция о пустотности (пер. SV)</div><div class="sutta-desc">Дополнительные пояснения насчёт беспредметного сосредоточения ума, которое также является пребыванием в пустотности.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn123-acchariya-abhutta-sutta-sv.html">
-      <div class="sutta-num">МН 123</div>
-      <div><div class="sutta-title">Аччхария аббхута сутта</div><div class="sutta-subtitle">Удивительное и поразительное (пер. SV)</div><div class="sutta-desc">Перечисляются уникальные события, связанные с рождением бодхисатты.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn124-bakkula-sutta-sv.html">
-      <div class="sutta-num">МН 124</div>
-      <div><div class="sutta-title">Баккула сутта</div><div class="sutta-subtitle">Баккула (пер. SV)</div><div class="sutta-desc">Сутта, добавленная в канон позже. Повествует о качествах араханта Баккулы, запомненных монахами, которые ещё застали его живым.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn125-dantabhumi-sutta-sv.html">
-      <div class="sutta-num">МН 125</div>
-      <div><div class="sutta-title">Дантабхуми сутта</div><div class="sutta-subtitle">Уровень приручённого (пер. SV)</div><div class="sutta-desc">Будда говорит, что человек среди чувственных удовольствий не способен достичь джханы. Поэтапный путь практики описан через метафору тренировки слона.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn126-bhumija-sutta-sv.html">
-      <div class="sutta-num">МН 126</div>
-      <div><div class="sutta-title">Бхумиджа сутта</div><div class="sutta-subtitle">Бхумиджа (пер. SV)</div><div class="sutta-desc">Правильный путь практики способен привести к духовным плодам, тогда как неправильный неспособен, даже если усердствовать в нём.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn127-anuruddha-sutta-sv.html">
-      <div class="sutta-num">МН 127</div>
-      <div><div class="sutta-title">Ануруддха сутта</div><div class="sutta-subtitle">Ануруддха (пер. SV)</div><div class="sutta-desc">Объяснение состояния джханы, брахмавихар, а также беседа о дэвах сияния мира форм.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn128-upakilesa-sutta-sv.html">
-      <div class="sutta-num">МН 128</div>
-      <div><div class="sutta-title">Упакилеса сутта</div><div class="sutta-subtitle">Изъяны (пер. SV)</div><div class="sutta-desc">Утончённые детали и нюансы развития сосредоточения.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn129-balapandita-sutta-sv.html">
-      <div class="sutta-num">МН 129</div>
-      <div><div class="sutta-title">Балапандита сутта</div><div class="sutta-subtitle">Глупцы и мудрецы (пер. SV)</div><div class="sutta-desc">Метафоры и описания страданий в нижних мирах и счастья в высших.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn130-devaduta-sutta-sv.html">
-      <div class="sutta-num">МН 130</div>
-      <div><div class="sutta-title">Девадута сутта</div><div class="sutta-subtitle">Небесные посланники (пер. SV)</div><div class="sutta-desc">Описания великого ада.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-3-3">
+        <summary class="chapter-summary">III. Пустотность (МН 121–130)</summary>
+        <a class="sutta-card" href="Texts/mn121-culasunnyata-sutta-sv.html">
+            <div class="sutta-num">МН 121</div>
+            <div><div class="sutta-title">Чуласунньята сутта</div><div class="sutta-subtitle">Малая лекция о пустотности (пер. SV)</div><div class="sutta-desc">Будда говорит, что все медитативные достижения могут называться пребыванием в пустотности, и объясняет, от чего именно они пусты.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn122-mahasunnyata-sutta-sv.html">
+            <div class="sutta-num">МН 122</div>
+            <div><div class="sutta-title">Махасунньята сутта</div><div class="sutta-subtitle">Большая лекция о пустотности (пер. SV)</div><div class="sutta-desc">Дополнительные пояснения насчёт беспредметного сосредоточения ума, которое также является пребыванием в пустотности.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn123-acchariya-abhutta-sutta-sv.html">
+            <div class="sutta-num">МН 123</div>
+            <div><div class="sutta-title">Аччхария аббхута сутта</div><div class="sutta-subtitle">Удивительное и поразительное (пер. SV)</div><div class="sutta-desc">Перечисляются уникальные события, связанные с рождением бодхисатты.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn124-bakkula-sutta-sv.html">
+            <div class="sutta-num">МН 124</div>
+            <div><div class="sutta-title">Баккула сутта</div><div class="sutta-subtitle">Баккула (пер. SV)</div><div class="sutta-desc">Сутта, добавленная в канон позже. Повествует о качествах араханта Баккулы, запомненных монахами, которые ещё застали его живым.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn125-dantabhumi-sutta-sv.html">
+            <div class="sutta-num">МН 125</div>
+            <div><div class="sutta-title">Дантабхуми сутта</div><div class="sutta-subtitle">Уровень приручённого (пер. SV)</div><div class="sutta-desc">Будда говорит, что человек среди чувственных удовольствий не способен достичь джханы. Поэтапный путь практики описан через метафору тренировки слона.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn126-bhumija-sutta-sv.html">
+            <div class="sutta-num">МН 126</div>
+            <div><div class="sutta-title">Бхумиджа сутта</div><div class="sutta-subtitle">Бхумиджа (пер. SV)</div><div class="sutta-desc">Правильный путь практики способен привести к духовным плодам, тогда как неправильный неспособен, даже если усердствовать в нём.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn127-anuruddha-sutta-sv.html">
+            <div class="sutta-num">МН 127</div>
+            <div><div class="sutta-title">Ануруддха сутта</div><div class="sutta-subtitle">Ануруддха (пер. SV)</div><div class="sutta-desc">Объяснение состояния джханы, брахмавихар, а также беседа о дэвах сияния мира форм.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn128-upakilesa-sutta-sv.html">
+            <div class="sutta-num">МН 128</div>
+            <div><div class="sutta-title">Упакилеса сутта</div><div class="sutta-subtitle">Изъяны (пер. SV)</div><div class="sutta-desc">Утончённые детали и нюансы развития сосредоточения.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn129-balapandita-sutta-sv.html">
+            <div class="sutta-num">МН 129</div>
+            <div><div class="sutta-title">Балапандита сутта</div><div class="sutta-subtitle">Глупцы и мудрецы (пер. SV)</div><div class="sutta-desc">Метафоры и описания страданий в нижних мирах и счастья в высших.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn130-devaduta-sutta-sv.html">
+            <div class="sutta-num">МН 130</div>
+            <div><div class="sutta-title">Девадута сутта</div><div class="sutta-subtitle">Небесные посланники (пер. SV)</div><div class="sutta-desc">Описания великого ада.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-3-4">
-    <summary class="chapter-summary">IV. Анализ (МН 131–142)</summary>
-    <a class="sutta-card" href="Texts/mn131-bhaddekaratta-sutta-sv.html">
-      <div class="sutta-num">МН 131</div>
-      <div><div class="sutta-title">Бхаддекаратта сутта</div><div class="sutta-subtitle">Одна прекрасная ночь (пер. SV)</div><div class="sutta-desc">Небольшой стих на тему воззрения о безличностности и его анализ.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn132-ananda-bhaddekaratta-sutta-sv.html">
-      <div class="sutta-num">МН 132</div>
-      <div><div class="sutta-title">Ананда бхаддекаратта сутта</div><div class="sutta-subtitle">Ананда и одна прекрасная ночь (пер. SV)</div><div class="sutta-desc">Схожая сутта с предыдущей.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn133-mahakaccana-bhaddekaratta-sutta-sv.html">
-      <div class="sutta-num">МН 133</div>
-      <div><div class="sutta-title">Махакаччана бхаддекаратта сутта</div><div class="sutta-subtitle">Махакаччана и одна прекрасная ночь (пер. SV)</div><div class="sutta-desc">Монах Махакаччана несколько иначе разъясняет стих из предыдущей сутты.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn134-lomasakangiya-bhaddekaratta-sutta-sv.html">
-      <div class="sutta-num">МН 134</div>
-      <div><div class="sutta-title">Ломасакангия бхаддекаратта сутта</div><div class="sutta-subtitle">Ломасакангия и одна прекрасная ночь (пер. SV)</div><div class="sutta-desc">Дополнительные детали в отношении истории со стихом из предыдущих сутт.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn135-cula-kammavibhanga-sutta-sv.html">
-      <div class="sutta-num">МН 135</div>
-      <div><div class="sutta-title">Чулакаммавибханга сутта</div><div class="sutta-subtitle">Малое изложение о поступке (пер. SV)</div><div class="sutta-desc">Объяснение общих направлений действия каммы.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn136-maha-kammavibhanga-sutta-sv.html">
-      <div class="sutta-num">МН 136</div>
-      <div><div class="sutta-title">Махакаммавибханга сутта</div><div class="sutta-subtitle">Большое изложение о поступке (пер. SV)</div><div class="sutta-desc">Объяснение тонкостей механизма каммы.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn137-salayatana-vibhanga-sutta-sv.html">
-      <div class="sutta-num">МН 137</div>
-      <div><div class="sutta-title">Салаятана вибханга сутта</div><div class="sutta-subtitle">Изложение шести опор (пер. SV)</div><div class="sutta-desc">Будда объясняет виды чувств, возникающих при контакте шести внутренних и внешних опор, и как их преодолевать по мере практики Пути.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn138-uddesa-vibhanga-sutta-sv.html">
-      <div class="sutta-num">МН 138</div>
-      <div><div class="sutta-title">Уддесавибханга сутта</div><div class="sutta-subtitle">Изложение и сводка (пер. SV)</div><div class="sutta-desc">Два аспекта созерцательной практики при продвижении к арахантству.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn139-aranavibhanga-sutta-sv.html">
-      <div class="sutta-num">МН 139</div>
-      <div><div class="sutta-title">Аранавибханга сутта</div><div class="sutta-subtitle">Изложение о не-конфликте (пер. SV)</div><div class="sutta-desc">Некоторые подробные разъяснения на тему Правильной Речи.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn140-dhatuvibhanga-sutta-sv.html">
-      <div class="sutta-num">МН 140</div>
-      <div><div class="sutta-title">Дхатувибханга сутта</div><div class="sutta-subtitle">Изложение об элементах (пер. SV)</div><div class="sutta-desc">История о том, как Будда учил одного из монахов последним этапам практики. Монах изначально не знал, что встретился с самим Учителем.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn141-sacca-vibhanga-sutta-sv.html">
-      <div class="sutta-num">МН 141</div>
-      <div><div class="sutta-title">Саччавибханга сутта</div><div class="sutta-subtitle">Изложение об истинах</div><div class="sutta-desc">Подробное объяснение четырёх благородных истин.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn142-dakkhinabibhanga-sutta-sv.html">
-      <div class="sutta-num">МН 142</div>
-      <div><div class="sutta-title">Даккхинавибханга сутта</div><div class="sutta-subtitle">Анализ подношений и их результаты (пер. SV)</div><div class="sutta-desc">Разъяснение результатов сделанных подношений. Результат дарения Сангхе выше, чем результат дарения даже лично Будде.</div></div>
-    </a>
-  </details>
+    <details class="chapter-group" id="chapter-3-4">
+        <summary class="chapter-summary">IV. Анализ (МН 131–142)</summary>
+        <a class="sutta-card" href="Texts/mn131-bhaddekaratta-sutta-sv.html">
+            <div class="sutta-num">МН 131</div>
+            <div><div class="sutta-title">Бхаддекаратта сутта</div><div class="sutta-subtitle">Одна прекрасная ночь (пер. SV)</div><div class="sutta-desc">Небольшой стих на тему воззрения о безличностности и его анализ.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn132-ananda-bhaddekaratta-sutta-sv.html">
+            <div class="sutta-num">МН 132</div>
+            <div><div class="sutta-title">Ананда бхаддекаратта сутта</div><div class="sutta-subtitle">Ананда и одна прекрасная ночь (пер. SV)</div><div class="sutta-desc">Схожая сутта с предыдущей.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn133-mahakaccana-bhaddekaratta-sutta-sv.html">
+            <div class="sutta-num">МН 133</div>
+            <div><div class="sutta-title">Махакаччана бхаддекаратта сутта</div><div class="sutta-subtitle">Махакаччана и одна прекрасная ночь (пер. SV)</div><div class="sutta-desc">Монах Махакаччана несколько иначе разъясняет стих из предыдущей сутты.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn134-lomasakangiya-bhaddekaratta-sutta-sv.html">
+            <div class="sutta-num">МН 134</div>
+            <div><div class="sutta-title">Ломасакангия бхаддекаратта сутта</div><div class="sutta-subtitle">Ломасакангия и одна прекрасная ночь (пер. SV)</div><div class="sutta-desc">Дополнительные детали в отношении истории со стихом из предыдущих сутт.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn135-cula-kammavibhanga-sutta-sv.html">
+            <div class="sutta-num">МН 135</div>
+            <div><div class="sutta-title">Чулакаммавибханга сутта</div><div class="sutta-subtitle">Малое изложение о поступке (пер. SV)</div><div class="sutta-desc">Объяснение общих направлений действия каммы.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn136-maha-kammavibhanga-sutta-sv.html">
+            <div class="sutta-num">МН 136</div>
+            <div><div class="sutta-title">Махакаммавибханга сутта</div><div class="sutta-subtitle">Большое изложение о поступке (пер. SV)</div><div class="sutta-desc">Объяснение тонкостей механизма каммы.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn137-salayatana-vibhanga-sutta-sv.html">
+            <div class="sutta-num">МН 137</div>
+            <div><div class="sutta-title">Салаятана вибханга сутта</div><div class="sutta-subtitle">Изложение шести опор (пер. SV)</div><div class="sutta-desc">Будда объясняет виды чувств, возникающих при контакте шести внутренних и внешних опор, и как их преодолевать по мере практики Пути.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn138-uddesa-vibhanga-sutta-sv.html">
+            <div class="sutta-num">МН 138</div>
+            <div><div class="sutta-title">Уддесавибханга сутта</div><div class="sutta-subtitle">Изложение и сводка (пер. SV)</div><div class="sutta-desc">Два аспекта созерцательной практики при продвижении к арахантству.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn139-aranavibhanga-sutta-sv.html">
+            <div class="sutta-num">МН 139</div>
+            <div><div class="sutta-title">Аранавибханга сутта</div><div class="sutta-subtitle">Изложение о не-конфликте (пер. SV)</div><div class="sutta-desc">Некоторые подробные разъяснения на тему Правильной Речи.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn140-dhatuvibhanga-sutta-sv.html">
+            <div class="sutta-num">МН 140</div>
+            <div><div class="sutta-title">Дхатувибханга сутта</div><div class="sutta-subtitle">Изложение об элементах (пер. SV)</div><div class="sutta-desc">История о том, как Будда учил одного из монахов последним этапам практики. Монах изначально не знал, что встретился с самим Учителем.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn141-sacca-vibhanga-sutta-sv.html">
+            <div class="sutta-num">МН 141</div>
+            <div><div class="sutta-title">Саччавибханга сутта</div><div class="sutta-subtitle">Изложение об истинах</div><div class="sutta-desc">Подробное объяснение четырёх благородных истин.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn142-dakkhinabibhanga-sutta-sv.html">
+            <div class="sutta-num">МН 142</div>
+            <div><div class="sutta-title">Даккхинавибханга сутта</div><div class="sutta-subtitle">Анализ подношений и их результаты (пер. SV)</div><div class="sutta-desc">Разъяснение результатов сделанных подношений. Результат дарения Сангхе выше, чем результат дарения даже лично Будде.</div></div>
+        </a>
+    </details>
 
-  <details class="chapter-group" id="chapter-3-5">
-    <summary class="chapter-summary">V. Шесть сфер чувств (МН 143–152)</summary>
-    <a class="sutta-card" href="Texts/mn143-anathapindikovada-sutta-sv.html">
-      <div class="sutta-num">МН 143</div>
-      <div><div class="sutta-title">Анатхапиндиковада сутта</div><div class="sutta-subtitle">Совет Анатхапиндике (пер. SV)</div><div class="sutta-desc">Сутта о кончине мирянина Анатхапиндики. Интересен факт: Будда и монахи обычно не давали мирянам глубокие лекции по Дхамме.</div></div>
+    <details class="chapter-group" id="chapter-3-5">
+        <summary class="chapter-summary">V. Шесть сфер чувств (МН 143–152)</summary>
+        <a class="sutta-card" href="Texts/mn143-anathapindikovada-sutta-sv.html">
+            <div class="sutta-num">МН 143</div>
+            <div><div class="sutta-title">Анатхапиндиковада сутта</div><div class="sutta-subtitle">Совет Анатхапиндике (пер. SV)</div><div class="sutta-desc">Сутта о кончине мирянина Анатхапиндики. Интересен факт: Будда и монахи обычно не давали мирянам глубокие лекции по Дхамме.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn144-channovada-sutta-sv.html">
+            <div class="sutta-num">МН 144</div>
+            <div><div class="sutta-title">Чханновада сутта</div><div class="sutta-subtitle">Совет Чханне (пер. SV)</div><div class="sutta-desc">Сутта о монахе Чханне, который свёл счёты с жизнью.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn145-punnovada-sutta-sv.html">
+            <div class="sutta-num">МН 145</div>
+            <div><div class="sutta-title">Пунновада сутта</div><div class="sutta-subtitle">Совет Пунне (пер. SV)</div><div class="sutta-desc">Сутта о терпеливом и добром монахе Пунне.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn146-nandakovada-sutta-sv.html">
+            <div class="sutta-num">МН 146</div>
+            <div><div class="sutta-title">Нандаковада сутта</div><div class="sutta-subtitle">Совет от Нандаки (пер. SV)</div><div class="sutta-desc">Наставление о непостоянстве с яркими метафорами.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn147-cula-rahulovada-sutta-sv.html">
+            <div class="sutta-num">МН 147</div>
+            <div><div class="sutta-title">Чуларахуловада сутта</div><div class="sutta-subtitle">Малая лекция с наставлением Рахуле (пер. SV)</div><div class="sutta-desc">Рахула, сын Будды, становится арахантом, выслушав лекцию о безличностности от самого Учителя.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn148-chachakka-sutta-sv.html">
+            <div class="sutta-num">МН 148</div>
+            <div><div class="sutta-title">Чхачхакка сутта</div><div class="sutta-subtitle">Шесть групп шестёрок (пер. SV)</div><div class="sutta-desc">Глубокая лекция на тему безличностности живого существа. Будда объясняет, что нужно познать для достижения арахантства.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn149-mahasalayatanika-sutta-sv.html">
+            <div class="sutta-num">МН 149</div>
+            <div><div class="sutta-title">Махасалаятаника сутта</div><div class="sutta-subtitle">Великая сфера шести (пер. SV)</div><div class="sutta-desc">Высшие стадии пути, в том числе и прозрение, осуществляются уже на основании развитой нравственности.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn150-nagaravindeyya-sutta-sv.html">
+            <div class="sutta-num">МН 150</div>
+            <div><div class="sutta-title">Нагаравиндеййя сутта</div><div class="sutta-subtitle">К Нагаравинданам (пер. SV)</div><div class="sutta-desc">Будда объясняет, что уважения достойны те отшельники, которые действительно отличаются по образу жизни от мирян.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn151-pindapata-parisuddhi-sutta-sv.html">
+            <div class="sutta-num">МН 151</div>
+            <div><div class="sutta-title">Пиндапатапарисуддхи сутта</div><div class="sutta-subtitle">Очищение еды, полученной с подаяний (пер. SV)</div><div class="sutta-desc">Будда призывает монахов отплачивать за полученную в качестве дара еду усердием в своей практике.</div></div>
+        </a>
+        <a class="sutta-card" href="Texts/mn152-indriya-bhavana-sutta-sv.html">
+            <div class="sutta-num">МН 152</div>
+            <div><div class="sutta-title">Индриябхавана сутта</div><div class="sutta-subtitle">Развитие качеств (пер. SV)</div><div class="sutta-desc">Практика тренировки ума по отношению к реакции на различные объекты чувств.</div></div>
+        </a>
+    </details>
+</details>
+
+<!-- АТХАКАТХА / ТИКА -->
+<details class="section-group" id="section-attha">
+    <summary class="section-summary attha-summary">Атхакатха / Тика</summary>
+    <div class="attha-disclaimer">
+        ⚠️ Комментарии переведены с помощью нейросетей
+    </div>
+
+
+    <a class="sutta-card attha-card" href="Atthakatha/a_mn28.html">
+        <div class="attha-num">МН 28</div>
+        <div>
+            <div class="sutta-title">Махахаттхипадопама-сутта</div>
+            <div class="sutta-subtitle">Большой пример со следами слона</div>
+            <div class="sutta-desc">Комментарий к сутте о методе четырёх великих элементов как основы анализа совокупностей.</div>
+        </div>
     </a>
-    <a class="sutta-card" href="Texts/mn144-channovada-sutta-sv.html">
-      <div class="sutta-num">МН 144</div>
-      <div><div class="sutta-title">Чханновада сутта</div><div class="sutta-subtitle">Совет Чханне (пер. SV)</div><div class="sutta-desc">Сутта о монахе Чханне, который свёл счёты с жизнью.</div></div>
+
+    <a class="sutta-card attha-card" href="Atthakatha/a_mn62.html">
+        <div class="attha-num">МН 62</div>
+        <div>
+            <div class="sutta-title">Махарахуловада сутта</div>
+            <div class="sutta-subtitle">Великое наставление Рахуле</div>
+            <div class="sutta-desc">Комментарий к сутте о созерцании пяти элементов, применительно к практике сыном Будды.</div>
+        </div>
     </a>
-    <a class="sutta-card" href="Texts/mn145-punnovada-sutta-sv.html">
-      <div class="sutta-num">МН 145</div>
-      <div><div class="sutta-title">Пунновада сутта</div><div class="sutta-subtitle">Совет Пунне (пер. SV)</div><div class="sutta-desc">Сутта о терпеливом и добром монахе Пунне.</div></div>
+
+    <a class="sutta-card attha-card" href="Atthakatha/a_mn70.html">
+        <div class="attha-num">МН 70</div>
+        <div>
+            <div class="sutta-title">Китагири сутта</div>
+            <div class="sutta-subtitle">В Китагири</div>
+            <div class="sutta-desc">Комментарий к сутте о семи видах личностей и их отношении к практике Пути.</div>
+        </div>
     </a>
-    <a class="sutta-card" href="Texts/mn146-nandakovada-sutta-sv.html">
-      <div class="sutta-num">МН 146</div>
-      <div><div class="sutta-title">Нандаковада сутта</div><div class="sutta-subtitle">Совет от Нандаки (пер. SV)</div><div class="sutta-desc">Наставление о непостоянстве с яркими метафорами.</div></div>
+
+    <a class="sutta-card attha-card" href="Atthakatha/a_mn71.html">
+        <div class="attha-num">МН 71</div>
+        <div>
+            <div class="sutta-title">Тевидджаваччхаготта-сутта</div>
+            <div class="sutta-subtitle">О троезнании — Ваччхаготте</div>
+            <div class="sutta-desc">Комментарий к сутте о трёх видах высшего знания и их значении для достижения ниббаны.</div>
+        </div>
     </a>
-    <a class="sutta-card" href="Texts/mn147-cula-rahulovada-sutta-sv.html">
-      <div class="sutta-num">МН 147</div>
-      <div><div class="sutta-title">Чуларахуловада сутта</div><div class="sutta-subtitle">Малая лекция с наставлением Рахуле (пер. SV)</div><div class="sutta-desc">Рахула, сын Будды, становится арахантом, выслушав лекцию о безличностности от самого Учителя.</div></div>
+
+    <a class="sutta-card attha-card" href="Atthakatha/a_mn140.html">
+        <div class="attha-num">МН 140</div>
+        <div>
+            <div class="sutta-title">Дхатувибханга-сутта</div>
+            <div class="sutta-subtitle">Изложение об элементах</div>
+            <div class="sutta-desc">Комментарий к сутте о шести элементах и практике Пути, ведущей к ниббане без остатка.</div>
+        </div>
     </a>
-    <a class="sutta-card" href="Texts/mn148-chachakka-sutta-sv.html">
-      <div class="sutta-num">МН 148</div>
-      <div><div class="sutta-title">Чхачхакка сутта</div><div class="sutta-subtitle">Шесть групп шестёрок (пер. SV)</div><div class="sutta-desc">Глубокая лекция на тему безличностности живого существа. Будда объясняет, что нужно познать для достижения арахантства.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn149-mahasalayatanika-sutta-sv.html">
-      <div class="sutta-num">МН 149</div>
-      <div><div class="sutta-title">Махасалаятаника сутта</div><div class="sutta-subtitle">Великая сфера шести (пер. SV)</div><div class="sutta-desc">Высшие стадии пути, в том числе и прозрение, осуществляются уже на основании развитой нравственности.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn150-nagaravindeyya-sutta-sv.html">
-      <div class="sutta-num">МН 150</div>
-      <div><div class="sutta-title">Нагаравиндеййя сутта</div><div class="sutta-subtitle">К Нагаравинданам (пер. SV)</div><div class="sutta-desc">Будда объясняет, что уважения достойны те отшельники, которые действительно отличаются по образу жизни от мирян.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn151-pindapata-parisuddhi-sutta-sv.html">
-      <div class="sutta-num">МН 151</div>
-      <div><div class="sutta-title">Пиндапатапарисуддхи сутта</div><div class="sutta-subtitle">Очищение еды, полученной с подаяний (пер. SV)</div><div class="sutta-desc">Будда призывает монахов отплачивать за полученную в качестве дара еду усердием в своей практике.</div></div>
-    </a>
-    <a class="sutta-card" href="Texts/mn152-indriya-bhavana-sutta-sv.html">
-      <div class="sutta-num">МН 152</div>
-      <div><div class="sutta-title">Индриябхавана сутта</div><div class="sutta-subtitle">Развитие качеств (пер. SV)</div><div class="sutta-desc">Практика тренировки ума по отношению к реакции на различные объекты чувств.</div></div>
-    </a>
-  </details>
+    
+
 </details>
 <br>
 <br>
 
 <script>
-  const STORAGE_KEY = 'mn-index-state';
+    const STORAGE_KEY = 'mn-index-state';
 
-  function saveState() {
-    const sections = document.querySelectorAll('details.section-group, details.chapter-group');
-    const openIds = [];
-    sections.forEach(function(el) {
-      if (el.open && el.id) openIds.push(el.id);
+    function saveState() {
+      const sections = document.querySelectorAll('details.section-group, details.chapter-group');
+      const openIds = [];
+      sections.forEach(function(el) {
+        if (el.open && el.id) openIds.push(el.id);
+      });
+      try {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify({ openIds: openIds, scrollY: window.scrollY }));
+      } catch(e) {}
+    }
+
+    function restoreState() {
+      let state = null;
+      try {
+        const raw = sessionStorage.getItem(STORAGE_KEY);
+        if (raw) state = JSON.parse(raw);
+      } catch(e) {}
+      if (!state) return;
+
+      document.querySelectorAll('details.section-group, details.chapter-group').forEach(function(el) {
+        if (el.id) {
+          el.open = state.openIds.indexOf(el.id) !== -1;
+        }
+      });
+
+      if (state.scrollY) window.scrollTo(0, state.scrollY);
+    }
+
+    document.querySelectorAll('a.sutta-card').forEach(function(link) {
+      link.addEventListener('click', saveState);
     });
-    try {
-      sessionStorage.setItem(STORAGE_KEY, JSON.stringify({ openIds: openIds, scrollY: window.scrollY }));
-    } catch(e) {}
-  }
 
-  function restoreState() {
-    let state = null;
-    try {
-      const raw = sessionStorage.getItem(STORAGE_KEY);
-      if (raw) state = JSON.parse(raw);
-    } catch(e) {}
-    if (!state) return;
-
-    document.querySelectorAll('details.section-group, details.chapter-group').forEach(function(el) {
-      if (el.id) {
-        el.open = state.openIds.indexOf(el.id) !== -1;
-      }
+    document.querySelectorAll('details').forEach(function(el) {
+      el.addEventListener('toggle', saveState);
     });
 
-    if (state.scrollY) window.scrollTo(0, state.scrollY);
-  }
+    window.addEventListener('pageshow', function(e) {
+      if (e.persisted) restoreState();
+    });
 
-  document.querySelectorAll('a.sutta-card').forEach(function(link) {
-    link.addEventListener('click', saveState);
-  });
-
-  document.querySelectorAll('details').forEach(function(el) {
-    el.addEventListener('toggle', saveState);
-  });
-
-  window.addEventListener('pageshow', function(e) {
-    if (e.persisted) restoreState();
-  });
-
-  restoreState();
+    restoreState();
 </script>
 </body>
 </html>
