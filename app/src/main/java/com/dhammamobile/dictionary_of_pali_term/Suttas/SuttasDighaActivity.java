@@ -3,10 +3,9 @@ package com.dhammamobile.dictionary_of_pali_term.Suttas;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.core.graphics.Insets;
@@ -16,9 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.dhammamobile.dictionary_of_pali_term.BaseActivityClass;
 import com.dhammamobile.dictionary_of_pali_term.MainActivity;
 import com.dhammamobile.dictionary_of_pali_term.R;
-
-import com.dhammamobile.dictionary_of_pali_term.Suttas.BookmarkManager;
-import android.widget.Toast;
+import com.dhammamobile.dictionary_of_pali_term.DocxWebViewClient;
 
 
 public class SuttasDighaActivity extends BaseActivityClass {
@@ -40,7 +37,7 @@ public class SuttasDighaActivity extends BaseActivityClass {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_suttas_digha);
 
-      //  setWindowFlagsFullscreenAndNoLimits();
+        //  setWindowFlagsFullscreenAndNoLimits();
 
         // Скрытие панели навигации и панели состояния
 //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -104,6 +101,17 @@ public class SuttasDighaActivity extends BaseActivityClass {
         BookmarkManager bookmarkManager = new BookmarkManager(this);
         // Используем AdaptiveWebViewClient для автоматического масштабирования
         webView.setWebViewClient(new AdaptiveWebViewClient() {
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (url != null && url.startsWith("docxopen://")) {
+                    String filename = url.replace("docxopen://", "");
+                    DocxWebViewClient.openDocxFromAssets(SuttasDighaActivity.this, filename);
+                    return true;
+                }
+                return super.shouldOverrideUrlLoading(view, url);
+            }
+
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
