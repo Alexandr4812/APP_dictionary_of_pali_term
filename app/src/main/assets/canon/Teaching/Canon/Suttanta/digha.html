@@ -124,6 +124,27 @@
     color: var(--desc-color);
     line-height: 1.5;
   }
+
+  /* Секция Атхакатха/Тика */
+  summary.attha-summary {
+    background-color: #52B788;
+    color: #0f2117;
+  }
+  .attha-num { color: #3d8b67; font-family: monospace; font-size: 1.5rem; font-weight: bold; padding-top: 2px; }
+  .attha-disclaimer {
+    font-size: 0.78rem;
+    color: #3d5a47;
+    background: rgba(82, 183, 136, 0.1);
+    border-left: 3px solid #52B788;
+    padding: 8px 14px;
+    margin: 10px 12px 4px;
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    letter-spacing: 0.2px;
+  }
+  .sutta-card.attha-card:hover {
+    border-left-color: #52B788;
+  }
 </style>
 </head>
 <body>
@@ -316,6 +337,25 @@
       <div class="sutta-desc">Одна из важнейших сутт Канона, посвящённая описанию критериев правильной жизни для мирян.</div>
     </div>
   </a>
+</details>
+
+<!-- АТХАКАТХА / ТИКА -->
+<details class="section-group" id="section-attha">
+  <summary class="section-summary attha-summary">Атхакатха / Тика</summary>
+
+  <div class="attha-disclaimer">
+    ⚠️ Комментарии переведены с помощью нейросетей
+  </div>
+
+  <a class="sutta-card attha-card" href="Atthakatha/Mn/a_dn22.html">
+    <div class="attha-num">ДН 22</div>
+    <div>
+      <div class="sutta-title">Махасатипаттхана-сутта</div>
+      <div class="sutta-subtitle">Великое наставление об основах памятования</div>
+      <div class="sutta-desc">Комментарии  к Махасатипаттхана-сутте </div>
+    </div>
+  </a>
+
 </details>
 <br>
 <br>
