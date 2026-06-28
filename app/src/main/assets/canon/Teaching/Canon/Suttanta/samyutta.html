@@ -181,6 +181,54 @@
     opacity: 1;
     transform: scale(1.1);
   }
+  /* Секция Атхакатха/Тика */
+  summary.attha-summary {
+    background-color: #52B788;
+    color: #0f2117;
+  }
+  .attha-num { color: #3d8b67; font-family: monospace; font-size: 1.5rem; font-weight: bold; padding-top: 2px; }
+  .attha-disclaimer {
+    font-size: 0.78rem;
+    color: #3d5a47;
+    background: rgba(82, 183, 136, 0.1);
+    border-left: 3px solid #52B788;
+    padding: 8px 14px;
+    margin: 10px 12px 4px;
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    letter-spacing: 0.2px;
+  }
+  .sutta-card.attha-card:hover { border-left-color: #52B788; }
+  .sutta-card.attha-card { grid-template-columns: 72px 1fr; }
+  .attha-vagga-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #3d8b67;
+    padding: 14px 16px 4px;
+  }
+  details.attha-chapter-group {
+    margin: 8px 10px;
+    border: 1px solid rgba(82, 183, 136, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  summary.attha-chapter-summary {
+    padding: 10px 14px;
+    list-style: none;
+    cursor: pointer;
+    background: rgba(82, 183, 136, 0.08);
+    color: #3d8b67;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    letter-spacing: 0.3px;
+  }
+  summary.attha-chapter-summary::after { content: "▼"; font-size: 0.55rem; transition: 0.3s; }
+  details.attha-chapter-group[open] > summary.attha-chapter-summary::after { transform: rotate(180deg); }
 </style>
 </head>
 <body>
@@ -459,6 +507,52 @@
     <div class="sutta-num">СН 56</div>
     <div><div class="sutta-title">Сачча саньютта</div><div class="sutta-subtitle">Истины</div></div>
   </a>
+</details>
+
+<!-- АТХАКАТХА / ТИКА -->
+<details class="section-group" id="section-attha">
+  <summary class="section-summary attha-summary">Атхакатха / Тика</summary>
+
+  <div class="attha-disclaimer">
+    ⚠️ Комментарии переведены с помощью нейросетей
+  </div>
+
+  <details class="attha-chapter-group" id="attha-nidana">
+    <summary class="attha-chapter-summary">Нидана саньютта</summary>
+    <a class="sutta-card attha-card" href="Atthakatha/a_sn12_40.html">
+      <div class="attha-num">СН 12.40</div>
+      <div>
+        <div class="sutta-title">Татия четана сутта</div>
+        <div class="sutta-subtitle">Третья сутта о намерении</div>
+        <div class="sutta-desc">Комментарий к сутте о связи намерения с обусловленным возникновением и сознанием.</div>
+      </div>
+    </a>
+  </details>
+
+  <details class="attha-chapter-group" id="attha-khandha">
+    <summary class="attha-chapter-summary">Кхандха саньютта</summary>
+    <a class="sutta-card attha-card" href="Atthakatha/a_sn22_81.html">
+      <div class="attha-num">СН 22.81</div>
+      <div>
+        <div class="sutta-title">Палилейя сутта</div>
+        <div class="sutta-subtitle">В Палилейе</div>
+        <div class="sutta-desc">Комментарий к сутте о пяти совокупностях и пребывании Будды в лесу Палилейя.</div>
+      </div>
+    </a>
+  </details>
+
+  <details class="attha-chapter-group" id="attha-satipatthana">
+    <summary class="attha-chapter-summary">Сатипаттхана саньютта</summary>
+    <a class="sutta-card attha-card" href="Atthakatha/a_sn47_2.html">
+      <div class="attha-num">СН 47.2</div>
+      <div>
+        <div class="sutta-title">Сати сутта</div>
+        <div class="sutta-subtitle">Памятование</div>
+        <div class="sutta-desc">Комментарий к сутте о четырёх основах памятования как пути к ниббане.</div>
+      </div>
+    </a>
+  </details>
+
 </details>
 
 <br>
