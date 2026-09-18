@@ -25,6 +25,13 @@ import com.dhammamobile.dictionary_of_pali_term.R;
 
 import java.util.Locale;
 
+import android.graphics.drawable.GradientDrawable;
+import android.widget.ImageView;
+import android.widget.ScrollView;
+import androidx.core.content.ContextCompat;
+import java.util.ArrayList;
+import java.util.List;
+import android.widget.ImageButton;
 
 public class LiveBuddhaActivity extends BaseActivityClass {
     @Override
@@ -37,6 +44,13 @@ public class LiveBuddhaActivity extends BaseActivityClass {
     private String getBookmarkKeyFromPath(String fullPath) {
         return fullPath.replace("file:///android_asset/", "");
     }
+
+    ScrollView mainScroll, thumbScroll;
+    LinearLayout thumbColumn;
+    private final List<View> storyCards = new ArrayList<>();
+    private ImageView activeThumbView;
+    private String activeTag = "";
+    ImageButton thumbToggle;
 
     LinearLayout buttonBuddha;
     Button plusText, minusText, buttonZakladka;
@@ -67,10 +81,22 @@ public class LiveBuddhaActivity extends BaseActivityClass {
 
         buttonBuddha = findViewById(R.id.button_layout_live_buddha);
 
+        mainScroll = findViewById(R.id.viewScrollDeclomation);
+        thumbScroll = findViewById(R.id.thumbScroll);
+        thumbColumn = findViewById(R.id.thumbColumn);
+        buildThumbColumn();
+        mainScroll.setOnScrollChangeListener((v, sx, sy, oldSx, oldSy) -> updateActiveThumb());
+        mainScroll.post(this::updateActiveThumb);
+
         // Настройки WebView
         WebSettings webSettings = webView.getSettings();
         webView.getSettings().setJavaScriptEnabled(true);
         webView.clearCache(true);
+
+        thumbToggle = findViewById(R.id.thumbToggle);
+        boolean thumbsVisible = getSharedPreferences("ui", MODE_PRIVATE).getBoolean("thumbsVisible", false);
+        thumbScroll.setVisibility(thumbsVisible ? View.VISIBLE : View.GONE);
+        thumbToggle.setRotation(thumbsVisible ? 0f : 180f); // стрелка смотрит по действию
 
         // Обработчики нажатий кнопок для увеличения/уменьшения шрифта
         plusText.setOnClickListener(v -> {
@@ -164,6 +190,111 @@ public class LiveBuddhaActivity extends BaseActivityClass {
         saveScrollPosition();
         webView.setVisibility(View.INVISIBLE);
         buttonBuddha.setVisibility(View.INVISIBLE);
+    }
+
+    private int dp(int value) {
+        return Math.round(value * getResources().getDisplayMetrics().density);
+    }
+
+    // Строим колонку миниатюр из уже существующих CardView основного списка
+    private void buildThumbColumn() {
+        LinearLayout mainList = (LinearLayout) mainScroll.getChildAt(0);
+        for (int i = 0; i < mainList.getChildCount(); i++) {
+            View child = mainList.getChildAt(i);
+            if (!(child instanceof androidx.cardview.widget.CardView) || child.getTag() == null) continue;
+            storyCards.add(child);
+
+            ImageView source = (ImageView) ((androidx.cardview.widget.CardView) child).getChildAt(0);
+            ImageView thumb = new ImageView(this);
+            thumb.setTag(child.getTag());
+            thumb.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            thumb.setImageDrawable(source.getDrawable());
+            thumb.setContentDescription("Перейти к истории " + child.getTag());
+
+            GradientDrawable bg = new GradientDrawable();
+            bg.setCornerRadius(dp(8));
+            bg.setColor(0x00000000);
+            thumb.setBackground(bg);
+            thumb.setClipToOutline(true); // скругляем углы миниатюры
+
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, dp(40));
+            lp.setMargins(dp(6), dp(3), dp(6), dp(3));
+            thumb.setLayoutParams(lp);
+            thumb.setAlpha(0.45f);
+            thumb.setOnClickListener(this::jumpToStory);
+            thumbColumn.addView(thumb);
+        }
+    }
+
+    // Нажатие на миниатюру — плавно прокручиваем основной список к истории
+    public void jumpToStory(View thumbView) {
+        Object tagObj = thumbView.getTag();
+        if (tagObj == null) return;
+        View target = mainScroll.findViewWithTag(tagObj.toString());
+        if (target == null) return;
+        mainScroll.smoothScrollTo(0, Math.max(0, target.getTop() - dp(4)));
+    }
+
+    // Определяем, какая история сейчас на экране, и подсвечиваем её миниатюру
+    private void updateActiveThumb() {
+        if (storyCards.isEmpty()) return;
+        int probe = mainScroll.getScrollY() + mainScroll.getHeight() / 3;
+        String tag = (String) storyCards.get(0).getTag();
+        for (View card : storyCards) {
+            if (card.getTop() <= probe) tag = (String) card.getTag();
+            else break;
+        }
+        // если доскроллили до самого низа — активна последняя история
+        if (mainScroll.getScrollY() + mainScroll.getHeight() >= mainScroll.getChildAt(0).getHeight() - dp(8)) {
+            tag = (String) storyCards.get(storyCards.size() - 1).getTag();
+        }
+        setActiveThumb(tag, true);
+    }
+
+    private void setActiveThumb(String tag, boolean centerColumn) {
+        if (tag.equals(activeTag)) return;
+        activeTag = tag;
+        if (activeThumbView != null) {
+            activeThumbView.setAlpha(0.45f);
+            activeThumbView.setPadding(0, 0, 0, 0);
+            ((GradientDrawable) activeThumbView.getBackground()).setColor(0x00000000);
+        }
+        View v = thumbColumn.findViewWithTag(tag);
+        if (!(v instanceof ImageView)) return;
+        activeThumbView = (ImageView) v;
+        activeThumbView.setAlpha(1f);
+        activeThumbView.setPadding(dp(2), dp(2), dp(2), dp(2)); // рамка за счёт фона
+        ((GradientDrawable) activeThumbView.getBackground())
+                .setColor(ContextCompat.getColor(this, R.color.my_text_bacground_color));
+        if (centerColumn) {
+            thumbScroll.smoothScrollTo(0, activeThumbView.getTop()
+                    - thumbScroll.getHeight() / 2 + activeThumbView.getHeight() / 2);
+        }
+    }
+
+    // Показать/скрыть боковую колонку миниатюр с анимацией
+    public void toggleThumbColumn(View v) {
+        boolean show = thumbScroll.getVisibility() != View.VISIBLE;
+        getSharedPreferences("ui", MODE_PRIVATE).edit().putBoolean("thumbsVisible", show).apply();
+        thumbToggle.setRotation(show ? 0f : 180f);
+
+        float off = dp(64); // ширина колонки
+        if (show) {
+            thumbScroll.setVisibility(View.VISIBLE);
+            thumbScroll.setTranslationX(off);
+            thumbToggle.setTranslationX(off);
+            thumbScroll.animate().translationX(0).setDuration(180).start();
+            thumbToggle.animate().translationX(0).setDuration(180).start();
+        } else {
+            thumbScroll.animate().translationX(off).setDuration(180)
+                    .withEndAction(() -> {
+                        thumbScroll.setVisibility(View.GONE);
+                        thumbScroll.setTranslationX(0);
+                    }).start();
+            thumbToggle.animate().translationX(off).setDuration(180)
+                    .withEndAction(() -> thumbToggle.setTranslationX(0)).start();
+        }
     }
 
 
