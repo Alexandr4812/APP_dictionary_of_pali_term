@@ -154,5 +154,21 @@
             />
 
     </LinearLayout>
+    <WebView
+        android:id="@+id/webViewSekhiya"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:visibility="invisible"
+        android:scrollbarThumbVertical="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Включаем макет с кнопками -->
+    <include
+        layout="@layout/buttons_layout_for_sekhiya"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

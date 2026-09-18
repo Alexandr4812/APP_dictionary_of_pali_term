@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sekhiyā — 75 правил тренировки</title>
+<style>
+    :root {
+        --bg-color: #161923;
+        --accent-color: #FFE082;
+        --text-main: #E2E8F0;
+        --text-dim: #94A3B8;
+        --card-bg: rgba(255, 255, 255, 0.03);
+        --border-color: #2D3748;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        padding: 15px 15px 60px;
+        font-family: -apple-system, "Roboto", sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.5;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* ── Заголовок ── */
+    .main-title {
+        text-align: center;
+        color: var(--accent-color);
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 4px;
+    }
+    .main-chapter {
+        text-align: center;
+        color: var(--text-dim);
+        font-size: 0.78rem;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    /* ── Введение (сворачивается) ── */
+    .intro-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 10px 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 10px;
+        margin-bottom: 12px;
+        user-select: none;
+        background: var(--card-bg);
+    }
+    .intro-toggle-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--text-dim);
+    }
+    .intro-toggle-icon {
+        font-size: 0.6rem;
+        color: var(--text-dim);
+        transition: transform 0.3s;
+    }
+    .intro-toggle.open .intro-toggle-icon { transform: rotate(180deg); }
+    .intro-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        font-size: 0.83rem;
+        color: var(--text-dim);
+        line-height: 1.7;
+        padding: 0 4px;
+    }
+    .intro-body.open {
+        max-height: 1600px;
+        padding-bottom: 12px;
+    }
+
+    .key-block {
+        border-left: 3px solid var(--accent-color);
+        background: rgba(255,224,130,0.06);
+        padding: 10px 14px;
+        border-radius: 0 8px 8px 0;
+        margin: 10px 0;
+        font-size: 0.85rem;
+        line-height: 1.75;
+        color: var(--text-main);
+    }
+    .key-label {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: var(--accent-color);
+        font-weight: 700;
+        margin-bottom: 4px;
+        display: block;
+        opacity: 0.8;
+    }
+    .key-block p { margin: 0 0 8px; }
+    .key-block p:last-child { margin-bottom: 0; }
+
+    /* ── Чипы-переключатели ── */
+    .chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 0 0 16px; }
+    .chip {
+        background: rgba(255,224,130,0.1);
+        border: 1px solid rgba(255,224,130,0.3);
+        color: var(--accent-color);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        border-radius: 20px;
+        padding: 6px 12px;
+        cursor: pointer;
+        font-family: inherit;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .chip:active { background: rgba(255,255,255,0.15); }
+    .chip.active { background: var(--accent-color); color: #161923; }
+
+    /* ── Группа раздела (details) ── */
+    details.section-group {
+        margin-bottom: 12px;
+        border: 1px solid var(--border-color);
+        border-radius: 14px;
+        background: var(--card-bg);
+        overflow: hidden;
+    }
+
+    summary.section-summary {
+        padding: 14px 16px;
+        list-style: none;
+        cursor: pointer;
+        background-color: var(--accent-color);
+        color: #161923;
+        font-weight: 800;
+        font-size: 0.82rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "▼"; font-size: 0.6rem; transition: transform 0.3s; margin-left: auto; flex-shrink: 0; }
+    details[open] > summary::after { transform: rotate(180deg); }
+
+    .section-titles { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+    .section-title-pali {
+        font-style: italic;
+        font-weight: 700;
+        text-transform: none;
+        letter-spacing: 0.3px;
+        opacity: 0.9;
+        font-size: 0.8rem;
+    }
+
+    .section-end {
+        padding: 10px 16px;
+        font-size: 0.72rem;
+        font-style: italic;
+        color: var(--text-dim);
+        border-top: 1px solid var(--border-color);
+        opacity: 0.85;
+    }
+
+    /* ── Кнопка правила ── */
+    .para-btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 13px 16px;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--border-color);
+        color: var(--text-main);
+        font-size: 0.88rem;
+        font-family: inherit;
+        cursor: pointer;
+        text-align: left;
+        transition: background 0.15s;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .para-btn:active { background: rgba(255,255,255,0.05); }
+    .para-btn.open { background: rgba(255,224,130,0.04); }
+
+    .para-num {
+        font-size: 0.7rem;
+        color: var(--accent-color);
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        opacity: 0.8;
+    }
+    .para-title { flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+    .para-pali {
+        font-weight: 700;
+        color: var(--text-main);
+        font-size: 0.95rem;
+        line-height: 1.4;
+        letter-spacing: 0.2px;
+        word-break: break-word;
+    }
+    .para-ru {
+        font-weight: 500;
+        color: var(--text-dim);
+        font-size: 0.78rem;
+        line-height: 1.45;
+    }
+    body.ru-hidden .para-ru { display: none; }
+    body.ru-hidden .para-pali { color: var(--accent-color); font-size: 1rem; }
+
+    .para-arrow {
+        font-size: 0.6rem;
+        color: var(--text-dim);
+        margin-left: 8px;
+        flex-shrink: 0;
+        transition: transform 0.3s;
+    }
+    .para-btn.open .para-arrow { transform: rotate(90deg); }
+
+    /* ── Тело правила (разворот) ── */
+    .para-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        background: rgba(0,0,0,0.18);
+        font-size: 0.82rem;
+        color: #CBD5E1;
+        line-height: 1.75;
+        padding: 0 16px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .para-body.open {
+        max-height: 2000px;
+        padding: 14px 16px;
+    }
+    .para-body p { margin: 0 0 10px; }
+    .para-body p:last-child { margin-bottom: 0; }
+    .para-body em { color: #CFD8DC; font-style: italic; font-size: 0.95em; }
+
+    .lbl {
+        display: inline-block;
+        font-size: 0.62rem;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: var(--accent-color);
+        opacity: 0.85;
+        margin-right: 6px;
+    }
+    .d-ctx {
+        border-left: 3px solid rgba(255,224,130,0.5);
+        padding-left: 10px;
+        color: #CFD8DC;
+    }
+</style>
+</head>
+<body>
+
+<div class="main-title">Sekhiyā Dhammā · 75 правил тренировки</div>
+<div class="main-chapter">Виная · Патимоккха · Раздел секхий</div>
+
+<div class="intro-toggle" id="introToggle" onclick="toggleIntro()">
+    <span class="intro-toggle-label">Введение · о правилах секхийа</span>
+    <span class="intro-toggle-icon">▼</span>
+</div>
+<div class="intro-body" id="introBody">
+    <div class="key-block">
+        <span class="key-label">75 Sekhiyā · правила для тренировки</span>
+        <p>Термин на пали буквально означает «чтобы тренироваться в…». В этом разделе Винаи 75 правил, которые делятся на четыре категории:</p>
+        <p>1. Этикет ношения одеяний и этикет поведения в населённой местности;<br>
+           2. Этикет в принятии и поедании пищи с подаяний;<br>
+           3. Этикет при обучении кого-либо Дхамме;<br>
+           4. Этикет при облегчении нужды.</p>
+        <p>Сумма этих правил составляет лицо саманер и бхиккху, а значит и облик Сангхи в целом. Известны истории о том, как бханте Сарипутта вдохновился манерами бханте Ассаджи и решил вступить в общину, а также о том, как король Ашока обратился в буддизм под впечатлением от манер молодого саманеры.</p>
+    </div>
+    <div class="key-block">
+        <span class="key-label">Общая формула</span>
+        <p>Если правило нарушается из неуважения, это влечёт проступок дукката. Повторяющийся контекст возникновения правил (пребывание Будды в Саваттхи, проступки «группы шестерых», ропот мирян и упреки Будды) опущен; сохранены все уникальные истории, точные формулировки, подробные разъяснения и полные списки исключений.</p>
+    </div>
+</div>
+
+<div class="chips">
+    <button class="chip" onclick="toggleRu(this)">Скрыть русский перевод</button>
+    <button class="chip" onclick="toggleAll(this)">Развернуть все разделы</button>
+</div>
+
+<!-- ═══════════ РАЗДЕЛ I ═══════════ -->
+<details class="section-group">
+<summary class="section-summary">
+    <span class="section-titles">
+        <span>Об аккуратном ношении одеяния</span>
+        <span class="section-title-pali">Parimaṇala-vaggo pahamo</span>
+    </span>
+</summary>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">1</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">parimaṇalaṃ nivāsessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду носить [нижнюю чивару] равномерно обёрнутой — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду носить нижнее одеяние ровно со всех сторон».</p>
+    <p><span class="lbl">Пояснение</span> Нижнее одеяние следует носить ровно со всех сторон, закрывая пупок и колени. Если из неуважения носит его свисающим спереди или сзади — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">2</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">parimaṇḍala pārupissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду носить [верхнюю чивару] равномерно обёрнутой — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду носить верхнее одеяние ровно со всех сторон».</p>
+    <p><span class="lbl">Пояснение</span> Верхнее одеяние следует носить ровно, выравнивая оба края. Если из неуважения носит свисающим спереди или сзади — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">3</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">suppaṭicchanno antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду входить в населённую местность хорошо укрытым — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Хорошо прикрытым я буду ходить в жилых районах».</p>
+    <p><span class="lbl">Пояснение</span> В жилых районах следует ходить хорошо прикрытым. Если из неуважения ходит с обнаженным телом — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">4</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">suppaṭicchanno antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду сидеть в населённой местности хорошо укрытым — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Хорошо прикрытым я буду сидеть в жилых районах».</p>
+    <p><span class="lbl">Пояснение</span> В жилых районах следует сидеть хорошо прикрытым. Если из неуважения сидит с обнаженным телом — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; временно проживающий; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">5</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">susaṃvuto antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я буду ходить хорошо обузданным — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Хорошо сдерживая свои чувства, я буду ходить в жилых районах».</p>
+    <p><span class="lbl">Пояснение</span> Следует ходить, хорошо сдерживая чувства. Если из неуважения ходит, размахивая руками или ногами — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">6</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">susaṃvuto antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я буду сидеть хорошо обузданным — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Хорошо сдерживая себя, я буду сидеть в жилой местности».</p>
+    <p><span class="lbl">Пояснение</span> Следует сидеть, хорошо сдерживая себя. Если из неуважения сидит, играя руками или ногами — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">7</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">okkhittacakkhu antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я буду ходить с опущенными глазами — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Опустив взор, я буду идти по жилой местности».</p>
+    <p><span class="lbl">Пояснение</span> Следует идти с опущенным взором, смотря вперёд лишь на длину ярма. Если из неуважения озирается по сторонам — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">8</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">okkhittacakkhu antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я буду сидеть с опущенными глазами — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Опустив взор, я буду сидеть в жилой местности».</p>
+    <p><span class="lbl">Пояснение</span> Следует сидеть с опущенным взором, смотря вперёд лишь на длину ярма. Если из неуважения озирается — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">9</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na ukkhittakāya antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду ходить с задранными одеяниями — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду идти по жилой местности, подобрав одежды».</p>
+    <p><span class="lbl">Пояснение</span> Не следует идти, приподняв одежды с одной или обеих сторон. Если из неуважения идёт подобрав — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">10</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na ukkhittakāya antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду сидеть с задранными одеяниями — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду сидеть в жилой местности, подобрав одежды».</p>
+    <p><span class="lbl">Пояснение</span> Не следует сидеть, приподняв одежды с одной или обеих сторон. Если из неуважения сидит подобрав — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; временно проживающий; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<div class="section-end">parimaṇalavaggo pahamo niṭhito · Окончен первый раздел — о равномерно обёрнутом вокруг и далее.</div>
+</details>
+
+<!-- ═══════════ РАЗДЕЛ II ═══════════ -->
+<details class="section-group">
+<summary class="section-summary">
+    <span class="section-titles">
+        <span>О громком смехе и шуме</span>
+        <span class="section-title-pali">Ujjagghika-vaggo dutiyo</span>
+    </span>
+</summary>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">11</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду ходить, громко смеясь — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду идти по жилой местности, громко хохоча».</p>
+    <p><span class="lbl">Пояснение</span> Не следует идти, громко хохоча. Если из неуважения хохочет — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если при наличии повода для смеха он лишь слегка улыбается</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">12</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду сидеть, громко смеясь — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду сидеть в жилой местности, громко хохоча».</p>
+    <p><span class="lbl">Пояснение</span> Не следует сидеть, громко хохоча. Если из неуважения хохочет — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если при наличии повода лишь слегка улыбается</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">13</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">appasaddo antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я буду ходить тихо — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду идти по жилой местности тихо».</p>
+    <p><span class="lbl">Пояснение</span> Следует идти тихо. Если из неуважения идёт, громко и шумно разговаривая — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">14</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">appasaddo antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я буду сидеть тихо — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду сидеть в жилой местности тихо».</p>
+    <p><span class="lbl">Пояснение</span> Следует сидеть тихо. Если из неуважения сидит, громко и шумно разговаривая — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">15</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na kāyappacālakaṃ antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду ходить, размахивая телом — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду идти по жилой местности, покачивая телом».</p>
+    <p><span class="lbl">Пояснение</span> Следует идти, держа тело ровно. Если из неуважения идёт, покачивая телом и размахивая руками — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">16</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na kāyappacālakaṃ antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду сидеть, размахивая телом — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду сидеть в жилой местности, покачивая телом».</p>
+    <p><span class="lbl">Пояснение</span> Следует сидеть, держа тело ровно. Если из неуважения сидит, покачивая телом — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; временно проживающий; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">17</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na bāhuppacālakaṃ antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду ходить, раскачивая руками — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду ходить по жилой местности, размахивая руками».</p>
+    <p><span class="lbl">Пояснение</span> Следует ходить, держа руки неподвижно. Если из неуважения идёт, размахивая руками и давая им свободно болтаться — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">18</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na bāhuppacālakaṃ antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду сидеть, раскачивая руками — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду сидеть в жилой местности, размахивая руками».</p>
+    <p><span class="lbl">Пояснение</span> Следует сидеть, держа руки неподвижно. Если из неуважения сидит, размахивая руками — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время временного пребывания; при опасностях; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">19</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na sīsappacālakaṃ antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду ходить, размахивая головой — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду ходить по жилой местности, покачивая головой».</p>
+    <p><span class="lbl">Пояснение</span> Следует ходить, держа голову прямо и неподвижно. Если из неуважения идёт, покачивая головой — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">20</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na sīsappacālakaṃ antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду сидеть, размахивая головой — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду сидеть в жилой местности, покачивая головой».</p>
+    <p><span class="lbl">Пояснение</span> Следует сидеть, держа голову прямо и неподвижно. Если из неуважения сидит, покачивая головой — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время временного пребывания; при опасностях; безумен; первонарушитель.</p>
+</div>
+
+<div class="section-end">ujjagghikavaggo dutiyo niṭṭhito · Окончен второй раздел — о смехе и далее.</div>
+</details>
+
+<!-- ═══════════ РАЗДЕЛ III ═══════════ -->
+<details class="section-group">
+<summary class="section-summary">
+    <span class="section-titles">
+        <span>Об упирании в бока и далее</span>
+        <span class="section-title-pali">Khambhakata-vaggo tatiyo</span>
+    </span>
+</summary>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">21</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na khambhakato antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду ходить, уперев руки в бока — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду ходить по жилой местности, подперев бока руками».</p>
+    <p><span class="lbl">Пояснение</span> Не следует идти, подперев бок рукой с одной или обеих сторон. Если из неуважения идёт подперев — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">22</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na khambhakato antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду сидеть, уперев руки в бока — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду сидеть в жилой местности, подперев бока руками».</p>
+    <p><span class="lbl">Пояснение</span> Не следует сидеть, подперев бок рукой. Если из неуважения сидит подперев — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время временного пребывания; при опасностях; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">23</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na oguṇṭhito antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду ходить с покрытой головой — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду ходить по жилой местности, укутав голову».</p>
+    <p><span class="lbl">Пояснение</span> Не следует идти, укутав голову. Если из неуважения идёт укутав — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">24</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na oguṇhito antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду сидеть с покрытой головой — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду сидеть в жилой местности, укутав голову».</p>
+    <p><span class="lbl">Пояснение</span> Не следует сидеть, укутав голову. Если из неуважения сидит укутав — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время временного пребывания; при опасностях; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">25</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду ходить только на носках или только на пятках — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду ходить по жилой местности на цыпочках».</p>
+    <p><span class="lbl">Пояснение</span> Не следует идти на цыпочках. Если из неуважения идёт на цыпочках — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">26</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду сидеть, обхватив колени — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду сидеть в жилой местности, обхватив колени руками или тканью».</p>
+    <p><span class="lbl">Пояснение</span> Не следует сидеть, обхватив колени. Если из неуважения сидит обхватив — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время временного пребывания; при опасностях; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">27</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">sakkaccaṃ piḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду принимать подаяние пищи признательно — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду принимать подаяние пищи почтительно».</p>
+    <p><span class="lbl">Пояснение</span> Подаяние следует принимать почтительно. Если из неуважения принимает непочтительно, словно желая выбросить — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> непреднамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">28</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">pattasaññī piṇḍapātaṃ paiggahessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду принимать подаяние пищи, сохраняя осознанность на патте — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду принимать подаяние пищи, сосредоточив внимание на чаше».</p>
+    <p><span class="lbl">Пояснение</span> Сфокусировав внимание на чаше, следует принимать подаяние. Если из неуважения, смотря по сторонам, не замечает, когда накладывают пищу — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">29</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">samasūpakaṃ piṇḍapātaṃ paiggahessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду принимать подаяние пищи с бобовым карри в надлежащей пропорции — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду принимать подаяние с соусом в надлежащей пропорции».</p>
+    <p><span class="lbl">Пояснение</span> Есть два вида соуса: из бобов мунг и из чёрного маша. Следует принимать соус в надлежащей пропорции, который можно взять рукой. Если из неуважения принимает очень много соуса — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>в отношении жидких соусов; если получено от родственников, от пригласивших, ради блага другого, за собственные средства</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">30</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">samatittikaṃ piṇḍapātaṃ paiggahessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду принимать подаяние пищи вровень с краем патты — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду принимать подаяние вровень с краями чаши».</p>
+    <p><span class="lbl">Пояснение</span> Следует принимать подаяние вровень с краями чаши. Если из неуважения принимает, сложенное горой — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<div class="section-end">khambhakatavaggo tatiyo niṭṭhito · Окончен третий раздел — об упирании в бока и далее.</div>
+</details>
+
+<!-- ═══════════ РАЗДЕЛ IV ═══════════ -->
+<details class="section-group">
+<summary class="section-summary">
+    <span class="section-titles">
+        <span>О почтительном отношении к пище</span>
+        <span class="section-title-pali">Sakkacca-vaggo catuttho</span>
+    </span>
+</summary>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">31</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">sakkaccaṃ piḍapāta bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду есть пищу с подаяний признательно — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду есть подаяние почтительно».</p>
+    <p><span class="lbl">Пояснение</span> Следует есть почтительно. Если из неуважения ест непочтительно, словно не желая есть — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">32</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">pattasaññī piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду есть пищу с подаяний с осознанностью, направленной на патту — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Сфокусировав внимание на чаше, я буду есть подаяние».</p>
+    <p><span class="lbl">Пояснение</span> Сфокусировав внимание на чаше, следует есть. Если из неуважения, смотря по сторонам, не замечает, что подкладывают еду — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">33</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">sapadānaṃ piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду есть пищу с подаяний методично — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду есть подаяние последовательно».</p>
+    <p><span class="lbl">Пояснение</span> Следует есть последовательно. Если из неуважения ест, выбирая кусочки то тут, то там — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если выбирает, чтобы дать другим; перекладывая в чужую посуду; в отношении гарниров</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">34</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">samasūpakaṃ piḍapāta bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду есть пищу с подаяний с бобовым карри в надлежащей пропорции — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду есть подаяние с соусом в надлежащей пропорции».</p>
+    <p><span class="lbl">Пояснение</span> Следует есть с соусом в надлежащей пропорции. Если из неуважения ест очень много соуса — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>в отношении жидких соусов; от родственников, от пригласивших, за собственные средства</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">35</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na thūpakato omadditvā piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть пищу с подаяний, беря куски с кучи — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть подаяние, приминая его сверху».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, приминая пищу сверху. Если из неуважения ест приминая — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если ест, сгребая вместе и приминая небольшие остатки еды</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">36</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na sūpaṃ vā byañjanaṃ vā odanena paṭicchādessāmi bhiyyokamyataṃ upādāyāti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду прятать бобовое карри и другую пищу под рис из желания получить больше — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду прикрывать соус или гарнир рисом, желая получить больше».</p>
+    <p><span class="lbl">Пояснение</span> Не следует прикрывать соус или гарнир рисом из желания получить больше. Если из неуважения прикрывает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; <em>если хозяева дают еду уже прикрытой; если сделано не из желания получить больше</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">37</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na sūpaṃ vā odanaṃ vā agilāno attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Не будучи больным, я не буду есть рис или бобовое карри, которые я попросил для себя — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p class="d-ctx"><span class="lbl">Контекст</span> Монахи выпрашивали соус и рис, вызвав ропот мирян. Позже больные монахи сказали, что им это помогало, и Будда разрешил это больным.</p>
+    <p><span class="lbl">Правило</span> «Я, будучи не болен, не буду выпрашивать соус или рис для себя и есть».</p>
+    <p><span class="lbl">Пояснение</span> Не больному не следует выпрашивать и есть. Если из неуважения выпрашивает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; <em>больным бхиккху; от родственников; от пригласивших; ради блага другого; за собственные средства</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">38</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na ujjhānasaññī paresaṃ patta olokessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду смотреть в патту другого с целью найти изъян — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду с намерением найти изъян смотреть в чужую чашу».</p>
+    <p><span class="lbl">Пояснение</span> Не следует смотреть с намерением найти изъян. Если из неуважения смотрит — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; <em>если смотрит с мыслью «я дам» или «я велю дать»; если без намерения найти изъян</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">39</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">nātimahantaṃ kabaḷa karissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду делать очень большие куски пищи — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду делать слишком большой кусок пищи».</p>
+    <p><span class="lbl">Пояснение</span> Не следует делать слишком большой кусок. Если из неуважения делает большой — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>в отношении закусок, плодов и фруктов, соусов</em>; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">40</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">parimaṇalaṃ ālopaṃ karissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я буду формировать из пищи круглые куски — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я буду делать кусок пищи округлым».</p>
+    <p><span class="lbl">Пояснение</span> Кусок пищи следует делать округлым. Если из неуважения делает длинный кусок — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>в отношении закусок, плодов и фруктов, соусов</em>; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<div class="section-end">sakkaccavaggo catuttho niṭhito · Окончен четвёртый раздел — о признательности и далее.</div>
+</details>
+
+<!-- ═══════════ РАЗДЕЛ V ═══════════ -->
+<details class="section-group">
+<summary class="section-summary">
+    <span class="section-titles">
+        <span>О кусках пищи</span>
+        <span class="section-title-pali">Kabaḷa-vaggo pañcamo</span>
+    </span>
+</summary>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">41</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na anāhaṭe kabaḷe mukhadvāraṃ vivarissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду открывать рот, пока к нему ещё не поднесён кусок пищи — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду открывать рот, когда кусок пищи ещё не поднесён».</p>
+    <p><span class="lbl">Пояснение</span> Не следует открывать рот, пока кусок не поднесён. Если из неуважения открывает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">42</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na bhuñjamāno sabbahatthaṃ mukhe pakkhipissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Принимая пищу, я не буду засовывать в рот всю руку — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Во время еды я не буду засовывать всю руку в рот».</p>
+    <p><span class="lbl">Пояснение</span> Не следует засовывать всю руку в рот. Если из неуважения засовывает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">43</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду говорить со ртом, полным еды — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду разговаривать с куском пищи во рту».</p>
+    <p><span class="lbl">Пояснение</span> Не следует разговаривать с куском во рту. Если из неуважения разговаривает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">44</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na piṇukkhepaka bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, подбрасывая куски пищи [в рот] — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть, подбрасывая куски пищи».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, подбрасывая куски. Если из неуважения подбрасывает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>в отношении закусок, плодов и фруктов</em>; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">45</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na kabaḷāvacchedakaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, откусывая от куска пищи — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть, откусывая от кусков пищи».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, откусывая от куска. Если из неуважения откусывает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>в отношении закусок, плодов и фруктов, соусов</em>; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">46</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na avagaṇakāraka bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, набивая щёки — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть, набивая пищу за щёки».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, набивая пищу за одну или обе щёки. Если из неуважения набивает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>в отношении плодов и фруктов</em>; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">47</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na hatthaniddhunakaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, стряхивая еду с руки — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть, стряхивая руками».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, стряхивая руками. Если из неуважения стряхивает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если он стряхивает руку, выбрасывая сор</em>; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">48</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na sitthāvakārakaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, разбрасывая рис — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть, разбрасывая крупинки риса».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, разбрасывая рис. Если из неуважения разбрасывает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если выбрасывает крупинку риса, выбрасывая сор</em>; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">49</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na jivhānicchārakaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, высовывая язык — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть, высовывая язык».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, высовывая язык. Если из неуважения высовывает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">50</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na capucapukārakaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, причмокивая губами — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть, издавая чавкающие звуки».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, издавая чавкающие звуки. Если из неуважения издаёт — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<div class="section-end">kabaḷavaggo pañcamo niṭhito · Окончен пятый раздел — о кусках пищи и далее.</div>
+</details>
+
+<!-- ═══════════ РАЗДЕЛ VI ═══════════ -->
+<details class="section-group">
+<summary class="section-summary">
+    <span class="section-titles">
+        <span>О прихлёбывании и далее</span>
+        <span class="section-title-pali">Surusuru-vaggo chaṭṭho</span>
+    </span>
+</summary>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">51</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na surusurukārakaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, издавая прихлёбывающий звук — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p class="d-ctx"><span class="lbl">Контекст</span> В Косамби бхиккху (бывший танцор) пошутил над общиной, которая прихлёбывала молочный напиток, сказав, что они замёрзли. Будда упрекнул его, запретив шутить над Буддой, Дхаммой или Общиной (это дукката).</p>
+    <p><span class="lbl">Правило</span> «Я не буду есть, издавая прихлёбывающий звук».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, издавая прихлёбывающий звук. Если из неуважения издаёт — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">52</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na hatthanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, облизывая руки — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть, облизывая руки».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, облизывая руки. Если из неуважения облизывает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">53</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na pattanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, облизывая патту — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть, облизывая чашу».</p>
+    <p><span class="lbl">Пояснение</span> Не следует облизывать чашу. Если из неуважения облизывает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если ест, собрав вместе и облизав небольшие остатки пищи</em>; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">54</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na oṭṭhanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду есть, облизывая губы — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду есть, облизывая губы».</p>
+    <p><span class="lbl">Пояснение</span> Не следует есть, облизывая губы. Если из неуважения облизывает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">55</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na sāmisena hatthena pānīyathālakaṃ paiggahessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду брать сосуд с водой рукой, испачканной едой — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду брать сосуд с питьевой водой рукой, испачканной едой».</p>
+    <p><span class="lbl">Пояснение</span> Не следует брать сосуд грязной рукой. Если из неуважения берёт — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если берёт с намерением: «Я вымою его» или «Я велю его вымыть»</em>; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">56</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na sasitthakaṃ pattadhovanaṃ antaraghare chaḍḍessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">В населённой местности я не буду выливать воду для мытья патты, в которой остались рисинки — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду выливать в черте селения воду после мытья чаши, содержащую крупинки риса».</p>
+    <p><span class="lbl">Пояснение</span> Не следует выливать воду с рисом в селении. Если из неуважения выливает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если предварительно вынул крупинки, размял их, собрал в сосуд-приёмник или вынес за пределы селения</em>; в случае опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">57</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na chattapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, держит зонт в руке — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму не больному человеку, держащему в руке зонт».</p>
+    <p><span class="lbl">Пояснение</span> Зонт — это белый, плетёный или листовой зонт. Дхамма — учение, связанное с пользой. «Проповедовать» означает: за каждое слово или слог — дукката. Больному человеку проповедовать разрешено.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; если бхиккху болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">58</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na daṇapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, держит в руке палку — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму не больному человеку, держащему в руке посох».</p>
+    <p><span class="lbl">Пояснение</span> Посох — это палка длиной в четыре локтя человека среднего роста (что длиннее или короче — не считается посохом). Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">59</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na satthapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, держит в руке нож — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму не больному человеку, держащему в руке нож».</p>
+    <p><span class="lbl">Пояснение</span> Нож — это однолезвийное или двухлезвийное оружие. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">60</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na āvudhapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, держит в руке оружие — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму не больному человеку, держащему в руке оружие».</p>
+    <p><span class="lbl">Пояснение</span> Под оружием понимается лук или арбалет. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<div class="section-end">surusuruvaggo chaṭṭho niṭṭhito · Окончен шестой раздел — о прихлёбывании и далее.</div>
+</details>
+
+<!-- ═══════════ РАЗДЕЛ VII ═══════════ -->
+<details class="section-group">
+<summary class="section-summary">
+    <span class="section-titles">
+        <span>О деревянных сандалиях и далее</span>
+        <span class="section-title-pali">Pāduka-vaggo sattamo</span>
+    </span>
+</summary>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">61</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na pādukāruḷhassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, носит шлёпки — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму тому, кто не болен и обут в деревянные сандалии».</p>
+    <p><span class="lbl">Пояснение</span> Не следует проповедовать тому, кто наступил на них, надел или снял их. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">62</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na upāhanāruḷhassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, носит сандалии [=высокую обувь] — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму тому, кто не болен и обут в кожаную обувь».</p>
+    <p><span class="lbl">Пояснение</span> Не следует проповедовать тому, кто наступил на неё, надел или снял её. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">63</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na yānagatassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, находится на транспортном средстве — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму тому, кто не болен и находится в транспортном средстве».</p>
+    <p><span class="lbl">Пояснение</span> Транспортное средство: повозка с навесом, колесница, телега, паланкин, носилки, тканевые носилки. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">64</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na sayanagatassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, находится в лежачем положении — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму тому, кто не болен и лежит на ложе».</p>
+    <p><span class="lbl">Пояснение</span> Не следует проповедовать даже если тот лежит просто на земле. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">65</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na pallatthikāya nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, сидит, обхватив колени — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму тому, кто не болен и сидит, обхватив колени».</p>
+    <p><span class="lbl">Пояснение</span> Не следует проповедовать тому, кто обхватил колени руками или обвязал их тканью. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">66</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na veṭhitasīsassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, носит головной убор — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму тому, кто не болен и чья голова повязана».</p>
+    <p><span class="lbl">Пояснение</span> Голова повязана, если обмотана так, что не видно края волос. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если попросил открыть край волос</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">67</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na oguṇṭhitasīsassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Я не буду учить Дхамме человека, который, не будучи больным, находится с покрытой головой — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду проповедовать Дхамму тому, кто не болен и чья голова покрыта».</p>
+    <p><span class="lbl">Пояснение</span> Голова покрыта, если человек укутан вместе с головой. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если попросил открыть голову</em>; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">68</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na chamāyaṃ nisīditvā āsane nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Сидя на земле, я не буду учить Дхамме человека, который, не будучи больным, сидит на сидении — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду, сидя на земле, проповедовать Дхамму тому, кто не болен и сидит на сиденье».</p>
+    <p><span class="lbl">Пояснение</span> Не следует, сидя на земле, проповедовать сидящему на сиденье. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">69</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Сидя на более низком сидении, я не буду учить Дхамме человека, который, не будучи больным, сидит на более высоком сидении — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p class="d-ctx"><span class="lbl">Контекст</span> В прошлой жизни Будда, будучи чандалой, украл манго и, спрятавшись на дереве, увидел, как брахман обучает мантре царя, сидящего на высоком сиденье. Чандала осудил это как безнравственное. Будда заключил: если ему даже тогда было неприятно такое обучение мантре, то тем более недопустимо проповедовать Дхамму, сидя на низком сиденье.</p>
+    <p><span class="lbl">Правило</span> «Я не буду, сидя на низком сиденье, проповедовать Дхамму тому, кто не болен и сидит на высоком сиденье».</p>
+    <p><span class="lbl">Пояснение</span> Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">70</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na ṭhito nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Находясь в стоячем положении, я не буду учить Дхамме человека, который, не будучи больным, находится в сидячем положении — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду, стоя, проповедовать Дхамму сидящему не больному человеку».</p>
+    <p><span class="lbl">Пояснение</span> Стоящему не следует проповедовать сидящему. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">71</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na pacchato gacchanto purato gacchantassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Идя позади, я не буду учить Дхамме человека, который, не будучи больным, идёт спереди — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду, идя сзади, проповедовать Дхамму идущему впереди не больному человеку».</p>
+    <p><span class="lbl">Пояснение</span> Идущему сзади не следует проповедовать идущему впереди. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">72</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na uppathena gacchanto pathena gacchantassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Идя вне дороги, я не буду учить Дхамме человека, который, не будучи больным, идёт по дороге (тропе) — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду, идя вне дороги, проповедовать Дхамму идущему по дороге не больному человеку».</p>
+    <p><span class="lbl">Пояснение</span> Идущему вне дороги не следует проповедовать идущему по дороге. Если из неуважения проповедует — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">73</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na ṭhito agilāno uccāraṃ vā passāvaṃ vā karissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Не будучи больным, я не буду справлять большую или малую нужду стоя — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду, стоя, будучи не больным, испражняться или мочиться».</p>
+    <p><span class="lbl">Пояснение</span> Стоящему не больному не следует испражняться или мочиться. Если из неуважения делает это — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; во время опасности; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">74</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na harite agilāno uccāraṃ vā passāvaṃ vā kheḷaṃ vā karissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Не будучи больным, я не буду плевать и справлять большую или малую нужду на зелень (посевы) — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p><span class="lbl">Правило</span> «Я не буду на зеленую траву, будучи не больным, испражняться, мочиться или плевать».</p>
+    <p><span class="lbl">Пояснение</span> Не больному не следует делать это на зелёную траву. Если из неуважения делает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если сделано на месте без зелени, но растеклось на зелень</em>; при опасностях; безумен; первонарушитель.</p>
+</div>
+
+<button class="para-btn" onclick="toggleRule(this)">
+    <span class="para-num">75</span>
+    <span class="para-title">
+        <span class="para-pali" lang="pi">na udake agilāno uccāraṃ vā passāvaṃ vā kheḷaṃ vā karissāmīti sikkhā karaṇīyā.</span>
+        <span class="para-ru">Не будучи больным, я не буду плевать и справлять большую или малую нужду в воду — тренировка к соблюдению.</span>
+    </span>
+    <span class="para-arrow">▶</span>
+</button>
+<div class="para-body">
+    <p class="d-ctx"><span class="lbl">Контекст</span> Больные монахи сомневались, можно ли им мочиться в воду (например, принимая ванну). Будда разрешил это больным.</p>
+    <p><span class="lbl">Правило</span> «Я не буду в воду, будучи не больным, испражняться, мочиться или плевать».</p>
+    <p><span class="lbl">Пояснение</span> Не больному не следует делать это в воду. Если из неуважения делает — дукката.</p>
+    <p><span class="lbl">Нет проступка</span> ненамеренно; по забывчивости; по незнанию; болен; <em>если сделано на суше, но залило водой; с расстроенным умом, терзаемым болью</em>; при опасностях; безумен; первонарушитель.</p>
+</div>
+
+<div class="section-end">pādukavaggo sattamo niṭṭhito · Окончен седьмой раздел — о шлёпках и далее.</div>
+</details>
+
+<script>
+    function toggleIntro() {
+        document.getElementById('introToggle').classList.toggle('open');
+        document.getElementById('introBody').classList.toggle('open');
+    }
+
+    function toggleRule(btn) {
+        btn.classList.toggle('open');
+        btn.nextElementSibling.classList.toggle('open');
+    }
+
+    function toggleRu(btn) {
+        document.body.classList.toggle('ru-hidden');
+        btn.classList.toggle('active');
+    }
+
+    function toggleAll(btn) {
+        var ds = Array.prototype.slice.call(document.querySelectorAll('details.section-group'));
+        var allOpen = ds.every(function (d) { return d.open; });
+        ds.forEach(function (d) { d.open = !allOpen; });
+        btn.textContent = allOpen ? 'Развернуть все разделы' : 'Свернуть все разделы';
+    }
+</script>
+
+</body>
+</html>
