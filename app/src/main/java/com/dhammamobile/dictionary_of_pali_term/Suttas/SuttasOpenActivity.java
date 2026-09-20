@@ -52,7 +52,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
 
     private static final String DB_NAME = "suttapitaka_ru.db";
     private static final String ASSET_DB_PATH = "databases/" + DB_NAME;
-    private static final String ASSET_DB_VERSION = "3.5";
+    private static final String ASSET_DB_VERSION = "3.7";
 
     private static final String PREFS_NAME = "sutta_db_prefs";
     private static final String KEY_COPIED_DB_VERSION = "copied_db_version";
