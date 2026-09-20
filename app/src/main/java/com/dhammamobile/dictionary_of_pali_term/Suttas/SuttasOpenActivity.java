@@ -49,15 +49,13 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private TextView textViewLink;
 
     private static final String TAG = "SUTTA_DEBUG";
-
     private static final String DB_NAME = "suttapitaka_ru.db";
     private static final String ASSET_DB_PATH = "databases/" + DB_NAME;
-    private static final String ASSET_DB_VERSION = "3.7";
+    private static final String ASSET_DB_VERSION = "4.0";
 
     private static final String PREFS_NAME = "sutta_db_prefs";
     private static final String KEY_COPIED_DB_VERSION = "copied_db_version";
 
-    // Закладки и недавние
     private static final String BM_PREFS = "sutta_bookmarks_prefs";
     private static final String KEY_BOOKMARKS = "bookmarks_json";
     private static final String KEY_RECENTS = "recents_json";
@@ -73,15 +71,12 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private SQLiteDatabase db;
     private SuttaHtmlGenerator htmlGenerator;
 
-    // mode: "menu" | "list" | "sutta" | "search" | "bookmarks"
+    // mode: "menu" | "list" | "sutta" | "search" | "bookmarks" | "comment"
     private String currentNikaya = null;
     private String currentSuttaUid = null;
     private String mode = "menu";
     private String suttaReturnMode = "list";
     private String lastQuery = "";
-
-    // НОВОЕ: сохранённый HTML результатов поиска (чтобы при возврате
-    // из сутты не писать запрос заново)
     private String lastSearchHtml = "";
 
     private boolean randomMode = false;
@@ -89,13 +84,14 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private boolean bookmarksPagePending = false;
     private String pendingHighlight = null;
 
-    // Состояние списков (прокрутка + раскрытые вкладки) для каждой никаи
+    // Возврат из комментария в сутту с той же позиции
+    private int savedSuttaScroll = 0;
+    private String savedSuttaReturn = "list";
+
     private final Map<String, String> listStates = new HashMap<>();
     private String currentListNikaya = null;
     private String pendingListRestore = null;
 
-    // Два независимых размера шрифта:
-    // списки/поиск открываются с минимального (12), чтение — со своего (16)
     private float listFontSize = 12f;
     private float suttaFontSize = 16f;
 
@@ -126,11 +122,9 @@ public class SuttasOpenActivity extends BaseActivityClass {
         webView.getSettings().setDefaultTextEncodingName("UTF-8");
         webView.clearCache(true);
 
-        // Мосты для JavaScript
         webView.addJavascriptInterface(new SearchBridge(), "AndroidSearch");
         webView.addJavascriptInterface(new BookmarkBridge(), "Android");
 
-        // Анимация текста в CardView
         if (textViewLink != null) {
             animateText(textViewLink, getString(R.string.openSuttas));
         }
@@ -140,10 +134,8 @@ public class SuttasOpenActivity extends BaseActivityClass {
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 String url = request.getUrl().toString();
                 Log.d(TAG, "Клик: url = " + url);
-
                 if (url.startsWith("sutta://")) {
                     String raw = url.substring("sutta://".length());
-
                     String highlight = null;
                     int cut = raw.indexOf('?');
                     if (cut >= 0) {
@@ -157,15 +149,12 @@ public class SuttasOpenActivity extends BaseActivityClass {
                     }
                     cut = raw.indexOf('#');
                     if (cut >= 0) raw = raw.substring(0, cut);
-
                     String uid = Uri.decode(raw);
                     pendingHighlight = (highlight != null && !highlight.trim().isEmpty())
                             ? highlight.trim() : null;
-
                     openSuttaByUid(uid);
                     return true;
                 }
-
                 return super.shouldOverrideUrlLoading(view, request);
             }
 
@@ -179,7 +168,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
                                         + jsString(getPref(KEY_RECENTS, "[]")) + ")",
                                 null);
                     }
-                    // Восстановление места в списке никаи
                     if ("list".equals(mode) && pendingListRestore != null) {
                         final String st = pendingListRestore;
                         pendingListRestore = null;
@@ -201,8 +189,8 @@ public class SuttasOpenActivity extends BaseActivityClass {
                         view.evaluateJavascript(
                                 "setRandomMode(" + randomMode + ")", null);
                     }
-                    // Применяем нужный размер шрифта ПОСЛЕ загрузки страницы
-                    if ("list".equals(mode) || "search".equals(mode) || "sutta".equals(mode)) {
+                    if ("list".equals(mode) || "search".equals(mode)
+                            || "sutta".equals(mode) || "comment".equals(mode)) {
                         applyFontSize();
                     }
                 } catch (Exception e) {
@@ -235,8 +223,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
         animator.setDuration(2000);
         animator.addUpdateListener(animation -> {
             int animatedValue = (int) animation.getAnimatedValue();
-            String partialText = textToAnimate.substring(0, animatedValue);
-            targetTextView.setText(partialText);
+            targetTextView.setText(textToAnimate.substring(0, animatedValue));
         });
         animator.addListener(new AnimatorListenerAdapter() {
             @Override
@@ -248,40 +235,36 @@ public class SuttasOpenActivity extends BaseActivityClass {
     }
 
     // ============================================================
-    // ТЕМА МЕНЮ (в стиле второго раздела приложения)
+    // ТЕМА МЕНЮ
     // ============================================================
-
     private void applyMenuTheme() {
         int bg = Color.parseColor("#161923");
         int card = Color.parseColor("#232A3A");
-        int yellow = Color.parseColor("#FFE082");
-        int salmon = Color.parseColor("#FFAB91");
-        int green = Color.parseColor("#66BB6A");
-        int textDark = Color.parseColor("#161923");
+        int textMain = Color.parseColor("#E2E8F0");
+        int accent = Color.parseColor("#FFE082");
+        int accent2 = Color.parseColor("#81C9E8");
 
         View main = findViewById(R.id.main);
         if (main != null) main.setBackgroundColor(bg);
         scrollView.setBackgroundColor(bg);
-
         LinearLayout menu = findViewById(R.id.linearLayoutScrollSuttasOpen);
         if (menu != null) menu.setBackgroundColor(bg);
         if (buttonLayout != null) buttonLayout.setBackgroundColor(Color.TRANSPARENT);
 
-        int[] nikayaBtns = {
+        int[] plainBtns = {
                 R.id.button_suttas_open_digha,
                 R.id.button_suttas_open_majhima,
                 R.id.button_suttas_open_sanutta,
                 R.id.button_suttas_open_anguttara,
                 R.id.button_suttas_open_kuddaka
         };
-        for (int id : nikayaBtns) {
+        for (int id : plainBtns) {
             Button b = findViewById(id);
             if (b != null) {
-                ViewCompat.setBackgroundTintList(b, ColorStateList.valueOf(yellow));
-                b.setTextColor(textDark);
+                ViewCompat.setBackgroundTintList(b, ColorStateList.valueOf(card));
+                b.setTextColor(textMain);
             }
         }
-
         int[] accentBtns = {
                 R.id.button_suttas_open_search,
                 R.id.button_suttas_open_random_sutta
@@ -289,22 +272,19 @@ public class SuttasOpenActivity extends BaseActivityClass {
         for (int id : accentBtns) {
             Button b = findViewById(id);
             if (b != null) {
-                ViewCompat.setBackgroundTintList(b, ColorStateList.valueOf(salmon));
-                b.setTextColor(textDark);
+                ViewCompat.setBackgroundTintList(b, ColorStateList.valueOf(card));
+                b.setTextColor(accent);
             }
         }
-
         Button bmBtn = findViewById(R.id.button_suttas_open_bookmarks);
         if (bmBtn != null) {
-            ViewCompat.setBackgroundTintList(bmBtn, ColorStateList.valueOf(green));
-            bmBtn.setTextColor(textDark);
+            ViewCompat.setBackgroundTintList(bmBtn, ColorStateList.valueOf(card));
+            bmBtn.setTextColor(accent2);
         }
-
         ViewCompat.setBackgroundTintList(plusButton, ColorStateList.valueOf(card));
-        plusButton.setTextColor(yellow);
+        plusButton.setTextColor(accent);
         ViewCompat.setBackgroundTintList(minusButton, ColorStateList.valueOf(card));
-        minusButton.setTextColor(yellow);
-
+        minusButton.setTextColor(accent);
         ImageButton back = findViewById(R.id.backButton);
         if (back != null) {
             ViewCompat.setBackgroundTintList(back, ColorStateList.valueOf(bg));
@@ -314,16 +294,12 @@ public class SuttasOpenActivity extends BaseActivityClass {
     // ============================================================
     // БАЗА ДАННЫХ
     // ============================================================
-
     private void openDatabase() throws IOException {
         File dbFile = getDatabasePath(DB_NAME);
-
         String copiedVersion = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
                 .getString(KEY_COPIED_DB_VERSION, "");
-
         boolean needCopy = !dbFile.exists()
                 || !ASSET_DB_VERSION.equals(copiedVersion);
-
         if (needCopy) {
             Log.d(TAG, "Копирую базу из assets, версия " + ASSET_DB_VERSION);
             if (dbFile.exists()) {
@@ -337,7 +313,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
         } else {
             Log.d(TAG, "Использую уже скопированную базу, версия " + copiedVersion);
         }
-
         db = SQLiteDatabase.openDatabase(
                 dbFile.getAbsolutePath(),
                 null,
@@ -365,14 +340,12 @@ public class SuttasOpenActivity extends BaseActivityClass {
     // ============================================================
     // НАВИГАЦИЯ
     // ============================================================
-
     private void showMainMenu() {
         currentNikaya = null;
         currentSuttaUid = null;
         mode = "menu";
         randomMode = false;
-        lastSearchHtml = "";   // НОВОЕ: сбрасываем кэш результатов поиска
-
+        lastSearchHtml = "";
         scrollView.setVisibility(View.VISIBLE);
         webView.setVisibility(View.INVISIBLE);
         buttonLayout.setVisibility(View.INVISIBLE);
@@ -388,10 +361,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
         currentSuttaUid = null;
         mode = "list";
         pendingListRestore = listStates.get(nikaya);
-
-        // Список всегда открывается с минимального шрифта
         listFontSize = 12f;
-
         try {
             String html = htmlGenerator.generateSuttasListHtml(db, nikaya);
             webView.loadDataWithBaseURL("sutta://base/", html, "text/html", "UTF-8", null);
@@ -409,17 +379,14 @@ public class SuttasOpenActivity extends BaseActivityClass {
         currentSuttaUid = uid;
         mode = "sutta";
         randomMode = false;
-
         try {
             String html = htmlGenerator.generateSuttaTextHtml(db, uid);
             webView.loadDataWithBaseURL("sutta://base/", html, "text/html", "UTF-8", null);
             webView.scrollTo(0, 0);
-
             scrollView.setVisibility(View.INVISIBLE);
             webView.setVisibility(View.VISIBLE);
             buttonLayout.setVisibility(View.VISIBLE);
             applyFontSize();
-
             addRecent(uid);
         } catch (IOException e) {
             e.printStackTrace();
@@ -430,20 +397,14 @@ public class SuttasOpenActivity extends BaseActivityClass {
         lastQuery = query;
         currentSuttaUid = null;
         mode = "search";
-
-        // Результаты поиска тоже открываются с минимального шрифта
         listFontSize = 12f;
-
         try {
             String template = readAssetTemplate("templates/search_page.html");
-
-            // НОВОЕ: если для этого запроса уже есть результаты — подставляем их
             String resultsHtml = "";
             if (query != null && !query.isEmpty()
                     && lastSearchHtml != null && !lastSearchHtml.isEmpty()) {
                 resultsHtml = lastSearchHtml;
             }
-
             String html = template
                     .replace("{{QUERY}}", escapeHtml(query == null ? "" : query))
                     .replace("{{RESULTS}}", resultsHtml);
@@ -460,7 +421,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private void showBookmarksPage() {
         currentSuttaUid = null;
         mode = "bookmarks";
-
         try {
             String html = readAssetTemplate("templates/bookmarks_page.html");
             bookmarksPagePending = true;
@@ -473,8 +433,97 @@ public class SuttasOpenActivity extends BaseActivityClass {
         }
     }
 
+    // ============================================================
+    // КОММЕНТАРИИ (Аттхакатха / Тика)
+    // ============================================================
+    private void openCommentNow(final String kind) {
+        if (db == null || currentSuttaUid == null) return;
+
+        Cursor c = db.rawQuery(
+                "SELECT title, content FROM comments WHERE kind = ? AND ref = ?",
+                new String[]{kind, currentSuttaUid});
+        if (!c.moveToFirst()) {
+            c.close();
+            Toast.makeText(this, "К этой сутте комментария нет",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+        final String ctitle = c.getString(0);
+        final String ccontent = c.getString(1);
+        c.close();
+
+        final String uid = currentSuttaUid;
+        webView.evaluateJavascript("window.scrollY", value -> runOnUiThread(() -> {
+            int y = 0;
+            try {
+                y = (int) Float.parseFloat(value);
+            } catch (Exception e) {
+                y = 0;
+            }
+            savedSuttaScroll = y;
+            savedSuttaReturn = suttaReturnMode;
+            showComment(kind, ctitle, ccontent, uid);
+        }));
+    }
+
+    private void showComment(String kind, String ctitle, String content, String uid) {
+        mode = "comment";
+        try {
+            String template = readAssetTemplate("templates/comment_page.html");
+            String kindTitle = "att".equals(kind)
+                    ? "Аттхакатха (комментарий)"
+                    : "Тика (субкомментарий)";
+
+            String stitle = "";
+            Cursor sc = db.rawQuery(
+                    "SELECT title FROM suttas WHERE uid = ?", new String[]{uid});
+            if (sc.moveToFirst()) {
+                stitle = sc.getString(0);
+            }
+            sc.close();
+
+            String html = template
+                    .replace("{{COMMENT_KIND}}", escapeHtml(kindTitle))
+                    .replace("{{SUTTA_TITLE}}", escapeHtml(stitle))
+                    .replace("{{SUTTA_UID}}", escapeHtml(uid.toUpperCase()))
+                    .replace("{{CONTENT}}", formatParagraphs(content));
+
+            webView.loadDataWithBaseURL("sutta://base/", html, "text/html", "UTF-8", null);
+            webView.scrollTo(0, 0);
+            scrollView.setVisibility(View.INVISIBLE);
+            webView.setVisibility(View.VISIBLE);
+            buttonLayout.setVisibility(View.VISIBLE);
+            applyFontSize();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String formatParagraphs(String raw) {
+        if (raw == null || raw.isEmpty()) {
+            return "<p></p>";
+        }
+        StringBuilder html = new StringBuilder();
+        for (String line : raw.split("\n")) {
+            String trimmed = line.trim();
+            if (trimmed.isEmpty()) {
+                continue;
+            }
+            html.append("<p>").append(escapeHtml(trimmed)).append("</p>\n");
+        }
+        return html.toString();
+    }
+
+    // ============================================================
+    // КНОПКА "НАЗАД"
+    // ============================================================
     private void handleBack() {
-        if (mode.equals("sutta")) {
+        if (mode.equals("comment")) {
+            String ret = savedSuttaReturn;
+            pendingScrollY = savedSuttaScroll;
+            openSuttaByUid(currentSuttaUid);
+            suttaReturnMode = ret;
+        } else if (mode.equals("sutta")) {
             if (randomMode) {
                 showMainMenu();
             } else if (suttaReturnMode.equals("search")) {
@@ -494,9 +543,8 @@ public class SuttasOpenActivity extends BaseActivityClass {
     }
 
     // ============================================================
-    // РАЗМЕР ШРИФТА (список и чтение — независимо)
+    // ШРИФТ
     // ============================================================
-
     private float clampFont(float v) {
         if (v < 12f) v = 12f;
         if (v > 28f) v = 28f;
@@ -522,15 +570,11 @@ public class SuttasOpenActivity extends BaseActivityClass {
     // ============================================================
     // ПОИСК
     // ============================================================
-
     public class SearchBridge {
         @JavascriptInterface
         public String search(String query) {
             try {
                 String result = doSearch(query);
-
-                // НОВОЕ: запоминаем запрос и HTML результатов,
-                // чтобы при возврате из сутты всё было на месте
                 lastQuery = query;
                 try {
                     JSONObject obj = new JSONObject(result);
@@ -550,9 +594,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
         if (db == null) return "{\"count\":0,\"html\":\"\"}";
         String match = buildMatch(query);
         if (match.isEmpty()) return "{\"count\":0,\"html\":\"\"}";
-
         String qEnc = (query == null) ? "" : Uri.encode(query.trim());
-
         Cursor c = db.rawQuery(
                 "SELECT s.uid, s.nikaya, s.title, " +
                         "snippet(suttas_fts, '\u0001', '\u0002', ' … ', -1, 12) " +
@@ -561,21 +603,17 @@ public class SuttasOpenActivity extends BaseActivityClass {
                         "WHERE suttas_fts MATCH ? " +
                         "LIMIT 300",
                 new String[]{match});
-
         StringBuilder html = new StringBuilder();
         int count = 0;
-
         while (c.moveToNext()) {
             count++;
             String uid = c.getString(0);
             String nikaya = c.getString(1);
             String title = c.getString(2);
             String snippet = c.getString(3);
-
             String snipEsc = escapeHtml(snippet == null ? "" : snippet)
                     .replace("\u0001", "<b>")
                     .replace("\u0002", "</b>");
-
             html.append("<a class=\"sutta-item\" href=\"sutta://").append(uid);
             if (!qEnc.isEmpty()) {
                 html.append("?q=").append(qEnc);
@@ -587,7 +625,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
                     .append("</a>");
         }
         c.close();
-
         JSONObject o = new JSONObject();
         o.put("count", count);
         if (count > 0) {
@@ -613,9 +650,8 @@ public class SuttasOpenActivity extends BaseActivityClass {
     }
 
     // ============================================================
-    // ЗАКЛАДКИ, НЕДАВНИЕ, СОСТОЯНИЕ СПИСКОВ, СЛУЧАЙНАЯ СУТТА
+    // ЗАКЛАДКИ, НЕДАВНИЕ, СПИСКИ, СЛУЧАЙНАЯ СУТТА, КОММЕНТАРИИ
     // ============================================================
-
     public class BookmarkBridge {
         @JavascriptInterface
         public void goBack() {
@@ -637,7 +673,11 @@ public class SuttasOpenActivity extends BaseActivityClass {
             runOnUiThread(() -> openRandomSutta());
         }
 
-        /** Страница списка сообщает своё состояние (прокрутка + вкладки) */
+        @JavascriptInterface
+        public void openComment(final String kind) {
+            runOnUiThread(() -> openCommentNow(kind));
+        }
+
         @JavascriptInterface
         public void saveListState(final String json) {
             runOnUiThread(() -> {
@@ -812,7 +852,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
         int canon = c.getInt(4);
         int local = c.getInt(5);
         c.close();
-
         String ref;
         if ("Самьютта-никая".equals(nikaya) || "Ангуттара-никая".equals(nikaya)) {
             ref = ("Самьютта-никая".equals(nikaya) ? "СН " : "АН ") + canon + "." + local;
@@ -822,7 +861,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
             ref = (vagga != null && !vagga.isEmpty()) ? vagga
                     : (book != null && !book.isEmpty() ? book : "");
         }
-
         JSONObject o = new JSONObject();
         try {
             o.put("filePath", uid);
@@ -835,7 +873,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
     // ============================================================
     // ПРОЧЕЕ
     // ============================================================
-
     private String readAssetTemplate(String assetPath) throws IOException {
         InputStream is = getAssets().open(assetPath);
         byte[] buffer = new byte[is.available()];
@@ -856,7 +893,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
     // ============================================================
     // ОБРАБОТЧИКИ КНОПОК
     // ============================================================
-
     public void toMainAct(View view) {
         startIntentActivityAndFinish(MainActivity.class);
     }
@@ -900,7 +936,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
     // ============================================================
     // СЛУЧАЙНАЯ СУТТА
     // ============================================================
-
     private void openRandomSutta() {
         if (db == null) return;
         Cursor cursor = db.rawQuery(
@@ -922,7 +957,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
     // ============================================================
     // ЖИЗНЕННЫЙ ЦИКЛ
     // ============================================================
-
     @Override
     protected void onDestroy() {
         super.onDestroy();

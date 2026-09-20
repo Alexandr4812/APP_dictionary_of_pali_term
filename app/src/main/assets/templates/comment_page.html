@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{COMMENT_KIND}}</title>
+    <style>
+        :root { --font-size: 16px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+        font-family: "Noto Sans", "Roboto", serif;
+        font-size: var(--font-size);
+        line-height: 1.8;
+        color: #212121;
+        background-color: #FFFDF5;
+        padding: 16px;
+        padding-bottom: 80px;
+        }
+        .comment-header {
+        text-align: center;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #D7CCC8;
+        }
+        .kind-badge {
+        display: inline-block;
+        background: #8D6E63;
+        color: #FFFFFF;
+        font-size: 0.8em;
+        font-weight: bold;
+        padding: 4px 14px;
+        border-radius: 20px;
+        margin-bottom: 8px;
+        }
+        .sutta-title {
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #5D4037;
+        margin-bottom: 6px;
+        }
+        .sutta-uid {
+        font-size: 0.85em;
+        color: #9E9E9E;
+        }
+        .comment-content {
+        text-align: justify;
+        white-space: pre-wrap;
+        }
+        .comment-content p {
+        margin-bottom: 1em;
+        text-indent: 1.5em;
+        }
+        .comment-footer {
+        margin-top: 32px;
+        padding-top: 16px;
+        border-top: 1px solid #E0E0E0;
+        font-size: 0.85em;
+        color: #9E9E9E;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="comment-header">
+    <div class="kind-badge">{{COMMENT_KIND}}</div>
+    <div class="sutta-title">{{SUTTA_TITLE}}</div>
+    <div class="sutta-uid">{{SUTTA_UID}}</div>
+</div>
+<div class="comment-content">
+    {{CONTENT}}
+</div>
+<div class="comment-footer">
+    Комментарий: Аттхакатха / Тика · OpenTipitaka
+</div>
+<script>
+    function changeFontSize(delta) {
+    var root = document.documentElement;
+    var current = parseFloat(getComputedStyle(root).getPropertyValue('--font-size'));
+    var newSize = current + delta;
+    if (newSize < 12) newSize = 12;
+    if (newSize > 28) newSize = 28;
+    root.style.setProperty('--font-size', newSize + 'px');
+    }
+    function setFontSize(size) {
+    var root = document.documentElement;
+    root.style.setProperty('--font-size', size + 'px');
+    }
+</script>
+</body>
+</html>

@@ -16,27 +16,25 @@
         padding: 16px;
         padding-bottom: 80px;
         }
-        .bm-btn {
+        .bm-btn, .cm-btn {
         position: fixed;
-        top: 10px;
         right: 10px;
         width: 46px;
         height: 46px;
         border-radius: 50%;
-        border: 1px solid #2D3748;
-        background: #161923;
-        color: #FFE082;
+        border: 1px solid #D7CCC8;
+        background: #FFFFFF;
+        color: #8D6E63;
         font-size: 20px;
         line-height: 1;
         cursor: pointer;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.18);
         z-index: 60;
         }
-        .bm-btn.on {
-        background: #FFE082;
-        border-color: #FFE082;
-        color: #161923;
-        }
+        .bm-btn { top: 10px; }
+        .bm-btn.on { background: #8D6E63; border-color: #8D6E63; color: #FFFFFF; }
+        #attBtn { top: 64px; background: #8D6E63; border-color: #8D6E63; color: #FFFFFF; font-size: 18px; font-weight: bold; }
+        #tikBtn { top: 118px; background: #A1887F; border-color: #A1887F; color: #FFFFFF; font-size: 18px; font-weight: bold; }
         .next-btn {
         position: fixed;
         bottom: 50px;
@@ -44,16 +42,16 @@
         width: 52px;
         height: 52px;
         border-radius: 50%;
-        border: 1px solid #2D3748;
-        background: #161923;
-        color: #FFE082;
+        border: none;
+        background: #8D6E63;
+        color: #FFFFFF;
         font-size: 22px;
         line-height: 1;
         cursor: pointer;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.25);
         z-index: 60;
         }
-        .next-btn:active { background: #232A3A; }
+        .next-btn:active { background: #5D4037; }
         .sutta-header {
         text-align: center;
         margin-bottom: 24px;
@@ -79,6 +77,8 @@
 </head>
 <body>
 <button id="bmBtn" class="bm-btn" onclick="toggleBookmark()">🔖</button>
+<button id="attBtn" class="cm-btn" onclick="openComment('att')">А</button>
+<button id="tikBtn" class="cm-btn" onclick="openComment('tik')">Т</button>
 <button id="nextBtn" class="next-btn" style="display:none;" onclick="nextRandom()">🎲</button>
 <div class="sutta-header">
     <div class="sutta-uid">{{SUTTA_UID}}</div>
@@ -120,6 +120,9 @@
     }
     function nextRandom() {
     if (typeof Android !== 'undefined') Android.nextRandom();
+    }
+    function openComment(kind) {
+    if (typeof Android !== 'undefined') Android.openComment(kind);
     }
     function highlightQuery(q) {
     if (!q) return;
