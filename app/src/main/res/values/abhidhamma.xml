@@ -4,6 +4,9 @@
     <string name="forTextViewAbhidhammaSankhata">ОБУСЛОВЛЕННАЯ РЕАЛЬНОСТЬ \n (SAṄKHATA)</string>
     <string name="forTextViewAbhidhammaAsankhata">НЕОБУСЛОВЛЕННАЯ РЕАЛЬНОСТЬ \n (ASAṄKHATA)</string>
 
+    <string name="forTextViewsuttasOpen">Палийский Канон  \n (open tipitaka)</string>
+    <string name="forTextViewsuttas">Палийский Канон  \n (theravada.ru)</string>
+
     <string name="forTextViewChittas"> 89 ИЛИ 121 ВИДОВ СОЗНАНИЯ (читта)</string>
 
     <string name="buttonAbhidhammaChetasika"> \n <b>52 \n ментальных фактора</b> \n (chetasika) \n</string>

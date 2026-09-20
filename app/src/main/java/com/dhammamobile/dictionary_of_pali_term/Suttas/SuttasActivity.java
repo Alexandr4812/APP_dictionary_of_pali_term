@@ -8,7 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.util.Linkify;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -114,7 +113,7 @@ public class SuttasActivity extends BaseActivityClass {
     }
 
     public void toMainAct(View view){
-        startIntentActivityAndFinish(MainActivity.class);
+        startIntentActivityAndFinish(SuttasOpenMainActivity.class);
     }
 
     public void toSuttasDighaAct(View view){

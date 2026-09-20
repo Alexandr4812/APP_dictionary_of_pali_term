@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список сутт</title>
+    <style>
+        :root { --font-size: 16px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+        font-family: "Noto Sans", "Roboto", sans-serif;
+        font-size: var(--font-size);
+        line-height: 1.6;
+        color: #E2E8F0;
+        background-color: #161923;
+        padding: 16px;
+        padding-bottom: 80px;
+        }
+        .nikaya-title {
+        text-align: center;
+        font-size: 1.4em;
+        font-weight: bold;
+        color: #FFE082;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #2D3748;
+        }
+        .toggle-all-btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        background-color: transparent;
+        color: #94A3B8;
+        border: 1px solid #2D3748;
+        border-radius: 6px;
+        font-size: 0.95em;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+        }
+        .toggle-all-btn:active { background-color: rgba(255,224,130,0.1); color: #FFE082; }
+        .group-details {
+        margin-bottom: 10px;
+        border-radius: 8px;
+        overflow: hidden;
+        }
+        .group-details summary {
+        list-style: none;
+        cursor: pointer;
+        outline: none;
+        }
+        .group-details summary::-webkit-details-marker { display: none; }
+        .group-divider {
+        background: linear-gradient(to right, rgba(255,224,130,0.14), rgba(255,224,130,0.04));
+        color: #FFE082;
+        font-size: 1.1em;
+        font-weight: bold;
+        padding: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        border: 1px solid #2D3748;
+        border-left: 3px solid #FFE082;
+        border-radius: 8px;
+        }
+        .group-divider::after {
+        content: '▼';
+        font-size: 0.7em;
+        transition: transform 0.2s ease;
+        margin-left: 10px;
+        }
+        .group-details[open] > .group-divider::after { transform: rotate(180deg); }
+        .group-content {
+        padding: 8px;
+        background-color: rgba(255,255,255,0.02);
+        }
+        .vagga-details {
+        margin-bottom: 6px;
+        border-radius: 6px;
+        overflow: hidden;
+        }
+        .vagga-details summary {
+        list-style: none;
+        cursor: pointer;
+        outline: none;
+        }
+        .vagga-details summary::-webkit-details-marker { display: none; }
+        .vagga-divider {
+        background: rgba(255,255,255,0.05);
+        color: #E2E8F0;
+        font-size: 1.0em;
+        font-weight: bold;
+        padding: 10px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        user-select: none;
+        border-left: 3px solid #81C9E8;
+        border-radius: 6px;
+        }
+        .vagga-divider::after {
+        content: '▼';
+        font-size: 0.7em;
+        transition: transform 0.2s ease;
+        margin-left: 10px;
+        }
+        .vagga-details[open] > .vagga-divider::after { transform: rotate(180deg); }
+        .vagga-content {
+        padding: 6px 4px 0 4px;
+        background-color: transparent;
+        }
+        .sutta-item {
+        display: block;
+        padding: 12px 14px;
+        margin: 4px 0;
+        background-color: rgba(255,255,255,0.03);
+        border: 1px solid #2D3748;
+        border-left: 3px solid #81C9E8;
+        border-radius: 4px;
+        text-decoration: none;
+        color: #E2E8F0;
+        transition: background-color 0.2s;
+        }
+        .sutta-item:active { background-color: rgba(255,255,255,0.08); }
+        .sutta-number {
+        display: inline-block;
+        min-width: 2.5em;
+        font-weight: bold;
+        color: #FFE082;
+        }
+        .sutta-title { font-weight: 500; }
+        .sutta-uid {
+        float: right;
+        font-size: 0.8em;
+        color: #64748B;
+        margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="nikaya-title">{{NIKAYA_TITLE}}</div>
+<button id="toggle-all" class="toggle-all-btn">Развернуть всё</button>
+{{CONTENT}}
+<script>
+    function changeFontSize(delta) {
+    var root = document.documentElement;
+    var current = parseFloat(getComputedStyle(root).getPropertyValue('--font-size'));
+    var newSize = current + delta;
+    if (newSize < 12) newSize = 12;
+    if (newSize > 28) newSize = 28;
+    root.style.setProperty('--font-size', newSize + 'px');
+    }
+    function setFontSize(size) {
+    var root = document.documentElement;
+    root.style.setProperty('--font-size', size + 'px');
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+    var toggleBtn = document.getElementById('toggle-all');
+    if (toggleBtn) {
+    toggleBtn.addEventListener('click', function() {
+    var details = document.querySelectorAll('details');
+    var allOpen = Array.from(details).every(function(d) { return d.open; });
+    details.forEach(function(d) { d.open = !allOpen; });
+    toggleBtn.textContent = allOpen ? 'Развернуть всё' : 'Свернуть всё';
+    });
+    }
+    /* ── Запоминание состояния списка (прокрутка + раскрытые вкладки) ── */
+    document.querySelectorAll('details').forEach(function(d) {
+    d.addEventListener('toggle', function() { report(); });
+    });
+    var reportTimer = null;
+    window.addEventListener('scroll', function() {
+    if (reportTimer) return;
+    reportTimer = setTimeout(function() { reportTimer = null; report(); }, 250);
+    }, { passive: true });
+    });
+    function collectState() {
+    var opens = [];
+    document.querySelectorAll('details').forEach(function(d, i) { if (d.open) opens.push(i); });
+    return { y: Math.round(window.scrollY), opens: opens };
+    }
+    function report() {
+    if (typeof Android !== 'undefined') {
+    Android.saveListState(JSON.stringify(collectState()));
+    }
+    }
+    function restoreState(json) {
+    try {
+    var st = JSON.parse(json);
+    var ds = document.querySelectorAll('details');
+    ds.forEach(function(d, i) { d.open = (st.opens.indexOf(i) >= 0); });
+    setTimeout(function() { window.scrollTo(0, st.y || 0); }, 120);
+    } catch (e) {}
+    }
+</script>
+</body>
+</html>

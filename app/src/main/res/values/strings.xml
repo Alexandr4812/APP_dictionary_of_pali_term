@@ -29,6 +29,18 @@
 
     <string name="button_karaniya_metta">\n <b>Карания метта сутта</b>\n</string>
 
+    <string name="suttas_theravada">\n <b>сутты из:\n theravada.ru</b> \n</string>
+    <string name="suttas_open">\n <b>сутты из: \n open tipitaka</b> \n</string>
+
+    <string name="button_text_suttas_open_digha">\n <b>дигкха никая</b> \n</string>
+    <string name="button_text_suttas_open_madjhima">\n <b>мадджхима никая</b> \n</string>
+    <string name="button_text_suttas_open_sanutta">\n <b>саньютта никая</b> \n</string>
+    <string name="button_text_suttas_open_anguttara">\n <b>ангутара никая</b> \n</string>
+    <string name="button_text_suttas_open_kuddaka">\n <b>куддака никая</b> \n</string>
+    <string name="button_text_suttas_open_search">\n <b>поиск по суттам</b> \n</string>
+    <string name="button_text_suttas_open_random_sutta">\n <b>случайная сутта</b> \n</string>
+    <string name="button_text_suttas_open_bookmarks">\n <b>закладки</b> \n</string>
+
 
     <string name="rukovodstvo_dlya_lay">\n <b>руководство для мирян</b> \n</string>
     <string name="rukovodstvo_dlya_samaner">\n <b>руководство для саманер</b> \n</string>
@@ -60,7 +72,10 @@
     <string name="buttonSuttasForKuddaka">\n <b>куддака никая</b> \n</string>
     <string name="buttonTextSuttasToByCategory">\n <b>сутты по темам</b> \n</string>
     <string name="descriptionBackMainMenu" translatable="false">возврат в главное меню</string>
+
     <string name="theravada_ru">Материал скопирован с сайта: \n theravada.ru</string>
+    <string name="openSuttas">Все переводы, созданные OpenTipitaka, распространяются по лицензии: CC BY-NC-SA 4.0</string>
+
     <string name="mainButtonMonksAbhidhamma">АБХИДХАММА</string>
     <string name="backButtonArupavachara">возврат в главное меню arupavacara</string>
 

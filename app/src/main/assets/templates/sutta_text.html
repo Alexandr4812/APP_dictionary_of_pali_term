@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{SUTTA_TITLE}}</title>
+    <style>
+        :root { --font-size: 16px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+        font-family: "Noto Sans", "Roboto", serif;
+        font-size: var(--font-size);
+        line-height: 1.8;
+        color: #212121;
+        background-color: #FFFDF5;
+        padding: 16px;
+        padding-bottom: 80px;
+        }
+        .bm-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        width: 46px;
+        height: 46px;
+        border-radius: 50%;
+        border: 1px solid #2D3748;
+        background: #161923;
+        color: #FFE082;
+        font-size: 20px;
+        line-height: 1;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+        z-index: 60;
+        }
+        .bm-btn.on {
+        background: #FFE082;
+        border-color: #FFE082;
+        color: #161923;
+        }
+        .next-btn {
+        position: fixed;
+        bottom: 50px;
+        right: 12px;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 1px solid #2D3748;
+        background: #161923;
+        color: #FFE082;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+        z-index: 60;
+        }
+        .next-btn:active { background: #232A3A; }
+        .sutta-header {
+        text-align: center;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid #D7CCC8;
+        }
+        .sutta-uid { font-size: 0.85em; color: #9E9E9E; margin-bottom: 4px; }
+        .sutta-title { font-size: 1.5em; font-weight: bold; color: #5D4037; margin-bottom: 6px; }
+        .sutta-meta { font-size: 0.9em; color: #757575; }
+        .sutta-content { text-align: justify; white-space: pre-wrap; }
+        .sutta-content p { margin-bottom: 1em; text-indent: 1.5em; }
+        .sub-heading { font-weight: bold; color: #6D4C41; margin: 1.5em 0 0.5em 0; text-indent: 0; }
+        mark.hl { background: #FFE082; color: #212121; padding: 0 2px; border-radius: 3px; }
+        .sutta-footer {
+        margin-top: 32px;
+        padding-top: 16px;
+        border-top: 1px solid #E0E0E0;
+        font-size: 0.85em;
+        color: #9E9E9E;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+<button id="bmBtn" class="bm-btn" onclick="toggleBookmark()">🔖</button>
+<button id="nextBtn" class="next-btn" style="display:none;" onclick="nextRandom()">🎲</button>
+<div class="sutta-header">
+    <div class="sutta-uid">{{SUTTA_UID}}</div>
+    <div class="sutta-title">{{SUTTA_TITLE}}</div>
+    <div class="sutta-meta">{{SUTTA_META}}</div>
+</div>
+<div class="sutta-content">
+    {{SUTTA_CONTENT}}
+</div>
+<div class="sutta-footer">
+    Источник: OpenTipitaka · Лицензия: CC BY-NC-SA 4.0
+</div>
+<script>
+    function changeFontSize(delta) {
+    var root = document.documentElement;
+    var current = parseFloat(getComputedStyle(root).getPropertyValue('--font-size'));
+    var newSize = current + delta;
+    if (newSize < 12) newSize = 12;
+    if (newSize > 28) newSize = 28;
+    root.style.setProperty('--font-size', newSize + 'px');
+    }
+    function setFontSize(size) {
+    var root = document.documentElement;
+    root.style.setProperty('--font-size', size + 'px');
+    }
+    function toggleBookmark() {
+    if (typeof Android !== 'undefined') {
+    Android.toggleBookmark(Math.round(window.scrollY));
+    }
+    }
+    function setBookmarkState(on) {
+    var b = document.getElementById('bmBtn');
+    if (on) { b.classList.add('on'); b.textContent = '✅'; }
+    else    { b.classList.remove('on'); b.textContent = '🔖'; }
+    }
+    function setRandomMode(on) {
+    var b = document.getElementById('nextBtn');
+    if (b) b.style.display = on ? 'block' : 'none';
+    }
+    function nextRandom() {
+    if (typeof Android !== 'undefined') Android.nextRandom();
+    }
+    function highlightQuery(q) {
+    if (!q) return;
+    var terms = q.toLowerCase().split(/\s+/).filter(function(t) { return t.length >= 3; });
+    if (terms.length === 0) return;
+    var content = document.querySelector('.sutta-content');
+    if (!content) return;
+    var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null);
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    var firstMark = null;
+    nodes.forEach(function(node) {
+    var text = node.nodeValue;
+    var lower = text.toLowerCase();
+    var ranges = [];
+    terms.forEach(function(t) {
+    var idx = lower.indexOf(t);
+    while (idx !== -1) {
+    ranges.push([idx, t.length]);
+    idx = lower.indexOf(t, idx + t.length);
+    }
+    });
+    if (ranges.length === 0) return;
+    ranges.sort(function(a, b) { return a[0] - b[0]; });
+    var merged = [];
+    ranges.forEach(function(r) {
+    if (merged.length && r[0] < merged[merged.length - 1][0] + merged[merged.length - 1][1]) {
+    var last = merged[merged.length - 1];
+    last[1] = Math.max(last[1], r[0] + r[1] - last[0]);
+    } else {
+    merged.push(r);
+    }
+    });
+    var frag = document.createDocumentFragment();
+    var pos = 0;
+    merged.forEach(function(r) {
+    if (r[0] > pos) frag.appendChild(document.createTextNode(text.slice(pos, r[0])));
+    var mark = document.createElement('mark');
+    mark.className = 'hl';
+    mark.textContent = text.slice(r[0], r[0] + r[1]);
+    frag.appendChild(mark);
+    if (!firstMark) firstMark = mark;
+    pos = r[0] + r[1];
+    });
+    if (pos < text.length) frag.appendChild(document.createTextNode(text.slice(pos)));
+    node.parentNode.replaceChild(frag, node);
+    });
+    if (firstMark) {
+    setTimeout(function() {
+    var y = firstMark.getBoundingClientRect().top + window.scrollY - 100;
+    if (y < 0) y = 0;
+    window.scrollTo(0, y);
+    }, 200);
+    }
+    }
+</script>
+</body>
+</html>

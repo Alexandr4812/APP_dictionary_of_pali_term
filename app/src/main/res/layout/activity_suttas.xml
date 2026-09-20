@@ -24,43 +24,7 @@
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="UsingOnClickInXml" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/my_main_color"
-        app:cardElevation="0dp"
-        app:cardMaxElevation="0dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewScrollSuttas"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
 
-        <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="29dp"
-            android:layout_height="47dp"
-            android:layout_gravity="right|left"
-            app:srcCompat="@drawable/buddha" />
-
-        <TextView
-            android:id="@+id/textViewyy"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="right|left"
-            android:layout_marginLeft="38dp"
-            android:layout_marginTop="8dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:onClick="openWebsite"
-            android:linksClickable="true"
-            android:text="@string/theravada_ru"
-            android:textColor="@color/my_text_bacground_color"
-            android:textSize="14sp" />
-
-    </androidx.cardview.widget.CardView>
 
     <ScrollView
         android:id="@+id/viewScrollSuttas"
@@ -82,6 +46,11 @@
                 android:id="@+id/im1"
                 style="@style/imageViewRazdelitelKnopok"
                 tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/textViewSuttasOpen"
+                style="@style/textBetweenButtons"
+                android:text="@string/forTextViewsuttas" />
 
             <Button
                 android:id="@+id/button_suttas_for_dighanikaya"
@@ -162,6 +131,44 @@
                 android:onClick="toBookmarksAct"
                 android:text="@string/buttonLastSuttaText"
                 tools:ignore="UsingOnClickInXml" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/my_main_color"
+                app:cardElevation="0dp"
+                app:cardMaxElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/viewScrollSuttas"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:layout_width="29dp"
+                    android:layout_height="47dp"
+                    android:layout_gravity="right|left"
+                    app:srcCompat="@drawable/buddha" />
+
+                <TextView
+                    android:id="@+id/textViewyy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|left"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="openWebsite"
+                    android:linksClickable="true"
+                    android:text="@string/theravada_ru"
+                    android:textColor="@color/my_text_bacground_color"
+                    android:textSize="14sp" />
+
+            </androidx.cardview.widget.CardView>
 
 
 

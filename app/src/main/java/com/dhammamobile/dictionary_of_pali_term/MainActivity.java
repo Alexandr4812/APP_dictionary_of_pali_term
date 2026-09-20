@@ -18,7 +18,7 @@ import com.dhammamobile.dictionary_of_pali_term.Abhidhamma.AbhidhammaActivity;
 import com.dhammamobile.dictionary_of_pali_term.Declomation.DeklomationMainActivity;
 import com.dhammamobile.dictionary_of_pali_term.LiveBuddha.LiveBuddhaActivity;
 import com.dhammamobile.dictionary_of_pali_term.Rules.RulesActivity;
-import com.dhammamobile.dictionary_of_pali_term.Suttas.SuttasActivity;
+import com.dhammamobile.dictionary_of_pali_term.Suttas.SuttasOpenMainActivity;
 import com.dhammamobile.dictionary_of_pali_term.Teacher.TeacherActivity;
 import androidx.activity.OnBackPressedCallback;
 
@@ -108,7 +108,7 @@ public class MainActivity extends BaseActivityClass {
     }
 
     public void toSuttas(View view){
-        startIntentActivityAndFinish(SuttasActivity.class);
+        startIntentActivityAndFinish(SuttasOpenMainActivity.class);
     }
 
     public void toRulesAct(View view){

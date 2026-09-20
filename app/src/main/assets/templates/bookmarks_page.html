@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Закладки</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Raleway:wght@400;600;800&display=swap');
+        :root {
+        --bg-color: #161923;
+        --accent-color: #FFE082;
+        --text-main: #E2E8F0;
+        --text-dim: #94A3B8;
+        --card-bg: rgba(255, 255, 255, 0.03);
+        --card-hover: rgba(255, 255, 255, 0.07);
+        --border-color: #2D3748;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 15px 100px;
+        font-family: 'Raleway', -apple-system, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.5;
+        -webkit-tap-highlight-color: transparent;
+        }
+        .header { text-align: center; margin-bottom: 20px; padding-top: 10px; }
+        .header-icon { font-size: 2.2rem; margin-bottom: 8px; display: block; filter: drop-shadow(0 0 12px rgba(255,224,130,0.4)); }
+        .main-title { color: var(--accent-color); font-size: 1.5rem; font-weight: 800; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 6px; }
+        .main-subtitle { color: var(--text-dim); font-size: 0.85rem; letter-spacing: 0.5px; }
+        .divider { width: 60px; height: 2px; background: var(--accent-color); margin: 14px auto 0; border-radius: 2px; opacity: 0.5; }
+        .tabs { display: flex; margin-bottom: 20px; border-bottom: 2px solid var(--border-color); }
+        .tab-btn {
+        flex: 1; padding: 11px 8px; background: transparent; border: none;
+        color: var(--text-dim); font-family: 'Raleway', sans-serif; font-size: 0.88rem;
+        font-weight: 600; cursor: pointer; letter-spacing: 0.5px; position: relative; transition: color 0.2s;
+        }
+        .tab-btn::after {
+        content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px;
+        background: var(--accent-color); border-radius: 2px 2px 0 0; transform: scaleX(0); transition: transform 0.2s;
+        }
+        .tab-btn.active { color: var(--accent-color); }
+        .tab-btn.active::after { transform: scaleX(1); }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+        .count-badge {
+        display: inline-flex; align-items: center; background: rgba(255,224,130,0.1);
+        border: 1px solid rgba(255,224,130,0.25); border-radius: 20px; padding: 4px 12px;
+        font-size: 0.78rem; color: var(--accent-color); font-weight: 600; margin-bottom: 16px; letter-spacing: 0.5px;
+        }
+        .empty-state { text-align: center; padding: 40px 20px; color: var(--text-dim); display: none; }
+        .empty-state.visible { display: block; }
+        .empty-icon { font-size: 2.8rem; margin-bottom: 12px; display: block; opacity: 0.4; }
+        .empty-text { font-size: 0.95rem; font-family: 'Noto Serif', serif; font-style: italic; }
+        .bookmarks-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+        .bookmark-card {
+        display: flex; align-items: stretch; background: var(--card-bg);
+        border: 1px solid var(--border-color); border-left: 3px solid var(--accent-color);
+        border-radius: 12px; overflow: hidden; transition: background 0.2s, transform 0.15s;
+        animation: fadeInUp 0.3s ease both;
+        }
+        .bookmark-card:active { transform: scale(0.98); background: var(--card-hover); }
+        .recent-card { border-left-color: #81C9E8; }
+        .bookmark-card-body { flex: 1; padding: 13px 15px; min-width: 0; }
+        .bookmark-open-area { cursor: pointer; }
+        .bookmark-num { font-size: 0.72rem; color: var(--accent-color); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px; opacity: 0.8; }
+        .recent-card .bookmark-num { color: #81C9E8; }
+        .bookmark-title { font-size: 1rem; font-weight: 700; color: var(--text-main); margin-bottom: 5px; word-break: break-word; line-height: 1.4; }
+        .bookmark-title-input {
+        background: transparent; border: none; border-bottom: 1px solid var(--accent-color);
+        color: var(--text-main); font-size: 1rem; font-weight: 700; font-family: 'Raleway', sans-serif;
+        width: 100%; outline: none; padding: 2px 0; resize: none; overflow: hidden; line-height: 1.4;
+        min-height: 24px; display: block;
+        }
+        .bookmark-meta { font-size: 0.8rem; color: var(--text-dim); font-family: 'Noto Serif', serif; font-style: italic; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .bookmark-date { font-size: 0.72rem; color: var(--text-dim); opacity: 0.6; font-style: normal; font-family: 'Raleway', sans-serif; }
+        .bookmark-note {
+        width: 100%; margin-top: 8px; background: rgba(255,255,255,0.04); border: 1px solid var(--border-color);
+        border-radius: 8px; padding: 7px 10px; color: var(--text-main); font-family: 'Noto Serif', serif;
+        font-size: 0.85rem; line-height: 1.5; resize: none; overflow: hidden; min-height: 34px; outline: none;
+        word-break: break-word; white-space: pre-wrap; transition: border-color 0.2s; display: block;
+        }
+        .bookmark-note::placeholder { color: var(--text-dim); opacity: 0.4; font-style: italic; }
+        .bookmark-note:focus { border-color: rgba(255,224,130,0.4); }
+        .bookmark-edit-btn { background: transparent; border: none; color: var(--text-dim); font-size: 0.85rem; cursor: pointer; padding: 0 4px; opacity: 0.5; transition: opacity 0.2s; flex-shrink: 0; }
+        .bookmark-edit-btn:active { opacity: 1; color: var(--accent-color); }
+        .bookmark-delete {
+        display: flex; align-items: center; justify-content: center; width: 44px;
+        background: transparent; border: none; color: var(--text-dim); font-size: 1.1rem; cursor: pointer;
+        transition: color 0.2s, background 0.2s; border-left: 1px solid var(--border-color); flex-shrink: 0;
+        }
+        .bookmark-delete:active { background: rgba(255, 100, 100, 0.1); color: #FC8181; }
+        .btn-action {
+        width: 100%; padding: 13px; background: transparent; border: 1px solid var(--border-color);
+        border-radius: 30px; color: var(--text-dim); font-family: 'Raleway', sans-serif; font-size: 0.88rem;
+        font-weight: 600; cursor: pointer; letter-spacing: 0.5px; transition: all 0.2s; display: none; margin-bottom: 8px;
+        }
+        .btn-action.visible { display: block; }
+        .btn-action:active { background: rgba(252,129,129,0.1); border-color: #FC8181; color: #FC8181; }
+        .btn-back {
+        width: 100%; padding: 13px; background: transparent; border: 1px solid var(--border-color);
+        border-radius: 30px; color: var(--accent-color); font-family: 'Raleway', sans-serif; font-size: 0.88rem;
+        font-weight: 600; cursor: pointer; letter-spacing: 0.5px; margin-top: 4px; transition: all 0.2s;
+        }
+        .btn-back:active { background: rgba(255,224,130,0.1); border-color: var(--accent-color); }
+        .recent-hint { text-align: center; font-size: 0.78rem; color: var(--text-dim); opacity: 0.6; margin-bottom: 14px; font-family: 'Noto Serif', serif; font-style: italic; }
+        @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <span class="header-icon">🔖</span>
+    <div class="main-title">Закладки</div>
+    <div class="main-subtitle">Сутты Палийского канона <br> open tipitaka</div>
+    <div class="divider"></div>
+</div>
+<div class="tabs">
+    <button class="tab-btn active" id="tabBtnBookmarks" onclick="switchTab('bookmarks')">🔖 Закладки</button>
+    <button class="tab-btn"        id="tabBtnRecents"   onclick="switchTab('recents')">🕐 Недавние</button>
+</div>
+<div class="tab-panel active" id="panelBookmarks">
+    <div style="text-align:center;">
+        <div class="count-badge" id="countBadge">0 / 100 закладок</div>
+    </div>
+    <div class="empty-state" id="emptyBookmarks">
+        <span class="empty-icon">📜</span>
+        <div class="empty-text">Пока нет сохранённых закладок.<br>Нажмите кнопку 🔖 при чтении сутты.</div>
+    </div>
+    <div class="bookmarks-list" id="bookmarksList"></div>
+    <button class="btn-action" id="btnClear" onclick="clearAll()">✕ &nbsp;Очистить все закладки</button>
+</div>
+<div class="tab-panel" id="panelRecents">
+    <div class="empty-state" id="emptyRecents">
+        <span class="empty-icon">🕐</span>
+        <div class="empty-text">История пуста.<br>Открытые сутты будут появляться здесь.</div>
+    </div>
+    <div class="recent-hint" id="recentHint" style="display:none;">Последние 10 просмотренных сутт</div>
+    <div class="bookmarks-list" id="recentsList"></div>
+    <button class="btn-action" id="btnClearRecents" onclick="clearRecents()">✕ &nbsp;Очистить историю</button>
+</div>
+<button class="btn-back" onclick="goBack()">← Назад</button>
+<script>
+    var MAX_BOOKMARKS = 100;
+    var bookmarks = [];
+    var recents   = [];
+    function switchTab(name) {
+    document.getElementById('tabBtnBookmarks').classList.toggle('active', name === 'bookmarks');
+    document.getElementById('tabBtnRecents').classList.toggle('active',   name === 'recents');
+    document.getElementById('panelBookmarks').classList.toggle('active',  name === 'bookmarks');
+    document.getElementById('panelRecents').classList.toggle('active',    name === 'recents');
+    }
+    function loadData(bmJson, recentsJson) {
+    try { bookmarks = JSON.parse(bmJson)      || []; } catch(e) { bookmarks = []; }
+    try { recents   = JSON.parse(recentsJson) || []; } catch(e) { recents   = []; }
+    renderBookmarks();
+    renderRecents();
+    }
+    function goBack() {
+    if (typeof Android !== 'undefined') Android.goBack();
+    }
+    function autoResize(el) {
+    el.style.height = 'auto';
+    el.style.height = el.scrollHeight + 'px';
+    }
+    function renderBookmarks() {
+    var list  = document.getElementById('bookmarksList');
+    var empty = document.getElementById('emptyBookmarks');
+    var btn   = document.getElementById('btnClear');
+    var badge = document.getElementById('countBadge');
+    list.innerHTML = '';
+    badge.textContent = bookmarks.length + ' / ' + MAX_BOOKMARKS + ' закладок';
+    if (bookmarks.length === 0) {
+    empty.classList.add('visible');
+    btn.classList.remove('visible');
+    return;
+    }
+    empty.classList.remove('visible');
+    btn.classList.add('visible');
+    var noteAreas = [];
+    bookmarks.forEach(function(bm, index) {
+    list.appendChild(buildBookmarkCard(bm, index, noteAreas));
+    });
+    requestAnimationFrame(function() {
+    noteAreas.forEach(function(ta) { autoResize(ta); });
+    });
+    }
+    function buildBookmarkCard(bm, index, noteAreas) {
+    var card = document.createElement('div');
+    card.className = 'bookmark-card';
+    card.style.animationDelay = (index * 0.05) + 's';
+    var isLatest = (index === 0);
+    var dateStr  = bm.date
+    ? new Date(bm.date).toLocaleDateString('ru-RU', {day:'numeric',month:'short',year:'numeric'})
+    : '';
+    var body = document.createElement('div');
+    body.className = 'bookmark-card-body';
+    var openArea = document.createElement('div');
+    openArea.className = 'bookmark-open-area';
+    openArea.onclick = function() { openBookmark(bm.filePath, bm.scrollY || 0); };
+    var numEl = document.createElement('div');
+    numEl.className = 'bookmark-num';
+    numEl.innerHTML = esc(bm.suttaRef || bm.subtitle || '') +
+    (isLatest ? ' <span style="background:#FFE082;color:#161923;font-size:0.65rem;padding:2px 7px;border-radius:10px;font-weight:800;letter-spacing:1px;vertical-align:middle;">НОВАЯ</span>' : '');
+    var titleRow = document.createElement('div');
+    titleRow.style.cssText = 'display:flex;align-items:flex-start;gap:6px;margin-bottom:5px;';
+    var titleEl = document.createElement('div');
+    titleEl.className = 'bookmark-title';
+    titleEl.id = 'title-' + bm.id;
+    titleEl.textContent = bm.title || '';
+    var editBtn = document.createElement('button');
+    editBtn.className = 'bookmark-edit-btn';
+    editBtn.textContent = '✏️';
+    editBtn.onclick = function(e) { e.stopPropagation(); editTitle('title-' + bm.id, bm.id); };
+    titleRow.appendChild(titleEl);
+    titleRow.appendChild(editBtn);
+    var meta = document.createElement('div');
+    meta.className = 'bookmark-meta';
+    if (bm.subtitle) {
+    var subEl = document.createElement('span');
+    subEl.textContent = bm.subtitle;
+    meta.appendChild(subEl);
+    }
+    if (dateStr) {
+    var dateEl = document.createElement('span');
+    dateEl.className = 'bookmark-date';
+    dateEl.textContent = '· ' + dateStr;
+    meta.appendChild(dateEl);
+    }
+    openArea.appendChild(numEl);
+    openArea.appendChild(titleRow);
+    openArea.appendChild(meta);
+    var noteArea = document.createElement('textarea');
+    noteArea.className = 'bookmark-note';
+    noteArea.placeholder = 'Добавить заметку…';
+    noteArea.value = bm.note || '';
+    noteArea.rows = 1;
+    noteArea.addEventListener('input', function() { autoResize(noteArea); });
+    noteArea.addEventListener('click', function(e) { e.stopPropagation(); });
+    noteArea.addEventListener('blur', function() {
+    var newNote = noteArea.value;
+    for (var i = 0; i < bookmarks.length; i++) {
+    if (bookmarks[i].id === bm.id) { bookmarks[i].note = newNote; break; }
+    }
+    if (typeof Android !== 'undefined') Android.updateBookmarkNote(bm.id, newNote);
+    });
+    body.appendChild(openArea);
+    body.appendChild(noteArea);
+    noteAreas.push(noteArea);
+    var delBtn = document.createElement('button');
+    delBtn.className = 'bookmark-delete';
+    delBtn.textContent = '✕';
+    delBtn.onclick = function() { deleteBookmark(bm.id); };
+    card.appendChild(body);
+    card.appendChild(delBtn);
+    return card;
+    }
+    function renderRecents() {
+    var list  = document.getElementById('recentsList');
+    var empty = document.getElementById('emptyRecents');
+    var btn   = document.getElementById('btnClearRecents');
+    var hint  = document.getElementById('recentHint');
+    list.innerHTML = '';
+    if (recents.length === 0) {
+    empty.classList.add('visible');
+    btn.classList.remove('visible');
+    hint.style.display = 'none';
+    return;
+    }
+    empty.classList.remove('visible');
+    btn.classList.add('visible');
+    hint.style.display = 'block';
+    recents.forEach(function(item, index) {
+    list.appendChild(buildRecentCard(item, index));
+    });
+    }
+    function buildRecentCard(item, index) {
+    var card = document.createElement('div');
+    card.className = 'bookmark-card recent-card';
+    card.style.animationDelay = (index * 0.06) + 's';
+    var dateStr = item.date
+    ? new Date(item.date).toLocaleDateString('ru-RU', {day:'numeric',month:'short',year:'numeric'})
+    : '';
+    var timeStr = item.date
+    ? new Date(item.date).toLocaleTimeString('ru-RU', {hour:'2-digit',minute:'2-digit'})
+    : '';
+    var body = document.createElement('div');
+    body.className = 'bookmark-card-body';
+    body.style.cursor = 'pointer';
+    body.onclick = function() { openBookmark(item.filePath, item.scrollY || 0); };
+    var numEl = document.createElement('div');
+    numEl.className = 'bookmark-num';
+    var pos = ['1-я','2-я','3-я','4-я','5-я'][index] || (index+1)+'-я';
+    numEl.innerHTML = (item.subtitle ? esc(item.subtitle) + ' &nbsp;·&nbsp; ' : '') +
+    '<span style="opacity:0.7;font-size:0.68rem;">' + pos + '</span>';
+    var titleEl = document.createElement('div');
+    titleEl.className = 'bookmark-title';
+    titleEl.textContent = item.title || '';
+    var meta = document.createElement('div');
+    meta.className = 'bookmark-meta';
+    if (dateStr) {
+    var dateEl = document.createElement('span');
+    dateEl.className = 'bookmark-date';
+    dateEl.textContent = '· ' + dateStr + (timeStr ? ' ' + timeStr : '');
+    meta.appendChild(dateEl);
+    }
+    body.appendChild(numEl);
+    body.appendChild(titleEl);
+    body.appendChild(meta);
+    card.appendChild(body);
+    return card;
+    }
+    function openBookmark(filePath, scrollY) {
+    if (typeof Android !== 'undefined') Android.openBookmark(filePath, scrollY);
+    }
+    function deleteBookmark(id) {
+    if (typeof Android !== 'undefined') Android.deleteBookmark(id);
+    bookmarks = bookmarks.filter(function(b) { return b.id !== id; });
+    renderBookmarks();
+    }
+    function clearAll() {
+    if (typeof Android !== 'undefined') Android.clearBookmarks();
+    bookmarks = [];
+    renderBookmarks();
+    }
+    function clearRecents() {
+    if (typeof Android !== 'undefined') Android.clearRecents();
+    recents = [];
+    renderRecents();
+    }
+    function editTitle(elId, id) {
+    var el = document.getElementById(elId);
+    if (!el) return;
+    var current = el.textContent;
+    var textarea = document.createElement('textarea');
+    textarea.className = 'bookmark-title-input';
+    textarea.value = current;
+    textarea.rows = 1;
+    el.replaceWith(textarea);
+    requestAnimationFrame(function() { autoResize(textarea); });
+    textarea.focus();
+    textarea.setSelectionRange(textarea.value.length, textarea.value.length);
+    textarea.addEventListener('input', function() { autoResize(textarea); });
+    function save() {
+    var newTitle = textarea.value.trim() || current;
+    var div = document.createElement('div');
+    div.className = 'bookmark-title';
+    div.id = elId;
+    div.textContent = newTitle;
+    textarea.replaceWith(div);
+    for (var i = 0; i < bookmarks.length; i++) {
+    if (bookmarks[i].id === id) { bookmarks[i].title = newTitle; break; }
+    }
+    if (typeof Android !== 'undefined') Android.updateBookmarkTitle(id, newTitle);
+    }
+    textarea.addEventListener('blur', save);
+    textarea.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); textarea.blur(); }
+    if (e.key === 'Escape') { textarea.value = current; textarea.blur(); }
+    });
+    }
+    function esc(s) {
+    if (!s) return '';
+    return String(s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+    }
+</script>
+</body>
+</html>
