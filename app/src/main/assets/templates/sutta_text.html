@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{SUTTA_TITLE}}</title>
     <style>
-        :root { --font-size: 16px; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+        --font-size: 16px;
+        }
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
         body {
         font-family: "Noto Sans", "Roboto", serif;
         font-size: var(--font-size);
@@ -16,25 +22,41 @@
         padding: 16px;
         padding-bottom: 80px;
         }
+        /* ── Все плавающие кнопки одного размера и полупрозрачные ── */
         .bm-btn, .cm-btn {
         position: fixed;
-        right: 10px;
-        width: 46px;
-        height: 46px;
+        top: 8px;
+        width: 40px;
+        height: 40px;
         border-radius: 50%;
-        border: 1px solid #D7CCC8;
-        background: #FFFFFF;
-        color: #8D6E63;
-        font-size: 20px;
+        border: 1px solid rgba(141, 110, 99, 0.55);
+        background: rgba(141, 110, 99, 0.30);
+        color: #5D4037;
+        font-size: 16px;
         line-height: 1;
         cursor: pointer;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.18);
         z-index: 60;
+        opacity: 0.8;
         }
-        .bm-btn { top: 10px; }
-        .bm-btn.on { background: #8D6E63; border-color: #8D6E63; color: #FFFFFF; }
-        #attBtn { top: 64px; background: #8D6E63; border-color: #8D6E63; color: #FFFFFF; font-size: 18px; font-weight: bold; }
-        #tikBtn { top: 118px; background: #A1887F; border-color: #A1887F; color: #FFFFFF; font-size: 18px; font-weight: bold; }
+        .cm-btn {
+        font-weight: bold;
+        }
+        #attBtn { left: 10px; }
+        #tikBtn { left: 56px; }
+        .bm-btn {
+        right: 10px;
+        font-size: 18px;
+        }
+        .bm-btn:active, .cm-btn:active {
+        background: rgba(141, 110, 99, 0.55);
+        }
+        /* Закладка стоит — кнопка плотнее, чтобы состояние было видно */
+        .bm-btn.on {
+        background: rgba(141, 110, 99, 0.85);
+        border-color: rgba(141, 110, 99, 0.9);
+        color: #FFFFFF;
+        }
+        /* ── Следующая случайная сутта ── */
         .next-btn {
         position: fixed;
         bottom: 50px;
@@ -51,20 +73,50 @@
         box-shadow: 0 3px 10px rgba(0,0,0,0.25);
         z-index: 60;
         }
-        .next-btn:active { background: #5D4037; }
+        .next-btn:active {
+        background: #5D4037;
+        }
         .sutta-header {
         text-align: center;
         margin-bottom: 24px;
         padding-bottom: 16px;
         border-bottom: 2px solid #D7CCC8;
         }
-        .sutta-uid { font-size: 0.85em; color: #9E9E9E; margin-bottom: 4px; }
-        .sutta-title { font-size: 1.5em; font-weight: bold; color: #5D4037; margin-bottom: 6px; }
-        .sutta-meta { font-size: 0.9em; color: #757575; }
-        .sutta-content { text-align: justify; white-space: pre-wrap; }
-        .sutta-content p { margin-bottom: 1em; text-indent: 1.5em; }
-        .sub-heading { font-weight: bold; color: #6D4C41; margin: 1.5em 0 0.5em 0; text-indent: 0; }
-        mark.hl { background: #FFE082; color: #212121; padding: 0 2px; border-radius: 3px; }
+        .sutta-uid {
+        font-size: 0.85em;
+        color: #9E9E9E;
+        margin-bottom: 4px;
+        }
+        .sutta-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #5D4037;
+        margin-bottom: 6px;
+        }
+        .sutta-meta {
+        font-size: 0.9em;
+        color: #757575;
+        }
+        .sutta-content {
+        text-align: justify;
+        white-space: pre-wrap;
+        }
+        .sutta-content p {
+        margin-bottom: 1em;
+        text-indent: 1.5em;
+        }
+        .sub-heading {
+        font-weight: bold;
+        color: #6D4C41;
+        margin: 1.5em 0 0.5em 0;
+        text-indent: 0;
+        }
+        mark.hl {
+        background: #FFE082;
+        color: #212121;
+        padding: 0 2px;
+        border-radius: 3px;
+        }
         .sutta-footer {
         margin-top: 32px;
         padding-top: 16px;
@@ -76,9 +128,9 @@
     </style>
 </head>
 <body>
-<button id="bmBtn" class="bm-btn" onclick="toggleBookmark()">🔖</button>
 <button id="attBtn" class="cm-btn" onclick="openComment('att')">А</button>
 <button id="tikBtn" class="cm-btn" onclick="openComment('tik')">Т</button>
+<button id="bmBtn" class="bm-btn" onclick="toggleBookmark()">🔖</button>
 <button id="nextBtn" class="next-btn" style="display:none;" onclick="nextRandom()">🎲</button>
 <div class="sutta-header">
     <div class="sutta-uid">{{SUTTA_UID}}</div>

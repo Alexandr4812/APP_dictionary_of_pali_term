@@ -51,7 +51,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private static final String TAG = "SUTTA_DEBUG";
     private static final String DB_NAME = "suttapitaka_ru.db";
     private static final String ASSET_DB_PATH = "databases/" + DB_NAME;
-    private static final String ASSET_DB_VERSION = "4.0";
+    private static final String ASSET_DB_VERSION = "3.5";
 
     private static final String PREFS_NAME = "sutta_db_prefs";
     private static final String KEY_COPIED_DB_VERSION = "copied_db_version";
@@ -83,6 +83,9 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private int pendingScrollY = -1;
     private boolean bookmarksPagePending = false;
     private String pendingHighlight = null;
+
+    // Текущий открытый комментарий: "att" | "tik" | null
+    private String currentCommentKind = null;
 
     // Возврат из комментария в сутту с той же позиции
     private int savedSuttaScroll = 0;
@@ -189,6 +192,14 @@ public class SuttasOpenActivity extends BaseActivityClass {
                         view.evaluateJavascript(
                                 "setRandomMode(" + randomMode + ")", null);
                     }
+                    // Состояние закладки на странице комментария
+                    if ("comment".equals(mode) && currentSuttaUid != null
+                            && currentCommentKind != null) {
+                        view.evaluateJavascript(
+                                "setBookmarkState("
+                                        + isCommentBookmarked(currentSuttaUid, currentCommentKind)
+                                        + ")", null);
+                    }
                     if ("list".equals(mode) || "search".equals(mode)
                             || "sutta".equals(mode) || "comment".equals(mode)) {
                         applyFontSize();
@@ -240,9 +251,10 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private void applyMenuTheme() {
         int bg = Color.parseColor("#161923");
         int card = Color.parseColor("#232A3A");
-        int textMain = Color.parseColor("#E2E8F0");
-        int accent = Color.parseColor("#FFE082");
-        int accent2 = Color.parseColor("#81C9E8");
+        int yellow = Color.parseColor("#FFE082");
+        int salmon = Color.parseColor("#FFAB91");
+        int green = Color.parseColor("#66BB6A");
+        int textDark = Color.parseColor("#161923");
 
         View main = findViewById(R.id.main);
         if (main != null) main.setBackgroundColor(bg);
@@ -251,18 +263,18 @@ public class SuttasOpenActivity extends BaseActivityClass {
         if (menu != null) menu.setBackgroundColor(bg);
         if (buttonLayout != null) buttonLayout.setBackgroundColor(Color.TRANSPARENT);
 
-        int[] plainBtns = {
+        int[] nikayaBtns = {
                 R.id.button_suttas_open_digha,
                 R.id.button_suttas_open_majhima,
                 R.id.button_suttas_open_sanutta,
                 R.id.button_suttas_open_anguttara,
                 R.id.button_suttas_open_kuddaka
         };
-        for (int id : plainBtns) {
+        for (int id : nikayaBtns) {
             Button b = findViewById(id);
             if (b != null) {
-                ViewCompat.setBackgroundTintList(b, ColorStateList.valueOf(card));
-                b.setTextColor(textMain);
+                ViewCompat.setBackgroundTintList(b, ColorStateList.valueOf(yellow));
+                b.setTextColor(textDark);
             }
         }
         int[] accentBtns = {
@@ -272,19 +284,19 @@ public class SuttasOpenActivity extends BaseActivityClass {
         for (int id : accentBtns) {
             Button b = findViewById(id);
             if (b != null) {
-                ViewCompat.setBackgroundTintList(b, ColorStateList.valueOf(card));
-                b.setTextColor(accent);
+                ViewCompat.setBackgroundTintList(b, ColorStateList.valueOf(salmon));
+                b.setTextColor(textDark);
             }
         }
         Button bmBtn = findViewById(R.id.button_suttas_open_bookmarks);
         if (bmBtn != null) {
-            ViewCompat.setBackgroundTintList(bmBtn, ColorStateList.valueOf(card));
-            bmBtn.setTextColor(accent2);
+            ViewCompat.setBackgroundTintList(bmBtn, ColorStateList.valueOf(green));
+            bmBtn.setTextColor(textDark);
         }
         ViewCompat.setBackgroundTintList(plusButton, ColorStateList.valueOf(card));
-        plusButton.setTextColor(accent);
+        plusButton.setTextColor(yellow);
         ViewCompat.setBackgroundTintList(minusButton, ColorStateList.valueOf(card));
-        minusButton.setTextColor(accent);
+        minusButton.setTextColor(yellow);
         ImageButton back = findViewById(R.id.backButton);
         if (back != null) {
             ViewCompat.setBackgroundTintList(back, ColorStateList.valueOf(bg));
@@ -343,6 +355,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private void showMainMenu() {
         currentNikaya = null;
         currentSuttaUid = null;
+        currentCommentKind = null;
         mode = "menu";
         randomMode = false;
         lastSearchHtml = "";
@@ -377,6 +390,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private void openSuttaByUid(String uid) {
         suttaReturnMode = mode;
         currentSuttaUid = uid;
+        currentCommentKind = null;
         mode = "sutta";
         randomMode = false;
         try {
@@ -436,12 +450,13 @@ public class SuttasOpenActivity extends BaseActivityClass {
     // ============================================================
     // КОММЕНТАРИИ (Аттхакатха / Тика)
     // ============================================================
+    /** Вход со страницы сутты (кнопки А / Т): запоминаем позицию сутты. */
     private void openCommentNow(final String kind) {
         if (db == null || currentSuttaUid == null) return;
-
+        final String uid = currentSuttaUid;
         Cursor c = db.rawQuery(
                 "SELECT title, content FROM comments WHERE kind = ? AND ref = ?",
-                new String[]{kind, currentSuttaUid});
+                new String[]{kind, uid});
         if (!c.moveToFirst()) {
             c.close();
             Toast.makeText(this, "К этой сутте комментария нет",
@@ -451,8 +466,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
         final String ctitle = c.getString(0);
         final String ccontent = c.getString(1);
         c.close();
-
-        final String uid = currentSuttaUid;
         webView.evaluateJavascript("window.scrollY", value -> runOnUiThread(() -> {
             int y = 0;
             try {
@@ -462,18 +475,43 @@ public class SuttasOpenActivity extends BaseActivityClass {
             }
             savedSuttaScroll = y;
             savedSuttaReturn = suttaReturnMode;
+            currentCommentKind = kind;
             showComment(kind, ctitle, ccontent, uid);
         }));
     }
 
+    /** Вход из закладки: сразу на страницу комментария на сохранённую позицию. */
+    private void openCommentFromBookmark(String uid, String kind, int scrollY) {
+        if (db == null || uid == null) return;
+        Cursor c = db.rawQuery(
+                "SELECT title, content FROM comments WHERE kind = ? AND ref = ?",
+                new String[]{kind, uid});
+        if (!c.moveToFirst()) {
+            c.close();
+            Toast.makeText(this, "Комментарий не найден",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+        String ctitle = c.getString(0);
+        String ccontent = c.getString(1);
+        c.close();
+        savedSuttaScroll = 0;
+        savedSuttaReturn = "bookmarks";
+        pendingScrollY = scrollY;
+        pendingHighlight = null;
+        currentCommentKind = kind;
+        showComment(kind, ctitle, ccontent, uid);
+    }
+
     private void showComment(String kind, String ctitle, String content, String uid) {
         mode = "comment";
+        currentSuttaUid = uid;
+        currentCommentKind = kind;
         try {
             String template = readAssetTemplate("templates/comment_page.html");
             String kindTitle = "att".equals(kind)
                     ? "Аттхакатха (комментарий)"
                     : "Тика (субкомментарий)";
-
             String stitle = "";
             Cursor sc = db.rawQuery(
                     "SELECT title FROM suttas WHERE uid = ?", new String[]{uid});
@@ -481,13 +519,11 @@ public class SuttasOpenActivity extends BaseActivityClass {
                 stitle = sc.getString(0);
             }
             sc.close();
-
             String html = template
                     .replace("{{COMMENT_KIND}}", escapeHtml(kindTitle))
                     .replace("{{SUTTA_TITLE}}", escapeHtml(stitle))
                     .replace("{{SUTTA_UID}}", escapeHtml(uid.toUpperCase()))
                     .replace("{{CONTENT}}", formatParagraphs(content));
-
             webView.loadDataWithBaseURL("sutta://base/", html, "text/html", "UTF-8", null);
             webView.scrollTo(0, 0);
             scrollView.setVisibility(View.INVISIBLE);
@@ -650,7 +686,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
     }
 
     // ============================================================
-    // ЗАКЛАДКИ, НЕДАВНИЕ, СПИСКИ, СЛУЧАЙНАЯ СУТТА, КОММЕНТАРИИ
+    // МОСТ ЗАКЛАДОК / КОММЕНТАРИЕВ / СПИСКОВ
     // ============================================================
     public class BookmarkBridge {
         @JavascriptInterface
@@ -658,13 +694,19 @@ public class SuttasOpenActivity extends BaseActivityClass {
             runOnUiThread(() -> handleBack());
         }
 
+        /** 4 аргумента: uid, позиция, тип ("sutta"/"comment"), вид ("att"/"tik"). */
         @JavascriptInterface
-        public void openBookmark(final String uid, final int scrollY) {
+        public void openBookmark(final String uid, final int scrollY,
+                                 final String type, final String kind) {
             runOnUiThread(() -> {
-                pendingScrollY = scrollY;
                 pendingHighlight = null;
-                suttaReturnMode = "bookmarks";
-                openSuttaByUid(uid);
+                if ("comment".equals(type)) {
+                    openCommentFromBookmark(uid, kind, scrollY);
+                } else {
+                    pendingScrollY = scrollY;
+                    suttaReturnMode = "bookmarks";
+                    openSuttaByUid(uid);
+                }
             });
         }
 
@@ -673,6 +715,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
             runOnUiThread(() -> openRandomSutta());
         }
 
+        /** ВОССТАНОВЛЕНО: кнопки А и Т на странице сутты вызывают этот метод. */
         @JavascriptInterface
         public void openComment(final String kind) {
             runOnUiThread(() -> openCommentNow(kind));
@@ -699,6 +742,27 @@ public class SuttasOpenActivity extends BaseActivityClass {
                             "Закладка удалена", Toast.LENGTH_SHORT).show();
                 } else {
                     addBookmarkNow(uid, scrollY);
+                    webView.evaluateJavascript("setBookmarkState(true)", null);
+                    Toast.makeText(SuttasOpenActivity.this,
+                            "Закладка добавлена", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+
+        /** Закладка на комментарий (аттхакатха / тика). */
+        @JavascriptInterface
+        public void toggleCommentBookmark(final int scrollY) {
+            runOnUiThread(() -> {
+                String uid = currentSuttaUid;
+                String kind = currentCommentKind;
+                if (uid == null || kind == null) return;
+                if (isCommentBookmarked(uid, kind)) {
+                    removeCommentBookmark(uid, kind);
+                    webView.evaluateJavascript("setBookmarkState(false)", null);
+                    Toast.makeText(SuttasOpenActivity.this,
+                            "Закладка удалена", Toast.LENGTH_SHORT).show();
+                } else {
+                    addCommentBookmark(uid, kind, scrollY);
                     webView.evaluateJavascript("setBookmarkState(true)", null);
                     Toast.makeText(SuttasOpenActivity.this,
                             "Закладка добавлена", Toast.LENGTH_SHORT).show();
@@ -744,6 +808,9 @@ public class SuttasOpenActivity extends BaseActivityClass {
         }
     }
 
+    // ============================================================
+    // ЗАКЛАДКИ: ХРАНИЛИЩЕ
+    // ============================================================
     private String getPref(String key, String def) {
         return getSharedPreferences(BM_PREFS, MODE_PRIVATE).getString(key, def);
     }
@@ -762,7 +829,9 @@ public class SuttasOpenActivity extends BaseActivityClass {
         try {
             JSONArray arr = new JSONArray(getPref(KEY_BOOKMARKS, "[]"));
             for (int i = 0; i < arr.length(); i++) {
-                if (uid.equals(arr.getJSONObject(i).optString("filePath"))) return true;
+                JSONObject it = arr.getJSONObject(i);
+                if (!"comment".equals(it.optString("type"))
+                        && uid.equals(it.optString("filePath"))) return true;
             }
         } catch (Exception e) { }
         return false;
@@ -774,7 +843,8 @@ public class SuttasOpenActivity extends BaseActivityClass {
             JSONArray out = new JSONArray();
             for (int i = 0; i < arr.length(); i++) {
                 JSONObject it = arr.getJSONObject(i);
-                if (!uid.equals(it.optString("filePath"))) out.put(it);
+                if (!(!"comment".equals(it.optString("type"))
+                        && uid.equals(it.optString("filePath")))) out.put(it);
             }
             putPref(KEY_BOOKMARKS, out.toString());
         } catch (Exception e) { }
@@ -788,6 +858,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
             JSONArray out = new JSONArray();
             JSONObject bm = new JSONObject();
             bm.put("id", String.valueOf(System.currentTimeMillis()));
+            bm.put("type", "sutta");
             bm.put("filePath", uid);
             bm.put("title", meta.optString("title"));
             bm.put("subtitle", meta.optString("subtitle"));
@@ -797,11 +868,69 @@ public class SuttasOpenActivity extends BaseActivityClass {
             out.put(bm);
             for (int i = 0; i < arr.length() && out.length() < MAX_BOOKMARKS; i++) {
                 JSONObject it = arr.getJSONObject(i);
-                if (!uid.equals(it.optString("filePath"))) out.put(it);
+                if (!(!"comment".equals(it.optString("type"))
+                        && uid.equals(it.optString("filePath")))) out.put(it);
             }
             putPref(KEY_BOOKMARKS, out.toString());
         } catch (Exception e) {
             Log.e(TAG, "addBookmarkNow", e);
+        }
+    }
+
+    private boolean isCommentBookmarked(String uid, String kind) {
+        try {
+            JSONArray arr = new JSONArray(getPref(KEY_BOOKMARKS, "[]"));
+            for (int i = 0; i < arr.length(); i++) {
+                JSONObject it = arr.getJSONObject(i);
+                if ("comment".equals(it.optString("type"))
+                        && kind.equals(it.optString("kind"))
+                        && uid.equals(it.optString("filePath"))) return true;
+            }
+        } catch (Exception e) { }
+        return false;
+    }
+
+    private void removeCommentBookmark(String uid, String kind) {
+        try {
+            JSONArray arr = new JSONArray(getPref(KEY_BOOKMARKS, "[]"));
+            JSONArray out = new JSONArray();
+            for (int i = 0; i < arr.length(); i++) {
+                JSONObject it = arr.getJSONObject(i);
+                if (!("comment".equals(it.optString("type"))
+                        && kind.equals(it.optString("kind"))
+                        && uid.equals(it.optString("filePath")))) out.put(it);
+            }
+            putPref(KEY_BOOKMARKS, out.toString());
+        } catch (Exception e) { }
+    }
+
+    private void addCommentBookmark(String uid, String kind, int scrollY) {
+        try {
+            JSONObject meta = buildSuttaMetaJson(uid);
+            if (meta == null) return;
+            String kindLabel = "tik".equals(kind) ? "Тика" : "Аттхакатха";
+            JSONArray arr = new JSONArray(getPref(KEY_BOOKMARKS, "[]"));
+            JSONArray out = new JSONArray();
+            JSONObject bm = new JSONObject();
+            bm.put("id", String.valueOf(System.currentTimeMillis()));
+            bm.put("type", "comment");
+            bm.put("kind", kind);
+            bm.put("filePath", uid);
+            bm.put("title", meta.optString("title") + " — " + kindLabel);
+            bm.put("subtitle", meta.optString("subtitle") + " · " + kindLabel);
+            bm.put("scrollY", scrollY);
+            bm.put("date", System.currentTimeMillis());
+            bm.put("note", "");
+            out.put(bm);
+            for (int i = 0; i < arr.length() && out.length() < MAX_BOOKMARKS; i++) {
+                JSONObject it = arr.getJSONObject(i);
+                if (!("comment".equals(it.optString("type"))
+                        && kind.equals(it.optString("kind"))
+                        && uid.equals(it.optString("filePath")))) out.put(it);
+            }
+            putPref(KEY_BOOKMARKS, out.toString());
+        } catch (Exception e) {
+            Log.e(TAG, "addCommentBookmark", e);
         }
     }
 

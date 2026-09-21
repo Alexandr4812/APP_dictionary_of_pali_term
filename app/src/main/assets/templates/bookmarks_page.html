@@ -63,16 +63,20 @@
         }
         .bookmark-card:active { transform: scale(0.98); background: var(--card-hover); }
         .recent-card { border-left-color: #81C9E8; }
+        .comment-card { border-left-color: #FFB74D; }
         .bookmark-card-body { flex: 1; padding: 13px 15px; min-width: 0; }
         .bookmark-open-area { cursor: pointer; }
-        .bookmark-num { font-size: 0.72rem; color: var(--accent-color); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px; opacity: 0.8; }
+        .bookmark-num {
+        font-size: 0.72rem; color: var(--accent-color); font-weight: 700;
+        letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px; opacity: 0.8;
+        }
         .recent-card .bookmark-num { color: #81C9E8; }
+        .comment-card .bookmark-num { color: #FFB74D; }
         .bookmark-title { font-size: 1rem; font-weight: 700; color: var(--text-main); margin-bottom: 5px; word-break: break-word; line-height: 1.4; }
         .bookmark-title-input {
         background: transparent; border: none; border-bottom: 1px solid var(--accent-color);
         color: var(--text-main); font-size: 1rem; font-weight: 700; font-family: 'Raleway', sans-serif;
-        width: 100%; outline: none; padding: 2px 0; resize: none; overflow: hidden; line-height: 1.4;
-        min-height: 24px; display: block;
+        width: 100%; outline: none; padding: 2px 0; resize: none; overflow: hidden; line-height: 1.4; min-height: 24px; display: block;
         }
         .bookmark-meta { font-size: 0.8rem; color: var(--text-dim); font-family: 'Noto Serif', serif; font-style: italic; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
         .bookmark-date { font-size: 0.72rem; color: var(--text-dim); opacity: 0.6; font-style: normal; font-family: 'Raleway', sans-serif; }
@@ -116,7 +120,7 @@
 <div class="header">
     <span class="header-icon">🔖</span>
     <div class="main-title">Закладки</div>
-    <div class="main-subtitle">Сутты Палийского канона <br> open tipitaka</div>
+    <div class="main-subtitle">Сохранённые места для чтения</div>
     <div class="divider"></div>
 </div>
 <div class="tabs">
@@ -129,7 +133,7 @@
     </div>
     <div class="empty-state" id="emptyBookmarks">
         <span class="empty-icon">📜</span>
-        <div class="empty-text">Пока нет сохранённых закладок.<br>Нажмите кнопку 🔖 при чтении сутты.</div>
+        <div class="empty-text">Пока нет сохранённых закладок.<br>Нажмите 🔖 при чтении сутты или комментария.</div>
     </div>
     <div class="bookmarks-list" id="bookmarksList"></div>
     <button class="btn-action" id="btnClear" onclick="clearAll()">✕ &nbsp;Очистить все закладки</button>
@@ -160,6 +164,7 @@
     renderBookmarks();
     renderRecents();
     }
+    function loadBookmarks(bmJson) { loadData(bmJson, '[]'); }
     function goBack() {
     if (typeof Android !== 'undefined') Android.goBack();
     }
@@ -190,8 +195,9 @@
     });
     }
     function buildBookmarkCard(bm, index, noteAreas) {
+    var isComment = (bm.type === 'comment');
     var card = document.createElement('div');
-    card.className = 'bookmark-card';
+    card.className = 'bookmark-card' + (isComment ? ' comment-card' : '');
     card.style.animationDelay = (index * 0.05) + 's';
     var isLatest = (index === 0);
     var dateStr  = bm.date
@@ -201,10 +207,18 @@
     body.className = 'bookmark-card-body';
     var openArea = document.createElement('div');
     openArea.className = 'bookmark-open-area';
-    openArea.onclick = function() { openBookmark(bm.filePath, bm.scrollY || 0); };
+    openArea.onclick = function() {
+    openBookmark(bm.filePath, bm.scrollY || 0, bm.type || 'sutta', bm.kind || '');
+    };
     var numEl = document.createElement('div');
     numEl.className = 'bookmark-num';
-    numEl.innerHTML = esc(bm.suttaRef || bm.subtitle || '') +
+    var label;
+    if (isComment) {
+    label = '📖 ' + (bm.kind === 'tik' ? 'Тика' : 'Аттхакатха');
+    } else {
+    label = esc(bm.suttaRef || '');
+    }
+    numEl.innerHTML = label +
     (isLatest ? ' <span style="background:#FFE082;color:#161923;font-size:0.65rem;padding:2px 7px;border-radius:10px;font-weight:800;letter-spacing:1px;vertical-align:middle;">НОВАЯ</span>' : '');
     var titleRow = document.createElement('div');
     titleRow.style.cssText = 'display:flex;align-items:flex-start;gap:6px;margin-bottom:5px;';
@@ -291,17 +305,22 @@
     var body = document.createElement('div');
     body.className = 'bookmark-card-body';
     body.style.cursor = 'pointer';
-    body.onclick = function() { openBookmark(item.filePath, item.scrollY || 0); };
+    body.onclick = function() { openBookmark(item.filePath, item.scrollY || 0, 'sutta', ''); };
     var numEl = document.createElement('div');
     numEl.className = 'bookmark-num';
     var pos = ['1-я','2-я','3-я','4-я','5-я'][index] || (index+1)+'-я';
-    numEl.innerHTML = (item.subtitle ? esc(item.subtitle) + ' &nbsp;·&nbsp; ' : '') +
+    numEl.innerHTML = (item.suttaRef ? esc(item.suttaRef) + ' &nbsp;·&nbsp; ' : '') +
     '<span style="opacity:0.7;font-size:0.68rem;">' + pos + '</span>';
     var titleEl = document.createElement('div');
     titleEl.className = 'bookmark-title';
     titleEl.textContent = item.title || '';
     var meta = document.createElement('div');
     meta.className = 'bookmark-meta';
+    if (item.subtitle) {
+    var subEl = document.createElement('span');
+    subEl.textContent = item.subtitle;
+    meta.appendChild(subEl);
+    }
     if (dateStr) {
     var dateEl = document.createElement('span');
     dateEl.className = 'bookmark-date';
@@ -314,8 +333,10 @@
     card.appendChild(body);
     return card;
     }
-    function openBookmark(filePath, scrollY) {
-    if (typeof Android !== 'undefined') Android.openBookmark(filePath, scrollY);
+    function openBookmark(filePath, scrollY, type, kind) {
+    if (typeof Android !== 'undefined') {
+    Android.openBookmark(filePath, scrollY || 0, type || 'sutta', kind || '');
+    }
     }
     function deleteBookmark(id) {
     if (typeof Android !== 'undefined') Android.deleteBookmark(id);

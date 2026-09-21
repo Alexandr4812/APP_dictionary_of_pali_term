@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{COMMENT_KIND}}</title>
     <style>
-        :root { --font-size: 16px; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+        --font-size: 16px;
+        }
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
         body {
         font-family: "Noto Sans", "Roboto", serif;
         font-size: var(--font-size);
@@ -15,6 +21,27 @@
         background-color: #FFFDF5;
         padding: 16px;
         padding-bottom: 80px;
+        }
+        /* ── Кнопка закладки: как на странице сутты (40px, полупрозрачная) ── */
+        .bm-btn {
+        position: fixed;
+        top: 8px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid rgba(141, 110, 99, 0.45);
+        background: rgba(141, 110, 99, 0.30);
+        color: #5D4037;
+        font-size: 18px;
+        line-height: 1;
+        cursor: pointer;
+        z-index: 60;
+        }
+        .bm-btn.on {
+        background: rgba(141, 110, 99, 0.85);
+        border-color: rgba(141, 110, 99, 0.9);
+        color: #FFFDF5;
         }
         .comment-header {
         text-align: center;
@@ -61,6 +88,7 @@
     </style>
 </head>
 <body>
+<button id="bmBtn" class="bm-btn" onclick="toggleCommentBookmark()">🔖</button>
 <div class="comment-header">
     <div class="kind-badge">{{COMMENT_KIND}}</div>
     <div class="sutta-title">{{SUTTA_TITLE}}</div>
@@ -84,6 +112,18 @@
     function setFontSize(size) {
     var root = document.documentElement;
     root.style.setProperty('--font-size', size + 'px');
+    }
+    /* ── Закладка на комментарий: сохраняет позицию чтения ── */
+    function toggleCommentBookmark() {
+    if (typeof Android !== 'undefined') {
+    Android.toggleCommentBookmark(Math.round(window.scrollY));
+    }
+    }
+    /* Вызывается из Java при открытии страницы: показать, стоит ли закладка */
+    function setBookmarkState(on) {
+    var b = document.getElementById('bmBtn');
+    if (on) { b.classList.add('on'); b.textContent = '✅'; }
+    else    { b.classList.remove('on'); b.textContent = '🔖'; }
     }
 </script>
 </body>
