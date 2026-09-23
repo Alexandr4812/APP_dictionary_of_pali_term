@@ -19,10 +19,9 @@
         line-height: 1.8;
         color: #212121;
         background-color: #FFFDF5;
-        padding: 16px;
-        padding-bottom: 80px;
+        padding: 7.2em 16px 80px 16px;
         }
-        /* ── Все плавающие кнопки одного размера и полупрозрачные ── */
+        /* ── Плавающие кнопки сверху: А / Т слева, закладка справа ── */
         .bm-btn, .cm-btn {
         position: fixed;
         top: 8px;
@@ -50,12 +49,33 @@
         .bm-btn:active, .cm-btn:active {
         background: rgba(141, 110, 99, 0.55);
         }
-        /* Закладка стоит — кнопка плотнее, чтобы состояние было видно */
         .bm-btn.on {
         background: rgba(141, 110, 99, 0.85);
         border-color: rgba(141, 110, 99, 0.9);
         color: #FFFFFF;
         }
+        /* ── НОВОЕ: кнопки назад/вперёд — вдвое меньше, фон как у А/Т, стрелки красные ── */
+        .nav-btn {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 32px;
+        border-radius: 10px;
+        border: 1px solid rgba(141, 110, 99, 0.55);
+        background: rgba(141, 110, 99, 0.30);
+        color: #C62828;
+        font-size: 12px;
+        line-height: 1;
+        cursor: pointer;
+        z-index: 55;
+        opacity: 0.8;
+        }
+        .nav-btn:active {
+        background: rgba(141, 110, 99, 0.55);
+        }
+        .nav-prev { left: 6px; }
+        .nav-next { right: 6px; }
         /* ── Следующая случайная сутта ── */
         .next-btn {
         position: fixed;
@@ -131,6 +151,8 @@
 <button id="attBtn" class="cm-btn" onclick="openComment('att')">А</button>
 <button id="tikBtn" class="cm-btn" onclick="openComment('tik')">Т</button>
 <button id="bmBtn" class="bm-btn" onclick="toggleBookmark()">🔖</button>
+<button id="prevSuttaBtn" class="nav-btn nav-prev" onclick="prevSutta()">❮</button>
+<button id="nextSuttaBtn" class="nav-btn nav-next" onclick="nextSutta()">❯</button>
 <button id="nextBtn" class="next-btn" style="display:none;" onclick="nextRandom()">🎲</button>
 <div class="sutta-header">
     <div class="sutta-uid">{{SUTTA_UID}}</div>
@@ -175,6 +197,12 @@
     }
     function openComment(kind) {
     if (typeof Android !== 'undefined') Android.openComment(kind);
+    }
+    function prevSutta() {
+    if (typeof Android !== 'undefined') Android.openPrevSutta();
+    }
+    function nextSutta() {
+    if (typeof Android !== 'undefined') Android.openNextSutta();
     }
     function highlightQuery(q) {
     if (!q) return;

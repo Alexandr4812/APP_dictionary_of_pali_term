@@ -51,7 +51,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private static final String TAG = "SUTTA_DEBUG";
     private static final String DB_NAME = "suttapitaka_ru.db";
     private static final String ASSET_DB_PATH = "databases/" + DB_NAME;
-    private static final String ASSET_DB_VERSION = "3.6";
+    private static final String ASSET_DB_VERSION = "5.4";
 
     private static final String PREFS_NAME = "sutta_db_prefs";
     private static final String KEY_COPIED_DB_VERSION = "copied_db_version";
@@ -192,7 +192,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
                         view.evaluateJavascript(
                                 "setRandomMode(" + randomMode + ")", null);
                     }
-                    // Состояние закладки на странице комментария
                     if ("comment".equals(mode) && currentSuttaUid != null
                             && currentCommentKind != null) {
                         view.evaluateJavascript(
@@ -450,7 +449,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
     // ============================================================
     // КОММЕНТАРИИ (Аттхакатха / Тика)
     // ============================================================
-    /** Вход со страницы сутты (кнопки А / Т): запоминаем позицию сутты. */
     private void openCommentNow(final String kind) {
         if (db == null || currentSuttaUid == null) return;
         final String uid = currentSuttaUid;
@@ -480,7 +478,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
         }));
     }
 
-    /** Вход из закладки: сразу на страницу комментария на сохранённую позицию. */
     private void openCommentFromBookmark(String uid, String kind, int scrollY) {
         if (db == null || uid == null) return;
         Cursor c = db.rawQuery(
@@ -551,14 +548,123 @@ public class SuttasOpenActivity extends BaseActivityClass {
     }
 
     // ============================================================
+    // ЛИСТАНИЕ СУТТ И КОММЕНТАРИЕВ (❮ / ❯)
+    // ============================================================
+    private void stepSutta(boolean next) {
+        String uid = adjacentSuttaUid(currentSuttaUid, next);
+        if (uid == null) {
+            Toast.makeText(this,
+                    next ? "Это последняя сутта в никае" : "Это первая сутта в никае",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+        // НОВОЕ: сохраняем режим рандома и режим возврата, чтобы кубик 🎲 не пропадал
+        boolean keepRandom = randomMode;
+        String keepReturn = suttaReturnMode;
+        openSuttaByUid(uid);
+        suttaReturnMode = keepReturn;
+        randomMode = keepRandom;
+    }
+
+    private void stepComment(boolean next) {
+        String uid = adjacentCommentUid(currentSuttaUid, currentCommentKind, next);
+        if (uid == null) {
+            Toast.makeText(this,
+                    next ? "Дальше комментариев нет" : "Раньше комментариев нет",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+        openCommentForUid(uid, currentCommentKind);
+    }
+
+    private void openCommentForUid(String uid, String kind) {
+        if (db == null || uid == null || kind == null) return;
+        Cursor c = db.rawQuery(
+                "SELECT title, content FROM comments WHERE kind = ? AND ref = ?",
+                new String[]{kind, uid});
+        if (!c.moveToFirst()) {
+            c.close();
+            Toast.makeText(this, "У этой сутты комментария нет",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+        String ctitle = c.getString(0);
+        String ccontent = c.getString(1);
+        c.close();
+        savedSuttaScroll = 0;
+        savedSuttaReturn = suttaReturnMode;
+        showComment(kind, ctitle, ccontent, uid);
+    }
+
+    private String adjacentSuttaUid(String uid, boolean next) {
+        if (db == null || uid == null) return null;
+        Cursor c = db.rawQuery(
+                "SELECT nikaya, canonical_number, local_number, id FROM suttas WHERE uid = ?",
+                new String[]{uid});
+        if (!c.moveToFirst()) { c.close(); return null; }
+        String nik = c.getString(0);
+        int cn = c.getInt(1);
+        int ln = c.getInt(2);
+        int id = c.getInt(3);
+        c.close();
+        String cmp = next ? ">" : "<";
+        String dir = next ? "ASC" : "DESC";
+        String sql = "SELECT uid FROM suttas WHERE nikaya = ? AND ("
+                + "canonical_number " + cmp + " ? "
+                + "OR (canonical_number = ? AND local_number " + cmp + " ?) "
+                + "OR (canonical_number = ? AND local_number = ? AND id " + cmp + " ?)) "
+                + "ORDER BY canonical_number " + dir + ", local_number " + dir + ", id " + dir
+                + " LIMIT 1";
+        Cursor c2 = db.rawQuery(sql, new String[]{
+                nik,
+                String.valueOf(cn), String.valueOf(cn), String.valueOf(ln),
+                String.valueOf(cn), String.valueOf(ln), String.valueOf(id)});
+        String res = c2.moveToFirst() ? c2.getString(0) : null;
+        c2.close();
+        return res;
+    }
+
+    private String adjacentCommentUid(String uid, String kind, boolean next) {
+        if (db == null || uid == null || kind == null) return null;
+        Cursor c = db.rawQuery(
+                "SELECT nikaya, canonical_number, local_number, id FROM suttas WHERE uid = ?",
+                new String[]{uid});
+        if (!c.moveToFirst()) { c.close(); return null; }
+        String nik = c.getString(0);
+        int cn = c.getInt(1);
+        int ln = c.getInt(2);
+        int id = c.getInt(3);
+        c.close();
+        String cmp = next ? ">" : "<";
+        String dir = next ? "ASC" : "DESC";
+        String sql = "SELECT c.ref FROM comments c JOIN suttas s ON s.uid = c.ref "
+                + "WHERE c.kind = ? AND s.nikaya = ? AND ("
+                + "s.canonical_number " + cmp + " ? "
+                + "OR (s.canonical_number = ? AND s.local_number " + cmp + " ?) "
+                + "OR (s.canonical_number = ? AND s.local_number = ? AND s.id " + cmp + " ?)) "
+                + "ORDER BY s.canonical_number " + dir + ", s.local_number " + dir + ", s.id " + dir
+                + " LIMIT 1";
+        Cursor c2 = db.rawQuery(sql, new String[]{
+                kind, nik,
+                String.valueOf(cn), String.valueOf(cn), String.valueOf(ln),
+                String.valueOf(cn), String.valueOf(ln), String.valueOf(id)});
+        String res = c2.moveToFirst() ? c2.getString(0) : null;
+        c2.close();
+        return res;
+    }
+
+    // ============================================================
     // КНОПКА "НАЗАД"
     // ============================================================
     private void handleBack() {
         if (mode.equals("comment")) {
             String ret = savedSuttaReturn;
+            // НОВОЕ: сохраняем режим рандома, чтобы кубик 🎲 не пропадал после комментария
+            boolean keepRandom = randomMode;
             pendingScrollY = savedSuttaScroll;
             openSuttaByUid(currentSuttaUid);
             suttaReturnMode = ret;
+            randomMode = keepRandom;
         } else if (mode.equals("sutta")) {
             if (randomMode) {
                 showMainMenu();
@@ -686,7 +792,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
     }
 
     // ============================================================
-    // МОСТ ЗАКЛАДОК / КОММЕНТАРИЕВ / СПИСКОВ
+    // МОСТ ЗАКЛАДОК / КОММЕНТАРИЕВ / СПИСКОВ / ЛИСТАНИЯ
     // ============================================================
     public class BookmarkBridge {
         @JavascriptInterface
@@ -694,7 +800,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
             runOnUiThread(() -> handleBack());
         }
 
-        /** 4 аргумента: uid, позиция, тип ("sutta"/"comment"), вид ("att"/"tik"). */
         @JavascriptInterface
         public void openBookmark(final String uid, final int scrollY,
                                  final String type, final String kind) {
@@ -715,10 +820,29 @@ public class SuttasOpenActivity extends BaseActivityClass {
             runOnUiThread(() -> openRandomSutta());
         }
 
-        /** ВОССТАНОВЛЕНО: кнопки А и Т на странице сутты вызывают этот метод. */
         @JavascriptInterface
         public void openComment(final String kind) {
             runOnUiThread(() -> openCommentNow(kind));
+        }
+
+        @JavascriptInterface
+        public void openPrevSutta() {
+            runOnUiThread(() -> stepSutta(false));
+        }
+
+        @JavascriptInterface
+        public void openNextSutta() {
+            runOnUiThread(() -> stepSutta(true));
+        }
+
+        @JavascriptInterface
+        public void openPrevComment() {
+            runOnUiThread(() -> stepComment(false));
+        }
+
+        @JavascriptInterface
+        public void openNextComment() {
+            runOnUiThread(() -> stepComment(true));
         }
 
         @JavascriptInterface
@@ -749,7 +873,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
             });
         }
 
-        /** Закладка на комментарий (аттхакатха / тика). */
         @JavascriptInterface
         public void toggleCommentBookmark(final int scrollY) {
             runOnUiThread(() -> {
