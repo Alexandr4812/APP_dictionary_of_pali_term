@@ -3,10 +3,14 @@ package com.dhammamobile.dictionary_of_pali_term.Suttas;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Typeface;
+import android.graphics.pdf.PdfDocument;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +28,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.content.FileProvider;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -41,7 +46,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SuttasOpenActivity extends BaseActivityClass {
@@ -51,7 +58,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private static final String TAG = "SUTTA_DEBUG";
     private static final String DB_NAME = "suttapitaka_ru.db";
     private static final String ASSET_DB_PATH = "databases/" + DB_NAME;
-    private static final String ASSET_DB_VERSION = "9.3";
+    private static final String ASSET_DB_VERSION = "9.5";
 
     private static final String PREFS_NAME = "sutta_db_prefs";
     private static final String KEY_COPIED_DB_VERSION = "copied_db_version";
@@ -71,7 +78,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private SQLiteDatabase db;
     private SuttaHtmlGenerator htmlGenerator;
 
-    // mode: "menu" | "list" | "sutta" | "search" | "bookmarks" | "comment"
     private String currentNikaya = null;
     private String currentSuttaUid = null;
     private String mode = "menu";
@@ -84,10 +90,8 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private boolean bookmarksPagePending = false;
     private String pendingHighlight = null;
 
-    // Текущий открытый комментарий: "att" | "tik" | null
     private String currentCommentKind = null;
 
-    // Возврат из комментария в сутту с той же позиции
     private int savedSuttaScroll = 0;
     private String savedSuttaReturn = "list";
 
@@ -558,7 +562,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
                     Toast.LENGTH_SHORT).show();
             return;
         }
-        // НОВОЕ: сохраняем режим рандома и режим возврата, чтобы кубик 🎲 не пропадал
         boolean keepRandom = randomMode;
         String keepReturn = suttaReturnMode;
         openSuttaByUid(uid);
@@ -659,7 +662,6 @@ public class SuttasOpenActivity extends BaseActivityClass {
     private void handleBack() {
         if (mode.equals("comment")) {
             String ret = savedSuttaReturn;
-            // НОВОЕ: сохраняем режим рандома, чтобы кубик 🎲 не пропадал после комментария
             boolean keepRandom = randomMode;
             pendingScrollY = savedSuttaScroll;
             openSuttaByUid(currentSuttaUid);
@@ -792,7 +794,7 @@ public class SuttasOpenActivity extends BaseActivityClass {
     }
 
     // ============================================================
-    // МОСТ ЗАКЛАДОК / КОММЕНТАРИЕВ / СПИСКОВ / ЛИСТАНИЯ
+    // МОСТ ЗАКЛАДОК / КОММЕНТАРИЕВ / СПИСКОВ / ЛИСТАНИЯ / ШАРИНГА
     // ============================================================
     public class BookmarkBridge {
         @JavascriptInterface
@@ -928,6 +930,357 @@ public class SuttasOpenActivity extends BaseActivityClass {
         @JavascriptInterface
         public void updateBookmarkTitle(final String id, final String title) {
             runOnUiThread(() -> updateBookmarkField(id, "title", title));
+        }
+
+        // ── НОВОЕ: ШАРИНГ СУТТ И КОММЕНТАРИЕВ ──
+        @JavascriptInterface
+        public void shareSuttaAsText() {
+            runOnUiThread(() -> shareCurrentSuttaAsText());
+        }
+
+        @JavascriptInterface
+        public void shareSuttaAsPdf() {
+            runOnUiThread(() -> shareCurrentSuttaAsPdf());
+        }
+
+        @JavascriptInterface
+        public void shareCommentAsText() {
+            runOnUiThread(() -> shareCurrentCommentAsText());
+        }
+
+        @JavascriptInterface
+        public void shareCommentAsPdf() {
+            runOnUiThread(() -> shareCurrentCommentAsPdf());
+        }
+    }
+
+    // ============================================================
+    // ШАРИНГ: ТЕКСТ
+    // ============================================================
+    private void shareCurrentSuttaAsText() {
+        if (db == null || currentSuttaUid == null) return;
+        Cursor c = db.rawQuery(
+                "SELECT title, content, nikaya, canonical_number, local_number FROM suttas WHERE uid = ?",
+                new String[]{currentSuttaUid});
+        if (!c.moveToFirst()) {
+            c.close();
+            Toast.makeText(this, "Сутта не найдена", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        String title = c.getString(0);
+        String content = c.getString(1);
+        String nikaya = c.getString(2);
+        int canon = c.getInt(3);
+        int local = c.getInt(4);
+        c.close();
+
+        String ref = buildSuttaRef(nikaya, canon, local);
+        String shareText = title + "\n" + ref + "\n\n" + content
+                + "\n\n────────────────────────\n"
+                + "Типитака на русском · OpenTipitaka\n"
+                + "Лицензия: CC BY-NC-SA 4.0";
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+        sendIntent.putExtra(Intent.EXTRA_SUBJECT, title);
+        sendIntent.setType("text/plain");
+        startActivity(Intent.createChooser(sendIntent, "Поделиться суттой"));
+    }
+
+    private void shareCurrentCommentAsText() {
+        if (db == null || currentSuttaUid == null || currentCommentKind == null) return;
+        Cursor c = db.rawQuery(
+                "SELECT title, content FROM comments WHERE kind = ? AND ref = ?",
+                new String[]{currentCommentKind, currentSuttaUid});
+        if (!c.moveToFirst()) {
+            c.close();
+            Toast.makeText(this, "Комментарий не найден", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        String ctitle = c.getString(0);
+        String ccontent = c.getString(1);
+        c.close();
+
+        String kindLabel = "tik".equals(currentCommentKind)
+                ? "Тика (субкомментарий)" : "Аттхакатха (комментарий)";
+
+        String suttaTitle = "";
+        Cursor sc = db.rawQuery("SELECT title FROM suttas WHERE uid = ?",
+                new String[]{currentSuttaUid});
+        if (sc.moveToFirst()) {
+            suttaTitle = sc.getString(0);
+        }
+        sc.close();
+
+        String shareText = kindLabel + "\n"
+                + "К сутте: " + suttaTitle + " (" + currentSuttaUid.toUpperCase() + ")\n\n"
+                + ccontent
+                + "\n\n────────────────────────\n"
+                + "Типитака на русском · Сараттхаппакасини\n"
+                + "Лицензия: CC BY-NC-SA 4.0";
+
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+        sendIntent.putExtra(Intent.EXTRA_SUBJECT, ctitle);
+        sendIntent.setType("text/plain");
+        startActivity(Intent.createChooser(sendIntent, "Поделиться комментарием"));
+    }
+
+    // ============================================================
+    // ШАРИНГ: PDF
+    // ============================================================
+    private void shareCurrentSuttaAsPdf() {
+        if (db == null || currentSuttaUid == null) return;
+        Cursor c = db.rawQuery(
+                "SELECT title, content, nikaya, canonical_number, local_number FROM suttas WHERE uid = ?",
+                new String[]{currentSuttaUid});
+        if (!c.moveToFirst()) {
+            c.close();
+            Toast.makeText(this, "Сутта не найдена", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        String title = c.getString(0);
+        String content = c.getString(1);
+        String nikaya = c.getString(2);
+        int canon = c.getInt(3);
+        int local = c.getInt(4);
+        c.close();
+
+        String ref = buildSuttaRef(nikaya, canon, local);
+        String meta = nikaya + " · " + ref;
+
+        String fileName = currentSuttaUid.replace(".", "_") + ".pdf";
+        createAndSharePdf(fileName, title, meta, content);
+    }
+
+    private void shareCurrentCommentAsPdf() {
+        if (db == null || currentSuttaUid == null || currentCommentKind == null) return;
+        Cursor c = db.rawQuery(
+                "SELECT title, content FROM comments WHERE kind = ? AND ref = ?",
+                new String[]{currentCommentKind, currentSuttaUid});
+        if (!c.moveToFirst()) {
+            c.close();
+            Toast.makeText(this, "Комментарий не найден", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        String ctitle = c.getString(0);
+        String ccontent = c.getString(1);
+        c.close();
+
+        String kindLabel = "tik".equals(currentCommentKind)
+                ? "Тика (субкомментарий)" : "Аттхакатха (комментарий)";
+
+        String suttaTitle = "";
+        Cursor sc = db.rawQuery("SELECT title FROM suttas WHERE uid = ?",
+                new String[]{currentSuttaUid});
+        if (sc.moveToFirst()) {
+            suttaTitle = sc.getString(0);
+        }
+        sc.close();
+
+        String meta = kindLabel + " · к сутте " + suttaTitle
+                + " (" + currentSuttaUid.toUpperCase() + ")";
+
+        String fileName = currentSuttaUid.replace(".", "_")
+                + "_" + currentCommentKind + ".pdf";
+        createAndSharePdf(fileName, ctitle, meta, ccontent);
+    }
+
+    private void createAndSharePdf(String fileName, String title, String meta, String content) {
+        try {
+            PdfDocument document = new PdfDocument();
+
+            // Размеры страницы (A4 в пунктах: 595 x 842)
+            int pageWidth = 595;
+            int pageHeight = 842;
+            int marginLeft = 60;
+            int marginRight = 60;
+            int marginTop = 60;
+            int marginBottom = 60;
+            int contentWidth = pageWidth - marginLeft - marginRight;
+
+            // Настройки кисти для текста
+            Paint titlePaint = new Paint();
+            titlePaint.setColor(Color.parseColor("#5D4037"));
+            titlePaint.setTextSize(22);
+            titlePaint.setTypeface(Typeface.create(Typeface.SERIF, Typeface.BOLD));
+            titlePaint.setAntiAlias(true);
+
+            Paint metaPaint = new Paint();
+            metaPaint.setColor(Color.parseColor("#757575"));
+            metaPaint.setTextSize(14);
+            metaPaint.setTypeface(Typeface.create(Typeface.SERIF, Typeface.ITALIC));
+            metaPaint.setAntiAlias(true);
+
+            Paint textPaint = new Paint();
+            textPaint.setColor(Color.BLACK);
+            textPaint.setTextSize(14);
+            textPaint.setTypeface(Typeface.create(Typeface.SERIF, Typeface.NORMAL));
+            textPaint.setAntiAlias(true);
+
+            Paint footerPaint = new Paint();
+            footerPaint.setColor(Color.parseColor("#9E9E9E"));
+            footerPaint.setTextSize(10);
+            footerPaint.setTypeface(Typeface.create(Typeface.SERIF, Typeface.ITALIC));
+            footerPaint.setAntiAlias(true);
+
+            // Разбиваем контент на абзацы
+            String[] paragraphs = content.split("\n");
+
+            int pageNumber = 1;
+            PdfDocument.Page page = document.startPage(
+                    new PdfDocument.PageInfo.Builder(pageWidth, pageHeight, pageNumber).create());
+            float y = marginTop;
+            float lineHeight = 22;
+
+            // Рисуем заголовок на первой странице
+            y = drawWrappedText(page.getCanvas(), title, titlePaint,
+                    marginLeft, y, contentWidth, lineHeight);
+            y += 8;
+
+            // Рисуем мета-информацию
+            y = drawWrappedText(page.getCanvas(), meta, metaPaint,
+                    marginLeft, y, contentWidth, lineHeight);
+            y += 20;
+
+            // Рисуем разделитель
+            Paint linePaint = new Paint();
+            linePaint.setColor(Color.parseColor("#D7CCC8"));
+            linePaint.setStrokeWidth(2);
+            page.getCanvas().drawLine(marginLeft, y, pageWidth - marginRight, y, linePaint);
+            y += 20;
+
+            // Рисуем контент по абзацам
+            for (String paragraph : paragraphs) {
+                String trimmed = paragraph.trim();
+                if (trimmed.isEmpty()) continue;
+
+                // Проверяем, помещается ли абзац на странице
+                List<String> lines = wrapText(trimmed, textPaint, contentWidth);
+                float paragraphHeight = lines.size() * lineHeight;
+
+                if (y + paragraphHeight > pageHeight - marginBottom) {
+                    // Переход на новую страницу
+                    document.finishPage(page);
+                    pageNumber++;
+                    page = document.startPage(
+                            new PdfDocument.PageInfo.Builder(pageWidth, pageHeight, pageNumber).create());
+                    y = marginTop;
+                }
+
+                // Рисуем абзац
+                for (String line : lines) {
+                    page.getCanvas().drawText(line, marginLeft, y, textPaint);
+                    y += lineHeight;
+                }
+                y += 10; // Отступ между абзацами
+            }
+
+            // Рисуем футер на последней странице
+            y += 20;
+            if (y + 30 > pageHeight - marginBottom) {
+                document.finishPage(page);
+                pageNumber++;
+                page = document.startPage(
+                        new PdfDocument.PageInfo.Builder(pageWidth, pageHeight, pageNumber).create());
+                y = marginTop;
+            }
+            page.getCanvas().drawText("Типитака на русском · OpenTipitaka · CC BY-NC-SA 4.0",
+                    marginLeft, y, footerPaint);
+
+            document.finishPage(page);
+
+            // Сохраняем во временную папку
+            File dir = new File(getCacheDir(), "shared_pdfs");
+            if (!dir.exists()) dir.mkdirs();
+            File pdfFile = new File(dir, fileName);
+            if (pdfFile.exists()) pdfFile.delete();
+
+            FileOutputStream fos = new FileOutputStream(pdfFile);
+            document.writeTo(fos);
+            fos.close();
+            document.close();
+
+            // Шарим PDF
+            Uri uri = FileProvider.getUriForFile(this,
+                    getPackageName() + ".fileprovider", pdfFile);
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_STREAM, uri);
+            sendIntent.putExtra(Intent.EXTRA_SUBJECT, title);
+            sendIntent.setType("application/pdf");
+            sendIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            startActivity(Intent.createChooser(sendIntent, "Поделиться PDF"));
+
+        } catch (Exception e) {
+            Log.e(TAG, "Ошибка создания PDF", e);
+            Toast.makeText(this, "Не удалось создать PDF: " + e.getMessage(),
+                    Toast.LENGTH_LONG).show();
+        }
+    }
+
+    // Вспомогательный метод: рисует текст с переносом по словам
+    private float drawWrappedText(android.graphics.Canvas canvas, String text,
+                                  Paint paint, float x, float y, int maxWidth, float lineHeight) {
+        List<String> lines = wrapText(text, paint, maxWidth);
+        for (String line : lines) {
+            canvas.drawText(line, x, y, paint);
+            y += lineHeight;
+        }
+        return y;
+    }
+
+    // Вспомогательный метод: разбивает текст на строки по ширине
+    private List<String> wrapText(String text, Paint paint, int maxWidth) {
+        List<String> lines = new ArrayList<>();
+        String[] words = text.split(" ");
+        StringBuilder currentLine = new StringBuilder();
+
+        for (String word : words) {
+            String testLine = currentLine.length() == 0
+                    ? word : currentLine + " " + word;
+            if (paint.measureText(testLine) <= maxWidth) {
+                currentLine = new StringBuilder(testLine);
+            } else {
+                if (currentLine.length() > 0) {
+                    lines.add(currentLine.toString());
+                }
+                // Если слово длиннее строки, разбиваем его
+                if (paint.measureText(word) > maxWidth) {
+                    StringBuilder sb = new StringBuilder();
+                    for (char ch : word.toCharArray()) {
+                        sb.append(ch);
+                        if (paint.measureText(sb.toString()) > maxWidth) {
+                            lines.add(sb.substring(0, sb.length() - 1));
+                            sb = new StringBuilder(String.valueOf(ch));
+                        }
+                    }
+                    currentLine = sb;
+                } else {
+                    currentLine = new StringBuilder(word);
+                }
+            }
+        }
+        if (currentLine.length() > 0) {
+            lines.add(currentLine.toString());
+        }
+        return lines;
+    }
+
+    // Вспомогательный метод: формирует ссылку на сутту (СН 12.2, ДН 14 и т.д.)
+    private String buildSuttaRef(String nikaya, int canon, int local) {
+        if ("Самьютта-никая".equals(nikaya)) {
+            return "СН " + canon + "." + local;
+        } else if ("Ангуттара-никая".equals(nikaya)) {
+            return "АН " + canon + "." + local;
+        } else if ("Дигха-никая".equals(nikaya)) {
+            return "ДН " + canon;
+        } else if ("Мадджхима-никая".equals(nikaya)) {
+            return "МН " + canon;
+        } else {
+            return nikaya;
         }
     }
 

@@ -20,9 +20,46 @@
         color: #212121;
         background-color: #FFFDF5;
         padding: 7.2em 16px 80px 16px;
+        -webkit-tap-highlight-color: transparent;
         }
-        /* ── Плавающие кнопки сверху: А / Т слева, закладка справа ── */
-        .bm-btn, .cm-btn {
+        /* ── Плавное появление/исчезновение UI ── */
+        .ui-fade {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 1;
+        }
+        body.ui-hidden .ui-fade {
+        opacity: 0;
+        pointer-events: none;
+        }
+        body.ui-hidden .sutta-header {
+        transform: translateY(-10px);
+        }
+        body.ui-hidden .sutta-footer {
+        transform: translateY(10px);
+        }
+        body.ui-hidden .cm-btn,
+        body.ui-hidden .share-btn {
+        transform: translateY(-10px);
+        }
+        body.ui-hidden .bm-btn {
+        transform: translateY(-10px);
+        }
+        body.ui-hidden .nav-btn {
+        transform: translateX(0);
+        opacity: 0;
+        }
+        body.ui-hidden .nav-prev { transform: translateX(-10px); }
+        body.ui-hidden .nav-next { transform: translateX(10px); }
+        body.ui-hidden .next-btn {
+        transform: translateY(20px);
+        }
+        /* В режиме скрытия контент занимает весь экран */
+        body.ui-hidden {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        }
+        /* ── Плавающие кнопки: А / Т слева, 📤 / 🔖 справа ── */
+        .bm-btn, .cm-btn, .share-btn {
         position: fixed;
         top: 8px;
         width: 40px;
@@ -46,7 +83,11 @@
         right: 10px;
         font-size: 18px;
         }
-        .bm-btn:active, .cm-btn:active {
+        .share-btn {
+        right: 56px;
+        font-size: 18px;
+        }
+        .bm-btn:active, .cm-btn:active, .share-btn:active {
         background: rgba(141, 110, 99, 0.55);
         }
         .bm-btn.on {
@@ -54,7 +95,7 @@
         border-color: rgba(141, 110, 99, 0.9);
         color: #FFFFFF;
         }
-        /* ── НОВОЕ: кнопки назад/вперёд — вдвое меньше, фон как у А/Т, стрелки красные ── */
+        /* ── Кнопки назад/вперёд ── */
         .nav-btn {
         position: fixed;
         top: 50%;
@@ -145,16 +186,80 @@
         color: #9E9E9E;
         text-align: center;
         }
+        /* ── Модальное окно шаринга ── */
+        .share-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        }
+        .share-overlay.show {
+        display: flex;
+        }
+        .share-dialog {
+        background: #FFFDF5;
+        border-radius: 16px;
+        padding: 24px 20px;
+        width: 280px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .share-title {
+        font-size: 1.1em;
+        font-weight: bold;
+        color: #5D4037;
+        text-align: center;
+        margin-bottom: 18px;
+        }
+        .share-option {
+        display: flex;
+        align-items: center;
+        padding: 14px 16px;
+        margin: 8px 0;
+        background: rgba(141, 110, 99, 0.12);
+        border: 1px solid rgba(141, 110, 99, 0.35);
+        border-radius: 12px;
+        cursor: pointer;
+        color: #5D4037;
+        font-weight: 500;
+        }
+        .share-option:active {
+        background: rgba(141, 110, 99, 0.28);
+        }
+        .share-option-icon {
+        font-size: 1.4em;
+        margin-right: 14px;
+        }
+        .share-cancel {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin-top: 10px;
+        background: transparent;
+        border: none;
+        color: #9E9E9E;
+        font-size: 0.95em;
+        cursor: pointer;
+        }
+        .share-cancel:active {
+        color: #5D4037;
+        }
     </style>
 </head>
 <body>
-<button id="attBtn" class="cm-btn" onclick="openComment('att')">А</button>
-<button id="tikBtn" class="cm-btn" onclick="openComment('tik')">Т</button>
-<button id="bmBtn" class="bm-btn" onclick="toggleBookmark()">🔖</button>
-<button id="prevSuttaBtn" class="nav-btn nav-prev" onclick="prevSutta()">❮</button>
-<button id="nextSuttaBtn" class="nav-btn nav-next" onclick="nextSutta()">❯</button>
-<button id="nextBtn" class="next-btn" style="display:none;" onclick="nextRandom()">🎲</button>
-<div class="sutta-header">
+<button id="attBtn" class="cm-btn ui-fade" onclick="openComment('att')">А</button>
+<button id="tikBtn" class="cm-btn ui-fade" onclick="openComment('tik')">Т</button>
+<button id="shareBtn" class="share-btn ui-fade" onclick="showShareDialog()">📤</button>
+<button id="bmBtn" class="bm-btn ui-fade" onclick="toggleBookmark()">🔖</button>
+<button id="prevSuttaBtn" class="nav-btn nav-prev ui-fade" onclick="prevSutta()">❮</button>
+<button id="nextSuttaBtn" class="nav-btn nav-next ui-fade" onclick="nextSutta()">❯</button>
+<button id="nextBtn" class="next-btn ui-fade" style="display:none;" onclick="nextRandom()">🎲</button>
+<div class="sutta-header ui-fade">
     <div class="sutta-uid">{{SUTTA_UID}}</div>
     <div class="sutta-title">{{SUTTA_TITLE}}</div>
     <div class="sutta-meta">{{SUTTA_META}}</div>
@@ -162,8 +267,23 @@
 <div class="sutta-content">
     {{SUTTA_CONTENT}}
 </div>
-<div class="sutta-footer">
+<div class="sutta-footer ui-fade">
     Источник: OpenTipitaka · Лицензия: CC BY-NC-SA 4.0
+</div>
+<!-- Модальное окно шаринга -->
+<div id="shareOverlay" class="share-overlay" onclick="closeShareDialog(event)">
+    <div class="share-dialog" onclick="event.stopPropagation()">
+        <div class="share-title">Поделиться суттой</div>
+        <div class="share-option" onclick="shareAsText()">
+            <span class="share-option-icon">📄</span>
+            <span>Текстом</span>
+        </div>
+        <div class="share-option" onclick="shareAsPdf()">
+            <span class="share-option-icon">📑</span>
+            <span>PDF документом</span>
+        </div>
+        <button class="share-cancel" onclick="hideShareDialog()">Отмена</button>
+    </div>
 </div>
 <script>
     function changeFontSize(delta) {
@@ -204,6 +324,41 @@
     function nextSutta() {
     if (typeof Android !== 'undefined') Android.openNextSutta();
     }
+    /* ── Шаринг сутты ── */
+    function showShareDialog() {
+    document.getElementById('shareOverlay').classList.add('show');
+    }
+    function hideShareDialog() {
+    document.getElementById('shareOverlay').classList.remove('show');
+    }
+    function closeShareDialog(event) {
+    if (event.target === document.getElementById('shareOverlay')) {
+    hideShareDialog();
+    }
+    }
+    function shareAsText() {
+    hideShareDialog();
+    if (typeof Android !== 'undefined') Android.shareSuttaAsText();
+    }
+    function shareAsPdf() {
+    hideShareDialog();
+    if (typeof Android !== 'undefined') Android.shareSuttaAsPdf();
+    }
+    /* ── НОВОЕ: Скрытие/показ UI по тапу на экран ── */
+    function toggleUI() {
+    document.body.classList.toggle('ui-hidden');
+    }
+    document.addEventListener('click', function(e) {
+    // Не реагируем на клики по интерактивным элементам
+    if (e.target.closest('button, a, input, textarea, .share-overlay, .share-dialog, mark')) {
+    return;
+    }
+    // Не реагируем, если модальное окно открыто
+    if (document.getElementById('shareOverlay').classList.contains('show')) {
+    return;
+    }
+    toggleUI();
+    });
     function highlightQuery(q) {
     if (!q) return;
     var terms = q.toLowerCase().split(/\s+/).filter(function(t) { return t.length >= 3; });
